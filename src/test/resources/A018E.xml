@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	  <Row>
+ 			<userName>EMPLOYEE</userName>
+          	<passWord>E5</passWord>
+            <code>EBA</code> 
+              				
+			<nominalGLICA1>GLICA1</nominalGLICA1>
+			<nominalGLICA1>GL ICA Account1</nominalGLICA1>
+			<nominalGLICA1>A</nominalGLICA1>
+			<nominalGLICA1>02</nominalGLICA1>
+			<nominalGLICA1>Balance Sheet</nominalGLICA1>
+			<nominalGLICA1>Both</nominalGLICA1>
+			<nominalGLICA1>A</nominalGLICA1>
+			<nominalGLICA1>***</nominalGLICA1>
+			<nominalGLICA1>Both</nominalGLICA1>
+			<nominalGLICA1>0</nominalGLICA1>
+			
+			<nominal4000>4000</nominal4000>
+			<nominal4000>Account 4000</nominal4000>
+			<nominal4000>P</nominal4000>
+			<nominal4000>03</nominal4000>
+			<nominal4000>Profit &amp; Loss</nominal4000>
+			<nominal4000>Both</nominal4000>
+			<nominal4000>A</nominal4000>
+			<nominal4000>***</nominal4000>
+			<nominal4000>Both</nominal4000>
+			<nominal4000>0</nominal4000>
+			
+			<nominal4100>4100</nominal4100>
+			<nominal4100>Account 4100</nominal4100>
+			<nominal4100>P</nominal4100>
+			<nominal4100>03</nominal4100>
+			<nominal4100>Profit &amp; Loss</nominal4100>
+			<nominal4100>Both</nominal4100>
+			<nominal4100>A</nominal4100>
+			<nominal4100>***</nominal4100>
+			<nominal4100>Both</nominal4100>
+			<nominal4100>0</nominal4100>
+			
+			<nominal4200>4200</nominal4200>
+			<nominal4200>Account 4200</nominal4200>
+			<nominal4200>P</nominal4200>
+			<nominal4200>03</nominal4200>
+			<nominal4200>Profit &amp; Loss</nominal4200>
+			<nominal4200>Both</nominal4200>
+			<nominal4200>A</nominal4200>
+			<nominal4200>GBP</nominal4200>
+			<nominal4200>Base</nominal4200>
+			<nominal4200>0</nominal4200>
+			
+			<nominal6000>6000</nominal6000>
+			<nominal6000>Account 6000</nominal6000>
+			<nominal6000>P</nominal6000>
+			<nominal6000>04</nominal6000>
+			<nominal6000>Profit &amp; Loss</nominal6000>
+			<nominal6000>Both</nominal6000>
+			<nominal6000>A</nominal6000>
+			<nominal6000>GBP</nominal6000>
+			<nominal6000>Base</nominal6000>
+			<nominal6000>0</nominal6000>
+			
+			<nominal6100>6100</nominal6100>
+			<nominal6100>Account 6100</nominal6100>
+			<nominal6100>P</nominal6100>
+			<nominal6100>04</nominal6100>
+			<nominal6100>Profit &amp; Loss</nominal6100>
+			<nominal6100>Both</nominal6100>
+			<nominal6100>A</nominal6100>
+			<nominal6100>GBP</nominal6100>
+			<nominal6100>Base</nominal6100>
+			<nominal6100>0</nominal6100>
+			
+			<nominal1560>1560</nominal1560>
+			<nominal1560>Purch.Curr.Bank A/C</nominal1560>
+			<nominal1560>B</nominal1560>
+			<nominal1560>01</nominal1560>
+			<nominal1560>Balance Sheet</nominal1560>
+			<nominal1560>Both</nominal1560>
+			<nominal1560>A</nominal1560>
+			<nominal1560>***</nominal1560>
+			<nominal1560>Both</nominal1560>
+			<nominal1560>0</nominal1560>
+			
+			<nominal1661>1661</nominal1661>
+			<nominal1661>PrePayments A</nominal1661>
+			<nominal1661>B</nominal1661>
+			<nominal1661>01</nominal1661>
+			<nominal1661>Balance Sheet</nominal1661>
+			<nominal1661>Both</nominal1661>
+			<nominal1661>A</nominal1661>
+			<nominal1661>***</nominal1661>
+			<nominal1661>Both</nominal1661>
+			<nominal1661>0</nominal1661>
+			
+			<nominal2001>2001</nominal2001>
+			<nominal2001>Creditors Control A</nominal2001>
+			<nominal2001>B</nominal2001>
+			<nominal2001>02</nominal2001>
+			<nominal2001>Balance Sheet</nominal2001>
+			<nominal2001>Both</nominal2001>
+			<nominal2001>A</nominal2001>
+			<nominal2001>***</nominal2001>
+			<nominal2001>Both</nominal2001>
+			<nominal2001>0</nominal2001>
+					
+			<nominal2100>2100</nominal2100>
+			<nominal2100>Standard VAT</nominal2100>
+			<nominal2100>C</nominal2100>
+			<nominal2100>02</nominal2100>
+			<nominal2100>Balance Sheet</nominal2100>
+			<nominal2100>Both</nominal2100>
+			<nominal2100>A</nominal2100>
+			<nominal2100>***</nominal2100>
+			<nominal2100>Both</nominal2100>
+			<nominal2100>0</nominal2100>
+			
+	
+      </Row>
+</Root>

@@ -1,0 +1,103 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite" verbose="2" time-out="8000000" thread-count="1"  preserve-order="true">
+<!-- 
+	 @author : Chetna 
+	 Purpose : Batch execution of testcases from A091A to 
+ -->    
+  
+ <test name="suite1" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+ 			 <class name="com.adv.qa.selenium.tests.currency.phase3.A116_Simplified_Security_ElementsTest"/>  
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A116A_Simplified_Security_ElementsTest"/> 
+   	 </classes>
+  </test>   
+  <test name="suite2" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+    		 <class name="com.adv.qa.selenium.tests.currency.phase3.A091A_SupplierAuditTest"/>
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A092_Supplier_ElementsTest"/>  
+       		 <class name="com.adv.qa.selenium.tests.currency.phase3.A093_Transaction_Legend_ControlsTest"/>  
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A094_Business_Event_Manager_ObjectsTest"/>
+       		 <class name="com.adv.qa.selenium.tests.currency.phase3.A095_Business_Event_Manager_Program_V_EventTest"/>  
+	   </classes>
+  </test>
+ 
+ <test name="suite3" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+       		 <class name="com.adv.qa.selenium.tests.currency.phase3.A097_Stock_TypesTest"/>  
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A098_Item_CreationTest"/>
+       		 <class name="com.adv.qa.selenium.tests.currency.phase3.A098A_Item_CreationTest"/>  
+       		 <class name="com.adv.qa.selenium.tests.currency.phase3.A099_Items_Supplier_RelationshipTest"/>
+       </classes>
+  </test>
+ 
+ <test name="suite4" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+    		<class name="com.adv.qa.selenium.tests.currency.phase3.A100_Item_PricesTest"/>  
+        	<class name="com.adv.qa.selenium.tests.currency.phase3.A101_Item_BuyersTest"/>
+    	    <class name="com.adv.qa.selenium.tests.currency.phase3.A102_ICA_Default_Trading_RelationshipsTest"/>
+    		<class name="com.adv.qa.selenium.tests.currency.phase3.A103_IM_AccountsTest"/>
+       		<class name="com.adv.qa.selenium.tests.currency.phase3.A104_Inventory_Company_ControlsTest"/>  
+   	 	</classes>
+  </test>
+ <test name="suite5" preserve-order="true" time-out="800000" enabled="false">
+    	 <classes>
+    		   <class name="com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest"/>
+       		   <class name="com.adv.qa.selenium.tests.currency.phase3.A107_Stores_HierarchyTest"/>     
+ 		 </classes>
+ </test>
+ 
+  <test name="suite6" preserve-order="true" time-out="8000000" parallel="classes" thread-count="2" enabled="false">
+    	<classes>
+       		   <class name="com.adv.qa.selenium.tests.currency.phase3.A108_Item_Store_Controls_Manual_Store_HierarchyTest"/>
+       		  <class name="com.adv.qa.selenium.tests.currency.phase3.A108A_Item_Store_Controls_Manual_Store_HierarchyTest"/> 
+	 </classes>
+ </test>
+  
+   <test name="suite7" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A109_Element_Control_AccountsTest"/>
+       		 <class name="com.adv.qa.selenium.tests.currency.phase3.A110_Security_Range_ListsTest"/>  
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest"/>
+        	 <class name="com.adv.qa.selenium.tests.currency.phase3.A112_User_Company_SecurityTest"/> 
+        	   
+   	 	</classes>
+  </test>
+  
+   <test name="suite8" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+    		<class name="com.adv.qa.selenium.tests.currency.phase3.A113_Security_Access_CodesTest"/>
+       		<class name="com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest"/>
+        	<class name="com.adv.qa.selenium.tests.currency.phase3.A115_User_Roles_Set_upTest"/>
+        	<class name="com.adv.qa.selenium.tests.currency.phase3.A117_Simplified_SecurityTest"/>
+        	<class name="com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest"/>
+    		<class name="com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest"/> 
+        </classes>
+  </test>
+  
+  
+     <test name="suite9" preserve-order="true" time-out="800000" enabled="false">
+    	<classes>
+    		<class name="com.adv.qa.selenium.tests.currency.phase3.AD01008_IM_Audit_ReportsTest"/>
+     		<class name="com.adv.qa.selenium.tests.currency.phase3.AD01009_General_Ledger_AuditTest"/>
+     
+        </classes>
+  </test>
+  
+</suite>
+
+
+<!--  	  	 
+   	 <test name="suite15" preserve-order="true" time-out="8000000" enabled="false">
+    	<classes>
+       	No need to Execute A096 as only verifies the Fields:
+    	<class name="com.adv.qa.selenium.tests.currency.phase3.A096_Business_Event_Manager_Action_ListTest"/>
+    	
+    	No need to Execute as amends Description, taken care in A065
+    	<class name="com.adv.qa.selenium.tests.currency.phase3.A105_Store_LocationsTest"/>
+
+    	
+    	
+    	</classes>
+  	 </test>
+   
+  	 -->

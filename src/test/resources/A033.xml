@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	  <Row>
+	      	<userName>SYSTEM</userName>
+          	<passWord>E5</passWord>
+            <code>EBD</code>
+			
+			<values>0</values>
+            
+			<avManagementCode>AV</avManagementCode>
+			<avManagementCode>Home Cinema</avManagementCode>
+			<avManagementCode>AV</avManagementCode>
+			<avManagementCode>0.0</avManagementCode>
+			<avManagementCode>NORTH</avManagementCode>
+			<avManagementCode>Warning</avManagementCode>
+		    <avManagementCode>Warning</avManagementCode>
+		         
+			<hiFIManagementCode>HiFi</hiFIManagementCode>
+			<hiFIManagementCode>HiFi</hiFIManagementCode>
+			<hiFIManagementCode>HiFi</hiFIManagementCode>
+			<hiFIManagementCode>0.0</hiFIManagementCode>
+			<hiFIManagementCode>NORTH</hiFIManagementCode>
+			<hiFIManagementCode>Warning</hiFIManagementCode>
+			<hiFIManagementCode>Warning</hiFIManagementCode>	
+					
+      </Row>
+</Root>
