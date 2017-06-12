@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A114_Security_Group_Access_CodesTest>
+<Verification1>17/05/2017 02:15:37 | Pass : Login page displayed</Verification1>
+<Verification2>17/05/2017 02:15:43 | Pass : Command line displayed</Verification2>
+<Verification3>17/05/2017 02:15:56 | Pass : Currency search page displayed</Verification3>
+<Verification4>17/05/2017 02:16:14 | Pass : New user company security IM2 displayed in the list</Verification4>
+</A114_Security_Group_Access_CodesTest>
+</TestCase>
+</SeleniumTestReport>

@@ -1,0 +1,226 @@
+<html>
+<head>
+<title>TestNG:  suite6</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>suite6</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 24 18:05:41 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1592 seconds (1592996 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest<br>Parameters: [DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = GAK], DataUnit [payment01 = 01], DataUnit [payment01 = Cheque], DataUnit [payment01 = 1], DataUnit [payment01 = GBP], DataUnit [payment01 = 01], DataUnit [payment01 = BP], DataUnit [payment01 = 0], DataUnit [payment01 = STD], DataUnit [payment01 = STD], DataUnit [payment02 = 02], DataUnit [payment02 = Funds Transfer], DataUnit [payment02 = 1], DataUnit [payment02 = GBP], DataUnit [payment02 = 02], DataUnit [payment02 = BP], DataUnit [payment02 = 0], DataUnit [payment02 = STD], DataUnit [payment02 = STD], DataUnit [payment03 = 03], DataUnit [payment03 = Automatic Cheque], DataUnit [payment03 = 1], DataUnit [payment03 = GBP], DataUnit [payment03 = 01], DataUnit [payment03 = BP], DataUnit [payment03 = Y], DataUnit [payment03 = STD], DataUnit [payment03 = STD], DataUnit [payment04 = 04], DataUnit [payment04 = Manual Cheque], DataUnit [payment04 = 1], DataUnit [payment04 = GBP], DataUnit [payment04 = 01], DataUnit [payment04 = BP], DataUnit [payment04 = 0], DataUnit [payment04 = STD], DataUnit [payment04 = STD]]</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //input[starts-with(@name,&apos;PYMNT_&apos;)] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 120.29 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.17.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:32028/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 32e976ad-8408-4cba-ba26-5ad1c89c8c1b
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;PYMNT_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterPaymentCode(CurrencyPage.java:6739)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.createUOM(A060_Payment_CodesTest.java:82)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.verify(A060_Payment_CodesTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace384617262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace384617262'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //input[starts-with(@name,&apos;PYMNT_&apos;)] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 120.29 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.17.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:32028/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 32e976ad-8408-4cba-ba26-5ad1c89c8c1b
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;PYMNT_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterPaymentCode(CurrencyPage.java:6739)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.createUOM(A060_Payment_CodesTest.java:82)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.verify(A060_Payment_CodesTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>200</td>
+<td>com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest@50a7bc6e</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest<br>Parameters: [DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = AK2], DataUnit [locationHQ = POP HQ], DataUnit [locationHQ = POP Head Quarters], DataUnit [locationHQ = 236 Hartlepool Road], DataUnit [locationHQ = TS25 3HA], DataUnit [locationHQ = NILL], DataUnit [locationHQ = Not Used], DataUnit [locationEastHQ = EAST HQ], DataUnit [locationEastHQ = East Head Quarters], DataUnit [locationEastHQ = Road 1], DataUnit [locationEastHQ = NILL], DataUnit [locationEastHQ = NILL], DataUnit [locationEastHQ = Not Used], DataUnit [locationWestHQ = WEST HQ], DataUnit [locationWestHQ = West Head Quarters], DataUnit [locationWestHQ = Road 1], DataUnit [locationWestHQ = NILL], DataUnit [locationWestHQ = NILL], DataUnit [locationWestHQ = Not Used], DataUnit [locationSouthHQ = SOUTH HQ], DataUnit [locationSouthHQ = South Head Quarters], DataUnit [locationSouthHQ = Road 1], DataUnit [locationSouthHQ = NILL], DataUnit [locationSouthHQ = NILL], DataUnit [locationSouthHQ = Not Used], DataUnit [locationNorthHQ = NORTH HQ], DataUnit [locationNorthHQ = North Head Quarters], DataUnit [locationNorthHQ = Road 1], DataUnit [locationNorthHQ = NILL], DataUnit [locationNorthHQ = NILL], DataUnit [locationNorthHQ = Not Used], DataUnit [locationWarehse = WAREHSE], DataUnit [locationWarehse = Central Warehouse], DataUnit [locationWarehse = Road 1], DataUnit [locationWarehse = NILL], DataUnit [locationWarehse = NILL], DataUnit [locationWarehse = Not Used], DataUnit [locationNorthITS = NorthITS], DataUnit [locationNorthITS = North In-transit store], DataUnit [locationNorthITS = Road 1], DataUnit [locationNorthITS = NILL], DataUnit [locationNorthITS = NILL], DataUnit [locationNorthITS = Not Used], DataUnit [locationSouthITS = SouthITS], DataUnit [locationSouthITS = South In-transit store], DataUnit [locationSouthITS = Road 1], DataUnit [locationSouthITS = NILL], DataUnit [locationSouthITS = NILL], DataUnit [locationSouthITS = Not Used], DataUnit [locationWestITS = WestITS], DataUnit [locationWestITS = West In-transit store], DataUnit [locationWestITS = Road 1], DataUnit [locationWestITS = NILL], DataUnit [locationWestITS = NILL], DataUnit [locationWestITS = Not Used], DataUnit [locationEastITS = EastITS], DataUnit [locationEastITS = East In-transit store], DataUnit [locationEastITS = Road 1], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = Not Used], DataUnit [locationEastITS = EastITS], DataUnit [locationEastITS = East In-transit store], DataUnit [locationEastITS = Road 1], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = Not Used], DataUnit [locationNorth = North], DataUnit [locationNorth = North store], DataUnit [locationNorth = Road 1], DataUnit [locationNorth = NILL], DataUnit [locationNorth = NILL], DataUnit [locationNorth = Not Used], DataUnit [locationSouth = South], DataUnit [locationSouth = South store], DataUnit [locationSouth = Road 1], DataUnit [locationSouth = NILL], DataUnit [locationSouth = NILL], DataUnit [locationSouth = Not Used], DataUnit [locationEast = East], DataUnit [locationEast = East store], DataUnit [locationEast = Road 1], DataUnit [locationEast = NILL], DataUnit [locationEast = NILL], DataUnit [locationEast = Not Used], DataUnit [locationWest = West], DataUnit [locationWest = West store], DataUnit [locationWest = Road 1], DataUnit [locationWest = NILL], DataUnit [locationWest = NILL], DataUnit [locationWest = Not Used]]</td>
+<td><div><pre>org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest.verify() didn&apos;t finish within the time-out 800000
+	at java.net.Inet6AddressImpl.getLocalHostName(Native Method)
+	at java.net.InetAddress.getLocalHost(Unknown Source)
+	at org.openqa.selenium.WebDriverException.getSystemInformation(WebDriverException.java:72)
+	at org.openqa.selenium.WebDriverException.createMessage(WebDriverException.java:63)
+	at org.openqa.selenium.WebDriverException.getMessage(WebDriverException.java:53)
+	at java.lang.Throwable.getLocalizedMessage(Unknown Source)
+	at java.lang.Throwable.toString(Unknown Source)
+	at java.lang.Throwable.&lt;init&gt;(Unknown Source)
+	at java.lang.Exception.&lt;init&gt;(Unknown Source)
+	at java.lang.RuntimeException.&lt;init&gt;(Unknown Source)
+	at org.testng.internal.InvokeMethodRunnable$TestNGRuntimeException.&lt;init&gt;(InvokeMethodRunnable.java:80)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:61)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace729218894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace729218894'><pre>org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest.verify() didn&apos;t finish within the time-out 800000
+	at java.net.Inet6AddressImpl.getLocalHostName(Native Method)
+	at java.net.InetAddress.getLocalHost(Unknown Source)
+	at org.openqa.selenium.WebDriverException.getSystemInformation(WebDriverException.java:72)
+	at org.openqa.selenium.WebDriverException.createMessage(WebDriverException.java:63)
+	at org.openqa.selenium.WebDriverException.getMessage(WebDriverException.java:53)
+	at java.lang.Throwable.getLocalizedMessage(Unknown Source)
+	at java.lang.Throwable.toString(Unknown Source)
+	at java.lang.Throwable.&lt;init&gt;(Unknown Source)
+	at java.lang.Exception.&lt;init&gt;(Unknown Source)
+	at java.lang.RuntimeException.&lt;init&gt;(Unknown Source)
+	at org.testng.internal.InvokeMethodRunnable$TestNGRuntimeException.&lt;init&gt;(InvokeMethodRunnable.java:80)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:61)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>800</td>
+<td>com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest@161b062a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest<br>Parameters: [DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = RAF], DataUnit [taxR1 = R1], DataUnit [taxR1 = Recoverable Handling Code], DataUnit [taxR1 = 0], DataUnit [taxR1 = Fully], DataUnit [taxR1 = 0], DataUnit [tax02 = 02], DataUnit [tax02 = Non-Rec Exc.Handling Code ], DataUnit [tax02 = 1], DataUnit [tax02 = None], DataUnit [tax02 = 0], DataUnit [tax03 = 03], DataUnit [tax03 = Non-Rec Inc.Handling Code], DataUnit [tax03 = 0], DataUnit [tax03 = None], DataUnit [tax03 = 0], DataUnit [taxH1 = H1], DataUnit [taxH1 = H1 Default Handling Code], DataUnit [taxH1 = 1], DataUnit [taxH1 = Fully], DataUnit [taxH1 = 0]]</td>
+<td></td>
+<td>447</td>
+<td>com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest@17c1bced</td></tr>
+</table><p>
+</body>
+</html>

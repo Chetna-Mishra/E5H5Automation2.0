@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A110_Security_Range_ListsTest>
+<Verification1>17/05/2017 04:38:32 | Pass : Login page displayed</Verification1>
+<Verification2>17/05/2017 04:38:38 | Pass : Command line displayed</Verification2>
+<Verification3>17/05/2017 04:38:38 | Pass : Command line displayed</Verification3>
+<Verification4>17/05/2017 04:38:54 | Pass : Currency search page displayed</Verification4>
+<Verification5>17/05/2017 04:39:22 | Pass : Command line displayed</Verification5>
+<Verification6>17/05/2017 04:39:37 | Pass : Currency search page displayed</Verification6>
+<Verification7>17/05/2017 04:40:04 | Pass : Command line displayed</Verification7>
+<Verification8>17/05/2017 04:40:20 | Pass : Currency search page displayed</Verification8>
+<Verification9>17/05/2017 04:41:16 | Pass : New Store ITEM1 displayed in the list</Verification9>
+<Verification10>17/05/2017 04:41:19 | Pass : New Store ITEM1 displayed in the list</Verification10>
+<Verification11>17/05/2017 04:41:23 | Pass : New Store ITEM1 displayed in the list</Verification11>
+</A110_Security_Range_ListsTest>
+</TestCase>
+</SeleniumTestReport>

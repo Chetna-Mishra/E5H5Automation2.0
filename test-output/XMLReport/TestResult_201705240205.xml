@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A045_BACS_CalendarTest>
+<Verification1>24/05/2017 02:05:58 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:06:08 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:06:35 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 02:10:54 | Pass : New calendar  IMBACS displayed in the list</Verification4>
+<Verification5>24/05/2017 02:17:12 | Fail : New calendar  WORKING not displayed in the list</Verification5>
+</A045_BACS_CalendarTest>
+<A046_Bank_Account_Names_for_PurchasingTest>
+<Verification1>24/05/2017 02:17:56 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:18:06 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:18:33 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 02:22:10 | Pass : New bank code 05-02-86 displayed in the list</Verification4>
+<Verification5>24/05/2017 02:22:17 | Pass : New bank code 20-34-41 displayed in the list</Verification5>
+<Verification6>24/05/2017 02:22:24 | Pass : New bank code 40-52-98 displayed in the list</Verification6>
+</A046_Bank_Account_Names_for_PurchasingTest>
+<A047_Accounts_Payable_Batch_TypesTest>
+<Verification1>24/05/2017 02:24:07 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:24:17 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:24:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 02:27:37 | Fail : New Batch type of AP PDE1 not displayed in the list</Verification4>
+<Verification5>24/05/2017 02:27:38 | Pass : Command line displayed</Verification5>
+<Verification6>24/05/2017 02:28:07 | Pass : Currency search page displayed</Verification6>
+<Verification7>24/05/2017 02:30:58 | Fail : New Batch type of AP PDE2 not displayed in the list</Verification7>
+<Verification8>24/05/2017 02:30:58 | Pass : Command line displayed</Verification8>
+<Verification9>24/05/2017 02:31:28 | Pass : Currency search page displayed</Verification9>
+<Verification10>24/05/2017 02:34:18 | Fail : New Batch type of AP PDE3 not displayed in the list</Verification10>
+<Verification11>24/05/2017 02:34:19 | Pass : Command line displayed</Verification11>
+<Verification12>24/05/2017 02:34:48 | Pass : Currency search page displayed</Verification12>
+</A047_Accounts_Payable_Batch_TypesTest>
+<A048_UOMTest>
+<Verification1>24/05/2017 02:37:44 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:37:54 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:38:21 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 02:41:30 | Pass : UOM code BOX displayed in the list</Verification4>
+<Verification5>24/05/2017 02:42:11 | Pass : UOM code EACH displayed in the list</Verification5>
+<Verification6>24/05/2017 02:42:51 | Pass : UOM code DAYS displayed in the list</Verification6>
+<Verification7>24/05/2017 02:43:31 | Pass : UOM code YEAR displayed in the list</Verification7>
+<Verification8>24/05/2017 02:43:52 | Pass : Command line displayed</Verification8>
+<Verification9>24/05/2017 02:44:19 | Pass : Currency search page displayed</Verification9>
+<Verification10>24/05/2017 02:46:32 | Pass : UOM code BOX displayed in the list</Verification10>
+<Verification11>24/05/2017 02:47:16 | Pass : UOM code YEAR displayed in the list</Verification11>
+</A048_UOMTest>
+<A049_Common_Purchasing_Company_ControlsTest>
+<Verification1>24/05/2017 02:48:59 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:49:08 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:49:38 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 02:51:24 | Pass : Currency search page displayed</Verification4>
+<Verification5>24/05/2017 02:51:58 | Pass : New purchasing company  IM displayed in the list</Verification5>
+</A049_Common_Purchasing_Company_ControlsTest>
+<A050_Accounts_Payable_Control_AccountsTest>
+<Verification1>24/05/2017 02:53:39 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:53:49 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:54:16 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 02:57:23 | Pass : New account payable control IM displayed in the list</Verification4>
+</A050_Accounts_Payable_Control_AccountsTest>
+<A051A_Purchase_Ledger_Bank_CodesTest>
+<Verification1>24/05/2017 02:59:03 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 02:59:13 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 02:59:40 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 03:01:42 | Pass : New purchase ledger bank code IM displayed in the list</Verification4>
+<Verification5>24/05/2017 03:02:03 | Pass : Command line displayed</Verification5>
+<Verification6>24/05/2017 03:02:30 | Pass : Currency search page displayed</Verification6>
+<Verification7>24/05/2017 03:04:21 | Pass : New ledger control BANKR updated</Verification7>
+<Verification8>24/05/2017 03:06:17 | Pass : New ledger control BANKR1 updated</Verification8>
+<Verification9>24/05/2017 03:08:12 | Pass : New ledger control BANKR2 updated</Verification9>
+</A051A_Purchase_Ledger_Bank_CodesTest>
+<A051_Purchase_Ledger_Bank_CodesTest>
+<Verification1>24/05/2017 03:09:53 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 03:10:03 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 03:10:31 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 03:15:02 | Pass : New bank code BP displayed in the list</Verification4>
+<Verification5>24/05/2017 03:15:09 | Pass : New bank code B1 displayed in the list</Verification5>
+<Verification6>24/05/2017 03:15:16 | Pass : New bank code H1 displayed in the list</Verification6>
+</A051_Purchase_Ledger_Bank_CodesTest>
+<A052_Tax_AccountsTest>
+<Verification1>24/05/2017 03:16:59 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 03:17:09 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 03:17:39 | Pass : Currency search page displayed</Verification3>
+</A052_Tax_AccountsTest>
+<A053_Category_CodeTest>
+<Verification1>24/05/2017 03:21:18 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 03:21:28 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 03:21:58 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 03:22:49 | Pass : Currency search page displayed</Verification4>
+<Verification5>24/05/2017 03:23:28 | Pass : New category code C1 displayed in the list</Verification5>
+</A053_Category_CodeTest>
+<A054_Discount_TermsTest>
+<Verification1>24/05/2017 03:25:09 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 03:25:19 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 03:25:49 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 03:26:47 | Pass : Currency search page displayed</Verification4>
+<Verification5>24/05/2017 03:27:26 | Pass : New discount term D1 displayed in the list</Verification5>
+</A054_Discount_TermsTest>
+<A055_Settlement_TermsTest>
+<Verification1>24/05/2017 03:29:10 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 03:29:20 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 03:29:49 | Pass : Currency search page displayed</Verification3>
+<Verification4>24/05/2017 03:30:40 | Pass : Command line displayed</Verification4>
+<Verification5>24/05/2017 03:31:10 | Pass : Currency search page displayed</Verification5>
+<Verification6>24/05/2017 03:32:24 | Pass : Currency search page displayed</Verification6>
+<Verification7>24/05/2017 03:32:59 | Pass : New settlement term S1 displayed in the list</Verification7>
+<Verification8>24/05/2017 03:33:05 | Pass : New settlement term S2 displayed in the list</Verification8>
+</A055_Settlement_TermsTest>
+</TestCase>
+</SeleniumTestReport>

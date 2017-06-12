@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001_Switch_Intra_Company_Accounting_OnTest>
+<Verification1>09/06/2017 04:48:02 | Pass : Login page displayed</Verification1>
+<Verification2>09/06/2017 04:48:11 | Pass : Command line displayed</Verification2>
+<Verification3>09/06/2017 04:48:28 | Pass : Financial module fields checked by default</Verification3>
+<Verification4>09/06/2017 04:48:41 | Pass : Purchasing module fields checked by default</Verification4>
+</A001_Switch_Intra_Company_Accounting_OnTest>
+</TestCase>
+</SeleniumTestReport>

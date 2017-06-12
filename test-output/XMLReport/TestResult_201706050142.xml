@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A118_StopandStartExecutors>
+<Verification1>05/06/2017 01:43:03 | Pass : Login page displayed</Verification1>
+<Verification2>05/06/2017 01:43:11 | Pass : Command line displayed</Verification2>
+<Verification3>05/06/2017 01:43:25 | Pass : Currency search page displayed</Verification3>
+<Verification4>05/06/2017 01:46:52 | Pass : Command line displayed</Verification4>
+<Verification5>05/06/2017 01:47:39 | Pass : Precess has entered task list</Verification5>
+<Verification6>05/06/2017 01:48:00 | Pass : Precess ZY1  performed on request </Verification6>
+<Verification7>05/06/2017 01:48:39 | Pass : Precess has entered task list</Verification7>
+<Verification8>05/06/2017 01:48:58 | Pass : Precess AF5  performed on request </Verification8>
+</A118_StopandStartExecutors>
+</TestCase>
+</SeleniumTestReport>

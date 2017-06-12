@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A075B_Circulation_CodeTest>
+<Verification1>26/05/2017 02:52:41 | Pass : Login page displayed</Verification1>
+<Verification2>26/05/2017 02:52:50 | Pass : Command line displayed</Verification2>
+<Verification3>26/05/2017 02:53:07 | Pass : Currency search page displayed</Verification3>
+</A075B_Circulation_CodeTest>
+</TestCase>
+</SeleniumTestReport>

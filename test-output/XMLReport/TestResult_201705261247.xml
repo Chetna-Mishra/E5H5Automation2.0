@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A092_Supplier_ElementsTest>
+<Verification1>26/05/2017 12:47:43 | Pass : Login page displayed</Verification1>
+<Verification2>26/05/2017 12:47:52 | Pass : Command line displayed</Verification2>
+<Verification3>26/05/2017 12:48:09 | Pass : Currency search page displayed</Verification3>
+</A092_Supplier_ElementsTest>
+<A099_Items_Supplier_RelationshipTest>
+<Verification1>26/05/2017 12:50:41 | Pass : Login page displayed</Verification1>
+<Verification2>26/05/2017 12:50:50 | Pass : Command line displayed</Verification2>
+<Verification3>26/05/2017 12:51:06 | Pass : Supplier search page displayed</Verification3>
+<Verification4>26/05/2017 12:54:03 | Pass : New supplier item PIONEER displayed in the list</Verification4>
+</A099_Items_Supplier_RelationshipTest>
+</TestCase>
+</SeleniumTestReport>

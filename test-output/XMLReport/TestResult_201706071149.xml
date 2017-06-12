@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02009_Goods_ReceivingTest>
+<Verification1>07/06/2017 11:49:56 | Pass : Login page displayed</Verification1>
+<Verification2>07/06/2017 11:50:05 | Pass : Command line displayed</Verification2>
+<Verification3>07/06/2017 11:50:31 | Pass : Currency search page displayed</Verification3>
+<Verification4>07/06/2017 11:55:58 | Pass :  DOC01 : Order Reference 0000000005 will be created.</Verification4>
+<Verification5>07/06/2017 11:55:59 | Pass : Order  O1 created</Verification5>
+<Verification6>07/06/2017 11:57:26 | Pass : Currency search page displayed</Verification6>
+</AD02009_Goods_ReceivingTest>
+</TestCase>
+</SeleniumTestReport>

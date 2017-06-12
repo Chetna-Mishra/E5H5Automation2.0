@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+        <Row>
+	    <userName>BM</userName>
+        <passWord>E5</passWord>
+        <currencyCode>GOK</currencyCode>
+       
+        <authorisationCode>PM</authorisationCode>
+        <authorisationCode>HQ</authorisationCode>
+        <authorisationCode>EAST</authorisationCode>
+        <authorisationCode>WEST</authorisationCode>
+        <authorisationCode>NORTH</authorisationCode>
+        <authorisationCode>SOUTH</authorisationCode>
+               
+        <authorisationLev1>LEV1</authorisationLev1>
+        <authorisationLev1>1</authorisationLev1>
+        <authorisationLev1>EMPLOYEE</authorisationLev1>
+        
+        <authorisationLev2>LEV2</authorisationLev2>
+        <authorisationLev2>2</authorisationLev2>
+        <authorisationLev2>ADMIN</authorisationLev2>
+        <authorisationLev2>MANAGER</authorisationLev2>
+        
+                
+        <authorisationLev3>LEV3</authorisationLev3>
+        <authorisationLev3>2</authorisationLev3>
+        <authorisationLev3>ADMIN</authorisationLev3>
+        <authorisationLev3>MANAGER</authorisationLev3>
+        
+        <authorisationLev4>LEV4</authorisationLev4>
+        <authorisationLev4>3</authorisationLev4>
+        <authorisationLev4>ADMIN</authorisationLev4>
+        <authorisationLev4>MANAGER</authorisationLev4>
+        <authorisationLev4>QUERY</authorisationLev4>
+
+	</Row>
+    
+	
+</Root>

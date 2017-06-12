@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02001_Normal_Material_IssueTest>
+<Verification1>05/06/2017 04:12:27 | Pass : Login page displayed</Verification1>
+<Verification2>05/06/2017 04:12:34 | Pass : Command line displayed</Verification2>
+<Verification3>05/06/2017 04:12:49 | Pass : Journey search page displayed</Verification3>
+<Verification4>05/06/2017 04:13:35 | Pass : Journal header page displayed</Verification4>
+<Verification5>05/06/2017 04:14:07 | Pass : Batch values are   as expected</Verification5>
+<Verification6>05/06/2017 04:14:32 | Pass : Batch values are   as expected</Verification6>
+<Verification7>05/06/2017 04:15:10 | Pass : Currency search page displayed</Verification7>
+<Verification8>05/06/2017 04:15:32 | Pass : Total stock balance is as expected </Verification8>
+</AD02001_Normal_Material_IssueTest>
+</TestCase>
+</SeleniumTestReport>

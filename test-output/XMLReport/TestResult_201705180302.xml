@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A116_Simplified_Security_ElementsTest>
+<Verification1>18/05/2017 03:02:35 | Pass : Login page displayed</Verification1>
+<Verification2>18/05/2017 03:02:40 | Pass : Command line displayed</Verification2>
+<Verification3>18/05/2017 03:02:53 | Pass : Currency search page displayed</Verification3>
+<Verification4>18/05/2017 03:02:58 | Pass : Security elements  displayed</Verification4>
+</A116_Simplified_Security_ElementsTest>
+</TestCase>
+</SeleniumTestReport>

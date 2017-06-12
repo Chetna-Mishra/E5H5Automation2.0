@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>AdvSeleniumAutomation1</name>
+  <name>AdvSeleniumAutomation</name>
   <comment>Project for QA automation mainly for selenium automated tests. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
   <projects/>
   <buildSpec>

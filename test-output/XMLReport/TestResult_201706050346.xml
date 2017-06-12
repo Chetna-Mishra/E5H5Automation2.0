@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02001_Normal_Material_IssueTest>
+<Verification1>05/06/2017 03:46:41 | Pass : Login page displayed</Verification1>
+<Verification2>05/06/2017 03:46:48 | Pass : Command line displayed</Verification2>
+<Verification3>05/06/2017 03:47:07 | Pass : Journey search page displayed</Verification3>
+<Verification4>05/06/2017 03:47:53 | Pass : Journal header page displayed</Verification4>
+<Verification5>05/06/2017 03:48:14 | Fail : Batch values are  not  as expected</Verification5>
+</AD02001_Normal_Material_IssueTest>
+</TestCase>
+</SeleniumTestReport>

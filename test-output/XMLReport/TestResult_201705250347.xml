@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A099_Items_Supplier_RelationshipTest>
+<Verification1>25/05/2017 03:47:47 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 03:47:58 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 03:48:19 | Pass : Supplier search page displayed</Verification3>
+</A099_Items_Supplier_RelationshipTest>
+</TestCase>
+</SeleniumTestReport>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A102_ICA_Default_Trading_RelationshipsTest>
+<Verification1>25/05/2017 04:03:41 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 04:03:52 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 04:04:13 | Pass : Currency search page displayed</Verification3>
+</A102_ICA_Default_Trading_RelationshipsTest>
+<A103_IM_AccountsTest>
+<Verification1>25/05/2017 04:07:42 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 04:07:53 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 04:08:14 | Pass : Currency search page displayed</Verification3>
+</A103_IM_AccountsTest>
+<A104_Inventory_Company_ControlsTest>
+<Verification1>25/05/2017 04:22:25 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 04:22:36 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 04:22:57 | Pass : Currency search page displayed</Verification3>
+<Verification4>25/05/2017 04:26:42 | Fail : New inventory company IM  not displayed in the list</Verification4>
+</A104_Inventory_Company_ControlsTest>
+</TestCase>
+</SeleniumTestReport>

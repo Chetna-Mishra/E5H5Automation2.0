@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">suite4</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">586.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2">suite5</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">673.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3">suite6</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">987.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi">0</td><td class="numi">2,247.4 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">suite4 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A007_DevicesTest</td><td><a href="#m1"><b>verify</b>  </a></td><td class="numi">1</td><td>1488443299645</td><td class="numi">96331</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A008_DestinationsTest</td><td><a href="#m2"><b>verify</b>  </a></td><td class="numi">1</td><td>1488443411670</td><td class="numi">144956</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A009_Distribution_ProfileTest</td><td><a href="#m3"><b>verify</b>  </a></td><td class="numi">1</td><td>1488443571410</td><td class="numi">140771</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A010_Environment_Groups_Test</td><td><a href="#m4"><b>verify</b>  </a></td><td class="numi">1</td><td>1488443727328</td><td class="numi">142871</td></tr>
+<tr id="t2"><th colspan="5">suite5 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A011_UsersTest</td><td><a href="#m5"><b>verify</b>  </a></td><td class="numi">1</td><td>1488443887256</td><td class="numi">654546</td></tr>
+<tr id="t3"><th colspan="5">suite6 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A005_Currency_Exchange_RatesTest</td><td><a href="#m6"><b>verify</b>  </a></td><td class="numi">1</td><td>1488444572501</td><td class="numi">236915</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A012_CalendarsTest</td><td><a href="#m7"><b>verify</b>  </a></td><td class="numi">1</td><td>1488444829109</td><td class="numi">157544</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A013_Fiscal_CalendarTest</td><td><a href="#m8"><b>verify</b>  </a></td><td class="numi">1</td><td>1488445003082</td><td class="numi">527695</td></tr>
+</table>
+<h1>suite4</h1>
+<h2 id="m1">com.adv.qa.selenium.tests.currency.A009_Distribution_ProfileTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AOJ], DataUnit [value = %], DataUnit [profileDetails = CMS110], DataUnit [profileDetails = CMS111 Distribution Profile], DataUnit [profileDetails = CMS110], DataUnit [profileDetails = 1], DataUnit [profileDetails1 = CMS220], DataUnit [profileDetails1 = CMS222 Distribution Profile], DataUnit [profileDetails1 = CMS220], DataUnit [profileDetails1 = 1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.adv.qa.selenium.tests.currency.A008_DestinationsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = ANC], DataUnit [firstDestination = CMS110], DataUnit [firstDestination = Output to Spool], DataUnit [firstDestination = 3], DataUnit [secondDestination = CMS220], DataUnit [secondDestination = Output to Spool], DataUnit [secondDestination = 3]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.adv.qa.selenium.tests.currency.A010_Environment_Groups_Test:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AFA], DataUnit [firstDestination = CMS1IM], DataUnit [firstDestination = Output to SPOOL], DataUnit [firstDestination = 1439], DataUnit [firstDestination = 0], DataUnit [firstDestination = 5], DataUnit [firstDestination = 2], DataUnit [firstDestination = CMS110], DataUnit [secondDestination = CMS2IM], DataUnit [secondDestination = Output to SPOOL], DataUnit [secondDestination = 1439], DataUnit [secondDestination = 0], DataUnit [secondDestination = 2], DataUnit [secondDestination = 2], DataUnit [secondDestination = CMS220]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.adv.qa.selenium.tests.currency.A007_DevicesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = ANS], DataUnit [deviceDetails = CMSE5H4], DataUnit [deviceDetails = E5H5 TEST ENVIRONMENT GROUP], DataUnit [deviceDetails = SYSOUT=A,], DataUnit [deviceDetails = LRECL=133,], DataUnit [deviceDetails = BLKSIZE=133,], DataUnit [deviceDetails = RECFM=FBA,], DataUnit [deviceDetails = DEST=(LOCAL,CMS123)]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite5</h1>
+<h2 id="m5">com.adv.qa.selenium.tests.currency.A011_UsersTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AFC], DataUnit [firstUser = QUERY], DataUnit [firstUser = QUERY], DataUnit [firstUser = QMAIN], DataUnit [firstUser = E5], DataUnit [firstUser = STD], DataUnit [firstUser = STD], DataUnit [firstUser = STD], DataUnit [firstUser = STD], DataUnit [firstUser = STD], DataUnit [firstUser = A1], DataUnit [firstUser = 00], DataUnit [secondUser = ADMIN], DataUnit [secondUser = Admin User], DataUnit [secondUser = QMAIN], DataUnit [secondUser = E5], DataUnit [secondUser = STD], DataUnit [secondUser = STD], DataUnit [secondUser = STD], DataUnit [secondUser = STD], DataUnit [secondUser = STD], DataUnit [secondUser = A1], DataUnit [secondUser = 00], DataUnit [thirdUser = MANAGER], DataUnit [thirdUser = MANAGER], DataUnit [thirdUser = QMAIN], DataUnit [thirdUser = E5], DataUnit [thirdUser = STD], DataUnit [thirdUser = STD], DataUnit [thirdUser = STD], DataUnit [thirdUser = STD], DataUnit [thirdUser = STD], DataUnit [thirdUser = A1], DataUnit [thirdUser = 00], DataUnit [fourthUser = EMPLOYEE], DataUnit [fourthUser = Employee], DataUnit [fourthUser = QMAIN], DataUnit [fourthUser = E5], DataUnit [fourthUser = STD], DataUnit [fourthUser = STD], DataUnit [fourthUser = STD], DataUnit [fourthUser = STD], DataUnit [fourthUser = STD], DataUnit [fourthUser = A1], DataUnit [fourthUser = 00], DataUnit [fifthUser = BM], DataUnit [fifthUser = BM TEST], DataUnit [fifthUser = QMAIN], DataUnit [fifthUser = E5], DataUnit [fifthUser = STD], DataUnit [fifthUser = STD], DataUnit [fifthUser = STD], DataUnit [fifthUser = STD], DataUnit [fifthUser = STD], DataUnit [fifthUser = A1], DataUnit [fifthUser = 00], DataUnit [sixthUser = BM1], DataUnit [sixthUser = BM1 TEST], DataUnit [sixthUser = QMAIN], DataUnit [sixthUser = E5], DataUnit [sixthUser = STD], DataUnit [sixthUser = STD], DataUnit [sixthUser = STD], DataUnit [sixthUser = STD], DataUnit [sixthUser = STD], DataUnit [sixthUser = A1], DataUnit [sixthUser = 00], DataUnit [userBuyer = BUYER], DataUnit [userBuyer = BUYER], DataUnit [userBuyer = QMAIN], DataUnit [userBuyer = E5], DataUnit [userBuyer = STD], DataUnit [userBuyer = STD], DataUnit [userBuyer = STD], DataUnit [userBuyer = STD], DataUnit [userBuyer = STD], DataUnit [userBuyer = A1], DataUnit [userBuyer = 00], DataUnit [userEXPED = EXPED], DataUnit [userEXPED = EXPED], DataUnit [userEXPED = QMAIN], DataUnit [userEXPED = E5], DataUnit [userEXPED = STD], DataUnit [userEXPED = STD], DataUnit [userEXPED = STD], DataUnit [userEXPED = STD], DataUnit [userEXPED = STD], DataUnit [userEXPED = A1], DataUnit [userEXPED = 00], DataUnit [userGREC = GREC], DataUnit [userGREC = GREC], DataUnit [userGREC = QMAIN], DataUnit [userGREC = E5], DataUnit [userGREC = STD], DataUnit [userGREC = STD], DataUnit [userGREC = STD], DataUnit [userGREC = STD], DataUnit [userGREC = STD], DataUnit [userGREC = A1], DataUnit [userGREC = 00]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite6</h1>
+<h2 id="m6">com.adv.qa.selenium.tests.currency.A013_Fiscal_CalendarTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = API], DataUnit [calendar = IMFISCAL], DataUnit [calendar = AC FISCAL CALENDAR], DataUnit [calendar = IM], DataUnit [calendar = Sunday], DataUnit [calendar = LEVEL 0], DataUnit [calendar = level 0], DataUnit [calendar = IMMONTH], DataUnit [year96 = 1996], DataUnit [year96 = 96], DataUnit [year96 = 01-Jan-1996], DataUnit [year96 = 31-Dec-1996], DataUnit [year96 = Y], DataUnit [year97 = 1997], DataUnit [year97 = 97], DataUnit [year97 = 01-Jan-1997], DataUnit [year97 = 31-Dec-1997], DataUnit [year97 = Y], DataUnit [year98 = 1998], DataUnit [year98 = 98], DataUnit [year98 = 01-Jan-1998], DataUnit [year98 = 31-Dec-1998], DataUnit [year98 = Y], DataUnit [year99 = 1999], DataUnit [year99 = 99], DataUnit [year99 = 01-Jan-1999], DataUnit [year99 = 31-Dec-1999], DataUnit [year99 = Y], DataUnit [year2000 = 2000], DataUnit [year2000 = 2000], DataUnit [year2000 = 01-Jan-2000], DataUnit [year2000 = 31-Dec-2000], DataUnit [year2000 = Y], DataUnit [year2001 = 2001], DataUnit [year2001 = 2001], DataUnit [year2001 = 01-Jan-2001], DataUnit [year2001 = 31-Dec-2001], DataUnit [year2001 = Y], DataUnit [year2002 = 2002], DataUnit [year2002 = 2002], DataUnit [year2002 = 01-Jan-2002], DataUnit [year2002 = 31-Dec-2002], DataUnit [year2002 = Y], DataUnit [year2003 = 2003], DataUnit [year2003 = 2003], DataUnit [year2003 = 01-Jan-2003], DataUnit [year2003 = 31-Dec-2003], DataUnit [year2003 = Y], DataUnit [year2004 = 2004], DataUnit [year2004 = 2004], DataUnit [year2004 = 01-Jan-2004], DataUnit [year2004 = 31-Dec-2004], DataUnit [year2004 = Y], DataUnit [year2005 = 2005], DataUnit [year2005 = 2005], DataUnit [year2005 = 01-Jan-2005], DataUnit [year2005 = 31-Dec-2005], DataUnit [year2005 = Y], DataUnit [year2006 = 2006], DataUnit [year2006 = 2006], DataUnit [year2006 = 01-Jan-2006], DataUnit [year2006 = 31-Dec-2006], DataUnit [year2006 = Y], DataUnit [year2007 = 2007], DataUnit [year2007 = 2007], DataUnit [year2007 = 01-Jan-2007], DataUnit [year2007 = 31-Dec-2007], DataUnit [year2007 = Y], DataUnit [year2008 = 2008], DataUnit [year2008 = 2008], DataUnit [year2008 = 01-Jan-2008], DataUnit [year2008 = 31-Dec-2008], DataUnit [year2008 = Y], DataUnit [year2009 = 2009], DataUnit [year2009 = 2009], DataUnit [year2009 = 01-Jan-2009], DataUnit [year2009 = 31-Dec-2009], DataUnit [year2009 = Y], DataUnit [year2010 = 2010], DataUnit [year2010 = 2010], DataUnit [year2010 = 01-Jan-2010], DataUnit [year2010 = 31-Dec-2010], DataUnit [year2010 = Y], DataUnit [year2011 = 2011], DataUnit [year2011 = 2011], DataUnit [year2011 = 01-Jan-2011], DataUnit [year2011 = 31-Dec-2011], DataUnit [year2011 = Y], DataUnit [year2012 = 2012], DataUnit [year2012 = 2012], DataUnit [year2012 = 01-Jan-2012], DataUnit [year2012 = 31-Dec-2012], DataUnit [year2012 = Y], DataUnit [year2013 = 2013], DataUnit [year2013 = 2013], DataUnit [year2013 = 01-Jan-2013], DataUnit [year2013 = 31-Dec-2013], DataUnit [year2013 = Y], DataUnit [year2014 = 2014], DataUnit [year2014 = 2014], DataUnit [year2014 = 01-Jan-2014], DataUnit [year2014 = 31-Dec-2014], DataUnit [year2014 = Y], DataUnit [year2015 = 2015], DataUnit [year2015 = 2015], DataUnit [year2015 = 01-Jan-2015], DataUnit [year2015 = 31-Dec-2015], DataUnit [year2015 = Y], DataUnit [year2016 = 2016], DataUnit [year2016 = 2016], DataUnit [year2016 = 01-Jan-2016], DataUnit [year2016 = 31-Dec-2016], DataUnit [year2016 = Y], DataUnit [year2017 = 2017], DataUnit [year2017 = 2017], DataUnit [year2017 = 01-Jan-2017], DataUnit [year2017 = 31-Dec-2017], DataUnit [year2017 = Y], DataUnit [year2018 = 2018], DataUnit [year2018 = 2018], DataUnit [year2018 = 01-Jan-2018], DataUnit [year2018 = 31-Dec-2018], DataUnit [year2018 = Y], DataUnit [year2019 = 2019], DataUnit [year2019 = 2019], DataUnit [year2019 = 01-Jan-2019], DataUnit [year2019 = 31-Dec-2019], DataUnit [year2019 = Y]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.adv.qa.selenium.tests.currency.A005_Currency_Exchange_RatesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGI], DataUnit [value = UKP], DataUnit [ukpusdCurrency = UKP], DataUnit [ukpusdCurrency = FRF], DataUnit [ukpusdCurrency = IM], DataUnit [ukpusdCurrency = 01 Dec 1997], DataUnit [ukpusdCurrency = 1.54], DataUnit [ukpusdCurrency = 1.0], DataUnit [ukpusdCurrency = 1.0], DataUnit [ukpfrfCurrency = UKP], DataUnit [ukpfrfCurrency = FRF], DataUnit [ukpfrfCurrency = IM], DataUnit [ukpfrfCurrency = 01 Dec 1997], DataUnit [ukpfrfCurrency = 8.280000], DataUnit [ukpfrfCurrency = 1.00], DataUnit [ukpfrfCurrency = 1.00], DataUnit [ukpdemCurrency = UKP], DataUnit [ukpdemCurrency = DEM], DataUnit [ukpdemCurrency = IM], DataUnit [ukpdemCurrency = 01 Dec 1997], DataUnit [ukpdemCurrency = 2.45], DataUnit [ukpdemCurrency = 1.0], DataUnit [ukpdemCurrency = 1.0], DataUnit [ukpeurCurrency = UKP], DataUnit [ukpeurCurrency = EUR], DataUnit [ukpeurCurrency = IM], DataUnit [ukpeurCurrency = 01 Jan 1998], DataUnit [ukpeurCurrency = 1.26087], DataUnit [ukpeurCurrency = 1.0], DataUnit [ukpeurCurrency = 1.0], DataUnit [eurukpCurrency = EUR], DataUnit [eurukpCurrency = UKP], DataUnit [eurukpCurrency = IM], DataUnit [eurukpCurrency = 01 Jan 1998], DataUnit [eurukpCurrency = 0.793103], DataUnit [eurukpCurrency = 1.0], DataUnit [eurukpCurrency = 1.0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.adv.qa.selenium.tests.currency.A012_CalendarsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = APC], DataUnit [calendarActivity = IMDAY], DataUnit [calendarActivity = CO IM DAILY], DataUnit [calendarActivity = Daily], DataUnit [calendarActivity = 1], DataUnit [calendarActivity = 2], DataUnit [calendarActivity = day], DataUnit [calendarActivity = 3], DataUnit [calendarActivity = 4], DataUnit [calendarActivity = 5], DataUnit [calendarActivity = 6], DataUnit [calendarActivity = 7], DataUnit [calendarMonthActivity = IMMONTH], DataUnit [calendarMonthActivity = CO IM MONTHLY], DataUnit [calendarMonthActivity = Monthly], DataUnit [calendarMonthActivity = 31], DataUnit [calendarMonthActivity = Monday], DataUnit [calendarMonthActivity = month]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

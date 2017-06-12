@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001A_On_line_AuditingTest>
+<Verification1>23/05/2017 11:53:41 | Pass : Login page displayed</Verification1>
+<Verification2>23/05/2017 11:53:45 | Pass : Command line displayed</Verification2>
+<Verification3>23/05/2017 11:53:58 | Pass : Search page displayed</Verification3>
+<Verification4>23/05/2017 11:54:11 | Pass : Currency TPBSUPP displayed in the list</Verification4>
+<Verification5>23/05/2017 11:54:19 | Pass : Column definition displayed</Verification5>
+<Verification6>23/05/2017 11:54:33 | Pass : Column definition def displayed</Verification6>
+</A001A_On_line_AuditingTest>
+</TestCase>
+</SeleniumTestReport>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A097_Stock_TypesTest>
+<Verification1>25/05/2017 02:31:53 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 02:32:07 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 02:32:34 | Pass : Currency search page displayed</Verification3>
+<Verification4>25/05/2017 02:34:06 | Fail : Stock code DVnot displayed in the list</Verification4>
+</A097_Stock_TypesTest>
+<A098_Item_CreationTest>
+<Verification1>25/05/2017 02:35:50 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 02:36:04 | Pass : Command line displayed</Verification2>
+</A098_Item_CreationTest>
+</TestCase>
+</SeleniumTestReport>

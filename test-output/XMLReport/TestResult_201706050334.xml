@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02001_Normal_Material_IssueTest>
+<Verification1>05/06/2017 03:34:56 | Pass : Login page displayed</Verification1>
+<Verification2>05/06/2017 03:35:03 | Pass : Command line displayed</Verification2>
+<Verification3>05/06/2017 03:35:17 | Pass : Journey search page displayed</Verification3>
+<Verification4>05/06/2017 03:36:03 | Pass : Journal header page displayed</Verification4>
+</AD02001_Normal_Material_IssueTest>
+</TestCase>
+</SeleniumTestReport>

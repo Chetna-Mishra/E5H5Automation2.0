@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">suite10</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,094.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2">suite11</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">532.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3">suite12</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,157.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t4">suite13</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,156.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">3,940.9 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">suite10 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals</td><td><a href="#m1"><b>verify</b>  </a></td><td class="numi">1</td><td>1489725393436</td><td class="numi">1076581</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals</td><td><a href="#m2"><b>verify</b>  </a></td><td class="numi">1</td><td>1489725395286</td><td class="numi">1079541</td></tr>
+<tr id="t2"><th colspan="5">suite11 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.A018C_Ledger_Control_Nominals</td><td><a href="#m3"><b>verify</b>  </a></td><td class="numi">1</td><td>1489726494586</td><td class="numi">478583</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.A018B_Ledger_Control_Nominals</td><td><a href="#m4"><b>verify</b>  </a></td><td class="numi">1</td><td>1489726494859</td><td class="numi">159325</td></tr>
+<tr id="t3"><th colspan="5">suite12 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.A018E_Ledger_Control_Nominals</td><td><a href="#m5"><b>verify</b>  </a></td><td class="numi">1</td><td>1489727020597</td><td class="numi">682482</td></tr>
+<tr><th colspan="5">suite12 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A018D_Ledger_Control_Nominals</td><td><a href="#m6"><b>verify</b>  </a></td><td class="numi">1</td><td>1489727019310</td><td class="numi">1145350</td></tr>
+<tr id="t4"><th colspan="5">suite13 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.A018F_Ledger_Control_Nominals</td><td><a href="#m7"><b>verify</b>  </a></td><td class="numi">1</td><td>1489728176631</td><td class="numi">136858</td></tr>
+<tr><th colspan="5">suite13 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A018G_Ledger_Control_Nominals</td><td><a href="#m8"><b>verify</b>  </a></td><td class="numi">1</td><td>1489728177617</td><td class="numi">1141942</td></tr>
+</table>
+<h1>suite10</h1>
+<h2 id="m1">com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal2500 = 2500], DataUnit [nominal2500 = Suspense Account], DataUnit [nominal2500 = A], DataUnit [nominal2500 = 02], DataUnit [nominal2500 = Balance Sheet], DataUnit [nominal2500 = Both], DataUnit [nominal2500 = A], DataUnit [nominal2500 = ***], DataUnit [nominal2500 = Both], DataUnit [nominal2500 = 0], DataUnit [nominal2600 = 2600], DataUnit [nominal2600 = Closeout Account], DataUnit [nominal2600 = A], DataUnit [nominal2600 = 09], DataUnit [nominal2600 = Balance Sheet], DataUnit [nominal2600 = Both], DataUnit [nominal2600 = A], DataUnit [nominal2600 = ***], DataUnit [nominal2600 = Both], DataUnit [nominal2600 = 0], DataUnit [nominal3000 = 3000], DataUnit [nominal3000 = Rounding Account], DataUnit [nominal3000 = A], DataUnit [nominal3000 = 02], DataUnit [nominal3000 = Balance Sheet], DataUnit [nominal3000 = Both], DataUnit [nominal3000 = A], DataUnit [nominal3000 = ***], DataUnit [nominal3000 = Both], DataUnit [nominal3000 = 0], DataUnit [nominal1500 = 1500], DataUnit [nominal1500 = Bank Account], DataUnit [nominal1500 = A], DataUnit [nominal1500 = 02], DataUnit [nominal1500 = Balance Sheet], DataUnit [nominal1500 = Both], DataUnit [nominal1500 = A], DataUnit [nominal1500 = ***], DataUnit [nominal1500 = Both], DataUnit [nominal1500 = 0], DataUnit [nominalGLICA = GLICA], DataUnit [nominalGLICA = GL ICA Account], DataUnit [nominalGLICA = A], DataUnit [nominalGLICA = 02], DataUnit [nominalGLICA = Balance Sheet], DataUnit [nominalGLICA = Both], DataUnit [nominalGLICA = A], DataUnit [nominalGLICA = ***], DataUnit [nominalGLICA = Both], DataUnit [nominalGLICA = 0], DataUnit [nominal1550 = 1550], DataUnit [nominal1550 = Purchasing Bank Account], DataUnit [nominal1550 = B], DataUnit [nominal1550 = 01], DataUnit [nominal1550 = Balance Sheet], DataUnit [nominal1550 = Both], DataUnit [nominal1550 = A], DataUnit [nominal1550 = ***], DataUnit [nominal1550 = Both], DataUnit [nominal1550 = 0], DataUnit [nominal6300 = 6300], DataUnit [nominal6300 = Rent Account], DataUnit [nominal6300 = A], DataUnit [nominal6300 = 02], DataUnit [nominal6300 = Balance Sheet], DataUnit [nominal6300 = Both], DataUnit [nominal6300 = A], DataUnit [nominal6300 = UKP], DataUnit [nominal6300 = Base], DataUnit [nominal6300 = 0], DataUnit [nominal6400 = 6400], DataUnit [nominal6400 = Business Rate Account], DataUnit [nominal6400 = A], DataUnit [nominal6400 = 02], DataUnit [nominal6400 = Balance Sheet], DataUnit [nominal6400 = Both], DataUnit [nominal6400 = A], DataUnit [nominal6400 = UKP], DataUnit [nominal6400 = Base], DataUnit [nominal6400 = 0], DataUnit [nominalAKAI = AKAI], DataUnit [nominalAKAI = Akai Account], DataUnit [nominalAKAI = T], DataUnit [nominalAKAI = 04], DataUnit [nominalAKAI = Profit &amp; Loss], DataUnit [nominalAKAI = Both], DataUnit [nominalAKAI = A], DataUnit [nominalAKAI = UKP], DataUnit [nominalAKAI = Base], DataUnit [nominalAKAI = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal6500 = 6500], DataUnit [nominal6500 = Electricity Account], DataUnit [nominal6500 = A], DataUnit [nominal6500 = 02], DataUnit [nominal6500 = Balance Sheet], DataUnit [nominal6500 = Both], DataUnit [nominal6500 = A], DataUnit [nominal6500 = UKP], DataUnit [nominal6500 = Base], DataUnit [nominal6500 = 0], DataUnit [nominalBANKR = BANKR], DataUnit [nominalBANKR = bank rec bank], DataUnit [nominalBANKR = A], DataUnit [nominalBANKR = 02], DataUnit [nominalBANKR = Balance Sheet], DataUnit [nominalBANKR = Both], DataUnit [nominalBANKR = A], DataUnit [nominalBANKR = ***], DataUnit [nominalBANKR = Both], DataUnit [nominalBANKR = 0], DataUnit [nominalBANKR1 = BANKR1], DataUnit [nominalBANKR1 = bank rec bank], DataUnit [nominalBANKR1 = A], DataUnit [nominalBANKR1 = 02], DataUnit [nominalBANKR1 = Balance Sheet], DataUnit [nominalBANKR1 = Both], DataUnit [nominalBANKR1 = A], DataUnit [nominalBANKR1 = ***], DataUnit [nominalBANKR1 = Both], DataUnit [nominalBANKR1 = 0], DataUnit [nominalBANKR2 = BANKR2], DataUnit [nominalBANKR2 = bank rec bank], DataUnit [nominalBANKR2 = A], DataUnit [nominalBANKR2 = 02], DataUnit [nominalBANKR2 = Balance Sheet], DataUnit [nominalBANKR2 = Both], DataUnit [nominalBANKR2 = A], DataUnit [nominalBANKR2 = ***], DataUnit [nominalBANKR2 = Both], DataUnit [nominalBANKR2 = 0], DataUnit [nominal2000 = 2000], DataUnit [nominal2000 = Creditors Control], DataUnit [nominal2000 = B], DataUnit [nominal2000 = 02], DataUnit [nominal2000 = Balance Sheet], DataUnit [nominal2000 = Both], DataUnit [nominal2000 = A], DataUnit [nominal2000 = ***], DataUnit [nominal2000 = Both], DataUnit [nominal2000 = 0], DataUnit [nominal5000 = 5000], DataUnit [nominal5000 = Discount Receivable], DataUnit [nominal5000 = T], DataUnit [nominal5000 = 04], DataUnit [nominal5000 = Profit &amp; Loss], DataUnit [nominal5000 = Both], DataUnit [nominal5000 = A], DataUnit [nominal5000 = ***], DataUnit [nominal5000 = Both], DataUnit [nominal5000 = 0], DataUnit [nominal5050 = 5050], DataUnit [nominal5050 = Bank Charges], DataUnit [nominal5050 = T], DataUnit [nominal5050 = 04], DataUnit [nominal5050 = Profit &amp; Loss], DataUnit [nominal5050 = Both], DataUnit [nominal5050 = A], DataUnit [nominal5050 = ***], DataUnit [nominal5050 = Both], DataUnit [nominal5050 = 0], DataUnit [nominal2150 = 2150], DataUnit [nominal2150 = VAT Suspense], DataUnit [nominal2150 = B], DataUnit [nominal2150 = 03], DataUnit [nominal2150 = Balance Sheet], DataUnit [nominal2150 = Both], DataUnit [nominal2150 = A], DataUnit [nominal2150 = ***], DataUnit [nominal2150 = Both], DataUnit [nominal2150 = 0], DataUnit [nominalSTKR = STKR], DataUnit [nominalSTKR = IM Stock Revaluation], DataUnit [nominalSTKR = I], DataUnit [nominalSTKR = 02], DataUnit [nominalSTKR = Balance Sheet], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = A], DataUnit [nominalSTKR = ***], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite11</h1>
+<h2 id="m3">com.adv.qa.selenium.tests.currency.A018C_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominalPLDF = PLDF], DataUnit [nominalPLDF = PL ICA], DataUnit [nominalPLDF = A], DataUnit [nominalPLDF = 02], DataUnit [nominalPLDF = Balance Sheet], DataUnit [nominalPLDF = Both], DataUnit [nominalPLDF = A], DataUnit [nominalPLDF = ***], DataUnit [nominalPLDF = Both], DataUnit [nominalPLDF = 0], DataUnit [nominalPOPD = POPD], DataUnit [nominalPOPD = POP ICA], DataUnit [nominalPOPD = A], DataUnit [nominalPOPD = 02], DataUnit [nominalPOPD = Balance Sheet], DataUnit [nominalPOPD = Both], DataUnit [nominalPOPD = A], DataUnit [nominalPOPD = ***], DataUnit [nominalPOPD = Both], DataUnit [nominalPOPD = 0], DataUnit [nominalIMDF = IMDF], DataUnit [nominalIMDF = IM ICA Account], DataUnit [nominalIMDF = A], DataUnit [nominalIMDF = 02], DataUnit [nominalIMDF = Balance Sheet], DataUnit [nominalIMDF = Both], DataUnit [nominalIMDF = A], DataUnit [nominalIMDF = ***], DataUnit [nominalIMDF = Both], DataUnit [nominalIMDF = 0], DataUnit [nominalSTKE = STKE], DataUnit [nominalSTKE = IM Stock East], DataUnit [nominalSTKE = I], DataUnit [nominalSTKE = 02], DataUnit [nominalSTKE = Balance Sheet], DataUnit [nominalSTKE = Both], DataUnit [nominalSTKE = A], DataUnit [nominalSTKE = ***], DataUnit [nominalSTKE = Both], DataUnit [nominalSTKE = 0], DataUnit [nominalSTKS = STKS], DataUnit [nominalSTKS = IM Stock SOUTH], DataUnit [nominalSTKS = I], DataUnit [nominalSTKS = 02], DataUnit [nominalSTKS = Balance Sheet], DataUnit [nominalSTKS = Both], DataUnit [nominalSTKS = A], DataUnit [nominalSTKS = ***], DataUnit [nominalSTKS = Both], DataUnit [nominalSTKS = 0], DataUnit [nominalSTKW = STKW], DataUnit [nominalSTKW = IM Stock WEST], DataUnit [nominalSTKW = I], DataUnit [nominalSTKW = 02], DataUnit [nominalSTKW = Balance Sheet], DataUnit [nominalSTKW = Both], DataUnit [nominalSTKW = A], DataUnit [nominalSTKW = ***], DataUnit [nominalSTKW = Both], DataUnit [nominalSTKW = 0], DataUnit [nominalSTKN = STKN], DataUnit [nominalSTKN = IM Stock NORTH], DataUnit [nominalSTKN = I], DataUnit [nominalSTKN = 02], DataUnit [nominalSTKN = Balance Sheet], DataUnit [nominalSTKN = Both], DataUnit [nominalSTKN = A], DataUnit [nominalSTKN = ***], DataUnit [nominalSTKN = Both], DataUnit [nominalSTKN = 0], DataUnit [nominalINTE = INTE], DataUnit [nominalINTE = IM In-transit Store East], DataUnit [nominalINTE = A], DataUnit [nominalINTE = 02], DataUnit [nominalINTE = Balance Sheet], DataUnit [nominalINTE = Both], DataUnit [nominalINTE = A], DataUnit [nominalINTE = ***], DataUnit [nominalINTE = Both], DataUnit [nominalINTE = 0], DataUnit [nominalINTW = INTW], DataUnit [nominalINTW = IM In-transit Store West], DataUnit [nominalINTW = A], DataUnit [nominalINTW = 02], DataUnit [nominalINTW = Balance Sheet], DataUnit [nominalINTW = Both], DataUnit [nominalINTW = A], DataUnit [nominalINTW = ***], DataUnit [nominalINTW = Both], DataUnit [nominalINTW = 0], DataUnit [nominalINTS = INTS], DataUnit [nominalINTS = IM In-transit Store South], DataUnit [nominalINTS = A], DataUnit [nominalINTS = 02], DataUnit [nominalINTS = Balance Sheet], DataUnit [nominalINTS = Both], DataUnit [nominalINTS = A], DataUnit [nominalINTS = ***], DataUnit [nominalINTS = Both], DataUnit [nominalINTS = 0], DataUnit [nominalINTN = INTN], DataUnit [nominalINTN = IM In-transit Store North], DataUnit [nominalINTN = A], DataUnit [nominalINTN = 02], DataUnit [nominalINTN = Balance Sheet], DataUnit [nominalINTN = Both], DataUnit [nominalINTN = A], DataUnit [nominalINTN = ***], DataUnit [nominalINTN = Both], DataUnit [nominalINTN = 0], DataUnit [nominalREVC = REVC], DataUnit [nominalREVC = IM Revised Cost], DataUnit [nominalREVC = I], DataUnit [nominalREVC = 02], DataUnit [nominalREVC = Balance Sheet], DataUnit [nominalREVC = Both], DataUnit [nominalREVC = A], DataUnit [nominalREVC = ***], DataUnit [nominalREVC = Both], DataUnit [nominalREVC = 0], DataUnit [nominalREVN = REVN], DataUnit [nominalREVN = IM Revenue], DataUnit [nominalREVN = I], DataUnit [nominalREVN = 02], DataUnit [nominalREVN = Balance Sheet], DataUnit [nominalREVN = Both], DataUnit [nominalREVN = A], DataUnit [nominalREVN = ***], DataUnit [nominalREVN = Both], DataUnit [nominalREVN = 0], DataUnit [nominalSUND = SUND], DataUnit [nominalSUND = IM Sundry Debtors], DataUnit [nominalSUND = I], DataUnit [nominalSUND = 02], DataUnit [nominalSUND = Balance Sheet], DataUnit [nominalSUND = Both], DataUnit [nominalSUND = A], DataUnit [nominalSUND = ***], DataUnit [nominalSUND = Both], DataUnit [nominalSUND = 0], DataUnit [nominalRSUP = RSUP], DataUnit [nominalRSUP = IM Return to Supplier], DataUnit [nominalRSUP = I], DataUnit [nominalRSUP = 02], DataUnit [nominalRSUP = Balance Sheet], DataUnit [nominalRSUP = Both], DataUnit [nominalRSUP = A], DataUnit [nominalRSUP = ***], DataUnit [nominalRSUP = Both], DataUnit [nominalRSUP = 0], DataUnit [nominalISSU = ISSU], DataUnit [nominalISSU = IM Issue], DataUnit [nominalISSU = I], DataUnit [nominalISSU = 02], DataUnit [nominalISSU = Balance Sheet], DataUnit [nominalISSU = Both], DataUnit [nominalISSU = A], DataUnit [nominalISSU = ***], DataUnit [nominalISSU = Both], DataUnit [nominalISSU = 0], DataUnit [nominalSTAD = STAD], DataUnit [nominalSTAD = IM Stock Adjustment], DataUnit [nominalSTAD = I], DataUnit [nominalSTAD = 02], DataUnit [nominalSTAD = Balance Sheet], DataUnit [nominalSTAD = Both], DataUnit [nominalSTAD = A], DataUnit [nominalSTAD = ***], DataUnit [nominalSTAD = Both], DataUnit [nominalSTAD = 0], DataUnit [nominalDISP = DISP], DataUnit [nominalDISP = IM Stock Disposal], DataUnit [nominalDISP = I], DataUnit [nominalDISP = 02], DataUnit [nominalDISP = Balance Sheet], DataUnit [nominalDISP = Both], DataUnit [nominalDISP = A], DataUnit [nominalDISP = ***], DataUnit [nominalDISP = Both], DataUnit [nominalDISP = 0], DataUnit [nominalRSTR = RSTR], DataUnit [nominalRSTR = IM Return to Store], DataUnit [nominalRSTR = I], DataUnit [nominalRSTR = 02], DataUnit [nominalRSTR = Balance Sheet], DataUnit [nominalRSTR = Both], DataUnit [nominalRSTR = A], DataUnit [nominalRSTR = ***], DataUnit [nominalRSTR = Both], DataUnit [nominalRSTR = 0], DataUnit [nominalDEN = DEN], DataUnit [nominalDEN = Denon Account], DataUnit [nominalDEN = T], DataUnit [nominalDEN = 04], DataUnit [nominalDEN = Profit &amp; Loss], DataUnit [nominalDEN = Both], DataUnit [nominalDEN = A], DataUnit [nominalDEN = ***], DataUnit [nominalDEN = both], DataUnit [nominalDEN = 0], DataUnit [nominalARCM = ARCM], DataUnit [nominalARCM = Arcam Account], DataUnit [nominalARCM = T], DataUnit [nominalARCM = 04], DataUnit [nominalARCM = Profit &amp; Loss], DataUnit [nominalARCM = Both], DataUnit [nominalARCM = A], DataUnit [nominalARCM = ***], DataUnit [nominalARCM = both], DataUnit [nominalARCM = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.ElementNotVisibleException: Cannot click on element (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 61 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.16.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:15277/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 9f4eb062-6b06-43ab-ac18-da06a797a00c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:344)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.getToolContentText(CurrencyPage.java:57)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterNominalControl(CurrencyPage.java:2353)
+	at com.adv.qa.selenium.tests.currency.A018C_Ledger_Control_Nominals.createNominal(A018C_Ledger_Control_Nominals.java:93)
+	at com.adv.qa.selenium.tests.currency.A018C_Ledger_Control_Nominals.verify(A018C_Ledger_Control_Nominals.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.adv.qa.selenium.tests.currency.A018B_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal2160 = 2160], DataUnit [nominal2160 = VAT Variance], DataUnit [nominal2160 = B], DataUnit [nominal2160 = 03], DataUnit [nominal2160 = Balance Sheet], DataUnit [nominal2160 = Both], DataUnit [nominal2160 = A], DataUnit [nominal2160 = ***], DataUnit [nominal2160 = Both], DataUnit [nominal2160 = 0], DataUnit [nominal1660 = 1660], DataUnit [nominal1660 = PrePayments], DataUnit [nominal1660 = B], DataUnit [nominal1660 = 01], DataUnit [nominal1660 = Balance Sheet], DataUnit [nominal1660 = Both], DataUnit [nominal1660 = A], DataUnit [nominal1660 = ***], DataUnit [nominal1660 = Both], DataUnit [nominal1660 = 0], DataUnit [nominal5100 = 5100], DataUnit [nominal5100 = Detail Variance], DataUnit [nominal5100 = T], DataUnit [nominal5100 = 04], DataUnit [nominal5100 = Profit &amp; Loss], DataUnit [nominal5100 = Both], DataUnit [nominal5100 = A], DataUnit [nominal5100 = ***], DataUnit [nominal5100 = Both], DataUnit [nominal5100 = 0], DataUnit [nominal2051 = 2051], DataUnit [nominal2051 = Self Assess.Tax A/C], DataUnit [nominal2051 = C], DataUnit [nominal2051 = 01], DataUnit [nominal2051 = Balance Sheet], DataUnit [nominal2051 = Both], DataUnit [nominal2051 = A], DataUnit [nominal2051 = ***], DataUnit [nominal2051 = Both], DataUnit [nominal2051 = 0], DataUnit [nominal6200 = 6200], DataUnit [nominal6200 = Account 6200], DataUnit [nominal6200 = P], DataUnit [nominal6200 = 04], DataUnit [nominal6200 = Profit &amp; Loss], DataUnit [nominal6200 = Both], DataUnit [nominal6200 = A], DataUnit [nominal6200 = ***], DataUnit [nominal6200 = Both], DataUnit [nominal6200 = 0], DataUnit [nominal5900 = 5900], DataUnit [nominal5900 = POP Accrual Account], DataUnit [nominal5900 = B], DataUnit [nominal5900 = 04], DataUnit [nominal5900 = Balance Sheet], DataUnit [nominal5900 = Both], DataUnit [nominal5900 = A], DataUnit [nominal5900 = ***], DataUnit [nominal5900 = Both], DataUnit [nominal5900 = 0], DataUnit [nominal7000 = 7000], DataUnit [nominal7000 = Account 7000], DataUnit [nominal7000 = B], DataUnit [nominal7000 = 08], DataUnit [nominal7000 = Balance Sheet], DataUnit [nominal7000 = Both], DataUnit [nominal7000 = A], DataUnit [nominal7000 = ***], DataUnit [nominal7000 = Both], DataUnit [nominal7000 = 0], DataUnit [nominal7001 = 7001], DataUnit [nominal7001 = AP/AR Netting OFF], DataUnit [nominal7001 = B], DataUnit [nominal7001 = 08], DataUnit [nominal7001 = Balance Sheet], DataUnit [nominal7001 = Both], DataUnit [nominal7001 = A], DataUnit [nominal7001 = ***], DataUnit [nominal7001 = Both], DataUnit [nominal7001 = 0], DataUnit [nominalSALC = SALC], DataUnit [nominalSALC = SALC], DataUnit [nominalSALC = A], DataUnit [nominalSALC = 02], DataUnit [nominalSALC = Balance Sheet], DataUnit [nominalSALC = Both], DataUnit [nominalSALC = A], DataUnit [nominalSALC = ***], DataUnit [nominalSALC = Both], DataUnit [nominalSALC = 0], DataUnit [nominalSLDE = SLDE], DataUnit [nominalSLDE = SLDE], DataUnit [nominalSLDE = A], DataUnit [nominalSLDE = 02], DataUnit [nominalSLDE = Balance Sheet], DataUnit [nominalSLDE = Both], DataUnit [nominalSLDE = A], DataUnit [nominalSLDE = ***], DataUnit [nominalSLDE = Both], DataUnit [nominalSLDE = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.InvalidElementStateException: A JavaScript error was encountered clearing the element. The driver assumes this is because the element is hidden, disabled or read-only, and it must not be to clear the element. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 133 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.16.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:27185/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: ebaa9df1-fbc0-4157-9296-468c8d03bba6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:116)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.clear(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.clear(EventFiringWebDriver.java:360)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterNominalControl(CurrencyPage.java:2355)
+	at com.adv.qa.selenium.tests.currency.A018B_Ledger_Control_Nominals.createNominal(A018B_Ledger_Control_Nominals.java:93)
+	at com.adv.qa.selenium.tests.currency.A018B_Ledger_Control_Nominals.verify(A018B_Ledger_Control_Nominals.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite12</h1>
+<h2 id="m5">com.adv.qa.selenium.tests.currency.A018E_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominalGLICA1 = GLICA1], DataUnit [nominalGLICA1 = GL ICA Account1], DataUnit [nominalGLICA1 = A], DataUnit [nominalGLICA1 = 02], DataUnit [nominalGLICA1 = Balance Sheet], DataUnit [nominalGLICA1 = Both], DataUnit [nominalGLICA1 = A], DataUnit [nominalGLICA1 = ***], DataUnit [nominalGLICA1 = Both], DataUnit [nominalGLICA1 = 0], DataUnit [nominal4000 = 4000], DataUnit [nominal4000 = Account 4000], DataUnit [nominal4000 = P], DataUnit [nominal4000 = 03], DataUnit [nominal4000 = Profit &amp; Loss], DataUnit [nominal4000 = Both], DataUnit [nominal4000 = A], DataUnit [nominal4000 = ***], DataUnit [nominal4000 = Both], DataUnit [nominal4000 = 0], DataUnit [nominal4100 = 4100], DataUnit [nominal4100 = Account 4100], DataUnit [nominal4100 = P], DataUnit [nominal4100 = 03], DataUnit [nominal4100 = Profit &amp; Loss], DataUnit [nominal4100 = Both], DataUnit [nominal4100 = A], DataUnit [nominal4100 = ***], DataUnit [nominal4100 = Both], DataUnit [nominal4100 = 0], DataUnit [nominal4200 = 4200], DataUnit [nominal4200 = Account 4200], DataUnit [nominal4200 = P], DataUnit [nominal4200 = 03], DataUnit [nominal4200 = Profit &amp; Loss], DataUnit [nominal4200 = Both], DataUnit [nominal4200 = A], DataUnit [nominal4200 = UKP], DataUnit [nominal4200 = Base], DataUnit [nominal4200 = 0], DataUnit [nominal6000 = 6000], DataUnit [nominal6000 = Account 6000], DataUnit [nominal6000 = P], DataUnit [nominal6000 = 04], DataUnit [nominal6000 = Profit &amp; Loss], DataUnit [nominal6000 = Both], DataUnit [nominal6000 = A], DataUnit [nominal6000 = UKP], DataUnit [nominal6000 = Base], DataUnit [nominal6000 = 0], DataUnit [nominal6100 = 6100], DataUnit [nominal6100 = Account 6100], DataUnit [nominal6100 = P], DataUnit [nominal6100 = 04], DataUnit [nominal6100 = Profit &amp; Loss], DataUnit [nominal6100 = Both], DataUnit [nominal6100 = A], DataUnit [nominal6100 = UKP], DataUnit [nominal6100 = Base], DataUnit [nominal6100 = 0], DataUnit [nominal1560 = 1560], DataUnit [nominal1560 = Purch.Curr.Bank A/C], DataUnit [nominal1560 = B], DataUnit [nominal1560 = 01], DataUnit [nominal1560 = Balance Sheet], DataUnit [nominal1560 = Both], DataUnit [nominal1560 = A], DataUnit [nominal1560 = ***], DataUnit [nominal1560 = Both], DataUnit [nominal1560 = 0], DataUnit [nominal1661 = 1661], DataUnit [nominal1661 = PrePayments A], DataUnit [nominal1661 = B], DataUnit [nominal1661 = 01], DataUnit [nominal1661 = Balance Sheet], DataUnit [nominal1661 = Both], DataUnit [nominal1661 = A], DataUnit [nominal1661 = ***], DataUnit [nominal1661 = Both], DataUnit [nominal1661 = 0], DataUnit [nominal2001 = 2001], DataUnit [nominal2001 = Creditors Control A], DataUnit [nominal2001 = B], DataUnit [nominal2001 = 02], DataUnit [nominal2001 = Balance Sheet], DataUnit [nominal2001 = Both], DataUnit [nominal2001 = A], DataUnit [nominal2001 = ***], DataUnit [nominal2001 = Both], DataUnit [nominal2001 = 0], DataUnit [nominal2100 = 2100], DataUnit [nominal2100 = Standard VAT], DataUnit [nominal2100 = C], DataUnit [nominal2100 = 02], DataUnit [nominal2100 = Balance Sheet], DataUnit [nominal2100 = Both], DataUnit [nominal2100 = A], DataUnit [nominal2100 = ***], DataUnit [nominal2100 = Both], DataUnit [nominal2100 = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.InvalidElementStateException: A JavaScript error was encountered clearing the element. The driver assumes this is because the element is hidden, disabled or read-only, and it must not be to clear the element. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 118 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.16.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:12048/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: a3488d7b-b779-44b2-aef5-4f5ab817a0a0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:116)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.clear(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.clear(EventFiringWebDriver.java:360)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterNominalControl(CurrencyPage.java:2370)
+	at com.adv.qa.selenium.tests.currency.A018E_Ledger_Control_Nominals.createNominal(A018E_Ledger_Control_Nominals.java:92)
+	at com.adv.qa.selenium.tests.currency.A018E_Ledger_Control_Nominals.verify(A018E_Ledger_Control_Nominals.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.adv.qa.selenium.tests.currency.A018D_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominalSTKE = STKE], DataUnit [nominalSTKE = IM Stock East], DataUnit [nominalSTKE = I], DataUnit [nominalSTKE = 02], DataUnit [nominalSTKE = Balance Sheet], DataUnit [nominalSTKE = Both], DataUnit [nominalSTKE = A], DataUnit [nominalSTKE = ***], DataUnit [nominalSTKE = Both], DataUnit [nominalSTKE = 0], DataUnit [nominalSTKS = STKS], DataUnit [nominalSTKS = IM Stock SOUTH], DataUnit [nominalSTKS = I], DataUnit [nominalSTKS = 02], DataUnit [nominalSTKS = Balance Sheet], DataUnit [nominalSTKS = Both], DataUnit [nominalSTKS = A], DataUnit [nominalSTKS = ***], DataUnit [nominalSTKS = Both], DataUnit [nominalSTKS = 0], DataUnit [nominalSTKW = STKW], DataUnit [nominalSTKW = IM Stock WEST], DataUnit [nominalSTKW = I], DataUnit [nominalSTKW = 02], DataUnit [nominalSTKW = Balance Sheet], DataUnit [nominalSTKW = Both], DataUnit [nominalSTKW = A], DataUnit [nominalSTKW = ***], DataUnit [nominalSTKW = Both], DataUnit [nominalSTKW = 0], DataUnit [nominalSTKN = STKN], DataUnit [nominalSTKN = IM Stock NORTH], DataUnit [nominalSTKN = I], DataUnit [nominalSTKN = 02], DataUnit [nominalSTKN = Balance Sheet], DataUnit [nominalSTKN = Both], DataUnit [nominalSTKN = A], DataUnit [nominalSTKN = ***], DataUnit [nominalSTKN = Both], DataUnit [nominalSTKN = 0], DataUnit [nominalINTE = INTE], DataUnit [nominalINTE = IM In-transit Store East], DataUnit [nominalINTE = A], DataUnit [nominalINTE = 02], DataUnit [nominalINTE = Balance Sheet], DataUnit [nominalINTE = Both], DataUnit [nominalINTE = A], DataUnit [nominalINTE = ***], DataUnit [nominalINTE = Both], DataUnit [nominalINTE = 0], DataUnit [nominalINTW = INTW], DataUnit [nominalINTW = IM In-transit Store West], DataUnit [nominalINTW = A], DataUnit [nominalINTW = 02], DataUnit [nominalINTW = Balance Sheet], DataUnit [nominalINTW = Both], DataUnit [nominalINTW = A], DataUnit [nominalINTW = ***], DataUnit [nominalINTW = Both], DataUnit [nominalINTW = 0], DataUnit [nominalINTS = INTS], DataUnit [nominalINTS = IM In-transit Store South], DataUnit [nominalINTS = A], DataUnit [nominalINTS = 02], DataUnit [nominalINTS = Balance Sheet], DataUnit [nominalINTS = Both], DataUnit [nominalINTS = A], DataUnit [nominalINTS = ***], DataUnit [nominalINTS = Both], DataUnit [nominalINTS = 0], DataUnit [nominalINTN = INTN], DataUnit [nominalINTN = IM In-transit Store North], DataUnit [nominalINTN = A], DataUnit [nominalINTN = 02], DataUnit [nominalINTN = Balance Sheet], DataUnit [nominalINTN = Both], DataUnit [nominalINTN = A], DataUnit [nominalINTN = ***], DataUnit [nominalINTN = Both], DataUnit [nominalINTN = 0], DataUnit [nominalDEN = DEN], DataUnit [nominalDEN = Denon Account], DataUnit [nominalDEN = T], DataUnit [nominalDEN = 04], DataUnit [nominalDEN = Profit &amp; Loss], DataUnit [nominalDEN = Both], DataUnit [nominalDEN = A], DataUnit [nominalDEN = ***], DataUnit [nominalDEN = both], DataUnit [nominalDEN = 0], DataUnit [nominalARCM = ARCM], DataUnit [nominalARCM = Arcam Account], DataUnit [nominalARCM = T], DataUnit [nominalARCM = 04], DataUnit [nominalARCM = Profit &amp; Loss], DataUnit [nominalARCM = Both], DataUnit [nominalARCM = A], DataUnit [nominalARCM = ***], DataUnit [nominalARCM = both], DataUnit [nominalARCM = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite13</h1>
+<h2 id="m7">com.adv.qa.selenium.tests.currency.A018F_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal5500 = 5500], DataUnit [nominal5500 = PL Account], DataUnit [nominal5500 = T], DataUnit [nominal5500 = 04], DataUnit [nominal5500 = Profit &amp; Loss], DataUnit [nominal5500 = Both], DataUnit [nominal5500 = A], DataUnit [nominal5500 = ***], DataUnit [nominal5500 = Both], DataUnit [nominal5500 = 0], DataUnit [nominalVATA = VATA], DataUnit [nominalVATA = VAT Control Account], DataUnit [nominalVATA = B], DataUnit [nominalVATA = 03], DataUnit [nominalVATA = Balance Sheet], DataUnit [nominalVATA = Both], DataUnit [nominalVATA = A], DataUnit [nominalVATA = ***], DataUnit [nominalVATA = Both], DataUnit [nominalVATA = 0], DataUnit [nominal5901 = 5901], DataUnit [nominal5901 = PPV Control], DataUnit [nominal5901 = G], DataUnit [nominal5901 = 01], DataUnit [nominal5901 = Balance Sheet], DataUnit [nominal5901 = Both], DataUnit [nominal5901 = A], DataUnit [nominal5901 = ***], DataUnit [nominal5901 = Both], DataUnit [nominal5901 = 0], DataUnit [nominal5902 = 5902], DataUnit [nominal5902 = PPV Reserve], DataUnit [nominal5902 = G], DataUnit [nominal5902 = 01], DataUnit [nominal5902 = Balance Sheet], DataUnit [nominal5902 = Both], DataUnit [nominal5902 = A], DataUnit [nominal5902 = ***], DataUnit [nominal5902 = Both], DataUnit [nominal5902 = 0], DataUnit [nominal5903 = 5903], DataUnit [nominal5903 = PPV Suspense], DataUnit [nominal5903 = G], DataUnit [nominal5903 = 01], DataUnit [nominal5903 = Balance Sheet], DataUnit [nominal5903 = Both], DataUnit [nominal5903 = A], DataUnit [nominal5903 = ***], DataUnit [nominal5903 = Both], DataUnit [nominal5903 = 0], DataUnit [nominalEXP1 = EXP1], DataUnit [nominalEXP1 = Expense Account 1], DataUnit [nominalEXP1 = T], DataUnit [nominalEXP1 = 04], DataUnit [nominalEXP1 = Balance Sheet], DataUnit [nominalEXP1 = Both], DataUnit [nominalEXP1 = A], DataUnit [nominalEXP1 = ***], DataUnit [nominalEXP1 = Both], DataUnit [nominalEXP1 = 0], DataUnit [nominalEXP2 = EXP2], DataUnit [nominalEXP2 = Expense Account 2], DataUnit [nominalEXP2 = T], DataUnit [nominalEXP2 = 04], DataUnit [nominalEXP2 = Balance Sheet], DataUnit [nominalEXP2 = Both], DataUnit [nominalEXP2 = A], DataUnit [nominalEXP2 = ***], DataUnit [nominalEXP2 = Both], DataUnit [nominalEXP2 = 0], DataUnit [nominalTRAN = TRAN], DataUnit [nominalTRAN = IM Transfer], DataUnit [nominalTRAN = I], DataUnit [nominalTRAN = 02], DataUnit [nominalTRAN = Balance Sheet], DataUnit [nominalTRAN = Both], DataUnit [nominalTRAN = A], DataUnit [nominalTRAN = ***], DataUnit [nominalTRAN = Both], DataUnit [nominalTRAN = 0], DataUnit [nominalSTKR = STKR], DataUnit [nominalSTKR = IM Stock Revaluation], DataUnit [nominalSTKR = I], DataUnit [nominalSTKR = 02], DataUnit [nominalSTKR = Balance Sheet], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = A], DataUnit [nominalSTKR = ***], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = 0], DataUnit [nominalOCST = OCST], DataUnit [nominalOCST = IM On Cost], DataUnit [nominalOCST = I], DataUnit [nominalOCST = 02], DataUnit [nominalOCST = Balance Sheet], DataUnit [nominalOCST = Both], DataUnit [nominalOCST = A], DataUnit [nominalOCST = ***], DataUnit [nominalOCST = Both], DataUnit [nominalOCST = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //fieldset/legend[text()=&apos;Command&apos;]/..//input[contains(@name,&apos;COMMAND&apos;)] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.16.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:32332/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: a56bdae3-85d5-460f-b80c-51a530a62d73
+*** Element info: {Using=xpath, value=//fieldset/legend[text()=&apos;Command&apos;]/..//input[contains(@name,&apos;COMMAND&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.isCommandDisplayed(CurrencyPage.java:147)
+	at com.adv.qa.selenium.tests.currency.A018F_Ledger_Control_Nominals.verify(A018F_Ledger_Control_Nominals.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.adv.qa.selenium.tests.currency.A018G_Ledger_Control_Nominals:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominalSONY = SONY], DataUnit [nominalSONY = Sony Account], DataUnit [nominalSONY = T], DataUnit [nominalSONY = 04], DataUnit [nominalSONY = Profit &amp; Loss], DataUnit [nominalSONY = Both], DataUnit [nominalSONY = A], DataUnit [nominalSONY = ***], DataUnit [nominalSONY = Both], DataUnit [nominalSONY = 0], DataUnit [nominalPION = PION], DataUnit [nominalPION = Pioneer Account], DataUnit [nominalPION = T], DataUnit [nominalPION = 04], DataUnit [nominalPION = Profit &amp; Loss], DataUnit [nominalPION = Both], DataUnit [nominalPION = A], DataUnit [nominalPION = ***], DataUnit [nominalPION = Both], DataUnit [nominalPION = 0], DataUnit [nominalTOSH = TOSH], DataUnit [nominalTOSH = Toshiba Account], DataUnit [nominalTOSH = T], DataUnit [nominalTOSH = 04], DataUnit [nominalTOSH = Profit &amp; Loss], DataUnit [nominalTOSH = Both], DataUnit [nominalTOSH = A], DataUnit [nominalTOSH = ***], DataUnit [nominalTOSH = Both], DataUnit [nominalTOSH = 0], DataUnit [nominalPANN = PANN], DataUnit [nominalPANN = Panasonic Account], DataUnit [nominalPANN = T], DataUnit [nominalPANN = 04], DataUnit [nominalPANN = Profit &amp; Loss], DataUnit [nominalPANN = Both], DataUnit [nominalPANN = A], DataUnit [nominalPANN = ***], DataUnit [nominalPANN = Both], DataUnit [nominalPANN = 0], DataUnit [nominalWHAF = WHAF], DataUnit [nominalWHAF = Wharfedale Account], DataUnit [nominalWHAF = T], DataUnit [nominalWHAF = 04], DataUnit [nominalWHAF = Profit &amp; Loss], DataUnit [nominalWHAF = Both], DataUnit [nominalWHAF = A], DataUnit [nominalWHAF = ***], DataUnit [nominalWHAF = Both], DataUnit [nominalWHAF = 0], DataUnit [nominalSHIN = SHIN], DataUnit [nominalSHIN = Shinco Account], DataUnit [nominalSHIN = T], DataUnit [nominalSHIN = 04], DataUnit [nominalSHIN = Profit &amp; Loss], DataUnit [nominalSHIN = Both], DataUnit [nominalSHIN = A], DataUnit [nominalSHIN = ***], DataUnit [nominalSHIN = Both], DataUnit [nominalSHIN = 0], DataUnit [nominalGRUN = GRUN], DataUnit [nominalGRUN = Grundig Account], DataUnit [nominalGRUN = T], DataUnit [nominalGRUN = 04], DataUnit [nominalGRUN = Profit &amp; Loss], DataUnit [nominalGRUN = Both], DataUnit [nominalGRUN = A], DataUnit [nominalGRUN = ***], DataUnit [nominalGRUN = Both], DataUnit [nominalGRUN = 0], DataUnit [nominalSAMS = SAMS], DataUnit [nominalSAMS = Samsung Account], DataUnit [nominalSAMS = T], DataUnit [nominalSAMS = 04], DataUnit [nominalSAMS = Profit &amp; Loss], DataUnit [nominalSAMS = Both], DataUnit [nominalSAMS = A], DataUnit [nominalSAMS = ***], DataUnit [nominalSAMS = Both], DataUnit [nominalSAMS = 0], DataUnit [nominalHITC = HITC], DataUnit [nominalHITC = Hitachi Account], DataUnit [nominalHITC = T], DataUnit [nominalHITC = 04], DataUnit [nominalHITC = Profit &amp; Loss], DataUnit [nominalHITC = Both], DataUnit [nominalHITC = A], DataUnit [nominalHITC = ***], DataUnit [nominalHITC = Both], DataUnit [nominalHITC = 0], DataUnit [nominalAIWA = AIWA], DataUnit [nominalAIWA = Aiwa Account], DataUnit [nominalAIWA = T], DataUnit [nominalAIWA = 04], DataUnit [nominalAIWA = Profit &amp; Loss], DataUnit [nominalAIWA = Both], DataUnit [nominalAIWA = A], DataUnit [nominalAIWA = ***], DataUnit [nominalAIWA = Both], DataUnit [nominalAIWA = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

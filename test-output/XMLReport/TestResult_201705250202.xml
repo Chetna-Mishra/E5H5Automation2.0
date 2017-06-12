@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A093_Transaction_Legend_ControlsTest>
+<Verification1>25/05/2017 02:03:01 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 02:03:15 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 02:03:42 | Pass : Currency search page displayed</Verification3>
+<Verification4>25/05/2017 02:07:03 | Fail : New transaction legend control 1 not updated with control</Verification4>
+</A093_Transaction_Legend_ControlsTest>
+<A094_Business_Event_Manager_ObjectsTest>
+<Verification1>25/05/2017 02:08:46 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 02:09:01 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 02:09:28 | Pass : Currency search page displayed</Verification3>
+<Verification4>25/05/2017 02:11:26 | Pass : New business event  PL_TRANSACTION updated</Verification4>
+</A094_Business_Event_Manager_ObjectsTest>
+<A095_Business_Event_Manager_Program_V_EventTest>
+<Verification1>25/05/2017 02:13:45 | Pass : Login page displayed</Verification1>
+<Verification2>25/05/2017 02:13:59 | Pass : Command line displayed</Verification2>
+<Verification3>25/05/2017 02:14:27 | Pass : Currency search page displayed</Verification3>
+<Verification4>25/05/2017 02:15:06 | Pass : Program event XE4 present in grid</Verification4>
+<Verification5>25/05/2017 02:15:53 | Pass : Program event XE4 present in grid</Verification5>
+</A095_Business_Event_Manager_Program_V_EventTest>
+</TestCase>
+</SeleniumTestReport>

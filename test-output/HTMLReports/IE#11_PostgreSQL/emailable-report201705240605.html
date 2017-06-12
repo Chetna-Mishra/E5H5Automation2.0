@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">suite6</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">1,593.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2">suite7</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,140.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3">suite8</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,068.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t4">suite9</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">800.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t5">suite10</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">646.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t6">suite11</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">2,320.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t7">suite12</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">229.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t8">suite13</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">391.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t9">suite14</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">370.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t10">suite15</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">756.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t11">suite16</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">401.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t12">suite17</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,730.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t13">suite18</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">687.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">30</td><td class="numi">30</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">12,136.7 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">suite6 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest</td><td><a href="#m1"><b>verify</b>  </a></td><td class="numi">1</td><td>1495629379968</td><td class="numi">200004</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest</td><td><a href="#m2"><b>verify</b>  </a></td><td class="numi">1</td><td>1495629623403</td><td class="numi">800023</td></tr>
+<tr><th colspan="5">suite6 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest</td><td><a href="#m3"><b>verify</b>  </a></td><td class="numi">1</td><td>1495630466301</td><td class="numi">447141</td></tr>
+<tr id="t2"><th colspan="5">suite7 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A063_Standard_TextTest</td><td><a href="#m4"><b>verify</b>  </a></td><td class="numi">1</td><td>1495630954601</td><td class="numi">355268</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A064_PPV_Control_AccountTest</td><td><a href="#m5"><b>verify</b>  </a></td><td class="numi">1</td><td>1495631346807</td><td class="numi">231356</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A065_CP_Company_ControlsTest</td><td><a href="#m6"><b>verify</b>  </a></td><td class="numi">1</td><td>1495631618650</td><td class="numi">201737</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A066_Accrual_Control_CodeTest</td><td><a href="#m7"><b>verify</b>  </a></td><td class="numi">1</td><td>1495631856238</td><td class="numi">203069</td></tr>
+<tr id="t3"><th colspan="5">suite8 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A067_Purchasing_Management_Company_ControlsTest</td><td><a href="#m8"><b>verify</b>  </a></td><td class="numi">1</td><td>1495632094687</td><td class="numi">319137</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A068_Inspection_CodesTest</td><td><a href="#m9"><b>verify</b>  </a></td><td class="numi">1</td><td>1495632448486</td><td class="numi">202006</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A069_Disposal_CodeTest</td><td><a href="#m10"><b>verify</b>  </a></td><td class="numi">1</td><td>1495632689712</td><td class="numi">205577</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A070_Reason_CodesTest</td><td><a href="#m11"><b>verify</b>  </a></td><td class="numi">1</td><td>1495632931165</td><td class="numi">196431</td></tr>
+<tr id="t4"><th colspan="5">suite9 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest</td><td><a href="#m12"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633639989</td><td class="numi">303874</td></tr>
+<tr><th colspan="5">suite9 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A073_Receipt_ControlTest</td><td><a href="#m13"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633163020</td><td class="numi">238438</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A071_Document_PrefixCodesTest</td><td><a href="#m14"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633163205</td><td class="numi">439334</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest</td><td><a href="#m15"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633165524</td><td class="numi">465240</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A074_Automatic_Banking_CodeTest</td><td><a href="#m16"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633437440</td><td class="numi">211081</td></tr>
+<tr id="t5"><th colspan="5">suite10 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest</td><td><a href="#m17"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633985034</td><td class="numi">504332</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest</td><td><a href="#m18"><b>verify</b>  </a></td><td class="numi">1</td><td>1495633986088</td><td class="numi">582375</td></tr>
+<tr id="t6"><th colspan="5">suite11 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest</td><td><a href="#m19"><b>verify</b>  </a></td><td class="numi">1</td><td>1495636093844</td><td class="numi">800035</td></tr>
+<tr><th colspan="5">suite11 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest</td><td><a href="#m20"><b>verify</b>  </a></td><td class="numi">1</td><td>1495634611630</td><td class="numi">721918</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest</td><td><a href="#m21"><b>verify</b>  </a></td><td class="numi">1</td><td>1495635371004</td><td class="numi">687118</td></tr>
+<tr id="t7"><th colspan="5">suite12 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A077_CP_Company_ControlsTest</td><td><a href="#m22"><b>verify</b>  </a></td><td class="numi">1</td><td>1495636929302</td><td class="numi">194554</td></tr>
+<tr id="t8"><th colspan="5">suite13 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A078_Authorisation_Control_Codes_For_APTest</td><td><a href="#m23"><b>verify</b>  </a></td><td class="numi">1</td><td>1495637161913</td><td class="numi">337465</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A078A_Authorisation_Control_Codes_For_APTest</td><td><a href="#m24"><b>verify</b>  </a></td><td class="numi">1</td><td>1495637170239</td><td class="numi">339784</td></tr>
+<tr id="t9"><th colspan="5">suite14 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A079_Authorisation_GroupsTest</td><td><a href="#m25"><b>verify</b>  </a></td><td class="numi">1</td><td>1495637551798</td><td class="numi">328748</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A080_Authorisation_Control_Codes_For_PMTest</td><td><a href="#m26"><b>verify</b>  </a></td><td class="numi">1</td><td>1495637552466</td><td class="numi">317099</td></tr>
+<tr id="t10"><th colspan="5">suite15 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest</td><td><a href="#m27"><b>verify</b>  </a></td><td class="numi">1</td><td>1495637921445</td><td class="numi">392647</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest</td><td><a href="#m28"><b>verify</b>  </a></td><td class="numi">1</td><td>1495637923448</td><td class="numi">345459</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A082_Authorisation_StructuresTest</td><td><a href="#m29"><b>verify</b>  </a></td><td class="numi">1</td><td>1495638306320</td><td class="numi">336128</td></tr>
+<tr id="t11"><th colspan="5">suite16 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A083_Structure_AuthorisersAPTest</td><td><a href="#m30"><b>verify</b>  </a></td><td class="numi">1</td><td>1495638678534</td><td class="numi">349092</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A083A_Structure_AuthorisersPMTest</td><td><a href="#m31"><b>verify</b>  </a></td><td class="numi">1</td><td>1495638680735</td><td class="numi">346575</td></tr>
+<tr id="t12"><th colspan="5">suite17 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest</td><td><a href="#m32"><b>verify</b>  </a></td><td class="numi">1</td><td>1495639724051</td><td class="numi">800031</td></tr>
+<tr><th colspan="5">suite17 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A084_Authorisation_Value_Levels_DefinitionTest</td><td><a href="#m33"><b>verify</b>  </a></td><td class="numi">1</td><td>1495639079275</td><td class="numi">607361</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest</td><td><a href="#m34"><b>verify</b>  </a></td><td class="numi">1</td><td>1495640567180</td><td class="numi">207304</td></tr>
+<tr id="t13"><th colspan="5">suite18 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest</td><td><a href="#m35"><b>verify</b>  </a></td><td class="numi">1</td><td>1495640813225</td><td class="numi">648993</td></tr>
+</table>
+<h1>suite6</h1>
+<h2 id="m1">com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = GAK], DataUnit [payment01 = 01], DataUnit [payment01 = Cheque], DataUnit [payment01 = 1], DataUnit [payment01 = GBP], DataUnit [payment01 = 01], DataUnit [payment01 = BP], DataUnit [payment01 = 0], DataUnit [payment01 = STD], DataUnit [payment01 = STD], DataUnit [payment02 = 02], DataUnit [payment02 = Funds Transfer], DataUnit [payment02 = 1], DataUnit [payment02 = GBP], DataUnit [payment02 = 02], DataUnit [payment02 = BP], DataUnit [payment02 = 0], DataUnit [payment02 = STD], DataUnit [payment02 = STD], DataUnit [payment03 = 03], DataUnit [payment03 = Automatic Cheque], DataUnit [payment03 = 1], DataUnit [payment03 = GBP], DataUnit [payment03 = 01], DataUnit [payment03 = BP], DataUnit [payment03 = Y], DataUnit [payment03 = STD], DataUnit [payment03 = STD], DataUnit [payment04 = 04], DataUnit [payment04 = Manual Cheque], DataUnit [payment04 = 1], DataUnit [payment04 = GBP], DataUnit [payment04 = 01], DataUnit [payment04 = BP], DataUnit [payment04 = 0], DataUnit [payment04 = STD], DataUnit [payment04 = STD]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //input[starts-with(@name,&apos;PYMNT_&apos;)] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 120.29 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.17.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:32028/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 32e976ad-8408-4cba-ba26-5ad1c89c8c1b
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;PYMNT_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterPaymentCode(CurrencyPage.java:6739)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.createUOM(A060_Payment_CodesTest.java:82)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.verify(A060_Payment_CodesTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = AK2], DataUnit [locationHQ = POP HQ], DataUnit [locationHQ = POP Head Quarters], DataUnit [locationHQ = 236 Hartlepool Road], DataUnit [locationHQ = TS25 3HA], DataUnit [locationHQ = NILL], DataUnit [locationHQ = Not Used], DataUnit [locationEastHQ = EAST HQ], DataUnit [locationEastHQ = East Head Quarters], DataUnit [locationEastHQ = Road 1], DataUnit [locationEastHQ = NILL], DataUnit [locationEastHQ = NILL], DataUnit [locationEastHQ = Not Used], DataUnit [locationWestHQ = WEST HQ], DataUnit [locationWestHQ = West Head Quarters], DataUnit [locationWestHQ = Road 1], DataUnit [locationWestHQ = NILL], DataUnit [locationWestHQ = NILL], DataUnit [locationWestHQ = Not Used], DataUnit [locationSouthHQ = SOUTH HQ], DataUnit [locationSouthHQ = South Head Quarters], DataUnit [locationSouthHQ = Road 1], DataUnit [locationSouthHQ = NILL], DataUnit [locationSouthHQ = NILL], DataUnit [locationSouthHQ = Not Used], DataUnit [locationNorthHQ = NORTH HQ], DataUnit [locationNorthHQ = North Head Quarters], DataUnit [locationNorthHQ = Road 1], DataUnit [locationNorthHQ = NILL], DataUnit [locationNorthHQ = NILL], DataUnit [locationNorthHQ = Not Used], DataUnit [locationWarehse = WAREHSE], DataUnit [locationWarehse = Central Warehouse], DataUnit [locationWarehse = Road 1], DataUnit [locationWarehse = NILL], DataUnit [locationWarehse = NILL], DataUnit [locationWarehse = Not Used], DataUnit [locationNorthITS = NorthITS], DataUnit [locationNorthITS = North In-transit store], DataUnit [locationNorthITS = Road 1], DataUnit [locationNorthITS = NILL], DataUnit [locationNorthITS = NILL], DataUnit [locationNorthITS = Not Used], DataUnit [locationSouthITS = SouthITS], DataUnit [locationSouthITS = South In-transit store], DataUnit [locationSouthITS = Road 1], DataUnit [locationSouthITS = NILL], DataUnit [locationSouthITS = NILL], DataUnit [locationSouthITS = Not Used], DataUnit [locationWestITS = WestITS], DataUnit [locationWestITS = West In-transit store], DataUnit [locationWestITS = Road 1], DataUnit [locationWestITS = NILL], DataUnit [locationWestITS = NILL], DataUnit [locationWestITS = Not Used], DataUnit [locationEastITS = EastITS], DataUnit [locationEastITS = East In-transit store], DataUnit [locationEastITS = Road 1], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = Not Used], DataUnit [locationEastITS = EastITS], DataUnit [locationEastITS = East In-transit store], DataUnit [locationEastITS = Road 1], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = Not Used], DataUnit [locationNorth = North], DataUnit [locationNorth = North store], DataUnit [locationNorth = Road 1], DataUnit [locationNorth = NILL], DataUnit [locationNorth = NILL], DataUnit [locationNorth = Not Used], DataUnit [locationSouth = South], DataUnit [locationSouth = South store], DataUnit [locationSouth = Road 1], DataUnit [locationSouth = NILL], DataUnit [locationSouth = NILL], DataUnit [locationSouth = Not Used], DataUnit [locationEast = East], DataUnit [locationEast = East store], DataUnit [locationEast = Road 1], DataUnit [locationEast = NILL], DataUnit [locationEast = NILL], DataUnit [locationEast = Not Used], DataUnit [locationWest = West], DataUnit [locationWest = West store], DataUnit [locationWest = Road 1], DataUnit [locationWest = NILL], DataUnit [locationWest = NILL], DataUnit [locationWest = Not Used]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest.verify() didn&apos;t finish within the time-out 800000
+	at java.net.Inet6AddressImpl.getLocalHostName(Native Method)
+	at java.net.InetAddress.getLocalHost(Unknown Source)
+	at org.openqa.selenium.WebDriverException.getSystemInformation(WebDriverException.java:72)
+	at org.openqa.selenium.WebDriverException.createMessage(WebDriverException.java:63)
+	at org.openqa.selenium.WebDriverException.getMessage(WebDriverException.java:53)
+	at java.lang.Throwable.getLocalizedMessage(Unknown Source)
+	at java.lang.Throwable.toString(Unknown Source)
+	at java.lang.Throwable.&lt;init&gt;(Unknown Source)
+	at java.lang.Exception.&lt;init&gt;(Unknown Source)
+	at java.lang.RuntimeException.&lt;init&gt;(Unknown Source)
+	at org.testng.internal.InvokeMethodRunnable$TestNGRuntimeException.&lt;init&gt;(InvokeMethodRunnable.java:80)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:61)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = RAF], DataUnit [taxR1 = R1], DataUnit [taxR1 = Recoverable Handling Code], DataUnit [taxR1 = 0], DataUnit [taxR1 = Fully], DataUnit [taxR1 = 0], DataUnit [tax02 = 02], DataUnit [tax02 = Non-Rec Exc.Handling Code ], DataUnit [tax02 = 1], DataUnit [tax02 = None], DataUnit [tax02 = 0], DataUnit [tax03 = 03], DataUnit [tax03 = Non-Rec Inc.Handling Code], DataUnit [tax03 = 0], DataUnit [tax03 = None], DataUnit [tax03 = 0], DataUnit [taxH1 = H1], DataUnit [taxH1 = H1 Default Handling Code], DataUnit [taxH1 = 1], DataUnit [taxH1 = Fully], DataUnit [taxH1 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite7</h1>
+<h2 id="m4">com.adv.qa.selenium.tests.currency.phase2.A065_CP_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = PAA], DataUnit [purchasingCompany = MM], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = 1], DataUnit [purchasingCompany = 10], DataUnit [purchasingCompany = Manual], DataUnit [purchasingCompany = 1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.adv.qa.selenium.tests.currency.phase2.A064_PPV_Control_AccountTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [currencyCode = PXM], DataUnit [ppvAccount = IM], DataUnit [ppvAccount = PPV Control Code - ], DataUnit [ppvAccount = 5901], DataUnit [ppvAccount = W1], DataUnit [ppvAccount = 5902], DataUnit [ppvAccount = W1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.adv.qa.selenium.tests.currency.phase2.A063_Standard_TextTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = PXU], DataUnit [standardAccept = QUOTE-ACCEPT], DataUnit [standardAccept = 0], DataUnit [standardAccept = Quotation Acceptance], DataUnit [standardReject = QUOTE-REJECT], DataUnit [standardReject = 0], DataUnit [standardReject = Quotation Rejection], DataUnit [standardRequest = QUOTE-REQUEST], DataUnit [standardRequest = 0], DataUnit [standardRequest = Quotation Request], DataUnit [acceptLines = Your quotation response relating to the following], DataUnit [acceptLines = lines has been successful. A Buyer from our], DataUnit [acceptLines = Purchasing Department will be in touch within the], DataUnit [acceptLines = next two weeks to confirm the details and provide], DataUnit [acceptLines = you with our Contract Reference.], DataUnit [rejectLines = I am sorry to have to inform you that your], DataUnit [rejectLines = response to our requirements for the following], DataUnit [rejectLines = items has not met the minimum requirements, and we], DataUnit [rejectLines = will therefore not be placing a contract with], DataUnit [rejectLines = yourselves for these goods.], DataUnit [rejectLines = If we have any further requests for quotations], DataUnit [rejectLines = then we shall contact you again.], DataUnit [requestLines = This is a request for you to provide a quotation], DataUnit [requestLines = for the items which are shown below. The quotation], DataUnit [requestLines = must be returned to the person named by the], DataUnit [requestLines = specified date in order to be considered.], DataUnit [requestLines = You will be notified via email within 14 days of], DataUnit [requestLines = response date whether your bid has been successful]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.adv.qa.selenium.tests.currency.phase2.A066_Accrual_Control_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = DAA], DataUnit [accrualCode = IM], DataUnit [accrualCode = PM Accrual Control Account Code], DataUnit [accrualCode = 5900], DataUnit [accrualCode = W1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite8</h1>
+<h2 id="m8">com.adv.qa.selenium.tests.currency.phase2.A068_Inspection_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = PXG], DataUnit [inspectionCode = L1], DataUnit [inspectionCode = Inspection Code L1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.adv.qa.selenium.tests.currency.phase2.A069_Disposal_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = PXE], DataUnit [disposalCode = D1], DataUnit [disposalCode = Disposal Code D1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.adv.qa.selenium.tests.currency.phase2.A070_Reason_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = PXQ], DataUnit [reasonCode = R1], DataUnit [reasonCode = Reason Code R1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.adv.qa.selenium.tests.currency.phase2.A067_Purchasing_Management_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [currencyCode = DAG], DataUnit [purchasingCompany = 10], DataUnit [purchasingCompany = 1], DataUnit [purchasingCompany = IM], DataUnit [purchasingCompany = ACC], DataUnit [purchasingCompany = 12], DataUnit [purchasingCompany = 2016], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = No Prompt], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = POP HQ], DataUnit [purchasingCompany = POP HQ], DataUnit [purchasingCompany = Prefix], DataUnit [purchasingCompany = QUOTE-REQUEST], DataUnit [purchasingCompany = QUOTE-ACCEPT], DataUnit [purchasingCompany = QUOTE-REJECT], DataUnit [purchasingCompany = 30], DataUnit [purchasingCompany = IM]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite9</h1>
+<h2 id="m12">com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [currencyCode = QSA], DataUnit [currencyCode = QMA], DataUnit [companyControl = IM], DataUnit [companyControl = AAS], DataUnit [companyControl = 12], DataUnit [mappingsOrder = POP_ORDER_1], DataUnit [mappingsOrder = POP_ORDER_1], DataUnit [mappingsReq = POP_REQUISITION_1], DataUnit [mappingsReq = POP_REQUISITION_1], DataUnit [mappingAdj = IM_STOCK_ADJ], DataUnit [mappingAdj = IM_STOCK_ADJ], DataUnit [mappingTrans = IM_BIN_TRANS], DataUnit [mappingTrans = IM_BIN_TRANS], DataUnit [mappingDisp = IM_STOCK_DISP], DataUnit [mappingDisp = IM_STOCK_DISP], DataUnit [mappingStock = IM_STOCK_TAKE], DataUnit [mappingStock = IM_STOCK_TAKE], DataUnit [mappingMtIssue = IM_MATERIAL_ISSUE], DataUnit [mappingMtIssue = IM_MATERIAL_ISSUE], DataUnit [mappingPickList = IM_PICK_LIST], DataUnit [mappingPickList = IM_PICK_LIST], DataUnit [mappingStoreTran = IM_STORE_TRANS], DataUnit [mappingStoreTran = IM_STORE_TRANS], DataUnit [mappingRet = IM_STORE_RET], DataUnit [mappingRet = IM_STORE_RET], DataUnit [mappingLotAll = IM_CNTNR_LOT_ALLOC], DataUnit [mappingLotAll = IM_CNTNR_LOT_ALLOC]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest.verify() didn&apos;t finish within the time-out 800000
+	at java.lang.Thread.sleep(Native Method)
+	at com.adv.qa.selenium.helpers.WaitHelper.waitAdditional(WaitHelper.java:245)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.clickOnInsert1(CurrencyPage.java:300)
+	at com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest.createMappings(A075_companyControl_MapOrderTest.java:123)
+	at com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest.verify(A075_companyControl_MapOrderTest.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.adv.qa.selenium.tests.currency.phase2.A071_Document_PrefixCodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = PXJ], DataUnit [currencyCode = PXI], DataUnit [documentO = Order], DataUnit [documentO = O], DataUnit [documentO = Order Prefix Code (Order)], DataUnit [documentO = Manual], DataUnit [documentO = 10], DataUnit [documentC = Contract], DataUnit [documentC = C], DataUnit [documentC = Contract Prefix Code C], DataUnit [documentC = Manual], DataUnit [documentC = 10], DataUnit [documentR = Requisition], DataUnit [documentR = R], DataUnit [documentR = Requisition Prefix Code R], DataUnit [documentR = Manual], DataUnit [documentR = 10], DataUnit [documentG = GRN], DataUnit [documentG = G], DataUnit [documentG = GRN Prefix Code G], DataUnit [documentG = Manual], DataUnit [documentG = 10]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.adv.qa.selenium.tests.currency.phase2.A073_Receipt_ControlTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = PX3], DataUnit [receiptControl = REC1], DataUnit [receiptControl = Receipt Control REC1], DataUnit [receiptControl = Percent], DataUnit [receiptControl = 10.00], DataUnit [receiptControl = 10.00], DataUnit [receiptControl = 2]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = PX2], DataUnit [currencyCode = PX1], DataUnit [cpUserAccept = ACCEPT], DataUnit [cpUserAccept = 0], DataUnit [cpUserAccept = 0], DataUnit [cpUserAccept = 1], DataUnit [cpUserAccept = 0], DataUnit [cpUserAccept = IM], DataUnit [cpUserBuyer = BUYER], DataUnit [cpUserBuyer = 1], DataUnit [cpUserBuyer = 0], DataUnit [cpUserBuyer = 0], DataUnit [cpUserBuyer = 0], DataUnit [cpUserBuyer = BUYER], DataUnit [cpUserIM = IM], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = IM], DataUnit [cpUserExped = EXPED], DataUnit [cpUserExped = 0], DataUnit [cpUserExped = 1], DataUnit [cpUserExped = 0], DataUnit [cpUserExped = 0], DataUnit [cpUserExped = IM], DataUnit [cpUserGrec = GREC], DataUnit [cpUserGrec = 0], DataUnit [cpUserGrec = 0], DataUnit [cpUserGrec = 0], DataUnit [cpUserGrec = 1], DataUnit [cpUserGrec = IM]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.adv.qa.selenium.tests.currency.phase2.A074_Automatic_Banking_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = GAM], DataUnit [bankingCode = BP], DataUnit [bankingCode = 123456], DataUnit [bankingCode = ABC BP], DataUnit [bankingCode = NILL], DataUnit [bankingCode = IMBACS], DataUnit [bankingCode = 1], DataUnit [protocolId = 00]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite10</h1>
+<h2 id="m17">com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = PX8], DataUnit [circulationK1 = K1], DataUnit [circulationK1 = Stock Take], DataUnit [circulationK1 = IM_STOCK_TAKE], DataUnit [circulationK1 = STD], DataUnit [circulationK1 = STOCK_TAKE], DataUnit [circulationM1 = M1], DataUnit [circulationM1 = Material Issue], DataUnit [circulationM1 = IM_MATERIAL_ISSUE], DataUnit [circulationM1 = STD], DataUnit [circulationM1 = MATERIAL_ISSUE], DataUnit [circulationP1 = P1], DataUnit [circulationP1 = Picking List], DataUnit [circulationP1 = IM_PICK_LIST], DataUnit [circulationP1 = STD], DataUnit [circulationP1 = PICK_LIST], DataUnit [circulationT1 = T1], DataUnit [circulationT1 = Store Transfer], DataUnit [circulationT1 = IM_STORE_TRANS], DataUnit [circulationT1 = STD], DataUnit [circulationT1 = STORE_TRANS], DataUnit [circulationRS = RS], DataUnit [circulationRS = Return to Store], DataUnit [circulationRS = IM_STORE_RET], DataUnit [circulationRS = STD], DataUnit [circulationRS = STORE_RET], DataUnit [circulationLA = LA], DataUnit [circulationLA = IM Lot Allocation], DataUnit [circulationLA = IM_CNTNR_LOT_ALLOC], DataUnit [circulationLA = STD], DataUnit [circulationLA = CNTNR_LOT_ALLOC]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = PX8], DataUnit [circulationO1 = O1], DataUnit [circulationO1 = O1 Normal Order], DataUnit [circulationO1 = POP_ORDER_1], DataUnit [circulationO1 = STD], DataUnit [circulationO1 = ORDER-1], DataUnit [circulationRQ = RQ], DataUnit [circulationRQ = RQ Requisition Circulation Code], DataUnit [circulationRQ = POP_REQUISITION_1], DataUnit [circulationRQ = STD], DataUnit [circulationRQ = REQUISITION-1], DataUnit [circulationA1 = A1], DataUnit [circulationA1 = Stock Adjustment], DataUnit [circulationA1 = IM_STOCK_ADJ], DataUnit [circulationA1 = STD], DataUnit [circulationA1 = STOCK_ADJ], DataUnit [circulationB1 = B1], DataUnit [circulationB1 = Bin Transfer], DataUnit [circulationB1 = IM_STOCK_ADJ], DataUnit [circulationB1 = STD], DataUnit [circulationB1 = STOCK_ADJ], DataUnit [circulationD1 = D1], DataUnit [circulationD1 = Stock Disposal], DataUnit [circulationD1 = IM_STOCK_DISP], DataUnit [circulationD1 = STD], DataUnit [circulationD1 = STOCK_DISP]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite11</h1>
+<h2 id="m19">com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = DAJ], DataUnit [currencyCode = DAI], DataUnit [documentCodeRR = RR], DataUnit [documentCodeRR = Stock Replen.Req. Auto Type 6], DataUnit [documentCodeRR = Requisition], DataUnit [documentCodeRR = REPL], DataUnit [documentCodeRR = REPL], DataUnit [documentCodeRR = REPL], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = RQ], DataUnit [documentCodeRR = Optional], DataUnit [documentCodeRR = Company], DataUnit [documentCodeRR = 9999999999999.99], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = Generated Repl Req], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = NILL], DataUnit [documentCodeRR = NILL], DataUnit [documentCodeRi = RI], DataUnit [documentCodeRi = Requisition RI Type &apos;0&apos;], DataUnit [documentCodeRi = Requisition], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = 2], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = RQ], DataUnit [documentCodeRi = Optional], DataUnit [documentCodeRi = Company], DataUnit [documentCodeRi = 9999999999999.99], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = Non Stock Req], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRT = RT], DataUnit [documentCodeRT = Requisition RI Type &apos;0&apos;], DataUnit [documentCodeRT = Requisition], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = RQ], DataUnit [documentCodeRT = Optional], DataUnit [documentCodeRT = Company], DataUnit [documentCodeRT = 9999999999999.99], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = Purchase Req], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeSR = SR], DataUnit [documentCodeSR = Stock Purchase Req. Type 4 Auto], DataUnit [documentCodeSR = Requisition], DataUnit [documentCodeSR = STOCK], DataUnit [documentCodeSR = STOCK], DataUnit [documentCodeSR = STOCK], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = RQ], DataUnit [documentCodeSR = Optional], DataUnit [documentCodeSR = Company], DataUnit [documentCodeSR = 9999999999999.99], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = System Generated], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = NILL], DataUnit [documentCodeSR = NILL], DataUnit [documentCodeTR = TR], DataUnit [documentCodeTR = Stores Req. Type 2], DataUnit [documentCodeTR = Requisition], DataUnit [documentCodeTR = STOCK], DataUnit [documentCodeTR = STOCK], DataUnit [documentCodeTR = STOCK], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = RQ], DataUnit [documentCodeTR = Optional], DataUnit [documentCodeTR = Company], DataUnit [documentCodeTR = 9999999999999.99], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = Demand on Store], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = NILL], DataUnit [documentCodeTR = NILL]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest.verify() didn&apos;t finish within the time-out 800000
+	at java.lang.Thread.sleep(Native Method)
+	at com.adv.qa.selenium.helpers.WaitHelper.waitAdditional(WaitHelper.java:245)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.logOut(CurrencyPage.java:596)
+	at com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest.verify(A076B_Document_CodesTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = DAJ], DataUnit [currencyCode = DAI], DataUnit [documentCodeG1 = G1], DataUnit [documentCodeG1 = Generic Items Test Doc 4], DataUnit [documentCodeG1 = Order], DataUnit [documentCodeG1 = HEAD], DataUnit [documentCodeG1 = DETL], DataUnit [documentCodeG1 = HEAD], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = 2], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = RQ], DataUnit [documentCodeG1 = Generic Items], DataUnit [documentCodeG1 = Company], DataUnit [documentCodeG1 = 9999999999999.99], DataUnit [documentCodeG1 = 0], DataUnit [documentCodeG1 = NILL], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = NILL], DataUnit [documentCodeG1 = ACC], DataUnit [documentCodePM = PM], DataUnit [documentCodePM = SPMR Type 3], DataUnit [documentCodePM = Requisition], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = RQ], DataUnit [documentCodePM = Optional], DataUnit [documentCodePM = Company], DataUnit [documentCodePM = 9999999999999.99], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = NILL], DataUnit [documentCodePM = NILL], DataUnit [documentCodePR = PR], DataUnit [documentCodePR = Inv Purchase Req Code], DataUnit [documentCodePR = Requisition], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = 1], DataUnit [documentCodePR = 1], DataUnit [documentCodePR = 1], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = O1], DataUnit [documentCodePR = Optional], DataUnit [documentCodePR = Company], DataUnit [documentCodePR = 9999999999999.99], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = System Generated], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = NILL], DataUnit [documentCodeRE = RE], DataUnit [documentCodeRE = Stock Replen.Req. Manual Type 5], DataUnit [documentCodeRE = Requisition], DataUnit [documentCodeRE = REPL], DataUnit [documentCodeRE = REPL], DataUnit [documentCodeRE = REPL], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = RQ], DataUnit [documentCodeRE = Optional], DataUnit [documentCodeRE = Company], DataUnit [documentCodeRE = 9999999999999.99], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = Repl Req], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = NILL], DataUnit [documentCodeRE = NILL]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = DAJ], DataUnit [currencyCode = DAI], DataUnit [documentCodeO1 = O1], DataUnit [documentCodeO1 = O1 Normal Order], DataUnit [documentCodeO1 = Order], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = O1], DataUnit [documentCodeO1 = Optional], DataUnit [documentCodeO1 = Company], DataUnit [documentCodeO1 = 9999999999.99], DataUnit [documentCodeO1 = 0], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = ACC], DataUnit [documentCodeRI = RI], DataUnit [documentCodeRI = Return Order], DataUnit [documentCodeRI = Order], DataUnit [documentCodeRI = RTRNHEAD], DataUnit [documentCodeRI = RTRNDETL], DataUnit [documentCodeRI = RTRNFAST], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = 0], DataUnit [documentCodeRI = 0], DataUnit [documentCodeRI = O1], DataUnit [documentCodeRI = Mandatory], DataUnit [documentCodeRI = Company], DataUnit [documentCodeRI = 9999999999999.99], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = NILL], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = Select All], DataUnit [documentCodeRI = ACC], DataUnit [documentCodeO2 = 02], DataUnit [documentCodeO2 = O2 Returns Order for SPMR], DataUnit [documentCodeO2 = Order], DataUnit [documentCodeO2 = HEAD], DataUnit [documentCodeO2 = DETL], DataUnit [documentCodeO2 = HEAD], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = 0], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = O1], DataUnit [documentCodeO2 = Mandatory], DataUnit [documentCodeO2 = Company], DataUnit [documentCodeO2 = 9999999999999.99], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = NILL], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = NILL], DataUnit [documentCodeO2 = ACC], DataUnit [documentCodeO3 = O3], DataUnit [documentCodeO3 = O3 Normal Order with Auto Numbering], DataUnit [documentCodeO3 = Order], DataUnit [documentCodeO3 = HEAD], DataUnit [documentCodeO3 = DETL], DataUnit [documentCodeO3 = HEAD], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = 2], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = RQ], DataUnit [documentCodeO3 = Mandatory], DataUnit [documentCodeO3 = Company], DataUnit [documentCodeO3 = 9999999999999.99], DataUnit [documentCodeO3 = 0], DataUnit [documentCodeO3 = NILL], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = NILL], DataUnit [documentCodeO3 = ACC]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite12</h1>
+<h2 id="m22">com.adv.qa.selenium.tests.currency.phase2.A077_CP_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = PAA], DataUnit [cpCompanyControl = RI], DataUnit [cpCompanyControl = SR], DataUnit [cpCompanyControl = RR], DataUnit [cpCompanyControl = IM]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite13</h1>
+<h2 id="m23">com.adv.qa.selenium.tests.currency.phase2.A078A_Authorisation_Control_Codes_For_APTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = GOA], DataUnit [authorisationCodeL3 = L3], DataUnit [authorisationCodeL3 = Level 3 – Mandatory User ], DataUnit [authorisationCodeL3 = Deselect], DataUnit [authorisationCodeL3 = Val Within GL Resp], DataUnit [authorisationCodeL3 = 1], DataUnit [authorisationCodeL3 = 0.00], DataUnit [authorisationCodeL3 = QUERY], DataUnit [authorisationCodeL3 = 0], DataUnit [authorisationCodeL4 = L4], DataUnit [authorisationCodeL4 = Level 4 - Mandatory Automatic Off System], DataUnit [authorisationCodeL4 = Entered], DataUnit [authorisationCodeL4 = Value], DataUnit [authorisationCodeL4 = 1], DataUnit [authorisationCodeL4 = 1000.00], DataUnit [authorisationCodeL4 = QUERY], DataUnit [authorisationCodeL4 = 1], DataUnit [authorisationCodeL5 = L5], DataUnit [authorisationCodeL5 = Level 5 – Automatic For Logged On User], DataUnit [authorisationCodeL5 = Desel/Entered], DataUnit [authorisationCodeL5 = Value], DataUnit [authorisationCodeL5 = 1], DataUnit [authorisationCodeL5 = 0.00], DataUnit [authorisationCodeL5 = QUERY], DataUnit [authorisationCodeL5 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.adv.qa.selenium.tests.currency.phase2.A078_Authorisation_Control_Codes_For_APTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = GOA], DataUnit [authorisationCodeL0 = L0], DataUnit [authorisationCodeL0 = Level 0 - None], DataUnit [authorisationCodeL0 = None], DataUnit [authorisationCodeL0 = None], DataUnit [authorisationCodeL0 = 0], DataUnit [authorisationCodeL0 = 0.00], DataUnit [authorisationCodeL0 = QUERY], DataUnit [authorisationCodeL0 = 0], DataUnit [authorisationCodeL1 = L1], DataUnit [authorisationCodeL1 = Level 1 - Optional], DataUnit [authorisationCodeL1 = Optional], DataUnit [authorisationCodeL1 = Value], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 0.00], DataUnit [authorisationCodeL1 = QUERY], DataUnit [authorisationCodeL1 = 0], DataUnit [authorisationCodeL2 = L2], DataUnit [authorisationCodeL2 = Level 2 – Mandatory System], DataUnit [authorisationCodeL2 = Fixed], DataUnit [authorisationCodeL2 = GL Responsibility], DataUnit [authorisationCodeL2 = 2], DataUnit [authorisationCodeL2 = 0.00], DataUnit [authorisationCodeL2 = QUERY], DataUnit [authorisationCodeL2 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite14</h1>
+<h2 id="m25">com.adv.qa.selenium.tests.currency.phase2.A080_Authorisation_Control_Codes_For_PMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = DBA], DataUnit [authorisationCodeL1 = L1], DataUnit [authorisationCodeL1 = Level 1 Authorisation code for PM], DataUnit [authorisationCodeL1 = User Assigned], DataUnit [authorisationCodeL1 = Value], DataUnit [authorisationCodeL1 = 2], DataUnit [authorisationCodeL1 = 0.00], DataUnit [authorisationCodeL1 = QUERY], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 0], DataUnit [authorisationCodeL2 = L2], DataUnit [authorisationCodeL2 = Level 2 Authorisation code for PM], DataUnit [authorisationCodeL2 = None], DataUnit [authorisationCodeL2 = None], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0.00], DataUnit [authorisationCodeL2 = NILL], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.adv.qa.selenium.tests.currency.phase2.A079_Authorisation_GroupsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = DBC], DataUnit [currencyCode = GOC], DataUnit [authorisationGroupForPM = PM], DataUnit [authorisationGroupForPM = Authorisation Group for PM], DataUnit [authorisationGroupForAP = PM], DataUnit [authorisationGroupForAP = Authorisation Group for AP]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite15</h1>
+<h2 id="m27">com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [currencyCode = DDC], DataUnit [authorisationGroupOne = POP HQ], DataUnit [authorisationGroupOne = O], DataUnit [authorisationGroupOne = O1], DataUnit [authorisationGroupOne = NILL], DataUnit [authorisationGroupOne = PM], DataUnit [authorisationGroupOne = L1], DataUnit [authorisationGroupOne = O1/POP HQ], DataUnit [authorisationGroupTwo = POP HQ], DataUnit [authorisationGroupTwo = R], DataUnit [authorisationGroupTwo = PM], DataUnit [authorisationGroupTwo = NILL], DataUnit [authorisationGroupTwo = PM], DataUnit [authorisationGroupTwo = L1], DataUnit [authorisationGroupTwo = O1/POP HQ], DataUnit [authorisationGroupThree = POP HQ], DataUnit [authorisationGroupThree = R], DataUnit [authorisationGroupThree = RE], DataUnit [authorisationGroupThree = NILL], DataUnit [authorisationGroupThree = PM], DataUnit [authorisationGroupThree = L1], DataUnit [authorisationGroupThree = RE/POP HQ], DataUnit [authorisationGroupFour = POP HQ], DataUnit [authorisationGroupFour = R], DataUnit [authorisationGroupFour = RI], DataUnit [authorisationGroupFour = NILL], DataUnit [authorisationGroupFour = PM], DataUnit [authorisationGroupFour = L1], DataUnit [authorisationGroupFour = RI/POP HQ], DataUnit [authorisationGroupFive = POP HQ], DataUnit [authorisationGroupFive = R], DataUnit [authorisationGroupFive = RR], DataUnit [authorisationGroupFive = NILL], DataUnit [authorisationGroupFive = PM], DataUnit [authorisationGroupFive = L1], DataUnit [authorisationGroupFive = RR/POP HQ]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">com.adv.qa.selenium.tests.currency.phase2.A082_Authorisation_StructuresTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = GOP], DataUnit [currencyCode = DBP], DataUnit [authorisationGroupForAP = S1], DataUnit [authorisationGroupForAP = Authorisation Structure 1 for AP], DataUnit [authorisationGroupForPM = S1], DataUnit [authorisationGroupForPM = Authorisation Structure 1 for PM]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [currencyCode = DDC], DataUnit [authorisationGroupSix = POP HQ], DataUnit [authorisationGroupSix = R], DataUnit [authorisationGroupSix = RT], DataUnit [authorisationGroupSix = NILL], DataUnit [authorisationGroupSix = PM], DataUnit [authorisationGroupSix = L1], DataUnit [authorisationGroupSix = RT/POP HQ], DataUnit [authorisationGroupSeven = POP HQ], DataUnit [authorisationGroupSeven = R], DataUnit [authorisationGroupSeven = SR], DataUnit [authorisationGroupSeven = NILL], DataUnit [authorisationGroupSeven = PM], DataUnit [authorisationGroupSeven = L1], DataUnit [authorisationGroupSeven = SR/POP HQ], DataUnit [authorisationGroupEight = POP HQ], DataUnit [authorisationGroupEight = R], DataUnit [authorisationGroupEight = TR], DataUnit [authorisationGroupEight = NILL], DataUnit [authorisationGroupEight = PM], DataUnit [authorisationGroupEight = L1], DataUnit [authorisationGroupEight = TR/POP HQ], DataUnit [authorisationGroupSouth = SOUTH HQ], DataUnit [authorisationGroupSouth = Order], DataUnit [authorisationGroupSouth = O1], DataUnit [authorisationGroupSouth = NILL], DataUnit [authorisationGroupSouth = PM], DataUnit [authorisationGroupSouth = L1], DataUnit [authorisationGroupSouth = O1/SOUTH], DataUnit [authorisationGroupNorth = NORTH HQ], DataUnit [authorisationGroupNorth = Order], DataUnit [authorisationGroupNorth = O1], DataUnit [authorisationGroupNorth = NILL], DataUnit [authorisationGroupNorth = PM], DataUnit [authorisationGroupNorth = L1], DataUnit [authorisationGroupNorth = O1/NORTH]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite16</h1>
+<h2 id="m30">com.adv.qa.selenium.tests.currency.phase2.A083_Structure_AuthorisersAPTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = GOS], DataUnit [values = S1], DataUnit [apStructureForQuery = S1], DataUnit [apStructureForQuery = QUERY], DataUnit [apStructureForQuery = NILL], DataUnit [apStructureForQuery = 9999], DataUnit [apStructureForManager = S1], DataUnit [apStructureForManager = MANAGER], DataUnit [apStructureForManager = QUERY], DataUnit [apStructureForManager = 9000], DataUnit [apStructureForAdmin = S1], DataUnit [apStructureForAdmin = ADMIN], DataUnit [apStructureForAdmin = MANAGER], DataUnit [apStructureForAdmin = 7000], DataUnit [apStructureForEmployee = S1], DataUnit [apStructureForEmployee = EMPLOYEE], DataUnit [apStructureForEmployee = ADMIN], DataUnit [apStructureForEmployee = 1000], DataUnit [apStructureForUser = S1], DataUnit [apStructureForUser = IM], DataUnit [apStructureForUser = MANAGER], DataUnit [apStructureForUser = 8000]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">com.adv.qa.selenium.tests.currency.phase2.A083A_Structure_AuthorisersPMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = GREC], DataUnit [passWord = E5], DataUnit [currencyCode = DBS], DataUnit [values = S1], DataUnit [pmStructureForUser = S1], DataUnit [pmStructureForUser = IM], DataUnit [pmStructureForUser = NILL], DataUnit [pmStructureForUser = 9999], DataUnit [pmStructureForManager = S1], DataUnit [pmStructureForManager = MANAGER], DataUnit [pmStructureForManager = IM], DataUnit [pmStructureForManager = NILL], DataUnit [pmStructureForAdmin = S1], DataUnit [pmStructureForAdmin = ADMIN], DataUnit [pmStructureForAdmin = MANAGER], DataUnit [pmStructureForAdmin = 7000], DataUnit [pmStructureForQuery = S1], DataUnit [pmStructureForQuery = QUERY], DataUnit [pmStructureForQuery = IM], DataUnit [pmStructureForQuery = 9000], DataUnit [pmStructureForEmployee = S1], DataUnit [pmStructureForEmployee = EMPLOYEE], DataUnit [pmStructureForEmployee = ADMIN], DataUnit [pmStructureForEmployee = 1000]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite17</h1>
+<h2 id="m32">com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = GOG], DataUnit [currencyCode = DBG], DataUnit [apLev1 = PM], DataUnit [apLev1 = LEV1], DataUnit [apLev1 = 1], DataUnit [apLev1 = ADMIN], DataUnit [apLev2 = PM], DataUnit [apLev2 = LEV2], DataUnit [apLev2 = 1], DataUnit [apLev2 = ADMIN], DataUnit [apLev3 = PM], DataUnit [apLev3 = LEV3], DataUnit [apLev3 = 2], DataUnit [apLev3 = ADMIN], DataUnit [apLev3 = MANAGER], DataUnit [apLev4 = PM], DataUnit [apLev4 = LEV4], DataUnit [apLev4 = 2], DataUnit [apLev4 = MANAGER], DataUnit [apLev4 = IM], DataUnit [pmLev1 = PM], DataUnit [pmLev1 = LEV1], DataUnit [pmLev1 = 1], DataUnit [pmLev1 = EMPLOYEE], DataUnit [pmLev2 = PM], DataUnit [pmLev2 = LEV2], DataUnit [pmLev2 = 1], DataUnit [pmLev2 = ADMIN], DataUnit [pmLev3 = PM], DataUnit [pmLev3 = LEV3], DataUnit [pmLev3 = 2], DataUnit [pmLev3 = ADMIN], DataUnit [pmLev3 = MANAGER], DataUnit [pmLev4 = PM], DataUnit [pmLev4 = LEV4], DataUnit [pmLev4 = 2], DataUnit [pmLev4 = ADMIN], DataUnit [pmLev4 = QUERY]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest.verify() didn&apos;t finish within the time-out 800000
+	at java.lang.Thread.sleep(Native Method)
+	at com.adv.qa.selenium.helpers.WaitHelper.waitAdditional(WaitHelper.java:245)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterValueLevelAuthForPM(CurrencyPage.java:8160)
+	at com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest.createStructureAuthorisers(A085_Authorisation_By_Value_LevelTest.java:113)
+	at com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest.verify(A085_Authorisation_By_Value_LevelTest.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = GAA], DataUnit [apCompanyControl = L3], DataUnit [apCompanyControl = S1], DataUnit [apCompanyControl = 00], DataUnit [apCompanyControl = 2], DataUnit [apCompanyControl = B], DataUnit [apCompanyControl = Cost Centre], DataUnit [apCompanyControl = Prorata]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">com.adv.qa.selenium.tests.currency.phase2.A084_Authorisation_Value_Levels_DefinitionTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = DBE], DataUnit [currencyCode = GOE], DataUnit [pmLev1 = LEV1], DataUnit [pmLev1 = 3000], DataUnit [pmLev1 = Value Level 1 Up To 1000 Pounds], DataUnit [pmLev2 = LEV2], DataUnit [pmLev2 = 5000], DataUnit [pmLev2 = Value Level 2 Up To 5000 Pounds], DataUnit [pmLev3 = LEV3], DataUnit [pmLev3 = 100000], DataUnit [pmLev3 = Value Level 3 Up To 100000 Pounds], DataUnit [pmLev4 = LEV4], DataUnit [pmLev4 = 1000000], DataUnit [pmLev4 = Value Level 4 Up To 1000000 Pounds], DataUnit [apLev1 = LEV1], DataUnit [apLev1 = 3000], DataUnit [apLev1 = Value Level 1 Up To 1000 Pounds], DataUnit [apLev2 = LEV2], DataUnit [apLev2 = 5000], DataUnit [apLev2 = Value Level 2 Up To 5000 Pounds], DataUnit [apLev3 = LEV3], DataUnit [apLev3 = 100000], DataUnit [apLev3 = Value Level 3 Up To 100000 Pounds], DataUnit [apLev4 = LEV4], DataUnit [apLev4 = 1000000], DataUnit [apLev4 = Value Level 4 Up To 1000000 Pounds]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite18</h1>
+<h2 id="m35">com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = GOI], DataUnit [authorisationHQ = PM], DataUnit [authorisationHQ = HQ], DataUnit [authorisationHQ = 3], DataUnit [authorisationHQ = QUERY], DataUnit [authorisationHQ = MANAGER], DataUnit [authorisationHQ = ADMIN], DataUnit [authorisationWest = PM], DataUnit [authorisationWest = WEST], DataUnit [authorisationWest = 2], DataUnit [authorisationWest = MANAGER], DataUnit [authorisationWest = ADMIN], DataUnit [authorisationSouth = PM], DataUnit [authorisationSouth = SOUTH], DataUnit [authorisationSouth = 2], DataUnit [authorisationSouth = MANAGER], DataUnit [authorisationSouth = ADMIN], DataUnit [authorisationNorth = PM], DataUnit [authorisationNorth = NORTH], DataUnit [authorisationNorth = 2], DataUnit [authorisationNorth = MANAGER], DataUnit [authorisationNorth = ADMIN], DataUnit [authorisationEast = PM], DataUnit [authorisationEast = EAST], DataUnit [authorisationEast = 2], DataUnit [authorisationEast = MANAGER], DataUnit [authorisationEast = ADMIN]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

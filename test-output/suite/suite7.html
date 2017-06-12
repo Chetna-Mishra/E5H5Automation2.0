@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>TestNG:  suite7</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>suite7</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 26 15:04:19 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>3048 seconds (3048358 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest<br>Parameters: [DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = HAD], DataUnit [currencyCode = HAC], DataUnit [warehseStore = WAREHSE], DataUnit [warehseStore = IW], DataUnit [warehseStore = WEST], DataUnit [warehseStore = 1], DataUnit [warehseStore = DAYS], DataUnit [warehseStore = 1], DataUnit [warehseStore = DAYS], DataUnit [warehseStore = 0.00], DataUnit [warehseStore = 0.00], DataUnit [warehseStore = M1], DataUnit [warehseStore = A1], DataUnit [warehseStore = A1], DataUnit [warehseStore = D1], DataUnit [warehseStore = RS], DataUnit [warehseStore = T1], DataUnit [warehseStore = B1], DataUnit [warehseStore = P1], DataUnit [warehseStore = K1], DataUnit [warehseStore = 1], DataUnit [warehseStore = LA], DataUnit [northStore = NORTH], DataUnit [northStore = IN], DataUnit [northStore = NORTH], DataUnit [northStore = 1], DataUnit [northStore = DAYS], DataUnit [northStore = 1], DataUnit [northStore = DAYS], DataUnit [northStore = 0.00], DataUnit [northStore = 0.00], DataUnit [northStore = M1], DataUnit [northStore = A1], DataUnit [northStore = A1], DataUnit [northStore = D1], DataUnit [northStore = RS], DataUnit [northStore = T1], DataUnit [northStore = B1], DataUnit [northStore = P1], DataUnit [northStore = K1], DataUnit [northStore = 1], DataUnit [northStore = LA], DataUnit [southStore = SOUTH], DataUnit [southStore = IS], DataUnit [southStore = SOUTH], DataUnit [southStore = 1], DataUnit [southStore = DAYS], DataUnit [southStore = 1], DataUnit [southStore = DAYS], DataUnit [southStore = 0.00], DataUnit [southStore = 0.00], DataUnit [southStore = M1], DataUnit [southStore = A1], DataUnit [southStore = A1], DataUnit [southStore = D1], DataUnit [southStore = RS], DataUnit [southStore = T1], DataUnit [southStore = B1], DataUnit [southStore = P1], DataUnit [southStore = K1], DataUnit [southStore = 1], DataUnit [southStore = LA], DataUnit [eastStore = EAST], DataUnit [eastStore = IE], DataUnit [eastStore = EAST], DataUnit [eastStore = 1], DataUnit [eastStore = DAYS], DataUnit [eastStore = 1], DataUnit [eastStore = DAYS], DataUnit [eastStore = 0.00], DataUnit [eastStore = 0.00], DataUnit [eastStore = M1], DataUnit [eastStore = A1], DataUnit [eastStore = A1], DataUnit [eastStore = D1], DataUnit [eastStore = RS], DataUnit [eastStore = T1], DataUnit [eastStore = B1], DataUnit [eastStore = P1], DataUnit [eastStore = K1], DataUnit [eastStore = 0], DataUnit [eastStore = LA], DataUnit [westStore = WEST], DataUnit [westStore = IW], DataUnit [westStore = WEST], DataUnit [westStore = 1], DataUnit [westStore = DAYS], DataUnit [westStore = 1], DataUnit [westStore = DAYS7], DataUnit [westStore = 0.00], DataUnit [westStore = 0.00], DataUnit [westStore = M1], DataUnit [westStore = A1], DataUnit [westStore = A1], DataUnit [westStore = D1], DataUnit [westStore = RS], DataUnit [westStore = T1], DataUnit [westStore = B1], DataUnit [westStore = P1], DataUnit [westStore = K1], DataUnit [westStore = 0], DataUnit [westStore = LA], DataUnit [northITS = NorthITS], DataUnit [northITS = TN], DataUnit [southITS = SouthITS], DataUnit [southITS = TS], DataUnit [eastITS = EastITS], DataUnit [eastITS = TE], DataUnit [westITS = WestITS], DataUnit [westITS = TW]]</td>
+<td><div><pre>org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest.verify() didn&apos;t finish within the time-out 800000
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace156710276", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace156710276'><pre>org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest.verify() didn&apos;t finish within the time-out 800000
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>800</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest@17c1bced</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest<br>Parameters: [DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [currencyCode = HBA], DataUnit [eastStoreForItem1 = EAST], DataUnit [eastStoreForItem1 = A160], DataUnit [eastStoreForItem1 = 10.0000], DataUnit [eastStoreForItem1 = EACH], DataUnit [eastStoreForItem1 = 200.00000], DataUnit [westStoreForItem1 = WEST], DataUnit [westStoreForItem1 = A160], DataUnit [westStoreForItem1 = 10.0000], DataUnit [westStoreForItem1 = EACH], DataUnit [westStoreForItem1 = 200.00000], DataUnit [westStoreForItem2 = WEST], DataUnit [westStoreForItem2 = DV-626D], DataUnit [westStoreForItem2 = 100.0000], DataUnit [westStoreForItem2 = EACH], DataUnit [westStoreForItem2 = 300.00000], DataUnit [westStoreForItem3 = WEST], DataUnit [westStoreForItem3 = DVP-S335], DataUnit [westStoreForItem3 = 20.0000], DataUnit [westStoreForItem3 = EACH], DataUnit [westStoreForItem3 = 456], DataUnit [westStoreForItem4 = WEST], DataUnit [westStoreForItem4 = DVD-909], DataUnit [westStoreForItem4 = 100.0000], DataUnit [westStoreForItem4 = EACH], DataUnit [westStoreForItem4 = 250.00000]]</td>
+<td><div><pre>org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.verify() didn&apos;t finish within the time-out 800000
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.clickOnCancel(CurrencyPage.java:487)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.logOut(CurrencyPage.java:592)
+	at com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.verify(AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace999736366", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace999736366'><pre>org.testng.internal.thread.ThreadTimeoutException: Method com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.verify() didn&apos;t finish within the time-out 800000
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.clickOnCancel(CurrencyPage.java:487)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.logOut(CurrencyPage.java:592)
+	at com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.verify(AD01004_Stock_Take_On_Using_Positive_AdjustmentTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>800</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest@14ec4505</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A107_Stores_HierarchyTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A107_Stores_HierarchyTest<br>Parameters: [DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = HAI], DataUnit [northStore = NORTH], DataUnit [northStore = WAREHSE], DataUnit [northStore = 0], DataUnit [northStore = DAYS], DataUnit [southStore = SOUTH], DataUnit [southStore = WAREHSE], DataUnit [southStore = 0], DataUnit [southStore = DAYS], DataUnit [eastStore = EAST], DataUnit [eastStore = WAREHSE], DataUnit [eastStore = 0], DataUnit [eastStore = DAYS], DataUnit [westStore = WEST], DataUnit [westStore = WAREHSE], DataUnit [westStore = 0], DataUnit [westStore = DAYS]]</td>
+<td></td>
+<td>228</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A107_Stores_HierarchyTest@2d9d4f9d</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A108_Item_Store_Controls_Manual_Store_HierarchyTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A108_Item_Store_Controls_Manual_Store_HierarchyTest<br>Parameters: [DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = HAE], DataUnit [storeControl1 = DV-626D], DataUnit [storeControl1 = WAREHSE], DataUnit [storeControl1 = DV-626D], DataUnit [storeControl1 = 0.00], DataUnit [storeControl1 = 0.00], DataUnit [storeControl1 = DAYS], DataUnit [storeControl1 = 0], DataUnit [storeControl1 = DAYS], DataUnit [storeControl1 = 100.0000], DataUnit [storeControl1 = 1000.0000], DataUnit [storeControl1 = 2], DataUnit [storeControl1 = 1], DataUnit [storeControl2 = A160], DataUnit [storeControl2 = Warehse], DataUnit [storeControl2 = A160], DataUnit [storeControl2 = 0.00], DataUnit [storeControl2 = 0.00], DataUnit [storeControl2 = DAYS], DataUnit [storeControl2 = 0], DataUnit [storeControl2 = DAYS], DataUnit [storeControl2 = 10.0000], DataUnit [storeControl2 = 10.0000], DataUnit [storeControl2 = 2], DataUnit [storeControl2 = 1], DataUnit [storeControl3 = DV-626D], DataUnit [storeControl3 = North], DataUnit [storeControl3 = DV626D], DataUnit [storeControl3 = 0.00], DataUnit [storeControl3 = 0.00], DataUnit [storeControl3 = DAYS], DataUnit [storeControl3 = 0], DataUnit [storeControl3 = DAYS], DataUnit [storeControl3 = 10.0000], DataUnit [storeControl3 = 20.0000], DataUnit [storeControl3 = 2], DataUnit [storeControl3 = 2], DataUnit [storeControl4 = DV-626D], DataUnit [storeControl4 = South], DataUnit [storeControl4 = DV626D], DataUnit [storeControl4 = 0.00], DataUnit [storeControl4 = 0.00], DataUnit [storeControl4 = DAYS], DataUnit [storeControl4 = 0], DataUnit [storeControl4 = DAYS], DataUnit [storeControl4 = 10.0000], DataUnit [storeControl4 = 20.0000], DataUnit [storeControl4 = 2], DataUnit [storeControl4 = 2], DataUnit [storeControl5 = DVP-S325], DataUnit [storeControl5 = NORTH], DataUnit [storeControl5 = DVPS325], DataUnit [storeControl5 = 0.00], DataUnit [storeControl5 = 0.00], DataUnit [storeControl5 = DAYS], DataUnit [storeControl5 = 0], DataUnit [storeControl5 = DAYS], DataUnit [storeControl5 = 10.0000], DataUnit [storeControl5 = 20.0000], DataUnit [storeControl5 = 2], DataUnit [storeControl5 = 2], DataUnit [storeControl6 = DVP-S325], DataUnit [storeControl6 = SOUTH], DataUnit [storeControl6 = DVPS325], DataUnit [storeControl6 = 0.00], DataUnit [storeControl6 = 0.00], DataUnit [storeControl6 = DAYS], DataUnit [storeControl6 = 0], DataUnit [storeControl6 = DAYS], DataUnit [storeControl6 = 10.0000], DataUnit [storeControl6 = 20.0000], DataUnit [storeControl6 = 2], DataUnit [storeControl6 = 2], DataUnit [storeControl7 = DVP-S325], DataUnit [storeControl7 = WEST], DataUnit [storeControl7 = DVPS325], DataUnit [storeControl7 = 0.00], DataUnit [storeControl7 = 0.00], DataUnit [storeControl7 = DAYS], DataUnit [storeControl7 = 0], DataUnit [storeControl7 = DAYS], DataUnit [storeControl7 = 10.0000], DataUnit [storeControl7 = 20.0000], DataUnit [storeControl7 = 2], DataUnit [storeControl7 = 1]]</td>
+<td></td>
+<td>520</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A108_Item_Store_Controls_Manual_Store_HierarchyTest@4034c28c</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A108A_Item_Store_Controls_Manual_Store_HierarchyTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A108A_Item_Store_Controls_Manual_Store_HierarchyTest<br>Parameters: [DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = HAE], DataUnit [storeControl8 = A160], DataUnit [storeControl8 = NORTH], DataUnit [storeControl8 = A160], DataUnit [storeControl8 = 0.00], DataUnit [storeControl8 = 0.00], DataUnit [storeControl8 = DAYS], DataUnit [storeControl8 = 0], DataUnit [storeControl8 = DAYS], DataUnit [storeControl8 = 10.0000], DataUnit [storeControl8 = 10.0000], DataUnit [storeControl8 = 2], DataUnit [storeControl8 = 2], DataUnit [storeControl9 = A160], DataUnit [storeControl9 = SOUTH], DataUnit [storeControl9 = A160], DataUnit [storeControl9 = 0.00], DataUnit [storeControl9 = 0.00], DataUnit [storeControl9 = DAYS], DataUnit [storeControl9 = 0], DataUnit [storeControl9 = DAYS], DataUnit [storeControl9 = 10.0000], DataUnit [storeControl9 = 10.0000], DataUnit [storeControl9 = 2], DataUnit [storeControl9 = 2], DataUnit [storeControl10 = DV-626D], DataUnit [storeControl10 = WEST], DataUnit [storeControl10 = DV626D], DataUnit [storeControl10 = 0.00], DataUnit [storeControl10 = 0.00], DataUnit [storeControl10 = DAYS], DataUnit [storeControl10 = 0], DataUnit [storeControl10 = DAYS], DataUnit [storeControl10 = 50.0000], DataUnit [storeControl10 = 300.0000], DataUnit [storeControl10 = 2], DataUnit [storeControl10 = 1], DataUnit [storeControl11 = A160], DataUnit [storeControl11 = WEST], DataUnit [storeControl11 = A160], DataUnit [storeControl11 = 0.00], DataUnit [storeControl11 = 0.00], DataUnit [storeControl11 = DAYS], DataUnit [storeControl11 = 0], DataUnit [storeControl11 = DAYS], DataUnit [storeControl11 = 10.0000], DataUnit [storeControl11 = 10.0000], DataUnit [storeControl11 = 2], DataUnit [storeControl11 = 2], DataUnit [storeControl12 = A160], DataUnit [storeControl12 = EAST], DataUnit [storeControl12 = A160], DataUnit [storeControl12 = 0.00], DataUnit [storeControl12 = 0.00], DataUnit [storeControl12 = DAYS], DataUnit [storeControl12 = 0], DataUnit [storeControl12 = DAYS], DataUnit [storeControl12 = 10.0000], DataUnit [storeControl12 = 10.0000], DataUnit [storeControl12 = 2], DataUnit [storeControl12 = 1], DataUnit [storeControl13 = DVP-S335], DataUnit [storeControl13 = WEST], DataUnit [storeControl13 = DVPS335], DataUnit [storeControl13 = 0.00], DataUnit [storeControl13 = 0.00], DataUnit [storeControl13 = DAYS], DataUnit [storeControl13 = 0], DataUnit [storeControl13 = DAYS], DataUnit [storeControl13 = 10.0000], DataUnit [storeControl13 = 20.0000], DataUnit [storeControl13 = 2], DataUnit [storeControl13 = 2], DataUnit [storeControl14 = DVD-909], DataUnit [storeControl14 = WEST], DataUnit [storeControl14 = DVD-909], DataUnit [storeControl14 = 0.00], DataUnit [storeControl14 = 0.00], DataUnit [storeControl14 = DAYS], DataUnit [storeControl14 = 0], DataUnit [storeControl14 = DAYS], DataUnit [storeControl14 = 100.0000], DataUnit [storeControl14 = 200.0000], DataUnit [storeControl14 = 2], DataUnit [storeControl14 = 1], DataUnit [storeControl15 = DVD-909], DataUnit [storeControl15 = EAST], DataUnit [storeControl15 = DVD-909], DataUnit [storeControl15 = 0.00], DataUnit [storeControl15 = 0.00], DataUnit [storeControl15 = DAYS], DataUnit [storeControl15 = 0], DataUnit [storeControl15 = DAYS], DataUnit [storeControl15 = 100.0000], DataUnit [storeControl15 = 200.0000], DataUnit [storeControl15 = 2], DataUnit [storeControl15 = 1]]</td>
+<td></td>
+<td>576</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A108A_Item_Store_Controls_Manual_Store_HierarchyTest@e50a6f6</td></tr>
+</table><p>
+</body>
+</html>

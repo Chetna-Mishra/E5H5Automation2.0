@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="77478" started-at="2017-06-09T11:27:20Z" finished-at="2017-06-09T11:28:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="77478" started-at="2017-06-09T11:27:20Z" finished-at="2017-06-09T11:28:38Z">
+      <class name="com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@17c1bced]" name="beforeClass" is-config="true" duration-ms="11866" started-at="2017-06-09T16:57:20Z" finished-at="2017-06-09T16:57:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@17c1bced]" name="verify" duration-ms="62410" started-at="2017-06-09T16:57:32Z" data-provider="dp" finished-at="2017-06-09T16:58:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AAB], DataUnit [commandParameter = EDTSYSCONT ACT=AMEND]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@17c1bced]" name="tearDown" is-config="true" duration-ms="3095" started-at="2017-06-09T16:58:35Z" finished-at="2017-06-09T16:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD01008_IM_Audit_ReportsOracleTest>
+<Verification1>19/05/2017 04:18:02 | Pass : Login page displayed</Verification1>
+<Verification2>19/05/2017 04:18:08 | Pass : Command line displayed</Verification2>
+</AD01008_IM_Audit_ReportsOracleTest>
+</TestCase>
+</SeleniumTestReport>

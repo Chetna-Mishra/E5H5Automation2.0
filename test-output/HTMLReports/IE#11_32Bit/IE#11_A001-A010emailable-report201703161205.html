@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">suite1</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">724.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2">suite2</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">470.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3">suite3</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,351.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t4">suite4</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">830.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">10</td><td class="numi">10</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">3,377.0 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">suite1 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest</td><td><a href="#m1"><b>verify</b>  </a></td><td class="numi">1</td><td>1489646163758</td><td class="numi">204707</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest</td><td><a href="#m2"><b>verify</b>  </a></td><td class="numi">1</td><td>1489646380677</td><td class="numi">60688</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest</td><td><a href="#m3"><b>verify</b>  </a></td><td class="numi">1</td><td>1489646454611</td><td class="numi">416290</td></tr>
+<tr id="t2"><th colspan="5">suite2 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest</td><td><a href="#m4"><b>verify</b>  </a></td><td class="numi">1</td><td>1489646883579</td><td class="numi">295502</td></tr>
+<tr><th colspan="5">suite2 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A006_Company_DefinitionTest</td><td><a href="#m5"><b>verify</b>  </a></td><td class="numi">1</td><td>1489647196773</td><td class="numi">144106</td></tr>
+<tr id="t3"><th colspan="5">suite3 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A004A_Rate_Type_Currency_ExchangeTest</td><td><a href="#m6"><b>verify</b>  </a></td><td class="numi">1</td><td>1489647353594</td><td class="numi">110164</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A004_Currency_Exchange_Rate_TypesTest</td><td><a href="#m7"><b>verify</b>  </a></td><td class="numi">1</td><td>1489647476553</td><td class="numi">780645</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A005_Currency_Exchange_RatesTest</td><td><a href="#m8"><b>verify</b>  </a></td><td class="numi">1</td><td>1489648269646</td><td class="numi">422506</td></tr>
+<tr id="t4"><th colspan="5">suite4 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.A010_Environment_Groups_Test</td><td><a href="#m9"><b>verify</b>  </a></td><td class="numi">1</td><td>1489649281580</td><td class="numi">237200</td></tr>
+<tr><th colspan="5">suite4 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A007_DevicesTest</td><td><a href="#m10"><b>verify</b>  </a></td><td class="numi">1</td><td>1489648705571</td><td class="numi">131153</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.A008_DestinationsTest</td><td><a href="#m11"><b>verify</b>  </a></td><td class="numi">1</td><td>1489648848916</td><td class="numi">233508</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.A009_Distribution_ProfileTest</td><td><a href="#m12"><b>verify</b>  </a></td><td class="numi">1</td><td>1489649094608</td><td class="numi">174506</td></tr>
+</table>
+<h1>suite1</h1>
+<h2 id="m1">com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGA], DataUnit [ukpCurrency = UKP], DataUnit [ukpCurrency = UK PONDS], DataUnit [ukpCurrency = 2], DataUnit [ukpCurrency = POUND], DataUnit [ukpCurrency = POUNDS], DataUnit [ukpCurrency = PENNY], DataUnit [ukpCurrency = PENCE], DataUnit [ukpCurrency = Not Participating], DataUnit [ukpCurrency = ], DataUnit [ukpCurrency = ], DataUnit [ukpCurrency = Hundredth], DataUnit [eurCurrency = EUR], DataUnit [eurCurrency = Euro], DataUnit [eurCurrency = 2], DataUnit [eurCurrency = EURO], DataUnit [eurCurrency = EUROS], DataUnit [eurCurrency = EURO-CENT], DataUnit [eurCurrency = EUROCENTS], DataUnit [eurCurrency = Euro], DataUnit [eurCurrency = ], DataUnit [eurCurrency = ], DataUnit [eurCurrency = Hundredth], DataUnit [demCurrency = DEM], DataUnit [demCurrency = DEUTCHSMARK], DataUnit [demCurrency = 2], DataUnit [demCurrency = MARK], DataUnit [demCurrency = MARKS], DataUnit [demCurrency = PFENNING], DataUnit [demCurrency = PFENNINGS], DataUnit [demCurrency = Participating], DataUnit [demCurrency = 1.97738], DataUnit [demCurrency = 01 Jan 1998], DataUnit [demCurrency = Hundredth], DataUnit [usdCurrency = USD], DataUnit [usdCurrency = US DOLLAR], DataUnit [usdCurrency = 2], DataUnit [usdCurrency = DOLLAR], DataUnit [usdCurrency = DOLLARS], DataUnit [usdCurrency = CENT], DataUnit [usdCurrency = CENTS], DataUnit [usdCurrency = Not Participating], DataUnit [usdCurrency = ], DataUnit [usdCurrency = ], DataUnit [usdCurrency = Hundredth], DataUnit [frfCurrency = FRF], DataUnit [frfCurrency = French Franc], DataUnit [frfCurrency = 2], DataUnit [frfCurrency = FRANC], DataUnit [frfCurrency = FRANCS], DataUnit [frfCurrency = CENTIME], DataUnit [frfCurrency = CENTIMES], DataUnit [frfCurrency = Participating], DataUnit [frfCurrency = 6.63186], DataUnit [frfCurrency = 01 Jan 1998], DataUnit [frfCurrency = Hundredth]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AAB], DataUnit [commandParameter = EDTSYSCONT ACT=AMEND]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = XDJ], DataUnit [tableValue1 = TPB%], DataUnit [tableValue2 = TPB%], DataUnit [entityValue1 = TPBSUPP], DataUnit [entityValue1 = 1], DataUnit [entityValue1 = 1], DataUnit [entityValue1 = 1], DataUnit [entityValue1 = 2], DataUnit [entityValue2 = TPBADDR], DataUnit [entityValue2 = 0], DataUnit [entityValue2 = 1], DataUnit [entityValue2 = 0], DataUnit [entityValue2 = 1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite2</h1>
+<h2 id="m4">com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGC], DataUnit [ukpusdCurrency = UKP], DataUnit [ukpusdCurrency = USD], DataUnit [ukpusdCurrency = Base to Non-Base], DataUnit [ukpusdCurrency = 1], DataUnit [ukpusdCurrency = 1.0], DataUnit [ukpusdCurrency = 1.0], DataUnit [ukpeurCurrency = UKP], DataUnit [ukpeurCurrency = EUR], DataUnit [ukpeurCurrency = Base to Non-Base], DataUnit [ukpeurCurrency = 1], DataUnit [ukpeurCurrency = 1.00], DataUnit [ukpeurCurrency = 1.00], DataUnit [eurukpCurrency = EUR], DataUnit [eurukpCurrency = UKP], DataUnit [eurukpCurrency = Base to Non-Base], DataUnit [eurukpCurrency = 1], DataUnit [eurukpCurrency = 1.0], DataUnit [eurukpCurrency = 1.0], DataUnit [usdukpCurrency = USD], DataUnit [usdukpCurrency = UKP], DataUnit [usdukpCurrency = Base to Non-Base], DataUnit [usdukpCurrency = 1], DataUnit [usdukpCurrency = 1.0], DataUnit [usdukpCurrency = 1.0], DataUnit [frfukpCuurency = FRF], DataUnit [frfukpCuurency = UKP], DataUnit [frfukpCuurency = Non-base to Base], DataUnit [frfukpCuurency = 1], DataUnit [frfukpCuurency = 1.0], DataUnit [frfukpCuurency = 1.0], DataUnit [demukpCurrency = DEM], DataUnit [demukpCurrency = UKP], DataUnit [demukpCurrency = Non-base to Base], DataUnit [demukpCurrency = 1], DataUnit [demukpCurrency = 1.0], DataUnit [demukpCurrency = 1.0], DataUnit [ukpfrfCurrency = UKP], DataUnit [ukpfrfCurrency = FRF], DataUnit [ukpfrfCurrency = Base to Non-Base], DataUnit [ukpfrfCurrency = 1], DataUnit [ukpfrfCurrency = 1.00], DataUnit [ukpfrfCurrency = 1.00], DataUnit [ukpdemCurrency = UKP], DataUnit [ukpdemCurrency = DEM], DataUnit [ukpdemCurrency = Base to Non-Base], DataUnit [ukpdemCurrency = 1], DataUnit [ukpdemCurrency = 1.0], DataUnit [ukpdemCurrency = 1.0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.InvalidElementStateException: Element must not be hidden, disabled or read-only (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 93 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.16.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:19968/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: e8811c94-5a11-4a15-87a9-bf747194b037
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:116)
+	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.clear(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.clear(EventFiringWebDriver.java:360)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.searchValue(CurrencyPage.java:2096)
+	at com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest.verifyValues(A003_Currency_Base_NonBase_RelationshipsTest.java:104)
+	at com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest.verify(A003_Currency_Base_NonBase_RelationshipsTest.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.adv.qa.selenium.tests.currency.A006_Company_DefinitionTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AAE], DataUnit [companyDetails = ICA IM AP GL Pm CMPY IN PROGRESS], DataUnit [companyDetails = ICA IM AP GL Pm CMPY IN PROGRESS], DataUnit [companyDetails = FIRST ADDRESS LINE], DataUnit [companyDetails = SECOND ADDRESS LINE], DataUnit [companyDetails = THIRD ADDRESS LINE], DataUnit [companyDetails = FOURTH ADDRESS LINE], DataUnit [companyDetails = FIFTH ADDRESS LINE], DataUnit [companyDetails = SIXTH ADDRESS LINE], DataUnit [companyDetails = NE23 9NA], DataUnit [companyDetails = 0191 444XXX], DataUnit [companyDetails = 0191 402XXX], DataUnit [companyDetails = UK], DataUnit [companyDetails = UKP]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite3</h1>
+<h2 id="m6">com.adv.qa.selenium.tests.currency.A005_Currency_Exchange_RatesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGI], DataUnit [value = UKP], DataUnit [ukpusdCurrency = UKP], DataUnit [ukpusdCurrency = FRF], DataUnit [ukpusdCurrency = IM], DataUnit [ukpusdCurrency = 01 Dec 1997], DataUnit [ukpusdCurrency = 1.54], DataUnit [ukpusdCurrency = 1.0], DataUnit [ukpusdCurrency = 1.0], DataUnit [ukpfrfCurrency = UKP], DataUnit [ukpfrfCurrency = FRF], DataUnit [ukpfrfCurrency = IM], DataUnit [ukpfrfCurrency = 01 Dec 1997], DataUnit [ukpfrfCurrency = 8.280000], DataUnit [ukpfrfCurrency = 1.00], DataUnit [ukpfrfCurrency = 1.00], DataUnit [ukpdemCurrency = UKP], DataUnit [ukpdemCurrency = DEM], DataUnit [ukpdemCurrency = IM], DataUnit [ukpdemCurrency = 01 Dec 1997], DataUnit [ukpdemCurrency = 2.45], DataUnit [ukpdemCurrency = 1.0], DataUnit [ukpdemCurrency = 1.0], DataUnit [ukpeurCurrency = UKP], DataUnit [ukpeurCurrency = EUR], DataUnit [ukpeurCurrency = IM], DataUnit [ukpeurCurrency = 01 Jan 1998], DataUnit [ukpeurCurrency = 1.26087], DataUnit [ukpeurCurrency = 1.0], DataUnit [ukpeurCurrency = 1.0], DataUnit [eurukpCurrency = EUR], DataUnit [eurukpCurrency = UKP], DataUnit [eurukpCurrency = IM], DataUnit [eurukpCurrency = 01 Jan 1998], DataUnit [eurukpCurrency = 0.793103], DataUnit [eurukpCurrency = 1.0], DataUnit [eurukpCurrency = 1.0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.adv.qa.selenium.tests.currency.A004A_Rate_Type_Currency_ExchangeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGE], DataUnit [RateType = IM], DataUnit [RateType = CO BOBS BISCUIT FACTORY]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.adv.qa.selenium.tests.currency.A004_Currency_Exchange_Rate_TypesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGG], DataUnit [ukpusdCurrency = UKP], DataUnit [ukpusdCurrency = USD], DataUnit [ukpusdCurrency = IM], DataUnit [ukpfrfCurrency = UKP], DataUnit [ukpfrfCurrency = FRF], DataUnit [ukpfrfCurrency = IM], DataUnit [ukpdemCurrency = UKP], DataUnit [ukpdemCurrency = DEM], DataUnit [ukpdemCurrency = IM], DataUnit [ukpeurCurrency = UKP], DataUnit [ukpeurCurrency = EUR], DataUnit [ukpeurCurrency = IM], DataUnit [eurukpCurrency = EUR], DataUnit [eurukpCurrency = UKP], DataUnit [eurukpCurrency = IM], DataUnit [demukpCurrency = DEM], DataUnit [demukpCurrency = UKP], DataUnit [demukpCurrency = IM], DataUnit [frfukpCurrency = FRF], DataUnit [frfukpCurrency = UKP], DataUnit [frfukpCurrency = IM]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite4</h1>
+<h2 id="m9">com.adv.qa.selenium.tests.currency.A010_Environment_Groups_Test:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AFA], DataUnit [firstDestination = CMS1IM], DataUnit [firstDestination = Output to SPOOL], DataUnit [firstDestination = 1439], DataUnit [firstDestination = 0], DataUnit [firstDestination = 5], DataUnit [firstDestination = 2], DataUnit [firstDestination = CMS110], DataUnit [secondDestination = CMS2IM], DataUnit [secondDestination = Output to SPOOL], DataUnit [secondDestination = 1439], DataUnit [secondDestination = 0], DataUnit [secondDestination = 2], DataUnit [secondDestination = 2], DataUnit [secondDestination = CMS220]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.clickOnSections(CurrencyPage.java:759)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.searchValue(CurrencyPage.java:2093)
+	at com.adv.qa.selenium.tests.currency.A010_Environment_Groups_Test.verifyValues(A010_Environment_Groups_Test.java:87)
+	at com.adv.qa.selenium.tests.currency.A010_Environment_Groups_Test.verify(A010_Environment_Groups_Test.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.adv.qa.selenium.tests.currency.A007_DevicesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = ANS], DataUnit [deviceDetails = CMSE5H4], DataUnit [deviceDetails = E5H5 TEST ENVIRONMENT GROUP], DataUnit [deviceDetails = SYSOUT=A,], DataUnit [deviceDetails = LRECL=133,], DataUnit [deviceDetails = BLKSIZE=133,], DataUnit [deviceDetails = RECFM=FBA,], DataUnit [deviceDetails = DEST=(LOCAL,CMS123)]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.adv.qa.selenium.tests.currency.A009_Distribution_ProfileTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AOJ], DataUnit [value = %], DataUnit [profileDetails = CMS110], DataUnit [profileDetails = CMS111 Distribution Profile], DataUnit [profileDetails = CMS110], DataUnit [profileDetails = 1], DataUnit [profileDetails1 = CMS220], DataUnit [profileDetails1 = CMS222 Distribution Profile], DataUnit [profileDetails1 = CMS220], DataUnit [profileDetails1 = 1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.adv.qa.selenium.tests.currency.A008_DestinationsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = ANC], DataUnit [firstDestination = CMS110], DataUnit [firstDestination = Output to Spool], DataUnit [firstDestination = 3], DataUnit [secondDestination = CMS220], DataUnit [secondDestination = Output to Spool], DataUnit [secondDestination = 3]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

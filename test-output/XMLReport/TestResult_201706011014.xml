@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02001_Normal_Material_IssueTest>
+<Verification1>01/06/2017 10:14:29 | Pass : Login page displayed</Verification1>
+<Verification2>01/06/2017 10:14:39 | Pass : Command line displayed</Verification2>
+<Verification3>01/06/2017 10:15:10 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/06/2017 10:16:59 | Fail : Material issue not created</Verification4>
+<Verification5>01/06/2017 10:17:33 | Pass : Currency search page displayed</Verification5>
+<Verification6>01/06/2017 10:18:32 | Pass : Current stock values are as   expected</Verification6>
+<Verification7>01/06/2017 10:18:43 | Fail : Total items are  not  as expected</Verification7>
+</AD02001_Normal_Material_IssueTest>
+</TestCase>
+</SeleniumTestReport>

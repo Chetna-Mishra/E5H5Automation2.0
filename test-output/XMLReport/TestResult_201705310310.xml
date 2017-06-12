@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02001_Normal_Material_IssueTest>
+<Verification1>31/05/2017 03:11:09 | Pass : Login page displayed</Verification1>
+<Verification2>31/05/2017 03:11:16 | Pass : Command line displayed</Verification2>
+<Verification3>31/05/2017 03:11:41 | Pass : Currency search page displayed</Verification3>
+</AD02001_Normal_Material_IssueTest>
+</TestCase>
+</SeleniumTestReport>

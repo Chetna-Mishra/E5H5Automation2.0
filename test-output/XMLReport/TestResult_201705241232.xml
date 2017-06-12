@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A041_Group_Category_And_Structure_PostingsPostgreSQLTest>
+<Verification1>24/05/2017 12:32:57 | Pass : Login page displayed</Verification1>
+<Verification2>24/05/2017 12:33:07 | Pass : Command line displayed</Verification2>
+<Verification3>24/05/2017 12:37:16 | Pass : Process has entered in task list</Verification3>
+<Verification4>24/05/2017 12:38:17 | Pass : Process EP4 performed on E5H5EP4</Verification4>
+<Verification5>24/05/2017 12:38:58 | Pass : Command line displayed</Verification5>
+<Verification6>24/05/2017 12:39:25 | Pass : Structure Rebuild page displayed</Verification6>
+<Verification7>24/05/2017 12:41:01 | Pass : Process has entered task list</Verification7>
+<Verification8>24/05/2017 12:41:27 | Pass : Process EP5 performed on E5H5EP5</Verification8>
+</A041_Group_Category_And_Structure_PostingsPostgreSQLTest>
+</TestCase>
+</SeleniumTestReport>
