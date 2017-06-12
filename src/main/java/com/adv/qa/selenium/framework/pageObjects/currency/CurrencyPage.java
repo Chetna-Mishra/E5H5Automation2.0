@@ -1,6 +1,8 @@
 package com.adv.qa.selenium.framework.pageObjects.currency;
 
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -35,6 +37,8 @@ public class CurrencyPage extends Page {
 	private DatabaseQuery_PostgreSQL PdbQuery = new DatabaseQuery_PostgreSQL();
 	private CalenderDateTime calender = new CalenderDateTime();
 
+
+	
 	private String message = "The specified key already exists";
 
 	public CurrencyPage(EventFiringWebDriver driver) {
@@ -2379,7 +2383,11 @@ public class CurrencyPage extends Page {
 
 		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).sendKeys(element.get(0));
+
+		getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).sendKeys(element.get(0));
+//		WaitHelper.waitAdditional(1);
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject._FIRST)).click();
+//			
 
 		ClickOnAnyButton("OK", 1);
 		WaitHelper.waitAdditional(3);
@@ -4965,92 +4973,102 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(2);
 	}
 
+
+	
 	/**
 	 * Click on Years H button
 	 */
-
-	public void clickOnYearsH() {
+	
+	
+	public void clickOnYearsH(){
 		log.info("Clicking on Years (H) button");
 		WaitHelper.waitAdditional(2);
 		List<WebElement> wbs1 = getAllFooterButton();
-		for (WebElement wb2 : wbs1) {
-			if (wb2.getText().equals("Years (H)")) {
-				wb2.click();
-				break;
+		for(WebElement wb2 : wbs1){
+			if(wb2.getText().equals("Years (H)")){
+						wb2.click();
+						break;
 			}
 		}
 		WaitHelper.waitAdditional(5);
 	}
+	
+	
 
 	/**
 	 * Click on Run activity
 	 */
-	public void clickOnRunActivity() {
+	public void clickOnRunActivity(){
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Run activity button");
 		List<WebElement> wbs = getDriver().findElements(By.className(pObject.HEADER_TAB_BTN));
-		for (WebElement wb : wbs) {
-			if (wb.getText().equals("Run Activity")) {
+		for(WebElement wb : wbs){
+			if(wb.getText().equals("Run Activity")){
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(5);
 	}
-
+	
 	/**
 	 * Click on years
 	 */
-	public void clickOnYears() {
+	public void clickOnYears(){
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Years button");
 
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A013_BTM_BUT_SECTION));
-		for (WebElement wb : wbs) {
-			if (wb.getText().equals("Years")) {
+		for(WebElement wb : wbs){
+			if(wb.getText().equals("Years")){
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(3);
 	}
+	
 
+	
 	/**
 	 * Click on Events H
 	 */
-	public void clickOnEventsH() {
+	public void clickOnEventsH(){
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Events (H) button");
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A013_BTM_BUT_SECTION));
-		for (WebElement wb : wbs) {
-			if (wb.getText().equals("Events (H)")) {
+		for(WebElement wb : wbs){
+			if(wb.getText().equals("Events (H)")){
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(3);
 	}
-
+	
 	/**
 	 * Click on Activity
 	 */
-	public void clickOnActivity() {
+	public void clickOnActivity(){
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Years button");
 
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A013_BTM_BUT_SECTION));
-		for (WebElement wb : wbs) {
-			if (wb.getText().equals("Activity")) {
+		for(WebElement wb : wbs){
+			if(wb.getText().equals("Activity")){
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(3);
 	}
-
+	
+	
+	
+	
+	
 	/**
 	 * Enter fiscal calendar details
-	 * 
 	 * @param calender
 	 * @param year1
 	 * @param year2
@@ -5058,67 +5076,62 @@ public class CurrencyPage extends Page {
 	 * @param year4
 	 * @param year5
 	 */
-	public void enterFiscalCalendarDetails(List<String> calender) {
+	public void enterFiscalCalendarDetails(List<String> calender){
 		log.info("Enter fiscal calender details");
-
+		
 		WaitHelper.waitAdditional(3);
 		getDriver().findElement(By.xpath(pObject.A013_CALENDER)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_CALENDER)).sendKeys(calender.get(0));// Calender
-																							// A013_CALENDER
-
+		getDriver().findElement(By.xpath(pObject.A013_CALENDER)).sendKeys(calender.get(0));//Calender A013_CALENDER
+				
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A004A_DESCR)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A004A_DESCR)).sendKeys(calender.get(1));// Description
-																							// A004A_DESCR
-
+		getDriver().findElement(By.xpath(pObject.A004A_DESCR)).sendKeys(calender.get(1));//Description A004A_DESCR
+		
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).sendKeys(calender.get(2));// Company
-																							// Code
-																							// A006_COMPANY
-
+		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).sendKeys(calender.get(2));//Company Code A006_COMPANY
+				
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_WEEKENDDAY)).sendKeys(calender.get(3));// Weekend
-																								// Day
-
-		WaitHelper.waitAdditional(2);
-
-		getDriver().findElement(By.xpath(pObject.A013_LVL_NAME)).click();// Level
-																			// Name
+		getDriver().findElement(By.xpath(pObject.A013_WEEKENDDAY)).sendKeys(calender.get(3));//Weekend Day
+	
+	    WaitHelper.waitAdditional(2);
+	   			
+	    getDriver().findElement(By.xpath(pObject.A013_LVL_NAME)).click();//Level Name
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_LVL_NAME1)).sendKeys(calender.get(4));// Level
-																							// Name
-																							// Input
+		getDriver().findElement(By.xpath(pObject.A013_LVL_NAME1)).sendKeys(calender.get(4));//Level Name Input
 		WaitHelper.waitAdditional(1);
-
-		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC)).click();// Level
-																			// description
+		
+		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC)).click();//Level description
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC1)).sendKeys(calender.get(5));// Level
-																							// description
-																							// input
+		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC1)).sendKeys(calender.get(5));//Level description input
 		WaitHelper.waitAdditional(1);
 
 		WebElement years = driver.findElement(By.xpath(pObject.A013_YEARS));
 		driver.executeScript("arguments[0].scrollIntoView(true);", years);
-
-		ClickOnAnyButton("Years", 1);
-		ClickOnAnyButton("Years", 1);
-
+		
+		ClickOnAnyButton("Years",1);
+		ClickOnAnyButton("Years",1);
+		
 		WaitHelper.waitAdditional(5);
-
-		/* Enter fiscal years */
+		
+		/*Enter fiscal years*/
 		enterFiscalYears(1);
-
+		
 		clickOnEventsH();
-
-		getCalendarEvents("01 Dec 1999", calender.get(6));
+		
+		getCalendarEvents("01 Dec 1999",calender.get(6));
 		WaitHelper.waitAdditional(2);
 
+		
+		
 	}
+	
+	
+
+	
 
 	/**
 	 * Enter fiscal years in the grid
@@ -5126,14 +5139,13 @@ public class CurrencyPage extends Page {
 	 * @param years
 	 * @param i
 	 */
-
-	private void enterFiscalYears(int i) {
+private void enterFiscalYears(int i) {
 		log.info("Enter fiscal years");
 
 		Calendar cal = new GregorianCalendar();
 		cal.setTime(new Date());
-
 		WaitHelper.waitAdditional(2);
+		
 		getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[2]")).click();// Year
 																							// 1996
 		WaitHelper.waitAdditional(1);
@@ -5179,10 +5191,12 @@ public class CurrencyPage extends Page {
 			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[2]")).click();// Year
 																								// 1996
 			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[2]/input"))
-					.sendKeys(String.valueOf(nextYear));// Year 1996 input
-			WaitHelper.waitAdditional(1);
 
+
+			getDriver().findElement(By.xpath("//div["+i+"]/table/tbody/tr/td[2]/input")).sendKeys(String.valueOf(nextYear));//Year 1996 input
+			WaitHelper.waitAdditional(1);
+			
+		
 			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).click();// Name
 			WaitHelper.waitAdditional(1);
 
@@ -5214,7 +5228,6 @@ public class CurrencyPage extends Page {
 
 			}
 
-		}
 
 		WaitHelper.waitAdditional(2);
 		getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[5]/input")).sendKeys(Keys.ENTER);// Press
@@ -5224,8 +5237,10 @@ public class CurrencyPage extends Page {
 																												// days
 
 		WaitHelper.waitAdditional(3);
+		}
 
 	}
+
 
 	/**
 	 * Get calendar events
@@ -5257,14 +5272,14 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(2);
 	}
 
+	
+	
+	
+
 	/**
-	 * 
-	 * Click on lock calendar Enter Lock in fiscal years in the grid
-	 * 
-	 * @param years
-	 * @param i
-	 *            =div number
+	 * searchPeriodAndYearDetails
 	 */
+
 
 	public void enterLockCalendarDetails(int i)
 
@@ -5312,6 +5327,8 @@ public class CurrencyPage extends Page {
 	/**
 	 * searchPeriodAndYearDetails
 	 */
+
+
 
 	public void searchPeriodAndYearDetails(String element) {
 		if (!isOkButtonDisplayed(5)) {
@@ -6246,64 +6263,7 @@ public class CurrencyPage extends Page {
 		return update;
 	}
 
-	// public boolean bankSortCode(List<String> elements){
-	// log.info("In Bank sort code method");
-	// boolean update = false;
-	// WaitHelper.waitAdditional(2);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).sendKeys(elements.get(0));//Country
-	// A046_CNTRY
-	//
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).clear();//A046_SRTCODE
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).sendKeys(elements.get(1));//Sort
-	// code A046_SRTCODE
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).sendKeys(Keys.ENTER);//Sort
-	// code A046_SRTCODE
-	// WaitHelper.waitAdditional(2);
-	// if(!getToolContentText().contains(message)){
-	//
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.THREE)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.THREE)).sendKeys(elements.get(2));//Bank
-	// name A046_BANK_NAME
-	// WaitHelper.waitAdditional(1);
-	//
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.FOUR)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.FOUR)).sendKeys(elements.get(3));//Ad
-	// L1 A046_ADDRES1
-	//
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.FIVE)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.FIVE)).sendKeys(elements.get(4));//Ad
-	// L2 A046_ADDRES2
-	// WaitHelper.waitAdditional(1);
-	//
-	// if(!elements.get(5).equals("NILL")){
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).sendKeys(elements.get(5));//Ad
-	// L2 A046_ADDRES3
-	// WaitHelper.waitAdditional(1);
-	// }
-	// WaitHelper.waitAdditional(1);
-	// if(!elements.get(6).equals("NILL")){
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.TEN)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.TEN)).sendKeys(elements.get(6));//Postal
-	// code A046_PSTCD
-	// WaitHelper.waitAdditional(1);
-	// }
-	// update = true;
-	// }
-	// return update;
-	// }
-
+	
 	/**
 	 * Create UOM - A048
 	 * 
@@ -9821,118 +9781,7 @@ public class CurrencyPage extends Page {
 		return visible;
 	}
 
-	// public void enterAuthorisationByLevelOrGLResponsibilityForAP(List<String>
-	// elements,List<String> l1Users,List<String> l2Users,List<String>
-	// l3Users,List<String> l4Users){
-	// log.info("In authorisation by Level Or GL responsibility for AP method");
-	//
-	// WaitHelper.waitAdditional(2);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).sendKeys(elements.get(0));//Authorisation
-	// Group A079_AUTH_GRP
-	//
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.THREE)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.THREE)).sendKeys(elements.get(1));//Element
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.THREE)).sendKeys(Keys.ENTER);//Element
-	// WaitHelper.waitAdditional(5);
-	//
-	// Actions builder = new Actions(driver);
-	// WaitHelper.waitAdditional(2);
-	// builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[2]"))).click().
-	// sendKeys(elements.get(2)).build().perform();//LEVEL1
-	// WaitHelper.waitAdditional(5);
-	//
-	// builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div[2]/table/tbody/tr/td[2]"))).click().
-	// sendKeys(elements.get(3)).build().perform();//LEVEL2
-	// WaitHelper.waitAdditional(5);
-	//
-	// builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div[3]/table/tbody/tr/td[2]"))).click().
-	// sendKeys(elements.get(4)).build().perform();//LEVEL3
-	// WaitHelper.waitAdditional(5);
-	//
-	// builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div[4]/table/tbody/tr/td[2]"))).click().
-	// sendKeys(elements.get(5)).build().perform();//LEVEL4
-	// WaitHelper.waitAdditional(5);
-	//
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).sendKeys(Keys.ENTER);//To
-	// enable 'Authorisors' fields
-	// WaitHelper.waitAdditional(3);
-	// addUsers(l1Users,1);
-	// addUsers(l2Users,2);
-	// addUsers(l3Users,3);
-	// addUsers(l4Users,4);
-	// }
-	//
-	// private void addUsers(List<String> users,int i){
-	// log.info("Adding users");
-	// WaitHelper.waitAdditional(5);
-	// Actions builder = new Actions(driver);
-	// builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div["+i+"]/table/tbody/tr/td[2]"))).click().build().perform();
-	// WaitHelper.waitAdditional(5);
-	// clickOnAuthorisors();
-	// if(isAuthorisorsButtonVisible() == true){
-	// clickOnAuthorisors();
-	// }
-	// WaitHelper.waitAdditional(2);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.NINE)).clear();
-	// WaitHelper.waitAdditional(1);
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.NINE)).sendKeys(users.get(0));//Min
-	// Authorisers
-	// getDriver().findElement(By.id(pObject.ZERO_+pObject.NINE)).sendKeys(Keys.ENTER);
-	// WaitHelper.waitAdditional(2);
-	// int userCount = Integer.parseInt(users.get(0));
-	// Actions builderNew = new Actions(driver);
-	// for(int j=1;j<=userCount; j++){
-	// WaitHelper.waitAdditional(5);
-	// builderNew.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div["+j+"]/table/tbody/tr/td[2]"))).click().
-	// sendKeys(users.get(j)).build().perform();//User
-	// WaitHelper.waitAdditional(5);
-	// builderNew.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div["+j+"]/table/tbody/tr/td[2]"))).click().
-	// sendKeys(Keys.ENTER).release().perform();//User
-	// WaitHelper.waitAdditional(7);
-	// }
-	// clickOnUpdate();
-	// WaitHelper.waitAdditional(5);
-	// }
-	//
-	// /**
-	// * Click on authorisors
-	// */
-	// public void clickOnAuthorisors(){
-	// log.info("Click on Authorisors button");
-	// WaitHelper.waitAdditional(2);
-	// List<WebElement> wbs1 =
-	// getDriver().findElements(By.className(pObject.TOP_HEADER_TAB_BTN));
-	// for(WebElement wb2 : wbs1){
-	// if(wb2.getText().equals("Authorisors")){
-	// wb2.click();
-	// break;
-	// }
-	// }
-	// WaitHelper.waitAdditional(2);
-	// }
-	//
-	// /**
-	// * Verify authorisors button
-	// * @return
-	// */
-	// public boolean isAuthorisorsButtonVisible(){
-	// log.info("Verify presence of Authorisors button");
-	// boolean visible = false;
-	// WaitHelper.waitAdditional(2);
-	// List<WebElement> wbs1 =
-	// getDriver().findElements(By.className(pObject.TOP_HEADER_TAB_BTN));
-	// for(WebElement wb2 : wbs1){
-	// if(wb2.getText().equals("Authorisors")){
-	// visible = true;
-	// break;
-	// }
-	// }
-	// WaitHelper.waitAdditional(2);
-	// return visible;
-	// }
+
 
 	/**
 	 * Value/GL Responsibility For AP - A088-GON
@@ -10509,6 +10358,7 @@ public class CurrencyPage extends Page {
 
 	/*--------------------------------PHASE-I and PHASE II METHODS ENDS HERE----------------------------------------------------------------*/
 
+	
 	/*--------------------------------PHASE I ADDITIONAL METHODS BY CHETNA----------------------------------------------------------------*/
 
 	/**
@@ -10863,26 +10713,37 @@ public class CurrencyPage extends Page {
 
 	}
 
-	public boolean selectStruValue(String value)
-
+	public boolean selectStruValue(String value) 
+	
 	{
 		log.info("Select Structure method");
-
+		
 		boolean update = false;
-
+		
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A035_GLSTRUCT));
-		for (WebElement wb : wbs) {
-			if (wb.getText().contains(value)) {
+		for(WebElement wb : wbs){
+			if(wb.getText().contains(value))
+					{
 				wb.click();
 				break;
-
-			}
+			
+				
+					}
 			update = true;
 		}
-
+		
 		return update;
-
+	
+	
+	
+	
+	
 	}
+
+
+/*--------------------------------PHASE III METHODS----------------------------------------------------------------*/
+	
+
 
 	// For AD01008_IM_Audit_Reports PostgreSQL Database Related Process
 
@@ -11113,5 +10974,5 @@ public class CurrencyPage extends Page {
 			getDriver().findElement(By.linkText("Add")).click();
 		}
 	}
-
 }
+

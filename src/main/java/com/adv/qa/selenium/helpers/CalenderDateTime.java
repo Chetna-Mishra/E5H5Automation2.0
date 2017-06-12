@@ -15,6 +15,7 @@ public class CalenderDateTime {
 	
 	
 	/**
+<<<<<<< HEAD
 	 *  Program to return Previous System Date (dd-mm-yyyy)(System DateTime- 1 year) in the Format 01-Jan-2018
 	 * @return 
 	 */	
@@ -208,19 +209,30 @@ public String calEndNextDate(int nextyear) {
 	
 	}
 
+	/**
+	 *  Program to extract System Date in the Format 01-Jan-2018
+	 * @return 
+	 */
+	public String date() {
+		 
+		 // Create object of SimpleDateFormat class and decide the format
+		 DateFormat dateFormat = new SimpleDateFormat(dateFormat1);
+		 
+		 //get current date time with Date()
+		 Date date = new Date();
+		 
+		 // Now format the date
+		 String date1= dateFormat.format(date);
+		 
+//		 // Print the Date
+//		 System.out.println(date1);
+		 
+		 return date1; 
+		 }
 	
-	public static void main(String[] args) {
-		
-	{
-		System.out.println(Calendar.getInstance().getTimeZone().getDisplayName());
-	}
-//		Calendar cal = Calendar.getInstance();
-//		cal.set(Calendar.YEAR, 96);
-//		
-//	System.out.println("fmt: " + result);
-	
+
 	}
 
 	
 	
-}
+

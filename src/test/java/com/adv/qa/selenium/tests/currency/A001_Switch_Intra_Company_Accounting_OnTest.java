@@ -65,8 +65,8 @@ public class A001_Switch_Intra_Company_Accounting_OnTest extends BaseTest{
 	@DataProvider
 	public Object[][] dp() 
 	{		
+
 		String folder = "src/test/resources/";
-		
 //		String xmlFilePath = folder  + "Phase1_A001-A042.xml";
 		String xmlFilePath = folder  + "E5H5.xml";
 		String[] nodeID = { "A001" };

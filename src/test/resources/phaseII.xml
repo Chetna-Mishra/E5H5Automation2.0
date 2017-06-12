@@ -33,11 +33,16 @@
   
   <test name="suite4" preserve-order="true" time-out="800000" enabled="false">
     	<classes>  	    
+<<<<<<< HEAD
     		 <class name="com.adv.qa.selenium.tests.currency.phase2.A052_Tax_AccountsTest"/>  
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A053_Category_CodeTest"/> 
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A054_Discount_TermsTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A055_Settlement_TermsTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest"/> 
+=======
+    	    <class name="com.adv.qa.selenium.tests.currency.phase2.A050_Accounts_Payable_Control_AccountsTest"/>
+    	   	         	 
+>>>>>>> branch 'master' of https://github.com/Chetna-Mishra/E5H5Automation.git
     	</classes>
   </test> 
   
@@ -177,6 +182,10 @@
 </suite>
 
  <!-- 
+<<<<<<< HEAD
 
+=======
+<class name="com.adv.qa.selenium.tests.currency.phase2.A051A_Purchase_Ledger_Bank_CodesTest"/>
+>>>>>>> branch 'master' of https://github.com/Chetna-Mishra/E5H5Automation.git
 
 -->

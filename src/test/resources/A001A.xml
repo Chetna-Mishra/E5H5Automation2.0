@@ -2,12 +2,12 @@
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <Row>
           	<userName>SYSTEM</userName>
-          	<passWord>E5</passWord>	
+          	<passWord>E5</passWord>
+ 
             <code>XDJ</code>   
             <tableValue>TPB%</tableValue> 
             <entityValue>TPBSUPP</entityValue>    
             <url>http://10.31.8.93:17474/e5h5/app/map.do</url>
-            
       </Row>
 	  <Row>
  			<userName>SYSTEM</userName>

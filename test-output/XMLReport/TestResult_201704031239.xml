@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A045_BACS_CalendarTest>
+<Verification1>03/04/2017 12:40:11 | Pass : Login page displayed</Verification1>
+<Verification2>03/04/2017 12:40:17 | Pass : Command line displayed</Verification2>
+<Verification3>03/04/2017 12:40:30 | Pass : Currency search page displayed</Verification3>
+<Verification4>03/04/2017 12:40:46 | Pass : calendar WORKING1prensent in the list</Verification4>
+</A045_BACS_CalendarTest>
+</TestCase>
+</SeleniumTestReport>

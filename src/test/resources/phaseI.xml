@@ -165,11 +165,25 @@
    
  	    </classes>
   	 </test>
+<<<<<<< HEAD
 
  </suite>
  
  
  <!--  	  	 
+=======
+  	
+  	 <test name="suite21" preserve-order="true" time-out="8000000" enabled="false">
+    	<classes>
+    	     <class name="com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsOracleTest"/>
+      	 	 <class name="com.adv.qa.selenium.tests.currency.A042_Period_End_Test"/>
+    	</classes>
+  	 </test>
+   
+ </suite>
+
+  <!--  	  	 
+>>>>>>> branch 'master' of https://github.com/Chetna-Mishra/E5H5Automation.git
    	 <test name="suite15" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>
        	No need to Execute A042 as The period is already 12 and no need to close
@@ -177,4 +191,8 @@
     	</classes>
   	 </test>
    
+<<<<<<< HEAD
 -->
+=======
+  	 -->
+>>>>>>> branch 'master' of https://github.com/Chetna-Mishra/E5H5Automation.git

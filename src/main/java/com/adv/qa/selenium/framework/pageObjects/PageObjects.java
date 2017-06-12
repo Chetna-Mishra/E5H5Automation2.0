@@ -602,7 +602,10 @@ public class PageObjects {
 //	Page Objects for "A045_BACS_CalendarTest"
 	public final String A045_CAL = "//input[starts-with(@name,'CLNDR_')]";
 	public final String A045_RAD_BACS = "//div/input[@name='CLNDR-TYPE_1'][@value='BACS']";
+	
 	public final String A045_RAD_OTH = "//div/input[@name='CLNDR-TYPE_1'][@value='Other']";
+	
+
 	public final String A045_WK_DAY = "//select[starts-with(@name,'WK-END-DAY_')]";
 	public final String A045_CHK_SHOW_WK_END = "//label[text()='Show Week Ending']/../input[1]";
 	public final String A045_ACT = "//input[starts-with(@name,'ACTVT_')]";
@@ -698,6 +701,7 @@ public class PageObjects {
 	public final String A054_NUM_DD = "//input[starts-with(@name,'NUM-DD_')]";
 	public final String A054_RATE_PERC = "//input[starts-with(@name,'RATE-PERC_')]";
 	public final String A054_RAD_SRTP_INVDT ="//div/input[@name='STRT-POINT-IND_1'][@value='Invoice Date']";
+
 	
 //	Page Objects for "A055_Settlement_TermsTest"
 	public final String A055_SETT_TERM= "//input[starts-with(@name,'STLMNT_')]";
@@ -1307,18 +1311,6 @@ public class PageObjects {
 	public final String AD02009_ADV_NT = "//input[starts-with(@name,'ADVC-NOTE_')]";
 	
 	public final String AD02009_DELV = "//input[starts-with(@name,'DLVRY_')]";
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

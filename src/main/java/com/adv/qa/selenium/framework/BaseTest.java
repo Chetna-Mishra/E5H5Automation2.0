@@ -53,6 +53,7 @@ import com.adv.qa.selenium.helpers.WebDriverEventListenerTest;
 public class BaseTest {
 
 	public String companyId="IM";
+
 	public static String LOG_LINE_SEPARATOR = "   ===================================== ";
 	public static final Logger log = LoggerFactory.getLogger(BaseTest.class);
 	private  String className = this.getClass().getName();
