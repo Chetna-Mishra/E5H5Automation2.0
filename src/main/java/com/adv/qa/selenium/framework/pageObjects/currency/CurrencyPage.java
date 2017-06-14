@@ -508,6 +508,8 @@ public class CurrencyPage extends Page {
 		List<WebElement> wbs = getAlllButton();
 		for (WebElement wb : wbs) {
 			if (wb.getText().equals("Cancel")) {
+				
+//				WaitHelper.waitAdditional(3); //for Edge Browser
 				wb.click();
 				break;
 			}

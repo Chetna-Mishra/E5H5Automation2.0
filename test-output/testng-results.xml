@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="74463" started-at="2017-06-12T12:27:02Z" finished-at="2017-06-12T12:28:17Z">
+  <suite name="Default suite" duration-ms="153031" started-at="2017-06-14T06:45:08Z" finished-at="2017-06-14T06:47:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="74463" started-at="2017-06-12T12:27:02Z" finished-at="2017-06-12T12:28:17Z">
-      <class name="com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@14ec4505]" name="beforeClass" is-config="true" duration-ms="11392" started-at="2017-06-12T17:57:02Z" finished-at="2017-06-12T17:57:14Z">
+    <test name="Default test" duration-ms="153031" started-at="2017-06-14T06:45:08Z" finished-at="2017-06-14T06:47:41Z">
+      <class name="com.adv.qa.selenium.tests.currency.A035_Structure_RebuildSQLTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A035_Structure_RebuildSQLTest@41ee392b]" name="beforeClass" is-config="true" duration-ms="8784" started-at="2017-06-14T12:15:08Z" finished-at="2017-06-14T12:15:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@14ec4505]" name="verify" duration-ms="60085" started-at="2017-06-12T17:57:14Z" data-provider="dp" finished-at="2017-06-12T17:58:14Z">
+        <test-method status="PASS" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A035_Structure_RebuildSQLTest@41ee392b]" name="verify" duration-ms="140778" started-at="2017-06-14T12:15:17Z" data-provider="dp" finished-at="2017-06-14T12:17:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AAB], DataUnit [commandParameter = EDTSYSCONT ACT=AMEND]]]]>
+                <![CDATA[[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [code = Submit EP3], DataUnit [structureList = EPB], DataUnit [structureList = E5H5EP3], DataUnit [structureList = 00], DataUnit [structureList = 30 Apr 2014], DataUnit [process = EP3]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@14ec4505]" name="tearDown" is-config="true" duration-ms="2891" started-at="2017-06-12T17:58:14Z" finished-at="2017-06-12T17:58:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A035_Structure_RebuildSQLTest@41ee392b]" name="tearDown" is-config="true" duration-ms="3353" started-at="2017-06-14T12:17:38Z" finished-at="2017-06-14T12:17:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A035_Structure_RebuildSQLTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

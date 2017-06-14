@@ -54,6 +54,7 @@ public class A001_Switch_Intra_Company_Accounting_OnTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.verifyPurchasingModules(),"Purchasing module fields","checked by default");
 		
 		/*Logout from the application*/
+		
 		currencyPage.logOut(1);
 	}
 	
