@@ -106,11 +106,11 @@ public class A108_Item_Store_Controls_Manual_Store_HierarchyTest extends BaseTes
 	
 	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
 		
-		if(!currencyPage.verifyValues(elements.get(0))){
+		if(currencyPage.verifyValues(elements.get(0))){
 			testcases.add(getCurreentDate()+" | Pass : New item story control "+elements.get(0)+ "  displayed in the list");
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Fail : New item story control "+elements.get(0)+ "  displayed in the list");
+			testcases.add(getCurreentDate()+" | Fail : New item story control "+elements.get(0)+ "  Not displayed in the list");
 		}
 	}
 

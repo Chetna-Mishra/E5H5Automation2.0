@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	  <Row>
-	      	<userName>SYSTEM</userName>
+	      	<userName>MANAGER</userName>
           	<passWord>E5</passWord>
             <currencyCode>EDB</currencyCode> 
             <currencyCode>EJI</currencyCode>
@@ -9,7 +9,7 @@
             <company>03</company>
             
             <firstICAData>BASE</firstICAData>
-            <firstICAData>B002</firstICAData>
+            <firstICAData>B001</firstICAData>
             <firstICAData>NORTH</firstICAData>
             <firstICAData>Posting within BTZ element B001</firstICAData>
             <firstICAData>12</firstICAData>
@@ -22,7 +22,7 @@
             <firstICAData>This</firstICAData>
             
             <secondICAData>BASE</secondICAData>
-            <secondICAData>B003</secondICAData>
+            <secondICAData>B002</secondICAData>
             <secondICAData>NORTH</secondICAData>
             <secondICAData>Posting within BTZ element B002</secondICAData>
             <secondICAData>12</secondICAData>
@@ -33,7 +33,7 @@
             <secondICAData>S1</secondICAData>
             <secondICAData>-200.00</secondICAData>
             <secondICAData>This</secondICAData>
-            
+
             <aGroup>LAY1</aGroup>
             <aGroup>A</aGroup>
             <aGroup>02</aGroup>
@@ -76,17 +76,26 @@
             <structureEnqForS1>S1</structureEnqForS1>
             <structureEnqForS1>-200.00</structureEnqForS1>
             <structureEnqForS1>-200.00</structureEnqForS1>
-            
                         
-            <balance>NBTZ</balance>
-            <balance>000.00</balance>
-            <balance>000.00</balance>
-            <balance>N1</balance>
-            <balance>400.00</balance>
-            <balance>400.00</balance>
-            <balance>N2</balance>
-            <balance>-400.00</balance>
-            <balance>-400.00</balance>
+            <balance1>NBTZ</balance1>
+            <balance1>000.00</balance1>
+            <balance1>000.00</balance1>
+            <balance1>N1</balance1>
+            <balance1>400.00</balance1>
+            <balance1>400.00</balance1>
+            <balance1>N2</balance1>
+            <balance1>-400.00</balance1>
+            <balance1>-400.00</balance1>
+            
+            <balance2>NBTZ</balance2>
+            <balance2>000.00</balance2>
+            <balance2>000.00</balance2>
+            <balance2>N1</balance2>
+            <balance2>400.00</balance2>
+            <balance2>400.00</balance2>
+            <balance2>N2</balance2>
+            <balance2>-400.00</balance2>
+            <balance2>-400.00</balance2>
   
       </Row>
 </Root>

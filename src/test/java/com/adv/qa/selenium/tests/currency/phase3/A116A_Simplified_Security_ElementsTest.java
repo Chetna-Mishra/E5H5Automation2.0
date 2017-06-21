@@ -16,7 +16,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * Test Reference No	: 	A116 Simplified Security - Elements   
  * Purpose              :   To View Security Elements by Login as BM1
  * Date					:   Modified on 18-May-2017/Chetna
- * ACCESS               :   AD1
+ * ACCESS               :   AD1, by BM1
  */
 
 public class A116A_Simplified_Security_ElementsTest extends BaseTest{

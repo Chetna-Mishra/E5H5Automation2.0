@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	  <Row>
- 			<userName>BM</userName>
+ 			<userName>ACCEPT</userName>
           	<passWord>E5</passWord>
             <code>EBA</code> 
             
@@ -100,7 +100,7 @@
 			<nominalAKAI>Profit &amp; Loss</nominalAKAI>
 			<nominalAKAI>Both</nominalAKAI>
 			<nominalAKAI>A</nominalAKAI>
-			<nominalAKAI>GBP</nominalAKAI>
+			<nominalAKAI>***</nominalAKAI>
 			<nominalAKAI>Base</nominalAKAI>
 			<nominalAKAI>0</nominalAKAI>
 			

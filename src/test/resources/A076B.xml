@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <Row >
-	    <userName>MANAGER</userName>
+	    <userName>GREC</userName>
         <passWord>E5</passWord>
         <currencyCode>DAJ</currencyCode>
         <currencyCode>DAI</currencyCode>
@@ -26,6 +26,7 @@
         <documentCodeRR>0</documentCodeRR>
         <documentCodeRR>NILL</documentCodeRR>
         <documentCodeRR>NILL</documentCodeRR>
+        <documentCodeRR>Not Applicable</documentCodeRR>
         
         <documentCodeRi>RI</documentCodeRi>
         <documentCodeRi>Requisition RI Type '0'</documentCodeRi>
@@ -47,6 +48,7 @@
         <documentCodeRi>0</documentCodeRi>
         <documentCodeRi>NILL</documentCodeRi>
         <documentCodeRi>NILL</documentCodeRi>
+        <documentCodeRi>Not Applicable</documentCodeRi>
                
         <documentCodeRT>RT</documentCodeRT>
         <documentCodeRT>Requisition RI Type '0'</documentCodeRT>
@@ -68,6 +70,7 @@
         <documentCodeRT>0</documentCodeRT>
         <documentCodeRT>NILL</documentCodeRT>
         <documentCodeRT>NILL</documentCodeRT>
+        <documentCodeRT>Not Applicable</documentCodeRT>
           
         <documentCodeSR>SR</documentCodeSR>
         <documentCodeSR>Stock Purchase Req. Type 4 Auto</documentCodeSR>
@@ -89,6 +92,7 @@
         <documentCodeSR>0</documentCodeSR>
         <documentCodeSR>NILL</documentCodeSR>
         <documentCodeSR>NILL</documentCodeSR>
+        <documentCodeSR>Not Applicable</documentCodeSR>
         
         <documentCodeTR>TR</documentCodeTR>
         <documentCodeTR>Stores Req. Type 2</documentCodeTR>
@@ -110,6 +114,7 @@
         <documentCodeTR>0</documentCodeTR>
         <documentCodeTR>NILL</documentCodeTR>
         <documentCodeTR>NILL</documentCodeTR>
+        <documentCodeTR>Not Applicable</documentCodeTR>
     
     </Row>
 	

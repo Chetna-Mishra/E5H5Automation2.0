@@ -71,6 +71,7 @@ public class A098_Item_CreationTest extends BaseTest{
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));
 		currencyPage.ClickOnAnyButton("OK", 1);
 		WaitHelper.waitAdditional(2);
+		
 		verifyValues(currencyPage,item525);
 		verifyValues(currencyPage,item626);
 		verifyValues(currencyPage,item325);

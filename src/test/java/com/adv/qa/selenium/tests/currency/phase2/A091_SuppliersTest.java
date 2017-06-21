@@ -38,6 +38,8 @@ public class A091_SuppliersTest extends BaseTest{
 		List<String> yamahaSupplier = dataRow.findNamesReturnValues("yamahaSupplier");
 		List<String> denonSupplier = dataRow.findNamesReturnValues("denonSupplier");
 		List<String> akaiSupplier = dataRow.findNamesReturnValues("akaiSupplier");
+		List<String> SamsungSupplier = dataRow.findNamesReturnValues("SamsungSupplier");
+		
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -61,7 +63,8 @@ public class A091_SuppliersTest extends BaseTest{
 		createSuppliers(currencyPage,panasonicSupplier);	
 		createSuppliers(currencyPage,yamahaSupplier);	
 		createSuppliers(currencyPage,denonSupplier);	
-		createSuppliers(currencyPage,akaiSupplier);	
+		createSuppliers(currencyPage,akaiSupplier);
+		createSuppliers(currencyPage,SamsungSupplier);	
 	
 		currencyPage.logOut(2);
 

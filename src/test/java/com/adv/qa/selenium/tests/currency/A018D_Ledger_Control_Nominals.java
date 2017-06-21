@@ -33,8 +33,8 @@ public class A018D_Ledger_Control_Nominals extends BaseTest{
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("code");
 
-		List<String> nominalSTKE = dataRow.findNamesReturnValues("nominalSTKE");		
-		List<String> nominalSTKS = dataRow.findNamesReturnValues("nominalSTKS");
+			
+		
 		List<String> nominalSTKW = dataRow.findNamesReturnValues("nominalSTKW");
 		List<String> nominalSTKN = dataRow.findNamesReturnValues("nominalSTKN");		
 		List<String> nominalINTE = dataRow.findNamesReturnValues("nominalINTE");
@@ -64,8 +64,8 @@ public class A018D_Ledger_Control_Nominals extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 
-		createNominal(nominalSTKE,dataRow,currencyPage);
-		createNominal(nominalSTKS,dataRow,currencyPage);
+		
+		
 		createNominal(nominalSTKW,dataRow,currencyPage);
 		createNominal(nominalSTKN,dataRow,currencyPage);
 		createNominal(nominalINTE,dataRow,currencyPage);

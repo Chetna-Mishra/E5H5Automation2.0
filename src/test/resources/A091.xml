@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	  <Row>
-        <userName>SYSTEM</userName>
+        <userName>MANAGER</userName>
         <passWord>E5</passWord>
         <currencyCode>PBA</currencyCode>
         
@@ -220,6 +220,44 @@
         <akaiSupplier>Standard</akaiSupplier>
         <akaiSupplier>01</akaiSupplier>
         <akaiSupplier>04</akaiSupplier>
+        
+        <SamsungSupplier>Samsung</SamsungSupplier>
+        <SamsungSupplier>Samsung</SamsungSupplier>
+        <SamsungSupplier>Samsung</SamsungSupplier>
+        <SamsungSupplier>GBP</SamsungSupplier>
+               
+        <SamsungSupplier>0</SamsungSupplier>
+        <SamsungSupplier>Any Street</SamsungSupplier>
+        <SamsungSupplier>Any District</SamsungSupplier>
+        <SamsungSupplier>Any Town</SamsungSupplier>
+        <SamsungSupplier>Any County</SamsungSupplier>
+        
+        <SamsungSupplier>DH3 3AA</SamsungSupplier>
+        <SamsungSupplier>(0191) 34764832</SamsungSupplier>
+        <SamsungSupplier>(0191) 84676437</SamsungSupplier>
+        <SamsungSupplier>(0191) 82372932</SamsungSupplier>
+        <SamsungSupplier>SP1</SamsungSupplier>
+        
+        <SamsungSupplier>C1</SamsungSupplier>
+        <SamsungSupplier>D1</SamsungSupplier>
+        <SamsungSupplier>S1</SamsungSupplier>
+        
+        <SamsungSupplier>UK</SamsungSupplier>
+        <SamsungSupplier>92656</SamsungSupplier>
+        <SamsungSupplier>E</SamsungSupplier>
+        
+        <SamsungSupplier>UKE</SamsungSupplier>
+        <SamsungSupplier>H1</SamsungSupplier>
+        <SamsungSupplier>Y</SamsungSupplier>
+        
+        <SamsungSupplier>L0</SamsungSupplier>
+        <SamsungSupplier>Inactive</SamsungSupplier>
+        <SamsungSupplier>Not Maintained</SamsungSupplier>
+        <SamsungSupplier>Standard</SamsungSupplier>
+        <SamsungSupplier>01</SamsungSupplier>
+        <SamsungSupplier>01</SamsungSupplier>
+        
+        
         
        </Row>
 </Root>

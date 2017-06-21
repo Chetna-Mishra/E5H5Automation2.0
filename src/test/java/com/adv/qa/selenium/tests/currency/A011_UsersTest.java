@@ -35,12 +35,12 @@ public class A011_UsersTest extends BaseTest{
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("code");
 		
-//		List<String> firstUser = dataRow.findNamesReturnValues("firstUser");
-//		List<String> secondUser = dataRow.findNamesReturnValues("secondUser");
-//		List<String> thirdUser = dataRow.findNamesReturnValues("thirdUser");
-//		List<String> fourthUser = dataRow.findNamesReturnValues("fourthUser");
-//		List<String> fifthUser = dataRow.findNamesReturnValues("fifthUser");
-//		List<String> sixthUser = dataRow.findNamesReturnValues("sixthUser");
+		List<String> firstUser = dataRow.findNamesReturnValues("firstUser");
+		List<String> secondUser = dataRow.findNamesReturnValues("secondUser");
+		List<String> thirdUser = dataRow.findNamesReturnValues("thirdUser");
+		List<String> fourthUser = dataRow.findNamesReturnValues("fourthUser");
+		List<String> fifthUser = dataRow.findNamesReturnValues("fifthUser");
+		List<String> sixthUser = dataRow.findNamesReturnValues("sixthUser");
 		List<String> userBuyer = dataRow.findNamesReturnValues("userBuyer");
 		List<String> userEXPED = dataRow.findNamesReturnValues("userEXPED");
 		List<String> userGREC = dataRow.findNamesReturnValues("userGREC");
@@ -65,12 +65,12 @@ public class A011_UsersTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - User List","Currency search page","displayed");
 				
 		/*Create users*/
-//		createUsers(firstUser,currencyPage);
-//		createUsers(secondUser,currencyPage);
-//		createUsers(thirdUser,currencyPage);
-//		createUsers(fourthUser,currencyPage);
-//		createUsers(fifthUser,currencyPage);
-//		createUsers(sixthUser,currencyPage);
+		createUsers(firstUser,currencyPage);
+		createUsers(secondUser,currencyPage);
+		createUsers(thirdUser,currencyPage);
+		createUsers(fourthUser,currencyPage);
+		createUsers(fifthUser,currencyPage);
+		createUsers(sixthUser,currencyPage);
 		createUsers(userBuyer,currencyPage);
 		createUsers(userEXPED,currencyPage);
 		createUsers(userGREC,currencyPage);

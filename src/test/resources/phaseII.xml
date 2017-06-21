@@ -33,17 +33,13 @@
   
   <test name="suite4" preserve-order="true" time-out="800000" enabled="false">
     	<classes>  	    
-<<<<<<< HEAD
+
     		 <class name="com.adv.qa.selenium.tests.currency.phase2.A052_Tax_AccountsTest"/>  
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A053_Category_CodeTest"/> 
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A054_Discount_TermsTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A055_Settlement_TermsTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest"/> 
-=======
-    	    <class name="com.adv.qa.selenium.tests.currency.phase2.A050_Accounts_Payable_Control_AccountsTest"/>
-    	   	         	 
->>>>>>> branch 'master' of https://github.com/Chetna-Mishra/E5H5Automation.git
-    	</classes>
+   	</classes>
   </test> 
   
   <test name="suite5" preserve-order="true" time-out="800000" enabled="false">
@@ -90,23 +86,22 @@
 			<class name="com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest"/>   
        		<class name="com.adv.qa.selenium.tests.currency.phase2.A073_Receipt_ControlTest"/> 
         	<class name="com.adv.qa.selenium.tests.currency.phase2.A074_Automatic_Banking_CodeTest"/>
-        	<class name="com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest"/>        
+        	        
        </classes>
   </test> 
   
   <test name="suite10" preserve-order="true" time-out="800000" parallel="classes" thread-count="2" enabled="false">
     	<classes>
-
        		<class name="com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest"/> 
-        	<class name="com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest"/>  
-    	</classes>
+        	<class name="com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest"/> 
+      </classes>
   </test> 
   
-    <test name="suite11" preserve-order="true" time-out="800000" enabled="false">
+  <test name="suite11" preserve-order="true" time-out="800000" enabled="true">
     	<classes>
-        	<class name="com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest"/>     
+        	<class name="com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest"/>
         	<class name="com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest"/>   
-        	<class name="com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest"/> 	      
+        	<class name="com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest"/> 
     	</classes>
   </test>
   
@@ -135,8 +130,7 @@
 		  	 <class name="com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest"/> 
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A082_Authorisation_StructuresTest"/>
-                 
-    	</classes>
+     	</classes>
   </test> 
     
   <test name="suite16" preserve-order="true" time-out="800000" parallel="classes" thread-count="2" enabled="false">
@@ -170,22 +164,15 @@
     	<classes>
        		 <class name="com.adv.qa.selenium.tests.currency.phase2.A088_Authorisation_By_Val_Or_GL_ResponsibilityTest"/> 
          	 <class name="com.adv.qa.selenium.tests.currency.phase2.A090_PM_Company_Controls_For_AuthorisationTest"/>
-         	 
-    	</classes>
-  </test>   
-    <test name="suite21" preserve-order="true" time-out="800000" enabled="false">
-    	<classes>
          	 <class name="com.adv.qa.selenium.tests.currency.phase2.A091_SuppliersTest"/>  
-    	</classes>
-  </test>
-  
+       </classes>
+   </test>    
 </suite>
 
- <!-- 
-<<<<<<< HEAD
 
-=======
-<class name="com.adv.qa.selenium.tests.currency.phase2.A051A_Purchase_Ledger_Bank_CodesTest"/>
->>>>>>> branch 'master' of https://github.com/Chetna-Mishra/E5H5Automation.git
+ <!-- 
+No need to execute A075, as the cmpy=01
+<class name="com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest"/>
+Prior to Execute, A086_Authorisation_By_GL_ResponsibilityTest, execute A089_Amend_AP_Company_Controls_For_AuthorisationTest
 
 -->

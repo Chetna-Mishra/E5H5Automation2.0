@@ -61,11 +61,11 @@ public class A097_Stock_TypesTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-		if(!currencyPage.verifyValues(stockCode.get(0))){
+		if(currencyPage.verifyValues(stockCode.get(0))){
 			testcases.add(getCurreentDate()+" | Pass : Stock code "+stockCode.get(0)+ "  displayed in the list");
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Fail : Stock code "+stockCode.get(0)+ "not displayed in the list");
+			testcases.add(getCurreentDate()+" | Fail : Stock code "+stockCode.get(0)+ " not displayed in the list");
 		}
 
 		

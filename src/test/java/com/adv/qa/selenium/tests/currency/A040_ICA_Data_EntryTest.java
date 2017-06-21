@@ -57,9 +57,9 @@ public class A040_ICA_Data_EntryTest extends BaseTest{
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
-// 		enterJournalDetails(currencyPage,dataRow,firstICAData);
+ 		enterJournalDetails(currencyPage,dataRow,firstICAData);
 		
-		accountDetailEnquiry(currencyPage,dataRow,aGroup,fAccount1500,account6300);//Need Retest
+		accountDetailEnquiry(currencyPage,dataRow,aGroup,fAccount1500,account6300);
 
 		currencyPage.clickOnCancel();
 				
@@ -115,9 +115,9 @@ public class A040_ICA_Data_EntryTest extends BaseTest{
 		
 		currencyPage.navigateToAccountDetailPage();
 		
-		currencyPage.getAccountDetailValues(account1.get(0));//Need Retest
+		currencyPage.getAccountDetailValues(account1.get(0));
 		
-		verifyGroup(currencyPage,account1);//Need Retest
+		verifyGroup(currencyPage,account1);
 		
 		currencyPage.getAccountDetailValues(account2.get(0));
 		
@@ -140,7 +140,7 @@ public class A040_ICA_Data_EntryTest extends BaseTest{
 		
 		currencyPage.structureEnquiry(structureEnqForCategory);
 		
-		currencyPage.navigateToCostDetailPage();
+		currencyPage.navigateToCostDetailPage();//Dont Need this step
 		
 		currencyPage.getCostDetailValues(structureEnqForCost1.get(0));
 		
@@ -163,7 +163,8 @@ public class A040_ICA_Data_EntryTest extends BaseTest{
 		}
 		
 		/*Verify new ICA data displayed in the list*/
-		Assert.assertTrue(testcases,isValuePresent, "New group displayed","in the grid");//Need Retest
+		Assert.assertTrue(testcases,isValuePresent, "New group displayed","in the grid");
+		
 	}
 
 	

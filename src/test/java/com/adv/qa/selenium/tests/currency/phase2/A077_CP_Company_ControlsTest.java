@@ -48,7 +48,7 @@ public class A077_CP_Company_ControlsTest extends BaseTest{
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
 		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Purchasing Company Controls Li","Currency search page","displayed");
+//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Purchasing Company Controls Li","Currency search page","displayed");
 
 		currencyPage.searchValue(companyId,1,0);
 		

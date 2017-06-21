@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
-<TestCase>
-<A114_Security_Group_Access_CodesTest>
-<Verification1>17/05/2017 02:04:09 | Pass : Login page displayed</Verification1>
-<Verification2>17/05/2017 02:04:15 | Pass : Command line displayed</Verification2>
-<Verification3>17/05/2017 02:04:28 | Fail : Currency search page not displayed</Verification3>
-</A114_Security_Group_Access_CodesTest>
-</TestCase>
-</SeleniumTestReport>

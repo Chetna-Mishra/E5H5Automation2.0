@@ -2,7 +2,7 @@
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	
     <Row id="A091A">
-        <userName>ADMIN</userName>
+        <userName>EXPED</userName>
         <passWord>E5</passWord>
         <currencyCode>PBA</currencyCode>
         <currencyCode>AZJ</currencyCode>
@@ -30,10 +30,11 @@
         
         <sonySupplier>SONY</sonySupplier>
         <panasonicSupplier>PANASONIC</panasonicSupplier>
-        <pioneerSupplier>Pioneer</pioneerSupplier>
+        <pioneerSupplier>PIONEER</pioneerSupplier>
 		<yamahaSupplier>YAMAHA</yamahaSupplier>
         <denonSupplier>DENON</denonSupplier>
         <akaiSupplier>AKAI</akaiSupplier>
+        <SamsungSupplier>Samsung</SamsungSupplier>
         
         <supplierList>NORTH</supplierList>
         <supplierList>SOUTH</supplierList>
@@ -53,7 +54,7 @@
     </Row>
     
     <Row id="A094">
-        <userName>ADMIN</userName>
+        <userName>GREC</userName>
         <passWord>E5</passWord>
         <currencyCode>XEA</currencyCode>
         
@@ -281,7 +282,7 @@
     </Row>
     
     <Row id = "A098A">
-        <userName>ADMIN</userName>
+        <userName>GREC</userName>
         <passWord>E5</passWord>
         <currencyCode>PYE</currencyCode>
         <currencyCode>PIV</currencyCode>
@@ -306,13 +307,13 @@
         
         <item525>DV-525</item525>
         <item525>PIONEER</item525>
-        <item525>DV-525</item525>
+        <item525>Pioneer DV-525</item525>
         <item525>0.0000</item525>
         <item525>0</item525>
         
         <item524>DV-524</item524>
         <item524>SONY</item524>
-        <item524>DV-524</item524>
+        <item524>SONY DV-524</item524>
         <item524>0.0000</item524>
         <item524>0</item524> 
         
@@ -412,7 +413,7 @@
     </Row>
     
     <Row id= "A101">
-        <userName>BM1</userName>
+        <userName>BUYER</userName>
         <passWord>E5</passWord>
         <currencyCode>PIJ</currencyCode>
         
@@ -674,7 +675,7 @@
     </Row>
     
     <Row id="A106">
-        <userName>ADMIN</userName>
+        <userName>EXPED</userName>
         <passWord>E5</passWord>
         <currencyCode>HAD</currencyCode>
         <currencyCode>HAC</currencyCode>
@@ -769,7 +770,7 @@
         <westStore>1</westStore>
         <westStore>DAYS</westStore>
         <westStore>1</westStore>
-        <westStore>DAYS7</westStore>
+        <westStore>DAYS</westStore>
         <westStore>0.00</westStore>
         <westStore>0.00</westStore>
         <westStore>M1</westStore>
@@ -832,7 +833,7 @@
         
         <storeControl1>DV-626D</storeControl1>
         <storeControl1>WAREHSE</storeControl1>
-        <storeControl1>DV-626D</storeControl1>
+        <storeControl1>DV626D</storeControl1>
         <storeControl1>0.00</storeControl1>
         <storeControl1>0.00</storeControl1>
         <storeControl1>DAYS</storeControl1>        
@@ -844,7 +845,7 @@
         <storeControl1>1</storeControl1>
         
         <storeControl2>A160</storeControl2>
-        <storeControl2>Warehse</storeControl2>
+        <storeControl2>WAREHSE</storeControl2>
         <storeControl2>A160</storeControl2>
         <storeControl2>0.00</storeControl2>
         <storeControl2>0.00</storeControl2>
@@ -907,8 +908,8 @@
         <storeControl6>20.0000</storeControl6>
         <storeControl6>2</storeControl6>        
         <storeControl6>2</storeControl6>
-        
-        <storeControl7>DVP-S325</storeControl7>
+   
+   		<storeControl7>DVP-S325</storeControl7>
         <storeControl7>WEST</storeControl7>
         <storeControl7>DVPS325</storeControl7>
         <storeControl7>0.00</storeControl7>
@@ -919,12 +920,13 @@
         <storeControl7>10.0000</storeControl7>
         <storeControl7>20.0000</storeControl7>
         <storeControl7>2</storeControl7>        
-        <storeControl7>1</storeControl7>        
+        <storeControl7>1</storeControl7>   
+        <storeControl7>2</storeControl7>        
         
     </Row>
     
     <Row id="A108A">        
-        <userName>ADMIN</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
         <currencyCode>HAE</currencyCode>
                 
@@ -1123,7 +1125,8 @@
 
         <securityGroupIM2>IM2</securityGroupIM2>
         <securityGroupIM2>Inventory Management(Access All)</securityGroupIM2>
-        <securityGroupIM2>3</securityGroupIM2>
+        <securityGroupIM2>4</securityGroupIM2>
+        <securityGroupIM2>HAA</securityGroupIM2>
         <securityGroupIM2>HAB</securityGroupIM2>
         <securityGroupIM2>HAG</securityGroupIM2>
         <securityGroupIM2>HAH</securityGroupIM2>
@@ -1146,7 +1149,8 @@
         
         <securityGroupIM4>IM4</securityGroupIM4>
         <securityGroupIM4>Inventory Management (User)</securityGroupIM4>
-        <securityGroupIM4>4</securityGroupIM4>
+        <securityGroupIM4>5</securityGroupIM4>
+        <securityGroupIM4>HAA</securityGroupIM4>
         <securityGroupIM4>HCF</securityGroupIM4>
         <securityGroupIM4>HCR</securityGroupIM4>
         <securityGroupIM4>HLA</securityGroupIM4>

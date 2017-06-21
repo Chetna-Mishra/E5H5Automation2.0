@@ -66,7 +66,7 @@ public class A026_Layout_CodesTest extends BaseTest{
 		currencyPage.isConfirmPopUpDisplayed();
 
 		/*Verify new layout code displayed in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(layoutList.get(0)), "Layout code "+layoutList.get(0),"displayed in the list");
+		Assert.assertTrue(testcases,currencyPage.verifyValues(layoutList.get(0)), "Layout code "+layoutList.get(0)," displayed in the list");
 		
 		currencyPage.logOut(2);
 	}

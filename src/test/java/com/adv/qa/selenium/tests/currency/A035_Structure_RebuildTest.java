@@ -1,7 +1,6 @@
 package com.adv.qa.selenium.tests.currency;
 
 import java.util.List;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -15,13 +14,13 @@ import com.adv.qa.selenium.helpers.DataRow;
 
 /**
  * @author              :   Draxayani
- * Test Reference No	: 	A039  Enquiry
+ * Test Reference No	: 	A035 Structure Rebuild (EP3)
  * Purpose              :   Run Structure Rebuild
- * Date					:   26-05-2014
- * ACCESS               :   EJI
+ * Date					:   02-05-2014
+ * ACCESS               :   Submit EP3
  */
 
-public class A039_EnquiryTest extends BaseTest{
+public class A035_Structure_RebuildTest extends BaseTest{
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -33,9 +32,10 @@ public class A039_EnquiryTest extends BaseTest{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("code");
-		List<String> aGroup = dataRow.findNamesReturnValues("aGroup");
-		List<String> bGroup = dataRow.findNamesReturnValues("bGroup");
-			
+		List<String> structureList = dataRow.findNamesReturnValues("structureList");
+		String process = dataRow.get("process");
+		boolean value = false;
+		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
 		
@@ -48,36 +48,36 @@ public class A039_EnquiryTest extends BaseTest{
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
-		currencyPage.clickOnChangeCompany(companyId);
-		
 		currencyPage.fillCurrenceyCode(currencyCode);
 		
 		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Balance Sheet/Profit and Loss","Structure Rebuild page","displayed");
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+structureList.get(0)+" - Structure Rebuild Parameters","Structure Rebuild page","displayed");
 		
-		verifyGroup(currencyPage,aGroup);
-		verifyGroup(currencyPage,bGroup);
+		/*Create structure build details*/
+		currencyPage.enterStructureReBuildDetails(structureList,companyId);
 		
-		currencyPage.logOut(2);
-
-	}
-
-	private void verifyGroup(CurrencyPage currencyPage,List<String> values){
+		currencyPage.enterAboutsubmitDetails(); 
 		
-		boolean isValuePresent = false;
+		String statBefore = currencyPage.getProcessDetails(process,structureList.get(1));
 		
-		currencyPage.balanceSheetDetails(values);	
+		Assert.assertEquals(testcases,statBefore, "2","Precess has","entered task list");
 		
-		for(String value : values){
-			if(currencyPage.verifyValues(value))
-			
-			{
-				isValuePresent = true;
-			}		
+		if(statBefore.equals("2")){;
+			currencyPage.updateProcess(process,structureList.get(1));
 		}
 		
-		/*Verify new group details displayed in the list*/
-		Assert.assertTrue(testcases,isValuePresent, "New group displayed" +values.get(1)," in the grid");
+		String statAfter = currencyPage.getProcessDetails(process,structureList.get(1));
+		
+		if(statAfter == null || statAfter.equals("3"))
+		{
+			value = true;			
+		}
+		Assert.assertTrue(testcases,value,"Precess" +process,"performed on "+structureList.get(1));
+		currencyPage.clickOnCancel();
+		
+		currencyPage.isConfirmPopUpDisplayed();
+		
+		currencyPage.logOut(1);
 	}
 
 	
@@ -88,11 +88,13 @@ public class A039_EnquiryTest extends BaseTest{
 	
 	@DataProvider
 	public Object[][] dp() 
-	{
+	{		
 		String folder = "src/test/resources/";
-		String xmlFilePath = folder  + "A039.xml";
-		DataResource dataResource = new DataResource(xmlFilePath);
-		DataRow [] [] rows = dataResource.getDataRows4DataProvider();
-		return rows;
+		String xmlFilePath = folder  + "E5H5.xml";
+		String[] nodeID = { "A035" };
+		String [] selectedNames = {"userName","passWord","code","structureList","process"};
+		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true, nodeID);
+		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
+		return rows;	
 	}
 }

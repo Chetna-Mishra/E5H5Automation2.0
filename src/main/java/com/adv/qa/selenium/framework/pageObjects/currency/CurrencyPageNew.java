@@ -904,7 +904,6 @@ public class CurrencyPageNew extends CurrencyPage{
 		ClickOnAnyTab("Stock Valuation", 1);
 		log.info("On the Stock Valuation Tab");
 		WaitHelper.waitAdditional(4);
-//		getDriver().findElement(By.xpath(pObject.TAB_STRIP+pObject.SECOND_TAB)).click();//Stock valuation tab
 		
 		getDriver().findElement(By.xpath(pObject.A104_PER_ISSUE)).clear();
 		WaitHelper.waitAdditional(1);
@@ -926,8 +925,7 @@ public class CurrencyPageNew extends CurrencyPage{
 		ClickOnAnyTab("Numbering", 1);
 		log.info("On the Numbering Tab");
 		WaitHelper.waitAdditional(4);
-		
-//		getDriver().findElement(By.xpath(pObject.TAB_STRIP+pObject.THIRD_TAB)).click();//Numbering tab
+
 				
 		getDriver().findElement(By.xpath(pObject.A104_CHK_US_REQ)).click();//Use requisition A104_CHK_US_REQ
 		WaitHelper.waitAdditional(1);
@@ -1282,6 +1280,7 @@ public class CurrencyPageNew extends CurrencyPage{
 			ClickOnAnyTab("Controls/Valuation", 1);
 			
 			getDriver().findElement(By.xpath(pObject.A108_SUP_FRM_PUR)).click();//Supply from purc A108_SUP_FRM_PUR
+	
 			
 			getDriver().findElement(By.xpath(pObject.A107_LD_TM)).clear();
 			WaitHelper.waitAdditional(1);
@@ -1324,6 +1323,8 @@ public class CurrencyPageNew extends CurrencyPage{
 		WaitHelper.waitAdditional(2);
 		return update;
 	}	
+	
+	
 	
 	
 	/**

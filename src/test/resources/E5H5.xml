@@ -5,9 +5,10 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
         <code>XDJ</code>
+	
 	<tableValue1>TPB%</tableValue1>
 	<tableValue2>TPB%</tableValue2>
-	
+		
 	<entityValue1>TPBSUPP</entityValue1>
 	<entityValue1>1</entityValue1>
 	<entityValue1>1</entityValue1>
@@ -33,19 +34,7 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
 		<code>AGA</code> 
-<!-- 			
-		<ukpCurrency>UKP</ukpCurrency>
-		<ukpCurrency>UK PONDS</ukpCurrency>
-		<ukpCurrency>2</ukpCurrency>
-		<ukpCurrency>POUND</ukpCurrency>
-		<ukpCurrency>POUNDS</ukpCurrency>
-		<ukpCurrency>PENNY</ukpCurrency>
-		<ukpCurrency>PENCE</ukpCurrency>
-		<ukpCurrency>Not Participating</ukpCurrency>
-		<ukpCurrency></ukpCurrency>
-		<ukpCurrency></ukpCurrency>
-		<ukpCurrency>Hundredth</ukpCurrency>
-  --> 			
+
 		<eurCurrency>EUR</eurCurrency>
 		<eurCurrency>Euro</eurCurrency>
 		<eurCurrency>2</eurCurrency>
@@ -99,64 +88,8 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
         <code>AGC</code>
-   <!--      
-        <ukpfrfCurrency>UKP</ukpfrfCurrency>
-		<ukpfrfCurrency>FRF</ukpfrfCurrency>
-		<ukpfrfCurrency>Base to Non-Base</ukpfrfCurrency>
-		<ukpfrfCurrency>1</ukpfrfCurrency>
-		<ukpfrfCurrency>1.00</ukpfrfCurrency>
-		<ukpfrfCurrency>1.00</ukpfrfCurrency>          
-  				
-		<ukpeurCurrency>UKP</ukpeurCurrency>
-		<ukpeurCurrency>EUR</ukpeurCurrency>
-		<ukpeurCurrency>Base to Non-Base</ukpeurCurrency>
-		<ukpeurCurrency>1</ukpeurCurrency>
-		<ukpeurCurrency>1.00</ukpeurCurrency>
-		<ukpeurCurrency>1.00</ukpeurCurrency>
-					    
-		<ukpdemCurrency>UKP</ukpdemCurrency>
-		<ukpdemCurrency>DEM</ukpdemCurrency>
-		<ukpdemCurrency>Base to Non-Base</ukpdemCurrency>
-		<ukpdemCurrency>1</ukpdemCurrency>
-		<ukpdemCurrency>1.0</ukpdemCurrency>
-		<ukpdemCurrency>1.0</ukpdemCurrency> 
-		
-		<ukpusdCurrency>UKP</ukpusdCurrency>
-		<ukpusdCurrency>USD</ukpusdCurrency>
-		<ukpusdCurrency>Base to Non-Base</ukpusdCurrency>
-		<ukpusdCurrency>1</ukpusdCurrency>
-		<ukpusdCurrency>1.0</ukpusdCurrency>
-		<ukpusdCurrency>1.0</ukpusdCurrency>
-
-		<eurukpCurrency>EUR</eurukpCurrency>
-		<eurukpCurrency>UKP</eurukpCurrency>
-		<eurukpCurrency>Base to Non-Base</eurukpCurrency>
-		<eurukpCurrency>1</eurukpCurrency>
-		<eurukpCurrency>1.0</eurukpCurrency>
-		<eurukpCurrency>1.0</eurukpCurrency> 
-		
-		<frfukpCuurency>FRF</frfukpCuurency>
-		<frfukpCuurency>UKP</frfukpCuurency>
-		<frfukpCuurency>Non-base to Base</frfukpCuurency>
-		<frfukpCuurency>1</frfukpCuurency>
-		<frfukpCuurency>1.0</frfukpCuurency>
-		<frfukpCuurency>1.0</frfukpCuurency>
-		
-		<usdukpCurrency>USD</usdukpCurrency>
-		<usdukpCurrency>UKP</usdukpCurrency>
-		<usdukpCurrency>Base to Non-Base</usdukpCurrency>
-		<usdukpCurrency>1</usdukpCurrency>
-		<usdukpCurrency>1.0</usdukpCurrency>
-		<usdukpCurrency>1.0</usdukpCurrency>	
-		
-		<demukpCurrency>DEM</demukpCurrency>
-		<demukpCurrency>UKP</demukpCurrency>
-		<demukpCurrency>Non-base to Base</demukpCurrency>
-		<demukpCurrency>1</demukpCurrency>
-		<demukpCurrency>1.0</demukpCurrency>
-		<demukpCurrency>1.0</demukpCurrency>
--->		
-		<gbpfrfCurrency>GBP</gbpfrfCurrency>
+ 
+ 		<gbpfrfCurrency>GBP</gbpfrfCurrency>
 		<gbpfrfCurrency>FRF</gbpfrfCurrency>
 		<gbpfrfCurrency>Base to Non-Base</gbpfrfCurrency>
 		<gbpfrfCurrency>1</gbpfrfCurrency>
@@ -200,7 +133,7 @@
 		
 		<usdgbpCurrency>USD</usdgbpCurrency>
 		<usdgbpCurrency>GBP</usdgbpCurrency>
-		<usdgbpCurrency>Base to Non-Base</usdgbpCurrency>
+		<usdgbpCurrency>Non-base to Base</usdgbpCurrency>
 		<usdgbpCurrency>1</usdgbpCurrency>
 		<usdgbpCurrency>1.0</usdgbpCurrency>
 		<usdgbpCurrency>1.0</usdgbpCurrency>	
@@ -300,47 +233,7 @@
         <passWord>E5</passWord>
         <code>AGI</code>      
         <value>GBP</value>   
- <!--      
-   		<ukpusdCurrency>UKP</ukpusdCurrency>
-		<ukpusdCurrency>FRF</ukpusdCurrency>
-		<ukpusdCurrency>IM</ukpusdCurrency>
-		<ukpusdCurrency>01 Dec 1997</ukpusdCurrency>
-		<ukpusdCurrency>1.54</ukpusdCurrency>
-		<ukpusdCurrency>1.0</ukpusdCurrency>
-		<ukpusdCurrency>1.0</ukpusdCurrency>
 
-        <ukpfrfCurrency>UKP</ukpfrfCurrency>
-		<ukpfrfCurrency>FRF</ukpfrfCurrency>
-		<ukpfrfCurrency>IM</ukpfrfCurrency>
-		<ukpfrfCurrency>01 Dec 1997</ukpfrfCurrency>
-		<ukpfrfCurrency>8.280000</ukpfrfCurrency>
-		<ukpfrfCurrency>1.00</ukpfrfCurrency>
-		<ukpfrfCurrency>1.00</ukpfrfCurrency>
-			
-		<ukpdemCurrency>UKP</ukpdemCurrency>
-		<ukpdemCurrency>DEM</ukpdemCurrency>
-		<ukpdemCurrency>IM</ukpdemCurrency>
-		<ukpdemCurrency>01 Dec 1997</ukpdemCurrency>
-		<ukpdemCurrency>2.45</ukpdemCurrency>
-		<ukpdemCurrency>1.0</ukpdemCurrency>
-		<ukpdemCurrency>1.0</ukpdemCurrency>
-			
-		<ukpeurCurrency>UKP</ukpeurCurrency>
-		<ukpeurCurrency>EUR</ukpeurCurrency>
-		<ukpeurCurrency>IM</ukpeurCurrency>
-		<ukpeurCurrency>01 Jan 1998</ukpeurCurrency>
-		<ukpeurCurrency>1.26087</ukpeurCurrency>
-		<ukpeurCurrency>1.0</ukpeurCurrency>
-		<ukpeurCurrency>1.0</ukpeurCurrency>
-			
-		<eurukpCurrency>EUR</eurukpCurrency>
-		<eurukpCurrency>UKP</eurukpCurrency>
-		<eurukpCurrency>IM</eurukpCurrency>
-		<eurukpCurrency>01 Jan 1998</eurukpCurrency>
-		<eurukpCurrency>0.793103</eurukpCurrency>
-		<eurukpCurrency>1.0</eurukpCurrency>
-		<eurukpCurrency>1.0</eurukpCurrency>
-	-->
    		<gbpusdCurrency>GBP</gbpusdCurrency>
 		<gbpusdCurrency>USD</gbpusdCurrency>
 		<gbpusdCurrency>IM</gbpusdCurrency>
@@ -407,7 +300,7 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
         <code>ANS</code>         
-        <deviceDetails>CMSE5H4</deviceDetails>
+        <deviceDetails>CMSE5H5</deviceDetails>
         <deviceDetails>E5H5 TEST ENVIRONMENT GROUP</deviceDetails>
         <deviceDetails>SYSOUT=A,</deviceDetails>
         <deviceDetails>LRECL=133,</deviceDetails>
@@ -613,7 +506,7 @@
 	 <Row id="A012">
 	    <userName>IM</userName>
         <passWord>E5</passWord>
-       <code>APC</code>        
+        <code>APC</code>        
         
        <calendarActivity>IMDAY</calendarActivity>
        <calendarActivity>CO IM DAILY</calendarActivity>
@@ -639,11 +532,11 @@
        <calendarOther></calendarOther>
        <calendarOther></calendarOther>
 
-	   <calendarMonthActivity>IMMONTH</calendarMonthActivity>
+	   <calendarMonthActivity>IMMON</calendarMonthActivity>
        <calendarMonthActivity>CO IM MONTHLY</calendarMonthActivity>
        <calendarMonthActivity>Monthly</calendarMonthActivity>
        <calendarMonthActivity>31</calendarMonthActivity>
-       <calendarMonthActivity>Monday</calendarMonthActivity>
+       <calendarMonthActivity>IMDAY</calendarMonthActivity>
        <calendarMonthActivity>month</calendarMonthActivity>			
     </Row>
       
@@ -656,9 +549,9 @@
        <calendar>AC FISCAL CALENDAR</calendar>
        <calendar>IM</calendar>
        <calendar>Sunday</calendar>
-       <calendar>LEVEL 0</calendar>
-	   <calendar>level 0</calendar>
-       <calendar>IMMONTH</calendar>
+       <calendar>IMMON</calendar>
+	   <calendar>IM Monthly</calendar>
+       <calendar>IMMON</calendar>
        
        
     </Row>
@@ -1061,7 +954,7 @@
         <calendarBACS>BACS Calendar IM</calendarBACS>
         <calendarBACS>Friday</calendarBACS>
         <calendarBACS>1996</calendarBACS>
-        <calendarBACS>IMMONTH</calendarBACS>
+        <calendarBACS>IMMON</calendarBACS>
         <calendarBACS>BACS</calendarBACS>
         <calendarBACS>2016</calendarBACS>
         <calendarBACS>2018</calendarBACS>
@@ -1070,7 +963,7 @@
         <calendarOther>Working Days Calendar</calendarOther>
         <calendarOther>Friday</calendarOther>
         <calendarOther>1996</calendarOther>
-        <calendarOther>IMWORK</calendarOther>
+        <calendarOther>WORKING</calendarOther>
         <calendarOther>Other</calendarOther>
         <calendarOther>2016</calendarOther>
         <calendarOther>2018</calendarOther>   
@@ -1078,7 +971,7 @@
 	</Row>    
 	
 	<Row id="A046">
-	     <userName>ADMIN</userName>
+	     <userName>QUERY</userName>
         <passWord>E5</passWord>
         <currencyCode>AKY</currencyCode>
         <bankName>UK</bankName>
@@ -1326,7 +1219,7 @@
 	</Row>
 	
 	<Row id="A052">
-	     <userName>ADMIN</userName>
+	     <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
         <currencyCode>RAS</currencyCode>
 
@@ -1578,7 +1471,7 @@
 	</Row>
 	
 	<Row id="A061">
-	    <userName>ADMIN</userName>
+	    <userName>EXPED</userName>
         <passWord>E5</passWord>
         <currencyCode>AK2</currencyCode>
 
@@ -1815,13 +1708,13 @@
         <passWord>E5</passWord>
         <currencyCode>PXG</currencyCode>
         
-        <inspectionCode>L1</inspectionCode>
-        <inspectionCode>Inspection Code L1</inspectionCode>
+        <inspectionCode>I1</inspectionCode>
+        <inspectionCode>Inspection Code I1</inspectionCode>
         
     </Row>  
     
 	<Row id="A069">
-	    <userName>ADMIN</userName>
+	    <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
         <currencyCode>PXE</currencyCode>
 
@@ -1870,7 +1763,7 @@
    </Row>
    
 	<Row id= "A072">
-	    <userName>ADMIN</userName>
+	    <userName>QUERY</userName>
         <passWord>E5</passWord>
         <currencyCode>PX2</currencyCode>
         <currencyCode>PX1</currencyCode>
@@ -2095,7 +1988,7 @@
         <pmLev4>PM</pmLev4>
         <pmLev4>LEV4</pmLev4>
         <pmLev4>2</pmLev4>
-        <pmLev4>ADMIN</pmLev4>
+        <pmLev4>MANAGER</pmLev4>
         <pmLev4>QUERY</pmLev4>       
     </Row>
     
@@ -2209,7 +2102,7 @@
     
    
     <Row id="A089">
-	    <userName>ADMIN</userName>
+	    <userName>EXPED</userName>
         <passWord>E5</passWord>
         <currencyCode>GAA</currencyCode>
         

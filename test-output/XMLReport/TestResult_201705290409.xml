@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
-<TestCase>
-<AD01009_General_Ledger_AuditTest>
-<Verification1>29/05/2017 04:09:50 | Pass : Login page displayed</Verification1>
-<Verification2>29/05/2017 04:09:58 | Pass : Command line displayed</Verification2>
-</AD01009_General_Ledger_AuditTest>
-</TestCase>
-</SeleniumTestReport>

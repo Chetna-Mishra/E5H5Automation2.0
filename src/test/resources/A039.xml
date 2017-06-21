@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	  <Row>
-	      	<userName>SYSTEM</userName>
+	      	<userName>EMPLOYEE</userName>
           	<passWord>E5</passWord>
             <code>EJI</code> 
             <company>IM</company>
@@ -10,7 +10,7 @@
 			<aGroup>A</aGroup>
 			<aGroup>B/S Group A</aGroup>
 			<aGroup>02 Category A02</aGroup>
-			<aGroup>B/S Group A Expenses     Total</aGroup>
+			<aGroup>B/S Group A Expenses Total</aGroup>
 			<aGroup>Running Total</aGroup>
 			<aGroup>0.00</aGroup>	
 			<aGroup>0.00</aGroup>
@@ -27,7 +27,7 @@
 			<bGroup>03 Purchasing CTLS</bGroup>
 			<bGroup>04 POP Accruals</bGroup>
 			<bGroup>08 Category B08</bGroup>
-			<bGroup>B/S Group B Purchasing   Total</bGroup>
+			<bGroup>B/S Group B Purchasing Total</bGroup>
 			<bGroup>Running Total</bGroup>
 			<bGroup>0.00</bGroup>
 			<bGroup>0.00</bGroup>

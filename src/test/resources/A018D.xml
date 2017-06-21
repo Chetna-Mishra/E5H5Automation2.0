@@ -4,8 +4,7 @@
  		 	<userName>MANAGER</userName>
           	<passWord>E5</passWord>
             <code>EBA</code> 
-      
-	    						
+						
 			<nominalSTKE>STKE</nominalSTKE>
 			<nominalSTKE>IM Stock East</nominalSTKE>
 			<nominalSTKE>I</nominalSTKE>
@@ -26,7 +25,8 @@
 			<nominalSTKS>A</nominalSTKS>
 			<nominalSTKS>***</nominalSTKS>
 			<nominalSTKS>Both</nominalSTKS>
-			<nominalSTKS>0</nominalSTKS>
+			<nominalSTKS>0</nominalSTKS>	
+						
 						
 			<nominalSTKW>STKW</nominalSTKW>
 			<nominalSTKW>IM Stock WEST</nominalSTKW>

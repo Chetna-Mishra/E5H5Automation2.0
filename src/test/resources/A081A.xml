@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 		<Row >
-	    <userName>BM1</userName>
+	    <userName>QUERY</userName>
         <passWord>E5</passWord>
         <currencyCode>DDC</currencyCode>
         
@@ -29,20 +29,20 @@
         <authorisationGroupEight>L1</authorisationGroupEight>
         <authorisationGroupEight>TR/POP HQ</authorisationGroupEight>
         
-        <authorisationGroupSouth>SOUTH HQ</authorisationGroupSouth>
+        <authorisationGroupSouth>SOUTH</authorisationGroupSouth>
         <authorisationGroupSouth>Order</authorisationGroupSouth>
         <authorisationGroupSouth>O1</authorisationGroupSouth>
         <authorisationGroupSouth>NILL</authorisationGroupSouth>
         <authorisationGroupSouth>PM</authorisationGroupSouth>
         <authorisationGroupSouth>L1</authorisationGroupSouth>
-        <authorisationGroupSouth>O1/SOUTH</authorisationGroupSouth>
+        <authorisationGroupSouth>O1SOUTH</authorisationGroupSouth>
         
-        <authorisationGroupNorth>NORTH HQ</authorisationGroupNorth>
+        <authorisationGroupNorth>NORTH</authorisationGroupNorth>
         <authorisationGroupNorth>Order</authorisationGroupNorth>
         <authorisationGroupNorth>O1</authorisationGroupNorth>
         <authorisationGroupNorth>NILL</authorisationGroupNorth>
         <authorisationGroupNorth>PM</authorisationGroupNorth>
         <authorisationGroupNorth>L1</authorisationGroupNorth>
-        <authorisationGroupNorth>O1/NORTH</authorisationGroupNorth>
+        <authorisationGroupNorth>O1NORTH</authorisationGroupNorth>
      </Row>
 </Root>

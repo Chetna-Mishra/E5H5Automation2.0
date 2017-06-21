@@ -58,7 +58,7 @@ public class A028_Default_Structure_ControlsTest extends BaseTest {
 		{
 			
 		currencyPage.clickOnInsert1();
-//		currencyPage.clickOnInsert();
+
 		
 		/*Create structure control*/
 		currencyPage.enterControlDetails(controlList);
@@ -72,7 +72,7 @@ public class A028_Default_Structure_ControlsTest extends BaseTest {
 		currencyPage.isConfirmPopUpDisplayed();
 
 		/*Verify new structure control displayed in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(controlList.get(1)), "Default control structure "+controlList.get(1),"displayed in the list");
+		Assert.assertTrue(testcases,currencyPage.verifyValues(controlList.get(1)), "Default control structure "+controlList.get(1)," displayed in the list");
 		}
 		
 		currencyPage.clickOnCancel1();

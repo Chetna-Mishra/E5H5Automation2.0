@@ -377,6 +377,9 @@ public class PageObjects {
 	public final String A018_FIN_ALLW = "//label[text()='Financial Allowed']/../input[1]";
 	public final String A018_PLN_ALLW = "//label[text()='Planning Allowed']/../input[1]";
 	public final String A018_CST_ALLW = "//label[text()='Cost Allocation Allowed']/../input[1]";
+	public final String A018_CHK_REV_ALLW = "//label[text()='Revaluation Allowed']/../input[1]";
+	
+	
 
 //	Page Objects for "A019_Ledger_Control_Management_CodeTest"
 	public final String A019_MNGT_KEY="//input[starts-with(@name,'PATH-KEY_')]";
@@ -940,6 +943,8 @@ public class PageObjects {
 	public final String A076_VAL_CEL_DOC ="//input[starts-with(@name,'VAL-LIMIT_')]";
 	public final String A076_RETN=  "//label[text()='Returns']/../input[1]";
 	public final String A076_MAT_REQ= "//select[starts-with(@name,'MTL-REQ-IND_')]";
+	public final String A076_SUP_MAND= "//select[starts-with(@name,'SUPP-MAND-IND_')]";
+	
 	public final String A076_CHK_MIS_CHRG_ACC=  "//label[text()='Miscellaneous Charges Accepted']/../input[1]";
 	public final String A076_CHK_INVPRC_TOL=  "//label[text()='Invoice Price Tolerance Check']/../input[1]";
 	public final String A076_ORDR_LN_SELDEF= "//select[starts-with(@name,'ORDR-LINE-FLAG_')]";

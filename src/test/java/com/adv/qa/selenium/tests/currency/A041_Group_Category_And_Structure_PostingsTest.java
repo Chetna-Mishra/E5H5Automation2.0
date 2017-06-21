@@ -48,11 +48,10 @@ public class A041_Group_Category_And_Structure_PostingsTest extends BaseTest{
 		
 		currencyPage.fillCurrenceyCode(ep4ProcessList.get(0));
 		/*Verify currency search page displayed*/
-//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+ep4ProcessList.get(1)+" - Company Parameter Edit","Structure Rebuild page","displayed");
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+ep4ProcessList.get(1)+" - Company Parameter Edit","Structure Rebuild page","displayed");
 		
 		/*Create layout code*/	
 		
-//		currencyPage.enterEP4ProcessDetails(ep4ProcessList.get(4));
 		
 		currencyPage.enterEP4ProcessDetails(ep5ProcessList,companyId);	
 		
@@ -82,7 +81,6 @@ public class A041_Group_Category_And_Structure_PostingsTest extends BaseTest{
 		String statBeforeEp5 = currencyPage.getProcessDetails(process, Request);
 		
 		Assert.assertEquals(testcases,statBeforeEp5, "2","Precess has","entered task list");
-	
 		if(statBeforeEp5.equals("2")){
 			currencyPage.updateProcess(process, Request);
 		}

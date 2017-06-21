@@ -70,7 +70,7 @@ public class A102_ICA_Default_Trading_RelationshipsTest extends BaseTest{
 			testcases.add(getCurreentDate()+" | Pass : ICA default trading relatioship "+controlAccounts.get(0)+ "  updated");
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Fail : ICA default trading relatioship "+controlAccounts.get(0)+ "not updated");
+			testcases.add(getCurreentDate()+" | Fail : ICA default trading relatioship "+controlAccounts.get(0)+ " not updated");
 		}
 
 		currencyPage.logOut(2);

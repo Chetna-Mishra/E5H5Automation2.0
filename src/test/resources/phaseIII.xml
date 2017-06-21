@@ -2,7 +2,7 @@
 <suite name="suite" verbose="2" time-out="8000000" thread-count="1"  preserve-order="true">
 <!-- 
 	 @author : Chetna 
-	 Purpose : Batch execution of testcases from A091A to 
+	 Purpose : Batch execution of testcases from A091A to AD12005
  -->    
   
  <test name="suite1" preserve-order="true" time-out="800000" enabled="false">
@@ -59,7 +59,6 @@
        		 <class name="com.adv.qa.selenium.tests.currency.phase3.A110_Security_Range_ListsTest"/>  
         	 <class name="com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase3.A112_User_Company_SecurityTest"/> 
-        	   
    	 	</classes>
   </test>
   
@@ -70,16 +69,13 @@
         	<class name="com.adv.qa.selenium.tests.currency.phase3.A115_User_Roles_Set_upTest"/>
         	<class name="com.adv.qa.selenium.tests.currency.phase3.A117_Simplified_SecurityTest"/>
         	<class name="com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest"/>
-    		<class name="com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest"/> 
         </classes>
   </test>
-  
-  
-     <test name="suite9" preserve-order="true" time-out="800000" enabled="false">
+  <test name="suite9" preserve-order="true" time-out="800000" enabled="false">
     	<classes>
+    	   <class name="com.adv.qa.selenium.tests.currency.phase3.AD01004_Stock_Take_On_Using_Positive_AdjustmentTest"/> 
     		<class name="com.adv.qa.selenium.tests.currency.phase3.AD01008_IM_Audit_ReportsTest"/>
      		<class name="com.adv.qa.selenium.tests.currency.phase3.AD01009_General_Ledger_AuditTest"/>
-     
         </classes>
   </test>
   
@@ -95,7 +91,7 @@
     	No need to Execute as amends Description, taken care in A065
     	<class name="com.adv.qa.selenium.tests.currency.phase3.A105_Store_LocationsTest"/>
 
-    	
+   		Before Executing A091A, Execute A116 and A116A
     	
     	</classes>
   	 </test>

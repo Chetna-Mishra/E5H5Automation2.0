@@ -60,9 +60,9 @@ public class A114_Security_Group_Access_CodesTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Insert security group access code*/
-//		currencyPage.insertSecurityGroupAccessCode(securityGroup1);
-//		currencyPage.clickOnUpdate();
-//		
+		currencyPage.insertSecurityGroupAccessCode(securityGroup1);
+		currencyPage.clickOnUpdate();
+		
 		currencyPage.insertSecurityGroupAccessCode(securityGroup2);
 		currencyPage.clickOnUpdate();
 		

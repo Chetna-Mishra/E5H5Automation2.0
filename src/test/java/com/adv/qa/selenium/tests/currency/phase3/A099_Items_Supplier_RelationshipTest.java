@@ -33,6 +33,8 @@ public class A099_Items_Supplier_RelationshipTest extends BaseTest{
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("currencyCode");
 		
+		
+		List<String> item524 = dataRow.findNamesReturnValues("item524");
 		List<String> item525 = dataRow.findNamesReturnValues("item525");
 		List<String> item626 = dataRow.findNamesReturnValues("item626");
 		List<String> item325 = dataRow.findNamesReturnValues("item325");
@@ -59,6 +61,7 @@ public class A099_Items_Supplier_RelationshipTest extends BaseTest{
 		currencyPage.searchValue(companyId,item525, 3, 1);
 		
 		currencyPage.clickOnInsert1();
+		createSupplierForItem(currencyPage,item524);
 		createSupplierForItem(currencyPage,item525);
 		createSupplierForItem(currencyPage,item626);
 		createSupplierForItem(currencyPage,item325);
@@ -69,6 +72,7 @@ public class A099_Items_Supplier_RelationshipTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
+		verifySupplierItem(currencyPage,item524);
 		verifySupplierItem(currencyPage,item525);
 		verifySupplierItem(currencyPage,item626);
 		verifySupplierItem(currencyPage,item325);
@@ -113,7 +117,7 @@ public class A099_Items_Supplier_RelationshipTest extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "phase3.xml";
 		String[] nodeID = { "A099" };
-		String [] selectedNames = {"userName","passWord","currencyCode","item525","item626","item325","item335","itemA160"};
+		String [] selectedNames = {"userName","passWord","currencyCode","item524","item525","item626","item325","item335","itemA160"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	

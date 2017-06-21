@@ -2561,6 +2561,15 @@ public class CurrencyPage extends Page {
 			getDriver().findElement(By.xpath(pObject.A018_CURR_PROCESS)).sendKeys(nominalList.get(8));// Currency
 																										// processing
 																										// A018_CURR_PROCESS
+			if (nominalList.get(0).equals("6200"))
+
+			{
+				getDriver().findElement(By.xpath(pObject.A018_CHK_REV_ALLW)).click(); //A018_CHK_REV_ALLW
+																					
+			}
+				
+	
+			
 			WaitHelper.waitAdditional(2);
 
 			update = true;
@@ -5488,6 +5497,7 @@ private void enterFiscalYears(int i) {
 			clickOnUpdate();
 			clickOnAcceptWarnings();
 			clickOnUpdate();
+			
 
 		} else {
 
@@ -5525,6 +5535,7 @@ private void enterFiscalYears(int i) {
 			clickOnUpdate();
 			clickOnAcceptWarnings();
 			clickOnUpdate();
+		
 		}
 
 	}
@@ -8664,7 +8675,7 @@ private void enterFiscalYears(int i) {
 
 			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[2]")).click();
 			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[2]/input")).sendKeys(companyId);// Company
+			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[2]/input")).sendKeys(elements.get(5));// Company
 			WaitHelper.waitAdditional(2);
 
 			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]")).click();
@@ -8919,7 +8930,15 @@ private void enterFiscalYears(int i) {
 				getDriver().findElement(By.xpath(pObject.A076_MAT_REQ)).sendKeys(elements.get(15));// Material
 																									// Request
 																									// A076_MAT_REQ
+				
 			}
+			
+			if (elements.get(2).equals("Requisition")) {
+				WaitHelper.waitAdditional(1);
+				getDriver().findElement(By.xpath(pObject.A076_SUP_MAND)).sendKeys(elements.get(20));// Supplier Manadatory
+			
+														}
+			
 			WaitHelper.waitAdditional(1);
 			ClickOnAnyTab("Invoices and Commitments", 1);
 			log.info("On the Invoices and Commitments Tab");
@@ -10499,21 +10518,6 @@ private void enterFiscalYears(int i) {
 		log.info("Preocess is updated.");
 	}
 
-	// public String getProcessDetails(String process,String request)
-	// {
-	// log.info("Get process details");
-	// WaitHelper.waitAdditional(4);
-	// String stat = null;
-	//
-	// try {
-	// stat = dbQuery.getStatProcess(process,request);
-	// } catch (SQLException e) {
-	// e.printStackTrace();
-	// } catch (SeleniumDaoException e) {
-	// e.printStackTrace();
-	// }
-	//
-	// }
 
 	public String getProcessDetails(String process, String request)
 
@@ -10522,7 +10526,7 @@ private void enterFiscalYears(int i) {
 		WaitHelper.waitAdditional(4);
 		String stat = null;
 
-		if (BaseTest.database.contains("SQL")) {
+		if (BaseTest.database.equals("SQL")) {
 			log.info("Get process details for SQL");
 			try {
 				stat = dbQuery.getStatProcess(process, request);
@@ -10532,7 +10536,7 @@ private void enterFiscalYears(int i) {
 				e.printStackTrace();
 			}
 
-		} else if (BaseTest.database.contains("Oracle"))
+		} else if (BaseTest.database.equals("Oracle"))
 
 		{
 			log.info("Get process details for Oracle");
@@ -10546,7 +10550,7 @@ private void enterFiscalYears(int i) {
 
 		}
 
-		else if (BaseTest.database.contains("PostgreSQL"))
+		else if (BaseTest.database.equals("PostgreSQL"))
 
 		{
 			log.info("Get process details for PostgreSQL");
@@ -10566,18 +10570,7 @@ private void enterFiscalYears(int i) {
 
 	}
 
-	// public void updateProcess(String process,String request){
-	// log.info("Update process");
-	// try {
-	// dbQuery.updateProcess(process,request);
-	// } catch (SQLException e) {
-	// e.printStackTrace();
-	// } catch (SeleniumDaoException e) {
-	// e.printStackTrace();
-	// }
-	// WaitHelper.waitAdditional(3);
-	// log.info("Preocess is updated.");
-	// }
+	
 
 	public void updateProcess(String process, String request) {
 		log.info("Update process");
