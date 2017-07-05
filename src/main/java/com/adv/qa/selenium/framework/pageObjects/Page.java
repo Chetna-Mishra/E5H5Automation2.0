@@ -13,6 +13,7 @@ public  EventFiringWebDriver driver;
 public  WebDriver driver1;
 
 	public static final Logger log = LoggerFactory.getLogger(BaseTest.class);
+	
 	public WebDriver getDriver() {
 		return driver;
 	}

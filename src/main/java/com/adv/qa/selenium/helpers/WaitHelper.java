@@ -1,11 +1,15 @@
 package com.adv.qa.selenium.helpers;
 
+import java.util.List;
 import java.util.concurrent.TimeoutException;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.adv.qa.selenium.framework.BaseTest;
@@ -75,9 +79,13 @@ public class WaitHelper {
 	 * @throws TimeoutException if element does not become visible during given timeout
 	 */
 	public static void waitUntilWebElementDisplayed(WebDriver driver, final WebElement element) {
-		long timeOut = 120;
-	}
+		long timeOut =BaseTest.implicitlyWaitTimeout;
 
+		waitUntilWebElementDisplayed(driver, element, timeOut);
+	}
+	
+
+	
 	/**
 	 * Wait until the given WebElement is not displayed not longer than given timeOutInSeconds; WebElement should exist on the page
 	 * @param driver
@@ -213,6 +221,7 @@ public class WaitHelper {
 	}
 	
 	/**
+	 * Implicit Wait
 	 * Wait (sleep) required number of seconds, but handle exceptions
 	 * @param seconds * 1000 for local environments
 	 */
@@ -279,6 +288,10 @@ public class WaitHelper {
 		long timeOut = BaseTest.implicitlyWaitTimeout;
 		waitUntilWebElementDisplayed(driver, element, timeOut);
 	}
+	
+	
+
+	
 	
 	
 	

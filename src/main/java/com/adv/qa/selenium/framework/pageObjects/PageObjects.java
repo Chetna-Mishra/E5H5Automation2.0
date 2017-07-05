@@ -16,7 +16,8 @@ public class PageObjects {
 	public final String LABEL = "_label";	
 	public final String CURRENCY_PANE = "dijitContentPane";
 //	public final String SECTION_LAYOUT = "dijitTitlePaneTextNode";
-	public final String SECTION_LAYOUT = "html_TitlePaneTitle";
+	public final String SECTION_LAYOUT = "html_TitlePaneTitle panelCollapsed";
+//	Use AllPG_SELEC and AllPG_EXT_SELEC for SECTION_LAYOUT
 //	public final String CURRENCY_TABLE_CELL = "dojoxGridCell";
 //	Use A001A_CURRENCY_TABLE_CELL for CURRENCY_TABLE_CELL
 //	public final String XDJ_COLUMN_DEF = "0_tabPaneId_2";
@@ -67,6 +68,10 @@ public class PageObjects {
 	
 		
 //	Common Buttons on All pages
+	
+	
+	public final String AllPG_SELEC= "//div[@class='html_TitlePaneTitle panelCollapsed']/a[not(contains(text(),'Extended'))]";
+	public final String AllPG_EXT_SELEC= "//div[@class='html_TitlePaneTitle panelCollapsed']/a[contains(text(),'Extended Selection')]";
 	
 	public final String AllPG_HeaderSection = "//button[contains(@class,'roundedbutton')]/span";
 	public final String AllPG_MSG_TOOLBAR= "//span[contains(@class,'toolbarMessages')]";

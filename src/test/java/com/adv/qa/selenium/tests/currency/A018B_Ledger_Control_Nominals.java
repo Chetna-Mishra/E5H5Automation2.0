@@ -71,7 +71,7 @@ public class A018B_Ledger_Control_Nominals extends BaseTest{
 		createNominal(nominal5100,dataRow,currencyPage);
 		createNominal(nominal2051,dataRow,currencyPage);
 		createNominal(nominal6200,dataRow,currencyPage);
-		createNominal(nominal5900,dataRow,currencyPage);
+		createNominal(nominal5900,dataRow,currencyPage);//Start Over
 		createNominal(nominal7000,dataRow,currencyPage);
 		createNominal(nominal7001,dataRow,currencyPage);
 		createNominal(nominalSALC,dataRow,currencyPage);

@@ -859,6 +859,8 @@ public class CurrencyPageNew extends CurrencyPage{
 		
 		WaitHelper.waitAdditional(2);
 		
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),getDriver().findElement(By.xpath(pObject.A006_COMPANY)));//Chetna Wait Added
+		
 		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).clear();
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).sendKeys(companyName);//Company name A006_COMPANY
@@ -2493,7 +2495,6 @@ public class CurrencyPageNew extends CurrencyPage{
 		WaitHelper.waitAdditional(2);
 		
 		return getDriver().findElement(By.xpath(pObject.AD02001_TL_STK_VAL)).getText().equals(elements.get(2));//Total currenct stock value AD02001_TL_STK_VAL
-
 		 
 	}
 
@@ -3369,7 +3370,7 @@ public class CurrencyPageNew extends CurrencyPage{
 	
 	
 	/************************************************
-	 * Enter Invoices : GBB AD02010
+	 * Enter Invoices : GBB AD02010, AD10001
 	 * **********************************************/
 	public void enterInvoice(List<String> elements,String year){
 		log.info("Enter invoice details");

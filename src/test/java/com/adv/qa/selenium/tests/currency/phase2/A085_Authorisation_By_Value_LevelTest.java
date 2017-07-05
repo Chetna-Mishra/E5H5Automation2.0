@@ -52,30 +52,30 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		/*Navigate to currency page Home page e5 application*/
 		CurrencyPage currencyPage = new CurrencyPage(driver);
 		
-//		/*Verify command line*/
-//		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
-//		
-//		currencyPage.fillCurrenceyCode(currencyCode.get(0));
-//		/*Verify currency search page displayed*/
-//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Value Level Auth Defn List","Currency search page","displayed");
-//		
-//		currencyPage.searchValue(companyId, 3, 0);//GOG search
-//		
-//		currencyPage.clickOnInsert();
-//		
-//		createStructureAuthorisers(currencyPage,apLev1,1);
-//		createStructureAuthorisers(currencyPage,apLev2,1);
-//		createStructureAuthorisers(currencyPage,apLev3,1);
-//		createStructureAuthorisers(currencyPage,apLev4,1);
-//		
-//		currencyPage.clickOnCancel();
-//		
-//		verifyValues(currencyPage,apLev1,"AP");
-//		verifyValues(currencyPage,apLev2,"AP");
-//		verifyValues(currencyPage,apLev3,"AP");
-//		verifyValues(currencyPage,apLev4,"AP");
-//		
-//		currencyPage.clickOnCancel();
+		/*Verify command line*/
+		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
+		
+		currencyPage.fillCurrenceyCode(currencyCode.get(0));
+		/*Verify currency search page displayed*/
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Value Level Auth Defn List","Currency search page","displayed");
+		
+		currencyPage.searchValue(companyId, 3, 0);//GOG search
+		
+		currencyPage.clickOnInsert();
+		
+		createStructureAuthorisers(currencyPage,apLev1,1);
+		createStructureAuthorisers(currencyPage,apLev2,1);
+		createStructureAuthorisers(currencyPage,apLev3,1);
+		createStructureAuthorisers(currencyPage,apLev4,1);
+		
+		currencyPage.clickOnCancel();
+		
+		verifyValues(currencyPage,apLev1,"AP");
+		verifyValues(currencyPage,apLev2,"AP");
+		verifyValues(currencyPage,apLev3,"AP");
+		verifyValues(currencyPage,apLev4,"AP");
+		
+		currencyPage.clickOnCancel();
 		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
@@ -88,9 +88,9 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 		
-//		createStructureAuthorisers(currencyPage,pmLev1,2);
-//		createStructureAuthorisers(currencyPage,pmLev2,2);
-//		createStructureAuthorisers(currencyPage,pmLev3,2);
+		createStructureAuthorisers(currencyPage,pmLev1,2);
+		createStructureAuthorisers(currencyPage,pmLev2,2);
+		createStructureAuthorisers(currencyPage,pmLev3,2);
 		createStructureAuthorisers(currencyPage,pmLev4,2);//Need to check
 		
 		currencyPage.clickOnCancel();

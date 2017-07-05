@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals">
+      <class name="com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest">
         <methods>
-          <include name="beforeClass"/>
           <include name="verify" invocation-numbers="0"/>
+          <include name="beforeClass"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

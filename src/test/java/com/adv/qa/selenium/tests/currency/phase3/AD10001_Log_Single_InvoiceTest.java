@@ -35,6 +35,7 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 		LoginPage loginPage = new LoginPage(driver);
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
 		loginPage.logIn(userName, passWord);
 		
 		/*Navigate to currency page Home page e5 application*/

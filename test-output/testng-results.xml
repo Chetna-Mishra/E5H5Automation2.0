@@ -1,158 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37172" started-at="2017-06-16T14:07:26Z" finished-at="2017-06-16T14:08:03Z">
+  <suite name="Default suite" duration-ms="220094" started-at="2017-06-28T07:29:26Z" finished-at="2017-06-28T07:33:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37172" started-at="2017-06-16T14:07:26Z" finished-at="2017-06-16T14:08:03Z">
-      <class name="com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals@41ee392b]" name="beforeClass" is-config="true" duration-ms="16866" started-at="2017-06-16T19:37:26Z" finished-at="2017-06-16T19:37:43Z">
+    <test name="Default test" duration-ms="220094" started-at="2017-06-28T07:29:26Z" finished-at="2017-06-28T07:33:06Z">
+      <class name="com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest@41ee392b]" name="beforeClass" is-config="true" duration-ms="13372" started-at="2017-06-28T12:59:26Z" finished-at="2017-06-28T12:59:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals@41ee392b]" name="verify" duration-ms="20152" started-at="2017-06-16T19:37:43Z" data-provider="dp" finished-at="2017-06-16T19:38:03Z">
+        <test-method status="PASS" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest@41ee392b]" name="verify" duration-ms="200044" started-at="2017-06-28T12:59:39Z" data-provider="dp" finished-at="2017-06-28T13:02:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal6500 = 6500], DataUnit [nominal6500 = Electricity Account], DataUnit [nominal6500 = A], DataUnit [nominal6500 = 02], DataUnit [nominal6500 = Balance Sheet], DataUnit [nominal6500 = Both], DataUnit [nominal6500 = A], DataUnit [nominal6500 = GBP], DataUnit [nominal6500 = Base], DataUnit [nominal6500 = 0], DataUnit [nominalBANKR = BANKR], DataUnit [nominalBANKR = bank rec bank], DataUnit [nominalBANKR = A], DataUnit [nominalBANKR = 02], DataUnit [nominalBANKR = Balance Sheet], DataUnit [nominalBANKR = Both], DataUnit [nominalBANKR = A], DataUnit [nominalBANKR = ***], DataUnit [nominalBANKR = Both], DataUnit [nominalBANKR = 0], DataUnit [nominalBANKR1 = BANKR1], DataUnit [nominalBANKR1 = bank rec bank], DataUnit [nominalBANKR1 = A], DataUnit [nominalBANKR1 = 02], DataUnit [nominalBANKR1 = Balance Sheet], DataUnit [nominalBANKR1 = Both], DataUnit [nominalBANKR1 = A], DataUnit [nominalBANKR1 = ***], DataUnit [nominalBANKR1 = Both], DataUnit [nominalBANKR1 = 0], DataUnit [nominalBANKR2 = BANKR2], DataUnit [nominalBANKR2 = bank rec bank], DataUnit [nominalBANKR2 = A], DataUnit [nominalBANKR2 = 02], DataUnit [nominalBANKR2 = Balance Sheet], DataUnit [nominalBANKR2 = Both], DataUnit [nominalBANKR2 = A], DataUnit [nominalBANKR2 = ***], DataUnit [nominalBANKR2 = Both], DataUnit [nominalBANKR2 = 0], DataUnit [nominal2000 = 2000], DataUnit [nominal2000 = Creditors Control], DataUnit [nominal2000 = B], DataUnit [nominal2000 = 02], DataUnit [nominal2000 = Balance Sheet], DataUnit [nominal2000 = Both], DataUnit [nominal2000 = A], DataUnit [nominal2000 = ***], DataUnit [nominal2000 = Both], DataUnit [nominal2000 = 0], DataUnit [nominal5000 = 5000], DataUnit [nominal5000 = Discount Receivable], DataUnit [nominal5000 = T], DataUnit [nominal5000 = 04], DataUnit [nominal5000 = Profit & Loss], DataUnit [nominal5000 = Both], DataUnit [nominal5000 = A], DataUnit [nominal5000 = ***], DataUnit [nominal5000 = Both], DataUnit [nominal5000 = 0], DataUnit [nominal5050 = 5050], DataUnit [nominal5050 = Bank Charges], DataUnit [nominal5050 = T], DataUnit [nominal5050 = 04], DataUnit [nominal5050 = Profit & Loss], DataUnit [nominal5050 = Both], DataUnit [nominal5050 = A], DataUnit [nominal5050 = ***], DataUnit [nominal5050 = Both], DataUnit [nominal5050 = 0], DataUnit [nominal2150 = 2150], DataUnit [nominal2150 = VAT Suspense], DataUnit [nominal2150 = B], DataUnit [nominal2150 = 03], DataUnit [nominal2150 = Balance Sheet], DataUnit [nominal2150 = Both], DataUnit [nominal2150 = A], DataUnit [nominal2150 = ***], DataUnit [nominal2150 = Both], DataUnit [nominal2150 = 0], DataUnit [nominalSTKR = STKR], DataUnit [nominalSTKR = IM Stock Revaluation], DataUnit [nominalSTKR = I], DataUnit [nominalSTKR = 02], DataUnit [nominalSTKR = Balance Sheet], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = A], DataUnit [nominalSTKR = ***], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = 0]]]]>
+                <![CDATA[[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = ECE], DataUnit [values = 00], DataUnit [structureForHQ = 00], DataUnit [structureForHQ = HQ], DataUnit [structureForHQ = Head Quarters], DataUnit [structureForHQ = ], DataUnit [structureForNorth = 00], DataUnit [structureForNorth = NORTH], DataUnit [structureForNorth = Northern Division], DataUnit [structureForNorth = HQ], DataUnit [structureForSouth = 00], DataUnit [structureForSouth = SOUTH], DataUnit [structureForSouth = Southern Division], DataUnit [structureForSouth = HQ], DataUnit [structureForEast = 00], DataUnit [structureForEast = EAST], DataUnit [structureForEast = Eastern Division], DataUnit [structureForEast = HQ], DataUnit [structureForWest = 00], DataUnit [structureForWest = WEST], DataUnit [structureForWest = Western Division], DataUnit [structureForWest = HQ], DataUnit [structureForSusp = 00], DataUnit [structureForSusp = SUSP], DataUnit [structureForSusp = Suspense], DataUnit [structureForSusp = WEST], DataUnit [pathKeyList = 00], DataUnit [pathKeyList = 2], DataUnit [pathKeyList = DUM], DataUnit [pathKeyList = Dummy Costcentre for ICA BTZ], DataUnit [pathKeyList = WEST]]]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[Unable to get browser (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5 milliseconds
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'ChetnaM-PC', ip: '10.31.25.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:30126/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: 92da988d-9c4e-487a-8941-bf51a694f86a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to get browser (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5 milliseconds
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'ChetnaM-PC', ip: '10.31.25.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:30126/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: 92da988d-9c4e-487a-8941-bf51a694f86a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.ie.InternetExplorerDriver.getScreenshotAs(InternetExplorerDriver.java:192)
-	at com.adv.qa.selenium.helpers.WebDriverEventListenerTest.onException(WebDriverEventListenerTest.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:80)
-	at com.sun.proxy.$Proxy8.onException(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
-	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.getSecondHeader(CurrencyPage.java:263)
-	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.getTableHeader(CurrencyPage.java:275)
-	at com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals.verify(A018A_Ledger_Control_Nominals.java:61)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals@41ee392b]" name="tearDown" is-config="true" duration-ms="48" started-at="2017-06-16T19:38:03Z" finished-at="2017-06-16T19:38:03Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[Unable to get browser (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 6 milliseconds
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'ChetnaM-PC', ip: '10.31.25.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:30126/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: 92da988d-9c4e-487a-8941-bf51a694f86a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to get browser (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 6 milliseconds
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'ChetnaM-PC', ip: '10.31.25.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:30126/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: 92da988d-9c4e-487a-8941-bf51a694f86a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:730)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringOptions.deleteAllCookies(EventFiringWebDriver.java:525)
-	at com.adv.qa.selenium.framework.BaseTest.tearDown(BaseTest.java:293)
-	at com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals.tearDown(A018A_Ledger_Control_Nominals.java:113)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:212)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest@41ee392b]" name="tearDown" is-config="true" duration-ms="6607" started-at="2017-06-28T13:02:59Z" finished-at="2017-06-28T13:03:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

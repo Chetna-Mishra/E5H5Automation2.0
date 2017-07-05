@@ -8,7 +8,9 @@
   
    <dependencies>
    
-<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6
+<!--
+https://mvnrepository.com/artifact/com.oracle/ojdbc6
+
 	<dependency>
     	 <groupId>com.oracle</groupId>
   	 	 <artifactId>ojdbc6</artifactId>
@@ -125,8 +127,6 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
-
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-surefire-report-plugin</artifactId>

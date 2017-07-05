@@ -52,13 +52,11 @@ import com.adv.qa.selenium.helpers.WebDriverEventListenerTest;
 @Listeners({ReportListeners.class})
 public class BaseTest {
 
-	public String companyId="IM";
-
 	public static String LOG_LINE_SEPARATOR = "   ===================================== ";
 	public static final Logger log = LoggerFactory.getLogger(BaseTest.class);
 	private  String className = this.getClass().getName();
 	private  String testCaseName = this.getClass().getSimpleName();
-	protected WebDriver browerDriver = null;
+	protected WebDriver browserDriver = null;
 	protected  EventFiringWebDriver driver = null;
 	private static Properties properties = new Properties();
 	public static boolean useRemoteWebDriver;
@@ -66,11 +64,13 @@ public class BaseTest {
 	public static String  adve5URL;
 	public static String  browser;
 	public static String  database;
+	public String companyId="IM";
 	static Object startupSync = new Object();
 	public static long implicitlyWaitTimeout;
 	public static String appendURL = "/app/map.do";
 	private static String runTime=null;
 	private static String filePath = null;
+	
 	
 	public List<String> testcases = new ArrayList<String>();
 	
@@ -154,7 +154,7 @@ public class BaseTest {
 	    TestLogHelper.startTestLogging(testCaseName);		
 		log.info( "\n =============== SETUP START "+className +LOG_LINE_SEPARATOR);
 		initialiseWebDriver();	
-		driver.manage().window().maximize();
+//		driver.manage().window().maximize();
 	}
 	
 	/**
@@ -199,55 +199,52 @@ public class BaseTest {
 					capability = DesiredCapabilities.chrome();
 				}
 				
-				browerDriver = new RemoteWebDriver(new URL(remoteWebDriverUrl), capability);
-				driver = new EventFiringWebDriver(browerDriver);
+				browserDriver = new RemoteWebDriver(new URL(remoteWebDriverUrl), capability);
+				driver = new EventFiringWebDriver(browserDriver);
 			}
 			
 	//This is for the normal Machine and Browsers
 			
-			else if(browser.equals("firefox".trim())) {
-//				System.setProperty("webdriver.gecko.driver","D://E5H5TestAutomation//Automation Setup//geckodriver-v0.14.0-win64//geckodriver.exe");
+			else if(browser.equalsIgnoreCase("firefox".trim())) {			
+
 				System.setProperty("webdriver.gecko.driver","jars/geckodriver.exe");
 				
-				browerDriver = new FirefoxDriver();
-				driver = new EventFiringWebDriver(browerDriver);
-			
+				browserDriver = new FirefoxDriver();
+				driver = new EventFiringWebDriver(browserDriver);
+	
 			}
 			
-			else if(browser.equalsIgnoreCase("chrome")){
+			else if(browser.equalsIgnoreCase("chrome".trim())){
 				
-//				System.setProperty("webdriver.chrome.driver", "D://E5H5TestAutomation//Automation Setup//chromedriver.exe");
 				System.setProperty("webdriver.chrome.driver","jars/chromedriver.exe");
-				
-//				browerDriver = new ChromeDriver();
-				
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("chrome.switches","disable-extensions");
 				options.addArguments("--disable-notifications");
 				
 //To disable yellow strip info bar which prompts info messages
 				options.addArguments("disable-infobars");
-				browerDriver = new ChromeDriver(options);
-				driver = new EventFiringWebDriver(browerDriver);
 				
+				browserDriver = new ChromeDriver(options);
+				driver = new EventFiringWebDriver(browserDriver);
+		
 			}
 			
-			else if (browser.equals("internetexplorer".trim()))
+			else if (browser.equalsIgnoreCase("internetexplorer".trim()))
 			{	
-//				System.setProperty("webdriver.ie.driver", "src/test/resources/drivers/IEDriverServer.exe");
+
 				System.setProperty("webdriver.ie.driver","jars/IEDriverServer.exe");
-				browerDriver = new InternetExplorerDriver();
-				driver = new EventFiringWebDriver(browerDriver);
+				browserDriver = new InternetExplorerDriver();
+				driver = new EventFiringWebDriver(browserDriver);
+		
 			}
 			
-			else if(browser.equalsIgnoreCase("Edge")){
-				
-//				System.setProperty("webdriver.edge.driver","D://E5H5TestAutomation//Automation Setup//MicrosoftWebDriver.exe");
+			else if(browser.equalsIgnoreCase("Edge".trim())){
 				
 				System.setProperty("webdriver.edge.driver","jars/MicrosoftWebDriver.exe");
 							
-				browerDriver = new EdgeDriver();
-				driver = new EventFiringWebDriver(browerDriver);
+				browserDriver = new EdgeDriver();
+				driver = new EventFiringWebDriver(browserDriver);
+			
 			}
 			
 			
@@ -322,10 +319,10 @@ public class BaseTest {
 	
 		try {
 			if (useRemoteWebDriver) {
-				WebDriver augmentedDriver = new Augmenter().augment(t.browerDriver);
+				WebDriver augmentedDriver = new Augmenter().augment(t.browserDriver);
 				 screenshoter = (TakesScreenshot) augmentedDriver;
 			} else {
-				 screenshoter = (TakesScreenshot) t.browerDriver;
+				 screenshoter = (TakesScreenshot) t.browserDriver;
 			};
 			
 			FileUtils.copyFile(screenshoter.getScreenshotAs(OutputType.FILE), screenshot);

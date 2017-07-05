@@ -90,8 +90,6 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 		
 		createPathKey(currencyPage,pathKeyList,structureForWest);
 		
-		
-
 		currencyPage.clickOnCancel1();
 		currencyPage.logOut(1);
 	}
@@ -145,8 +143,7 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 			Assert.assertTrue(testcases,currencyPage.verifyValues(pathKeyList.get(2)), "New path key "+pathKeyList.get(2),"displayed in the list");		
 			
 			currencyPage.ClickOnAnyButton("Return", 1);
-			
-
+	
 	}
 
 	

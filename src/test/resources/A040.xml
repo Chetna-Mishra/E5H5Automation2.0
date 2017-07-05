@@ -3,40 +3,39 @@
 	  <Row>
 	      	<userName>MANAGER</userName>
           	<passWord>E5</passWord>
+          	
             <currencyCode>EDB</currencyCode> 
             <currencyCode>EJI</currencyCode>
             <currencyCode>EJJ</currencyCode>
+            <currencyCode>EJB</currencyCode>
+            
             <company>03</company>
+            
+            <aGroup>LAY1</aGroup>
+            <aGroup>A</aGroup>
+            <aGroup>02</aGroup>
+            
+            <NstructureEnqForA02>LAY1</NstructureEnqForA02>
+            <NstructureEnqForA02>00</NstructureEnqForA02>
+            <NstructureEnqForA02>NORTH</NstructureEnqForA02>
+            <NstructureEnqForA02>N</NstructureEnqForA02>
+            <NstructureEnqForA02>A</NstructureEnqForA02>
+            <NstructureEnqForA02>02</NstructureEnqForA02>
             
             <firstICAData>BASE</firstICAData>
             <firstICAData>B001</firstICAData>
             <firstICAData>NORTH</firstICAData>
             <firstICAData>Posting within BTZ element B001</firstICAData>
             <firstICAData>12</firstICAData>
-            <firstICAData>1500</firstICAData>
-            <firstICAData>N1</firstICAData>
-            <firstICAData>400.00</firstICAData>
-            <firstICAData>6300</firstICAData>
-            <firstICAData>N2</firstICAData>
-            <firstICAData>-400.00</firstICAData>
             <firstICAData>This</firstICAData>
             
-            <secondICAData>BASE</secondICAData>
-            <secondICAData>B002</secondICAData>
-            <secondICAData>NORTH</secondICAData>
-            <secondICAData>Posting within BTZ element B002</secondICAData>
-            <secondICAData>12</secondICAData>
-            <secondICAData>1500</secondICAData>
-            <secondICAData>N1</secondICAData>
-            <secondICAData>200.00</secondICAData>
-            <secondICAData>6400</secondICAData>
-            <secondICAData>S1</secondICAData>
-            <secondICAData>-200.00</secondICAData>
-            <secondICAData>This</secondICAData>
-
-            <aGroup>LAY1</aGroup>
-            <aGroup>A</aGroup>
-            <aGroup>02</aGroup>
+            <firstJounData1>1500</firstJounData1>
+            <firstJounData1>N1</firstJounData1>
+            <firstJounData1>400.00</firstJounData1>
+            
+            <firstJounData2>6300</firstJounData2>
+            <firstJounData2>N2</firstJounData2>
+            <firstJounData2>-400.00</firstJounData2>
             
             <fAccount1500>1500</fAccount1500>
             <fAccount1500>400.00</fAccount1500>
@@ -45,6 +44,33 @@
             <account6300>6300</account6300>
             <account6300>-400.00</account6300>
             <account6300>-400.00</account6300>
+           
+            <structureEnqForN1>N1</structureEnqForN1>
+            <structureEnqForN1>400.00</structureEnqForN1>
+            <structureEnqForN1>400.00</structureEnqForN1>
+ 
+            <structureEnqForN2>N2</structureEnqForN2>
+            <structureEnqForN2>-400.00</structureEnqForN2>
+            <structureEnqForN2>-400.00</structureEnqForN2>
+            
+            <structureEnqForNBTZ>NBTZ</structureEnqForNBTZ>
+            <structureEnqForNBTZ>000.00</structureEnqForNBTZ>
+            <structureEnqForNBTZ>000.00</structureEnqForNBTZ>
+           
+            <secondICAData>BASE</secondICAData>
+            <secondICAData>B002</secondICAData>
+            <secondICAData>NORTH</secondICAData>
+            <secondICAData>Posting within BTZ element B002</secondICAData>
+            <secondICAData>12</secondICAData>
+            <secondICAData>This</secondICAData>
+             
+            <secondJounData1>1500</secondJounData1>
+            <secondJounData1>N1</secondJounData1>
+            <secondJounData1>200.00</secondJounData1>
+            
+            <secondJounData2>6400</secondJounData2>
+            <secondJounData2>S1</secondJounData2>
+            <secondJounData2>-200.00</secondJounData2>
             
             <sAccount1500>1500</sAccount1500>
             <sAccount1500>600.00</sAccount1500>
@@ -53,49 +79,156 @@
             <account6400>6400</account6400>
             <account6400>-200.00</account6400>
             <account6400>-200.00</account6400>
-            
-		    <structureEnqForA02>LAY1</structureEnqForA02>
-            <structureEnqForA02>00</structureEnqForA02>
-            <structureEnqForA02>NORTH</structureEnqForA02>
-            <structureEnqForA02>N</structureEnqForA02>
-            <structureEnqForA02>A</structureEnqForA02>
-            <structureEnqForA02>02</structureEnqForA02>
-            
-            <structureEnqForN1>N1</structureEnqForN1>
-            <structureEnqForN1>400.00</structureEnqForN1>
-            <structureEnqForN1>400.00</structureEnqForN1>
- 
-            <structureEnqForN2>N2</structureEnqForN2>
-            <structureEnqForN2>400.00</structureEnqForN2>
-            <structureEnqForN2>400.00</structureEnqForN2>
-            
+           
             <structureEnq2ForN1>N1</structureEnq2ForN1>
             <structureEnq2ForN1>600.00</structureEnq2ForN1>
             <structureEnq2ForN1>600.00</structureEnq2ForN1>
             
+            <structureEnq2ForN2>N2</structureEnq2ForN2>
+            <structureEnq2ForN2>-400.00</structureEnq2ForN2>
+            <structureEnq2ForN2>-400.00</structureEnq2ForN2>
+            
+            <structureEnq2ForNBTZ>NBTZ</structureEnq2ForNBTZ>
+            <structureEnq2ForNBTZ>-200.00</structureEnq2ForNBTZ>
+            <structureEnq2ForNBTZ>-200.00</structureEnq2ForNBTZ>
+            
+            <SstructureEnqForA02>LAY1</SstructureEnqForA02>
+            <SstructureEnqForA02>00</SstructureEnqForA02>
+            <SstructureEnqForA02>SOUTH</SstructureEnqForA02>
+            <SstructureEnqForA02>N</SstructureEnqForA02>
+            <SstructureEnqForA02>A</SstructureEnqForA02>
+            <SstructureEnqForA02>02</SstructureEnqForA02>
+                        
             <structureEnqForS1>S1</structureEnqForS1>
             <structureEnqForS1>-200.00</structureEnqForS1>
-            <structureEnqForS1>-200.00</structureEnqForS1>
-                        
-            <balance1>NBTZ</balance1>
-            <balance1>000.00</balance1>
-            <balance1>000.00</balance1>
-            <balance1>N1</balance1>
-            <balance1>400.00</balance1>
-            <balance1>400.00</balance1>
-            <balance1>N2</balance1>
-            <balance1>-400.00</balance1>
-            <balance1>-400.00</balance1>
+            <structureEnqForS1>-200.00</structureEnqForS1>            
+
+ 			<structureEnqForSBTZ>SBTZ</structureEnqForSBTZ>
+            <structureEnqForSBTZ>200.00</structureEnqForSBTZ>
+            <structureEnqForSBTZ>200.00</structureEnqForSBTZ>
             
-            <balance2>NBTZ</balance2>
-            <balance2>000.00</balance2>
-            <balance2>000.00</balance2>
-            <balance2>N1</balance2>
-            <balance2>400.00</balance2>
-            <balance2>400.00</balance2>
-            <balance2>N2</balance2>
-            <balance2>-400.00</balance2>
-            <balance2>-400.00</balance2>
-  
+            <NaccountGLICA>GLICA</NaccountGLICA>
+            <NaccountGLICA>NBTZ</NaccountGLICA>
+            <NaccountGLICA>-200.00</NaccountGLICA>
+            <NaccountGLICA>B002</NaccountGLICA>
+            
+            <SaccountGLICA>GLICA</SaccountGLICA>
+            <SaccountGLICA>SBTZ</SaccountGLICA>
+            <SaccountGLICA>200.00</SaccountGLICA>
+            <SaccountGLICA>B002</SaccountGLICA>
+            
+            <thirdICAData>BASE</thirdICAData>
+            <thirdICAData>B003</thirdICAData>
+            <thirdICAData>WEST</thirdICAData>
+            <thirdICAData>Posting with different BTZ B003</thirdICAData>
+            <thirdICAData>12</thirdICAData>
+			<thirdICAData>This</thirdICAData>
+			
+            <thirdJounData1>1500</thirdJounData1>
+            <thirdJounData1>N1</thirdJounData1>
+            <thirdJounData1>1000.00</thirdJounData1>
+            
+			<thirdJounData2>6500</thirdJounData2>
+            <thirdJounData2>S1</thirdJounData2>
+            <thirdJounData2>-500.00</thirdJounData2>
+      
+			<thirdJounData3>6500</thirdJounData3>
+            <thirdJounData3>E1</thirdJounData3>
+            <thirdJounData3>-500.00</thirdJounData3>
+            
+            <tAccount1500>1500</tAccount1500>
+            <tAccount1500>1000.00</tAccount1500>
+            <tAccount1500>1000.00</tAccount1500>
+
+            <account16500>6500</account16500>
+            <account16500>-500.00</account16500>
+            <account16500>-500.00</account16500>
+           
+		    <account26500>6500</account26500>
+            <account26500>-500.00</account26500>
+            <account26500>-500.00</account26500>
+                       
+            <structureEnq3ForN1>N1</structureEnq3ForN1>
+            <structureEnq3ForN1>1600.00</structureEnq3ForN1>
+            <structureEnq3ForN1>1600.00</structureEnq3ForN1>
+            
+            <structureEnq3ForN2>N2</structureEnq3ForN2>
+            <structureEnq3ForN2>-400.00</structureEnq3ForN2>
+            <structureEnq3ForN2>-400.00</structureEnq3ForN2>
+            
+            <structureEnq3ForNBTZ>NBTZ</structureEnq3ForNBTZ>
+            <structureEnq3ForNBTZ>-1200.00</structureEnq3ForNBTZ>
+            <structureEnq3ForNBTZ>-1200.00</structureEnq3ForNBTZ>
+            
+            <Naccount1GLICA>GLICA</Naccount1GLICA>
+            <Naccount1GLICA>NBTZ</Naccount1GLICA>
+            <Naccount1GLICA>-1000.00</Naccount1GLICA>
+            <Naccount1GLICA>B003</Naccount1GLICA>
+            
+            
+            <EstructureEnqForA02>LAY1</EstructureEnqForA02>
+            <EstructureEnqForA02>00</EstructureEnqForA02>
+            <EstructureEnqForA02>EAST</EstructureEnqForA02>
+            <EstructureEnqForA02>N</EstructureEnqForA02>
+            <EstructureEnqForA02>A</EstructureEnqForA02>
+            <EstructureEnqForA02>02</EstructureEnqForA02>
+                        
+            <structureEnqForE1>E1</structureEnqForE1>
+            <structureEnqForE1>-500.00</structureEnqForE1>
+            <structureEnqForE1>-500.00</structureEnqForE1>            
+
+ 			<structureEnqForEBTZ>EBTZ</structureEnqForEBTZ>
+            <structureEnqForEBTZ>500.00</structureEnqForEBTZ>
+            <structureEnqForEBTZ>500.00</structureEnqForEBTZ>
+            
+            <EaccountGLICA>GLICA</EaccountGLICA>
+            <EaccountGLICA>EBTZ</EaccountGLICA>
+            <EaccountGLICA>500.00</EaccountGLICA>
+            <EaccountGLICA>B003</EaccountGLICA>
+            
+            <structureEnq1ForS1>S1</structureEnq1ForS1>
+            <structureEnq1ForS1>-700.00</structureEnq1ForS1>
+            <structureEnq1ForS1>-700.00</structureEnq1ForS1>            
+
+ 			<structureEnq1ForSBTZ>SBTZ</structureEnq1ForSBTZ>
+            <structureEnq1ForSBTZ>700.00</structureEnq1ForSBTZ>
+            <structureEnq1ForSBTZ>700.00</structureEnq1ForSBTZ>
+            
+            <Saccount1GLICA>GLICA</Saccount1GLICA>
+            <Saccount1GLICA>SBTZ</Saccount1GLICA>
+            <Saccount1GLICA>200.00</Saccount1GLICA>
+            <Saccount1GLICA>B002</Saccount1GLICA>
+            
+            <Saccount2GLICA>GLICA</Saccount2GLICA>
+            <Saccount2GLICA>SBTZ</Saccount2GLICA>
+            <Saccount2GLICA>500.00</Saccount2GLICA>
+            <Saccount2GLICA>B003</Saccount2GLICA>
+            
+            <WstructureEnqForA02>LAY1</WstructureEnqForA02>
+            <WstructureEnqForA02>00</WstructureEnqForA02>
+            <WstructureEnqForA02>WEST</WstructureEnqForA02>
+            <WstructureEnqForA02>N</WstructureEnqForA02>
+            <WstructureEnqForA02>A</WstructureEnqForA02>
+            <WstructureEnqForA02>02</WstructureEnqForA02>
+                        
+            <structureEnqForW1>W1</structureEnqForW1>
+            <structureEnqForW1>0.00</structureEnqForW1>
+            <structureEnqForW1>0.00</structureEnqForW1>            
+
+ 			<structureEnqForWBTZ>WBTZ</structureEnqForWBTZ>
+            <structureEnqForWBTZ>0.00</structureEnqForWBTZ>
+            <structureEnqForWBTZ>0.00</structureEnqForWBTZ>
+            
+            
+            <Waccount1GLICA>GLICA</Waccount1GLICA>
+            <Waccount1GLICA>WBTZ</Waccount1GLICA>
+            <Waccount1GLICA>200.00</Waccount1GLICA>
+            <Waccount1GLICA>B002</Waccount1GLICA>
+            
+            <Waccount2GLICA>GLICA</Waccount2GLICA>
+            <Waccount2GLICA>SBTZ</Waccount2GLICA>
+            <Waccount2GLICA>500.00</Waccount2GLICA>
+            <Waccount2GLICA>B003</Waccount2GLICA>
+       
       </Row>
 </Root>

@@ -199,7 +199,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 			
 		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnEXTSections(1);
+		currencyPage.clickOnEXTSections();
 		
 		currencyPage.searchValue("IMMI", 16, 5);
 		

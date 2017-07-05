@@ -45,6 +45,7 @@ public class A001A_On_line_AuditingTest extends BaseTest{
 		LoginPage loginPage = new LoginPage(driver);
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
 		loginPage.logIn(userName, passWord);
 		
 		/*Navigate to currency page Home page e5 application*/

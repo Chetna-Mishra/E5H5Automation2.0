@@ -1,14 +1,12 @@
 package com.adv.qa.selenium.framework.pageObjects.currency;
 
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -17,16 +15,15 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.adv.qa.selenium.framework.Assert;
 import com.adv.qa.selenium.framework.BaseTest;
 import com.adv.qa.selenium.framework.pageObjects.Page;
 import com.adv.qa.selenium.framework.pageObjects.PageObjects;
-import com.adv.qa.selenium.helpers.DatabaseQuery_SQL;
+import com.adv.qa.selenium.helpers.CalenderDateTime;
 import com.adv.qa.selenium.helpers.DatabaseQuery_Oracle;
 import com.adv.qa.selenium.helpers.DatabaseQuery_PostgreSQL;
+import com.adv.qa.selenium.helpers.DatabaseQuery_SQL;
 import com.adv.qa.selenium.helpers.SeleniumDaoException;
 import com.adv.qa.selenium.helpers.WaitHelper;
-import com.adv.qa.selenium.helpers.CalenderDateTime;
 
 public class CurrencyPage extends Page {
 
@@ -37,8 +34,6 @@ public class CurrencyPage extends Page {
 	private DatabaseQuery_PostgreSQL PdbQuery = new DatabaseQuery_PostgreSQL();
 	private CalenderDateTime calender = new CalenderDateTime();
 
-
-	
 	private String message = "The specified key already exists";
 
 	public CurrencyPage(EventFiringWebDriver driver) {
@@ -75,10 +70,10 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(2);
 		return toolTipValue;
 	}
-	
-	
+
 	/**
 	 * Get Error message content
+	 * 
 	 * @return Error content
 	 */
 	public String getErrorContentText() {
@@ -99,8 +94,6 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(2);
 		return toolTipValue;
 	}
-	
-	
 
 	/**
 	 * New Method Added by Chetna, Dt: 17-01-2017 for "VerifyToolContentMessage"
@@ -169,24 +162,63 @@ public class CurrencyPage extends Page {
 	 * 
 	 * @return true/false
 	 */
+	// public boolean isCommandDisplayed() {
+	// log.info("Inside isCommandDisplayed method");
+	// WaitHelper.waitAdditional(2);
+	// boolean command = false;
+	// try {
+	//
+	// if (getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed())
+	// {
+	//
+	// command = true;
+	// }
+	// } catch (NoSuchElementException e) {
+	// clickOnCancel();
+	//
+	// if (getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed())
+	// {
+	// command = true;
+	// }
+	// WaitHelper.waitAdditional(2);
+	// }
+	// return command;
+	// }
+
+	/**
+	 * Verify command box
+	 * 
+	 * @return true/false
+	 */
 	public boolean isCommandDisplayed() {
 		log.info("Inside isCommandDisplayed method");
 		WaitHelper.waitAdditional(2);
-		boolean command = false;
+
 		try {
 
-			if (getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed()) {
-				command = true;
+			if (!getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed()) {
+
+				WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+						getDriver().findElement(By.xpath(pObject.CMD_COMMAND)));// Chetna
+																				// Wait
+																				// Added
+				return getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed();
+
 			}
 		} catch (NoSuchElementException e) {
 			clickOnCancel();
 
-			if (getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed()) {
-				command = true;
+			if (!getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed()) {
+				WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+						getDriver().findElement(By.xpath(pObject.CMD_COMMAND)));// Chetna
+																				// Wait
+																				// Added
+				return getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed();
+
 			}
-			WaitHelper.waitAdditional(2);
 		}
-		return command;
+		return getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).isDisplayed();
+
 	}
 
 	/**
@@ -197,6 +229,9 @@ public class CurrencyPage extends Page {
 
 	private boolean isChangeCMPYPopUpDisplayed() {
 		WaitHelper.waitAdditional(2);
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.A039_LKP_OK)));// Chetna
+																														// Wait
+																														// Added
 		return getDriver().findElement(By.xpath(pObject.A039_LKP_OK)).isDisplayed();
 
 	}
@@ -210,6 +245,10 @@ public class CurrencyPage extends Page {
 		log.info("Inside change Company method");
 		WaitHelper.waitAdditional(2);
 
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A039_CHANGE_CMPY)));// Chetna
+																				// Wait
+																				// Added
 		getDriver().findElement(By.xpath(pObject.A039_CHANGE_CMPY)).click();// ChangeCompany/Role
 																			// button
 		WaitHelper.waitAdditional(2);
@@ -239,6 +278,9 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(4);
 		log.info("Fill currency code");
 
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.CMD_COMMAND)));// Chetna
+																														// Wait
+																														// Added
 		getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).sendKeys(code);
 		getDriver().findElement(By.xpath(pObject.CMD_COMMAND)).sendKeys(Keys.ENTER);
 
@@ -251,7 +293,7 @@ public class CurrencyPage extends Page {
 	 * @throws InterruptedException
 	 */
 	public void clickOnButton(int i) throws InterruptedException {
-		log.info("Clicing button");
+		log.info("Clicking button");
 		WaitHelper.waitAdditional(3);
 		getDriver().findElement(By.id(pObject.ZERO_ + i + pObject.LABEL)).click();
 		WaitHelper.waitAdditional(4);
@@ -463,10 +505,12 @@ public class CurrencyPage extends Page {
 	public boolean verifyValues(String value)
 
 	{
+
 		WaitHelper.waitAdditional(2);
 		log.info("Verify presence of value in the list");
 		boolean currencyValue = false;
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A001A_CURRENCY_TABLE_CELL));
+
 		for (WebElement wb : wbs) {
 			if (wb.getText().contains(value))
 
@@ -483,7 +527,7 @@ public class CurrencyPage extends Page {
 	 */
 
 	public List<WebElement> getAlllButton() {
-		log.info("Verify presence of Cancel button");
+		log.info("Verify presence of button");
 		WaitHelper.waitAdditional(2);
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.AllPG_HeaderSection));
 		return wbs;
@@ -508,8 +552,8 @@ public class CurrencyPage extends Page {
 		List<WebElement> wbs = getAlllButton();
 		for (WebElement wb : wbs) {
 			if (wb.getText().equals("Cancel")) {
-				
-//				WaitHelper.waitAdditional(3); //for Edge Browser
+
+				// WaitHelper.waitAdditional(3); //for Edge Browser
 				wb.click();
 				break;
 			}
@@ -526,7 +570,7 @@ public class CurrencyPage extends Page {
 
 	{
 		log.info("Verify confirmation pop up");
-		WaitHelper.waitAdditional(2);
+		WaitHelper.waitAdditional(3);
 		try {
 			if (getDriver().findElement(By.xpath(pObject.CONF_BUT_YES)).isDisplayed())
 
@@ -748,9 +792,12 @@ public class CurrencyPage extends Page {
 	 * 
 	 * @param i
 	 */
-	public void clickOnEXTSections(int i) {
+	public void clickOnEXTSections() {
 		log.info("Expanding Extednded Search Section");
-		getEXTSections().get(i).click();
+
+		getDriver().findElement(By.xpath(pObject.A039_EXT_SEL)).click();
+
+		// getEXTSections().get(i).click();
 		WaitHelper.waitAdditional(2);
 	}
 
@@ -760,7 +807,7 @@ public class CurrencyPage extends Page {
 	 * @return
 	 */
 	private List<WebElement> getSections() {
-		return getDriver().findElements(By.className(pObject.SECTION_LAYOUT));
+		return getDriver().findElements(By.xpath(pObject.TPMN_SELECTION));
 
 	}
 
@@ -771,7 +818,10 @@ public class CurrencyPage extends Page {
 	 */
 	public void clickOnSections(int i) {
 		log.info("Expanding Search Section");
-		getSections().get(i).click();
+
+		getDriver().findElement(By.xpath(pObject.AllPG_SELEC)).click();
+
+		// getSections().get(i).click();
 		WaitHelper.waitAdditional(2);
 	}
 
@@ -882,8 +932,8 @@ public class CurrencyPage extends Page {
 	/**
 	 * Click on Update currency Modified by Chetna Dt: 16-01-2017
 	 */
-	
-	public void clickOnUpdate(){
+
+	public void clickOnUpdate() {
 		log.info("Clicking on update button");
 		WaitHelper.waitAdditional(2);
 		List<WebElement> wbs = getAlllButton();
@@ -895,20 +945,20 @@ public class CurrencyPage extends Page {
 		}
 		WaitHelper.waitAdditional(3);
 	}
-	
-	
-//	public void clickOnUpdate() {
-//		log.info("Clicking on update button");
-//		WaitHelper.waitAdditional(3);
-//		List<WebElement> wbs1 = getDriver().findElements(By.xpath(pObject.AllPG_HeaderSection));
-//		for (WebElement wb2 : wbs1) {
-//			if (wb2.getText().equals("Update")) {
-//				wb2.click();
-//				break;
-//			}
-//		}
-//		WaitHelper.waitAdditional(2);
-//	}
+
+	// public void clickOnUpdate() {
+	// log.info("Clicking on update button");
+	// WaitHelper.waitAdditional(3);
+	// List<WebElement> wbs1 =
+	// getDriver().findElements(By.xpath(pObject.AllPG_HeaderSection));
+	// for (WebElement wb2 : wbs1) {
+	// if (wb2.getText().equals("Update")) {
+	// wb2.click();
+	// break;
+	// }
+	// }
+	// WaitHelper.waitAdditional(2);
+	// }
 
 	/**
 	 * Click on BackWard Button
@@ -1157,6 +1207,10 @@ public class CurrencyPage extends Page {
 	 * Get primary details tab id
 	 */
 	private WebElement getPrimaryDetailsTab() {
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A006_PRIMARY_TAB)));// Chetna
+																				// Wait
+																				// Added
 		return getDriver().findElement(By.xpath(pObject.A006_PRIMARY_TAB));
 	}
 
@@ -1164,7 +1218,10 @@ public class CurrencyPage extends Page {
 	 * Click on Primary Details Tab Modified by Chetna Dt: 16-01-2017
 	 */
 	public void clickOnPrimaryDetailsTab() {
-
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A006_PRIMARY_TAB)));// Chetna
+																				// Wait
+																				// Added
 		getDriver().findElement(By.xpath(pObject.A006_PRIMARY_TAB)).click();
 	}
 
@@ -1415,28 +1472,23 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A003_BASE_CURR_IN)).sendKeys(companydetails.get(12));// Currency
 		WaitHelper.waitAdditional(1);
-		
-		if (!getDriver().findElement(By.xpath(pObject.A006_EMU_FLAG)).isSelected())
-		{
-		getDriver().findElement(By.xpath(pObject.A006_EMU_FLAG)).click();// Emu
-																			// flag
+
+		if (!getDriver().findElement(By.xpath(pObject.A006_EMU_FLAG)).isSelected()) {
+			getDriver().findElement(By.xpath(pObject.A006_EMU_FLAG)).click();// Emu
+																				// flag
 		}
-		
+
 		WaitHelper.waitAdditional(1);
-		
-		if (!getDriver().findElement(By.xpath(pObject.A006_CURR_FLAG)).isSelected())
-		{
-		getDriver().findElement(By.xpath(pObject.A006_CURR_FLAG)).click();// Currency
-																			// flag
+
+		if (!getDriver().findElement(By.xpath(pObject.A006_CURR_FLAG)).isSelected()) {
+			getDriver().findElement(By.xpath(pObject.A006_CURR_FLAG)).click();// Currency
+																				// flag
 		}
-		
-		if (!getDriver().findElement(By.xpath(pObject.A006_CACHE)).isSelected())
-		{
-		getDriver().findElement(By.xpath(pObject.A006_CACHE)).click();//Cache
+
+		if (!getDriver().findElement(By.xpath(pObject.A006_CACHE)).isSelected()) {
+			getDriver().findElement(By.xpath(pObject.A006_CACHE)).click();// Cache
 		}
-																			
-		
-		
+
 	}
 
 	/**
@@ -1646,9 +1698,9 @@ public class CurrencyPage extends Page {
 			WaitHelper.waitAdditional(2);
 
 			getDriver().findElement(By.xpath(pObject.A012_EVENT_SPECIFIED)).sendKeys(calenderActivity.get(4));// Days
-																											// of
-																											// the
-																											// Week
+																												// of
+																												// the
+																												// Week
 
 			WaitHelper.waitAdditional(2);
 
@@ -2010,7 +2062,7 @@ public class CurrencyPage extends Page {
 		log.info("Into Search value method");
 		WaitHelper.waitAdditional(2);
 
-		if (!ClickOnAnyButton("OK", 0))
+		if (!isOkButtonDisplayed(i))
 
 		{
 			clickOnSections(0);
@@ -2188,7 +2240,7 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(3);
 
 	}
-	
+
 	/**
 	 * Search value for AD02009
 	 * 
@@ -2196,61 +2248,70 @@ public class CurrencyPage extends Page {
 
 	public void searchAuthorisor(String companyName, List<String> elements, String orderNumber, int i) {
 		log.info("Search value");
-		
+
 		WaitHelper.waitAdditional(2);
 		if (!isOkButtonDisplayed(i)) {
 			clickOnSections(0);
 		}
 		getDriver().findElement(By.xpath(pObject.A042_CMPY)).clear();
 		WaitHelper.waitAdditional(2);
-		getDriver().findElement(By.xpath(pObject.A042_CMPY)).sendKeys(companyName);// Company A042_CMPY
-		
+		getDriver().findElement(By.xpath(pObject.A042_CMPY)).sendKeys(companyName);// Company
+																					// A042_CMPY
+
 		getDriver().findElement(By.xpath(pObject.A011_SEARCH_USER)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A011_SEARCH_USER)).sendKeys(elements.get(0));// USer A011_SEARCH_USER
+		getDriver().findElement(By.xpath(pObject.A011_SEARCH_USER)).sendKeys(elements.get(0));// USer
+																								// A011_SEARCH_USER
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.AD02009_SEAUT_STR)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.AD02009_SEAUT_STR)).sendKeys(elements.get(1));// Structure AD02009_SEAUT_STR
+		getDriver().findElement(By.xpath(pObject.AD02009_SEAUT_STR)).sendKeys(elements.get(1));// Structure
+																								// AD02009_SEAUT_STR
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.AD02009_SEAUT_DOCREF)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.AD02009_SEAUT_DOCREF)).sendKeys(String.valueOf(orderNumber));// Doc ref AD02009_SEAUT_DOCREF
+		getDriver().findElement(By.xpath(pObject.AD02009_SEAUT_DOCREF)).sendKeys(String.valueOf(orderNumber));// Doc
+																												// ref
+																												// AD02009_SEAUT_DOCREF
 		WaitHelper.waitAdditional(1);
 
 		ClickOnAnyButton("OK", 1);
 		WaitHelper.waitAdditional(2);
 
-	}	
-	
-	
-//	public void searchAuthorisor(String companyName, List<String> elements, String orderNumber, int i) {
-//		log.info("Search value");
-//		WaitHelper.waitAdditional(2);
-//		if (!isOkButtonDisplayed(i)) {
-//			clickOnSections(0);
-//		}
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).clear();
-//		WaitHelper.waitAdditional(2);
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).sendKeys(companyName);// Company A042_CMPY
-//		
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ONE)).clear();
-//		WaitHelper.waitAdditional(1);
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ONE)).sendKeys(elements.get(0));// USer A011_SEARCH_USER
-//		WaitHelper.waitAdditional(1);
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.THREE)).clear();
-//		WaitHelper.waitAdditional(1);
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.THREE)).sendKeys(elements.get(1));// Structure AD02009_SEAUT_STR
-//		WaitHelper.waitAdditional(1);
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.FIVE)).clear();
-//		WaitHelper.waitAdditional(1);
-//		getDriver().findElement(By.id(pObject.ZERO_ + pObject.FIVE)).sendKeys(orderNumber);// Doc ref AD02009_SEAUT_DOCREF
-//		WaitHelper.waitAdditional(1);
-//
-//		ClickOnAnyButton("OK", 1);
-//		WaitHelper.waitAdditional(2);
-//
-//	}
+	}
+
+	// public void searchAuthorisor(String companyName, List<String> elements,
+	// String orderNumber, int i) {
+	// log.info("Search value");
+	// WaitHelper.waitAdditional(2);
+	// if (!isOkButtonDisplayed(i)) {
+	// clickOnSections(0);
+	// }
+	// getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).clear();
+	// WaitHelper.waitAdditional(2);
+	// getDriver().findElement(By.id(pObject.ZERO_ +
+	// pObject.ZERO)).sendKeys(companyName);// Company A042_CMPY
+	//
+	// getDriver().findElement(By.id(pObject.ZERO_ + pObject.ONE)).clear();
+	// WaitHelper.waitAdditional(1);
+	// getDriver().findElement(By.id(pObject.ZERO_ +
+	// pObject.ONE)).sendKeys(elements.get(0));// USer A011_SEARCH_USER
+	// WaitHelper.waitAdditional(1);
+	// getDriver().findElement(By.id(pObject.ZERO_ + pObject.THREE)).clear();
+	// WaitHelper.waitAdditional(1);
+	// getDriver().findElement(By.id(pObject.ZERO_ +
+	// pObject.THREE)).sendKeys(elements.get(1));// Structure AD02009_SEAUT_STR
+	// WaitHelper.waitAdditional(1);
+	// getDriver().findElement(By.id(pObject.ZERO_ + pObject.FIVE)).clear();
+	// WaitHelper.waitAdditional(1);
+	// getDriver().findElement(By.id(pObject.ZERO_ +
+	// pObject.FIVE)).sendKeys(orderNumber);// Doc ref AD02009_SEAUT_DOCREF
+	// WaitHelper.waitAdditional(1);
+	//
+	// ClickOnAnyButton("OK", 1);
+	// WaitHelper.waitAdditional(2);
+	//
+	// }
 
 	/**
 	 * Search value -Common
@@ -2386,10 +2447,7 @@ public class CurrencyPage extends Page {
 		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).clear();
 		WaitHelper.waitAdditional(1);
 
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ZERO)).sendKeys(element.get(0));
-//		WaitHelper.waitAdditional(1);
-//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject._FIRST)).click();
-//			
+		getDriver().findElement(By.id(pObject.ZERO_ + pObject.ZERO)).sendKeys(element.get(0));
 
 		ClickOnAnyButton("OK", 1);
 		WaitHelper.waitAdditional(3);
@@ -2405,9 +2463,11 @@ public class CurrencyPage extends Page {
 	public boolean isOkButtonDisplayed(int i) {
 		log.info("Is ok button displayed");
 		boolean displayed = false;
+
 		WebElement wb = getDriver().findElement(By.xpath(pObject.A001A_OK));
 
 		if (wb.isDisplayed()) {
+
 			displayed = true;
 		}
 		WaitHelper.waitAdditional(2);
@@ -2564,12 +2624,10 @@ public class CurrencyPage extends Page {
 			if (nominalList.get(0).equals("6200"))
 
 			{
-				getDriver().findElement(By.xpath(pObject.A018_CHK_REV_ALLW)).click(); //A018_CHK_REV_ALLW
-																					
+				getDriver().findElement(By.xpath(pObject.A018_CHK_REV_ALLW)).click(); // A018_CHK_REV_ALLW
+
 			}
-				
-	
-			
+
 			WaitHelper.waitAdditional(2);
 
 			update = true;
@@ -3220,6 +3278,11 @@ public class CurrencyPage extends Page {
 	public void enterControlDetails(List<String> controlList) {
 		log.info("Enter control details");
 		WaitHelper.waitAdditional(2);
+
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.A027_STRUC)));// Chetna
+																													// Wait
+																													// Added
+
 		getDriver().findElement(By.xpath(pObject.A027_STRUC)).clear();
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A027_STRUC)).sendKeys(controlList.get(0));// structure
@@ -3624,8 +3687,6 @@ public class CurrencyPage extends Page {
 		return value;
 	}
 
-
-
 	/**
 	 * Verify purchasing module
 	 * 
@@ -3740,6 +3801,10 @@ public class CurrencyPage extends Page {
 	 */
 	private boolean isAboutSubmitPopUpDisplayed() {
 		WaitHelper.waitAdditional(2);
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)));// Chetna
+																				// Wait
+																				// Added
 		return getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)).isDisplayed();
 
 	}
@@ -3756,6 +3821,11 @@ public class CurrencyPage extends Page {
 		}
 		getDriver().findElement(By.xpath(pObject.A035_HOLD)).click();// Hold
 		WaitHelper.waitAdditional(2);
+
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)));// Chetna
+																				// Wait
+																				// Added
 		getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)).click();// Submit
 
 		WaitHelper.waitAdditional(5);
@@ -3767,7 +3837,10 @@ public class CurrencyPage extends Page {
 	 * @return
 	 */
 	private boolean isAboutSubmitPopUpDisplayed1() {
-		WaitHelper.waitAdditional(2);
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)));// Chetna
+																				// Wait
+																				// Added
 		return getDriver().findElement(By.xpath(pObject.A118_CONFM_SUBMIT)).isDisplayed();
 
 	}
@@ -3784,6 +3857,11 @@ public class CurrencyPage extends Page {
 		}
 		getDriver().findElement(By.xpath(pObject.A118_HOLD)).click();// Hold
 		WaitHelper.waitAdditional(2);
+
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)));// Chetna
+																				// Wait
+																				// Added
 		getDriver().findElement(By.xpath(pObject.A118_CONFM_SUBMIT)).click();// Submit
 
 		WaitHelper.waitAdditional(5);
@@ -3798,6 +3876,10 @@ public class CurrencyPage extends Page {
 			getDriver().findElement(By.xpath(pObject.A035_HOLD)).click();// Hold
 		}
 		WaitHelper.waitAdditional(2);
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
+				getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)));// Chetna
+																				// Wait
+																				// Added
 		getDriver().findElement(By.xpath(pObject.A035_CONFM_SUBMIT)).click();// Submit
 
 		WaitHelper.waitAdditional(5);
@@ -4035,65 +4117,44 @@ public class CurrencyPage extends Page {
 		log.info("Inside default structure elements method");
 		boolean update = false;
 
-		if (elementList.get(1).equals("SUSP")) {
+		getDriver().findElement(By.xpath(pObject.A027_STRUC)).clear();// A027_STRUC
+		WaitHelper.waitAdditional(2);
+		getDriver().findElement(By.xpath(pObject.A027_STRUC)).sendKeys(elementList.get(0));// Structure
+																							// A027_STRUC
+		WaitHelper.waitAdditional(1);
+
+		getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).clear(); // A028_ELEMENT
+		WaitHelper.waitAdditional(2);
+		getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).sendKeys(elementList.get(1));// Element
+																								// A029_ELEMENT
+
+		getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).sendKeys(Keys.ENTER);// Element
+																						// A029_ELEMENT
+		WaitHelper.waitAdditional(2);
+
+		if (!getToolContentText().contains(message)) {
 			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath(pObject.A004A_DESCR)).clear();
+			getDriver().findElement(By.xpath(pObject.A004A_DESCR)).clear(); // Description
+																			// A004A_DESCR
 			WaitHelper.waitAdditional(2);
 			getDriver().findElement(By.xpath(pObject.A004A_DESCR)).sendKeys(elementList.get(2));// Description
 																								// A004A_DESCR
 			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath(pObject.A029_NEW_PARENT)).clear();
+
+			getDriver().findElement(By.xpath(pObject.A029_NEW_PARENT)).clear();// A028_NEW_PARENT
 			WaitHelper.waitAdditional(2);
 			getDriver().findElement(By.xpath(pObject.A029_NEW_PARENT)).sendKeys(elementList.get(3));// New
 																									// Parent
-																									// A029_NEW_PARENT
+																									// A028_NEW_PARENT
 			WaitHelper.waitAdditional(1);
+
 			getDriver().findElement(By.xpath(pObject.A029_CHK_NOM_BAL)).click();// Nominal
 																				// balance
-																				// A029_CHK_NOM_BAL
+																				// A028_CHK_NOM_BAL
 			WaitHelper.waitAdditional(2);
 			update = true;
 		}
 
-		else {
-			getDriver().findElement(By.xpath(pObject.A027_STRUC)).clear();// A027_STRUC
-			WaitHelper.waitAdditional(2);
-			getDriver().findElement(By.xpath(pObject.A027_STRUC)).sendKeys(elementList.get(0));// Structure
-																								// A027_STRUC
-			WaitHelper.waitAdditional(1);
-
-			getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).clear(); // A028_ELEMENT
-			WaitHelper.waitAdditional(2);
-			getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).sendKeys(elementList.get(1));// Element
-																									// A029_ELEMENT
-
-			getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).sendKeys(Keys.ENTER);// Element
-																							// A029_ELEMENT
-			WaitHelper.waitAdditional(2);
-
-			if (!getToolContentText().contains(message)) {
-				WaitHelper.waitAdditional(1);
-				getDriver().findElement(By.xpath(pObject.A004A_DESCR)).clear(); // Description
-																				// A004A_DESCR
-				WaitHelper.waitAdditional(2);
-				getDriver().findElement(By.xpath(pObject.A004A_DESCR)).sendKeys(elementList.get(2));// Description
-																									// A004A_DESCR
-				WaitHelper.waitAdditional(1);
-
-				getDriver().findElement(By.xpath(pObject.A029_NEW_PARENT)).clear();// A028_NEW_PARENT
-				WaitHelper.waitAdditional(2);
-				getDriver().findElement(By.xpath(pObject.A029_NEW_PARENT)).sendKeys(elementList.get(3));// New
-																										// Parent
-																										// A028_NEW_PARENT
-				WaitHelper.waitAdditional(1);
-
-				getDriver().findElement(By.xpath(pObject.A029_CHK_NOM_BAL)).click();// Nominal
-																					// balance
-																					// A028_CHK_NOM_BAL
-				WaitHelper.waitAdditional(2);
-				update = true;
-			}
-		}
 		return update;
 	}
 
@@ -4173,11 +4234,6 @@ public class CurrencyPage extends Page {
 	 * Click on Return button
 	 * 
 	 */
-	// public void clickOnReturnButton(int i){
-	// log.info("Click on return button");
-	// getDriver().findElement(By.id(pObject.ZERO_+i+pObject.LABEL)).click();
-	// WaitHelper.waitAdditional(5);
-	// }
 
 	public void clickOnReturnButton() {
 		log.info("Click on Return Button");
@@ -4191,23 +4247,6 @@ public class CurrencyPage extends Page {
 		}
 		WaitHelper.waitAdditional(5);
 	}
-
-	// /**
-	// * Click on Return button
-	// */
-	// public void clickOnReturnButton(){
-	// WaitHelper.waitAdditional(2);
-	// log.info("Clicking on Return button");
-	// List<WebElement> wbs =
-	// getDriver().findElements(By.className(pObject.HEADER_TAB_BTN));
-	// for(WebElement wb : wbs){
-	// if(wb.getText().equals("Return")){
-	// wb.click();
-	// break;
-	// }
-	// }
-	// WaitHelper.waitAdditional(4);
-	// }
 
 	/**
 	 * Verify company control check list
@@ -4303,8 +4342,9 @@ public class CurrencyPage extends Page {
 	public void enterUsersDetails(String companyName, List<String> userDetails) {
 		log.info("Inside Insert user detail page");
 		WaitHelper.waitUntilWebElementDisplayed(getDriver(),
-				getDriver().findElement(By.xpath(pObject.A006_PRIMARY_TAB)));
-		// if(!isPrimaryDetailsTabDisplayed())
+				getDriver().findElement(By.xpath(pObject.A006_PRIMARY_TAB)));// Chetna
+																				// Wait
+																				// Added
 
 		if (!isPrimaryDetailsTabSelected()) {
 			ClickOnAnyTab("Primary Details", 1);
@@ -4525,11 +4565,11 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(2);
 		getDriver().findElement(By.xpath(pObject.A023_YR_RNGE_HIST)).sendKeys(companyControl.get(5));// History
 																										// A023_YR_RNGE_HIST
-	
-		getDriver().findElement(By.xpath(pObject.A023_CHK_AVGBALSH)).click();// Alternative Balance Sheet
-		WaitHelper.waitAdditional(1);																							
-		
-		
+
+		getDriver().findElement(By.xpath(pObject.A023_CHK_AVGBALSH)).click();// Alternative
+																				// Balance
+																				// Sheet
+		WaitHelper.waitAdditional(1);
 
 		ClickOnAnyTab("Batch Types", 1);
 
@@ -4703,6 +4743,11 @@ public class CurrencyPage extends Page {
 	public void updateCompanyControlDetails(List<String> companyControl) {
 		log.info("Update company controls");
 		WaitHelper.waitAdditional(2);
+
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.A031_ACC_LAY)));// Chetna
+																														// Wait
+																														// Added
+
 		getDriver().findElement(By.xpath(pObject.A031_ACC_LAY)).clear();// A031_ACC_LAY
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A031_ACC_LAY)).sendKeys(companyControl.get(0));// Account
@@ -4756,6 +4801,10 @@ public class CurrencyPage extends Page {
 	public boolean enterICAElements(List<String> elements) {
 		log.info("Inside ICA elements method");
 		boolean update = false;
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.A036_EELE)));// Chetna
+																													// Wait
+																													// Added
+
 		getDriver().findElement(By.xpath(pObject.A036_EELE)).clear();
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A036_EELE)).sendKeys(elements.get(0));// Element
@@ -4787,6 +4836,9 @@ public class CurrencyPage extends Page {
 	public void enterICARelationShip(List<String> elments) {
 		log.info("Enter ICA relationship");
 		WaitHelper.waitAdditional(2);
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.A037_FRM_BTZ)));// Chetna
+																														// Wait
+																														// Added
 		getDriver().findElement(By.xpath(pObject.A037_FRM_BTZ)).clear();
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A037_FRM_BTZ)).sendKeys(elments.get(0));// From
@@ -4984,102 +5036,92 @@ public class CurrencyPage extends Page {
 		WaitHelper.waitAdditional(2);
 	}
 
-
-	
 	/**
 	 * Click on Years H button
 	 */
-	
-	
-	public void clickOnYearsH(){
+
+	public void clickOnYearsH() {
 		log.info("Clicking on Years (H) button");
 		WaitHelper.waitAdditional(2);
 		List<WebElement> wbs1 = getAllFooterButton();
-		for(WebElement wb2 : wbs1){
-			if(wb2.getText().equals("Years (H)")){
-						wb2.click();
-						break;
+		for (WebElement wb2 : wbs1) {
+			if (wb2.getText().equals("Years (H)")) {
+				wb2.click();
+				break;
 			}
 		}
 		WaitHelper.waitAdditional(5);
 	}
-	
-	
 
 	/**
 	 * Click on Run activity
 	 */
-	public void clickOnRunActivity(){
+	public void clickOnRunActivity() {
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Run activity button");
 		List<WebElement> wbs = getDriver().findElements(By.className(pObject.HEADER_TAB_BTN));
-		for(WebElement wb : wbs){
-			if(wb.getText().equals("Run Activity")){
+		for (WebElement wb : wbs) {
+			if (wb.getText().equals("Run Activity")) {
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(5);
 	}
-	
+
 	/**
 	 * Click on years
 	 */
-	public void clickOnYears(){
+	public void clickOnYears() {
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Years button");
 
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A013_BTM_BUT_SECTION));
-		for(WebElement wb : wbs){
-			if(wb.getText().equals("Years")){
+		for (WebElement wb : wbs) {
+			if (wb.getText().equals("Years")) {
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(3);
 	}
-	
 
-	
 	/**
 	 * Click on Events H
 	 */
-	public void clickOnEventsH(){
+	public void clickOnEventsH() {
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Events (H) button");
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A013_BTM_BUT_SECTION));
-		for(WebElement wb : wbs){
-			if(wb.getText().equals("Events (H)")){
+		for (WebElement wb : wbs) {
+			if (wb.getText().equals("Events (H)")) {
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(3);
 	}
-	
+
 	/**
 	 * Click on Activity
 	 */
-	public void clickOnActivity(){
+	public void clickOnActivity() {
 		WaitHelper.waitAdditional(2);
 		log.info("Clicking on Years button");
 
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A013_BTM_BUT_SECTION));
-		for(WebElement wb : wbs){
-			if(wb.getText().equals("Activity")){
+		for (WebElement wb : wbs) {
+			if (wb.getText().equals("Activity")) {
 				wb.click();
 				break;
 			}
 		}
 		WaitHelper.waitAdditional(3);
 	}
-	
-	
-	
-	
-	
+
 	/**
 	 * Enter fiscal calendar details
+	 * 
 	 * @param calender
 	 * @param year1
 	 * @param year2
@@ -5087,62 +5129,67 @@ public class CurrencyPage extends Page {
 	 * @param year4
 	 * @param year5
 	 */
-	public void enterFiscalCalendarDetails(List<String> calender){
+	public void enterFiscalCalendarDetails(List<String> calender) {
 		log.info("Enter fiscal calender details");
-		
+
 		WaitHelper.waitAdditional(3);
 		getDriver().findElement(By.xpath(pObject.A013_CALENDER)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_CALENDER)).sendKeys(calender.get(0));//Calender A013_CALENDER
-				
+		getDriver().findElement(By.xpath(pObject.A013_CALENDER)).sendKeys(calender.get(0));// Calender
+																							// A013_CALENDER
+
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A004A_DESCR)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A004A_DESCR)).sendKeys(calender.get(1));//Description A004A_DESCR
-		
+		getDriver().findElement(By.xpath(pObject.A004A_DESCR)).sendKeys(calender.get(1));// Description
+																							// A004A_DESCR
+
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).sendKeys(calender.get(2));//Company Code A006_COMPANY
-				
+		getDriver().findElement(By.xpath(pObject.A006_COMPANY)).sendKeys(calender.get(2));// Company
+																							// Code
+																							// A006_COMPANY
+
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_WEEKENDDAY)).sendKeys(calender.get(3));//Weekend Day
-	
-	    WaitHelper.waitAdditional(2);
-	   			
-	    getDriver().findElement(By.xpath(pObject.A013_LVL_NAME)).click();//Level Name
+		getDriver().findElement(By.xpath(pObject.A013_WEEKENDDAY)).sendKeys(calender.get(3));// Weekend
+																								// Day
+
+		WaitHelper.waitAdditional(2);
+
+		getDriver().findElement(By.xpath(pObject.A013_LVL_NAME)).click();// Level
+																			// Name
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_LVL_NAME1)).sendKeys(calender.get(4));//Level Name Input
+		getDriver().findElement(By.xpath(pObject.A013_LVL_NAME1)).sendKeys(calender.get(4));// Level
+																							// Name
+																							// Input
 		WaitHelper.waitAdditional(1);
-		
-		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC)).click();//Level description
+
+		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC)).click();// Level
+																			// description
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC1)).sendKeys(calender.get(5));//Level description input
+		getDriver().findElement(By.xpath(pObject.A013_LVL_DESC1)).sendKeys(calender.get(5));// Level
+																							// description
+																							// input
 		WaitHelper.waitAdditional(1);
 
 		WebElement years = driver.findElement(By.xpath(pObject.A013_YEARS));
 		driver.executeScript("arguments[0].scrollIntoView(true);", years);
-		
-		ClickOnAnyButton("Years",1);
-		ClickOnAnyButton("Years",1);
-		
+
+		ClickOnAnyButton("Years", 1);
+		ClickOnAnyButton("Years", 1);
+
 		WaitHelper.waitAdditional(5);
-		
-		/*Enter fiscal years*/
+
+		/* Enter fiscal years */
 		enterFiscalYears(1);
-		
+
 		clickOnEventsH();
-		
-		getCalendarEvents("01 Dec 1999",calender.get(6));
+
+		getCalendarEvents("01 Dec 1999", calender.get(6));
 		WaitHelper.waitAdditional(2);
 
-		
-		
 	}
-	
-	
-
-	
 
 	/**
 	 * Enter fiscal years in the grid
@@ -5150,13 +5197,13 @@ public class CurrencyPage extends Page {
 	 * @param years
 	 * @param i
 	 */
-private void enterFiscalYears(int i) {
+	private void enterFiscalYears(int i) {
 		log.info("Enter fiscal years");
 
 		Calendar cal = new GregorianCalendar();
 		cal.setTime(new Date());
 		WaitHelper.waitAdditional(2);
-		
+
 		getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[2]")).click();// Year
 																							// 1996
 		WaitHelper.waitAdditional(1);
@@ -5203,11 +5250,10 @@ private void enterFiscalYears(int i) {
 																								// 1996
 			WaitHelper.waitAdditional(1);
 
-
-			getDriver().findElement(By.xpath("//div["+i+"]/table/tbody/tr/td[2]/input")).sendKeys(String.valueOf(nextYear));//Year 1996 input
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[2]/input"))
+					.sendKeys(String.valueOf(nextYear));// Year 1996 input
 			WaitHelper.waitAdditional(1);
-			
-		
+
 			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).click();// Name
 			WaitHelper.waitAdditional(1);
 
@@ -5239,19 +5285,17 @@ private void enterFiscalYears(int i) {
 
 			}
 
+			WaitHelper.waitAdditional(2);
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[5]/input")).sendKeys(Keys.ENTER);// Press
+																													// Enter
+																													// to
+																													// get
+																													// days
 
-		WaitHelper.waitAdditional(2);
-		getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[5]/input")).sendKeys(Keys.ENTER);// Press
-																												// Enter
-																												// to
-																												// get
-																												// days
-
-		WaitHelper.waitAdditional(3);
+			WaitHelper.waitAdditional(3);
 		}
 
 	}
-
 
 	/**
 	 * Get calendar events
@@ -5283,14 +5327,9 @@ private void enterFiscalYears(int i) {
 		WaitHelper.waitAdditional(2);
 	}
 
-	
-	
-	
-
 	/**
 	 * searchPeriodAndYearDetails
 	 */
-
 
 	public void enterLockCalendarDetails(int i)
 
@@ -5338,8 +5377,6 @@ private void enterFiscalYears(int i) {
 	/**
 	 * searchPeriodAndYearDetails
 	 */
-
-
 
 	public void searchPeriodAndYearDetails(String element) {
 		if (!isOkButtonDisplayed(5)) {
@@ -5405,45 +5442,42 @@ private void enterFiscalYears(int i) {
 	 * 
 	 * @param details
 	 */
-	public void enterJournalDetails(List<String> details) {
+	public void enterJournalDetails(List<String> icaData) {
 		log.info("Enter journal details");
 
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A040_JOUR_TYPE)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_JOUR_TYPE)).sendKeys(details.get(0));// J
+		getDriver().findElement(By.xpath(pObject.A040_JOUR_TYPE)).sendKeys(icaData.get(0));// J
 																							// Type
 
 		getDriver().findElement(By.xpath(pObject.A040_JOUR_REF)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_JOUR_REF)).sendKeys(details.get(1));// J
+		getDriver().findElement(By.xpath(pObject.A040_JOUR_REF)).sendKeys(icaData.get(1));// J
 																							// Reference
 
 		getDriver().findElement(By.xpath(pObject.A040_PERI)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_PERI)).sendKeys(details.get(4));// Period
+		getDriver().findElement(By.xpath(pObject.A040_PERI)).sendKeys(icaData.get(4));// Period
 
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_YEAR)).sendKeys(details.get(11));// Year
+		getDriver().findElement(By.xpath(pObject.A040_YEAR)).sendKeys(icaData.get(5));// Year
 
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A040_BTZ_ELE)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_BTZ_ELE)).sendKeys(details.get(2));// BTZ
+		getDriver().findElement(By.xpath(pObject.A040_BTZ_ELE)).sendKeys(icaData.get(2));// BTZ
 																							// Element
 
 		getDriver().findElement(By.xpath(pObject.A040_DESC)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_DESC)).sendKeys(details.get(3));// Description
+		getDriver().findElement(By.xpath(pObject.A040_DESC)).sendKeys(icaData.get(3));// Description
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A040_DESC)).sendKeys(Keys.ENTER);// Description
 
 		// WaitHelper.waitAdditional(2);
 		// clickOnAcceptWarnings();
 		WaitHelper.waitAdditional(2);
-		clickOnLines();
-		WaitHelper.waitAdditional(3);
-		enterJournalLines(details);
 
 	}
 
@@ -5452,90 +5486,59 @@ private void enterFiscalYears(int i) {
 	 * 
 	 * @param lines
 	 */
-	private void enterJournalLines(List<String> lines) {
+	public void enterJournalLines(List<String> lines, int i) {
 		log.info("Enter journal lines");
 
 		if (BaseTest.browser.contains("internetexplorer")) {
 
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).click();
 			WaitHelper.waitAdditional(1.5);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]")).click();
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]/input")).sendKeys(lines.get(5));// Account
-			WaitHelper.waitAdditional(1.5);
-
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[4]")).click();
-			WaitHelper.waitAdditional(1.5);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[4]")).click();
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[4]/input")).sendKeys(lines.get(6));// Cost
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]/input")).sendKeys(lines.get(0));// Account
 			WaitHelper.waitAdditional(1.5);
 
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[8]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]")).click();
 			WaitHelper.waitAdditional(1.5);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[8]")).click();
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[8]/input")).sendKeys(lines.get(7));// Base
-																											// Value
-			WaitHelper.waitAdditional(1.5);
-
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[3]")).click();
-			WaitHelper.waitAdditional(1.5);
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[3]")).click();
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[3]/input")).sendKeys(lines.get(8));// Account
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]/input")).sendKeys(lines.get(1));// Cost
 			WaitHelper.waitAdditional(1.5);
 
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[4]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[8]")).click();
 			WaitHelper.waitAdditional(1.5);
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[4]")).click();
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[4]/input")).sendKeys(lines.get(9));// Cost
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[8]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[8]/input")).sendKeys(lines.get(2));// Base
+			// Value
 			WaitHelper.waitAdditional(1.5);
 
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[8]")).click();
-			WaitHelper.waitAdditional(1.5);
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[8]")).click();
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[8]/input")).sendKeys(lines.get(10));// Base
-																												// Value
-			WaitHelper.waitAdditional(1.5);
 			clickOnUpdate();
 			clickOnAcceptWarnings();
 			clickOnUpdate();
-			
 
 		} else {
 
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]")).click();
-			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]/input")).sendKeys(lines.get(5));// Account
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).click();
+			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]/input")).sendKeys(lines.get(0));// Account
 			WaitHelper.waitAdditional(1.5);
 
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[4]")).click();
-			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[4]/input")).sendKeys(lines.get(6));// Cost
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]")).click();
+			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]/input")).sendKeys(lines.get(1));// Cost
 			WaitHelper.waitAdditional(1.5);
 
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[8]")).click();
-			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[8]/input")).sendKeys(lines.get(7));// Base
-																											// Value
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[8]")).click();
+			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[8]")).click();
+			getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[8]/input")).sendKeys(lines.get(2));// Base
+			// Value
 			WaitHelper.waitAdditional(1.5);
 
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[3]")).click();
-			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[3]/input")).sendKeys(lines.get(8));// Account
-			WaitHelper.waitAdditional(1.5);
-
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[4]")).click();
-			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[4]/input")).sendKeys(lines.get(9));// Cost
-			WaitHelper.waitAdditional(1.5);
-
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[8]")).click();
-			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath("//div[2]/table/tbody/tr/td[8]/input")).sendKeys(lines.get(10));// Base
-																												// Value
-			WaitHelper.waitAdditional(1.5);
 			clickOnUpdate();
 			clickOnAcceptWarnings();
 			clickOnUpdate();
-		
+
 		}
 
 	}
@@ -5545,28 +5548,50 @@ private void enterFiscalYears(int i) {
 	 * 
 	 * @param group
 	 */
-	public void structureEnquiry(List<String> group) {
+	public void structureEnquiry(List<String> cat) {
 		log.info("Inside Structure Enquiry Method");
 
 		getDriver().findElement(By.xpath(pObject.A026_LAYT)).clear();
-		getDriver().findElement(By.xpath(pObject.A026_LAYT)).sendKeys(group.get(0));// Layout
+		getDriver().findElement(By.xpath(pObject.A026_LAYT)).sendKeys(cat.get(0));// Layout
 
 		getDriver().findElement(By.xpath(pObject.A027_STRUC)).clear();
-		getDriver().findElement(By.xpath(pObject.A027_STRUC)).sendKeys(group.get(1));// Structure
+		getDriver().findElement(By.xpath(pObject.A027_STRUC)).sendKeys(cat.get(1));// Structure
 
 		getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).clear();
-		getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).sendKeys(group.get(2));// Element
+		getDriver().findElement(By.xpath(pObject.A029_ELEMENT)).sendKeys(cat.get(2));// Element
 
 		getDriver().findElement(By.xpath(pObject.A016_GRP)).clear();
-		getDriver().findElement(By.xpath(pObject.A016_GRP)).sendKeys(group.get(4));// Group
+		getDriver().findElement(By.xpath(pObject.A016_GRP)).sendKeys(cat.get(4));// Group
 
 		getDriver().findElement(By.xpath(pObject.A017_CATEG)).clear();
-		getDriver().findElement(By.xpath(pObject.A017_CATEG)).sendKeys(group.get(5));// Enter
-																						// Category
+		getDriver().findElement(By.xpath(pObject.A017_CATEG)).sendKeys(cat.get(5));// Enter
+																					// Category
 
 		getDriver().findElement(By.xpath(pObject.A040_SELE1_OK)).click();// Ok
 																			// button
 		WaitHelper.waitAdditional(4);
+
+	}
+
+	/**
+	 * EJJ Verify Structure Enquiry Values
+	 * 
+	 * @param elements
+	 */
+
+	public boolean verifyStrEnqValues(List<String> elements, int i) {
+		log.info("Inside Verify Structure Enquiry Vaues Method");
+		boolean verify = false;
+		WaitHelper.waitAdditional(2);
+
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[1]")).getText()
+				.equals(elements.get(0));// Cost
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).getText()
+				.equals(elements.get(1));// CP Act Bal
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]")).getText()
+				.equals(elements.get(2));// YTd Act Bal
+		WaitHelper.waitAdditional(1);
+		return verify;
 
 	}
 
@@ -5581,7 +5606,7 @@ private void enterFiscalYears(int i) {
 		getDriver().findElement(By.xpath(pObject.A026_LAYT)).clear();
 		getDriver().findElement(By.xpath(pObject.A026_LAYT)).sendKeys(group.get(0));// Layout
 
-		clickOnSections(1); // Click on sections
+		clickOnEXTSections(); // Click on sections
 
 		getDriver().findElement(By.xpath(pObject.A016_GRP)).clear();
 		getDriver().findElement(By.xpath(pObject.A016_GRP)).sendKeys(group.get(1));// Group
@@ -5622,7 +5647,7 @@ private void enterFiscalYears(int i) {
 
 	}
 
-	public void getAccountDetailValues(String account) {
+	public void getAccountDetailValues(List<String> Accs) {
 		log.info("Verify account detail values");
 		WaitHelper.waitAdditional(3);
 
@@ -5632,11 +5657,77 @@ private void enterFiscalYears(int i) {
 
 		getDriver().findElement(By.xpath(pObject.A040_SELE_ACCO)).clear();
 		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_SELE_ACCO)).sendKeys(account);// Account
+		getDriver().findElement(By.xpath(pObject.A040_SELE_ACCO)).sendKeys(Accs.get(0));// Account
 		WaitHelper.waitAdditional(1);
 
 		getDriver().findElement(By.xpath(pObject.A040_SELE_OK)).click();
 		WaitHelper.waitAdditional(2);
+
+	}
+
+	/**
+	 * Search for the account & cost details page
+	 * 
+	 * @param Acc
+	 */
+
+	public void getTranDetailValues(List<String> Transc) {
+		log.info("Verify account detail values");
+		WaitHelper.waitAdditional(3);
+
+		WebElement account1 = driver.findElement(By.xpath(pObject.A040_SELE_SEC));
+		driver.executeScript("scroll(0,850);", account1);
+		WaitHelper.waitAdditional(1);
+
+		getDriver().findElement(By.xpath(pObject.A040_SELE_ACCO)).clear();
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.A040_SELE_ACCO)).sendKeys(Transc.get(0));// Account
+
+		getDriver().findElement(By.xpath(pObject.A040_SELE_COST)).clear();
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.A040_SELE_COST)).sendKeys(Transc.get(1));// Cost
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.A040_SELE_OK)).click();
+		WaitHelper.waitAdditional(2);
+	}
+
+	// public boolean VerifyAccountValue(String value) {
+	// WaitHelper.waitAdditional(2);
+	// log.info("Verify presence of Message in the ToolBar Message list");
+	// boolean MessageValue = false;
+	// List<WebElement> wbs =
+	// getDriver().findElements(By.xpath(pObject.AllPG_MSG_TOOLBAR));
+	// for (WebElement wb : wbs) {
+	// if (wb.getText().contains(value)) {
+	// MessageValue = true;
+	// break;
+	// }
+	// }
+	// return MessageValue;
+	// }
+	//
+
+	/**
+	 * EJI Verify Account Details Enquiry Values
+	 * 
+	 * @param elements
+	 */
+
+	public boolean verifyTranscValues(List<String> elements, int i) {
+		log.info("Inside Verify Structure Enquiry Vaues Method");
+		boolean verify = false;
+		WaitHelper.waitAdditional(2);
+
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[2]")).getText()
+				.equals(elements.get(0));// Account
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[3]")).getText()
+				.equals(elements.get(1));// Cost
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[9]")).getText()
+				.equals(elements.get(2));// Financial Values
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[13]")).getText()
+				.equals(elements.get(3));// Reference
+		WaitHelper.waitAdditional(1);
+		return verify;
 
 	}
 
@@ -5653,19 +5744,26 @@ private void enterFiscalYears(int i) {
 
 	}
 
-	public void getCostDetailValues(String account) {
-		log.info("Verify account detail values");
+	/**
+	 * EJB/EJE Verify Transaction Details Values
+	 * 
+	 * @param elements
+	 */
 
-		WebElement account1 = driver.findElement(By.xpath(pObject.A040_SELE_SEC));
-		driver.executeScript("scroll(0,950);", account1);
-		WaitHelper.waitAdditional(1);
-
-		getDriver().findElement(By.xpath(pObject.A040_SELE_COST)).clear();
-		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_SELE_COST)).sendKeys(account);// Cost
-		WaitHelper.waitAdditional(1);
-		getDriver().findElement(By.xpath(pObject.A040_SELE_OK)).click();
+	public boolean verifyAccValues(List<String> elements, int i) {
+		log.info("Inside Verify Structure Enquiry Vaues Method");
+		boolean verify = false;
 		WaitHelper.waitAdditional(2);
+
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[1]")).getText()
+				.equals(elements.get(0));// Account
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[4]")).getText()
+				.equals(elements.get(1));// YTd Act Bal
+		verify = getDriver().findElement(By.xpath("//div[" + i + "]/table/tbody/tr/td[5]")).getText()
+				.equals(elements.get(2));// STAT BAL
+		WaitHelper.waitAdditional(1);
+		return verify;
+
 	}
 
 	public void searchAccount(String account) {
@@ -5787,7 +5885,7 @@ private void enterFiscalYears(int i) {
 				isForceConfirmPopUpDisplayed();
 
 				clickOnRefresh();
- 
+
 			}
 		}
 
@@ -6276,7 +6374,6 @@ private void enterFiscalYears(int i) {
 		return update;
 	}
 
-	
 	/**
 	 * Create UOM - A048
 	 * 
@@ -8930,15 +9027,16 @@ private void enterFiscalYears(int i) {
 				getDriver().findElement(By.xpath(pObject.A076_MAT_REQ)).sendKeys(elements.get(15));// Material
 																									// Request
 																									// A076_MAT_REQ
-				
+
 			}
-			
+
 			if (elements.get(2).equals("Requisition")) {
 				WaitHelper.waitAdditional(1);
-				getDriver().findElement(By.xpath(pObject.A076_SUP_MAND)).sendKeys(elements.get(20));// Supplier Manadatory
-			
-														}
-			
+				getDriver().findElement(By.xpath(pObject.A076_SUP_MAND)).sendKeys(elements.get(20));// Supplier
+																									// Manadatory
+
+			}
+
 			WaitHelper.waitAdditional(1);
 			ClickOnAnyTab("Invoices and Commitments", 1);
 			log.info("On the Invoices and Commitments Tab");
@@ -9802,8 +9900,6 @@ private void enterFiscalYears(int i) {
 		return visible;
 	}
 
-
-
 	/**
 	 * Value/GL Responsibility For AP - A088-GON
 	 * 
@@ -9985,6 +10081,10 @@ private void enterFiscalYears(int i) {
 	public void enterSupplierListDetail(List<String> elements) {
 		log.info("Enter supplier details");
 		WaitHelper.waitAdditional(2);
+
+		WaitHelper.waitUntilWebElementDisplayed(getDriver(), getDriver().findElement(By.xpath(pObject.A091_SUPP)));// Chetna
+																													// Wait
+																													// Added
 		getDriver().findElement(By.xpath(pObject.A091_SUPP)).clear();
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.A091_SUPP)).sendKeys(elements.get(0));// Supplier
@@ -10379,7 +10479,6 @@ private void enterFiscalYears(int i) {
 
 	/*--------------------------------PHASE-I and PHASE II METHODS ENDS HERE----------------------------------------------------------------*/
 
-	
 	/*--------------------------------PHASE I ADDITIONAL METHODS BY CHETNA----------------------------------------------------------------*/
 
 	/**
@@ -10518,7 +10617,6 @@ private void enterFiscalYears(int i) {
 		log.info("Preocess is updated.");
 	}
 
-
 	public String getProcessDetails(String process, String request)
 
 	{
@@ -10569,8 +10667,6 @@ private void enterFiscalYears(int i) {
 		return stat;
 
 	}
-
-	
 
 	public void updateProcess(String process, String request) {
 		log.info("Update process");
@@ -10708,37 +10804,28 @@ private void enterFiscalYears(int i) {
 
 	}
 
-	public boolean selectStruValue(String value) 
-	
+	public boolean selectStruValue(String value)
+
 	{
 		log.info("Select Structure method");
-		
+
 		boolean update = false;
-		
+
 		List<WebElement> wbs = getDriver().findElements(By.xpath(pObject.A035_GLSTRUCT));
-		for(WebElement wb : wbs){
-			if(wb.getText().contains(value))
-					{
+		for (WebElement wb : wbs) {
+			if (wb.getText().contains(value)) {
 				wb.click();
 				break;
-			
-				
-					}
+
+			}
 			update = true;
 		}
-		
+
 		return update;
-	
-	
-	
-	
-	
+
 	}
 
-
-/*--------------------------------PHASE III METHODS----------------------------------------------------------------*/
-	
-
+	/*--------------------------------PHASE III METHODS----------------------------------------------------------------*/
 
 	// For AD01008_IM_Audit_Reports PostgreSQL Database Related Process
 
@@ -10970,4 +11057,3 @@ private void enterFiscalYears(int i) {
 		}
 	}
 }
-
