@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A041_Group_Category_And_Structure_PostingsTest>
+<Verification1>10/07/2017 06:18:15 | Pass : Login page displayed</Verification1>
+<Verification2>10/07/2017 06:18:23 | Pass : Command line displayed</Verification2>
+<Verification3>10/07/2017 06:18:37 | Pass : Structure Rebuild page displayed</Verification3>
+</A041_Group_Category_And_Structure_PostingsTest>
+</TestCase>
+</SeleniumTestReport>

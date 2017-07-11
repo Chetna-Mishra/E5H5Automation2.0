@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>TestNG:  suite13</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>suite13</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 06 22:10:14 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1156 seconds (1156728 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A018F_Ledger_Control_Nominals.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A018F_Ledger_Control_Nominals<br>Parameters: [DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal5500 = 5500], DataUnit [nominal5500 = PL Account], DataUnit [nominal5500 = T], DataUnit [nominal5500 = 04], DataUnit [nominal5500 = Profit & Loss], DataUnit [nominal5500 = Both], DataUnit [nominal5500 = A], DataUnit [nominal5500 = ***], DataUnit [nominal5500 = Both], DataUnit [nominal5500 = 0], DataUnit [nominalVATA = VATA], DataUnit [nominalVATA = VAT Control Account], DataUnit [nominalVATA = B], DataUnit [nominalVATA = 03], DataUnit [nominalVATA = Balance Sheet], DataUnit [nominalVATA = Both], DataUnit [nominalVATA = A], DataUnit [nominalVATA = ***], DataUnit [nominalVATA = Both], DataUnit [nominalVATA = 0], DataUnit [nominal5901 = 5901], DataUnit [nominal5901 = PPV Control], DataUnit [nominal5901 = G], DataUnit [nominal5901 = 01], DataUnit [nominal5901 = Balance Sheet], DataUnit [nominal5901 = Both], DataUnit [nominal5901 = A], DataUnit [nominal5901 = ***], DataUnit [nominal5901 = Both], DataUnit [nominal5901 = 0], DataUnit [nominal5902 = 5902], DataUnit [nominal5902 = PPV Reserve], DataUnit [nominal5902 = G], DataUnit [nominal5902 = 01], DataUnit [nominal5902 = Balance Sheet], DataUnit [nominal5902 = Both], DataUnit [nominal5902 = A], DataUnit [nominal5902 = ***], DataUnit [nominal5902 = Both], DataUnit [nominal5902 = 0], DataUnit [nominal5903 = 5903], DataUnit [nominal5903 = PPV Suspense], DataUnit [nominal5903 = G], DataUnit [nominal5903 = 01], DataUnit [nominal5903 = Balance Sheet], DataUnit [nominal5903 = Both], DataUnit [nominal5903 = A], DataUnit [nominal5903 = ***], DataUnit [nominal5903 = Both], DataUnit [nominal5903 = 0], DataUnit [nominalEXP1 = EXP1], DataUnit [nominalEXP1 = Expense Account 1], DataUnit [nominalEXP1 = T], DataUnit [nominalEXP1 = 04], DataUnit [nominalEXP1 = Profit & Loss], DataUnit [nominalEXP1 = Both], DataUnit [nominalEXP1 = A], DataUnit [nominalEXP1 = ***], DataUnit [nominalEXP1 = Both], DataUnit [nominalEXP1 = 0], DataUnit [nominalEXP2 = EXP2], DataUnit [nominalEXP2 = Expense Account 2], DataUnit [nominalEXP2 = T], DataUnit [nominalEXP2 = 04], DataUnit [nominalEXP2 = Profit & Loss], DataUnit [nominalEXP2 = Both], DataUnit [nominalEXP2 = A], DataUnit [nominalEXP2 = ***], DataUnit [nominalEXP2 = Both], DataUnit [nominalEXP2 = 0], DataUnit [nominalTRAN = TRAN], DataUnit [nominalTRAN = IM Transfer], DataUnit [nominalTRAN = I], DataUnit [nominalTRAN = 02], DataUnit [nominalTRAN = Balance Sheet], DataUnit [nominalTRAN = Both], DataUnit [nominalTRAN = A], DataUnit [nominalTRAN = ***], DataUnit [nominalTRAN = Both], DataUnit [nominalTRAN = 0], DataUnit [nominalSTKR = STKR], DataUnit [nominalSTKR = IM Stock Revaluation], DataUnit [nominalSTKR = I], DataUnit [nominalSTKR = 02], DataUnit [nominalSTKR = Balance Sheet], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = A], DataUnit [nominalSTKR = ***], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = 0], DataUnit [nominalOCST = OCST], DataUnit [nominalOCST = IM On Cost], DataUnit [nominalOCST = I], DataUnit [nominalOCST = 02], DataUnit [nominalOCST = Balance Sheet], DataUnit [nominalOCST = Both], DataUnit [nominalOCST = A], DataUnit [nominalOCST = ***], DataUnit [nominalOCST = Both], DataUnit [nominalOCST = 0]]</td>
+<td></td>
+<td>544</td>
+<td>com.adv.qa.selenium.tests.currency.A018F_Ledger_Control_Nominals@7995092a</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A018G_Ledger_Control_Nominals.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A018G_Ledger_Control_Nominals<br>Parameters: [DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominalSONY = SONY], DataUnit [nominalSONY = Sony Account], DataUnit [nominalSONY = T], DataUnit [nominalSONY = 04], DataUnit [nominalSONY = Profit & Loss], DataUnit [nominalSONY = Both], DataUnit [nominalSONY = A], DataUnit [nominalSONY = ***], DataUnit [nominalSONY = Both], DataUnit [nominalSONY = 0], DataUnit [nominalPION = PION], DataUnit [nominalPION = Pioneer Account], DataUnit [nominalPION = T], DataUnit [nominalPION = 04], DataUnit [nominalPION = Profit & Loss], DataUnit [nominalPION = Both], DataUnit [nominalPION = A], DataUnit [nominalPION = ***], DataUnit [nominalPION = Both], DataUnit [nominalPION = 0], DataUnit [nominalTOSH = TOSH], DataUnit [nominalTOSH = Toshiba Account], DataUnit [nominalTOSH = T], DataUnit [nominalTOSH = 04], DataUnit [nominalTOSH = Profit & Loss], DataUnit [nominalTOSH = Both], DataUnit [nominalTOSH = A], DataUnit [nominalTOSH = ***], DataUnit [nominalTOSH = Both], DataUnit [nominalTOSH = 0], DataUnit [nominalPANN = PANN], DataUnit [nominalPANN = Panasonic Account], DataUnit [nominalPANN = T], DataUnit [nominalPANN = 04], DataUnit [nominalPANN = Profit & Loss], DataUnit [nominalPANN = Both], DataUnit [nominalPANN = A], DataUnit [nominalPANN = ***], DataUnit [nominalPANN = Both], DataUnit [nominalPANN = 0], DataUnit [nominalWHAF = WHAF], DataUnit [nominalWHAF = Wharfedale Account], DataUnit [nominalWHAF = T], DataUnit [nominalWHAF = 04], DataUnit [nominalWHAF = Profit & Loss], DataUnit [nominalWHAF = Both], DataUnit [nominalWHAF = A], DataUnit [nominalWHAF = ***], DataUnit [nominalWHAF = Both], DataUnit [nominalWHAF = 0], DataUnit [nominalSHIN = SHIN], DataUnit [nominalSHIN = Shinco Account], DataUnit [nominalSHIN = T], DataUnit [nominalSHIN = 04], DataUnit [nominalSHIN = Profit & Loss], DataUnit [nominalSHIN = Both], DataUnit [nominalSHIN = A], DataUnit [nominalSHIN = ***], DataUnit [nominalSHIN = Both], DataUnit [nominalSHIN = 0], DataUnit [nominalGRUN = GRUN], DataUnit [nominalGRUN = Grundig Account], DataUnit [nominalGRUN = T], DataUnit [nominalGRUN = 04], DataUnit [nominalGRUN = Profit & Loss], DataUnit [nominalGRUN = Both], DataUnit [nominalGRUN = A], DataUnit [nominalGRUN = ***], DataUnit [nominalGRUN = Both], DataUnit [nominalGRUN = 0], DataUnit [nominalSAMS = SAMS], DataUnit [nominalSAMS = Samsung Account], DataUnit [nominalSAMS = T], DataUnit [nominalSAMS = 04], DataUnit [nominalSAMS = Profit & Loss], DataUnit [nominalSAMS = Both], DataUnit [nominalSAMS = A], DataUnit [nominalSAMS = ***], DataUnit [nominalSAMS = Both], DataUnit [nominalSAMS = 0], DataUnit [nominalHITC = HITC], DataUnit [nominalHITC = Hitachi Account], DataUnit [nominalHITC = T], DataUnit [nominalHITC = 04], DataUnit [nominalHITC = Profit & Loss], DataUnit [nominalHITC = Both], DataUnit [nominalHITC = A], DataUnit [nominalHITC = ***], DataUnit [nominalHITC = Both], DataUnit [nominalHITC = 0], DataUnit [nominalAIWA = AIWA], DataUnit [nominalAIWA = Aiwa Account], DataUnit [nominalAIWA = T], DataUnit [nominalAIWA = 04], DataUnit [nominalAIWA = Profit & Loss], DataUnit [nominalAIWA = Both], DataUnit [nominalAIWA = A], DataUnit [nominalAIWA = ***], DataUnit [nominalAIWA = Both], DataUnit [nominalAIWA = 0]]</td>
+<td></td>
+<td>586</td>
+<td>com.adv.qa.selenium.tests.currency.A018G_Ledger_Control_Nominals@7fc2413d</td></tr>
+</table><p>
+</body>
+</html>

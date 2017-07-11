@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A040_ICA_Data_EntryTest>
+<Verification1>05/07/2017 12:14:04 | Pass : Login page displayed</Verification1>
+<Verification2>05/07/2017 12:14:12 | Pass : Command line displayed</Verification2>
+<Verification3>05/07/2017 12:14:20 | Pass : Command line displayed</Verification3>
+<Verification4>05/07/2017 12:14:49 | Pass : Search page displayed</Verification4>
+<Verification5>05/07/2017 12:18:13 | Pass : Journal Lines values are  as expected</Verification5>
+<Verification6>05/07/2017 12:18:57 | Pass : Journal Lines values are  as expected</Verification6>
+</A040_ICA_Data_EntryTest>
+</TestCase>
+</SeleniumTestReport>

@@ -37,14 +37,11 @@ public class A024A_Batch_TypesTest extends BaseTest{
 		String batchCode = dataRow.get("batchCode");
 
 		List<String> batchTypeForBR1 = dataRow.findNamesReturnValues("batchTypeForBR1");
-		
 		List<String> batchTypeForBR2 = dataRow.findNamesReturnValues("batchTypeForBR2");
 		List<String> batchTypeForBR3 = dataRow.findNamesReturnValues("batchTypeForBR3");
-
 		List<String> imBatchTypeForAcc = dataRow.findNamesReturnValues("imBatchTypeForAcc");
 		List<String> imBatchTypeForIMGL = dataRow.findNamesReturnValues("imBatchTypeForIMGL");
 		List<String> imBatchTypeForIMG1 = dataRow.findNamesReturnValues("imBatchTypeForIMG1");
-		
 		List<String> imBatchTypeForIMG2 = dataRow.findNamesReturnValues("imBatchTypeForIMG2");
 		List<String> imBatchTypeForIMRT = dataRow.findNamesReturnValues("imBatchTypeForIMRT");
 		List<String> imBatchTypeForIMMI = dataRow.findNamesReturnValues("imBatchTypeForIMMI");

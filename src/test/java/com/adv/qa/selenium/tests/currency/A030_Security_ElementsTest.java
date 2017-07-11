@@ -31,6 +31,7 @@ public class A030_Security_ElementsTest extends BaseTest{
 	public void verify(DataRow dataRow) throws InterruptedException{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("code");
 		List<String> securityList = dataRow.findNamesReturnValues("securityList");
 		String securityAdd = "EDTUSRCMPY ACT=INSERT,USER="+userName+",COMPANY="+companyId+",SCTY-GROUP="+securityList.get(0)+"";
@@ -97,19 +98,22 @@ public class A030_Security_ElementsTest extends BaseTest{
 		currencyPage.logOut(1);
 	}
 	
+
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){
 		super.tearDown();
-		
 	}
 	
 	@DataProvider
 	public Object[][] dp() 
-	{
+	{		
 		String folder = "src/test/resources/";
-		String xmlFilePath = folder  + "A030.xml";
-		DataResource dataResource = new DataResource(xmlFilePath);
-		DataRow [] [] rows = dataResource.getDataRows4DataProvider();
-		return rows;
+		String xmlFilePath = folder  + "E5H5.xml";
+		String[] nodeID = { "A030" };
+		String [] selectedNames = {"userName","passWord","code","securityList"};
+		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
+		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
+		return rows;	
 	}
+	
 }

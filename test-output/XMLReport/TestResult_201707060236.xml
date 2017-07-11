@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A040_ICA_Data_EntryTest>
+<Verification1>06/07/2017 02:36:13 | Pass : Login page displayed</Verification1>
+<Verification2>06/07/2017 02:36:21 | Pass : Command line displayed</Verification2>
+<Verification3>06/07/2017 02:36:24 | Pass : Command line displayed</Verification3>
+<Verification4>06/07/2017 02:37:00 | Pass : Struncture Enquiry values are  as expected</Verification4>
+<Verification5>06/07/2017 02:37:03 | Pass : Struncture Enquiry values are  as expected</Verification5>
+<Verification6>06/07/2017 02:37:07 | Pass : Struncture Enquiry values are  as expected</Verification6>
+<Verification7>06/07/2017 02:37:20 | Pass : Command line displayed</Verification7>
+<Verification8>06/07/2017 02:37:37 | Pass : Search page displayed</Verification8>
+<Verification9>06/07/2017 02:38:16 | Pass : Journal Lines values are  as expected</Verification9>
+<Verification10>06/07/2017 02:38:30 | Pass : Journal Lines values are  as expected</Verification10>
+<Verification11>06/07/2017 02:38:53 | Pass : Command line displayed</Verification11>
+<Verification12>06/07/2017 02:39:50 | Pass : Account Enquiry values are  as expected</Verification12>
+<Verification13>06/07/2017 02:40:03 | Pass : Account Enquiry values are  as expected</Verification13>
+<Verification14>06/07/2017 02:40:27 | Pass : Command line displayed</Verification14>
+<Verification15>06/07/2017 02:41:03 | Pass : Struncture Enquiry values are  as expected</Verification15>
+<Verification16>06/07/2017 02:41:07 | Pass : Struncture Enquiry values are  as expected</Verification16>
+<Verification17>06/07/2017 02:41:10 | Pass : Struncture Enquiry values are  as expected</Verification17>
+<Verification18>06/07/2017 02:41:23 | Pass : Command line displayed</Verification18>
+<Verification19>06/07/2017 02:41:59 | Pass : Struncture Enquiry values are  as expected</Verification19>
+<Verification20>06/07/2017 02:42:03 | Pass : Struncture Enquiry values are  as expected</Verification20>
+</A040_ICA_Data_EntryTest>
+</TestCase>
+</SeleniumTestReport>

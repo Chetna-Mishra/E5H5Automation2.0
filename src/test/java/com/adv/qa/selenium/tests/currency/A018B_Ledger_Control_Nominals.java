@@ -39,6 +39,7 @@ public class A018B_Ledger_Control_Nominals extends BaseTest{
 		List<String> nominal2051 = dataRow.findNamesReturnValues("nominal2051");
 		
 		List<String> nominal6200 = dataRow.findNamesReturnValues("nominal6200");
+		
 		List<String> nominal5900 = dataRow.findNamesReturnValues("nominal5900");
 		List<String> nominal7000 = dataRow.findNamesReturnValues("nominal7000");		
 		List<String> nominal7001 = dataRow.findNamesReturnValues("nominal7001");
@@ -66,12 +67,13 @@ public class A018B_Ledger_Control_Nominals extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 
-		createNominal(nominal2160,dataRow,currencyPage);
-		createNominal(nominal1660,dataRow,currencyPage);
-		createNominal(nominal5100,dataRow,currencyPage);
-		createNominal(nominal2051,dataRow,currencyPage);
-		createNominal(nominal6200,dataRow,currencyPage);
-		createNominal(nominal5900,dataRow,currencyPage);//Start Over
+//		createNominal(nominal2160,dataRow,currencyPage);
+//		createNominal(nominal1660,dataRow,currencyPage);
+//		createNominal(nominal5100,dataRow,currencyPage);
+//		createNominal(nominal2051,dataRow,currencyPage);
+//		createNominal(nominal6200,dataRow,currencyPage);
+		
+		createNominal(nominal5900,dataRow,currencyPage);
 		createNominal(nominal7000,dataRow,currencyPage);
 		createNominal(nominal7001,dataRow,currencyPage);
 		createNominal(nominalSALC,dataRow,currencyPage);

@@ -5,7 +5,6 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
         <code>XDJ</code>
-	
 	<tableValue1>TPB%</tableValue1>
 	<tableValue2>TPB%</tableValue2>
 		
@@ -632,16 +631,6 @@
        <tGroup>P/L Group T Purchasing</tGroup>
        <tGroup>1</tGroup>
        
-                   
-    </Row>
-
-	<Row id="A016A">
-	    <userName>BM1</userName>
-        <passWord>E5</passWord>
-       <code>EAI</code> 
-       
-       <value>N</value>    
-            
        <gGroup>G</gGroup>
        <gGroup>B/S PPV(Purchase Price Variance)</gGroup>
        <gGroup>0</gGroup>
@@ -652,7 +641,8 @@
             
        <iGroup>I</iGroup>
        <iGroup>B/S Group I Inventory</iGroup> 
-       <iGroup>0</iGroup>              
+       <iGroup>0</iGroup> 
+                   
     </Row>
 	
 	<Row id="A019">
@@ -809,8 +799,23 @@
 		<controlList>LAY1</controlList>
 		<controlList>2</controlList>
     </Row>
-	  	  
-	<Row id="A031">
+    
+	<Row id="A030">
+ 			<userName>QUERY</userName>
+          	<passWord>E5</passWord>
+        
+            <code>ENI</code> 
+            <code>AFF</code>
+			
+			<securityList>STD</securityList>
+			<securityList>00</securityList>
+			<securityList>HQ</securityList>
+			<securityList>STD</securityList>
+			<securityList>Access to all E5 application function</securityList>
+			
+      </Row>
+ 
+ 	<Row id="A031">
 	    <userName>EXPED</userName>
         <passWord>E5</passWord>
         <code>EAA</code>
@@ -831,13 +836,23 @@
 	<Row id="A035">
 	    <userName>IM</userName>
         <passWord>E5</passWord>
+       
         <code>Submit EP3</code> 
         <process>EP3</process>
         
+		<ep3ProcessList>Submit EP3</ep3ProcessList> 
+        <ep3ProcessList>EPB</ep3ProcessList>
+        <ep3ProcessList>EP3</ep3ProcessList>
+        <ep3ProcessList>E5H5EP3</ep3ProcessList>
+ 		<ep3ProcessList>00</ep3ProcessList>
+        
+   <!--      
  		<structureList>EPB</structureList>
  		<structureList>E5H5EP3</structureList>
  		<structureList>00</structureList>
  		<structureList>30 Apr 2014</structureList>
+ 	 -->	
+ 		
     </Row>
 	  	  
 	<Row id="A036">
@@ -876,18 +891,37 @@
 	<Row id="A038">
 	    <userName>IM</userName>
         <passWord>E5</passWord>
-        <code>Submit EP2</code> 
-        <process>EP2</process>
-        
-        <processList>EPA</processList>
- 		<processList>E5H5EP2</processList>
- 		<processList>Y</processList>
+       
+      	<ep2ProcessList>Submit EP2</ep2ProcessList> 
+        <ep2ProcessList>EPA</ep2ProcessList>
+        <ep2ProcessList>EP2</ep2ProcessList>
+        <ep2ProcessList>E5H5EP2</ep2ProcessList>
+ 		<ep2ProcessList>PM</ep2ProcessList>
+
     </Row>
 	  	  
 	<Row id="A041">
 	    <userName>IM</userName>
         <passWord>E5</passWord>
         
+        <ep1ProcessList>Submit EP1</ep1ProcessList> 
+        <ep1ProcessList>EPC</ep1ProcessList>
+        <ep1ProcessList>EP1</ep1ProcessList>
+        <ep1ProcessList>E5H5EP1</ep1ProcessList>
+ 		<ep1ProcessList>PM</ep1ProcessList>
+ 		
+ 		<ep2ProcessList>Submit EP2</ep2ProcessList> 
+        <ep2ProcessList>EPA</ep2ProcessList>
+        <ep2ProcessList>EP2</ep2ProcessList>
+        <ep2ProcessList>E5H5EP2</ep2ProcessList>
+ 		<ep2ProcessList>PM</ep2ProcessList>
+ 		
+		<ep3ProcessList>Submit EP3</ep3ProcessList> 
+        <ep3ProcessList>EPB</ep3ProcessList>
+        <ep3ProcessList>EP3</ep3ProcessList>
+        <ep3ProcessList>E5H5EP3</ep3ProcessList>
+ 		<ep3ProcessList>00</ep3ProcessList>
+ 		
         <ep4ProcessList>Submit EP4</ep4ProcessList> 
         <ep4ProcessList>EAQ</ep4ProcessList>
         <ep4ProcessList>EP4</ep4ProcessList>
@@ -899,6 +933,13 @@
         <ep5ProcessList>EP5</ep5ProcessList>
         <ep5ProcessList>E5H5EP5</ep5ProcessList>		
  		<ep5ProcessList>30 Apr 2014</ep5ProcessList>
+ 		
+ 		<ep1PathFun>1</ep1PathFun>
+ 		<ep1PathFun>2</ep1PathFun>
+ 		<ep1PathFun>3</ep1PathFun>
+ 		<ep1PathFun>Rebuild</ep1PathFun>
+ 		
+ 		
     </Row>
 
 	<Row id="A042">

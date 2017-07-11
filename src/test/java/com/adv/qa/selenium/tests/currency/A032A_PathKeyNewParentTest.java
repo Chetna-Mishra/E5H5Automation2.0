@@ -40,6 +40,7 @@ public class A032A_PathKeyNewParentTest extends BaseTest{
 		List<String> pathKeyN2 = dataRow.findNamesReturnValues("pathKeyN2");		
 		List<String> pathKeyS1 = dataRow.findNamesReturnValues("pathKeyS1");
 		List<String> pathKeyE1 = dataRow.findNamesReturnValues("pathKeyE1");
+		List<String> pathKeyW1 = dataRow.findNamesReturnValues("pathKeyW1");
 		List<String> pathKeyNBTZ = dataRow.findNamesReturnValues("pathKeyNBTZ");
 		List<String> pathKeySBTZ =	dataRow.findNamesReturnValues("pathKeySBTZ");			
 		List<String> pathKeyEBTZ = dataRow.findNamesReturnValues("pathKeyEBTZ");
@@ -58,6 +59,7 @@ public class A032A_PathKeyNewParentTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Path Key List","Currency search page","displayed");
 		
@@ -67,6 +69,7 @@ public class A032A_PathKeyNewParentTest extends BaseTest{
 		editManagementCode(currencyPage,pathKeyN2);
 		editManagementCode(currencyPage,pathKeyS1);
 		editManagementCode(currencyPage,pathKeyE1);
+		editManagementCode(currencyPage,pathKeyW1);
 		editManagementCode(currencyPage,pathKeyNBTZ);
 		editManagementCode(currencyPage,pathKeySBTZ);
 		editManagementCode(currencyPage,pathKeyEBTZ);
@@ -81,7 +84,7 @@ public class A032A_PathKeyNewParentTest extends BaseTest{
 	
 	{
 		
-		currencyPage.searchValuePathKey(companyId,pathkey,6,4);
+		currencyPage.searchValuePathKey(companyId,pathkey);
 		
 		if(currencyPage.verifyValues(pathkey.get(2)))
 		

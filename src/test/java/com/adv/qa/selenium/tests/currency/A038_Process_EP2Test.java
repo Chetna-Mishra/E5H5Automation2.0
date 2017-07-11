@@ -31,10 +31,8 @@ public class A038_Process_EP2Test extends BaseTest{
 	public void verify(DataRow dataRow) throws InterruptedException{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
-		String currencyCode = dataRow.get("code");
-		String process = dataRow.get("process");	
-		List<String> processList = dataRow.findNamesReturnValues("processList");
-		boolean value = false;
+		List<String> ep2ProcessList = dataRow.findNamesReturnValues("ep2ProcessList");
+
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -48,37 +46,70 @@ public class A038_Process_EP2Test extends BaseTest{
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
-		currencyPage.fillCurrenceyCode(currencyCode);
+		currencyPage.fillCurrenceyCode(ep2ProcessList.get(0));
+		
 		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+processList.get(0)+" - Postings Rebuild Parameters","Structure Rebuild page","displayed");
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+ep2ProcessList.get(1)+" - Postings Rebuild Parameters","Structure Rebuild page","displayed");
 		
 		/*Create new process*/
-		currencyPage.enterEP2ProcessDetails(processList,companyId);	
+		currencyPage.enterEP2ProcessDetails(ep2ProcessList,companyId);	
 		
 		currencyPage.enterAboutsubmitDetails();
 		
-		String statBefore = currencyPage.getProcessDetails(process,processList.get(1));
-		Assert.assertEquals(testcases,statBefore, "2","Precess has","entered task list");
-		
-		if(statBefore.equals("2")){
-			currencyPage.updateProcess(process,processList.get(1));
-		}
-		
-		String statAfter = currencyPage.getProcessDetails(process,processList.get(1));
-		
-		if(statAfter == null || statAfter.equals("3"))
-		{
-			value = true;			
-		}
-		Assert.assertTrue(testcases,value,"Precess "+process,"performed on "+processList.get(1));
-		
-		currencyPage.clickOnCancel();
-		
-		currencyPage.isConfirmPopUpDisplayed();
+		processVerification(currencyPage,ep2ProcessList.get(2), ep2ProcessList.get(3));
 		
 		currencyPage.logOut(1);
 	}
 
+	
+	public void processVerification(CurrencyPage currencyPage,String process,String Request){
+		
+		boolean value = false;
+		
+		String statBefore = currencyPage.getProcessDetails(process, Request);
+		
+		Assert.assertEquals(testcases,statBefore, "2","Precess has","entered task list");
+		
+		if(statBefore.equals("2")){
+			currencyPage.updateProcess(process, Request);
+		}
+		
+		String statAfter = currencyPage.getProcessDetails(process, Request);
+		
+		
+
+		if (statAfter == null || statAfter.equals("3")) {
+			value = true;
+		}
+		
+		Assert.assertTrue(testcases,value,"Precess "+process,"performed on "+Request);
+		
+		currencyPage.clickOnCancel();
+		
+		currencyPage.isConfirmPopUpDisplayed();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

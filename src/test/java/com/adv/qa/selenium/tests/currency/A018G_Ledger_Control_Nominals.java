@@ -43,7 +43,8 @@ public class A018G_Ledger_Control_Nominals extends BaseTest{
 		List<String> nominalGRUN = dataRow.findNamesReturnValues("nominalGRUN");
 		List<String> nominalSAMS = dataRow.findNamesReturnValues("nominalSAMS");
 		List<String> nominalHITC = dataRow.findNamesReturnValues("nominalHITC");
-		List<String> nominalAIWA = dataRow.findNamesReturnValues("nominalAIWA");	
+		List<String> nominalAIWA = dataRow.findNamesReturnValues("nominalAIWA");
+		List<String> nominalAKAI = dataRow.findNamesReturnValues("nominalAKAI");
 
 		
 		/*Log in to application*/
@@ -77,7 +78,7 @@ public class A018G_Ledger_Control_Nominals extends BaseTest{
 		createNominal(nominalSAMS,dataRow,currencyPage);
 		createNominal(nominalHITC,dataRow,currencyPage);
 		createNominal(nominalAIWA,dataRow,currencyPage);
-		
+		createNominal(nominalAKAI,dataRow, currencyPage);
 		/*Exit from the company details page*/
 		currencyPage.clickOnCancel();
 		

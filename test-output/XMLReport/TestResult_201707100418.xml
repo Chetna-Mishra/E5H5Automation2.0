@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A040_ICA_Data_EntryTest>
+<Verification1>10/07/2017 04:18:31 | Pass : Login page displayed</Verification1>
+<Verification2>10/07/2017 04:18:40 | Pass : Command line displayed</Verification2>
+<Verification3>10/07/2017 04:18:42 | Pass : Command line displayed</Verification3>
+<Verification4>10/07/2017 04:19:17 | Pass : Struncture Enquiry values are  as expected</Verification4>
+</A040_ICA_Data_EntryTest>
+</TestCase>
+</SeleniumTestReport>

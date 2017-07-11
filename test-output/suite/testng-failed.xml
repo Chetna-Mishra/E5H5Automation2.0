@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [suite]">
+  <test name="suite11(failed)">
+    <classes>
+      <class name="com.adv.qa.selenium.tests.currency.A018B_Ledger_Control_Nominals">
+        <methods>
+          <include name="verify" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.adv.qa.selenium.tests.currency.A018B_Ledger_Control_Nominals -->
+    </classes>
+  </test> <!-- suite11(failed) -->
+</suite> <!-- Failed suite [suite] -->

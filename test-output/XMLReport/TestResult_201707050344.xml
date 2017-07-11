@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A040_ICA_Data_EntryTest>
+<Verification1>05/07/2017 03:44:43 | Pass : Login page displayed</Verification1>
+<Verification2>05/07/2017 03:44:54 | Pass : Command line displayed</Verification2>
+<Verification3>05/07/2017 03:44:56 | Pass : Command line displayed</Verification3>
+<Verification4>05/07/2017 03:45:32 | Pass : Struncture Enquiry values are  as expected</Verification4>
+<Verification5>05/07/2017 03:45:36 | Pass : Struncture Enquiry values are  as expected</Verification5>
+<Verification6>05/07/2017 03:45:49 | Pass : Command line displayed</Verification6>
+<Verification7>05/07/2017 03:46:40 | Pass : Transaction Enquiry values are  as expected</Verification7>
+<Verification8>05/07/2017 03:47:17 | Fail : Transaction Enquiry values are not  as expected</Verification8>
+</A040_ICA_Data_EntryTest>
+</TestCase>
+</SeleniumTestReport>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>TestNG:  suite1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>suite1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 06 19:06:53 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1134 seconds (1134985 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest<br>Parameters: [DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [currencyCode = AQD], DataUnit [processZY1 = SUBMIT ZY1], DataUnit [processZY1 =  ], DataUnit [processZY1 = ZY1], DataUnit [processAF5 = SUBMIT AF5], DataUnit [processAF5 =  ], DataUnit [processAF5 = AF5]]</td>
+<td></td>
+<td>349</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest@667a738</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest<br>Parameters: [DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = XDJ], DataUnit [tableValue1 = TPB%], DataUnit [tableValue2 = TPB%], DataUnit [entityValue1 = TPBSUPP], DataUnit [entityValue1 = 1], DataUnit [entityValue1 = 1], DataUnit [entityValue1 = 1], DataUnit [entityValue1 = 2], DataUnit [entityValue2 = TPBADDR], DataUnit [entityValue2 = 0], DataUnit [entityValue2 = 1], DataUnit [entityValue2 = 0], DataUnit [entityValue2 = 1]]</td>
+<td></td>
+<td>320</td>
+<td>com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest@36f0f1be</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest<br>Parameters: [DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AAB], DataUnit [commandParameter = EDTSYSCONT ACT=AMEND]]</td>
+<td></td>
+<td>65</td>
+<td>com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest@157632c9</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest<br>Parameters: [DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGA], DataUnit [eurCurrency = EUR], DataUnit [eurCurrency = Euro], DataUnit [eurCurrency = 2], DataUnit [eurCurrency = EURO], DataUnit [eurCurrency = EUROS], DataUnit [eurCurrency = EURO-CENT], DataUnit [eurCurrency = EUROCENTS], DataUnit [eurCurrency = Euro], DataUnit [eurCurrency = ], DataUnit [eurCurrency = ], DataUnit [eurCurrency = Hundredth], DataUnit [demCurrency = DEM], DataUnit [demCurrency = DEUTCHSMARK], DataUnit [demCurrency = 2], DataUnit [demCurrency = MARK], DataUnit [demCurrency = MARKS], DataUnit [demCurrency = PFENNING], DataUnit [demCurrency = PFENNINGS], DataUnit [demCurrency = Participating], DataUnit [demCurrency = 1.97738], DataUnit [demCurrency = 01 Jan 1998], DataUnit [demCurrency = Hundredth], DataUnit [usdCurrency = USD], DataUnit [usdCurrency = US DOLLAR], DataUnit [usdCurrency = 2], DataUnit [usdCurrency = DOLLAR], DataUnit [usdCurrency = DOLLARS], DataUnit [usdCurrency = CENT], DataUnit [usdCurrency = CENTS], DataUnit [usdCurrency = Not Participating], DataUnit [usdCurrency = ], DataUnit [usdCurrency = ], DataUnit [usdCurrency = Hundredth], DataUnit [frfCurrency = FRF], DataUnit [frfCurrency = French Franc], DataUnit [frfCurrency = 2], DataUnit [frfCurrency = FRANC], DataUnit [frfCurrency = FRANCS], DataUnit [frfCurrency = CENTIME], DataUnit [frfCurrency = CENTIMES], DataUnit [frfCurrency = Participating], DataUnit [frfCurrency = 6.63186], DataUnit [frfCurrency = 01 Jan 1998], DataUnit [frfCurrency = Hundredth]]</td>
+<td></td>
+<td>338</td>
+<td>com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest@6ee12bac</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>TestNG:  suite18</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>suite18</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 05 22:28:16 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>900 seconds (900997 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A032_Management_CodesTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A032_Management_CodesTest<br>Parameters: [DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [code = EBD], DataUnit [values = B], DataUnit [n1ManagementCode = N1], DataUnit [n1ManagementCode = Newcastle], DataUnit [n1ManagementCode = N1], DataUnit [n1ManagementCode = 00], DataUnit [n1ManagementCode = NORTH], DataUnit [n2ManagementCode = N2], DataUnit [n2ManagementCode = Sunderland], DataUnit [n2ManagementCode = N2], DataUnit [n2ManagementCode = 00], DataUnit [n2ManagementCode = NORTH], DataUnit [s1ManagementCode = S1], DataUnit [s1ManagementCode = London], DataUnit [s1ManagementCode = S1], DataUnit [s1ManagementCode = 00], DataUnit [s1ManagementCode = SOUTH], DataUnit [e1ManagementCode = E1], DataUnit [e1ManagementCode = Norwich], DataUnit [e1ManagementCode = E1], DataUnit [e1ManagementCode = 00], DataUnit [e1ManagementCode = EAST], DataUnit [w1ManagementCode = W1], DataUnit [w1ManagementCode = Devon], DataUnit [w1ManagementCode = W1], DataUnit [w1ManagementCode = 00], DataUnit [w1ManagementCode = WEST], DataUnit [nbtzManagementCode = NBTZ], DataUnit [nbtzManagementCode = NBTZ], DataUnit [nbtzManagementCode = NBTZ], DataUnit [nbtzManagementCode = 00], DataUnit [nbtzManagementCode = NORTH], DataUnit [sbtzManagementCode = SBTZ], DataUnit [sbtzManagementCode = SBTZ], DataUnit [sbtzManagementCode = SBTZ], DataUnit [sbtzManagementCode = 00], DataUnit [sbtzManagementCode = SOUTH], DataUnit [ebtzManagementCode = EBTZ], DataUnit [ebtzManagementCode = EBTZ], DataUnit [ebtzManagementCode = EBTZ], DataUnit [ebtzManagementCode = 00], DataUnit [ebtzManagementCode = EAST], DataUnit [wbtzManagementCode = WBTZ], DataUnit [wbtzManagementCode = WBTZ], DataUnit [wbtzManagementCode = WBTZ], DataUnit [wbtzManagementCode = 00], DataUnit [wbtzManagementCode = WEST]]</td>
+<td></td>
+<td>351</td>
+<td>com.adv.qa.selenium.tests.currency.A032_Management_CodesTest@7a4ccb53</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A032A_PathKeyNewParentTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A032A_PathKeyNewParentTest<br>Parameters: [DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [currencyCode = ECG], DataUnit [pathKeyN1 = 00], DataUnit [pathKeyN1 = 2], DataUnit [pathKeyN1 = N1], DataUnit [pathKeyN1 = NORTH], DataUnit [pathKeyN2 = 00], DataUnit [pathKeyN2 = 2], DataUnit [pathKeyN2 = N2], DataUnit [pathKeyN2 = NORTH], DataUnit [pathKeyS1 = 00], DataUnit [pathKeyS1 = 2], DataUnit [pathKeyS1 = S1], DataUnit [pathKeyS1 = SOUTH], DataUnit [pathKeyE1 = 00], DataUnit [pathKeyE1 = 2], DataUnit [pathKeyE1 = E1], DataUnit [pathKeyE1 = EAST], DataUnit [pathKeyW1 = 00], DataUnit [pathKeyW1 = 2], DataUnit [pathKeyW1 = W1], DataUnit [pathKeyW1 = WEST], DataUnit [pathKeyNBTZ = 00], DataUnit [pathKeyNBTZ = 2], DataUnit [pathKeyNBTZ = NBTZ], DataUnit [pathKeyNBTZ = NORTH], DataUnit [pathKeySBTZ = 00], DataUnit [pathKeySBTZ = 2], DataUnit [pathKeySBTZ = SBTZ], DataUnit [pathKeySBTZ = SOUTH], DataUnit [pathKeyEBTZ = 00], DataUnit [pathKeyEBTZ = 2], DataUnit [pathKeyEBTZ = EBTZ], DataUnit [pathKeyEBTZ = EAST], DataUnit [pathKeyWBTZ = 00], DataUnit [pathKeyWBTZ = 2], DataUnit [pathKeyWBTZ = WBTZ], DataUnit [pathKeyWBTZ = WEST]]</td>
+<td></td>
+<td>524</td>
+<td>com.adv.qa.selenium.tests.currency.A032A_PathKeyNewParentTest@309e345f</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001A_On_line_AuditingTest>
+<Verification1>06/07/2017 05:25:22 | Pass : Login page displayed</Verification1>
+<Verification2>06/07/2017 05:25:30 | Pass : Command line displayed</Verification2>
+<Verification3>06/07/2017 05:25:44 | Pass : Search page displayed</Verification3>
+<Verification4>06/07/2017 05:26:11 | Pass : Currency TPBSUPP displayed in the list</Verification4>
+<Verification5>06/07/2017 05:26:33 | Pass : Column definition displayed</Verification5>
+<Verification6>06/07/2017 05:26:36 | Pass : Column definition def displayed</Verification6>
+<Verification7>06/07/2017 05:27:08 | Pass : Currency TPBADDR displayed in the list</Verification7>
+<Verification8>06/07/2017 05:27:21 | Pass : Column definition displayed</Verification8>
+<Verification9>06/07/2017 05:27:22 | Pass : Column definition def displayed</Verification9>
+</A001A_On_line_AuditingTest>
+</TestCase>
+</SeleniumTestReport>

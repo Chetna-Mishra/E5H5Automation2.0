@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>TestNG:  suite10</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>suite10</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 06 21:15:07 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1099 seconds (1099763 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals<br>Parameters: [DataUnit [userName = ACCEPT], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal2500 = 2500], DataUnit [nominal2500 = Suspense Account], DataUnit [nominal2500 = A], DataUnit [nominal2500 = 02], DataUnit [nominal2500 = Balance Sheet], DataUnit [nominal2500 = Both], DataUnit [nominal2500 = A], DataUnit [nominal2500 = ***], DataUnit [nominal2500 = Both], DataUnit [nominal2500 = 0], DataUnit [nominal2600 = 2600], DataUnit [nominal2600 = Closeout Account], DataUnit [nominal2600 = A], DataUnit [nominal2600 = 09], DataUnit [nominal2600 = Balance Sheet], DataUnit [nominal2600 = Both], DataUnit [nominal2600 = A], DataUnit [nominal2600 = ***], DataUnit [nominal2600 = Both], DataUnit [nominal2600 = 0], DataUnit [nominal3000 = 3000], DataUnit [nominal3000 = Rounding Account], DataUnit [nominal3000 = A], DataUnit [nominal3000 = 02], DataUnit [nominal3000 = Balance Sheet], DataUnit [nominal3000 = Both], DataUnit [nominal3000 = A], DataUnit [nominal3000 = ***], DataUnit [nominal3000 = Both], DataUnit [nominal3000 = 0], DataUnit [nominal1500 = 1500], DataUnit [nominal1500 = Bank Account], DataUnit [nominal1500 = A], DataUnit [nominal1500 = 02], DataUnit [nominal1500 = Balance Sheet], DataUnit [nominal1500 = Both], DataUnit [nominal1500 = A], DataUnit [nominal1500 = ***], DataUnit [nominal1500 = Both], DataUnit [nominal1500 = 0], DataUnit [nominalGLICA = GLICA], DataUnit [nominalGLICA = GL ICA Account], DataUnit [nominalGLICA = A], DataUnit [nominalGLICA = 02], DataUnit [nominalGLICA = Balance Sheet], DataUnit [nominalGLICA = Both], DataUnit [nominalGLICA = A], DataUnit [nominalGLICA = ***], DataUnit [nominalGLICA = Both], DataUnit [nominalGLICA = 0], DataUnit [nominal1550 = 1550], DataUnit [nominal1550 = Purchasing Bank Account], DataUnit [nominal1550 = B], DataUnit [nominal1550 = 01], DataUnit [nominal1550 = Balance Sheet], DataUnit [nominal1550 = Both], DataUnit [nominal1550 = A], DataUnit [nominal1550 = ***], DataUnit [nominal1550 = Both], DataUnit [nominal1550 = 0], DataUnit [nominal6300 = 6300], DataUnit [nominal6300 = Rent Account], DataUnit [nominal6300 = A], DataUnit [nominal6300 = 02], DataUnit [nominal6300 = Balance Sheet], DataUnit [nominal6300 = Both], DataUnit [nominal6300 = A], DataUnit [nominal6300 = GBP], DataUnit [nominal6300 = Base], DataUnit [nominal6300 = 0], DataUnit [nominal6400 = 6400], DataUnit [nominal6400 = Business Rate Account], DataUnit [nominal6400 = A], DataUnit [nominal6400 = 02], DataUnit [nominal6400 = Balance Sheet], DataUnit [nominal6400 = Both], DataUnit [nominal6400 = A], DataUnit [nominal6400 = GBP], DataUnit [nominal6400 = Base], DataUnit [nominal6400 = 0], DataUnit [nominalAKAI = AKAI], DataUnit [nominalAKAI = Akai Account], DataUnit [nominalAKAI = T], DataUnit [nominalAKAI = 04], DataUnit [nominalAKAI = Profit & Loss], DataUnit [nominalAKAI = Both], DataUnit [nominalAKAI = A], DataUnit [nominalAKAI = ***], DataUnit [nominalAKAI = Base], DataUnit [nominalAKAI = 0]]</td>
+<td></td>
+<td>538</td>
+<td>com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals@1460a8c0</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals<br>Parameters: [DataUnit [userName = GREC], DataUnit [passWord = E5], DataUnit [code = EBA], DataUnit [nominal6500 = 6500], DataUnit [nominal6500 = Electricity Account], DataUnit [nominal6500 = A], DataUnit [nominal6500 = 02], DataUnit [nominal6500 = Balance Sheet], DataUnit [nominal6500 = Both], DataUnit [nominal6500 = A], DataUnit [nominal6500 = GBP], DataUnit [nominal6500 = Base], DataUnit [nominal6500 = 0], DataUnit [nominalBANKR = BANKR], DataUnit [nominalBANKR = bank rec bank], DataUnit [nominalBANKR = A], DataUnit [nominalBANKR = 02], DataUnit [nominalBANKR = Balance Sheet], DataUnit [nominalBANKR = Both], DataUnit [nominalBANKR = A], DataUnit [nominalBANKR = ***], DataUnit [nominalBANKR = Both], DataUnit [nominalBANKR = 0], DataUnit [nominalBANKR1 = BANKR1], DataUnit [nominalBANKR1 = bank rec bank], DataUnit [nominalBANKR1 = A], DataUnit [nominalBANKR1 = 02], DataUnit [nominalBANKR1 = Balance Sheet], DataUnit [nominalBANKR1 = Both], DataUnit [nominalBANKR1 = A], DataUnit [nominalBANKR1 = ***], DataUnit [nominalBANKR1 = Both], DataUnit [nominalBANKR1 = 0], DataUnit [nominalBANKR2 = BANKR2], DataUnit [nominalBANKR2 = bank rec bank], DataUnit [nominalBANKR2 = A], DataUnit [nominalBANKR2 = 02], DataUnit [nominalBANKR2 = Balance Sheet], DataUnit [nominalBANKR2 = Both], DataUnit [nominalBANKR2 = A], DataUnit [nominalBANKR2 = ***], DataUnit [nominalBANKR2 = Both], DataUnit [nominalBANKR2 = 0], DataUnit [nominal2000 = 2000], DataUnit [nominal2000 = Creditors Control], DataUnit [nominal2000 = B], DataUnit [nominal2000 = 02], DataUnit [nominal2000 = Balance Sheet], DataUnit [nominal2000 = Both], DataUnit [nominal2000 = A], DataUnit [nominal2000 = ***], DataUnit [nominal2000 = Both], DataUnit [nominal2000 = 0], DataUnit [nominal5000 = 5000], DataUnit [nominal5000 = Discount Receivable], DataUnit [nominal5000 = T], DataUnit [nominal5000 = 04], DataUnit [nominal5000 = Profit & Loss], DataUnit [nominal5000 = Both], DataUnit [nominal5000 = A], DataUnit [nominal5000 = ***], DataUnit [nominal5000 = Both], DataUnit [nominal5000 = 0], DataUnit [nominal5050 = 5050], DataUnit [nominal5050 = Bank Charges], DataUnit [nominal5050 = T], DataUnit [nominal5050 = 04], DataUnit [nominal5050 = Profit & Loss], DataUnit [nominal5050 = Both], DataUnit [nominal5050 = A], DataUnit [nominal5050 = ***], DataUnit [nominal5050 = Both], DataUnit [nominal5050 = 0], DataUnit [nominal2150 = 2150], DataUnit [nominal2150 = VAT Suspense], DataUnit [nominal2150 = B], DataUnit [nominal2150 = 03], DataUnit [nominal2150 = Balance Sheet], DataUnit [nominal2150 = Both], DataUnit [nominal2150 = A], DataUnit [nominal2150 = ***], DataUnit [nominal2150 = Both], DataUnit [nominal2150 = 0], DataUnit [nominalSTKR = STKR], DataUnit [nominalSTKR = IM Stock Revaluation], DataUnit [nominalSTKR = I], DataUnit [nominalSTKR = 02], DataUnit [nominalSTKR = Balance Sheet], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = A], DataUnit [nominalSTKR = ***], DataUnit [nominalSTKR = Both], DataUnit [nominalSTKR = 0]]</td>
+<td></td>
+<td>535</td>
+<td>com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals@4f638935</td></tr>
+</table><p>
+</body>
+</html>

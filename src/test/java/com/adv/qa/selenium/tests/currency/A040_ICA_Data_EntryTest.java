@@ -140,8 +140,8 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 		List<String> structureEnqForEBTZ = dataRow.findNamesReturnValues("structureEnqForEBTZ");
 
 		List<List<String>> EstrctureList1 = new ArrayList<>();
-		SstrctureList1.add(structureEnqForE1);
-		SstrctureList1.add(structureEnqForEBTZ);
+		EstrctureList1.add(structureEnqForE1);
+		EstrctureList1.add(structureEnqForEBTZ);
 
 		List<String> EaccountGLICA = dataRow.findNamesReturnValues("EaccountGLICA");
 
@@ -172,10 +172,12 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 		List<String> Waccount1GLICA = dataRow.findNamesReturnValues("Waccount1GLICA");
 		List<String> Waccount2GLICA = dataRow.findNamesReturnValues("Waccount2GLICA");
+		List<String> Waccount3GLICA = dataRow.findNamesReturnValues("Waccount3GLICA");
 
 		List<List<String>> WAccList = new ArrayList<>();
 		WAccList.add(Waccount1GLICA);
 		WAccList.add(Waccount2GLICA);
+		WAccList.add(Waccount3GLICA);
 
 		/* Log in to application */
 		LoginPage loginPage = new LoginPage(driver);
@@ -191,7 +193,6 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 		// EDB
 		enterJournalDetails(currencyPage, dataRow, FJounList, firstICAData, 2);// 1st
-																				// JournalDetails
 
 		// EJI
 		accountDetailEnquiry(currencyPage, dataRow, NAccList1, aGroup, 2);
@@ -201,60 +202,68 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 		// EJJ
 		verifyBalanceEnquiry(currencyPage, dataRow, NstrctureList1, NstructureEnqForA02, 3);
 
-		currencyPage.clickOnCancel();
-
-		/* Verify command line */
-		Assert.assertTrue(testcases, currencyPage.isCommandDisplayed(), "Command line", "displayed");
-
 		// EDB
 		enterJournalDetails(currencyPage, dataRow, SJounList, secondICAData, 2); // 2nd
 																					// JournalDetails
 
 		// EJI
-		accountDetailEnquiry(currencyPage, dataRow, NAccList2, aGroup, 2);
+		accountDetailEnquiry(currencyPage, dataRow, NAccList2, aGroup, 2);// 2nd
+																			// AccountDetails
 
 		currencyPage.clickOnCancel();
 
 		// EJJ
-		verifyBalanceEnquiry(currencyPage, dataRow, NstrctureList2, NstructureEnqForA02, 3);
+		verifyBalanceEnquiry(currencyPage, dataRow, NstrctureList2, NstructureEnqForA02, 3); // 2nd
+																								// BalanceEnq
 
-		verifyBalanceEnquiry(currencyPage, dataRow, SstrctureList1, SstructureEnqForA02, 2);
+		verifyBalanceEnquiry(currencyPage, dataRow, SstrctureList1, SstructureEnqForA02, 2);//South
 
 		// EJB
-		TansacDetailEnquiry(currencyPage, dataRow, NSAccList1, 2);
+		TansacDetailEnquiry(currencyPage, dataRow, NSAccList1, 2);//North & South
+
+		currencyPage.clickOnCancel();
 
 		// EDB
 		enterJournalDetails(currencyPage, dataRow, TJounList, thirdICAData, 3); // 3rd
 																				// JournalDetails
 
 		// EJJ
-		verifyBalanceEnquiry(currencyPage, dataRow, NstrctureList3, NstructureEnqForA02, 3);
+		verifyBalanceEnquiry(currencyPage, dataRow, NstrctureList3, NstructureEnqForA02, 3);//North
 
 		// EJB
-		TansacDetailEnquiry1(currencyPage, dataRow, NAccList4, 2);
+		TansacDetailEnquiry1(currencyPage, dataRow, NAccList4, 2);//North
+
+		currencyPage.clickOnCancel();
+		
+		// EJJ
+		verifyBalanceEnquiry(currencyPage, dataRow, EstrctureList1, EstructureEnqForA02, 2);//East
+
+		// EJB
+		TansacDetailEnquiry1(currencyPage, dataRow, EAccList, 1);//East
+
+		currencyPage.clickOnCancel();
 
 		// EJJ
-		verifyBalanceEnquiry(currencyPage, dataRow, EstrctureList1, EstructureEnqForA02, 2);
+		verifyBalanceEnquiry(currencyPage, dataRow, SstrctureList2, SstructureEnqForA02, 2);//South
 
 		// EJB
-		TansacDetailEnquiry1(currencyPage, dataRow, EAccList, 1);
+		TansacDetailEnquiry1(currencyPage, dataRow, SAccList, 2);//South
 
+		/* Need to check data */
 		// EJJ
-		verifyBalanceEnquiry(currencyPage, dataRow, SstrctureList2, SstructureEnqForA02, 2);
+		 verifyBalanceEnquiry(currencyPage, dataRow, WstrctureList1,WstructureEnqForA02, 2);//West
 
-		// EJB
-		TansacDetailEnquiry1(currencyPage, dataRow, SAccList, 2);
+		 // EJB
+		 TansacDetailEnquiry1(currencyPage, dataRow, WAccList, 3);//West
+		 
+		 currencyPage.clickOnCancel();
 
-		// EJJ
-		verifyBalanceEnquiry(currencyPage, dataRow, WstrctureList1, WstructureEnqForA02, 2);
-
-		// EJB
-		TansacDetailEnquiry1(currencyPage, dataRow, WAccList, 2);
-
-		currencyPage.logOut(2);
+		 currencyPage.logOut(1);
 
 	}
 
+	
+	
 	// maxVal=3, int maxVal is for number of List element
 	// int i =0, for Picking List values
 	// i+1, is for row number
@@ -265,6 +274,8 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 		String code = "EDTEBTCH ACT=INSERT,CMPY=" + companyId;
 
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+
+		Assert.assertTrue(testcases, currencyPage.isCommandDisplayed(), "Command line", "displayed");
 
 		currencyPage.fillCurrenceyCode(code);
 
@@ -281,9 +292,18 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 		for (int i = 0; i < maxVal; i++) {
 
-			currencyPage.enterJournalLines(Journ.get(i), i + 1);
+			boolean enterJournalLines;
+
+			enterJournalLines = currencyPage.enterJournalLines(Journ.get(i), i + 1);
+
+			Assert.assertTrue(testcases, enterJournalLines, "Journal Lines values are", " as expected");
 
 		}
+		currencyPage.clickOnUpdate();
+
+		currencyPage.clickOnAcceptWarnings();
+
+		currencyPage.clickOnUpdate();
 
 	}
 
@@ -317,9 +337,7 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 	}
 
-	private void verifyBalanceEnquiry(CurrencyPage currencyPage, DataRow dataRow, List<List<String>> structure,
-
-			List<String> structureEnqForCategory, int maxVal) throws InterruptedException {
+	private void verifyBalanceEnquiry(CurrencyPage currencyPage, DataRow dataRow, List<List<String>> structure, List<String> structureEnqForCategory, int maxVal) throws InterruptedException {
 
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 
@@ -331,9 +349,9 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 		currencyPage.structureEnquiry(structureEnqForCategory);
 
-		boolean verifyStrEnqValuesForCost;
-
 		for (int i = 0; i < maxVal; i++) {
+
+			boolean verifyStrEnqValuesForCost;
 
 			verifyStrEnqValuesForCost = currencyPage.verifyStrEnqValues(structure.get(i), i + 1);
 			Assert.assertTrue(testcases, verifyStrEnqValuesForCost, "Struncture Enquiry values are", " as expected");
@@ -343,8 +361,7 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 	}
 
-	private void TansacDetailEnquiry(CurrencyPage currencyPage, DataRow dataRow, List<List<String>> Transc, int maxVal)
-			throws InterruptedException {
+	private void TansacDetailEnquiry(CurrencyPage currencyPage, DataRow dataRow, List<List<String>> Transc, int maxVal) throws InterruptedException {
 
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 
@@ -355,11 +372,11 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 		currencyPage.fillCurrenceyCode(currencyCode.get(3));
 
+		currencyPage.getTranDetailValues(Transc.get(0));
+
+		currencyPage.navigateToCostDetailPage();
+
 		for (int i = 0; i < maxVal; i++) {
-
-			currencyPage.getTranDetailValues(Transc.get(i));
-
-			currencyPage.navigateToCostDetailPage();
 
 			boolean verifyTranscValues;
 
@@ -367,8 +384,9 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 			Assert.assertTrue(testcases, verifyTranscValues, "Transaction Enquiry values are", " as expected");
 
-			currencyPage.clickOnCancel();
 		}
+		currencyPage.clickOnCancel();
+		currencyPage.clickOnCancel();
 
 	}
 
@@ -384,9 +402,9 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 
 		currencyPage.fillCurrenceyCode(currencyCode.get(3));
 
-		currencyPage.getTranDetailValues(Transc.get(0));
+		currencyPage.getTranDetailValues1(Transc.get(0));
 
-		currencyPage.navigateToCostDetailPage();
+		currencyPage.clickOnDrillDown();
 
 		for (int i = 0; i < maxVal; i++) {
 

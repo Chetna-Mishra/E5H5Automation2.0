@@ -73,6 +73,8 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 		createDefautStructure(currencyPage,structureForEast);
 		createDefautStructure(currencyPage,structureForWest);
 		createDefautStructure(currencyPage,structureForSusp);
+
+
 		
 		/*Exit from the structure element details page*/
 		currencyPage.clickOnCancel();
@@ -84,11 +86,12 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 		verifyValues(currencyPage,structureForWest);
 		verifyValues(currencyPage,structureForSusp);
 		
+		
 		currencyPage.searchValue(companyId,structureForSusp, 3, 2);
 		
 		currencyPage.clickOnAmed1();
 		
-		createPathKey(currencyPage,pathKeyList,structureForWest);
+		createPathKey(currencyPage,pathKeyList,structureForWest,structureForSusp );
 		
 		currencyPage.clickOnCancel1();
 		currencyPage.logOut(1);
@@ -120,15 +123,22 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 			testcases.add(getCurreentDate()+" | Fail : New structure element "+structureElement.get(1)+ " not displayed in the list");
 		}
 	}
+	
+	
 
-	public void createPathKey(CurrencyPage currencyPage,List<String> pathKeyList,List<String> structureElement) throws InterruptedException{
+	public void createPathKey(CurrencyPage currencyPage,List<String> pathKeyList,List<String> structureElement, List<String> structureForSusp) throws InterruptedException{
 
-		
+			currencyPage.AmendElement(structureForSusp);
+			
+			currencyPage.clickOnUpdate();
+			
+			currencyPage.ClickOnAnyButton("Structure", 1);
+			
 			currencyPage.ClickOnAnyButton("Path", 1);
 			
 			currencyPage.searchValue(companyId,pathKeyList,6,2);
 			
-			currencyPage.searchManagementCode(pathKeyList.get(2),6);
+			currencyPage.searchManagementCode(pathKeyList.get(2));
 
 			currencyPage.clickOnInsert1();
 			

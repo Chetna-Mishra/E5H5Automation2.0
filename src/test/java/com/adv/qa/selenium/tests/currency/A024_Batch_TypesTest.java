@@ -39,11 +39,9 @@ public class A024_Batch_TypesTest extends BaseTest{
 		List<String> batchTypeForTran = dataRow.findNamesReturnValues("batchTypeForTran");
 		List<String> batchTypeForRev = dataRow.findNamesReturnValues("batchTypeForRev");
 		List<String> batchTypeForBase = dataRow.findNamesReturnValues("batchTypeForBase");
-		
 		List<String> batchTypeForAccr = dataRow.findNamesReturnValues("batchTypeForAccr");
 		List<String> batchTypeForForn = dataRow.findNamesReturnValues("batchTypeForForn");
 		List<String> batchTypeForFrnb = dataRow.findNamesReturnValues("batchTypeForFrnb");
-		
 		List<String> batchTypeForPlan = dataRow.findNamesReturnValues("batchTypeForPlan");
 		List<String> batchTypeForRecc = dataRow.findNamesReturnValues("batchTypeForRecc");
 

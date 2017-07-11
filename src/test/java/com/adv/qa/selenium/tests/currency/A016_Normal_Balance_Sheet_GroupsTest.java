@@ -40,6 +40,9 @@ public class A016_Normal_Balance_Sheet_GroupsTest extends BaseTest{
 		List<String> bGroup = dataRow.findNamesReturnValues("bGroup");
 		List<String> cGroup = dataRow.findNamesReturnValues("cGroup");
 		List<String> tGroup = dataRow.findNamesReturnValues("tGroup");
+		List<String> gGroup = dataRow.findNamesReturnValues("gGroup");
+		List<String> pGroup = dataRow.findNamesReturnValues("pGroup");
+		List<String> iGroup = dataRow.findNamesReturnValues("iGroup");
 		
 
 		/*Log in to application*/
@@ -69,9 +72,10 @@ public class A016_Normal_Balance_Sheet_GroupsTest extends BaseTest{
 		createNormalBalance(currencyPage,bGroup);
 		createNormalBalance(currencyPage,cGroup);
 		createNormalBalance(currencyPage,tGroup);
-		
-		
-
+		createNormalBalance(currencyPage,gGroup);
+		createNormalBalance(currencyPage,pGroup);
+		createNormalBalance(currencyPage,iGroup);
+	
 		/*Exit from the Balance sheet page*/
 		currencyPage.clickOnCancel();
 
@@ -80,7 +84,9 @@ public class A016_Normal_Balance_Sheet_GroupsTest extends BaseTest{
 		verifyValues(currencyPage,bGroup);
 		verifyValues(currencyPage,cGroup);
 		verifyValues(currencyPage,tGroup);
-		
+		verifyValues(currencyPage,gGroup);
+		verifyValues(currencyPage,pGroup);
+		verifyValues(currencyPage,iGroup);	
 		
 	
 		/*Exit from the application*/
@@ -122,7 +128,7 @@ public class A016_Normal_Balance_Sheet_GroupsTest extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "E5H5.xml";
 		String[] nodeID = { "A016" };
-		String [] selectedNames = {"userName","passWord","code","value","aGroup","bGroup","cGroup","tGroup"};
+		String [] selectedNames = {"userName","passWord","code","value","aGroup","bGroup","cGroup","tGroup","gGroup","pGroup","iGroup"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	
