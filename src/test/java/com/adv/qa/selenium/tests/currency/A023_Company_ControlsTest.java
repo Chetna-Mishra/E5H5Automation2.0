@@ -63,13 +63,18 @@ public class A023_Company_ControlsTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 		
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Company controls for new company "+companyId, " created successfully");
+			
+		
 		/*Exit from the company control edit page*/
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
 		/*Verify new company control displayed list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(companyId), "Company controls for new company "+companyId,"completed");
+		Assert.assertTrue(testcases,currencyPage.verifyValues(companyId), "Company controls for new company "+companyId," displayed in list");
 
 		/*Log out from the application*/
 		currencyPage.logOut(2);

@@ -64,6 +64,11 @@ public class A011_UsersTest extends BaseTest{
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - User List","Currency search page","displayed");
 				
+		
+		currencyPage.search(firstUser.get(0),3,1);
+
+		currencyPage.clickOnInsert();
+		
 		/*Create users*/
 		createUsers(firstUser,currencyPage);
 		createUsers(secondUser,currencyPage);
@@ -77,42 +82,47 @@ public class A011_UsersTest extends BaseTest{
 		createUsers(userAcc,currencyPage);
 		createUsers(userIM,currencyPage);
 		
+		/*Exit from the company details page*/
+		currencyPage.clickOnCancel();
+		
+		currencyPage.isConfirmPopUpDisplayed();
+		
 		currencyPage.logOut(2);
 	}
 	
 	private void createUsers(List<String> users,CurrencyPage currencyPage) throws InterruptedException{
-		currencyPage.search(users.get(0),3,1);
-		
-		if(currencyPage.verifyValues(users.get(0)))
-		
-		{
-			currencyPage.clickOnAmend();
 			
-			currencyPage.amendUsersDetails(companyId);
-			
-			currencyPage.clickOnUpdate();		
-		}
-		else{
-			currencyPage.clickOnInsert();
-			
-			currencyPage.enterUsersDetails(companyId,users);
-			
-			currencyPage.clickOnUpdate();
-			
-			/*Exit from the company details page*/
-			currencyPage.clickOnCancel();
-			
-			currencyPage.isConfirmPopUpDisplayed();
-		}	
+			boolean update = currencyPage.enterUsersDetails(companyId,users);
 
-		/*Verify new company in the list*/
-		if(currencyPage.verifyValues(users.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New user "+users.get(0)+ " displayed in the list");
-		}
+			String message = "The previously-requested action has been performed";
+			
+			if(update == true){
+				
+				currencyPage.clickOnUpdate();
+				
+				if (currencyPage.getErrorContentText().contains(message)) {
+
+					testcases.add(getCurreentDate()+" | Pass : New user "+users.get(0)+ " Created");
+					}
+					else{
+						testcases.add(getCurreentDate()+" | Fail : New user "+users.get(0)+ " not Created");
+					}
+				}
+			
 		else{
-			testcases.add(getCurreentDate()+" | Fail : New user "+users.get(0)+ " not displayed in the list");
+				testcases.add(getCurreentDate()+" | Pass : New user "+users.get(0)+ " already created");
+			}
 		}
-	}
+			
+
+//		/*Verify new company in the list*/
+//		if(currencyPage.verifyValues(users.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New user "+users.get(0)+ " Created and displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New user "+users.get(0)+ " not Created and displayed in the list");
+//		}
+//	
 
 	
 	@AfterClass (alwaysRun = true)

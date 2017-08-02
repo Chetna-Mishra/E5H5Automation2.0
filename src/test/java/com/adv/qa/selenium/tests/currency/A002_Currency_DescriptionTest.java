@@ -45,6 +45,7 @@ public class A002_Currency_DescriptionTest extends BaseTest{
 		List<String> demCurrency = dataRow.findNamesReturnValues("demCurrency");
 		List<String> usdCurrency = dataRow.findNamesReturnValues("usdCurrency");
 		List<String> frfCurrency = dataRow.findNamesReturnValues("frfCurrency");
+
 		
 		
 		/*Log in to application*/
@@ -68,53 +69,94 @@ public class A002_Currency_DescriptionTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create currency*/
-		
-	
 		createCurrency(currencyPage,eurCurrency);
 		createCurrency(currencyPage,demCurrency);
 		createCurrency(currencyPage,usdCurrency);
 		createCurrency(currencyPage,frfCurrency);
+
 		
 		/*Exit from the currency page*/
 		currencyPage.clickOnCancel();
-		currencyPage.clickOnYesButton();
 		
+		/*Already included successful msg in the creation part hence commenting*/
 		
-		verifyValues(currencyPage,eurCurrency);
-		verifyValues(currencyPage,demCurrency);
-		verifyValues(currencyPage,usdCurrency);
-		verifyValues(currencyPage,frfCurrency);
+//		/*Search and Verify Currenecy in the list*/
+//		verifyValues(currencyPage,eurCurrency);
+//		verifyValues(currencyPage,demCurrency);
+//		verifyValues(currencyPage,usdCurrency);
+//		verifyValues(currencyPage,frfCurrency);
+		
 		
 		/*Logout from the application*/
 		currencyPage.logOut(2);	
 	}
 	
+	
+
 	private void createCurrency(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException
 	{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		boolean update = currencyPage.addNewCurrency(currencyList);
 		
-		if(update == true){
+		if(update == true) {
 			currencyPage.clickOnUpdate();
+ 			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Currency "+currencyList.get(0), "created successfully");
 		}
+			
 		else{
-			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " already Created and displayed in the list");
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> currencyList)
-	{
-		currencyPage.searchValue(currencyList, 1, 0);
-				
-		/*Verify new currency in the currency list*/
-		if(currencyPage.verifyValues(currencyList.get(0)))
-		
-		{
-			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(0)+ " not displayed in the list");
-		}
-	}
+	
+	
+	
+//	
+//	private void createCurrency(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException
+//	{
+//		String message = "The previously-requested action has been performed";
+//		
+//		boolean update = currencyPage.addNewCurrency(currencyList);
+//		
+//		if(update == true) {
+//			currencyPage.clickOnUpdate();
+//			
+////			if(currencyPage.getToolContentText().contains(message))
+//			if(currencyPage.getErrorContentText().contains(message))
+//				
+//			{
+//				
+//	
+//				testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " Created and displayed in the list");
+//				
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(0)+ " not Created and displayed in the list");
+//			}
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " already Created and displayed in the list");
+//		}
+//	}
+			
+	
+	
+//	private void verifyValues(CurrencyPage currencyPage,List<String> currencyList)
+//	{
+//		currencyPage.searchValue(currencyList, 1, 0);
+//				
+//		/*Verify new currency in the currency list*/
+//		if(currencyPage.verifyValues(currencyList.get(0)))
+//		
+//		{
+//			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " searched and displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(0)+ " not searched and displayed in the list");
+//		}
+//	}
 
 
 	@AfterClass (alwaysRun = true)

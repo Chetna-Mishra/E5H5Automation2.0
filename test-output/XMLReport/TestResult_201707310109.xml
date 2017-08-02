@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A118_StopandStartExecutorsTest>
+<Verification1>31/07/2017 01:09:44 | Pass : Login page displayed</Verification1>
+<Verification2>31/07/2017 01:09:52 | Pass : Command line displayed</Verification2>
+<Verification3>31/07/2017 01:10:07 | Pass : Currency searchpage displayed</Verification3>
+<Verification4>31/07/2017 01:12:41 | Pass : Command line displayed</Verification4>
+</A118_StopandStartExecutorsTest>
+</TestCase>
+</SeleniumTestReport>

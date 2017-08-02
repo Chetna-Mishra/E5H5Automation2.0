@@ -27,7 +27,6 @@ public class JDBCDriverInformation_Oracle{
 
 		try {
 		
-		
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 		} catch(java.lang.ClassNotFoundException e) 
@@ -42,7 +41,13 @@ public class JDBCDriverInformation_Oracle{
 // Oracle DB with the host:10.31.8.72, port:1522, 	service:pdb1, user= qah5adm, pass=QAH5, Ref Site http://www.orafaq.com/wiki/JDBC
 		
 						
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@10.31.8.72:1522/pdb1", "qah5adm", "QAH5");
+/*Connection URL for Automation Server*/			
+connection = DriverManager.getConnection("jdbc:oracle:thin:@10.31.8.72:1522/pdb1", "qah5adm", "QAH5");
+
+			
+/*Connection URL for AIX Server*/			
+		
+//connection = DriverManager.getConnection("jdbc:oracle:thin:@ghdbrac2.coa.local:1521/GHDB12C", "q55aadm", "Q55A");
 			
 			
 		} catch(SQLException ex) {

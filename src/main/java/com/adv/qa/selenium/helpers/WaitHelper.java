@@ -1,15 +1,12 @@
 package com.adv.qa.selenium.helpers;
 
-import java.util.List;
 import java.util.concurrent.TimeoutException;
 
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.adv.qa.selenium.framework.BaseTest;
@@ -18,10 +15,17 @@ import com.adv.qa.selenium.framework.BaseTest;
 public class WaitHelper {
 
 	public static final long defaultWaitMilliseconds = 200; // Used in methods which do not throw exceptions
+	
+	
 
 	private WaitHelper() {
 
 	}
+	
+	
+	
+	
+	
 	
 	public static WaitHelper getInstance() throws InstantiationException,IllegalAccessException {
 			return WaitHelper.class.newInstance();
@@ -72,6 +76,8 @@ public class WaitHelper {
 		});
 	}
 	
+	
+	
 	/**
 	 * Wait until the given WebElement is displayed; timeout is taken from BaseTest
 	 * @param driver
@@ -83,9 +89,8 @@ public class WaitHelper {
 
 		waitUntilWebElementDisplayed(driver, element, timeOut);
 	}
-	
 
-	
+
 	/**
 	 * Wait until the given WebElement is not displayed not longer than given timeOutInSeconds; WebElement should exist on the page
 	 * @param driver
@@ -110,6 +115,56 @@ public class WaitHelper {
 		long timeOut = BaseTest.implicitlyWaitTimeout;
 		waitUntilWebElementIsNotDisplayed(driver, element, timeOut);
 	}
+	
+
+	
+/*Created a new method  Synchronization in Selenium Webdriver
+ * 
+ * 
+ */
+//
+	public static WebElement isElementPresnt(WebDriver driver, final WebElement element) {
+		long timeOut = BaseTest.implicitlyWaitTimeout;
+		
+		isElementPresnt(driver, element, timeOut);
+		
+		return element;
+	}
+	
+	
+	
+	
+//	WaitHelper.waitUntilWebElementDisplayed(getDriver(),getDriver().findElement(By.xpath(pObject.AllPG_HeaderSection)))
+	
+//
+	public static WebElement isElementPresnt(WebDriver driver, final WebElement element, long timeOutInSeconds) {
+
+	
+		for (int i = 0; i < timeOutInSeconds; i++) {
+			try {
+				
+				element.isDisplayed();
+			
+				break;
+			} catch (Exception e) {
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					System.out.println("Waiting for element to appear on DOM");
+				}
+			}
+
+		}
+		return element;
+
+	}
+	
+
+
+
+	
+	
+	
 	
 	/**
 	 * Wait  'timeoutInSeconds' or until the page Url contains 'searchString'
@@ -226,30 +281,12 @@ public class WaitHelper {
 	 * @param seconds * 1000 for local environments
 	 */
 	
-	public static void waitAdditional(double seconds) {
-		if (seconds <= 0) {
-			return;
-		}
-		long milliseconds = (long) (seconds * 1000);
-		try {
-			Thread.sleep(milliseconds);
-		} catch (InterruptedException e) {
-	        Thread.currentThread().interrupt();
-	        throw new WebDriverException(e);
-		}	
-		
-	}
-	
-	/**
-	 * Wait (sleep) required number of seconds, but handle exceptions
-	 * @param seconds * 1200 for UK environments
-	 */
-//	
 //	public static void waitAdditional(double seconds) {
 //		if (seconds <= 0) {
 //			return;
 //		}
-//		long milliseconds = (long) (seconds * 1200);
+//		long milliseconds = (long) (seconds * 1000);
+//		
 //		try {
 //			Thread.sleep(milliseconds);
 //		} catch (InterruptedException e) {
@@ -258,6 +295,25 @@ public class WaitHelper {
 //		}	
 //		
 //	}
+	
+	/**
+	 * Wait (sleep) required number of seconds, but handle exceptions
+	 * @param seconds * 1200 for UK environments
+	 */
+	
+	public static void waitAdditional(double seconds) {
+		if (seconds <= 0) {
+			return;
+		}
+		long milliseconds = (long) (seconds * 1300);
+		try {
+			Thread.sleep(milliseconds);
+		} catch (InterruptedException e) {
+	        Thread.currentThread().interrupt();
+	        throw new WebDriverException(e);
+		}	
+		
+	}
 	
 	/**
 	 * Wait until the given text is displayed not longer than given timeOutInSeconds
@@ -288,9 +344,6 @@ public class WaitHelper {
 		long timeOut = BaseTest.implicitlyWaitTimeout;
 		waitUntilWebElementDisplayed(driver, element, timeOut);
 	}
-	
-	
-
 	
 	
 	

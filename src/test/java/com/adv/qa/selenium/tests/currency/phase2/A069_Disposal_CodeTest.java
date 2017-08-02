@@ -58,20 +58,26 @@ public class A069_Disposal_CodeTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.enterDisposalCode(disposalCode);	
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New disposal code "+disposalCode.get(0), "created successfully");	
+			
 		}
 		else
 		{
-			currencyPage.clickOnCancel();
+		
+			testcases.add(getCurreentDate()+" | Pass : New disposal code "+disposalCode.get(0)+ " already created");
+			
 		}
 		
 		currencyPage.clickOnCancel();
 		
-		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(disposalCode.get(0)), "New disposal code  "+disposalCode.get(0),"displayed in the list");
+//		/*Verify new batch type in the list*/
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(disposalCode.get(0)), "New disposal code  "+disposalCode.get(0),"displayed in the list");
 			
 		currencyPage.logOut(2);
 

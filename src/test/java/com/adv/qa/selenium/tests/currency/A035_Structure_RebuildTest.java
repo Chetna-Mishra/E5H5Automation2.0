@@ -105,7 +105,7 @@ public class A035_Structure_RebuildTest extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "E5H5.xml";
 		String[] nodeID = { "A035" };
-		String [] selectedNames = {"userName","passWord","code","structureList","process"};
+		String [] selectedNames = {"userName","passWord","code","ep3ProcessList","process"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true, nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	

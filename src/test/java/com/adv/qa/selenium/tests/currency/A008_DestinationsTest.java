@@ -50,6 +50,7 @@ public class A008_DestinationsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Destination List","Currency search page","displayed");
 		
@@ -61,6 +62,9 @@ public class A008_DestinationsTest extends BaseTest{
 		currencyPage.logOut(2);
 
 	}
+
+	
+	
 	
 	private void createDestination(CurrencyPage currencyPage, DataRow dataRow,List<String> destinationList) throws InterruptedException
 	
@@ -70,28 +74,87 @@ public class A008_DestinationsTest extends BaseTest{
 		
 		if(!currencyPage.verifyValues(destinationList.get(0))){
 		
+			String SuccMessage = "The previously-requested action has been performed";
+			
 			currencyPage.clickOnInsert();
 			
 			/*Create destination code*/
-			currencyPage.enterDestinationDetails(destinationList);
+//			currencyPage.enterDestinationDetails(destinationList);
 			
-			currencyPage.clickOnUpdate();
+			boolean update = currencyPage.enterDestinationDetails(destinationList);
+			
+			if (update == true) {
+				
+				currencyPage.clickOnUpdate();
+
+				
+				Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New destination "+destinationList.get(0), "created successfully");
+				
+				
+				currencyPage.clickOnCancel();
+				}
+			
+			}
 			
 			/*Exit from the destination edit page*/
-			currencyPage.clickOnCancel();
 	
-			/*Verify new destination in the list*/
-			if(currencyPage.verifyValues(destinationList.get(0))){
-				testcases.add(getCurreentDate()+" | Pass : New destination "+destinationList.get(0)+ " displayed in the list");
+			else	{
+			testcases.add(getCurreentDate()+" | Pass : New destination "+destinationList.get(0)+ " already created");
+				}
+			
+	
 			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New destination "+destinationList.get(0)+ " not displayed in the list");
-			}
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New destination "+destinationList.get(0)+ " displayed in the list");
-		}
-	}
+			
+	
+	
+	
+	
+	
+//	private void createDestination(CurrencyPage currencyPage, DataRow dataRow,List<String> destinationList) throws InterruptedException
+//	
+//	{
+//
+//		currencyPage.searchValue(destinationList,1,0);
+//		
+//		if(!currencyPage.verifyValues(destinationList.get(0))){
+//		
+//			String message = "The previously-requested action has been performed";
+//			
+//			currencyPage.clickOnInsert();
+//			
+//			/*Create destination code*/
+////			currencyPage.enterDestinationDetails(destinationList);
+//			
+//			boolean update = currencyPage.enterDestinationDetails(destinationList);
+//			
+//			if (update == true) {
+//				
+//				currencyPage.clickOnUpdate();
+//
+//				if (currencyPage.getErrorContentText().contains(message))
+//				{
+//
+//					testcases.add(getCurreentDate()+" | Pass : New destination "+destinationList.get(0)+ " created");
+//				}
+//				else{
+//					testcases.add(getCurreentDate()+" | Fail : New destination "+destinationList.get(0)+ " not created");
+//				}
+//				
+//				
+//				currencyPage.clickOnCancel();
+//				}
+//			
+//			}
+//			
+//			/*Exit from the destination edit page*/
+//	
+//			else	{
+//			testcases.add(getCurreentDate()+" | Pass : New destination "+destinationList.get(0)+ " already created");
+//				}
+//			
+//	
+//			}
+//			
 
 	
 	@AfterClass (alwaysRun = true)

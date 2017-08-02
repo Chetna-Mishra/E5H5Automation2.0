@@ -59,21 +59,33 @@ public class A030_Security_ElementsTest extends BaseTest{
 		currencyPage.clickOnInsert();
 			
 		/*Create security element code*/
-		currencyPage.enterSecurityGroupStructureDetails(securityList);	
+//		currencyPage.enterSecurityGroupStructureDetails(securityList);	//Retest
+		
+		
+		boolean update = currencyPage.enterSecurityGroupStructureDetails(securityList);
+
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		if(update == true){
 			
-		currencyPage.clickOnUpdate();
+			currencyPage.clickOnUpdate();
 			
-		/*Exit from the security element page*/
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Security element "+securityList.get(2), "created successfully");
+			
+		}
+			
+//		/*Exit from the security element page*/
+//		currencyPage.clickOnCancel();
+//	
+//		/*Verify new security element displayed in the list*/
+//		if(currencyPage.verifyValues(securityList.get(2))){
+//			testcases.add(getCurreentDate()+" | Pass : Security element "+securityList.get(2)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : Security element "+securityList.get(2)+ " not displayed in the list");
+//		}
+			
 		currencyPage.clickOnCancel();
-	
-		/*Verify new security element displayed in the list*/
-		if(currencyPage.verifyValues(securityList.get(2))){
-			testcases.add(getCurreentDate()+" | Pass : Security element "+securityList.get(2)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Security element "+securityList.get(2)+ " not displayed in the list");
-		}
-			
 		currencyPage.clickOnCancel();
 
 		currencyPage.fillCurrenceyCode(securityAdd);

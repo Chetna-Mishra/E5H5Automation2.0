@@ -71,6 +71,7 @@ public class BaseTest {
 	private static String runTime=null;
 	private static String filePath = null;
 	
+	private PageObjects pObject = new PageObjects();
 	
 	public List<String> testcases = new ArrayList<String>();
 	
@@ -91,9 +92,12 @@ public class BaseTest {
 	 * @throws IOException 
 	 */
 	private static void initializeStaticFields() throws IOException {
+	
 		runTime = new SimpleDateFormat("yyyyMMddhhmm").format(new Date());
+		
 		try {
 			filePath =MainXMLStructure.getMainXML(runTime);
+			
 		} catch (ParserConfigurationException e) {			
 			e.printStackTrace();
 		} catch (TransformerException e) {
@@ -102,19 +106,30 @@ public class BaseTest {
 		
 		
 		loadProperties("environment.properties");
+		
 		useRemoteWebDriver = Boolean.parseBoolean(properties.getProperty("useRemoteWebDriver"));
 	
+		/*Initiate database*/
+		
 		database = System.getProperty("database");
+		
 		if (database == null){
 			database = properties.getProperty("database");
 		}
+		
 		log.info("Database : " + database);
 	
+		/*Initiate e5h5 URL*/
+		
 		adve5URL = System.getProperty("adve5URL");
+		
 		if (adve5URL == null){
+			
 			adve5URL = properties.getProperty("adve5URL");
 		}
 		log.info("Environment : " + adve5URL);
+		
+		/*Initiate browser*/
 		
 		browser = System.getProperty("browser");
 		if (browser == null){
@@ -122,8 +137,10 @@ public class BaseTest {
 		}
 		log.info("browser : " + browser);
 		
+		
 		String timeoutString = properties.getProperty("seleniumImplicityWaitTimeout");
 		implicitlyWaitTimeout = Integer.parseInt(timeoutString);
+		
 	}
 	
 	
@@ -153,8 +170,10 @@ public class BaseTest {
 		//start logging to test specific log file
 	    TestLogHelper.startTestLogging(testCaseName);		
 		log.info( "\n =============== SETUP START "+className +LOG_LINE_SEPARATOR);
+		
 		initialiseWebDriver();	
 //		driver.manage().window().maximize();
+	
 	}
 	
 	/**
@@ -203,7 +222,8 @@ public class BaseTest {
 				driver = new EventFiringWebDriver(browserDriver);
 			}
 			
-	//This is for the normal Machine and Browsers
+			
+			/*This is for the normal Machine and Browsers*/
 			
 			else if(browser.equalsIgnoreCase("firefox".trim())) {			
 
@@ -221,7 +241,7 @@ public class BaseTest {
 				options.addArguments("chrome.switches","disable-extensions");
 				options.addArguments("--disable-notifications");
 				
-//To disable yellow strip info bar which prompts info messages
+				/*To disable yellow strip info bar which prompts info messages*/
 				options.addArguments("disable-infobars");
 				
 				browserDriver = new ChromeDriver(options);
@@ -252,8 +272,10 @@ public class BaseTest {
 
 
 		driver.register(new WebDriverEventListenerTest(testCaseName));
+	
 		/* Set timeout for implicit wait */
 		driver.manage().timeouts().implicitlyWait(implicitlyWaitTimeout,TimeUnit.SECONDS);
+		
 		log.info( "\n =============== SETUP FINISH "+className +LOG_LINE_SEPARATOR);
 
 	}
@@ -313,8 +335,11 @@ public class BaseTest {
 	 * @throws IOException
 	 */
 	public   File takeScreenshot(String prefix,String key) throws IOException {
+		
 		File screenshot = File.createTempFile(prefix, ".png", new File("."));
+				
 		TakesScreenshot screenshoter = null;
+		
 		BaseTest t = WebDriverManager.retrieveInstance(key);
 	
 		try {
@@ -325,27 +350,24 @@ public class BaseTest {
 				 screenshoter = (TakesScreenshot) t.browserDriver;
 			};
 			
+				
 			FileUtils.copyFile(screenshoter.getScreenshotAs(OutputType.FILE), screenshot);
-		} catch (Exception e) {
+			} 
+		catch (Exception e)	{
 			driver.register(new WebDriverEventListenerTest(testCaseName));
+			
 			/* Cannot take a screen shot */
 			String errorMessage = e.getMessage();
 			if(errorMessage != null){
+				
 				log.info("Cannot take a screenshot: " + errorMessage);	
 			}
 		}
 		return screenshot;
 	}
 	
-	private PageObjects pObject = new PageObjects();
 	
-//	private List<WebElement> getCancelButton(){
-//		WaitHelper.waitAdditional(2);
-//		List<WebElement> wbs = driver.findElements(By.className(pObject.HEADER_TAB_BTN));
-//		return wbs;
-//	}
-	
-	/**
+		/**
 	 * Click on Cancel button
 	 */
 	
@@ -354,17 +376,7 @@ public class BaseTest {
 		driver.findElement(By.xpath(pObject.AllPG_CANCEL)).click();
 		WaitHelper.waitAdditional(1);
 	}
-	
-//	public void clickOnCancel(){
-//		WaitHelper.waitAdditional(2);
-//		List<WebElement> wbs = getCancelButton();
-//		for(WebElement wb : wbs){
-//			if(wb.getText().equals("Cancel")){
-//				wb.click();
-//				break;
-//			}
-//		}
-//	}
+
 	
 	/**
 	 * Logout from the application
@@ -382,28 +394,7 @@ public class BaseTest {
 	}
 	
 
-	
-//	@BeforeSuite
-//	public void BeforeSuite() throws Exception {
-//		setUp();
-//		/*Log in to application*/
-//		LoginPage loginPage = new LoginPage(driver);
-//		
-//		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
-//
-//		}
-//	
-//	
-//	@AfterSuite
-//	public void AfterSuite() throws Exception 
-//	{
-//		
-//		/*Navigate to currency page Home page e5 application*/
-//		CurrencyPage currencyPage = new CurrencyPage(driver);
-//		
-//		currencyPage.logOut(2);
-//		tearDown();
-//		}
+
 	
 }
 

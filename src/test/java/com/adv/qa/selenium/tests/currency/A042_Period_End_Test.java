@@ -70,7 +70,7 @@ public class A042_Period_End_Test extends BaseTest{
 			currencyPage.clickOnCloseGLPeriod();
 		}
 		
-		Assert.assertTrue(testcases,currencyPage.getToolContentText().contains(errorMessage1), "Error message "+errorMessage,"displayed.");
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(errorMessage1), "Error message "+errorMessage,"displayed.");
 		
 		currencyPage.logOut(2);
 

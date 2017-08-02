@@ -60,30 +60,71 @@ public class A007_DevicesTest extends BaseTest{
 			currencyPage.clickOnInsert();
 					
 			/*Enter device details*/
-			currencyPage.enterDeviceDetails(deviceDetails);
 			
-			currencyPage.clickOnUpdate();
-					
-			/*Exit from the device page*/
-			currencyPage.clickOnCancel();
-					
-			/*Verify new device in the device list*/
-			if(currencyPage.verifyValues(deviceDetails.get(0))){
-				testcases.add(getCurreentDate()+" | Pass : New device "+deviceDetails.get(0)+ " displayed in the list");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New device "+deviceDetails.get(0)+ " not displayed in the list");
-			}
+			enterDeviceDetails(currencyPage,deviceDetails);
+			
+			/*Logout from the application*/
+			currencyPage.logOut(2);
 		}
-		
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New device "+deviceDetails.get(0)+ " displayed in the list");
-		}
-		
-		
-		/*Logout from the application*/
-		currencyPage.logOut(2);
 	}
+			
+	
+	
+	
+	private void enterDeviceDetails(CurrencyPage currencyPage, List<String> deviceDetails) throws InterruptedException {
+
+		String SuccMessage = "The previously-requested action has been performed";
+
+		boolean update = currencyPage.enterDeviceDetails(deviceDetails);
+
+		if (update == true) {
+			currencyPage.clickOnUpdate();
+
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New device "+deviceDetails.get(0), "created successfully");
+		}
+		
+		else {
+			testcases.add(getCurreentDate() + " | Pass : New device " + deviceDetails.get(0) + " already created");
+		
+		}
+
+	}
+	
+	
+	
+	
+	
+	
+			
+	
+//	private void enterDeviceDetails(CurrencyPage currencyPage, List<String> deviceDetails) throws InterruptedException {
+//
+//		String message = "The previously-requested action has been performed";
+//
+//		boolean update = currencyPage.enterDeviceDetails(deviceDetails);
+//
+//		if (update == true) {
+//			currencyPage.clickOnUpdate();
+//
+//			if (currencyPage.getErrorContentText().contains(message))
+//
+//				{
+//				testcases.add(getCurreentDate() + " | Pass : New device " + deviceDetails.get(0) + " created");
+//				
+//				} 
+//			
+//			else{
+//				testcases.add(getCurreentDate() + " | Fail : New device " + deviceDetails.get(0) + " not created");
+//				}
+//				
+//		}
+//		
+//		else {
+//			testcases.add(getCurreentDate() + " | Pass : New device " + deviceDetails.get(0) + " already created");
+//		
+//		}
+//
+//	}
 	
 
 	@AfterClass (alwaysRun = true)

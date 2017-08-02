@@ -69,6 +69,7 @@ public class PageObjects {
 
 	// Common Buttons on All pages
 
+	public final String AllPG_BUTN = "//div/button[contains(@class,'button')]";
 	public final String AllPG_SELEC = "//div[@class='html_TitlePaneTitle panelCollapsed']/a[not(contains(text(),'Extended'))]";
 	public final String AllPG_EXT_SELEC = "//div[@class='html_TitlePaneTitle panelCollapsed']/a[contains(text(),'Extended Selection')]";
 
@@ -148,8 +149,12 @@ public class PageObjects {
 
 	// Common Footer Buttons on All pages
 
-	public final String AllPG_FOOT_SEC = "//button[starts-with(@class,'button roundedbutton')]";
+//	public final String AllPG_FOOT_SEC = "//button[starts-with(@class,'button roundedbutton')]";
+	
+	
+	public final String AllPG_FOOT_SEC = "//div/button[starts-with(@class,'button roundedbutton')]";
 
+	
 	// Exit Confirmation Message Page Objects
 
 	public final String CONF_BUT_YES = "//div[contains(@class,'roundedCorners')]/button[@value='Yes']";
@@ -252,7 +257,7 @@ public class PageObjects {
 
 	// public final String A006_PRIMARY_TAB =
 	// "//a[@class='ui-tabs-anchor'][text()='Primary Details']";
-	public final String A006_PRIMARY_TAB = "//ul/li/a[@class='ui-tabs-anchor'][text()='Primary Details']";
+	public final String A006_PRIMARY_TAB = "//a[@class='ui-tabs-anchor'][text()='Primary Details']";
 	public final String A006_COMPANY = "//input[starts-with(@name,'CMPY_')]";
 	public final String A006_NAME = "//input[starts-with(@name,'ADDR-NAME_')]";
 	public final String A006_ADDR1 = "//input[starts-with(@name,'ADDR1_')]";
@@ -1258,8 +1263,12 @@ public class PageObjects {
 	// Page Objects for "AD01008
 	public final String AD01008_PERID = "//select[starts-with(@name,'PARM-PERIOD_')]";
 	public final String AD01008_SYSTEM = "//select[starts-with(@name,'PARM-SYSTEM_')]";
-	public final String AD01008_CALENDAR = "//select[starts-with(@name,'PARM-CALENDAR_')]";
+	public final String AD01008_CALENDAR = "//input[starts-with(@name,'PARM-CALENDAR_')]";
+	public final String AD01008_CONFM_SUBMIT = "//div[contains(@class,'roundedCorners')]/button[@id='2_0']";
+	public final String AD01008_HOLD = "//input[@id='chk_2_3']";
 
+	
+	
 	// Page Objects for "AD02001
 	public final String AD02001_STORE = "//input[starts-with(@name,'PARAM-STORE_')]";
 	public final String AD02001_ITEM = "//input[starts-with(@name,'PARAM-ITEM_')]";

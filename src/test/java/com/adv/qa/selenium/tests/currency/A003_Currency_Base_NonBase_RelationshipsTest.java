@@ -75,15 +75,18 @@ public class A003_Currency_Base_NonBase_RelationshipsTest extends BaseTest{
 		
 		/*Exit from the currency edit page*/
 		currencyPage.clickOnCancel();
+	
 		
-		verifyValues(currencyPage,gbpfrfCurrency);
-		verifyValues(currencyPage,gbpeurCurrency);
-		verifyValues(currencyPage,gbpdemCurrency);
-		verifyValues(currencyPage,gbpusdCurrency);
-		verifyValues(currencyPage,eurgbpCurrency);
-		verifyValues(currencyPage,frfgbpCuurency);
-		verifyValues(currencyPage,usdgbpCurrency);
-		verifyValues(currencyPage,demgbpCurrency);
+/*Already included successful msg in the creation part hence commenting*/
+		
+//		verifyValues(currencyPage,gbpfrfCurrency);
+//		verifyValues(currencyPage,gbpeurCurrency);
+//		verifyValues(currencyPage,gbpdemCurrency);
+//		verifyValues(currencyPage,gbpusdCurrency);
+//		verifyValues(currencyPage,eurgbpCurrency);
+//		verifyValues(currencyPage,frfgbpCuurency);
+//		verifyValues(currencyPage,usdgbpCurrency);
+//		verifyValues(currencyPage,demgbpCurrency);
 		
 		
 		/*Logout from the application*/
@@ -91,30 +94,66 @@ public class A003_Currency_Base_NonBase_RelationshipsTest extends BaseTest{
 
 	}
 	
+	
+	
 	private void createBaseNonBaseRelation(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException{
 		/*Create new currency code*/
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		
 		boolean update = currencyPage.enterCurrencyRelationshipDetails(currencyList);	
 		
 		if(update == true){
-			currencyPage.clickOnUpdate();		
+			currencyPage.clickOnUpdate();	
+		
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Currency Relationship"+currencyList.get(0), "created successfully");
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(1)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " already created and displayed in the list");
 		}
 	}
+	
+	
+	
+//	private void createBaseNonBaseRelation(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException{
+//		/*Create new currency code*/
+//		
+//		String message = "The previously-requested action has been performed";
+//		
+//		
+//		boolean update = currencyPage.enterCurrencyRelationshipDetails(currencyList);	
+//		
+//		if(update == true){
+//			currencyPage.clickOnUpdate();	
+//		
+//			if(currencyPage.getErrorContentText().contains(message))
+//			
+//			{
+//				testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " created");
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(0)+ " not created");
+//			}
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(0)+ " already created and displayed in the list");
+//		}
+//	}
 
-	private void verifyValues(CurrencyPage currencyPage,List<String> currencyList){
-		/*Search currency already present in the list*/
-		currencyPage.searchValue(currencyList,2,1);
-
-		/*Verify new currency in the list*/
-		if(currencyPage.verifyValues(currencyList.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(1) +" "+currencyList.get(2)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(1) +" "+currencyList.get(2)+  " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> currencyList){
+//		
+//		/*Search currency already present in the list*/
+//		currencyPage.searchValue(currencyList,2,1);
+//
+//		/*Verify new currency in the list*/
+//		if(currencyPage.verifyValues(currencyList.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(1) +" "+currencyList.get(2)+ " searched and displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(1) +" "+currencyList.get(2)+  " not searched and displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

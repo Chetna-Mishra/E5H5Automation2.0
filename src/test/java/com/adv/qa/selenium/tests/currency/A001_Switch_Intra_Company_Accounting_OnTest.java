@@ -48,10 +48,10 @@ public class A001_Switch_Intra_Company_Accounting_OnTest extends BaseTest{
 		currencyPage.fillCurrenceyCode(commandParameter);
 		
 		/*Verify financial module*/
-		Assert.assertTrue(testcases,currencyPage.verifyFinancialModules(),"Financial module fields","checked by default");
+		Assert.assertTrue(testcases,currencyPage.verifyFinancialModules(),"Financial module fields are ","checked and saved");
 		
 		/*Verify Purchasing module*/
-		Assert.assertTrue(testcases,currencyPage.verifyPurchasingModules(),"Purchasing module fields","checked by default");
+		Assert.assertTrue(testcases,currencyPage.verifyPurchasingModules(),"Purchasing module fields are ","checked and saved");
 		
 		/*Logout from the application*/
 		

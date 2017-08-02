@@ -53,6 +53,7 @@ public class A052_Tax_AccountsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(code);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Tax Accounts By Tax Code","Currency search page","displayed");
 		
@@ -61,6 +62,7 @@ public class A052_Tax_AccountsTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 		currencyPage.clickOnUpdateWarnings();
+		
 		
 //		/*Verify new batch type in the list*/
 //		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(), "New  Tax AccoUnt "+system,"displayed in the list");

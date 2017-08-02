@@ -44,6 +44,7 @@ public class A014_Account_Code_DefinitionTest extends BaseTest{
 		LoginPage loginPage = new LoginPage(driver);
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
 		loginPage.logIn(userName, passWord);
 		
 		/*Navigate to currency page Home page e5 application*/
@@ -69,6 +70,10 @@ public class A014_Account_Code_DefinitionTest extends BaseTest{
 		currencyPage.enterAccountDefinitionDetails(companyId,accountDefinition,accountCodeList,costList,location,product);
 		
 		currencyPage.clickOnUpdate();
+		
+		String SuccMessage = "The previously-requested action has been performed"; 
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New account "+accountDefinition,"Created");
 		
 		/*Verify new account code definition in the list*/
 		Assert.assertTrue(testcases,currencyPage.verifyValues(accountDefinition), "New account "+accountDefinition,"displayed in the list");

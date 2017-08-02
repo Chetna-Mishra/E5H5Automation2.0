@@ -50,6 +50,7 @@ public class A051A_Purchase_Ledger_Bank_CodesTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(0));
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - BR Company Controls List","Currency search page","displayed");
 
@@ -59,22 +60,32 @@ public class A051A_Purchase_Ledger_Bank_CodesTest extends BaseTest{
 		
 			currencyPage.clickOnInsert();
 			
-			currencyPage.createBRCompanyControl(companyId,bankControl);
+			String SuccMessage = "The previously-requested action has been performed";
 			
+			boolean update= currencyPage.createBRCompanyControl(companyId,bankControl);
+			
+			if(update==true)
+			{
 			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New purchase ledger bank code "+companyId, "created successfully");	
+			}
 			
-			currencyPage.clickOnCancel();
-			
-			if(currencyPage.verifyValues(companyId)){
+			else{
 				testcases.add(getCurreentDate()+" | Pass : New purchase ledger bank code "+companyId+ " displayed in the list");
 			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New purchase ledger bank code "+companyId+ " not displayed in the list");
-			}
+			
 		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New purchase ledger bank code "+companyId+ " displayed in the list");
-		}
+			
+//			if(currencyPage.verifyValues(companyId)){
+//				testcases.add(getCurreentDate()+" | Pass : New purchase ledger bank code "+companyId+ " displayed in the list");
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : New purchase ledger bank code "+companyId+ " not displayed in the list");
+//			}
+//		}
+	
+		
+		currencyPage.clickOnCancel();
 		
 		currencyPage.clickOnCancel();
 		
@@ -82,6 +93,7 @@ public class A051A_Purchase_Ledger_Bank_CodesTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Nominal List","Currency search page","displayed");
 
@@ -94,22 +106,22 @@ public class A051A_Purchase_Ledger_Bank_CodesTest extends BaseTest{
 	}
 	
 	private void amendNominal(List<String> nominal,CurrencyPage currencyPage) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed"; 
+		
 		currencyPage.searchValue(companyId,nominal,2,1);
 		
 		if(currencyPage.verifyValues(nominal.get(0))){
+			
 			currencyPage.clickOnAmend();
 			
 			currencyPage.editBatchTypes();
 			
 			currencyPage.clickOnUpdate();
 			
-			if(currencyPage.verifyValues(nominal.get(0))){
-				testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " updated");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New ledger control "+nominal.get(0)+ " not updated");
-			}
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Ledger control "+nominal.get(0), "Updated successfully");
 		}
+		
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " updated");
 		}

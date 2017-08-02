@@ -59,6 +59,7 @@ public class A104_Inventory_Company_ControlsTest extends BaseTest{
 		
 		 if(currencyPage.isToolTipDisplayed()){
 			   currencyPage.clickOnUpdtWarnings();
+			   currencyPage.clickOnUpdate();
 		 }
 		 else{
 		   currencyPage.clickOnUpdate();

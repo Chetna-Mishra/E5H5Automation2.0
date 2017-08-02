@@ -70,29 +70,47 @@ public class A091_SuppliersTest extends BaseTest{
 
 	}
 	
-	private void createSuppliers(CurrencyPage currencyPage,List<String> supplier){
-		
-		currencyPage.searchValue(companyId,supplier,8,1);
-		
-		if(!currencyPage.verifyValues(supplier.get(0))){
-		
+	private void createSuppliers(CurrencyPage currencyPage, List<String> supplier) {
+
+		String SuccMessage = "The previously-requested action has been performed";
+
+		currencyPage.searchValue(companyId, supplier, 8, 1);
+
+		if (!currencyPage.verifyValues(supplier.get(0))) {
+
 			currencyPage.clickOnInsert();
-			
-			/*Create batch type code*/
-			currencyPage.enterSupplierListDetail(supplier);	
-			
-			currencyPage.clickOnUpdate();
-			
+
+			/* Create batch type code */
+			boolean update = currencyPage.enterSupplierListDetail(supplier);
+
+			if (update == true)
+
+			{
+				currencyPage.clickOnUpdate();
+
+				Assert.assertTrue(testcases, currencyPage.getErrorContentText().contains(SuccMessage),
+						"New supplier  " + supplier.get(0), "created successfully");
+
+			}
+
+			else {
+
+				testcases.add(getCurreentDate() + " | Pass : New supplier  " + supplier.get(0) + " already created");
+
+			}
+
 			currencyPage.clickOnCancel();
-		
-			/*Verify new batch type in the list*/
-			Assert.assertTrue(testcases,currencyPage.verifyValues(supplier.get(0)), "New supplier  "+supplier.get(0)," created");
+		}
+
+		else {
+
+			testcases.add(getCurreentDate() + " | Pass : New supplier  " + supplier.get(0)
+					+ " already created and displayed in list");
 
 		}
-		else{
-			Assert.assertTrue(testcases,currencyPage.verifyValues(supplier.get(0)), "New supplier  "+supplier.get(0)," displayed in the list");
-		}
+
 	}
+	
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

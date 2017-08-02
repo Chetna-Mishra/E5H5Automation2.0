@@ -1,101 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="135925" started-at="2017-07-10T12:53:53Z" finished-at="2017-07-10T12:56:09Z">
+  <suite name="Default suite" duration-ms="504872" started-at="2017-07-21T12:21:23Z" finished-at="2017-07-21T12:29:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="135925" started-at="2017-07-10T12:53:53Z" finished-at="2017-07-10T12:56:09Z">
-      <class name="com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest@41ee392b]" name="beforeClass" is-config="true" duration-ms="10488" started-at="2017-07-10T18:23:53Z" finished-at="2017-07-10T18:24:04Z">
+    <test name="Default test" duration-ms="504872" started-at="2017-07-21T12:21:23Z" finished-at="2017-07-21T12:29:48Z">
+      <class name="com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest@75f9eccc]" name="beforeClass" is-config="true" duration-ms="17949" started-at="2017-07-21T17:51:23Z" finished-at="2017-07-21T17:51:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest@41ee392b]" name="verify" duration-ms="119149" started-at="2017-07-10T18:24:04Z" data-provider="dp" finished-at="2017-07-10T18:26:03Z">
+        <test-method status="PASS" signature="verify(com.adv.qa.selenium.helpers.DataRow)[pri:0, instance:com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest@75f9eccc]" name="verify" duration-ms="485480" started-at="2017-07-21T17:51:41Z" data-provider="dp" finished-at="2017-07-21T17:59:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [ep1ProcessList = Submit EP1], DataUnit [ep1ProcessList = EPC], DataUnit [ep1ProcessList = EP1], DataUnit [ep1ProcessList = E5H5EP1], DataUnit [ep1ProcessList = PM], DataUnit [ep2ProcessList = Submit EP2], DataUnit [ep2ProcessList = EPA], DataUnit [ep2ProcessList = EP2], DataUnit [ep2ProcessList = E5H5EP2], DataUnit [ep2ProcessList = PM], DataUnit [ep3ProcessList = Submit EP3], DataUnit [ep3ProcessList = EPB], DataUnit [ep3ProcessList = EP3], DataUnit [ep3ProcessList = E5H5EP3], DataUnit [ep3ProcessList = 00], DataUnit [ep4ProcessList = Submit EP4], DataUnit [ep4ProcessList = EAQ], DataUnit [ep4ProcessList = EP4], DataUnit [ep4ProcessList = E5H5EP4], DataUnit [ep4ProcessList = PM], DataUnit [ep5ProcessList = Submit EP5], DataUnit [ep5ProcessList = EPA], DataUnit [ep5ProcessList = EP5], DataUnit [ep5ProcessList = E5H5EP5], DataUnit [ep5ProcessList = 30 Apr 2014], DataUnit [ep1PathFun = 1], DataUnit [ep1PathFun = 2], DataUnit [ep1PathFun = 3], DataUnit [ep1PathFun = Rebuild]]]]>
+                <![CDATA[[DataUnit [userName = SYSTEM], DataUnit [passWord = E5], DataUnit [code = AGC], DataUnit [gbpfrfCurrency = GBP], DataUnit [gbpfrfCurrency = FRF], DataUnit [gbpfrfCurrency = Base to Non-Base], DataUnit [gbpfrfCurrency = 1], DataUnit [gbpfrfCurrency = 1.00], DataUnit [gbpfrfCurrency = 1.00], DataUnit [gbpeurCurrency = GBP], DataUnit [gbpeurCurrency = EUR], DataUnit [gbpeurCurrency = Base to Non-Base], DataUnit [gbpeurCurrency = 1], DataUnit [gbpeurCurrency = 1.00], DataUnit [gbpeurCurrency = 1.00], DataUnit [gbpdemCurrency = GBP], DataUnit [gbpdemCurrency = DEM], DataUnit [gbpdemCurrency = Base to Non-Base], DataUnit [gbpdemCurrency = 1], DataUnit [gbpdemCurrency = 1.0], DataUnit [gbpdemCurrency = 1.0], DataUnit [gbpusdCurrency = GBP], DataUnit [gbpusdCurrency = USD], DataUnit [gbpusdCurrency = Base to Non-Base], DataUnit [gbpusdCurrency = 1], DataUnit [gbpusdCurrency = 1.0], DataUnit [gbpusdCurrency = 1.0], DataUnit [eurgbpCurrency = EUR], DataUnit [eurgbpCurrency = GBP], DataUnit [eurgbpCurrency = Base to Non-Base], DataUnit [eurgbpCurrency = 1], DataUnit [eurgbpCurrency = 1.0], DataUnit [eurgbpCurrency = 1.0], DataUnit [frfgbpCuurency = FRF], DataUnit [frfgbpCuurency = GBP], DataUnit [frfgbpCuurency = Non-base to Base], DataUnit [frfgbpCuurency = 1], DataUnit [frfgbpCuurency = 1.0], DataUnit [frfgbpCuurency = 1.0], DataUnit [usdgbpCurrency = USD], DataUnit [usdgbpCurrency = GBP], DataUnit [usdgbpCurrency = Non-base to Base], DataUnit [usdgbpCurrency = 1], DataUnit [usdgbpCurrency = 1.0], DataUnit [usdgbpCurrency = 1.0], DataUnit [demgbpCurrency = DEM], DataUnit [demgbpCurrency = GBP], DataUnit [demgbpCurrency = Non-base to Base], DataUnit [demgbpCurrency = 1], DataUnit [demgbpCurrency = 1.0], DataUnit [demgbpCurrency = 1.0]]]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with xpath == //div[2]/table/tbody/tr/td[2]/input (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 60.33 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'ChetnaM-PC', ip: '10.31.25.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:22665/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: d608ebb2-38d8-4000-8b2d-ea87a4d1eee2
-*** Element info: {Using=xpath, value=//div[2]/table/tbody/tr/td[2]/input}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //div[2]/table/tbody/tr/td[2]/input (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 60.33 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'ChetnaM-PC', ip: '10.31.25.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:22665/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: d608ebb2-38d8-4000-8b2d-ea87a4d1eee2
-*** Element info: {Using=xpath, value=//div[2]/table/tbody/tr/td[2]/input}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
-	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterEP1ProcessDetails(CurrencyPage.java:4950)
-	at com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest.verify(A041_Group_Category_And_Structure_PostingsTest.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest@41ee392b]" name="tearDown" is-config="true" duration-ms="6107" started-at="2017-07-10T18:26:03Z" finished-at="2017-07-10T18:26:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest@75f9eccc]" name="tearDown" is-config="true" duration-ms="1330" started-at="2017-07-21T17:59:46Z" finished-at="2017-07-21T17:59:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

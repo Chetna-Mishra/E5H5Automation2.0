@@ -5,6 +5,11 @@
 	 Purpose : Batch execution of testcases from A043 - A091
  -->    
   
+ <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+     
+ </listeners> 
+  
  <test name="suite1" preserve-order="true" time-out="800000" enabled="false">
     	<classes>
        		  <class name="com.adv.qa.selenium.tests.currency.phase2.A043_Insert_Tax_CodesTest"/>  
@@ -38,21 +43,21 @@
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A053_Category_CodeTest"/> 
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A054_Discount_TermsTest"/>
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A055_Settlement_TermsTest"/>
-        	 <class name="com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest"/> 
+        	 <class name="com.adv.qa.selenium.tests.currency.phase2.A056A_System_Assigned_Batch_Numbers_In_AP"/>  
+        	 
    	</classes>
   </test> 
   
-  <test name="suite5" preserve-order="true" time-out="800000" enabled="false">
+  <test name="suite5" preserve-order="true" time-out="800000" enabled="true">
     	<classes>
-    	
-    		  <class name="com.adv.qa.selenium.tests.currency.phase2.A056A_System_Assigned_Batch_Numbers_In_AP"/>  
-        	  <class name="com.adv.qa.selenium.tests.currency.phase2.A057_Legend_ControlsTest"/> 
+    		 <class name="com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest"/> 
+    		  <class name="com.adv.qa.selenium.tests.currency.phase2.A057_Legend_ControlsTest"/> 
         	  <class name="com.adv.qa.selenium.tests.currency.phase2.A058_Payment_MethodsTest"/>
         	  <class name="com.adv.qa.selenium.tests.currency.phase2.A059_Bank_Payment_MethodTest"/>	
      	</classes>
   </test> 
      
-  <test name="suite6" preserve-order="true" time-out="800000" enabled="false">
+  <test name="suite6" preserve-order="true" time-out="800000" enabled="true">
     	<classes>
 
     	 <class name="com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest"/>  
@@ -62,7 +67,7 @@
         </classes>
   </test> 
   
-    <test name="suite7" preserve-order="true" time-out="800000" enabled="false">
+    <test name="suite7" preserve-order="true" time-out="800000" enabled="true">
     	<classes>
 			<class name="com.adv.qa.selenium.tests.currency.phase2.A063_Standard_TextTest"/> 
        	    <class name="com.adv.qa.selenium.tests.currency.phase2.A064_PPV_Control_AccountTest"/>
@@ -97,7 +102,7 @@
       </classes>
   </test> 
   
-  <test name="suite11" preserve-order="true" time-out="800000" enabled="true">
+  <test name="suite11" preserve-order="true" time-out="800000" enabled="false">
     	<classes>
         	<class name="com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest"/>
         	<class name="com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest"/>   
@@ -137,20 +142,22 @@
     	<classes>    	    
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A083_Structure_AuthorisersAPTest"/>  
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A083A_Structure_AuthorisersPMTest"/>
+        	  <class name="com.adv.qa.selenium.tests.currency.phase2.A084_Authorisation_Value_Levels_DefinitionTest"/>
     	</classes>
   </test> 
   
   <test name="suite17" preserve-order="true" time-out="800000" enabled="false">
     	<classes>
-     	     <class name="com.adv.qa.selenium.tests.currency.phase2.A084_Authorisation_Value_Levels_DefinitionTest"/>
+     	    
         	 <class name="com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest"/>
     	    <class name="com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest"/>
+    	     
         	           	 
     	</classes>
   </test> 
   <test name="suite18" preserve-order="true" time-out="800000" enabled="false">
     	<classes>
-		    <class name="com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest"/>
+	<class name="com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest"/>
      	</classes>
   </test> 
    
@@ -174,5 +181,7 @@
 No need to execute A075, as the cmpy=01
 <class name="com.adv.qa.selenium.tests.currency.phase2.A075_companyControl_MapOrderTest"/>
 Prior to Execute, A086_Authorisation_By_GL_ResponsibilityTest, execute A089_Amend_AP_Company_Controls_For_AuthorisationTest
+Execute A091 seperate
+
 
 -->

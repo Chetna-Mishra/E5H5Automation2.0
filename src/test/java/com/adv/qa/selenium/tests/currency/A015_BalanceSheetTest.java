@@ -65,6 +65,10 @@ public class A015_BalanceSheetTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 		
+		String SuccMessage = "The previously-requested action has been performed"; 
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New balance activity "+balanceSheetControl.get(0),"Created");
+		
 		/*Exit from the Balance sheet page*/
 		currencyPage.clickOnCancel();
 		

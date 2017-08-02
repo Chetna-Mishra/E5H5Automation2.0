@@ -49,7 +49,6 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		amendInventoryStoreControl(currencyPage,dataRow);
-		
 				
 		createStockAdjustment(currencyPage,dataRow);
 		
@@ -74,6 +73,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 	
 	
 	private void amendInventoryStoreControl(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> eastStoreElements = dataRow.findNamesReturnValues("eastStoreElements");
 		
@@ -97,7 +97,8 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 	
 	
 	
-	private void createStockAdjustment(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+	private void createStockAdjustment(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException {
+		
 		String code = "EDTHMVMT ACT=INSERT,CMPY="+companyId+",STORE=EAST,MVMT-IND=A";
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> eastStoreElements = dataRow.findNamesReturnValues("eastStoreElements");
@@ -115,7 +116,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 			
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new material issue*/
 		if(referenceMessage.contains(message)){
@@ -129,7 +130,8 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		currencyPage.isCommandDisplayed();
 	}
 	
-	private void verifyStockBalance(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+	private void verifyStockBalance(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException {
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> eastStoreDetails = dataRow.findNamesReturnValues("eastStoreDetails");
 		
@@ -175,11 +177,11 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 		
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new batch type in the list*/
 		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Movement reference for material issue created "+referenceMessage);
+			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
 		}
 		else{			
 			testcases.add(getCurreentDate()+" | Fail : Movement reference for material issue not created ");
@@ -242,6 +244,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 
 		
 		boolean storeItemValues = currencyPage.verifyStoreItemValues(eastStoreBalance,1);//Need Test
+		
 		if(storeItemValues== true){
 			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
 		}
@@ -260,6 +263,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		currencyPage.clickOnCurrentStock();
 		
 		boolean currentStock = currencyPage.verifyCurrenctStock(eastStoreCurrentStock,0);
+		
 		if(currentStock== true){
 			testcases.add(getCurreentDate()+" | Pass : Currenct stock is as expected ");
 		}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A104_Inventory_Company_ControlsTest>
+<Verification1>02/08/2017 11:45:36 | Pass : Login page displayed</Verification1>
+<Verification2>02/08/2017 11:45:46 | Pass : Command line displayed</Verification2>
+<Verification3>02/08/2017 11:46:05 | Pass : Currency search page displayed</Verification3>
+<Verification4>02/08/2017 11:49:33 | Fail : New inventory company IM  not displayed in the list</Verification4>
+</A104_Inventory_Company_ControlsTest>
+</TestCase>
+</SeleniumTestReport>

@@ -75,11 +75,7 @@ public class A006_Company_DefinitionTest extends BaseTest{
 //		currencyPage.clickOnSecondTab();
 
 		Assert.assertTrue(testcases,currencyPage.ClickOnAnyTab("Currency/EC Intrastat", 0), "Currency Intrastat Tab","displayed");
-		
-//		Assert.assertTrue(testcases,currencyPage.isSecondTabDisplayed(), "Currency Intrastat Tab","displayed");
-		
-		
-		
+
 		/*Enter company currency intrastat details*/
 		currencyPage.enterCurrencyIntrastatDetails(companyDetails);
 		

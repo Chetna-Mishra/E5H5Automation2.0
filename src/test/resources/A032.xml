@@ -7,6 +7,13 @@
 			
 			<values>B</values>
             
+            
+            <dummanagementCode>DUM</dummanagementCode>
+			<dummanagementCode>Dummy Costcentre for ICA BTZ</dummanagementCode>
+			<dummanagementCode>Dummy Costcentre</dummanagementCode>
+			<dummanagementCode>00</dummanagementCode>
+			<dummanagementCode>WEST</dummanagementCode>
+            
 			<n1ManagementCode>N1</n1ManagementCode>
 			<n1ManagementCode>Newcastle</n1ManagementCode>
 			<n1ManagementCode>N1</n1ManagementCode>

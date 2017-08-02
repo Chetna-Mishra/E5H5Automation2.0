@@ -66,38 +66,44 @@ public class A021_Batch_TypesTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 
-		/*Verify new batch type*/
-		verifyValues(currencyPage,batchTypeRval);
-		verifyValues(currencyPage,batchTypeSumm);
-		verifyValues(currencyPage,batchTypeTran);
+//		/*Verify new batch type*/
+//		verifyValues(currencyPage,batchTypeRval);
+//		verifyValues(currencyPage,batchTypeSumm);
+//		verifyValues(currencyPage,batchTypeTran);
 		
 		currencyPage.logOut(2);
 	}
 	
 	private void createBatchType(CurrencyPage currencyPage,List<String> batchList) throws InterruptedException{
 
-		/*Create batch type code*/
-		boolean update = currencyPage.enterBatchTypeDetails(batchList);	
-
-		if(update == true){
-			currencyPage.clickOnUpdate();			
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New batch type  "+batchList.get(1)+ " displayed in the list");
-		}
-	}
-
-	private void verifyValues(CurrencyPage currencyPage,List<String> batchList){
+		String SuccMessage = "The previously-requested action has been performed";
 		
-		/*Verify new batch type in the list*/		
-		if(currencyPage.verifyValues(batchList.get(1)))
-		{
+		/*Create batch type code*/
+		boolean update = currencyPage.enterBatchTypeDetails(batchList);
+	
+		if(update == true){
+			
+			currencyPage.clickOnUpdate();
+	
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New batch type "+batchList.get(1), " created successfully");
+		}
+		
+		else{
 			testcases.add(getCurreentDate()+" | Pass : New batch type "+batchList.get(1)+ " displayed in the list");
 		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New batch type "+batchList.get(1)+ " not displayed in the list");
-		}
 	}
+
+//	private void verifyValues(CurrencyPage currencyPage,List<String> batchList){
+//		
+//		/*Verify new batch type in the list*/		
+//		if(currencyPage.verifyValues(batchList.get(1)))
+//		{
+//			testcases.add(getCurreentDate()+" | Pass : New batch type "+batchList.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New batch type "+batchList.get(1)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

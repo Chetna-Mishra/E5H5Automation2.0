@@ -62,6 +62,9 @@ public class A027_Default_StructureTest extends BaseTest{
 		currencyPage.enterStructureDetails(structureList);	
 		
 		currencyPage.clickOnUpdate();
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Structure "+structureList.get(0), "created successfully");
 		
 		/*Exit from the structure edit page*/
 		currencyPage.clickOnCancel();

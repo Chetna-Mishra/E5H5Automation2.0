@@ -55,22 +55,36 @@ public class A050_Accounts_Payable_Control_AccountsTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
-		currencyPage.enterAccountPayableControlDetails(control);
+		String SuccMessage = "The previously-requested action has been performed";
+		boolean update=currencyPage.enterAccountPayableControlDetails(control);
 		
+		if(update==true)
+		
+		{
 		currencyPage.clickOnUpdate();
 		currencyPage.clickOnAccptWarnings();
 		currencyPage.clickOnUpdate();
 		
-		/*Exit from the batch details page*/
-		currencyPage.clickOnCancel();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New account payable control "+control.get(0), "created successfully");
 		
-		/*Verify new batch type in the list*/
-		if(currencyPage.verifyValues(control.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New account payable control "+control.get(0)+ " displayed in the list");
 		}
+		
 		else{
-			testcases.add(getCurreentDate()+" | Fail : New account payable control "+control.get(0)+ " not displayed in the list");
+			currencyPage.clickOnCancel();
+					
+			testcases.add(getCurreentDate()+" | Pass : New account payable control "+control.get(0)+ " already created");
 		}
+		
+//		/*Exit from the batch details page*/
+//		
+//		
+//		/*Verify new batch type in the list*/
+//		if(currencyPage.verifyValues(control.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New account payable control "+control.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New account payable control "+control.get(0)+ " not displayed in the list");
+//		}
 
 		currencyPage.logOut(2);
 

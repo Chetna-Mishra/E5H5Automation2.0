@@ -70,10 +70,10 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,apLev1,"AP");
-		verifyValues(currencyPage,apLev2,"AP");
-		verifyValues(currencyPage,apLev3,"AP");
-		verifyValues(currencyPage,apLev4,"AP");
+//		verifyValues(currencyPage,apLev1,"AP");
+//		verifyValues(currencyPage,apLev2,"AP");
+//		verifyValues(currencyPage,apLev3,"AP");
+//		verifyValues(currencyPage,apLev4,"AP");
 		
 		currencyPage.clickOnCancel();
 		
@@ -95,16 +95,18 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,pmLev1,"PM");
-		verifyValues(currencyPage,pmLev2,"PM");
-		verifyValues(currencyPage,pmLev3,"PM");
-		verifyValues(currencyPage,pmLev4,"PM");
+//		verifyValues(currencyPage,pmLev1,"PM");
+//		verifyValues(currencyPage,pmLev2,"PM");
+//		verifyValues(currencyPage,pmLev3,"PM");
+//		verifyValues(currencyPage,pmLev4,"PM");
 
 		currencyPage.logOut(2);
 	}
 
 	
 	private void createStructureAuthorisers(CurrencyPage currencyPage,List<String> authoriser,int i) throws InterruptedException{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		boolean update = false;
 		if(i == 1){		
 			update = currencyPage.enterValueLevelAuthForAP(authoriser);
@@ -115,6 +117,10 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisers "+authoriser.get(1), "created successfully");
+			
+			
 		}
 		
 		else{
@@ -122,15 +128,15 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> authoriser,String level){		
-		/*Verify New authorizers displayed in the list*/
-		if(currencyPage.verifyValues(authoriser.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New "+level+" authorisers "+authoriser.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New "+level+" authorisers "+authoriser.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> authoriser,String level){		
+//		/*Verify New authorizers displayed in the list*/
+//		if(currencyPage.verifyValues(authoriser.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New "+level+" authorisers "+authoriser.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New "+level+" authorisers "+authoriser.get(1)+ " not displayed in the list");
+//		}
+//	}
 
 
 	

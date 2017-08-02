@@ -58,6 +58,7 @@ public class A044_TAX_Rates_by_Tax_CodesTest extends BaseTest{
 
 	/*Create tax rate*/
 	private void insertTaxCode(CurrencyPage currencyPage,List<String> taxList,String currencyCode) throws InterruptedException{
+		
 		String command = "EDTRRATE ACT=INSERT,CMPY="+companyId;
 //		String message = "The previously-requested action has been performed";
 		
@@ -70,14 +71,26 @@ public class A044_TAX_Rates_by_Tax_CodesTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Tax Rates Edit","Currency search page","displayed");
 
 		/*Create Tax rate*/
-		boolean update = currencyPage.createTaxRate(taxList);	
 		
-		if(update == true){
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		boolean update = currencyPage.createTaxRate(taxList);
+		
+		
+		if (update==true)
+		{
 			
-				testcases.add(getCurreentDate()+" | Pass : Tax rate "+taxList.get(0)+ " Created Successfully");
-			}
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Tax rate "+taxList.get(0)," Created Successfully");
+		
+		}
+		
 		else{
-				testcases.add(getCurreentDate()+" | Fail : Tax rate "+taxList.get(0)+ " not Created");
+			testcases.add(getCurreentDate()+" | Pass : Tax rate  "+taxList.get(0)+ " already created");
+			
+			currencyPage.clickOnCancel();
+			
+			currencyPage.isConfirmPopUpDisplayed();
 		}
 		
 	}

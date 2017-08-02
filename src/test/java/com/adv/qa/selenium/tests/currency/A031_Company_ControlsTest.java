@@ -55,14 +55,16 @@ public class A031_Company_ControlsTest extends BaseTest{
 		
 		currencyPage.clickOnAmend();
 		
-		currencyPage.updateCompanyControlDetails(companyControl);
-			
+		boolean updateCompanyControlDetails = currencyPage.updateCompanyControlDetails(companyControl);
+		
+		Assert.assertTrue(testcases,updateCompanyControlDetails,"Company controls are","updated");
+		
 		currencyPage.clickOnAmend();
 		
 		/*Create layout code*/
 		boolean isCompanyControl = currencyPage.verifyCompanyControl(companyControl);
 		
-		Assert.assertTrue(testcases,isCompanyControl,"Company controls are","as expected");
+		Assert.assertTrue(testcases,isCompanyControl,"Company controls "+companyControl," as expected");
 		
 		currencyPage.clickOnCancel();
 		

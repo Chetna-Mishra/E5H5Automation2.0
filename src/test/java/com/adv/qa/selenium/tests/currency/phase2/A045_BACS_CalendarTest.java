@@ -48,6 +48,7 @@ public class A045_BACS_CalendarTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Calendar List","Currency search page","displayed");
 		
@@ -60,6 +61,7 @@ public class A045_BACS_CalendarTest extends BaseTest{
 		
 		private void verifyValues(CurrencyPage currencyPage,List<String> calendarList)
 		{
+			String SuccMessage = "The previously-requested action has been performed";
 			currencyPage.searchCalendar(calendarList, 2);
 					
 			/*Verify new currency in the currency list*/
@@ -72,6 +74,9 @@ public class A045_BACS_CalendarTest extends BaseTest{
 			currencyPage.enterCalendarDetails(calendarList);
 						
 			currencyPage.clickOnUpdate();
+	
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New calendar "+calendarList.get(0), "created successfully");
 	
 			currencyPage.clickOnCancel();
 			
@@ -87,10 +92,10 @@ public class A045_BACS_CalendarTest extends BaseTest{
 			currencyPage.clickOnUpdateWarnings();
 	
 			/*Verify new batch type in the list*/
-			Assert.assertTrue(testcases,currencyPage.verifyValues(calendarList.get(0)), "New calendar  "+calendarList.get(0),"displayed in the list");
+			Assert.assertTrue(testcases,currencyPage.verifyValues(calendarList.get(0)), "New calendar  "+calendarList.get(0),"Created and displayed in the list");
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : calendar "+calendarList.get(0) +"prensent in the list");
+			testcases.add(getCurreentDate()+" | Pass : calendar "+calendarList.get(0) +"already present in the list");
 		}
 
 	}

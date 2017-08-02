@@ -63,37 +63,46 @@ public class A010_Environment_Groups_Test extends BaseTest{
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
-
-		verifyValues(currencyPage,firstDestination);
-		verifyValues(currencyPage,secondDestination);
+		
+		/*Already included successful msg in the creation part hence commenting*/
+		
+//		verifyValues(currencyPage,firstDestination);
+//		verifyValues(currencyPage,secondDestination);
 		
 		currencyPage.logOut(2);
 
 	}
 	
 	private void createEnvironmentGroup(CurrencyPage currencyPage,List<String> environmentList) throws InterruptedException{
+		
 		/*Create environment group code*/
 		boolean update = currencyPage.enterEnvironmentDetails(environmentList);
 
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		if(update == true){
+			
 			currencyPage.clickOnUpdate();
-		}		
+			
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New environment group "+environmentList.get(0), "created successfully");
+		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New environment group "+environmentList.get(0)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New environment group "+environmentList.get(0)+ " already created");
 		}
 	}
 
-	private void verifyValues(CurrencyPage currencyPage,List<String> environmentList){
-		currencyPage.searchValue(environmentList,1,0);
-		
-		/*Verify new environment group in the list*/
-		if(currencyPage.verifyValues(environmentList.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New environment group "+environmentList.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New environment group "+environmentList.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> environmentList){
+//		currencyPage.searchValue(environmentList,1,0);
+//		
+//		/*Verify new environment group in the list*/
+//		if(currencyPage.verifyValues(environmentList.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New environment group "+environmentList.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New environment group "+environmentList.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

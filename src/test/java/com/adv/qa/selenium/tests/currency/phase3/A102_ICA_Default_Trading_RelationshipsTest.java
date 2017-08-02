@@ -61,6 +61,7 @@ public class A102_ICA_Default_Trading_RelationshipsTest extends BaseTest{
 		
 		 if(currencyPage.isToolTipDisplayed()){
 			   currencyPage.clickOnUpdateWarnings();
+			  
 		 }
 		 else{
 		   currencyPage.clickOnUpdate();

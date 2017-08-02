@@ -71,36 +71,42 @@ public class A036_BTZ_Elements_For_ICA_StructureTest extends BaseTest{
 		/*Exit from the ICA details page*/
 		currencyPage.clickOnCancel();
 
-		/*Verify presence of ICA structure*/
-		verifyValues(currencyPage,icaNorth);
-		verifyValues(currencyPage,icaWest);
-		verifyValues(currencyPage,icaEast);
-		verifyValues(currencyPage,icaSouth);
+//		/*Verify presence of ICA structure*/
+//		verifyValues(currencyPage,icaNorth);
+//		verifyValues(currencyPage,icaWest);
+//		verifyValues(currencyPage,icaEast);
+//		verifyValues(currencyPage,icaSouth);
 		
 		currencyPage.logOut(2);
 	}
 	
 	private void createBTZElement(CurrencyPage currencyPage,List<String> element){
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create new ICA element*/
 		boolean update = currencyPage.enterICAElements(element);
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New BTZ element for ICA structure "+element.get(1)," created successfully");	
+			
 		}
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New BTZ element for ICA structure "+element.get(1)+ " present in the list");
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> element){
-		/*Verify new ICA element in the list*/
-		if(currencyPage.verifyValues(element.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New BTZ element for ICA structure "+element.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New BTZ element for ICA structure "+element.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> element){
+//		/*Verify new ICA element in the list*/
+//		if(currencyPage.verifyValues(element.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New BTZ element for ICA structure "+element.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New BTZ element for ICA structure "+element.get(1)+ " not displayed in the list");
+//		}
+//	}
 	
 	@DataProvider
 	public Object[][] dp() 

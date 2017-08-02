@@ -66,12 +66,12 @@ public class A048_UOMTest extends BaseTest{
 		/*Exit from the UOM details page*/
 		currencyPage.clickOnCancel();
 	
-		verifyUOMCode(currencyPage,uomCodeBox);
-		verifyUOMCode(currencyPage,uomCodeEach);
-		verifyUOMCode(currencyPage,uomCodeDays);
-		verifyUOMCode(currencyPage,uomCodeYear);
-		
-		currencyPage.clickOnCancel();
+//		verifyUOMCode(currencyPage,uomCodeBox);
+//		verifyUOMCode(currencyPage,uomCodeEach);
+//		verifyUOMCode(currencyPage,uomCodeDays);
+//		verifyUOMCode(currencyPage,uomCodeYear);
+//		
+//		currencyPage.clickOnCancel();
 		
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 			
@@ -88,60 +88,72 @@ public class A048_UOMTest extends BaseTest{
 		/*Exit from the UOM details page*/
 		currencyPage.clickOnCancel();
 		
-		verifyUOMRelation(currencyPage,uomBaseForEach);
-		verifyUOMRelation(currencyPage,uomBaseForDays);
+//		verifyUOMRelation(currencyPage,uomBaseForEach);
+//		verifyUOMRelation(currencyPage,uomBaseForDays);
 		
 		currencyPage.logOut(2);
 
 	}
 	
 	private void createUOM(CurrencyPage currencyPage,List<String> uomCode) throws InterruptedException{
-		/*Create UOM code*/
-		boolean update = currencyPage.enterUomDetails(uomCode);	
 		
-		if(update == true){				
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		/*Create UOM code*/
+		boolean update = currencyPage.enterUomDetails(uomCode);
+		
+		if(update == true){			
+			
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New UOM code "+uomCode.get(0), "created successfully");	
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : UOM code "+uomCode.get(0)+" present in the list");
+			testcases.add(getCurreentDate()+" | Pass : UOM code "+uomCode.get(0)+" already present in the list");
 		}
 	}
 	
 	private void createUOMRelationShip(CurrencyPage currencyPage,List<String> uomCode) throws InterruptedException{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create UOM relationship*/
 		boolean update = currencyPage.enterUOMRelationShip(uomCode);	
 		
 		if(update == true){		
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New UOM Relationship "+uomCode.get(1), "created successfully");	
+
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New UOM Relationship "+uomCode.get(1)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New UOM Relationship "+uomCode.get(1)+ " already displayed in the list");
 		}
 	}
 	
-	private void verifyUOMCode(CurrencyPage currencyPage,List<String> uomCode){
-		currencyPage.searchValue(uomCode.get(0), 1,0);
-		
-		/*Verify UOM code and UOM relationship*/
-		if(currencyPage.verifyValues(uomCode.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : UOM code "+uomCode.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : UOM code "+uomCode.get(0)+ " not displayed in the list");
-		}
-	}
-	
-	private void verifyUOMRelation(CurrencyPage currencyPage,List<String> uomCode){
-		currencyPage.searchValue(uomCode, 2,1);
-		
-		/*Verify UOM code and UOM relationship*/
-		if(currencyPage.verifyValues(uomCode.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : UOM code "+uomCode.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : UOM code "+uomCode.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyUOMCode(CurrencyPage currencyPage,List<String> uomCode){
+//		currencyPage.searchValue(uomCode.get(0), 1,0);
+//		
+//		/*Verify UOM code and UOM relationship*/
+//		if(currencyPage.verifyValues(uomCode.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : UOM code "+uomCode.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : UOM code "+uomCode.get(0)+ " not displayed in the list");
+//		}
+//	}
+//	
+//	private void verifyUOMRelation(CurrencyPage currencyPage,List<String> uomCode){
+//		currencyPage.searchValue(uomCode, 2,1);
+//		
+//		/*Verify UOM code and UOM relationship*/
+//		if(currencyPage.verifyValues(uomCode.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : UOM code "+uomCode.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : UOM code "+uomCode.get(1)+ " not displayed in the list");
+//		}
+//	}
 	
 	
 	@AfterClass (alwaysRun = true)

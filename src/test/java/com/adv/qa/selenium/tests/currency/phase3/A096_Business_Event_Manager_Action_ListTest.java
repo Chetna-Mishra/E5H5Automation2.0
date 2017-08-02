@@ -57,7 +57,7 @@ public class A096_Business_Event_Manager_Action_ListTest extends BaseTest{
 		
 		boolean verifyEvent = currencyPage.verifyManagerEvent(bemActionList);
 		
-		Assert.assertTrue(testcases,verifyEvent, "Business event "," as expected");
+		Assert.assertTrue(testcases,verifyEvent, "Business event "+bemActionList.get(0)," as expected");
 		
 		currencyPage.clickOnCancel();
 		

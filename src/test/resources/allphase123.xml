@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite for all phase 1,2,3" verbose="2" time-out="8000000" thread-count="1" preserve-order="true">
+ <!-- 
+	 @author : Chetna
+	 Purpose : Batch execution of testcases from A001A - A042
+  --> 
+
+
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+     
+ </listeners>
+
+<Suite-files>
+    <Suite-files path="C:\Users\Chetna.Mishra\git\E5H5Automation2.0\src\test\resources\phaseI.xml" />
+    <Suite-files path="C:\Users\Chetna.Mishra\git\E5H5Automation2.0\src\test\resources\phaseII.xml" />
+    <Suite-files path="C:\Users\Chetna.Mishra\git\E5H5Automation2.0\src\test\resources\phaseIII.xml" />
+</Suite-files>
+   
+</suite> 

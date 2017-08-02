@@ -64,38 +64,41 @@ public class A051_Purchase_Ledger_Bank_CodesTest extends BaseTest{
 		/*Exit from the batch details page*/
 		currencyPage.clickOnCancel();		
 		
-		verifyValues(currencyPage,bankCodeBP);
-		verifyValues(currencyPage,bankCodeB1);
-		verifyValues(currencyPage,bankCodeH1);
+//		verifyValues(currencyPage,bankCodeBP);
+//		verifyValues(currencyPage,bankCodeB1);
+//		verifyValues(currencyPage,bankCodeH1);
 
 		currencyPage.logOut(2);
 
 	}
 	
 	private void createBankCode(CurrencyPage currencyPage,List<String> bankCode) throws InterruptedException{
-		boolean update = false;
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		/*Create batch type code*/
-		update = currencyPage.createBankAccount(bankCode);
+		 boolean update = currencyPage.createBankAccount(bankCode);
 			
 		if(update==true){	
 			currencyPage.clickOnUpdate();
 			currencyPage.clickOnAcceptWarnings();
 			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New bank code  "+bankCode.get(0), "created successfully");		
+			
 		}
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New bank code  "+bankCode.get(0)+ " created");
 		}
 	}
 
-	private void verifyValues(CurrencyPage currencyPage,List<String> bankCode){
-		
-		if(currencyPage.verifyValues(bankCode.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New bank code "+bankCode.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New bank code "+bankCode.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> bankCode){
+//		
+//		if(currencyPage.verifyValues(bankCode.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New bank code "+bankCode.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New bank code "+bankCode.get(0)+ " not displayed in the list");
+//		}
+//	}
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

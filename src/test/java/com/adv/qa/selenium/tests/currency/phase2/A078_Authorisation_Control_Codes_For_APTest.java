@@ -63,38 +63,44 @@ public class A078_Authorisation_Control_Codes_For_APTest extends BaseTest{
 
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,authorisationCodeL0);
-		verifyValues(currencyPage,authorisationCodeL1);
-		verifyValues(currencyPage,authorisationCodeL2);
+//		verifyValues(currencyPage,authorisationCodeL0);
+//		verifyValues(currencyPage,authorisationCodeL1);
+//		verifyValues(currencyPage,authorisationCodeL2);
 		
 		currencyPage.logOut(2);
 	}
 
 	
 	private void createAuthorisationCode(CurrencyPage currencyPage,List<String> authorisationControlCode) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create authorization control code*/
 		boolean update = currencyPage.enterAuthorisationControlDetails(authorisationControlCode);			
 		
 		if(update == true){
 			
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation controls code  "+authorisationControlCode.get(0), "created successfully");
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New authorisation controls code "+authorisationControlCode.get(0)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New authorisation controls code "+authorisationControlCode.get(0)+ " already created");
 		}
 	}
 
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> authorisationControlCode){
-		
-		/*Verify new authorisation code type in the list*/
-		if(currencyPage.verifyValues(authorisationControlCode.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New authorisation controls code "+authorisationControlCode.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New authorisation controls code "+authorisationControlCode.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> authorisationControlCode){
+//		
+//		/*Verify new authorisation code type in the list*/
+//		if(currencyPage.verifyValues(authorisationControlCode.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New authorisation controls code "+authorisationControlCode.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New authorisation controls code "+authorisationControlCode.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

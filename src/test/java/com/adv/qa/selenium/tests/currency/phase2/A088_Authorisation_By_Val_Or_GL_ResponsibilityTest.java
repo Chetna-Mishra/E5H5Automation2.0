@@ -68,11 +68,11 @@ public class A088_Authorisation_By_Val_Or_GL_ResponsibilityTest extends BaseTest
 		currencyPage.clickOnCancel();
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		verifyValues(currencyPage,authorisationHQ);
-		verifyValues(currencyPage,authorisationWest);
-		verifyValues(currencyPage,authorisationSouth);
-		verifyValues(currencyPage,authorisationNorth);
-		verifyValues(currencyPage,authorisationEast);
+//		verifyValues(currencyPage,authorisationHQ);
+//		verifyValues(currencyPage,authorisationWest);
+//		verifyValues(currencyPage,authorisationSouth);
+//		verifyValues(currencyPage,authorisationNorth);
+//		verifyValues(currencyPage,authorisationEast);
 		
 		currencyPage.logOut(2);
 	}
@@ -80,11 +80,15 @@ public class A088_Authorisation_By_Val_Or_GL_ResponsibilityTest extends BaseTest
 	
 	private void createAuthorisationByGLResponsibility(CurrencyPage currencyPage,DataRow dataRow,List<String> authorisationCode) throws InterruptedException{
 		
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create batch type code*/
 		boolean update = currencyPage.enterValueORGLResponsibilityForAP(authorisationCode);	
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation by VALUE or GL responsibility code "+authorisationCode.get(1), "created successfully");
 		}
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New authorisation by VALUE or GL responsibility code "+authorisationCode.get(1)+ " present in the list");
@@ -92,17 +96,17 @@ public class A088_Authorisation_By_Val_Or_GL_ResponsibilityTest extends BaseTest
 			
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> authorisationCode){
-		
-		/*Verify New authorisation by VALUE or GL responsibility code displayed in the list*/
-		if(currencyPage.verifyValues(authorisationCode.get(1))){
-			
-			testcases.add(getCurreentDate()+" | Pass : New authorisation by VALUE or GL responsibility code "+authorisationCode.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New authorisation by VALUE or GL responsibility code "+authorisationCode.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> authorisationCode){
+//		
+//		/*Verify New authorisation by VALUE or GL responsibility code displayed in the list*/
+//		if(currencyPage.verifyValues(authorisationCode.get(1))){
+//			
+//			testcases.add(getCurreentDate()+" | Pass : New authorisation by VALUE or GL responsibility code "+authorisationCode.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New authorisation by VALUE or GL responsibility code "+authorisationCode.get(1)+ " not displayed in the list");
+//		}
+//	}
 
 
 	

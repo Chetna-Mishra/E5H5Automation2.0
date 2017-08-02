@@ -69,24 +69,18 @@ public class A081_Authorisation_Groupings_For_PMTest extends BaseTest{
 
 	
 	private void createAuthorisationGroup(CurrencyPage currencyPage,List<String> authorisationControlCode) throws InterruptedException{
-//		String message = "The previously-requested action has been performed";
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Create batch type code*/
 		boolean update = currencyPage.enterAuthorisationGroupingsDetails(authorisationControlCode);	
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
-		}
 			
-//			/*Verify new authorization groupings code type in the list*/
-//			if(currencyPage.getToolContentText().contains(message)){
-//				testcases.add(getCurreentDate()+" | Pass : New authorisation group "+authorisationControlCode.get(0)+ " displayed in the list");
-//			}
-//			else{
-//				testcases.add(getCurreentDate()+" | Fail : New authorisation group "+authorisationControlCode.get(0)+ " not displayed in the list");
-//			}
-//
-//		}
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation group "+authorisationControlCode.get(0), "created successfully");
+			
+			
+		}
 		
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New authorisation group "+authorisationControlCode.get(0)+ " present in the list");

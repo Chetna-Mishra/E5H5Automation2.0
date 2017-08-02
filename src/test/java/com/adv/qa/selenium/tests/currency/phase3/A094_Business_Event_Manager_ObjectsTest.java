@@ -69,7 +69,7 @@ public class A094_Business_Event_Manager_ObjectsTest extends BaseTest{
 	
 	/*Create elements for Supplier*/
 	private void addBusinessEvent(CurrencyPageNew currencyPage,List<String> businessEvent){
-		String message = "The previously-requested action has been performed";
+		String SuccMessage = "The previously-requested action has been performed";
 
 		currencyPage.searchValue(businessEvent.get(0), 1, 0);
 		
@@ -87,18 +87,14 @@ public class A094_Business_Event_Manager_ObjectsTest extends BaseTest{
 		if(update == true){
 			currencyPage.clickOnUpdate();	
 			
-			if(currencyPage.getToolContentText().contains(message)){
-				testcases.add(getCurreentDate()+" | Pass : New business event  "+businessEvent.get(0)+ " updated");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New business event  "+businessEvent.get(0)+ " not updated");
-			}
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New business event "+businessEvent.get(0), "created successfully");
 			
 		}
 		else{
+			
+			testcases.add(getCurreentDate()+" | Pass : New business event "+businessEvent.get(0)+ "already updated");
 			currencyPage.clickOnCancel();
 			
-			testcases.add(getCurreentDate()+" | Pass : New business event  "+businessEvent.get(0)+ " updated");
 		}
 		
 	

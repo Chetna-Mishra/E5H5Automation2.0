@@ -37,7 +37,9 @@ public class A098_Item_CreationTest extends BaseTest{
 		List<String> item525 = dataRow.findNamesReturnValues("item525");	
 		List<String> item626 = dataRow.findNamesReturnValues("item626");		
 		List<String> item325 = dataRow.findNamesReturnValues("item325");		
-		List<String> item335 = dataRow.findNamesReturnValues("item335");		
+		List<String> item335 = dataRow.findNamesReturnValues("item335");
+		List<String> item524 = dataRow.findNamesReturnValues("item524");
+		
 		List<String> item160 = dataRow.findNamesReturnValues("item160");
 		List<String> itemDvdSrvc = dataRow.findNamesReturnValues("itemDvdSrvc");	
 		List<String> item909 = dataRow.findNamesReturnValues("item909");	
@@ -61,6 +63,7 @@ public class A098_Item_CreationTest extends BaseTest{
 		createItem(currencyPage,item626,0);
 		createItem(currencyPage,item325,0);
 		createItem(currencyPage,item335,0);
+		createItem(currencyPage,item524,0);
 		createItem(currencyPage,item160,1);
 		createItem(currencyPage,itemDvdSrvc,1);
 		createItem(currencyPage,item909,1);
@@ -76,6 +79,7 @@ public class A098_Item_CreationTest extends BaseTest{
 		verifyValues(currencyPage,item626);
 		verifyValues(currencyPage,item325);
 		verifyValues(currencyPage,item335);
+		verifyValues(currencyPage,item524);
 		verifyValues(currencyPage,item160);
 		verifyValues(currencyPage,itemDvdSrvc);
 		verifyValues(currencyPage,item909);
@@ -140,7 +144,7 @@ public class A098_Item_CreationTest extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "phase3.xml";
 		String[] nodeID = { "A098" };
-		String [] selectedNames = {"userName","passWord","currencyCode","item525","item626","item325","item335","item160","itemDvdSrvc","item909","itemGen1","itemITEM1","itemITEM2"};
+		String [] selectedNames = {"userName","passWord","currencyCode","item525","item626","item325","item335","item160","itemDvdSrvc","item909","itemGen1","itemITEM1","itemITEM2","item524"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	

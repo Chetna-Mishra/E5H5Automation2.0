@@ -79,7 +79,7 @@ public class AD01004_Stock_Take_On_Using_Positive_AdjustmentTest extends BaseTes
 			
 			currencyPage.clickOnUpdate();
 				
-			String referenceMessage = currencyPage.getToolContentText();
+			String referenceMessage = currencyPage.getErrorContentText();
 			
 			/*Verify material issue*/
 			if(referenceMessage.contains(message)){

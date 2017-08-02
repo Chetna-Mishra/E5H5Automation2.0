@@ -13,6 +13,7 @@ import com.adv.qa.selenium.framework.pageObjects.LoginPage;
 import com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage;
 import com.adv.qa.selenium.helpers.DataResource;
 import com.adv.qa.selenium.helpers.DataRow;
+import com.adv.qa.selenium.helpers.Retry;
 
 
 /**
@@ -32,7 +33,10 @@ public class A013_Fiscal_CalendarTest extends BaseTest{
 		super.setUp();
 	}
 	
-	@Test( dataProvider ="dp")
+//	@Test(dataProvider ="dp",retryAnalyzer=Retry.class)
+	
+	@Test(dataProvider ="dp")
+
 	public void verify(DataRow dataRow) throws InterruptedException{	
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
@@ -67,6 +71,7 @@ public class A013_Fiscal_CalendarTest extends BaseTest{
 			currencyPage.enterFiscalCalendarDetails(calendar);
 			
 			if(currencyPage.verifyEventsForLevel("E")){
+				
 				testcases.add(getCurreentDate()+" | Pass : Level 0 line contains events E");
 			}
 			else{
@@ -78,7 +83,7 @@ public class A013_Fiscal_CalendarTest extends BaseTest{
 			
 			/*currencyPage.lockCalendar();*/
 			
-		currencyPage.enterLockCalendarDetails(1);
+			currencyPage.enterLockCalendarDetails(1);
 			
 		
 			currencyPage.clickOnEventsH();
@@ -96,7 +101,8 @@ public class A013_Fiscal_CalendarTest extends BaseTest{
 			currencyPage.clickOnCancel();
 			
 			/*Verify new Balance control in the balance sheet list*/
-			Assert.assertTrue(testcases,currencyPage.verifyValues(calendar.get(0)), "New calendar activity "+calendar.get(0),"displayed in the list");
+			Assert.assertTrue(testcases,currencyPage.verifyValues(calendar.get(0)), "New calendar activity "+calendar.get(0)," displayed in the list");
+		
 		}
 		
 		else{

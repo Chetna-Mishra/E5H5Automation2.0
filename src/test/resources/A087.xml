@@ -7,11 +7,12 @@
         <currencyCode>GOK</currencyCode>
        
         <authorisationCode>PM</authorisationCode>
-        <authorisationCode>HQ</authorisationCode>
-        <authorisationCode>EAST</authorisationCode>
-        <authorisationCode>WEST</authorisationCode>
-        <authorisationCode>NORTH</authorisationCode>
-        <authorisationCode>SOUTH</authorisationCode>
+        
+        <Elements>HQ</Elements>
+        <Elements>EAST</Elements>
+        <Elements>WEST</Elements>
+        <Elements>NORTH</Elements>
+        <Elements>SOUTH</Elements>
                
         <authorisationLev1>LEV1</authorisationLev1>
         <authorisationLev1>1</authorisationLev1>

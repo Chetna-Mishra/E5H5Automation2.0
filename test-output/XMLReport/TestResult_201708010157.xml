@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A116_Simplified_Security_ElementsTest>
+<Verification1>01/08/2017 01:57:37 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 01:57:47 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 01:58:04 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 01:58:14 | Pass : Security elements  displayed</Verification4>
+</A116_Simplified_Security_ElementsTest>
+<A116A_Simplified_Security_ElementsTest>
+<Verification1>01/08/2017 01:59:05 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 01:59:14 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 01:59:32 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 01:59:41 | Pass : Security elements   displayed</Verification4>
+</A116A_Simplified_Security_ElementsTest>
+<A091A_SupplierAuditTest>
+<Verification1>01/08/2017 02:00:32 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:00:41 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:00:59 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:02:40 | Pass : New supplier  SONY  created</Verification4>
+<Verification5>01/08/2017 02:03:11 | Pass : Currency search page displayed</Verification5>
+<Verification6>01/08/2017 02:03:49 | Pass : Supplier changes for IM reflected</Verification6>
+</A091A_SupplierAuditTest>
+<A092_Supplier_ElementsTest>
+<Verification1>01/08/2017 02:04:40 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:04:49 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:05:07 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:07:12 | Pass : New supplier element NORTH  created</Verification4>
+<Verification5>01/08/2017 02:07:16 | Pass : New supplier element SOUTH  created</Verification5>
+<Verification6>01/08/2017 02:07:19 | Pass : New supplier element EAST  created</Verification6>
+<Verification7>01/08/2017 02:07:22 | Pass : New supplier element WEST  created</Verification7>
+<Verification8>01/08/2017 02:09:30 | Pass : New supplier element NORTH  created</Verification8>
+<Verification9>01/08/2017 02:09:34 | Pass : New supplier element SOUTH  created</Verification9>
+<Verification10>01/08/2017 02:09:37 | Pass : New supplier element EAST  created</Verification10>
+<Verification11>01/08/2017 02:09:40 | Pass : New supplier element WEST  created</Verification11>
+<Verification12>01/08/2017 02:11:48 | Pass : New supplier element NORTH  created</Verification12>
+<Verification13>01/08/2017 02:11:52 | Pass : New supplier element SOUTH  created</Verification13>
+<Verification14>01/08/2017 02:11:55 | Pass : New supplier element EAST  created</Verification14>
+<Verification15>01/08/2017 02:11:58 | Pass : New supplier element WEST  created</Verification15>
+<Verification16>01/08/2017 02:14:06 | Pass : New supplier element NORTH  created</Verification16>
+<Verification17>01/08/2017 02:14:10 | Pass : New supplier element SOUTH  created</Verification17>
+<Verification18>01/08/2017 02:14:12 | Pass : New supplier element EAST  created</Verification18>
+<Verification19>01/08/2017 02:14:16 | Pass : New supplier element WEST  created</Verification19>
+<Verification20>01/08/2017 02:16:24 | Pass : New supplier element NORTH  created</Verification20>
+<Verification21>01/08/2017 02:16:28 | Pass : New supplier element SOUTH  created</Verification21>
+<Verification22>01/08/2017 02:16:30 | Pass : New supplier element EAST  created</Verification22>
+<Verification23>01/08/2017 02:16:34 | Pass : New supplier element WEST  created</Verification23>
+</A092_Supplier_ElementsTest>
+<A093_Transaction_Legend_ControlsTest>
+<Verification1>01/08/2017 02:18:13 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:18:22 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:18:40 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:19:40 | Pass : New transaction legend control 1 created successfully</Verification4>
+</A093_Transaction_Legend_ControlsTest>
+<A094_Business_Event_Manager_ObjectsTest>
+<Verification1>01/08/2017 02:20:33 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:20:42 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:21:00 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:22:07 | Pass : New business event PL_TRANSACTIONalready updated</Verification4>
+<Verification5>01/08/2017 02:23:45 | Pass : New business event PL_TRAN_LINEalready updated</Verification5>
+</A094_Business_Event_Manager_ObjectsTest>
+<A095_Business_Event_Manager_Program_V_EventTest>
+<Verification1>01/08/2017 02:25:04 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:25:13 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:25:31 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:25:57 | Pass : Program event XE4 present in grid</Verification4>
+<Verification5>01/08/2017 02:26:26 | Pass : Program event XE4 present in grid</Verification5>
+</A095_Business_Event_Manager_Program_V_EventTest>
+<A097_Stock_TypesTest>
+<Verification1>01/08/2017 02:27:17 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:27:26 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:27:44 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:28:43 | Pass : Stock code DV  displayed in the list</Verification4>
+</A097_Stock_TypesTest>
+<A098_Item_CreationTest>
+<Verification1>01/08/2017 02:29:34 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:29:43 | Pass : Command line displayed</Verification2>
+</A098_Item_CreationTest>
+<A098A_Item_CreationTest>
+<Verification1>01/08/2017 02:43:07 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:43:16 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:43:34 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:47:04 | Pass : New manufacturer MANUF-01 displayed in the list</Verification4>
+<Verification5>01/08/2017 02:47:07 | Pass : New manufacturer MANUF-02 displayed in the list</Verification5>
+<Verification6>01/08/2017 02:47:39 | Pass : Currency search page displayed</Verification6>
+<Verification7>01/08/2017 02:49:27 | Fail : New manufacturer DV-626D not displayed in the list</Verification7>
+</A098A_Item_CreationTest>
+<A099_Items_Supplier_RelationshipTest>
+<Verification1>01/08/2017 02:50:19 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:50:28 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:50:45 | Pass : Supplier search page displayed</Verification3>
+<Verification4>01/08/2017 02:54:32 | Pass : New supplier item SONY displayed in the list</Verification4>
+<Verification5>01/08/2017 02:54:57 | Pass : New supplier item PIONEER displayed in the list</Verification5>
+<Verification6>01/08/2017 02:55:25 | Pass : New supplier item PIONEER displayed in the list</Verification6>
+<Verification7>01/08/2017 02:55:53 | Pass : New supplier item Sony displayed in the list</Verification7>
+<Verification8>01/08/2017 02:56:21 | Pass : New supplier item Sony displayed in the list</Verification8>
+<Verification9>01/08/2017 02:56:48 | Pass : New supplier item Panasonic displayed in the list</Verification9>
+</A099_Items_Supplier_RelationshipTest>
+<A100_Item_PricesTest>
+<Verification1>01/08/2017 02:57:29 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 02:57:38 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 02:57:56 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 02:59:10 | Pass : New Item price IM displayed in the list</Verification4>
+<Verification5>01/08/2017 02:59:44 | Pass : Currency search page displayed</Verification5>
+<Verification6>01/08/2017 03:04:54 | Pass : New item price PIONEER displayed in the list</Verification6>
+<Verification7>01/08/2017 03:04:57 | Pass : New item price PIONEER displayed in the list</Verification7>
+<Verification8>01/08/2017 03:05:02 | Pass : New item price SONY displayed in the list</Verification8>
+<Verification9>01/08/2017 03:05:08 | Pass : New item price SONY displayed in the list</Verification9>
+<Verification10>01/08/2017 03:05:15 | Pass : New item price PANASONIC displayed in the list</Verification10>
+</A100_Item_PricesTest>
+<A101_Item_BuyersTest>
+<Verification1>01/08/2017 03:06:06 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:06:16 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:06:39 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 03:07:24 | Pass : Currency search page displayed</Verification4>
+<Verification5>01/08/2017 03:08:09 | Pass : Currency search page displayed</Verification5>
+<Verification6>01/08/2017 03:08:54 | Pass : Currency search page displayed</Verification6>
+<Verification7>01/08/2017 03:09:39 | Pass : Currency search page displayed</Verification7>
+</A101_Item_BuyersTest>
+<A102_ICA_Default_Trading_RelationshipsTest>
+<Verification1>01/08/2017 03:10:39 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:10:48 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:11:06 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 03:12:28 | Fail : ICA default trading relatioship PLDF not updated</Verification4>
+</A102_ICA_Default_Trading_RelationshipsTest>
+<A103_IM_AccountsTest>
+<Verification1>01/08/2017 03:13:19 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:13:28 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:13:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 03:24:01 | Fail : ICA default trading relatioship IEnot updated</Verification4>
+<Verification5>01/08/2017 03:24:04 | Fail : ICA default trading relatioship IWnot updated</Verification5>
+<Verification6>01/08/2017 03:24:07 | Fail : ICA default trading relatioship INnot updated</Verification6>
+<Verification7>01/08/2017 03:24:11 | Fail : ICA default trading relatioship ISnot updated</Verification7>
+<Verification8>01/08/2017 03:24:15 | Fail : ICA default trading relatioship TEnot updated</Verification8>
+<Verification9>01/08/2017 03:24:18 | Fail : ICA default trading relatioship TWnot updated</Verification9>
+<Verification10>01/08/2017 03:24:22 | Fail : ICA default trading relatioship TNnot updated</Verification10>
+<Verification11>01/08/2017 03:24:27 | Fail : ICA default trading relatioship TSnot updated</Verification11>
+</A103_IM_AccountsTest>
+<A104_Inventory_Company_ControlsTest>
+<Verification1>01/08/2017 03:25:18 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:25:26 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:25:44 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 03:28:43 | Pass : New inventory company IM  displayed in the list</Verification4>
+</A104_Inventory_Company_ControlsTest>
+<A106_Inventory_Store_ControlTest>
+<Verification1>01/08/2017 03:29:34 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:29:44 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:29:46 | Pass : Command line displayed</Verification3>
+<Verification4>01/08/2017 03:30:07 | Fail : Currency search page not displayed</Verification4>
+</A106_Inventory_Store_ControlTest>
+<A107_Stores_HierarchyTest>
+<Verification1>01/08/2017 03:30:20 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:30:29 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:30:47 | Pass : Currency search page displayed</Verification3>
+</A107_Stores_HierarchyTest>
+<A108_Item_Store_Controls_Manual_Store_HierarchyTest>
+<Verification1>01/08/2017 03:32:28 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:32:37 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:32:40 | Pass : Command line displayed</Verification3>
+<Verification4>01/08/2017 03:32:58 | Pass : Currency search page displayed</Verification4>
+</A108_Item_Store_Controls_Manual_Store_HierarchyTest>
+<A108A_Item_Store_Controls_Manual_Store_HierarchyTest>
+<Verification1>01/08/2017 03:34:39 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:34:49 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:34:52 | Pass : Command line displayed</Verification3>
+<Verification4>01/08/2017 03:35:10 | Pass : Currency search page displayed</Verification4>
+</A108A_Item_Store_Controls_Manual_Store_HierarchyTest>
+<A109_Element_Control_AccountsTest>
+<Verification1>01/08/2017 03:36:51 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:37:00 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:37:06 | Pass : Command line displayed</Verification3>
+<Verification4>01/08/2017 03:37:27 | Pass : Currency search page displayed</Verification4>
+<Verification5>01/08/2017 03:37:59 | Pass : Command line displayed</Verification5>
+<Verification6>01/08/2017 03:38:20 | Pass : Currency search page displayed</Verification6>
+<Verification7>01/08/2017 03:38:52 | Pass : Command line displayed</Verification7>
+<Verification8>01/08/2017 03:39:13 | Pass : Currency search page displayed</Verification8>
+<Verification9>01/08/2017 03:39:45 | Pass : Command line displayed</Verification9>
+<Verification10>01/08/2017 03:40:06 | Pass : Currency search page displayed</Verification10>
+<Verification11>01/08/2017 03:40:53 | Pass : New Store EAST displayed in the list</Verification11>
+<Verification12>01/08/2017 03:40:57 | Pass : New Store WEST displayed in the list</Verification12>
+<Verification13>01/08/2017 03:41:00 | Pass : New Store NORTH displayed in the list</Verification13>
+<Verification14>01/08/2017 03:41:03 | Pass : New Store SOUTH displayed in the list</Verification14>
+</A109_Element_Control_AccountsTest>
+<A110_Security_Range_ListsTest>
+<Verification1>01/08/2017 03:41:54 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:42:03 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:42:09 | Pass : Command line displayed</Verification3>
+<Verification4>01/08/2017 03:42:30 | Pass : Currency search page displayed</Verification4>
+<Verification5>01/08/2017 03:43:14 | Pass : Command line displayed</Verification5>
+<Verification6>01/08/2017 03:43:35 | Pass : Currency search page displayed</Verification6>
+<Verification7>01/08/2017 03:44:20 | Pass : Command line displayed</Verification7>
+<Verification8>01/08/2017 03:44:41 | Pass : Currency search page displayed</Verification8>
+<Verification9>01/08/2017 03:45:26 | Pass : Command line displayed</Verification9>
+<Verification10>01/08/2017 03:45:47 | Pass : Currency search page displayed</Verification10>
+<Verification11>01/08/2017 03:46:32 | Pass : Command line displayed</Verification11>
+<Verification12>01/08/2017 03:46:52 | Pass : Currency search page displayed</Verification12>
+<Verification13>01/08/2017 03:48:09 | Pass : New Store ITEM displayed in the list</Verification13>
+<Verification14>01/08/2017 03:48:38 | Pass : New Store STORE displayed in the list</Verification14>
+<Verification15>01/08/2017 03:49:08 | Pass : New Store ITEM1 displayed in the list</Verification15>
+<Verification16>01/08/2017 03:49:36 | Pass : New Store ITEM1 displayed in the list</Verification16>
+<Verification17>01/08/2017 03:50:06 | Pass : New Store ITEM1 displayed in the list</Verification17>
+</A110_Security_Range_ListsTest>
+<A111_Security_GroupsTest>
+<Verification1>01/08/2017 03:50:57 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 03:51:06 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 03:51:24 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 03:52:17 | Pass : Security group IM1 displayed in the list</Verification4>
+<Verification5>01/08/2017 03:54:31 | Pass : Security group IM2 displayed in the list</Verification5>
+<Verification6>01/08/2017 04:00:02 | Pass : Security group IM3 displayed in the list</Verification6>
+</A111_Security_GroupsTest>
+<A112_User_Company_SecurityTest>
+<Verification1>01/08/2017 04:04:30 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 04:04:39 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 04:04:57 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 04:07:47 | Pass : security group for ACCEPT displayed in the list</Verification4>
+<Verification5>01/08/2017 04:08:05 | Pass : security group for BUYER displayed in the list</Verification5>
+<Verification6>01/08/2017 04:08:22 | Pass : security group for EXPED displayed in the list</Verification6>
+<Verification7>01/08/2017 04:08:40 | Pass : security group for GREC displayed in the list</Verification7>
+</A112_User_Company_SecurityTest>
+<A113_Security_Access_CodesTest>
+<Verification1>01/08/2017 04:09:31 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 04:09:40 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 04:09:58 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 04:12:45 | Pass : New user company security IM1 displayed in the list</Verification4>
+<Verification5>01/08/2017 04:13:14 | Pass : New user company security ITEM1 displayed in the list</Verification5>
+<Verification6>01/08/2017 04:13:43 | Pass : New user company security ITEM1 displayed in the list</Verification6>
+<Verification7>01/08/2017 04:14:12 | Pass : New user company security ITEM1 displayed in the list</Verification7>
+</A113_Security_Access_CodesTest>
+<A114_Security_Group_Access_CodesTest>
+<Verification1>01/08/2017 04:15:04 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 04:15:13 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 04:15:31 | Pass : Currency search page displayed</Verification3>
+</A114_Security_Group_Access_CodesTest>
+<A115_User_Roles_Set_upTest>
+<Verification1>01/08/2017 04:18:56 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 04:19:05 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 04:19:23 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 04:21:16 | Fail : Role BM not created</Verification4>
+<Verification5>01/08/2017 04:24:07 | Pass : Role CMS190R created</Verification5>
+<Verification6>01/08/2017 04:24:31 | Pass : Currency search page displayed</Verification6>
+<Verification7>01/08/2017 04:26:11 | Fail : User Role BM not created</Verification7>
+<Verification8>01/08/2017 04:27:52 | Fail : User Role CMS190R not created</Verification8>
+</A115_User_Roles_Set_upTest>
+<A117_Simplified_SecurityTest>
+<Verification1>01/08/2017 04:28:33 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 04:28:41 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 04:28:59 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 04:29:14 | Fail : Security Group BMACC not displayed in the list</Verification4>
+<Verification5>01/08/2017 04:29:17 | Pass : Security group IM1 displayed in the list</Verification5>
+<Verification6>01/08/2017 04:29:20 | Pass : Security group IM2 displayed in the list</Verification6>
+<Verification7>01/08/2017 04:29:28 | Fail : Security Group IM4 not displayed in the list</Verification7>
+</A117_Simplified_SecurityTest>
+</TestCase>
+</SeleniumTestReport>

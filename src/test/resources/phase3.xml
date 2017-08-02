@@ -177,6 +177,24 @@
 		<item335>null</item335>
 		<item335>null</item335>
 		<item335>null</item335>
+		
+		<item524>DV-524</item524>
+		<item524>Sony DV-524</item524>
+		<item524>Stock</item524>
+		<item524>DV</item524>
+		<item524>EACH</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>0</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		<item524>null</item524>
+		
 						
 		<item160>A160</item160>
 		<item160>Panasonic A160</item160>
@@ -1314,7 +1332,7 @@
     
     
     <Row id="AD01004">
-        <userName>SYSTEM</userName>
+        <userName>ADMIN</userName>
         <passWord>E5</passWord>
         <currencyCode>HBA</currencyCode>
         
@@ -1387,14 +1405,13 @@
     </Row>
     
     <Row id="AD02001">
-        <userName>IM</userName>
+        <userName>ADMIN</userName>
         <passWord>E5</passWord>
         
         <currencyCode>HBA</currencyCode>
         <currencyCode>HCJ</currencyCode>
         <currencyCode>EDA</currencyCode>
         <currencyCode>HAC</currencyCode>
-                
         
         <eastStoreElements>EAST</eastStoreElements>
         <eastStoreElements>A160</eastStoreElements>
@@ -1453,67 +1470,6 @@
         
     </Row>
     
-    <Row id="AD10006">
-        <userName>IM</userName>
-        <passWord>E5</passWord>
-        <currencyCode>DOA</currencyCode>
-        <currencyCode>PLE</currencyCode>
-        <currencyCode>GBB</currencyCode>
-        
-        <orderCode>O3</orderCode>
-        <orderCode>SONY</orderCode>
-        <orderCode>0</orderCode>
-        <orderCode>WEST</orderCode>
-        <orderCode>WAREHSE</orderCode>
-        <orderCode>BUYER</orderCode>
-        <orderCode>GBP</orderCode>
-        <orderCode>POP HQ</orderCode>
-        <orderCode>O1</orderCode>
-        <orderCode>S2</orderCode>
-        <orderCode>D2</orderCode>
-        <orderCode>DVP-S325</orderCode>
-        <orderCode>Sony DVP-S325</orderCode>
-        <orderCode>6.0000</orderCode>
-        <orderCode>200.00000</orderCode>
-        <orderCode>WAREHSE</orderCode>
-        <orderCode>EACH</orderCode>
-        <orderCode>EACH</orderCode>
-        <orderCode>DEN</orderCode>
-        <orderCode>W1</orderCode>
-        <orderCode>DV</orderCode>
-        <orderCode>WEST</orderCode>
-        <orderCode>UKV</orderCode>
-        <orderCode>V</orderCode>
-        <orderCode>UK</orderCode>
-        <orderCode>H1</orderCode>
-        
-        <receiveGoods>ADN00023</receiveGoods>
-        <receiveGoods>GG</receiveGoods>
-        <receiveGoods>2</receiveGoods>
-        <receiveGoods>NULL</receiveGoods>
-        <receiveGoods>NULL</receiveGoods>
-        <receiveGoods>NULL</receiveGoods>
-        <receiveGoods>NULL</receiveGoods>
-        <receiveGoods>GRN</receiveGoods>
-        
-        <invoiceDetails>2 SONY!</invoiceDetails>
-        <invoiceDetails>1</invoiceDetails>
-        <invoiceDetails>470.00</invoiceDetails>
-        <invoiceDetails>70.00</invoiceDetails>
-        <invoiceDetails>0</invoiceDetails>
-
-        <transactionDetails>Under-INV01</transactionDetails>
-        <transactionDetails>470.00</transactionDetails>
-        <transactionDetails>70.00</transactionDetails>
-        <transactionDetails>UKV</transactionDetails>
-        <transactionDetails>PV</transactionDetails>        
-        
-        <lineDetails>null</lineDetails>
-        <lineDetails>null</lineDetails>
-        <lineDetails>1</lineDetails>
-        <lineDetails>200.00000</lineDetails>
-        
-     </Row>
     
     <Row id="AD02009">
         <userName>ADMIN</userName>
@@ -2073,6 +2029,69 @@
         <splitLineDetails>N1</splitLineDetails>
         
     </Row>
+    
+    <Row id="AD10006">
+        <userName>IM</userName>
+        <passWord>E5</passWord>
+        <currencyCode>DOA</currencyCode>
+        <currencyCode>PLE</currencyCode>
+        <currencyCode>GBB</currencyCode>
+        
+        <orderCode>O3</orderCode>
+        <orderCode>SONY</orderCode>
+        <orderCode>0</orderCode>
+        <orderCode>WEST</orderCode>
+        <orderCode>WAREHSE</orderCode>
+        <orderCode>BUYER</orderCode>
+        <orderCode>GBP</orderCode>
+        <orderCode>POP HQ</orderCode>
+        <orderCode>O1</orderCode>
+        <orderCode>S2</orderCode>
+        <orderCode>D2</orderCode>
+        <orderCode>DVP-S325</orderCode>
+        <orderCode>Sony DVP-S325</orderCode>
+        <orderCode>6.0000</orderCode>
+        <orderCode>200.00000</orderCode>
+        <orderCode>WAREHSE</orderCode>
+        <orderCode>EACH</orderCode>
+        <orderCode>EACH</orderCode>
+        <orderCode>DEN</orderCode>
+        <orderCode>W1</orderCode>
+        <orderCode>DV</orderCode>
+        <orderCode>WEST</orderCode>
+        <orderCode>UKV</orderCode>
+        <orderCode>V</orderCode>
+        <orderCode>UK</orderCode>
+        <orderCode>H1</orderCode>
+        
+        <receiveGoods>ADN00023</receiveGoods>
+        <receiveGoods>GG</receiveGoods>
+        <receiveGoods>2</receiveGoods>
+        <receiveGoods>NULL</receiveGoods>
+        <receiveGoods>NULL</receiveGoods>
+        <receiveGoods>NULL</receiveGoods>
+        <receiveGoods>NULL</receiveGoods>
+        <receiveGoods>GRN</receiveGoods>
+        
+        <invoiceDetails>2 SONY!</invoiceDetails>
+        <invoiceDetails>1</invoiceDetails>
+        <invoiceDetails>470.00</invoiceDetails>
+        <invoiceDetails>70.00</invoiceDetails>
+        <invoiceDetails>0</invoiceDetails>
+
+        <transactionDetails>Under-INV01</transactionDetails>
+        <transactionDetails>470.00</transactionDetails>
+        <transactionDetails>70.00</transactionDetails>
+        <transactionDetails>UKV</transactionDetails>
+        <transactionDetails>PV</transactionDetails>        
+        
+        <lineDetails>null</lineDetails>
+        <lineDetails>null</lineDetails>
+        <lineDetails>1</lineDetails>
+        <lineDetails>200.00000</lineDetails>
+        
+     </Row>
+    
     
     <Row id="AD10014">
         <userName>QUERY</userName>

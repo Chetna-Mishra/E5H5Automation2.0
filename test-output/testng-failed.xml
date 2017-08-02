@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [suite]">
+  <test name="suite1(failed)">
     <classes>
-      <class name="com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest">
+      <class name="com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest">
         <methods>
+          <include name="verify" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
-          <include name="verify" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- suite1(failed) -->
+</suite> <!-- Failed suite [suite] -->

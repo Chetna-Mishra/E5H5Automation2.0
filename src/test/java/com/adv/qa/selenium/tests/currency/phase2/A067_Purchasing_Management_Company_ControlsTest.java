@@ -56,21 +56,40 @@ public class A067_Purchasing_Management_Company_ControlsTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
-		currencyPage.enterPOPCompanyControls(companyId,purchasingCompany);	
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		boolean update=currencyPage.enterPOPCompanyControls(companyId,purchasingCompany);	
+		
+		if(update==true)
+		{
 		
 		 if(currencyPage.isToolTipDisplayed()){
 			   currencyPage.clickOnUpdtWarnings();
+			   currencyPage.clickOnUpdate();
+			   Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New purchasing company "+companyId, "created successfully");
+			   
 		 }
 		 else{
 		   currencyPage.clickOnUpdate();
+		   Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New purchasing company "+companyId, "created successfully");
 		 }
+		 
+		 
+		} 
 		
+		else 
+		{
+			testcases.add(getCurreentDate()+" | Pass : New purchasing company "+companyId+ " created successfully");
+			
+		}
+			
+			
 		currencyPage.clickOnCancel();
 
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(companyId), "New purchasing company  "+companyId,"displayed in the list");
+//		/*Verify new batch type in the list*/
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(companyId), "New purchasing company  "+companyId,"displayed in the list");
 
 		currencyPage.logOut(2);
 

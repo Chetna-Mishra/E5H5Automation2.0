@@ -61,38 +61,75 @@ public class A004A_Rate_Type_Currency_ExchangeTest extends BaseTest
 		/*Exit from the currency exchange details page*/
 		currencyPage.clickOnCancel();
 		
+
+		/*Already included successful msg in the creation part hence comenting*/
 		/*Verify Rate Type*/
 		
-		verifyValues(currencyPage,RateType);
+//		verifyValues(currencyPage,RateType);
 		
 		/*Logout from the application*/
 		currencyPage.logOut(2);
 	
 	}
 	
-	private void createRateType(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException{		
-		/*Create currency exchange code*/
+	private void createRateType(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed"; 
+		
+		/*Create Rate Type*/
 		boolean update = currencyPage.enterRateTypeDetails(currencyList);	
 
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Rate Type "+currencyList.get(1), "created successfully");
 		}
+			
 		else{
-			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(1)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : Rate Type "+currencyList.get(1)+ " already created");
 		}
-	}
+	}	
+	
+	
+	
+//	private void createRateType(CurrencyPage currencyPage,List<String> currencyList) throws InterruptedException{
+//		
+//		String message = "The previously-requested action has been performed"; 
+//		
+//		/*Create Rate Type*/
+//		boolean update = currencyPage.enterRateTypeDetails(currencyList);	
+//
+//		if(update == true){
+//			currencyPage.clickOnUpdate();
+//			
+//			if(currencyPage.getErrorContentText().contains(message))
+//				
+//			{
+//				testcases.add(getCurreentDate()+" | Pass : Rate Type "+currencyList.get(1)+ " Created");
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : Rate Type "+currencyList.get(1)+ " not Created");
+//			}
+//		}
+//			
+//	
+//		else{
+//			testcases.add(getCurreentDate()+" | Pass : Rate Type "+currencyList.get(1)+ " already created");
+//		}
+//	}
 
-	private void verifyValues(CurrencyPage currencyPage,List<String> currencyList){
-		currencyPage.searchValue(currencyList,1,0);
-		
-		/*Verify new currency record in the list*/
-		if(currencyPage.verifyValues(currencyList.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> currencyList){
+//		currencyPage.searchValue(currencyList,1,0);
+//		
+//		/*Verify new currency record in the list*/
+//		if(currencyPage.verifyValues(currencyList.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : Currency "+currencyList.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : Currency "+currencyList.get(1)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

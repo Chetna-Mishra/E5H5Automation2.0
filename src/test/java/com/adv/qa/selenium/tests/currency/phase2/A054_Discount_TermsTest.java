@@ -39,6 +39,7 @@ public class A054_Discount_TermsTest extends BaseTest{
 		LoginPage loginPage = new LoginPage(driver);
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
 		loginPage.logIn(userName, passWord);
 		
 		/*Navigate to currency page Home page e5 application*/
@@ -48,26 +49,43 @@ public class A054_Discount_TermsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(code);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Discount Terms Edit","Currency search page","displayed");
 		
 		/*Create batch type code*/
-		currencyPage.enterDiscountTerms(discount);
 		
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		boolean update= currencyPage.enterDiscountTerms(discount);
+		
+		if(update==true)
+		
+		{
 		currencyPage.clickOnUpdate();
 		
-		if(currencyPage.isCommandDisplayed() == false){
-			currencyPage.clickOnCancel();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New discount term  "+discount.get(0), "created successfully");
+		
+//		if(currencyPage.isCommandDisplayed() == false){
+//			currencyPage.clickOnCancel();
 		}
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+		else{
+			testcases.add(getCurreentDate()+" | Pass : New discount term  "+discount.get(0)+ " already created");
+			
+			currencyPage.clickOnCancel();
+			
+		}
 		
-		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Discount Terms - List","Currency search page","displayed");
-
-		currencyPage.searchValue(companyId,discount,2,1);
 		
-		Assert.assertTrue(testcases,currencyPage.verifyValues(discount.get(0)), "New discount term "+discount.get(0),"displayed in the list");
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		
+//		/*Verify currency search page displayed*/
+//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Discount Terms - List","Currency search page","displayed");
+//
+//		currencyPage.searchValue(companyId,discount,2,1);
+//		
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(discount.get(0)), "New discount term "+discount.get(0),"displayed in the list");
 	
 		currencyPage.logOut(2);
 

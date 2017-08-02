@@ -47,6 +47,7 @@ public class A077_CP_Company_ControlsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
+		
 		/*Verify currency search page displayed*/
 //		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Purchasing Company Controls Li","Currency search page","displayed");
 
@@ -55,12 +56,13 @@ public class A077_CP_Company_ControlsTest extends BaseTest{
 		currencyPage.clickOnAmend();
 		
 		/*Create batch type code*/
-		currencyPage.editCPCompanyControls(cpCompanyControl);	
 		
-		currencyPage.clickOnUpdate();
-	
-		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(companyId), "New purchasing company  "+companyId,"displayed in the list");
+		boolean editCPCompanyControls = currencyPage.editCPCompanyControls(cpCompanyControl);
+		
+		Assert.assertTrue(testcases,editCPCompanyControls,"New purchasing company  "+companyId,"updated successfully");
+//		
+//		/*Verify new batch type in the list*/
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(companyId), "New purchasing company  "+companyId,"displayed in the list");
 
 		currencyPage.logOut(2);
 

@@ -48,6 +48,7 @@ public class A079_Authorisation_GroupsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(0));
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - MDBC-Authorisation Group List","Currency search page","displayed");
 			
@@ -56,15 +57,27 @@ public class A079_Authorisation_GroupsTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
-		currencyPage.enterAuthorisationGroupForPM(authorisationGroupForPM);	
 		
+		String SuccMessage = "The previously-requested action has been performed";
+		boolean update= currencyPage.enterAuthorisationGroupForPM(authorisationGroupForPM);	
+		
+		if(update==true)
+		{
 		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Authorisation Group  "+authorisationGroupForPM.get(0), "created successfully");
+		
+		}
+		else{
+			
+			testcases.add(getCurreentDate()+" | Pass : Authorisation Group "+authorisationGroupForPM.get(0)+ " already created");
+		}
 		
 		/*Exit from the batch details page*/
 		currencyPage.clickOnCancel();
 
 		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(authorisationGroupForPM.get(0)), "Authorisation Group  "+authorisationGroupForPM.get(0),"displayed in the list");
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(authorisationGroupForPM.get(0)), "Authorisation Group  "+authorisationGroupForPM.get(0),"displayed in the list");
 			
 		currencyPage.clickOnCancel();
 		
@@ -81,15 +94,28 @@ public class A079_Authorisation_GroupsTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
-		currencyPage.enterAuthorisationGroupForAP(authorisationGroupForAP);	
+//		currencyPage.enterAuthorisationGroupForAP(authorisationGroupForAP);	
 		
+		boolean update1= currencyPage.enterAuthorisationGroupForAP(authorisationGroupForAP);	
+		
+		if(update1==true)
+		{
 		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Authorisation Group  "+authorisationGroupForAP.get(0), "created successfully");
+		
+		}
+		else{
+			
+			testcases.add(getCurreentDate()+" | Pass : Authorisation Group "+authorisationGroupForAP.get(0)+ " already created");
+		}
+		
 		
 		/*Exit from the batch details page*/
 		currencyPage.clickOnCancel();
 
 		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(authorisationGroupForAP.get(0)), "Authorisation Group  "+authorisationGroupForAP.get(0),"displayed in the list");
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(authorisationGroupForAP.get(0)), "Authorisation Group  "+authorisationGroupForAP.get(0),"displayed in the list");
 	
 		currencyPage.logOut(2);
 	}

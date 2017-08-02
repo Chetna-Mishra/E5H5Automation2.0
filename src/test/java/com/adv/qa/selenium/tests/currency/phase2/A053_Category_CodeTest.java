@@ -48,30 +48,45 @@ public class A053_Category_CodeTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(code);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Supplier Category Edit","Currency search page","displayed");
 		
 		/*Create batch type code*/
-		currencyPage.enterCategoryCodeDetails(category);	
+		String SuccMessage = "The previously-requested action has been performed";
+		boolean update= currencyPage.enterCategoryCodeDetails(category);	
 		
-		currencyPage.clickOnUpdate();
+		if (update==true)
 		
-		if(currencyPage.isCommandDisplayed() == false){
-			currencyPage.clickOnCancel();
+		{
+			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New category code "+category.get(0), "created successfully");
 		}
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+		else
+		{
 		
-		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Supplier Category - List","Currency search page","displayed");
-
-		currencyPage.searchValue(companyId,category,2,1);
-		
-		Assert.assertTrue(testcases,currencyPage.verifyValues(category.get(0)), "New category code "+category.get(0),"displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New category code  "+category.get(0)+ " already created");
+			
+			currencyPage.clickOnCancel();
+			
+		}
 	
 		currencyPage.logOut(2);
 
 	}
+		
+//		
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		
+//		/*Verify currency search page displayed*/
+//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Supplier Category - List","Currency search page","displayed");
+//
+//		currencyPage.searchValue(companyId,category,2,1);
+//		
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(category.get(0)), "New category code "+category.get(0),"displayed in the list");
+	
+
 	
 	
 	@AfterClass (alwaysRun = true)

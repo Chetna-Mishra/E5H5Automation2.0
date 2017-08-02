@@ -354,6 +354,7 @@ public class A040_ICA_Data_EntryTest extends BaseTest {
 			boolean verifyStrEnqValuesForCost;
 
 			verifyStrEnqValuesForCost = currencyPage.verifyStrEnqValues(structure.get(i), i + 1);
+			
 			Assert.assertTrue(testcases, verifyStrEnqValuesForCost, "Struncture Enquiry values are", " as expected");
 		}
 

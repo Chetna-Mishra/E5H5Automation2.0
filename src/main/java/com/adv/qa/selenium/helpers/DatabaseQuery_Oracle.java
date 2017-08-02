@@ -38,12 +38,12 @@ public class DatabaseQuery_Oracle {
 	
 	public String getStatProcessOracle(String prcss,String req) throws SQLException, SeleniumDaoException{
 		String name = null;		
+		WaitHelper.waitAdditional(6);
 		connection = JDBCDriverInformation_Oracle.getOracleJDBCConnection();
 		try {
 			connection = JDBCDriverInformation_Oracle.getOracleJDBCConnection();
 			Statement st = connection.createStatement();
-			ResultSet rs = st.executeQuery("SELECT STAT FROM TZXQTASK WHERE PROC = '"+prcss+"' AND REQ = '"+req+"'");
-//			ResultSet rs = st.executeQuery("SELECT STAT FROM TZXQTASK WHERE PRCSS = '"+prcss+"' AND REQ = '"+req+"'");			
+			ResultSet rs = st.executeQuery("SELECT STAT FROM TZXQTASK WHERE PROC = '"+prcss+"' AND REQ = '"+req+"'");	
 			while (rs.next()) {
 			  name = rs.getString("STAT");			  
 			}

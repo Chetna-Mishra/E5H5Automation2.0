@@ -5,6 +5,29 @@
           	<passWord>E5</passWord>
             <code>EBA</code> 
               				
+ 			<nominal5100>5100</nominal5100>
+			<nominal5100>Detail Variance</nominal5100>
+			<nominal5100>T</nominal5100>
+			<nominal5100>04</nominal5100>
+			<nominal5100>Profit &amp; Loss</nominal5100>
+			<nominal5100>Both</nominal5100>
+			<nominal5100>A</nominal5100>
+			<nominal5100>***</nominal5100>
+			<nominal5100>Both</nominal5100>
+			<nominal5100>0</nominal5100>
+			
+			<nominal6200>6200</nominal6200>
+			<nominal6200>Account 6200</nominal6200>
+			<nominal6200>P</nominal6200>
+			<nominal6200>04</nominal6200>
+			<nominal6200>Profit &amp; Loss</nominal6200>
+			<nominal6200>Both</nominal6200>
+			<nominal6200>A</nominal6200>
+			<nominal6200>***</nominal6200>
+			<nominal6200>Both</nominal6200>
+			<nominal6200>0</nominal6200>
+			 				
+              				
 			<nominalSONY>SONY</nominalSONY>
 			<nominalSONY>Sony Account</nominalSONY>
 			<nominalSONY>T</nominalSONY>
@@ -123,7 +146,7 @@
 			<nominalAKAI>Both</nominalAKAI>
 			<nominalAKAI>A</nominalAKAI>
 			<nominalAKAI>***</nominalAKAI>
-			<nominalAKAI>Base</nominalAKAI>
+			<nominalAKAI>Both</nominalAKAI>
 			<nominalAKAI>0</nominalAKAI>
 			
 			

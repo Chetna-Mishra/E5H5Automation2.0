@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>suite8</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 06 20:53:01 IST 2017</td>
+<td>Started on:</td><td>Tue Jul 18 17:19:38 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>264 seconds (264825 ms)</td>
+<tr><td>Total time:</td><td>1137 seconds (1137091 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,186 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest<br>Parameters: [DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = ADA], DataUnit [securityGroupIM1 = IM1], DataUnit [securityGroupIM1 = Inventory Management (Storeman)], DataUnit [securityGroupIM1 = 0], DataUnit [securityGroupIM1 = HAA], DataUnit [securityGroupIM2 = IM2], DataUnit [securityGroupIM2 = Inventory Management(Access All)], DataUnit [securityGroupIM2 = 4], DataUnit [securityGroupIM2 = HAA], DataUnit [securityGroupIM2 = HAB], DataUnit [securityGroupIM2 = HAG], DataUnit [securityGroupIM2 = HAH], DataUnit [securityGroupIM2 = HAK], DataUnit [securityGroupIM3 = IM3], DataUnit [securityGroupIM3 = Inventory Management (Assistant)], DataUnit [securityGroupIM3 = 10], DataUnit [securityGroupIM3 = HAA], DataUnit [securityGroupIM3 = HAC], DataUnit [securityGroupIM3 = HAD], DataUnit [securityGroupIM3 = HAE], DataUnit [securityGroupIM3 = HAF], DataUnit [securityGroupIM3 = HAI], DataUnit [securityGroupIM3 = HAJ], DataUnit [securityGroupIM3 = HBA], DataUnit [securityGroupIM3 = HCM], DataUnit [securityGroupIM3 = HFA], DataUnit [securityGroupIM3 = HFE], DataUnit [securityGroupIM4 = IM4], DataUnit [securityGroupIM4 = Inventory Management (User)], DataUnit [securityGroupIM4 = 5], DataUnit [securityGroupIM4 = HAA], DataUnit [securityGroupIM4 = HCF], DataUnit [securityGroupIM4 = HCR], DataUnit [securityGroupIM4 = HLA], DataUnit [securityGroupIM4 = HXA], DataUnit [securityGroupIM4 = HZA], DataUnit [securityGroupIM5 = BMACC], DataUnit [securityGroupIM5 = Access security Group (Functional)], DataUnit [securityGroupIM5 = 0], DataUnit [securityGroupIM5 = GBB], DataUnit [securityGroupIM6 = ITEM1], DataUnit [securityGroupIM6 = ITEM1 ONLY], DataUnit [securityGroupIM6 = 0], DataUnit [securityGroupIM6 = GBB]]</td>
+<td><div><pre>org.openqa.selenium.InvalidElementStateException: Element must not be hidden, disabled or read-only (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 101 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:6106/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 98eef16d-532b-430a-bb05-e09b39321519
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:116)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.clear(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.clear(EventFiringWebDriver.java:360)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.searchValue(CurrencyPage.java:1978)
+	at com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.amendDenials(A111_Security_GroupsTest.java:140)
+	at com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.createSecurityGroups(A111_Security_GroupsTest.java:132)
+	at com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.verify(A111_Security_GroupsTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace22004208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22004208'><pre>org.openqa.selenium.InvalidElementStateException: Element must not be hidden, disabled or read-only (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 101 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:6106/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 98eef16d-532b-430a-bb05-e09b39321519
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:116)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.clear(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.clear(EventFiringWebDriver.java:360)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.searchValue(CurrencyPage.java:1978)
+	at com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.amendDenials(A111_Security_GroupsTest.java:140)
+	at com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.createSecurityGroups(A111_Security_GroupsTest.java:132)
+	at com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest.verify(A111_Security_GroupsTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>333</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A111_Security_GroupsTest@55ca8de8</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest<br>Parameters: [DataUnit [userName = GREC], DataUnit [passWord = E5], DataUnit [currencyCode = ADL], DataUnit [securityGroup1 = IM2], DataUnit [securityGroup1 = IM1], DataUnit [securityGroup1 = Inventory Management], DataUnit [securityGroup1 = IM1], DataUnit [securityGroup2 = ITEM1], DataUnit [securityGroup2 = ITEM1], DataUnit [securityGroup2 = Purchase Management], DataUnit [securityGroup2 = ITEM1], DataUnit [securityGroup3 = ITEM1], DataUnit [securityGroup3 = ITEM1], DataUnit [securityGroup3 = Purchasing], DataUnit [securityGroup3 = ITEM1], DataUnit [securityGroup4 = ITEM1], DataUnit [securityGroup4 = ITEM1], DataUnit [securityGroup4 = Inventory Management], DataUnit [securityGroup4 = ITEM1]]</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //div[@class=&apos;html_TitlePaneTitle panelCollapsed&apos;]/a[not(contains(text(),&apos;Extended&apos;))] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.25 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:5863/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 89f34d41-f935-45f9-ad46-eb325200fd7d
+*** Element info: {Using=xpath, value=//div[@class=&apos;html_TitlePaneTitle panelCollapsed&apos;]/a[not(contains(text(),&apos;Extended&apos;))]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.clickOnSections(CurrencyPage.java:825)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPageNew.searchsecurityrange(CurrencyPageNew.java:1412)
+	at com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest.verifyValues(A114_Security_Group_Access_CodesTest.java:90)
+	at com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest.verify(A114_Security_Group_Access_CodesTest.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace6422064", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace6422064'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //div[@class=&apos;html_TitlePaneTitle panelCollapsed&apos;]/a[not(contains(text(),&apos;Extended&apos;))] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.25 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:5863/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 89f34d41-f935-45f9-ad46-eb325200fd7d
+*** Element info: {Using=xpath, value=//div[@class=&apos;html_TitlePaneTitle panelCollapsed&apos;]/a[not(contains(text(),&apos;Extended&apos;))]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.clickOnSections(CurrencyPage.java:825)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPageNew.searchsecurityrange(CurrencyPageNew.java:1412)
+	at com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest.verifyValues(A114_Security_Group_Access_CodesTest.java:90)
+	at com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest.verify(A114_Security_Group_Access_CodesTest.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>189</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A114_Security_Group_Access_CodesTest@2c34f934</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +255,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.adv.qa.selenium.tests.currency.A016_Normal_Balance_Sheet_GroupsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A016_Normal_Balance_Sheet_GroupsTest<br>Parameters: [DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [code = EAI], DataUnit [value = N], DataUnit [aGroup = A], DataUnit [aGroup = B/S Group A Expenses], DataUnit [aGroup = 0], DataUnit [bGroup = B], DataUnit [bGroup = B/S Group B Purchasing], DataUnit [bGroup = 0], DataUnit [cGroup = C], DataUnit [cGroup = B/S Group C Purchasing], DataUnit [cGroup = 0], DataUnit [tGroup = T], DataUnit [tGroup = P/L Group T Purchasing], DataUnit [tGroup = 1], DataUnit [gGroup = G], DataUnit [gGroup = B/S PPV(Purchase Price Variance)], DataUnit [gGroup = 0], DataUnit [pGroup = P], DataUnit [pGroup = P/L  Group P], DataUnit [pGroup = 1], DataUnit [iGroup = I], DataUnit [iGroup = B/S Group I Inventory], DataUnit [iGroup = 0]]</td>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A115_User_Roles_Set_upTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A115_User_Roles_Set_upTest<br>Parameters: [DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = AF1], DataUnit [currencyCode = AF2], DataUnit [currencyCode = AF3], DataUnit [role1 = BM], DataUnit [role1 = BM TEST ROLE], DataUnit [role1 = BMACC], DataUnit [role1 = ITEM1], DataUnit [role1 = QMAIN], DataUnit [role2 = CMS190R], DataUnit [role2 = CMS190R], DataUnit [role2 = STD], DataUnit [role2 = STD], DataUnit [role2 = QPLMAIN], DataUnit [userRole1 = BM1], DataUnit [userRole1 = BM], DataUnit [userRole1 = 1], DataUnit [userRole2 = BM1], DataUnit [userRole2 = CMS190R], DataUnit [userRole2 = 0]]</td>
 <td></td>
-<td>252</td>
-<td>com.adv.qa.selenium.tests.currency.A016_Normal_Balance_Sheet_GroupsTest@6ab7a896</td></tr>
+<td>432</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A115_User_Roles_Set_upTest@12d3a4e9</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase3.A117_Simplified_SecurityTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase3.A117_Simplified_SecurityTest<br>Parameters: [DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = ADA], DataUnit [securityGroup = BMACC], DataUnit [securityGroup = IM1], DataUnit [securityGroup = IM2], DataUnit [securityGroup = IM4]]</td>
+<td></td>
+<td>87</td>
+<td>com.adv.qa.selenium.tests.currency.phase3.A117_Simplified_SecurityTest@240237d2</td></tr>
 </table><p>
 </body>
 </html>

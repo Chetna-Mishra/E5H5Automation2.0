@@ -48,15 +48,33 @@ public class A049_Common_Purchasing_Company_ControlsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(code);
+		
 		/*Verify currency search page displayed*/
-//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Common Purchasing Company Controls Edit","Currency search page","displayed");
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Common Purchasing Company Cont","Currency search page","displayed");
 		
-		/*Create batch type code*/
-		currencyPage.enterPurchasingCompanyControlDetails(companyId,purchasingCompany);	
+		String SuccMessage = "The previously-requested action has been performed";
 		
+		/*Create batch type code*/
+		boolean update = currencyPage.enterPurchasingCompanyControlDetails(companyId,purchasingCompany);	
+		
+		
+		if(update==true)
+		
+		{
+			
 		currencyPage.clickOnUpdate();
-
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Purchasing Company Controls "+purchasingCompany.get(1), "created successfully");
+		
+		}
+		
+			else{
+				testcases.add(getCurreentDate()+" | Pass : Purchasing Company Controls "+purchasingCompany.get(1) +"Already Created");
+				
+				currencyPage.clickOnCancel();
+				currencyPage.isConfirmPopUpDisplayed();
+			
+		}
+		
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));
 		
 		/*Verify currency search page displayed*/

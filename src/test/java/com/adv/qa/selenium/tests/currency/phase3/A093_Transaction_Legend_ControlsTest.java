@@ -36,7 +36,7 @@ public class A093_Transaction_Legend_ControlsTest extends BaseTest{
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("currencyCode");
 		List<String> transactionControl = dataRow.findNamesReturnValues("transactionControl");		
-		String message = "The previously-requested action has been performed";
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -58,22 +58,26 @@ public class A093_Transaction_Legend_ControlsTest extends BaseTest{
 		currencyPage.searchValue(companyId,transactionControl, 2, 6);
 		
 		currencyPage.clickOnAmend();
+	
 		
 		boolean update = currencyPage.amendTransactionLegendDetails(transactionControl);
 		
 		if(update == true){					
 			currencyPage.clickOnUpdate();		
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New transaction legend control "+transactionControl.get(0), "created successfully");
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New transaction legend control  "+transactionControl.get(0)+ " updated with control");
+			testcases.add(getCurreentDate()+" | Pass : New transaction legend control "+transactionControl.get(0)+ "already created");
 		}
 
-		if(currencyPage.getToolContentText().contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : New transaction legend control "+transactionControl.get(0)+ " updated with control");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New transaction legend control "+transactionControl.get(0)+ " not updated with control");
-		}
+//		if(currencyPage.getErrorContentText().contains(message)){
+//			testcases.add(getCurreentDate()+" | Pass : New transaction legend control "+transactionControl.get(0)+ " updated with control");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New transaction legend control "+transactionControl.get(0)+ " not updated with control");
+//		}
 		
 		currencyPage.logOut(2);
 

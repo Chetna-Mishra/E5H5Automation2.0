@@ -80,48 +80,58 @@ public class A017_Normal_Balance_Sheet_CategoriesTest extends BaseTest{
 		/*Exit from the Balance sheet page*/
 		currencyPage.clickOnCancel();
 		
-		/*Verify new balance sheet category*/
-		verifyValues(currencyPage,a02Category);
-		verifyValues(currencyPage,b08Category);
-		verifyValues(currencyPage,b01Category);
-		verifyValues(currencyPage,b02Category);
-		verifyValues(currencyPage,b03Category);
-		verifyValues(currencyPage,b04Category);
-		verifyValues(currencyPage,c01Category);
-		verifyValues(currencyPage,c02Category);
+//		/*Verify new balance sheet category*/
+//		verifyValues(currencyPage,a02Category);
+//		verifyValues(currencyPage,b08Category);
+//		verifyValues(currencyPage,b01Category);
+//		verifyValues(currencyPage,b02Category);
+//		verifyValues(currencyPage,b03Category);
+//		verifyValues(currencyPage,b04Category);
+//		verifyValues(currencyPage,c01Category);
+//		verifyValues(currencyPage,c02Category);
 		
 		currencyPage.logOut(2);
 	}
 
 	
 	private void createBalanceCategory(CurrencyPage currencyPage,List<String> balanceSheetCategory) throws InterruptedException{
+		
+		
+		
 		/*Create mew balance sheet category*/
 		boolean update = currencyPage.enterBalanceSheetCategory(balanceSheetCategory);
 		
 		if(update == true){
-			currencyPage.clickOnUpdate();			
+			
+			currencyPage.clickOnUpdate();
+			
+			String SuccMessage = "The previously-requested action has been performed"; 
+			
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New balance sheet category "+balanceSheetCategory.get(2), "created successfully");
+		
 		}
 		
 		else {
-			testcases.add(getCurreentDate()+" | Pass : New balance sheet category  "+balanceSheetCategory.get(2)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : Balance sheet category  "+balanceSheetCategory.get(2)+ " already displayed in the list");
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> balanceSheetCategory)
-	
-	{
-		
-		currencyPage.searchElement(balanceSheetCategory,4);
-		
-		if(currencyPage.verifyValues(balanceSheetCategory.get(2)))
-		{
-			testcases.add(getCurreentDate()+" | Pass : New balance sheet category "+balanceSheetCategory.get(2)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New balance sheet category "+balanceSheetCategory.get(2)+ " not displayed in the list");
-		}
-		WaitHelper.waitAdditional(3);
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> balanceSheetCategory)
+//	
+//	{
+//		
+//		currencyPage.searchElement(balanceSheetCategory,4);
+//		
+//		if(currencyPage.verifyValues(balanceSheetCategory.get(2)))
+//		{
+//			testcases.add(getCurreentDate()+" | Pass : New balance sheet category "+balanceSheetCategory.get(2)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New balance sheet category "+balanceSheetCategory.get(2)+ " not displayed in the list");
+//		}
+//		WaitHelper.waitAdditional(3);
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

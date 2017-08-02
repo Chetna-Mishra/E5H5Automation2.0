@@ -79,14 +79,15 @@ public class A016_Normal_Balance_Sheet_GroupsTest extends BaseTest{
 		/*Exit from the Balance sheet page*/
 		currencyPage.clickOnCancel();
 
-		/*Verify presence balance sheet*/
-		verifyValues(currencyPage,aGroup);
-		verifyValues(currencyPage,bGroup);
-		verifyValues(currencyPage,cGroup);
-		verifyValues(currencyPage,tGroup);
-		verifyValues(currencyPage,gGroup);
-		verifyValues(currencyPage,pGroup);
-		verifyValues(currencyPage,iGroup);	
+		/*Already included successful msg in the creation part hence commenting*/
+//		/*Verify presence balance sheet*/
+//		verifyValues(currencyPage,aGroup);
+//		verifyValues(currencyPage,bGroup);
+//		verifyValues(currencyPage,cGroup);
+//		verifyValues(currencyPage,tGroup);
+//		verifyValues(currencyPage,gGroup);
+//		verifyValues(currencyPage,pGroup);
+//		verifyValues(currencyPage,iGroup);	
 		
 	
 		/*Exit from the application*/
@@ -95,26 +96,50 @@ public class A016_Normal_Balance_Sheet_GroupsTest extends BaseTest{
 	}
 
 	private void createNormalBalance(CurrencyPage currencyPage,List<String> balanceSheetGroup){
+				
+		String SuccMessage = "The previously-requested action has been performed"; 
+		
 		/*Create new balance sheet group*/
 		boolean update = currencyPage.enterBalanceSheetGroup(balanceSheetGroup);
 		
 		if(update == true){
-			currencyPage.clickOnUpdate();
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New balance group  "+balanceSheetGroup.get(0)+ " displayed in the list");
+			
+			currencyPage.clickOnUpdate();	
+		
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New balance sheet group "+balanceSheetGroup.get(0), "created successfully");
+		
+					}
+			
+		else 	{
+			testcases.add(getCurreentDate()+" | Pass : Balance group  "+balanceSheetGroup.get(0)+ " alread created");
 		}	
-	}
+	}	
+			
+			
+			
+//			if(currencyPage.getErrorContentText().contains(SuccMessage))
+//				
+//				
+//			{
+//				testcases.add(getCurreentDate()+" | Pass : New balance group  "+balanceSheetGroup.get(0)+ " created");
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : New balance group  "+balanceSheetGroup.get(0)+ " not created");
+//			}
+//			
+		
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> balanceSheetGroup){		
-		/*Verify balance group*/
-		if(currencyPage.verifyValues(balanceSheetGroup.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New balance group "+balanceSheetGroup.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New balance group "+balanceSheetGroup.get(0)+ " not displayed in the list");
-		}
-	}
+	
+	
+//	private void verifyValues(CurrencyPage currencyPage,List<String> balanceSheetGroup){		
+//		/*Verify balance group*/
+//		if(currencyPage.verifyValues(balanceSheetGroup.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New balance group "+balanceSheetGroup.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New balance group "+balanceSheetGroup.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 
 	@AfterClass (alwaysRun = true)

@@ -71,7 +71,9 @@ public class A033_Analysis_CodeTest extends BaseTest{
 	
 
 	private void createAnalysisCode(CurrencyPage currencyPage,List<String> managementList){
-		String message = "The previously-requested action has been performed";
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create Management/Analysis code*/
 		boolean update = currencyPage.enterAnalysisDetails(managementList);
 
@@ -82,15 +84,17 @@ public class A033_Analysis_CodeTest extends BaseTest{
 			
 			currencyPage.ClickOnAnyButton("Return",1);
 			
-			/*Verify new management code in the list*/
-			if(currencyPage.getToolContentText().contains(message))
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New management code "+managementList.get(0), " created successfully");
 			
-			{
-				testcases.add(getCurreentDate()+" | Pass : New management code "+managementList.get(0)+ " displayed in the list");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New management code "+managementList.get(0)+ " not displayed in the list");
-			}
+//			/*Verify new management code in the list*/
+//			if(currencyPage.getErrorContentText().contains(message))
+//			
+//			{
+//				testcases.add(getCurreentDate()+" | Pass : New management code "+managementList.get(0)+ " displayed in the list");
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : New management code "+managementList.get(0)+ " not displayed in the list");
+//			}
 		}
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New management code  "+managementList.get(0)+ " displayed in the list");

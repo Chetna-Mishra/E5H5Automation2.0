@@ -75,38 +75,43 @@ public class A022_Balance_ClassesTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		verifyValues(currencyPage,firstBalanceClass);
-		verifyValues(currencyPage,secondBalanceClass);
-		verifyValues(currencyPage,thirdBalanceClass);
-		verifyValues(currencyPage,fourthBalanceClass);
-		verifyValues(currencyPage,BalanceClassForRS);
-		verifyValues(currencyPage,BalanceClassForBR);
+//		verifyValues(currencyPage,firstBalanceClass);
+//		verifyValues(currencyPage,secondBalanceClass);
+//		verifyValues(currencyPage,thirdBalanceClass);
+//		verifyValues(currencyPage,fourthBalanceClass);
+//		verifyValues(currencyPage,BalanceClassForRS);
+//		verifyValues(currencyPage,BalanceClassForBR);
 		
 		/*Exit from the application*/
 		currencyPage.logOut(2);
 	}
 	
 	private void createBalanceClass(CurrencyPage currencyPage,List<String> balanceClass) throws InterruptedException{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create balance class*/
 		boolean update = currencyPage.enterBalanceClass(balanceClass);
 			
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New balance class  "+balanceClass.get(0), "created successfully");
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New balance class  "+balanceClass.get(0)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New balance class  "+balanceClass.get(0)+ " already displayed in the list");
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> balanceClass){		
-		/*Verify new balance class in the list*/
-		if(currencyPage.verifyValues(balanceClass.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New balance class "+balanceClass.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New balance class "+balanceClass.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> balanceClass){		
+//		/*Verify new balance class in the list*/
+//		if(currencyPage.verifyValues(balanceClass.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New balance class "+balanceClass.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New balance class "+balanceClass.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

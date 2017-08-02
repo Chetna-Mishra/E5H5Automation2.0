@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest">
+      <class name="com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest">
         <methods>
+          <include name="verify" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
-          <include name="verify" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest -->
+      </class> <!-- com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

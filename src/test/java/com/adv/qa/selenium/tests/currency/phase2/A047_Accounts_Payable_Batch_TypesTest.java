@@ -58,15 +58,15 @@ public class A047_Accounts_Payable_Batch_TypesTest extends BaseTest{
 		createBatchType(currencyPage,dataRow,batchTypePDE6);
 		createBatchType(currencyPage,dataRow,batchTypePDE7);
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
-		
-		verifyAPBatchType(currencyPage,batchTypePDE1);
-		verifyAPBatchType(currencyPage,batchTypePDE2);
-		verifyAPBatchType(currencyPage,batchTypePDE3);
-		verifyAPBatchType(currencyPage,batchTypePDE4);
-		verifyAPBatchType(currencyPage,batchTypePDE5);
-		verifyAPBatchType(currencyPage,batchTypePDE6);
-		verifyAPBatchType(currencyPage,batchTypePDE7);
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		
+//		verifyAPBatchType(currencyPage,batchTypePDE1);
+//		verifyAPBatchType(currencyPage,batchTypePDE2);
+//		verifyAPBatchType(currencyPage,batchTypePDE3);
+//		verifyAPBatchType(currencyPage,batchTypePDE4);
+//		verifyAPBatchType(currencyPage,batchTypePDE5);
+//		verifyAPBatchType(currencyPage,batchTypePDE6);
+//		verifyAPBatchType(currencyPage,batchTypePDE7);
 
 		
 					
@@ -74,6 +74,8 @@ public class A047_Accounts_Payable_Batch_TypesTest extends BaseTest{
 	}
 	
 	private void createBatchType(CurrencyPage currencyPage, DataRow dataRow,List<String> batchList) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		String code = "EDTBTCH ACT=INSERT,COMPANY="+companyId;
 		
 		List<String> currencyCodeForBatchType = dataRow.findNamesReturnValues("currencyCode");
@@ -93,13 +95,9 @@ public class A047_Accounts_Payable_Batch_TypesTest extends BaseTest{
 		
 			currencyPage.clickOnUpdate();
 			
-			
 			if(currencyPage.isCommandDisplayed()){
-				testcases.add(getCurreentDate()+" | Pass : New Batch type of "+batchList.get(0)+ " Created");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New Batch type of "+batchList.get(0)+ " not Created");
-			}
+				
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New Batch type of "+batchList.get(0), "created successfully");	
 			
 		}
 			
@@ -122,22 +120,24 @@ public class A047_Accounts_Payable_Batch_TypesTest extends BaseTest{
 		}
 
 		currencyPage.isCommandDisplayed();
-	}
-	
-	private void verifyAPBatchType(CurrencyPage currencyPage,List<String> batchType){
-	
-		currencyPage.searchValue(batchType.get(0), 1,0);
+		}
 		
-		/*Verify new batch type in the list*/
-		if(currencyPage.verifyValues(batchType.get(0)))
-	
-	{
-			testcases.add(getCurreentDate()+" | Pass : New Batch type of AP "+batchType.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New Batch type of AP "+batchType.get(0)+ " not displayed in the list");
-		}
 	}
+	
+//	private void verifyAPBatchType(CurrencyPage currencyPage,List<String> batchType){
+//	
+//		currencyPage.searchValue(batchType.get(0), 1,0);
+//		
+//		/*Verify new batch type in the list*/
+//		if(currencyPage.verifyValues(batchType.get(0)))
+//	
+//	{
+//			testcases.add(getCurreentDate()+" | Pass : New Batch type of AP "+batchType.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New Batch type of AP "+batchType.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

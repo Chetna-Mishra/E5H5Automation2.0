@@ -33,7 +33,8 @@ public class A018G_Ledger_Control_Nominals extends BaseTest{
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("code");
 
-
+		List<String> nominal5100 = dataRow.findNamesReturnValues("nominal5100");
+		List<String> nominal6200 = dataRow.findNamesReturnValues("nominal6200");
 		List<String> nominalSONY = dataRow.findNamesReturnValues("nominalSONY");
 		List<String> nominalPION = dataRow.findNamesReturnValues("nominalPION");
 		List<String> nominalTOSH = dataRow.findNamesReturnValues("nominalTOSH");
@@ -68,6 +69,8 @@ public class A018G_Ledger_Control_Nominals extends BaseTest{
 		currencyPage.clickOnInsert();
 
 		
+		createNominal(nominal5100,dataRow,currencyPage);
+		createNominal(nominal6200,dataRow,currencyPage);
 		createNominal(nominalSONY,dataRow,currencyPage);
 		createNominal(nominalPION,dataRow,currencyPage);
 		createNominal(nominalTOSH,dataRow,currencyPage);
@@ -88,31 +91,23 @@ public class A018G_Ledger_Control_Nominals extends BaseTest{
 
 }
 	
-	private void createNominal(List<String> nominal,DataRow dataRow,CurrencyPage currencyPage) throws InterruptedException{
-		String message = "The previously-requested action has been performed";
+private void createNominal(List<String> nominal,DataRow dataRow,CurrencyPage currencyPage) throws InterruptedException
+	
+	{
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Create new nominal control*/
 		boolean update = currencyPage.enterNominalControl(nominal);
-		if(update == true)
 		
-		{
-			currencyPage.clickOnUpdate();	
-			
-		}
+			if(update == true){
+				
+				currencyPage.clickOnUpdate();
 		
-		else {
-			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " Already Created");
+				Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New ledger control "+nominal.get(0), "created successfully");
 		}
-//			if(currencyPage.getToolContentText().contains(message)){
-//				testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " displayed in the list");
-//			}
-//			else{
-//				testcases.add(getCurreentDate()+" | Fail : New ledger control "+nominal.get(0)+ " not displayed in the list");
-//			}
-//		}
-//		else{
-//			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " displayed in the list");
-//		}
+		else{
+			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " already created");
+		}
 	}
 	
 	@AfterClass (alwaysRun = true)

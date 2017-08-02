@@ -70,36 +70,40 @@ public class A025_FormulaTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		/*Verify presence of formula*/
-		verifyValues(currencyPage,formulaForCal1);
-		verifyValues(currencyPage,formulaForCal2);
-		verifyValues(currencyPage,formulaForBs1);
-		verifyValues(currencyPage,formulaForMs1);
+//		/*Verify presence of formula*/
+//		verifyValues(currencyPage,formulaForCal1);
+//		verifyValues(currencyPage,formulaForCal2);
+//		verifyValues(currencyPage,formulaForBs1);
+//		verifyValues(currencyPage,formulaForMs1);
 		
 		currencyPage.logOut(2);
 	}
 
 	private void createFormula(CurrencyPage currencyPage,List<String> formulaList) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		/*Create new formula*/
 		boolean update = currencyPage.enterFormulaDetails(formulaList);
 
 		if(update == true){
-			currencyPage.clickOnUpdate();			
+			currencyPage.clickOnUpdate();	
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New formula "+formulaList.get(0), "created successfully");
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New formula "+formulaList.get(0)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New formula "+formulaList.get(0)+ " already created");
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> formulaList){
-		/*Verify new formula added in the list*/
-		if(currencyPage.verifyValues(formulaList.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New formula "+formulaList.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New formula "+formulaList.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> formulaList){
+//		/*Verify new formula added in the list*/
+//		if(currencyPage.verifyValues(formulaList.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New formula "+formulaList.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New formula "+formulaList.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

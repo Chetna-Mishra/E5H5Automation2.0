@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001A_On_line_AuditingTest>
+<Verification1>27/07/2017 02:39:13 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 02:39:22 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 02:39:39 | Pass : Search page displayed</Verification3>
+<Verification4>27/07/2017 02:39:59 | Pass : Currency TPBSUPP displayed in the list</Verification4>
+<Verification5>27/07/2017 02:40:13 | Pass : Column definition displayed</Verification5>
+<Verification6>27/07/2017 02:40:35 | Pass : Column Definition Tab Checkboxes checked</Verification6>
+<Verification7>27/07/2017 02:40:41 | Pass : Column definition def displayed</Verification7>
+<Verification8>27/07/2017 02:41:02 | Pass : Defination Def Tab Checkboxes checked</Verification8>
+<Verification9>27/07/2017 02:41:25 | Pass : Currency TPBADDR displayed in the list</Verification9>
+<Verification10>27/07/2017 02:41:38 | Pass : Column definition displayed</Verification10>
+<Verification11>27/07/2017 02:41:51 | Pass : Column Definition Tab Checkboxes checked</Verification11>
+<Verification12>27/07/2017 02:41:57 | Pass : Column definition def displayed</Verification12>
+<Verification13>27/07/2017 02:42:16 | Pass : Defination Def Tab Checkboxes checked</Verification13>
+</A001A_On_line_AuditingTest>
+<A001_Switch_Intra_Company_Accounting_OnTest>
+<Verification1>27/07/2017 02:43:06 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 02:43:15 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 02:43:34 | Pass : Financial module fields checked by default</Verification3>
+<Verification4>27/07/2017 02:43:57 | Pass : Purchasing module fields checked by default</Verification4>
+</A001_Switch_Intra_Company_Accounting_OnTest>
+<A002_Currency_DescriptionTest>
+<Verification1>27/07/2017 02:44:39 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 02:44:48 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 02:45:05 | Pass : Search page displayed</Verification3>
+<Verification4>27/07/2017 02:46:04 | Pass : Currency EUR Created and displayed in the list</Verification4>
+<Verification5>27/07/2017 02:46:58 | Pass : Currency DEM Created and displayed in the list</Verification5>
+<Verification6>27/07/2017 02:47:51 | Pass : Currency USD Created and displayed in the list</Verification6>
+<Verification7>27/07/2017 02:48:44 | Pass : Currency FRF Created and displayed in the list</Verification7>
+</A002_Currency_DescriptionTest>
+<A003_Currency_Base_NonBase_RelationshipsTest>
+<Verification1>27/07/2017 02:49:47 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 02:49:56 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 02:50:13 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 02:50:51 | Pass : Currency GBP created</Verification4>
+<Verification5>27/07/2017 02:51:24 | Pass : Currency GBP created</Verification5>
+<Verification6>27/07/2017 02:51:57 | Pass : Currency GBP created</Verification6>
+<Verification7>27/07/2017 02:52:29 | Pass : Currency GBP created</Verification7>
+<Verification8>27/07/2017 02:53:02 | Pass : Currency EUR created</Verification8>
+<Verification9>27/07/2017 02:53:35 | Pass : Currency FRF created</Verification9>
+<Verification10>27/07/2017 02:54:07 | Pass : Currency USD created</Verification10>
+<Verification11>27/07/2017 02:54:40 | Pass : Currency DEM created</Verification11>
+</A003_Currency_Base_NonBase_RelationshipsTest>
+<A006_Company_DefinitionTest>
+<Verification1>27/07/2017 02:55:42 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 02:55:51 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 02:56:08 | Pass : Search page displayed</Verification3>
+<Verification4>27/07/2017 02:56:38 | Pass : Primary Details Tab displayed</Verification4>
+<Verification5>27/07/2017 02:57:21 | Pass : Currency Intrastat Tab displayed</Verification5>
+<Verification6>27/07/2017 02:57:54 | Pass : New company id IM displayed in the list</Verification6>
+</A006_Company_DefinitionTest>
+<A004A_Rate_Type_Currency_ExchangeTest>
+<Verification1>27/07/2017 02:58:43 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 02:58:52 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 02:59:09 | Pass : Rate Type search page displayed</Verification3>
+<Verification4>27/07/2017 02:59:39 | Pass : Rate Type CO BOBS BISCUIT FACTORY Created</Verification4>
+</A004A_Rate_Type_Currency_ExchangeTest>
+<A004_Currency_Exchange_Rate_TypesTest>
+<Verification1>27/07/2017 03:00:41 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:00:50 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:01:07 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 03:02:35 | Pass : Currency Exchanged Rate Type USD created</Verification4>
+<Verification5>27/07/2017 03:03:56 | Pass : Currency Exchanged Rate Type FRF created</Verification5>
+<Verification6>27/07/2017 03:05:18 | Pass : Currency Exchanged Rate Type DEM created</Verification6>
+<Verification7>27/07/2017 03:06:39 | Pass : Currency Exchanged Rate Type EUR created</Verification7>
+<Verification8>27/07/2017 03:08:01 | Pass : Currency Exchanged Rate Type GBP created</Verification8>
+<Verification9>27/07/2017 03:09:22 | Pass : Currency Exchanged Rate Type GBP created</Verification9>
+<Verification10>27/07/2017 03:10:44 | Pass : Currency Exchanged Rate Type GBP created</Verification10>
+</A004_Currency_Exchange_Rate_TypesTest>
+<A005_Currency_Exchange_RatesTest>
+<Verification1>27/07/2017 03:11:46 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:11:55 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:12:12 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 03:13:11 | Pass : Exchange Rate Type USD created</Verification4>
+<Verification5>27/07/2017 03:13:45 | Pass : Exchange Rate Type FRF created</Verification5>
+<Verification6>27/07/2017 03:14:19 | Pass : Exchange Rate Type DEM created</Verification6>
+<Verification7>27/07/2017 03:14:53 | Pass : Exchange Rate Type EUR created</Verification7>
+<Verification8>27/07/2017 03:15:26 | Pass : Exchange Rate Type GBP created</Verification8>
+</A005_Currency_Exchange_RatesTest>
+<A007_DevicesTest>
+<Verification1>27/07/2017 03:17:35 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:17:44 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:18:01 | Pass : Search page displayed</Verification3>
+<Verification4>27/07/2017 03:19:09 | Pass : New device CMSE5H5 created</Verification4>
+</A007_DevicesTest>
+<A008_DestinationsTest>
+<Verification1>27/07/2017 03:20:00 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:20:09 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:20:27 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 03:21:29 | Pass : New destination CMS110 created</Verification4>
+<Verification5>27/07/2017 03:22:47 | Pass : New destination CMS220 created</Verification5>
+</A008_DestinationsTest>
+<A009_Distribution_ProfileTest>
+<Verification1>27/07/2017 03:23:49 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:23:58 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:24:15 | Pass : Search page displayed</Verification3>
+<Verification4>27/07/2017 03:25:14 | Pass : Distribution profile CMS110 Created</Verification4>
+<Verification5>27/07/2017 03:25:50 | Pass : Distribution profile CMS220 Created</Verification5>
+</A009_Distribution_ProfileTest>
+<A010_Environment_Groups_Test>
+<Verification1>27/07/2017 03:26:52 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:27:01 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:27:18 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 03:27:58 | Pass : New environment group CMS1IM Created</Verification4>
+<Verification5>27/07/2017 03:28:33 | Pass : New environment group CMS2IM Created</Verification5>
+</A010_Environment_Groups_Test>
+<A011_UsersTest>
+<Verification1>27/07/2017 03:29:42 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:29:51 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:30:08 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 03:31:25 | Pass : New user QUERY Created</Verification4>
+<Verification5>27/07/2017 03:32:24 | Pass : New user ADMIN Created</Verification5>
+<Verification6>27/07/2017 03:33:24 | Pass : New user MANAGER Created</Verification6>
+<Verification7>27/07/2017 03:34:23 | Pass : New user EMPLOYEE Created</Verification7>
+<Verification8>27/07/2017 03:35:22 | Pass : New user BM Created</Verification8>
+<Verification9>27/07/2017 03:36:22 | Pass : New user BM1 Created</Verification9>
+<Verification10>27/07/2017 03:37:21 | Pass : New user BUYER Created</Verification10>
+<Verification11>27/07/2017 03:38:20 | Pass : New user EXPED Created</Verification11>
+<Verification12>27/07/2017 03:39:20 | Pass : New user GREC Created</Verification12>
+<Verification13>27/07/2017 03:40:19 | Pass : New user ACCEPT Created</Verification13>
+<Verification14>27/07/2017 03:41:18 | Pass : New user IM Created</Verification14>
+</A011_UsersTest>
+<A012_CalendarsTest>
+<Verification1>27/07/2017 03:42:27 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:42:35 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:42:53 | Pass : Search page displayed</Verification3>
+<Verification4>27/07/2017 03:44:01 | Pass : New Calender Created</Verification4>
+<Verification5>27/07/2017 03:44:16 | Pass : New Calender Created and displayed in list</Verification5>
+<Verification6>27/07/2017 03:45:29 | Pass : New Calender Created</Verification6>
+<Verification7>27/07/2017 03:45:45 | Pass : New Calender Created and displayed in list</Verification7>
+<Verification8>27/07/2017 03:46:53 | Pass : New Calender Created</Verification8>
+<Verification9>27/07/2017 03:47:08 | Pass : New Calender Created and displayed in list</Verification9>
+</A012_CalendarsTest>
+<A013_Fiscal_CalendarTest>
+<Verification1>27/07/2017 03:47:58 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 03:48:06 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 03:48:23 | Pass : Currency search page displayed</Verification3>
+</A013_Fiscal_CalendarTest>
+<A014_Account_Code_DefinitionTest>
+<Verification1>27/07/2017 04:00:20 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:00:29 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:00:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:04:07 | Pass : New account A displayed in the list</Verification4>
+</A014_Account_Code_DefinitionTest>
+<A015_BalanceSheetTest>
+<Verification1>27/07/2017 04:04:56 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:05:05 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:05:22 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:06:21 | Pass : New balance activity N displayed in the list</Verification4>
+</A015_BalanceSheetTest>
+<A016_Normal_Balance_Sheet_GroupsTest>
+<Verification1>27/07/2017 04:07:10 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:07:19 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:07:36 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:11:12 | Pass : New balance group A displayed in the list</Verification4>
+<Verification5>27/07/2017 04:11:15 | Pass : New balance group B displayed in the list</Verification5>
+<Verification6>27/07/2017 04:11:18 | Pass : New balance group C displayed in the list</Verification6>
+<Verification7>27/07/2017 04:11:21 | Pass : New balance group T displayed in the list</Verification7>
+<Verification8>27/07/2017 04:11:24 | Pass : New balance group G displayed in the list</Verification8>
+<Verification9>27/07/2017 04:11:27 | Pass : New balance group P displayed in the list</Verification9>
+<Verification10>27/07/2017 04:11:31 | Pass : New balance group I displayed in the list</Verification10>
+</A016_Normal_Balance_Sheet_GroupsTest>
+<A017_Normal_Balance_Sheet_CategoriesTest>
+<Verification1>27/07/2017 04:12:20 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:12:29 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:12:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:13:54 | Pass : New balance sheet category 02 created successfully</Verification4>
+<Verification5>27/07/2017 04:14:32 | Pass : New balance sheet category 08 created successfully</Verification5>
+<Verification6>27/07/2017 04:15:11 | Pass : New balance sheet category 01 created successfully</Verification6>
+<Verification7>27/07/2017 04:15:49 | Pass : New balance sheet category 02 created successfully</Verification7>
+<Verification8>27/07/2017 04:16:27 | Pass : New balance sheet category 03 created successfully</Verification8>
+<Verification9>27/07/2017 04:17:05 | Pass : New balance sheet category 04 created successfully</Verification9>
+<Verification10>27/07/2017 04:17:43 | Pass : New balance sheet category 01 created successfully</Verification10>
+<Verification11>27/07/2017 04:18:22 | Pass : New balance sheet category 02 created successfully</Verification11>
+</A017_Normal_Balance_Sheet_CategoriesTest>
+<A017A_Normal_Balance_Sheet_CategoriesTest>
+<Verification1>27/07/2017 04:19:23 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:19:32 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:19:50 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:25:30 | Pass : New balance sheet category 09 displayed in the list</Verification4>
+<Verification5>27/07/2017 04:25:57 | Pass : New balance sheet category 01 displayed in the list</Verification5>
+<Verification6>27/07/2017 04:26:25 | Pass : New balance sheet category 01 displayed in the list</Verification6>
+<Verification7>27/07/2017 04:26:52 | Pass : New balance sheet category 02 displayed in the list</Verification7>
+<Verification8>27/07/2017 04:27:19 | Pass : New balance sheet category 04 displayed in the list</Verification8>
+<Verification9>27/07/2017 04:27:47 | Pass : New balance sheet category 05 displayed in the list</Verification9>
+<Verification10>27/07/2017 04:28:14 | Pass : New balance sheet category 03 displayed in the list</Verification10>
+<Verification11>27/07/2017 04:28:42 | Pass : New balance sheet category 04 displayed in the list</Verification11>
+</A017A_Normal_Balance_Sheet_CategoriesTest>
+<A018_Ledger_Control_Nominals>
+<Verification1>27/07/2017 04:29:35 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:29:44 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:30:01 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:31:24 | Pass : New ledger control 2500 created</Verification4>
+<Verification5>27/07/2017 04:32:23 | Pass : New ledger control 2600 created</Verification5>
+<Verification6>27/07/2017 04:33:22 | Pass : New ledger control 3000 created</Verification6>
+<Verification7>27/07/2017 04:34:20 | Pass : New ledger control 1500 created</Verification7>
+<Verification8>27/07/2017 04:35:20 | Pass : New ledger control GLICA created</Verification8>
+<Verification9>27/07/2017 04:36:19 | Pass : New ledger control 1550 created</Verification9>
+<Verification10>27/07/2017 04:37:18 | Pass : New ledger control 6300 created</Verification10>
+<Verification11>27/07/2017 04:38:17 | Pass : New ledger control 6400 created</Verification11>
+</A018_Ledger_Control_Nominals>
+<A018A_Ledger_Control_Nominals>
+<Verification1>27/07/2017 04:39:26 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:39:34 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:39:52 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:41:15 | Pass : New ledger control 2000 displayed in the list</Verification4>
+<Verification5>27/07/2017 04:42:13 | Pass : New ledger control 5000 displayed in the list</Verification5>
+<Verification6>27/07/2017 04:43:12 | Pass : New ledger control 5050 displayed in the list</Verification6>
+<Verification7>27/07/2017 04:44:11 | Pass : New ledger control 2150 displayed in the list</Verification7>
+<Verification8>27/07/2017 04:45:10 | Pass : New ledger control 6500 displayed in the list</Verification8>
+<Verification9>27/07/2017 04:46:09 | Pass : New ledger control BANKR displayed in the list</Verification9>
+<Verification10>27/07/2017 04:47:08 | Pass : New ledger control BANKR1 displayed in the list</Verification10>
+<Verification11>27/07/2017 04:48:07 | Pass : New ledger control BANKR2 displayed in the list</Verification11>
+<Verification12>27/07/2017 04:49:07 | Pass : New ledger control STKR displayed in the list</Verification12>
+</A018A_Ledger_Control_Nominals>
+<A018B_Ledger_Control_Nominals>
+<Verification1>27/07/2017 04:50:15 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:50:24 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:50:41 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:52:05 | Pass : New ledger control 2160 displayed in the list</Verification4>
+<Verification5>27/07/2017 04:53:03 | Pass : New ledger control 1660 displayed in the list</Verification5>
+<Verification6>27/07/2017 04:54:02 | Pass : New ledger control 5100 displayed in the list</Verification6>
+<Verification7>27/07/2017 04:55:01 | Pass : New ledger control 2051 displayed in the list</Verification7>
+<Verification8>27/07/2017 04:56:00 | Pass : New ledger control 6200 displayed in the list</Verification8>
+</A018B_Ledger_Control_Nominals>
+<A018C_Ledger_Control_Nominals>
+<Verification1>27/07/2017 04:57:14 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 04:57:23 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 04:57:40 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 04:59:04 | Pass : New ledger control PLDF displayed in the list</Verification4>
+<Verification5>27/07/2017 05:00:03 | Pass : New ledger control POPD displayed in the list</Verification5>
+<Verification6>27/07/2017 05:01:03 | Pass : New ledger control IMDF displayed in the list</Verification6>
+<Verification7>27/07/2017 05:02:02 | Pass : New ledger control REVC displayed in the list</Verification7>
+<Verification8>27/07/2017 05:03:02 | Pass : New ledger control REVN displayed in the list</Verification8>
+<Verification9>27/07/2017 05:04:01 | Pass : New ledger control SUND displayed in the list</Verification9>
+<Verification10>27/07/2017 05:05:01 | Pass : New ledger control RSUP displayed in the list</Verification10>
+<Verification11>27/07/2017 05:06:00 | Pass : New ledger control ISSU displayed in the list</Verification11>
+<Verification12>27/07/2017 05:06:59 | Pass : New ledger control STAD displayed in the list</Verification12>
+<Verification13>27/07/2017 05:07:59 | Pass : New ledger control DISP displayed in the list</Verification13>
+<Verification14>27/07/2017 05:08:58 | Pass : New ledger control RSTR displayed in the list</Verification14>
+</A018C_Ledger_Control_Nominals>
+<A018D_Ledger_Control_Nominals>
+<Verification1>27/07/2017 05:10:07 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 05:10:16 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 05:10:33 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 05:11:57 | Pass : New ledger control STKE displayed in the list</Verification4>
+<Verification5>27/07/2017 05:12:57 | Pass : New ledger control STKS displayed in the list</Verification5>
+<Verification6>27/07/2017 05:13:56 | Pass : New ledger control STKW displayed in the list</Verification6>
+<Verification7>27/07/2017 05:14:56 | Pass : New ledger control STKN displayed in the list</Verification7>
+<Verification8>27/07/2017 05:15:56 | Pass : New ledger control INTE displayed in the list</Verification8>
+<Verification9>27/07/2017 05:16:55 | Pass : New ledger control INTW displayed in the list</Verification9>
+<Verification10>27/07/2017 05:17:55 | Pass : New ledger control INTS displayed in the list</Verification10>
+<Verification11>27/07/2017 05:18:55 | Pass : New ledger control INTN displayed in the list</Verification11>
+<Verification12>27/07/2017 05:19:54 | Pass : New ledger control DEN displayed in the list</Verification12>
+<Verification13>27/07/2017 05:20:53 | Pass : New ledger control ARCM displayed in the list</Verification13>
+</A018D_Ledger_Control_Nominals>
+<A018E_Ledger_Control_Nominals>
+<Verification1>27/07/2017 05:22:01 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 05:22:11 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 05:22:28 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 05:23:52 | Pass : New ledger control GLICA1 displayed in the list</Verification4>
+<Verification5>27/07/2017 05:24:51 | Pass : New ledger control 4000 displayed in the list</Verification5>
+<Verification6>27/07/2017 05:25:49 | Pass : New ledger control 4100 displayed in the list</Verification6>
+<Verification7>27/07/2017 05:26:48 | Pass : New ledger control 4200 displayed in the list</Verification7>
+<Verification8>27/07/2017 05:27:47 | Pass : New ledger control 6000 displayed in the list</Verification8>
+<Verification9>27/07/2017 05:28:46 | Pass : New ledger control 6100 displayed in the list</Verification9>
+<Verification10>27/07/2017 05:29:45 | Pass : New ledger control 1560 displayed in the list</Verification10>
+<Verification11>27/07/2017 05:30:44 | Pass : New ledger control 1661 displayed in the list</Verification11>
+<Verification12>27/07/2017 05:31:43 | Pass : New ledger control 2001 displayed in the list</Verification12>
+<Verification13>27/07/2017 05:32:42 | Pass : New ledger control 2100 displayed in the list</Verification13>
+</A018E_Ledger_Control_Nominals>
+<A018F_Ledger_Control_Nominals>
+<Verification1>27/07/2017 05:33:50 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 05:33:59 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 05:34:16 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 05:35:39 | Pass : New ledger control 5500 displayed in the list</Verification4>
+<Verification5>27/07/2017 05:36:39 | Pass : New ledger control VATA displayed in the list</Verification5>
+<Verification6>27/07/2017 05:37:38 | Pass : New ledger control 5901 displayed in the list</Verification6>
+<Verification7>27/07/2017 05:38:37 | Pass : New ledger control 5902 displayed in the list</Verification7>
+<Verification8>27/07/2017 05:39:36 | Pass : New ledger control 5903 displayed in the list</Verification8>
+<Verification9>27/07/2017 05:40:35 | Pass : New ledger control EXP1 displayed in the list</Verification9>
+<Verification10>27/07/2017 05:41:34 | Pass : New ledger control EXP2 displayed in the list</Verification10>
+<Verification11>27/07/2017 05:42:33 | Pass : New ledger control TRAN displayed in the list</Verification11>
+<Verification12>27/07/2017 05:42:48 | Pass : New ledger control STKR already displayed in the list</Verification12>
+<Verification13>27/07/2017 05:43:47 | Pass : New ledger control OCST displayed in the list</Verification13>
+</A018F_Ledger_Control_Nominals>
+<A018G_Ledger_Control_Nominals>
+<Verification1>27/07/2017 05:44:55 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 05:45:05 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 05:45:22 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 05:46:45 | Pass : New ledger control SONY displayed in the list</Verification4>
+<Verification5>27/07/2017 05:47:44 | Pass : New ledger control PION displayed in the list</Verification5>
+<Verification6>27/07/2017 05:48:44 | Pass : New ledger control TOSH displayed in the list</Verification6>
+<Verification7>27/07/2017 05:49:43 | Pass : New ledger control PANN displayed in the list</Verification7>
+<Verification8>27/07/2017 05:50:43 | Pass : New ledger control WHAF displayed in the list</Verification8>
+<Verification9>27/07/2017 05:51:42 | Pass : New ledger control SHIN displayed in the list</Verification9>
+<Verification10>27/07/2017 05:52:41 | Pass : New ledger control GRUN displayed in the list</Verification10>
+<Verification11>27/07/2017 05:53:40 | Pass : New ledger control SAMS displayed in the list</Verification11>
+<Verification12>27/07/2017 05:54:40 | Pass : New ledger control HITC displayed in the list</Verification12>
+<Verification13>27/07/2017 05:55:39 | Pass : New ledger control AIWA displayed in the list</Verification13>
+<Verification14>27/07/2017 05:56:39 | Fail : New ledger control AKAI not displayed in the list</Verification14>
+</A018G_Ledger_Control_Nominals>
+<A019_Ledger_Control_Management_CodeTest>
+<Verification1>27/07/2017 05:57:47 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 05:57:47 | Pass : Login page displayed</Verification2>
+<Verification3>27/07/2017 05:57:56 | Pass : Command line displayed</Verification3>
+<Verification4>27/07/2017 05:58:13 | Pass : Currency search page displayed</Verification4>
+<Verification5>27/07/2017 05:59:30 | Pass : management code DUM displayed in the list</Verification5>
+</A019_Ledger_Control_Management_CodeTest>
+<A020_Ledger_Control_AccountsTest>
+<Verification1>27/07/2017 06:00:19 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:00:28 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:00:45 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:02:04 | Pass : Ledger control account IM displayed in the list</Verification4>
+</A020_Ledger_Control_AccountsTest>
+<A021_Batch_TypesTest>
+<Verification1>27/07/2017 06:02:53 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:03:01 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:03:19 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:05:31 | Pass : New batch type Revaluation displayed in the list</Verification4>
+<Verification5>27/07/2017 06:05:34 | Pass : New batch type Transfer displayed in the list</Verification5>
+<Verification6>27/07/2017 06:05:38 | Pass : New batch type Summarisation displayed in the list</Verification6>
+</A021_Batch_TypesTest>
+<A022_Balance_ClassesTest>
+<Verification1>27/07/2017 06:06:27 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:06:36 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:06:53 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:11:55 | Pass : New balance class S,1 displayed in the list</Verification4>
+<Verification5>27/07/2017 06:11:59 | Pass : New balance class I,C displayed in the list</Verification5>
+<Verification6>27/07/2017 06:12:03 | Pass : New balance class B,1 displayed in the list</Verification6>
+<Verification7>27/07/2017 06:12:08 | Pass : New balance class V,1 displayed in the list</Verification7>
+<Verification8>27/07/2017 06:12:13 | Pass : New balance class R,S displayed in the list</Verification8>
+<Verification9>27/07/2017 06:12:19 | Pass : New balance class B,S displayed in the list</Verification9>
+</A022_Balance_ClassesTest>
+<A023_Company_ControlsTest>
+<Verification1>27/07/2017 06:13:08 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:13:17 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:13:34 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:16:28 | Fail : Company controls for new company IM not completed</Verification4>
+</A023_Company_ControlsTest>
+<A024_Batch_TypesTest>
+<Verification1>27/07/2017 06:16:41 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:16:50 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:17:07 | Pass : Currency search page displayed</Verification3>
+</A024_Batch_TypesTest>
+<A024A_Batch_TypesTest>
+<Verification1>27/07/2017 06:22:59 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:23:07 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:23:25 | Pass : Currency search page displayed</Verification3>
+</A024A_Batch_TypesTest>
+<A024B_Batch_TypesTest>
+<Verification1>27/07/2017 06:29:46 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:29:55 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:30:13 | Pass : Currency search page displayed</Verification3>
+</A024B_Batch_TypesTest>
+<A025_FormulaTest>
+<Verification1>27/07/2017 06:36:35 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:36:44 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:37:01 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:39:54 | Fail : New formula CAL1 not displayed in the list</Verification4>
+<Verification5>27/07/2017 06:40:01 | Fail : New formula CAL2 not displayed in the list</Verification5>
+<Verification6>27/07/2017 06:40:08 | Fail : New formula BS1 not displayed in the list</Verification6>
+<Verification7>27/07/2017 06:40:14 | Fail : New formula MS1 not displayed in the list</Verification7>
+</A025_FormulaTest>
+<A026_Layout_CodesTest>
+<Verification1>27/07/2017 06:41:04 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:41:12 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:41:30 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:43:49 | Fail : Layout code LAY1 not  displayed in the list</Verification4>
+</A026_Layout_CodesTest>
+<A027_Default_StructureTest>
+<Verification1>27/07/2017 06:44:02 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:44:11 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:44:28 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 06:46:55 | Pass : Structure 00 displayed in the list</Verification4>
+</A027_Default_StructureTest>
+<A028_Default_Structure_ControlsTest>
+<Verification1>27/07/2017 06:47:45 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:47:53 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:48:11 | Pass : Currency search page displayed</Verification3>
+</A028_Default_Structure_ControlsTest>
+<A029_Default_Structure_ElementsTest>
+<Verification1>27/07/2017 06:50:02 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:50:10 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:50:27 | Pass : Currency search page displayed</Verification3>
+</A029_Default_Structure_ElementsTest>
+<A030_Security_ElementsTest>
+<Verification1>27/07/2017 06:52:05 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:52:14 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:52:31 | Pass : Currency search page displayed</Verification3>
+</A030_Security_ElementsTest>
+<A031_Company_ControlsTest>
+<Verification1>27/07/2017 06:53:17 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:53:26 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:53:43 | Pass : Currency search page displayed</Verification3>
+</A031_Company_ControlsTest>
+<A032_Management_CodesTest>
+<Verification1>27/07/2017 06:55:24 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 06:55:33 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 06:55:50 | Pass : Currency search page displayed</Verification3>
+</A032_Management_CodesTest>
+<A032A_PathKeyNewParentTest>
+<Verification1>27/07/2017 07:02:01 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:02:10 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:02:27 | Pass : Currency search page displayed</Verification3>
+</A032A_PathKeyNewParentTest>
+<A033_Analysis_CodeTest>
+<Verification1>27/07/2017 07:03:58 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:04:07 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:04:24 | Pass : Currency search page displayed</Verification3>
+<Verification4>27/07/2017 07:05:31 | Pass : New management code AV displayed in the list</Verification4>
+<Verification5>27/07/2017 07:06:11 | Pass : New management code HiFi displayed in the list</Verification5>
+</A033_Analysis_CodeTest>
+<A035_Structure_RebuildTest>
+<Verification1>27/07/2017 07:07:20 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:07:29 | Pass : Command line displayed</Verification2>
+</A035_Structure_RebuildTest>
+<A036_BTZ_Elements_For_ICA_StructureTest>
+<Verification1>27/07/2017 07:07:42 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:07:50 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:08:08 | Pass : Search page displayed</Verification3>
+</A036_BTZ_Elements_For_ICA_StructureTest>
+<A037_ICA_Default_Trading_RelationshipsTest>
+<Verification1>27/07/2017 07:09:46 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:09:54 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:10:11 | Pass : Search page displayed</Verification3>
+</A037_ICA_Default_Trading_RelationshipsTest>
+<A038_Process_EP2Test>
+<Verification1>27/07/2017 07:12:01 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:12:10 | Pass : Command line displayed</Verification2>
+</A038_Process_EP2Test>
+<A039_EnquiryTest>
+<Verification1>27/07/2017 07:12:23 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:12:32 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:13:07 | Fail : Structure Rebuild page not displayed</Verification3>
+</A039_EnquiryTest>
+<A040_ICA_Data_EntryTest>
+<Verification1>27/07/2017 07:13:20 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:13:30 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:13:32 | Pass : Command line displayed</Verification3>
+<Verification4>27/07/2017 07:13:52 | Fail : Search page not displayed</Verification4>
+</A040_ICA_Data_EntryTest>
+<A041_Group_Category_And_Structure_PostingsTest>
+<Verification1>27/07/2017 07:14:05 | Pass : Login page displayed</Verification1>
+<Verification2>27/07/2017 07:14:14 | Pass : Command line displayed</Verification2>
+<Verification3>27/07/2017 07:14:31 | Pass : Structure Rebuild page displayed</Verification3>
+</A041_Group_Category_And_Structure_PostingsTest>
+</TestCase>
+</SeleniumTestReport>

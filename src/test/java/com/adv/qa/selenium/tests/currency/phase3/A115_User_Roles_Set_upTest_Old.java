@@ -168,7 +168,7 @@ public class A115_User_Roles_Set_upTest_Old extends BaseTest{
 		if(update){
 			currencyPage.clickOnUpdate();
 			
-			if(currencyPage.getToolContentText().contains(message)){
+			if(currencyPage.getErrorContentText().contains(message)){
 				testcases.add(getCurreentDate()+" | Pass : Range code "+elements.get(1)+" created");
 			}
 			else{
@@ -184,7 +184,7 @@ public class A115_User_Roles_Set_upTest_Old extends BaseTest{
 		if(update){
 			currencyPage.clickOnUpdate();
 			
-			if(currencyPage.getToolContentText().contains(message)){
+			if(currencyPage.getErrorContentText().contains(message)){
 				testcases.add(getCurreentDate()+" | Pass :Access code "+elements.get(1)+" created");
 			}
 			else{
@@ -200,7 +200,7 @@ public class A115_User_Roles_Set_upTest_Old extends BaseTest{
 		if(update){
 			currencyPage.clickOnUpdate();
 			
-			if(currencyPage.getToolContentText().contains(message)){
+			if(currencyPage.getErrorContentText().contains(message)){
 				testcases.add(getCurreentDate()+" | Pass : Security group "+elements.get(1)+" created");
 			}
 			else{
@@ -222,7 +222,7 @@ public class A115_User_Roles_Set_upTest_Old extends BaseTest{
 			
 			currencyPage.clickOnUpdtWarnings();
 			
-			if(currencyPage.getToolContentText().contains(message)){
+			if(currencyPage.getErrorContentText().contains(message)){
 				testcases.add(getCurreentDate()+" | Pass : Role "+elements.get(0)+" created");
 			}
 			else{
@@ -242,7 +242,7 @@ public class A115_User_Roles_Set_upTest_Old extends BaseTest{
 		if(update){
 			currencyPage.clickOnUpdate();
 			
-			if(currencyPage.getToolContentText().contains(message)){
+			if(currencyPage.getErrorContentText().contains(message)){
 				testcases.add(getCurreentDate()+" | Pass : User Role "+elements.get(0)+" created");
 			}
 			else{

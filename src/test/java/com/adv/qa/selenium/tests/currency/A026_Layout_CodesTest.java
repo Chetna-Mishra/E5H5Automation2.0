@@ -58,7 +58,10 @@ public class A026_Layout_CodesTest extends BaseTest{
 		/*Create layout code*/
 		currencyPage.enterLayoutDetails(layoutList);
 		
+		String SuccMessage = "The previously-requested action has been performed";
 		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Layout code "+layoutList.get(0), "created successfully");
 		
 		/*Exit from the layout details page*/
 		currencyPage.clickOnCancel();

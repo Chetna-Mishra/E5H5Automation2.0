@@ -79,19 +79,19 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 		/*Exit from the structure element details page*/
 		currencyPage.clickOnCancel();
 
-		verifyValues(currencyPage,structureForHQ);
-		verifyValues(currencyPage,structureForNorth);
-		verifyValues(currencyPage,structureForSouth);
-		verifyValues(currencyPage,structureForEast);
-		verifyValues(currencyPage,structureForWest);
-		verifyValues(currencyPage,structureForSusp);
+//		verifyValues(currencyPage,structureForHQ);
+//		verifyValues(currencyPage,structureForNorth);
+//		verifyValues(currencyPage,structureForSouth);
+//		verifyValues(currencyPage,structureForEast);
+//		verifyValues(currencyPage,structureForWest);
+//		verifyValues(currencyPage,structureForSusp);
 		
 		
 		currencyPage.searchValue(companyId,structureForSusp, 3, 2);
 		
 		currencyPage.clickOnAmed1();
 		
-		createPathKey(currencyPage,pathKeyList,structureForWest,structureForSusp );
+		createPathKey(currencyPage,pathKeyList,structureForWest,structureForSusp);
 		
 		currencyPage.clickOnCancel1();
 		currencyPage.logOut(1);
@@ -99,30 +99,35 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 
 	
 	private void createDefautStructure(CurrencyPage currencyPage,List<String> structureElement) throws InterruptedException{		
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		/*Create new structure element*/
 		boolean update = currencyPage.enterElementDetails(structureElement);
 
 		if(update == true){
 			
-			currencyPage.clickOnUpdate();	
+			currencyPage.clickOnUpdate();
+			
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New structure element "+structureElement.get(1), "created successfully");
 		}
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New structure element  "+structureElement.get(1)+ " displayed in the list");
 		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> structureElement)
-	
-	{
-		/*Verify new structure element in the list*/
-		if(currencyPage.verifyValues(structureElement.get(1)))
-		{
-			testcases.add(getCurreentDate()+" | Pass : New structure element "+structureElement.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New structure element "+structureElement.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> structureElement)
+//	
+//	{
+//		/*Verify new structure element in the list*/
+//		if(currencyPage.verifyValues(structureElement.get(1)))
+//		{
+//			testcases.add(getCurreentDate()+" | Pass : New structure element "+structureElement.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New structure element "+structureElement.get(1)+ " not displayed in the list");
+//		}
+//	}
 	
 	
 

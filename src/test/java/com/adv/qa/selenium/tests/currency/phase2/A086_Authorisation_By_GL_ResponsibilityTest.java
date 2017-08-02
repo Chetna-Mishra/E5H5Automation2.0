@@ -66,23 +66,27 @@ public class A086_Authorisation_By_GL_ResponsibilityTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,authorisationHQ);
-		verifyValues(currencyPage,authorisationWest);
-		verifyValues(currencyPage,authorisationSouth);
-		verifyValues(currencyPage,authorisationNorth);
-		verifyValues(currencyPage,authorisationEast);
+//		verifyValues(currencyPage,authorisationHQ);
+//		verifyValues(currencyPage,authorisationWest);
+//		verifyValues(currencyPage,authorisationSouth);
+//		verifyValues(currencyPage,authorisationNorth);
+//		verifyValues(currencyPage,authorisationEast);
 		
 		currencyPage.logOut(2);
 	}
 
 	
 	private void createAuthorisationByGLResponsibility(CurrencyPage currencyPage,List<String> authorisationCode) throws InterruptedException{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create batch type code*/
-		boolean update = currencyPage.enterGLResponsibilityAuthForAP(authorisationCode);	
+		boolean update = currencyPage.enterGLResponsibilityAuthForAP(authorisationCode);
 		
 		if(update == true){
 		
 			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation GL responsibility code "+authorisationCode.get(1), "created successfully");
+			
 		}
 		
 		else{
@@ -91,16 +95,16 @@ public class A086_Authorisation_By_GL_ResponsibilityTest extends BaseTest{
 		
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> authorisationCode){		
-		
-		/*Verify New authorization GL responsibility code displayed in the list*/
-		if(currencyPage.verifyValues(authorisationCode.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New authorisation GL responsibility code "+authorisationCode.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New authorisation GL responsibility code "+authorisationCode.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> authorisationCode){		
+//		
+//		/*Verify New authorization GL responsibility code displayed in the list*/
+//		if(currencyPage.verifyValues(authorisationCode.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New authorisation GL responsibility code "+authorisationCode.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New authorisation GL responsibility code "+authorisationCode.get(1)+ " not displayed in the list");
+//		}
+//	}
 
 
 	

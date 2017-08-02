@@ -91,17 +91,24 @@ public class A024B_Batch_TypesTest extends BaseTest{
 
 	
 	private void createBatchType(CurrencyPage currencyPage,List<String> batchType) throws InterruptedException{
-		String message = "The previously-requested action has been performed";
+		String SuccMessage = "The previously-requested action has been performed";
 
 		/*Create new Batch type*/
 		boolean update = currencyPage.enterLedgerBatchTypeDetails(batchType);
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New batch type "+batchType.get(0), "created successfully");
+			
 		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New batch type  "+batchType.get(0)+ " displayed in the list");
-		}
+		
+	
+	else{
+		
+		testcases.add(getCurreentDate()+" | Pass : New batch type "+batchType.get(0)+" already created");
+	}
+}
 			
 //			/*Verify new batch type in the Batch list*/
 //			if(currencyPage.getToolContentText().contains(message)){
@@ -114,8 +121,7 @@ public class A024B_Batch_TypesTest extends BaseTest{
 //		else{
 //			testcases.add(getCurreentDate()+" | Pass : New batch type  "+batchType.get(0)+ " displayed in the list");
 //		}
-	}
-
+	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){
 		super.tearDown();

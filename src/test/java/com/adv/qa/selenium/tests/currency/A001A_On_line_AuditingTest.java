@@ -118,9 +118,11 @@ public class A001A_On_line_AuditingTest extends BaseTest{
 					
 					
 					/*Navigate to Definition Defn tab*/
-					currencyPage.clickOnDefinitionDef();
+//					currencyPage.clickOnDefinitionDef();
 					
-					/*Verift Definition Def page/section displayed*/
+					currencyPage.ClickOnAnyTab("Definition Defn.", 1);	
+					
+					/*Verify Definition Def page/section displayed*/
 					Assert.assertTrue(testcases,currencyPage.isDefinitionDefnDispayed(), "Column definition def","displayed");
 					
 					verifyDefinitionDefTab(currencyPage,entityValuelist);
@@ -132,13 +134,18 @@ public class A001A_On_line_AuditingTest extends BaseTest{
 	
 	private void verifyColumnDefinitionTab(CurrencyPage currencyPage,List<String> entityValuelist) throws InterruptedException
 	{
-		currencyPage.verifyColumnDefinitionTab(entityValuelist);
+//		currencyPage.verifyColumnDefinitionTab(entityValuelist);
+		Assert.assertTrue(testcases,currencyPage.verifyColumnDefinitionTab(entityValuelist),"Column Definition Tab Checkboxes","checked");
+		
 	}	
 	
 	
 	private void verifyDefinitionDefTab(CurrencyPage currencyPage,List<String> entityValuelist) throws InterruptedException
 	{
-		currencyPage.verifyDefinitionDefTab(entityValuelist);
+
+//		currencyPage.verifyDefinitionDefTab(entityValuelist);
+		Assert.assertTrue(testcases,currencyPage.verifyDefinitionDefTab(entityValuelist),"Defination Def Tab Checkboxes","checked");
+
 		
 	}
 

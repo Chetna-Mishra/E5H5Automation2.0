@@ -54,10 +54,20 @@ public class A073_Receipt_ControlTest extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 		
-		/*Create batch type code*/
-		currencyPage.enterReceiptControlsDetails(receiptControl);	
 		
+		/*Create batch type code*/
+		String SuccMessage = "The previously-requested action has been performed";
+		boolean update=currencyPage.enterReceiptControlsDetails(receiptControl);	
+		
+		if(update==true)
+		{
 		currencyPage.clickOnUpdate();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New receipt control  "+receiptControl.get(0), "created successfully");
+		
+		}
+		else{
+			testcases.add(getCurreentDate()+" | Pass : New account payable control "+receiptControl.get(0)+ " already created");
+		}
 		
 		/*Exit from the batch details page*/
 		currencyPage.clickOnCancel();
@@ -65,7 +75,7 @@ public class A073_Receipt_ControlTest extends BaseTest{
 		currencyPage.isConfirmPopUpDisplayed();
 
 		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(receiptControl.get(0)), "New receipt control  "+receiptControl.get(0),"displayed in the list");
+//		Assert.assertTrue(testcases,currencyPage.verifyValues(receiptControl.get(0)), "New receipt control  "+receiptControl.get(0),"displayed in the list");
 			
 		currencyPage.logOut(2);
 	}

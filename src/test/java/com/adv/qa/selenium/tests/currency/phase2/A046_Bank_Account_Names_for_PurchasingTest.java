@@ -65,39 +65,45 @@ public class A046_Bank_Account_Names_for_PurchasingTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 	
-		/*Verify bank account name*/
-		verifyBankAccount(currencyPage,bankName1);
-		verifyBankAccount(currencyPage,bankName2);
-		verifyBankAccount(currencyPage,bankName3);
+//		/*Verify bank account name*/
+//		verifyBankAccount(currencyPage,bankName1);
+//		verifyBankAccount(currencyPage,bankName2);
+//		verifyBankAccount(currencyPage,bankName3);
 		
 		currencyPage.logOut(2);
 	}
 
 	/*Create bank account name*/
 	private void createBankAccount(CurrencyPage currencyPage,List<String> bankName) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create bank account name*/
 		boolean update = currencyPage.bankSortCode(bankName); 
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New bank code "+bankName.get(1), "created successfully");	
+			
 		}
 		
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New bank code  "+bankName.get(1)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New bank code  "+bankName.get(1)+ " already displayed in the list");
 		}
 	}
 	
-	/*Verify bank account name*/
-	private void verifyBankAccount(CurrencyPage currencyPage,List<String> bankName) throws InterruptedException{
-			
-		if(currencyPage.verifyValues(bankName.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New bank code "+bankName.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New bank code "+bankName.get(1)+ " not displayed in the list");
-		}
-	}
-	
+//	/*Verify bank account name*/
+//	private void verifyBankAccount(CurrencyPage currencyPage,List<String> bankName) throws InterruptedException{
+//			
+//		if(currencyPage.verifyValues(bankName.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New bank code "+bankName.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New bank code "+bankName.get(1)+ " not displayed in the list");
+//		}
+//	}
+//	
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

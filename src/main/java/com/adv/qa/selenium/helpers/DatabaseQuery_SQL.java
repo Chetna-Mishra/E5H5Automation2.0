@@ -37,7 +37,9 @@ public class DatabaseQuery_SQL {
 	}
 	
 	public String getStatProcess(String prcss,String req) throws SQLException, SeleniumDaoException{
+		WaitHelper.waitAdditional(4);
 		String name = null;		
+		
 		connection = JDBCDriverInformation_SQL.getSqlJDBCConnection();
 		try {
 			connection = JDBCDriverInformation_SQL.getSqlJDBCConnection();

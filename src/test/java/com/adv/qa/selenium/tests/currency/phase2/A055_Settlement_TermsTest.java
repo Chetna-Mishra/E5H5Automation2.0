@@ -48,21 +48,22 @@ public class A055_Settlement_TermsTest extends BaseTest{
 		createBankCode(currencyPage,code,currencyCode,settlementS1);
 		createBankCode(currencyPage,code,currencyCode,settlementS2);
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
-		
-		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Settlement Terms List","Currency search page","displayed");
-
-		currencyPage.searchValue(companyId,2,0);
-		
-		verifyBankCode(currencyPage,settlementS1);
-		verifyBankCode(currencyPage,settlementS2);
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		
+//		/*Verify currency search page displayed*/
+//		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Settlement Terms List","Currency search page","displayed");
+//
+//		currencyPage.searchValue(companyId,2,0);
+//		
+//		verifyBankCode(currencyPage,settlementS1);
+//		verifyBankCode(currencyPage,settlementS2);
 	
 		currencyPage.logOut(2);
 
 	}
 	
 	private void createBankCode(CurrencyPage currencyPage,String code,List<String> currencyCode,List<String> settlement) throws InterruptedException{
+		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 
@@ -72,26 +73,30 @@ public class A055_Settlement_TermsTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Settlement Terms Edit","Currency search page","displayed");
 		
 		/*Create batch type code*/
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.enterSettlementTerms(settlement);	
 		
 		if(update == true){
 		
 			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New settlement term "+settlement.get(0), "created successfully");
+			
 		}
 		else{
+			
 			testcases.add(getCurreentDate()+" | Pass : New settlement term "+settlement.get(0)+ " present in the list");
 			currencyPage.clickOnCancel();
 		}
 	}
 	
-	private void verifyBankCode(CurrencyPage currencyPage,List<String> settlement){		
-		if(currencyPage.verifyValues(settlement.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New settlement term "+settlement.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New settlement term "+settlement.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyBankCode(CurrencyPage currencyPage,List<String> settlement){		
+//		if(currencyPage.verifyValues(settlement.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New settlement term "+settlement.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New settlement term "+settlement.get(0)+ " not displayed in the list");
+//		}
+//	}
 	
 	
 	@AfterClass (alwaysRun = true)

@@ -1,5 +1,6 @@
 package com.adv.qa.selenium.tests.currency.phase2;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -33,12 +34,20 @@ public class A087_Authorisation_By_Level_Or_GL_ResponsibilityTest extends BaseTe
 		String passWord = dataRow.get("passWord");
 		String currencyCode = dataRow.get("currencyCode");
 		List<String> authorisationCode = dataRow.findNamesReturnValues("authorisationCode");
+		List<String> Elements = dataRow.findNamesReturnValues("Elements");
+		
+		
 		List<String> authorisationLev1 = dataRow.findNamesReturnValues("authorisationLev1");
 		List<String> authorisationLev2 = dataRow.findNamesReturnValues("authorisationLev2");
 		List<String> authorisationLev3 = dataRow.findNamesReturnValues("authorisationLev3");
 		List<String> authorisationLev4 = dataRow.findNamesReturnValues("authorisationLev4");
 		
-//		String url = (adve5URL+appendURL);
+		List<List<String>> authorisationLev = new ArrayList<>();
+		authorisationLev.add(authorisationLev1);
+		authorisationLev.add(authorisationLev2);
+		authorisationLev.add(authorisationLev3);
+		authorisationLev.add(authorisationLev4);
+		
 		
 					
 		/*Log in to application*/
@@ -59,16 +68,18 @@ public class A087_Authorisation_By_Level_Or_GL_ResponsibilityTest extends BaseTe
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Val Lvl/GL Resp Auth Defn list","Currency search page","displayed");
 		
-		for(int k=1;k<=5;k++)
-			{
 		
-			currencyPage.searchAUCode(companyId,authorisationCode, k);
+		for (int k = 0; k <= 4; k++) 
 			
-			 			/*Verify New authorization by level or GL responsibility code displayed in the list*/
-			if(currencyPage.verifyValues(authorisationCode.get(0)))
+		{
+		
+		currencyPage.searchAUCode(companyId,authorisationCode, Elements, k);
+			
+		/*Verify New authorization by level or GL responsibility code displayed in the list*/
+			if(currencyPage.verifyValues(Elements.get(k)))
 			
 			{
-				testcases.add(getCurreentDate()+" | Pass : New authorisation by level or GL responsibility code "+authorisationCode.get(k)+ " displayed in the list");
+				testcases.add(getCurreentDate()+" | Pass : New authorisation by level or GL responsibility code "+Elements.get(k)+ " displayed in the list");
 			
 			}
 			
@@ -76,35 +87,38 @@ public class A087_Authorisation_By_Level_Or_GL_ResponsibilityTest extends BaseTe
 				
 			{
 				
-				currencyPage.clickOnInsert();
+			currencyPage.clickOnInsert();
+			
+
+			
+			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(authorisationCode, Elements, k, authorisationLev,4);			
 			
 			/*Create batch type code*/
-//			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(currencyPage, authorisationCode, authorisationLev1);
-//			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(currencyPage, authorisationCode, authorisationLev2);
-//			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(currencyPage, authorisationCode, authorisationLev3);
-//			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(currencyPage, authorisationCode, authorisationLev4);
-////			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(authorisationLev1, authorisationLev1, authorisationLev2, authorisationLev3,authorisationLev4);
+//			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(authorisationCode, Elements, k, authorisationLev1, authorisationLev2, authorisationLev3, authorisationLev4);
 			
 			currencyPage.clickOnCancel();
 	
 			/*Verify New authorization by level or GL responsibility code displayed in the list*/
-			if(currencyPage.verifyValues(authorisationCode.get(k))){
-				testcases.add(getCurreentDate()+" | Pass : New authorisation by level or GL responsibility code "+authorisationCode.get(k)+ " displayed in the list");
+			if(currencyPage.verifyValues(Elements.get(k)))
+			
+			{
+				testcases.add(getCurreentDate()+" | Pass : New authorisation by level or GL responsibility code "+Elements.get(k)+ " displayed in the list");
 			}
 			else{
-				testcases.add(getCurreentDate()+" | Fail : New authorisation by level or GL responsibility code "+authorisationCode.get(k)+ " not displayed in the list");
+				testcases.add(getCurreentDate()+" | Fail : New authorisation by level or GL responsibility code "+Elements.get(k)+ " not displayed in the list");
+				}
+				
 				}
 				
 			}
-				
-		}
+		
+	
 		
 		currencyPage.logOut(2);
 		
-//		/*Launch application for second test data*/
-//		driver.get(adve5URL+appendURL);
-
 	}
+		
+
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

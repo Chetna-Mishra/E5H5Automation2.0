@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A073_Receipt_ControlTest>
+<Verification1>01/08/2017 01:55:52 | Pass : Login page displayed</Verification1>
+<Verification2>01/08/2017 01:56:03 | Pass : Command line displayed</Verification2>
+<Verification3>01/08/2017 01:56:21 | Pass : Currency search page displayed</Verification3>
+<Verification4>01/08/2017 01:57:29 | Fail : New receipt control  REC1 not created successfully</Verification4>
+</A073_Receipt_ControlTest>
+</TestCase>
+</SeleniumTestReport>

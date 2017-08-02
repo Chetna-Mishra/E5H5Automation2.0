@@ -115,7 +115,7 @@ public class A111_Security_GroupsTest extends BaseTest{
 			currencyPage.clickOnUpdate();		
 		}
 		
-		currencyPage.clickOnCancel();
+		currencyPage.clickOnCancel1();
 		
 		if(currencyPage.verifyValues(elements.get(0))){			
 			testcases.add(getCurreentDate()+" | Pass : Security group "+elements.get(0)+ " displayed in the list");

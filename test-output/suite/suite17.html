@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>suite17</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 06 23:15:35 IST 2017</td>
+<td>Started on:</td><td>Wed Jul 12 18:26:06 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>904 seconds (904215 ms)</td>
+<tr><td>Total time:</td><td>834 seconds (834509 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,144 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest<br>Parameters: [DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = GAA], DataUnit [apCompanyControl = L3], DataUnit [apCompanyControl = S1], DataUnit [apCompanyControl = 00], DataUnit [apCompanyControl = 2], DataUnit [apCompanyControl = B], DataUnit [apCompanyControl = Cost Centre], DataUnit [apCompanyControl = Prorata]]</td>
+<td><div><pre>java.lang.AssertionError: New purchasing company  IM not  updated expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at com.adv.qa.selenium.framework.Assert.assertTrue(Assert.java:43)
+	at com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest.verify(A089_Amend_AP_Company_Controls_For_AuthorisationTest.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1548010882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1548010882'><pre>java.lang.AssertionError: New purchasing company  IM not  updated expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at com.adv.qa.selenium.framework.Assert.assertTrue(Assert.java:43)
+	at com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest.verify(A089_Amend_AP_Company_Controls_For_AuthorisationTest.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>137</td>
+<td>com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest@667a738</td></tr>
+<tr>
+<td title='com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest<br>Parameters: [DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = GOI], DataUnit [authorisationHQ = PM], DataUnit [authorisationHQ = HQ], DataUnit [authorisationHQ = 3], DataUnit [authorisationHQ = QUERY], DataUnit [authorisationHQ = MANAGER], DataUnit [authorisationHQ = ADMIN], DataUnit [authorisationWest = PM], DataUnit [authorisationWest = WEST], DataUnit [authorisationWest = 2], DataUnit [authorisationWest = MANAGER], DataUnit [authorisationWest = ADMIN], DataUnit [authorisationSouth = PM], DataUnit [authorisationSouth = SOUTH], DataUnit [authorisationSouth = 2], DataUnit [authorisationSouth = MANAGER], DataUnit [authorisationSouth = ADMIN], DataUnit [authorisationNorth = PM], DataUnit [authorisationNorth = NORTH], DataUnit [authorisationNorth = 2], DataUnit [authorisationNorth = MANAGER], DataUnit [authorisationNorth = ADMIN], DataUnit [authorisationEast = PM], DataUnit [authorisationEast = EAST], DataUnit [authorisationEast = 2], DataUnit [authorisationEast = MANAGER], DataUnit [authorisationEast = ADMIN]]</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //input[starts-with(@name,&apos;AUTH-GRP_&apos;)] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.28 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:37823/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: e58a1b97-a55d-4b10-afe6-64c0943b13e5
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-GRP_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterGLResponsibilityAuthForAP(CurrencyPage.java:9874)
+	at com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.createAuthorisationByGLResponsibility(A086_Authorisation_By_GL_ResponsibilityTest.java:81)
+	at com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.verify(A086_Authorisation_By_GL_ResponsibilityTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1227264471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1227264471'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //input[starts-with(@name,&apos;AUTH-GRP_&apos;)] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.28 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:37823/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: e58a1b97-a55d-4b10-afe6-64c0943b13e5
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-GRP_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterGLResponsibilityAuthForAP(CurrencyPage.java:9874)
+	at com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.createAuthorisationByGLResponsibility(A086_Authorisation_By_GL_ResponsibilityTest.java:81)
+	at com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.verify(A086_Authorisation_By_GL_ResponsibilityTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>105</td>
+<td>com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest@36f0f1be</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,25 +213,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.adv.qa.selenium.tests.currency.A028_Default_Structure_ControlsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A028_Default_Structure_ControlsTest<br>Parameters: [DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [code = ECC], DataUnit [controlList = 00], DataUnit [controlList = 2], DataUnit [controlList = SUSP], DataUnit [controlList =  Mandatory ], DataUnit [controlList = Immediate], DataUnit [controlList = LAY1], DataUnit [controlList = LAY1], DataUnit [controlList = 2]]</td>
+<td title='com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest<br>Parameters: [DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = GOG], DataUnit [currencyCode = DBG], DataUnit [apLev1 = PM], DataUnit [apLev1 = LEV1], DataUnit [apLev1 = 1], DataUnit [apLev1 = ADMIN], DataUnit [apLev2 = PM], DataUnit [apLev2 = LEV2], DataUnit [apLev2 = 1], DataUnit [apLev2 = ADMIN], DataUnit [apLev3 = PM], DataUnit [apLev3 = LEV3], DataUnit [apLev3 = 2], DataUnit [apLev3 = ADMIN], DataUnit [apLev3 = MANAGER], DataUnit [apLev4 = PM], DataUnit [apLev4 = LEV4], DataUnit [apLev4 = 2], DataUnit [apLev4 = MANAGER], DataUnit [apLev4 = IM], DataUnit [pmLev1 = PM], DataUnit [pmLev1 = LEV1], DataUnit [pmLev1 = 1], DataUnit [pmLev1 = EMPLOYEE], DataUnit [pmLev2 = PM], DataUnit [pmLev2 = LEV2], DataUnit [pmLev2 = 1], DataUnit [pmLev2 = ADMIN], DataUnit [pmLev3 = PM], DataUnit [pmLev3 = LEV3], DataUnit [pmLev3 = 2], DataUnit [pmLev3 = ADMIN], DataUnit [pmLev3 = MANAGER], DataUnit [pmLev4 = PM], DataUnit [pmLev4 = LEV4], DataUnit [pmLev4 = 2], DataUnit [pmLev4 = MANAGER], DataUnit [pmLev4 = QUERY]]</td>
 <td></td>
-<td>145</td>
-<td>com.adv.qa.selenium.tests.currency.A028_Default_Structure_ControlsTest@2f177a4b</td></tr>
-<tr>
-<td title='com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest<br>Parameters: [DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [code = ECE], DataUnit [values = 00], DataUnit [structureForHQ = 00], DataUnit [structureForHQ = HQ], DataUnit [structureForHQ = Head Quarters], DataUnit [structureForHQ = ], DataUnit [structureForNorth = 00], DataUnit [structureForNorth = NORTH], DataUnit [structureForNorth = Northern Division], DataUnit [structureForNorth = HQ], DataUnit [structureForSouth = 00], DataUnit [structureForSouth = SOUTH], DataUnit [structureForSouth = Southern Division], DataUnit [structureForSouth = HQ], DataUnit [structureForEast = 00], DataUnit [structureForEast = EAST], DataUnit [structureForEast = Eastern Division], DataUnit [structureForEast = HQ], DataUnit [structureForWest = 00], DataUnit [structureForWest = WEST], DataUnit [structureForWest = Western Division], DataUnit [structureForWest = HQ], DataUnit [structureForSusp = 00], DataUnit [structureForSusp = SUSP], DataUnit [structureForSusp = Suspense], DataUnit [structureForSusp = WEST], DataUnit [pathKeyList = 00], DataUnit [pathKeyList = 2], DataUnit [pathKeyList = DUM], DataUnit [pathKeyList = Dummy Costcentre for ICA BTZ], DataUnit [pathKeyList = WEST]]</td>
-<td></td>
-<td>375</td>
-<td>com.adv.qa.selenium.tests.currency.A029_Default_Structure_ElementsTest@4278a03f</td></tr>
-<tr>
-<td title='com.adv.qa.selenium.tests.currency.A030_Security_ElementsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A030_Security_ElementsTest<br>Parameters: [DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [code = ENI], DataUnit [code = AFF], DataUnit [securityList = STD], DataUnit [securityList = 00], DataUnit [securityList = HQ], DataUnit [securityList = STD], DataUnit [securityList = Access to all E5 application function]]</td>
-<td></td>
-<td>172</td>
-<td>com.adv.qa.selenium.tests.currency.A030_Security_ElementsTest@147ed70f</td></tr>
-<tr>
-<td title='com.adv.qa.selenium.tests.currency.A031_Company_ControlsTest.verify()'><b>verify</b><br>Test class: com.adv.qa.selenium.tests.currency.A031_Company_ControlsTest<br>Parameters: [DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [code = EAA], DataUnit [companyControl = LAY1], DataUnit [companyControl = LAY1], DataUnit [companyControl = 00], DataUnit [companyControl = B], DataUnit [companyControl = TRAN], DataUnit [companyControl = REVV], DataUnit [companyControl = Layout 1], DataUnit [companyControl = Layout 1], DataUnit [companyControl = ICA Structure], DataUnit [companyControl = Transfer], DataUnit [companyControl = Reversal]]</td>
-<td></td>
-<td>152</td>
-<td>com.adv.qa.selenium.tests.currency.A031_Company_ControlsTest@61dd025</td></tr>
+<td>539</td>
+<td>com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest@57d5872c</td></tr>
 </table><p>
 </body>
 </html>

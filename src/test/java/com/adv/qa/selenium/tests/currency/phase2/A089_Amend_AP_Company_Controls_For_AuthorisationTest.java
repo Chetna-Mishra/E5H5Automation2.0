@@ -60,6 +60,7 @@ public class A089_Amend_AP_Company_Controls_For_AuthorisationTest extends BaseTe
 		
 		 if(currencyPage.isToolTipDisplayed()){
 			   currencyPage.clickOnUpdtWarnings();
+			   currencyPage.clickOnUpdate();
 		 }
 		 else{
 		   currencyPage.clickOnUpdate();

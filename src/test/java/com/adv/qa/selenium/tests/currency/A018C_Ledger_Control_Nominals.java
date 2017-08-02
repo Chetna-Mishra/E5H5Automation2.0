@@ -86,29 +86,23 @@ public class A018C_Ledger_Control_Nominals extends BaseTest{
 
 	}
 	
-	private void createNominal(List<String> nominal,DataRow dataRow,CurrencyPage currencyPage) throws InterruptedException{
-		String message = "The previously-requested action has been performed";
+private void createNominal(List<String> nominal,DataRow dataRow,CurrencyPage currencyPage) throws InterruptedException
+	
+	{
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Create new nominal control*/
 		boolean update = currencyPage.enterNominalControl(nominal);
-		if(update == true){
-			currencyPage.clickOnUpdate();	
-			
-		}
 		
-		else {
-			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " Already Created");
+			if(update == true){
+				
+				currencyPage.clickOnUpdate();
+		
+				Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New ledger control "+nominal.get(0), "created successfully");
 		}
-//			if(currencyPage.getToolContentText().contains(message)){
-//				testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " displayed in the list");
-//			}
-//			else{
-//				testcases.add(getCurreentDate()+" | Fail : New ledger control "+nominal.get(0)+ " not displayed in the list");
-//			}
-//		}
-//		else{
-//			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " displayed in the list");
-//		}
+		else{
+			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " already created");
+		}
 	}
 	
 	@AfterClass (alwaysRun = true)

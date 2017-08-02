@@ -64,6 +64,9 @@ public class A012_CalendarsTest extends BaseTest{
 	}
 	
 	private void createcalendar(CurrencyPage currencyPage,DataRow dataRow,List<String> calendarActivity) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Verify calendar activity present in the list*/
 		currencyPage.searchValue(calendarActivity, 2, 0);
 
@@ -78,25 +81,36 @@ public class A012_CalendarsTest extends BaseTest{
 			currencyPage.createCalendar(calendarActivity,1);
 			
 			currencyPage.clickOnUpdate();
-					
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage),"New Calender "+calendarActivity.get(0)," Created");
+			
 			/*Exit from the calendar page*/
 			currencyPage.clickOnCancel();
+			
+			Assert.assertTrue(testcases,currencyPage.verifyValues(calendarActivity.get(0)),"New Calender "+calendarActivity.get(0)," Created and displayed in list");
+		
+			
+		}
+			
+	}
 					
 			/*Verify new calendar in the calendar list*/
-			if(currencyPage.verifyValues(calendarActivity.get(0)))
-			
-			{
-				testcases.add(getCurreentDate()+" | Pass : New calendar activity "+calendarActivity.get(0)+ " displayed in the list");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New calendar activity "+calendarActivity.get(0)+ " not displayed in the list");
-			}
-		}
-		
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New calendar activity "+calendarActivity.get(0)+ " displayed in the list");
-		}
-	}
+//			if(currencyPage.verifyValues(calendarActivity.get(0)))
+//			
+//			{
+//				
+//				
+//				testcases.add(getCurreentDate()+" | Pass : New calendar activity "+calendarActivity.get(0)+ " created");
+//			}
+//			else{
+//				testcases.add(getCurreentDate()+" | Fail : New calendar activity "+calendarActivity.get(0)+ " not created");
+//			}
+//		}
+//		
+//		else{
+//			testcases.add(getCurreentDate()+" | Pass : New calendar activity "+calendarActivity.get(0)+ " already created");	
+//			}
+//	}
 
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

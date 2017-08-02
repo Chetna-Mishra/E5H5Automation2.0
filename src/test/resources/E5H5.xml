@@ -5,8 +5,8 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
         <code>XDJ</code>
-	<tableValue1>TPB%</tableValue1>
-	<tableValue2>TPB%</tableValue2>
+	<tableValue1>TPBSUPP</tableValue1>
+	<tableValue2>TPBADDR</tableValue2>
 		
 	<entityValue1>TPBSUPP</entityValue1>
 	<entityValue1>1</entityValue1>
@@ -80,7 +80,10 @@
 		<frfCurrency>Participating</frfCurrency>
 		<frfCurrency>6.63186</frfCurrency>
 		<frfCurrency>01 Jan 1998</frfCurrency>
-		<frfCurrency>Hundredth</frfCurrency>						
+		<frfCurrency>Hundredth</frfCurrency>
+		
+		
+								
     </Row>
     
    		 <Row id="A003">	
@@ -325,6 +328,7 @@
 	    <userName>SYSTEM</userName>
         <passWord>E5</passWord>
         <code>AOJ</code>   
+        
         <value>%</value>
             
 		<profileDetails>CMS110</profileDetails>
@@ -1720,7 +1724,7 @@
     </Row>  
     
     <Row id="A067">
-	    <userName>SYSTEM</userName>
+	    <userName>ADMIN</userName>
         <passWord>E5</passWord>
         <currencyCode>DAG</currencyCode>
    		

@@ -47,6 +47,7 @@ public class A056_AP_Ledger_ControlsTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - AP Company Controls List","Currency search page","displayed");
 		
@@ -54,12 +55,26 @@ public class A056_AP_Ledger_ControlsTest extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 	
-		
 		/*Create batch type code*/
-		currencyPage.enterAccountPayableCompanyControl(companyId,companyControl);	
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		boolean update=currencyPage.enterAccountPayableCompanyControl(companyId,companyControl);	
 			
+		if (update==true)
+		{
+		
 	    currencyPage.clickOnUpdate();
 	    
+	    Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New account payable control "+companyId, "created successfully");
+	    
+		}
+	    
+		else{
+			
+			testcases.add(getCurreentDate()+" | Pass : New account payable control "+companyId+" already created");
+		}
+		
+		
 	    currencyPage.clickOnCancel();
 	    
 		/*Verify new batch type in the list*/

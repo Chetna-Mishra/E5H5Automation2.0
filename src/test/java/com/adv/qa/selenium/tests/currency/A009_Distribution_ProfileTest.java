@@ -17,8 +17,9 @@ import com.adv.qa.selenium.helpers.DataRow;
  * Modified By 			: 	Chetna, Dt: 23-Jan-2017
  * Test Reference No	: 	A009 Distribution Profile
  * Purpose              :   Set Up Distribution Profile
- * Date					:   15-04-2014
- * ACCESS               :   AOJ
+ * Date					:   15-04-2014 
+ * ACCESS               :   AOJ.0
+ * .
  */
 
 public class A009_Distribution_ProfileTest extends BaseTest{
@@ -60,40 +61,67 @@ public class A009_Distribution_ProfileTest extends BaseTest{
 
 		createDistributionProfile(currencyPage,profileDetails);
 		createDistributionProfile(currencyPage,profileDetails1);	
-		
-		/*Exit from the profile page*/
-		currencyPage.clickOnCancel();
+			
 
-		verifyValues(currencyPage,profileDetails);
-		verifyValues(currencyPage,profileDetails1);
-				
+		/* Exit from the Distribution Profile edit page */
+		currencyPage.clickOnCancel();
+		
 		/*Logout from the application*/
 		currencyPage.logOut(2);
 	}
 	
-	private void createDistributionProfile(CurrencyPage currencyPage,List<String> profileDetails){
-		/*Enter profile details*/
-		boolean update = currencyPage.enterDistributionProfileDetails(profileDetails);
+
 	
-		if(update == true){
-			currencyPage.clickOnUpdate();				
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : Distribution profile "+profileDetails.get(0)+ " displayed in the list");
-		}
-	}
-	
-	private void verifyValues(CurrencyPage currencyPage,List<String> profileDetails){
-		currencyPage.searchValue(profileDetails, 1, 0);
+	private void createDistributionProfile(CurrencyPage currencyPage, List<String> profileDetails) {
+
 		
-		/*Verify new profile in the profile list*/
-		if(currencyPage.verifyValues(profileDetails.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : Distribution profile "+profileDetails.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Distribution profile "+profileDetails.get(0)+ " not displayed in the list");
+			String SuccMessage = "The previously-requested action has been performed";
+
+			currencyPage.clickOnInsert();
+
+			/* Enter profile details */
+			boolean update = currencyPage.enterDistributionProfileDetails(profileDetails);
+
+			if (update == true) {
+				currencyPage.clickOnUpdate();
+				
+				Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New Distribution profile "+profileDetails.get(0),"Created successfully");
+
+					}
+		else {
+			
+			testcases.add(getCurreentDate() + " | Pass : Distribution profile " + profileDetails.get(0)+ " already Created");
+			
 		}
 	}
+	
+	
+	
+	
+	
+//	private void createDistributionProfile(CurrencyPage currencyPage,List<String> profileDetails){
+//		/*Enter profile details*/
+//		boolean update = currencyPage.enterDistributionProfileDetails(profileDetails);
+//	
+//		if(update == true){
+//			currencyPage.clickOnUpdate();				
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Pass : Distribution profile "+profileDetails.get(0)+ " displayed in the list");
+//		}
+//	}
+//	
+//	private void verifyValues(CurrencyPage currencyPage,List<String> profileDetails){
+//		currencyPage.searchValue(profileDetails, 1, 0);
+//		
+//		/*Verify new profile in the profile list*/
+//		if(currencyPage.verifyValues(profileDetails.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : Distribution profile "+profileDetails.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : Distribution profile "+profileDetails.get(0)+ " not displayed in the list");
+//		}
+//	}
 
 
 	@AfterClass (alwaysRun = true)

@@ -61,9 +61,11 @@ public class A072_Common_Purchasing_UsersTest extends BaseTest{
 	}
 		
 	private void createCPUser(CurrencyPage currencyPage,String code,List<String> currencyCode,List<String> document) throws InterruptedException{
-//		String message = "The previously-requested action has been performed";
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		currencyPage.isCommandDisplayed();
+		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
@@ -73,10 +75,24 @@ public class A072_Common_Purchasing_UsersTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - CP User - Edit","Currency search page","displayed");
 				
 		/*Create batch type code*/
-		currencyPage.enterCPUserDetails(document);	
 		
-		currencyPage.clickOnUpdate();	
+		
+		boolean update= currencyPage.enterCPUserDetails(document);	
+		
+		if(update==true){
 			
+		currencyPage.clickOnUpdate();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "CP User "+document.get(0), "created successfully");
+		
+			}
+		else {
+			testcases.add(getCurreentDate()+" | Pass : CP User "+document.get(0)+ " already created");
+			
+			currencyPage.clickOnCancel();
+			
+		}
+			
+	}
 //		if(currencyPage.getToolContentText().contains(message)){
 //			testcases.add(getCurreentDate()+" | Pass : CP User "+document.get(0)+ " displayed in the list");
 //		}
@@ -89,7 +105,6 @@ public class A072_Common_Purchasing_UsersTest extends BaseTest{
 //		}
 		
 //		currencyPage.isCommandDisplayed();
-	}
 
 	
 	@AfterClass (alwaysRun = true)

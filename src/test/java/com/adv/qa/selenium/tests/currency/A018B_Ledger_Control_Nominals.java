@@ -35,10 +35,8 @@ public class A018B_Ledger_Control_Nominals extends BaseTest{
 
 		List<String> nominal2160 = dataRow.findNamesReturnValues("nominal2160");		
 		List<String> nominal1660 = dataRow.findNamesReturnValues("nominal1660");
-		List<String> nominal5100 = dataRow.findNamesReturnValues("nominal5100");
-		List<String> nominal2051 = dataRow.findNamesReturnValues("nominal2051");
 		
-		List<String> nominal6200 = dataRow.findNamesReturnValues("nominal6200");
+		List<String> nominal2051 = dataRow.findNamesReturnValues("nominal2051");
 		
 		List<String> nominal5900 = dataRow.findNamesReturnValues("nominal5900");
 		List<String> nominal7000 = dataRow.findNamesReturnValues("nominal7000");		
@@ -67,12 +65,9 @@ public class A018B_Ledger_Control_Nominals extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 
-//		createNominal(nominal2160,dataRow,currencyPage);
-//		createNominal(nominal1660,dataRow,currencyPage);
-//		createNominal(nominal5100,dataRow,currencyPage);
-//		createNominal(nominal2051,dataRow,currencyPage);
-//		createNominal(nominal6200,dataRow,currencyPage);
-		
+		createNominal(nominal2160,dataRow,currencyPage);
+		createNominal(nominal1660,dataRow,currencyPage);
+		createNominal(nominal2051,dataRow,currencyPage);
 		createNominal(nominal5900,dataRow,currencyPage);
 		createNominal(nominal7000,dataRow,currencyPage);
 		createNominal(nominal7001,dataRow,currencyPage);
@@ -88,28 +83,23 @@ public class A018B_Ledger_Control_Nominals extends BaseTest{
 
 	}
 	
-	private void createNominal(List<String> nominal,DataRow dataRow,CurrencyPage currencyPage) throws InterruptedException{
-		String message = "The previously-requested action has been performed";
+private void createNominal(List<String> nominal,DataRow dataRow,CurrencyPage currencyPage) throws InterruptedException
+	
+	{
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Create new nominal control*/
 		boolean update = currencyPage.enterNominalControl(nominal);
-		if(update == true){
-			currencyPage.clickOnUpdate();	
+		
+			if(update == true){
+				
+				currencyPage.clickOnUpdate();
+		
+				Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New ledger control "+nominal.get(0), "created successfully");
 		}
-		else {
-			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " Already Created");
+		else{
+			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " already created");
 		}
-			
-//			if(currencyPage.getToolContentText().contains(message)){
-//				testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " displayed in the list");
-//			}
-//			else{
-//				testcases.add(getCurreentDate()+" | Fail : New ledger control "+nominal.get(0)+ " not displayed in the list");
-//			}
-//		}
-//		else{
-//			testcases.add(getCurreentDate()+" | Pass : New ledger control "+nominal.get(0)+ " displayed in the list");
-//		}
 	}
 	
 	@AfterClass (alwaysRun = true)
