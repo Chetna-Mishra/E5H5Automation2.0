@@ -112,7 +112,7 @@
   </test>
   
   
-    <test name="suite12" preserve-order="true" time-out="8000000" enabled="false">
+    <test name="suite13" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>
     	    	<class name="com.adv.qa.selenium.tests.currency.phase3.A106_Inventory_Store_ControlTest"/>
        		   <class name="com.adv.qa.selenium.tests.currency.phase3.A107_Stores_HierarchyTest"/> 
