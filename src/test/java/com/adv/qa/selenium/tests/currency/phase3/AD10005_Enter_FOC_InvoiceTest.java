@@ -18,6 +18,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD10005 Enter FOC Invoice
  * Purpose              :   Enter FOC Invoice 
+ * Modified Date		:   Modified by Chetna/Dt: 06-Sep-2017  
  * ACCESS               :   GBB
  */
 
@@ -33,11 +34,13 @@ public class AD10005_Enter_FOC_InvoiceTest extends BaseTest{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
 		loginPage.logIn(userName, passWord);
 		
 		/*Navigate to currency page Home page e5 application*/
@@ -50,13 +53,15 @@ public class AD10005_Enter_FOC_InvoiceTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - AP Company Controls List","Currency search page","displayed");
 
-		currencyPage.search(companyId, 1, 0);
+		currencyPage.searchValue(companyId, 1, 0);
 		
 		currencyPage.clickOnAmend();
 		
 		currencyPage.amendAPCompanyControl(3,"Allowed");
 		
 		currencyPage.clickOnUpdate();
+
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Supplier "+companyId, "updated successfully");
 		
 		currencyPage.clickOnCancel();
 		
@@ -68,7 +73,6 @@ public class AD10005_Enter_FOC_InvoiceTest extends BaseTest{
 		
 		currencyPage.logOut(1);
 	}
-
 	
 	
 	private void createInvoice(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
@@ -78,7 +82,7 @@ public class AD10005_Enter_FOC_InvoiceTest extends BaseTest{
 		List<String> transactionDetails = dataRow.findNamesReturnValues("transactionDetails");
 		List<String> lineDetails = dataRow.findNamesReturnValues("lineDetails");
 		List<String> splitLineDetails = dataRow.findNamesReturnValues("splitLineDetails");		
-		String message = "Batch Number has been created with sysref";
+		String message = "Batch number";// Batch number 6 has been created
 		
 		currencyPage.isCommandDisplayed();
 		
@@ -92,11 +96,7 @@ public class AD10005_Enter_FOC_InvoiceTest extends BaseTest{
 		
 		Assert.assertTrue(testcases,currencyPage.getTableHeader().contains("Transaction Header"),"Transaction page","displayed");
 		
-		Calendar currentMonth = Calendar.getInstance();
-		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-		String currDate = dateFormat1.format(currentMonth.getTime());
-			
-		currencyPage.enterTransactionDetails(transactionDetails,currDate,"null");
+		currencyPage.enterTransactionDetails(transactionDetails,"null","null");
 		
 		currencyPage.clickOnAcceptWarn();
 		
@@ -104,30 +104,23 @@ public class AD10005_Enter_FOC_InvoiceTest extends BaseTest{
 		
 		currencyPage.enterTaxableDetails(lineDetails, 2);
 		
-		currencyPage.clickOnGoSplitAnalysis();
+		currencyPage.clickOnSA();
 		
 		currencyPage.enterTranSplitAnalysis(splitLineDetails);
 		
 		currencyPage.clickOnAcceptWarnings();
 						
-		currencyPage.clickOnReturnButton();
+		currencyPage.clickOnReturnButtonTop();
 		
 		currencyPage.clickOnUpdate();
 					
-		String referenceMessage = currencyPage.getToolContentText();
-		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Invoice created successfully "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Invoice not created");
-		}		
+		String referenceMessage = currencyPage.getErrorContentText();
+		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), "Invoice "+referenceMessage," created successfully");	
 		
 		currencyPage.clickOnReturnButton();
 
 	}
-	
-	
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

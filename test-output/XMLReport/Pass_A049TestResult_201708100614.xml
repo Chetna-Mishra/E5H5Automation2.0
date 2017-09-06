@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A049_Common_Purchasing_Company_ControlsTest>
+<Verification1>10/08/2017 06:14:36 | Pass : Login page displayed</Verification1>
+<Verification2>10/08/2017 06:14:45 | Pass : Command line displayed</Verification2>
+<Verification3>10/08/2017 06:15:02 | Pass : Currency search page displayed</Verification3>
+<Verification4>10/08/2017 06:17:27 | Pass : Purchasing Company Controls 1 created successfully</Verification4>
+<Verification5>10/08/2017 06:17:44 | Pass : Currency search page displayed</Verification5>
+<Verification6>10/08/2017 06:18:05 | Pass : New purchasing company  IM displayed in the list</Verification6>
+</A049_Common_Purchasing_Company_ControlsTest>
+</TestCase>
+</SeleniumTestReport>

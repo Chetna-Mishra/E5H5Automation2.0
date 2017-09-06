@@ -57,22 +57,18 @@ public class A102_ICA_Default_Trading_RelationshipsTest extends BaseTest{
 		
 		currencyPage.clickOnAmend();
 		
-		currencyPage.amendICATradingRelationship(controlAccounts);
+		boolean update = currencyPage.amendICATradingRelationship(controlAccounts);
 		
-		 if(currencyPage.isToolTipDisplayed()){
-			   currencyPage.clickOnUpdateWarnings();
-			  
-		 }
-		 else{
-		   currencyPage.clickOnUpdate();
-		 }
+		Assert.assertTrue(testcases,update,"ICA default trading relatioship "+controlAccounts.get(0)," Updated Successfully");	
 		
-		if(currencyPage.verifyValues(controlAccounts.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : ICA default trading relatioship "+controlAccounts.get(0)+ "  updated");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : ICA default trading relatioship "+controlAccounts.get(0)+ " not updated");
-		}
+		
+		
+//		if(currencyPage.verifyValues(controlAccounts.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : ICA default trading relatioship "+controlAccounts.get(0)+ "  updated");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : ICA default trading relatioship "+controlAccounts.get(0)+ " not updated");
+//		}
 
 		currencyPage.logOut(2);
 	}

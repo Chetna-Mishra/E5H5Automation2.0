@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02009_Goods_ReceivingTest>
+<Verification1>17/08/2017 04:57:53 | Pass : Login page displayed</Verification1>
+<Verification2>17/08/2017 04:58:02 | Pass : Command line displayed</Verification2>
+<Verification3>17/08/2017 04:58:58 | Pass : Login page displayed</Verification3>
+<Verification4>17/08/2017 04:59:36 | Pass : Currency search page displayed</Verification4>
+<Verification5>17/08/2017 05:00:36 | Pass : Total stock balance   as expected</Verification5>
+<Verification6>17/08/2017 05:00:49 | Pass : Store item values   as expected</Verification6>
+<Verification7>17/08/2017 05:01:13 | Pass : Store item valuation is   as expected</Verification7>
+</AD02009_Goods_ReceivingTest>
+</TestCase>
+</SeleniumTestReport>

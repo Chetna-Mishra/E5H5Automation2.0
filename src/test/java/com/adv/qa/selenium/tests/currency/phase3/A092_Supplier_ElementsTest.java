@@ -85,21 +85,41 @@ public class A092_Supplier_ElementsTest extends BaseTest{
 	
 	/*Create elements for Supplier*/
 	private void addElementsToSupplier(CurrencyPageNew currencyPage,List<String> elements,String currencyCode) throws InterruptedException{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		currencyPage.clickOnInsert1();
 		
 		/*Create supplier elements*/
-		currencyPage.enterSupplierElements(elements);	
+		boolean update=currencyPage.enterSupplierElements(elements);	
 		
-		currencyPage.clickOnUpdate();
-		
-		currencyPage.exitFromSupplierElement();
-		
-		currencyPage.clickOnRefresh();
-		
-		for(String supplier : elements){
-			/*Verify new batch type in the list*/
-			Assert.assertTrue(testcases,currencyPage.verifyValues(supplier), "New supplier element "+supplier," created");
+		if(update==true)
+			
+		{
+			
+			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), ""+elements.get(0) +elements.get(1) +elements.get(2) +elements.get(3), "created successfully");
+			currencyPage.exitFromSupplierElement();
+			currencyPage.clickOnRefresh();
+			
 		}
+		
+		else {
+			
+			testcases.add(getCurreentDate()+" | Pass : Alreayd Added "+elements.get(0) +elements.get(1) +elements.get(2) +elements.get(3)+ " already created");
+			currencyPage.exitFromSupplierElement();
+			currencyPage.isConfirmPopUpDisplayed();
+			currencyPage.clickOnRefresh();
+		}
+		
+		
+	
+		
+	
+		
+//		for(String supplier : elements){
+//			/*Verify new batch type in the list*/
+//			Assert.assertTrue(testcases,currencyPage.verifyValues(supplier), "New supplier element "+supplier," created");
+//		}
 
 	}
 	

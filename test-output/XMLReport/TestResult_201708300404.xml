@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD09006_Item_ClassificationTest>
+<Verification1>30/08/2017 04:04:42 | Pass : Login page displayed</Verification1>
+<Verification2>30/08/2017 04:04:51 | Pass : Command line displayed</Verification2>
+<Verification3>30/08/2017 04:05:09 | Pass : Currency search page displayed</Verification3>
+<Verification4>30/08/2017 04:06:12 | Pass : Classification DVD-909  amended successfully</Verification4>
+<Verification5>30/08/2017 04:07:20 | Pass : Classification DVD-SRVC  amended successfully</Verification5>
+</AD09006_Item_ClassificationTest>
+</TestCase>
+</SeleniumTestReport>

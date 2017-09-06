@@ -1,0 +1,1719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">suite1</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">909.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2">suite2</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,544.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3">suite3</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">756.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t4">suite4</a></td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,089.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t5">suite5</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">641.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t6">suite6</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,064.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t7">suite7</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">642.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t8">suite8</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">570.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t9">suite9</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">585.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t10">suite10</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">265.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t11">suite11</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">142.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t12">suite12</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">141.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t13">suite13</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">265.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t14">suite14</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">496.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t15">suite15</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">440.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t16">suite16</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1,066.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t17">suite17</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">520.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t18">suite18</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">131.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">22</td><td class="numi">22</td><td class="numi">0</td><td class="numi_attn">31</td><td class="numi">11,273.6 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">suite1 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A043_Insert_Tax_CodesTest</td><td><a href="#m1"><b>verify</b>  </a></td><td class="numi">1</td><td>1502284161830</td><td class="numi">637188</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A044_TAX_Rates_by_Tax_CodesTest</td><td><a href="#m2"><b>verify</b>  </a></td><td class="numi">1</td><td>1502284821931</td><td class="numi">225470</td></tr>
+<tr id="t2"><th colspan="5">suite2 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A045_BACS_CalendarTest</td><td><a href="#m3"><b>verify</b>  </a></td><td class="numi">1</td><td>1502285070319</td><td class="numi">390918</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A046_Bank_Account_Names_for_PurchasingTest</td><td><a href="#m4"><b>verify</b>  </a></td><td class="numi">1</td><td>1502285493879</td><td class="numi">222682</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A047_Accounts_Payable_Batch_TypesTest</td><td><a href="#m5"><b>verify</b>  </a></td><td class="numi">1</td><td>1502285740358</td><td class="numi">464661</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A048_UOMTest</td><td><a href="#m6"><b>verify</b>  </a></td><td class="numi">1</td><td>1502286228606</td><td class="numi">363654</td></tr>
+<tr id="t3"><th colspan="5">suite3 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A049_Common_Purchasing_Company_ControlsTest</td><td><a href="#m7"><b>verify</b>  </a></td><td class="numi">1</td><td>1502286615208</td><td class="numi">32551</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A050_Accounts_Payable_Control_AccountsTest</td><td><a href="#m8"><b>verify</b>  </a></td><td class="numi">1</td><td>1502286670640</td><td class="numi">111699</td></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A051_Purchase_Ledger_Bank_CodesTest</td><td><a href="#m9"><b>verify</b>  </a></td><td class="numi">1</td><td>1502287239507</td><td class="numi">108957</td></tr>
+<tr><th colspan="5">suite3 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A051A_Purchase_Ledger_Bank_CodesTest</td><td><a href="#m10"><b>verify</b>  </a></td><td class="numi">1</td><td>1502286802945</td><td class="numi">412198</td></tr>
+<tr id="t4"><th colspan="5">suite4 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A052_Tax_AccountsTest</td><td><a href="#m11"><b>verify</b>  </a></td><td class="numi">1</td><td>1502287371953</td><td class="numi">138333</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A053_Category_CodeTest</td><td><a href="#m12"><b>verify</b>  </a></td><td class="numi">1</td><td>1502287530229</td><td class="numi">91854</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A054_Discount_TermsTest</td><td><a href="#m13"><b>verify</b>  </a></td><td class="numi">1</td><td>1502287647822</td><td class="numi">96007</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A055_Settlement_TermsTest</td><td><a href="#m14"><b>verify</b>  </a></td><td class="numi">1</td><td>1502287768190</td><td class="numi">163109</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A056A_System_Assigned_Batch_Numbers_In_AP</td><td><a href="#m15"><b>verify</b>  </a></td><td class="numi">1</td><td>1502287955129</td><td class="numi">482784</td></tr>
+<tr id="t5"><th colspan="5">suite5 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest</td><td><a href="#m16"><b>verify</b>  </a></td><td class="numi">1</td><td>1502288461164</td><td class="numi">156227</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A057_Legend_ControlsTest</td><td><a href="#m17"><b>verify</b>  </a></td><td class="numi">1</td><td>1502288640747</td><td class="numi">108981</td></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A059_Bank_Payment_MethodTest</td><td><a href="#m18"><b>verify</b>  </a></td><td class="numi">1</td><td>1502288970826</td><td class="numi">108896</td></tr>
+<tr><th colspan="5">suite5 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A058_Payment_MethodsTest</td><td><a href="#m19"><b>verify</b>  </a></td><td class="numi">1</td><td>1502288773251</td><td class="numi">173892</td></tr>
+<tr id="t6"><th colspan="5">suite6 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest</td><td><a href="#m20"><b>verify</b>  </a></td><td class="numi">1</td><td>1502289103386</td><td class="numi">108890</td></tr>
+<tr><th colspan="5">suite6 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest</td><td><a href="#m21"><b>verify</b>  </a></td><td class="numi">1</td><td>1502289235209</td><td class="numi">596501</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest</td><td><a href="#m22"><b>verify</b>  </a></td><td class="numi">1</td><td>1502289862408</td><td class="numi">281769</td></tr>
+<tr id="t7"><th colspan="5">suite7 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A064_PPV_Control_AccountTest</td><td><a href="#m23"><b>verify</b>  </a></td><td class="numi">1</td><td>1502290406406</td><td class="numi">111629</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A065_CP_Company_ControlsTest</td><td><a href="#m24"><b>verify</b>  </a></td><td class="numi">1</td><td>1502290541739</td><td class="numi">109835</td></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A066_Accrual_Control_CodeTest</td><td><a href="#m25"><b>verify</b>  </a></td><td class="numi">1</td><td>1502290675289</td><td class="numi">111526</td></tr>
+<tr><th colspan="5">suite7 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A063_Standard_TextTest</td><td><a href="#m26"><b>verify</b>  </a></td><td class="numi">1</td><td>1502290168477</td><td class="numi">213882</td></tr>
+<tr id="t8"><th colspan="5">suite8 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A067_Purchasing_Management_Company_ControlsTest</td><td><a href="#m27"><b>verify</b>  </a></td><td class="numi">1</td><td>1502290810047</td><td class="numi">139269</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A068_Inspection_CodesTest</td><td><a href="#m28"><b>verify</b>  </a></td><td class="numi">1</td><td>1502290972882</td><td class="numi">112962</td></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A069_Disposal_CodeTest</td><td><a href="#m29"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291109426</td><td class="numi">111602</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A070_Reason_CodesTest</td><td><a href="#m30"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291245298</td><td class="numi">111688</td></tr>
+<tr id="t9"><th colspan="5">suite9 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A071_Document_PrefixCodesTest</td><td><a href="#m31"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291380791</td><td class="numi">25365</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest</td><td><a href="#m32"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291429241</td><td class="numi">27979</td></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A073_Receipt_ControlTest</td><td><a href="#m33"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291481061</td><td class="numi">308717</td></tr>
+<tr><th colspan="5">suite9 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A074_Automatic_Banking_CodeTest</td><td><a href="#m34"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291813889</td><td class="numi">128673</td></tr>
+<tr id="t10"><th colspan="5">suite10 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest</td><td><a href="#m35"><b>verify</b>  </a></td><td class="numi">1</td><td>1502291966346</td><td class="numi">108995</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest</td><td><a href="#m36"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292099180</td><td class="numi">108906</td></tr>
+<tr id="t11"><th colspan="5">suite11 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest</td><td><a href="#m37"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292231140</td><td class="numi">25359</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest</td><td><a href="#m38"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292279912</td><td class="numi">25355</td></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest</td><td><a href="#m39"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292325102</td><td class="numi">25351</td></tr>
+<tr id="t12"><th colspan="5">suite12 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A077_CP_Company_ControlsTest</td><td><a href="#m40"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292374029</td><td class="numi">117709</td></tr>
+<tr id="t13"><th colspan="5">suite13 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A078_Authorisation_Control_Codes_For_APTest</td><td><a href="#m41"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292515784</td><td class="numi">108946</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A078A_Authorisation_Control_Codes_For_APTest</td><td><a href="#m42"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292648101</td><td class="numi">108951</td></tr>
+<tr id="t14"><th colspan="5">suite14 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A080_Authorisation_Control_Codes_For_PMTest</td><td><a href="#m43"><b>verify</b>  </a></td><td class="numi">1</td><td>1502293144238</td><td class="numi">108921</td></tr>
+<tr><th colspan="5">suite14 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A079_Authorisation_GroupsTest</td><td><a href="#m44"><b>verify</b>  </a></td><td class="numi">1</td><td>1502292781138</td><td class="numi">338551</td></tr>
+<tr id="t15"><th colspan="5">suite15 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest</td><td><a href="#m45"><b>verify</b>  </a></td><td class="numi">1</td><td>1502293277620</td><td class="numi">79646</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest</td><td><a href="#m46"><b>verify</b>  </a></td><td class="numi">1</td><td>1502293380070</td><td class="numi">79698</td></tr>
+<tr><th colspan="5">suite15 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A082_Authorisation_StructuresTest</td><td><a href="#m47"><b>verify</b>  </a></td><td class="numi">1</td><td>1502293483090</td><td class="numi">210203</td></tr>
+<tr id="t16"><th colspan="5">suite16 &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A083_Structure_AuthorisersAPTest</td><td><a href="#m48"><b>verify</b>  </a></td><td class="numi">1</td><td>1502293713884</td><td class="numi">302643</td></tr>
+<tr class="passedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A083A_Structure_AuthorisersPMTest</td><td><a href="#m49"><b>verify</b>  </a></td><td class="numi">1</td><td>1502294040100</td><td class="numi">304110</td></tr>
+<tr class="passedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A084_Authorisation_Value_Levels_DefinitionTest</td><td><a href="#m50"><b>verify</b>  </a></td><td class="numi">1</td><td>1502294367158</td><td class="numi">392335</td></tr>
+<tr id="t17"><th colspan="5">suite17 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest</td><td><a href="#m51"><b>verify</b>  </a></td><td class="numi">1</td><td>1502294783206</td><td class="numi">350486</td></tr>
+<tr class="failedeven"><td>com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest</td><td><a href="#m52"><b>verify</b>  </a></td><td class="numi">1</td><td>1502295158184</td><td class="numi">121738</td></tr>
+<tr id="t18"><th colspan="5">suite18 &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest</td><td><a href="#m53"><b>verify</b>  </a></td><td class="numi">1</td><td>1502295302706</td><td class="numi">108979</td></tr>
+</table>
+<h1>suite1</h1>
+<h2 id="m1">com.adv.qa.selenium.tests.currency.phase2.A043_Insert_Tax_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = RAI], DataUnit [currencyCode = RAH], DataUnit [currencyCode = RAJ], DataUnit [currencyCode = RAD], DataUnit [eType = E], DataUnit [eType = Exempt], DataUnit [eType = 0.00], DataUnit [eType = 0.00], DataUnit [eType = 1], DataUnit [sType = S], DataUnit [sType = Standard], DataUnit [sType = 1.00], DataUnit [sType = 1.00], DataUnit [sType = 0], DataUnit [vType = V], DataUnit [vType = VAT Variance], DataUnit [vType = 1.00], DataUnit [vType = 1.00], DataUnit [vType = 0], DataUnit [zType = Z], DataUnit [zType = Zero Rated], DataUnit [zType = 0.00], DataUnit [zType = 0.00], DataUnit [zType = 0], DataUnit [location = UK], DataUnit [location = United Kingdom, London], DataUnit [location = 1], DataUnit [location = Ditton Park, Riding Court Road,], DataUnit [location = Datchet, Slough, Berkshire, SL3 9LL], DataUnit [ukeTaxCode = UKE], DataUnit [ukeTaxCode = UK Exempt], DataUnit [ukeTaxCode = UK], DataUnit [ukeTaxCode = E], DataUnit [uksTaxCode = UKS], DataUnit [uksTaxCode = UK Standard], DataUnit [uksTaxCode = UK], DataUnit [uksTaxCode = S], DataUnit [ukvTaxCode = UKV], DataUnit [ukvTaxCode = UK VAT Variance], DataUnit [ukvTaxCode = UK], DataUnit [ukvTaxCode = V], DataUnit [ukzTaxCode = UKZ], DataUnit [ukzTaxCode = UK Zero Rated], DataUnit [ukzTaxCode = UK], DataUnit [ukzTaxCode = Z]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.adv.qa.selenium.tests.currency.phase2.A044_TAX_Rates_by_Tax_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = RAN], DataUnit [sType = UKS], DataUnit [sType = 01 Jan 2000], DataUnit [sType = UK], DataUnit [sType = S], DataUnit [sType = 17.50], DataUnit [zType = UKZ], DataUnit [zType = 01 Jan 2000], DataUnit [zType = UK], DataUnit [zType = Z], DataUnit [zType = 0.00], DataUnit [eType = UKE], DataUnit [eType = 01 Jan 2000], DataUnit [eType = UK], DataUnit [eType = E], DataUnit [eType = 0.00], DataUnit [vType = UKV], DataUnit [vType = 01 Jan 2000], DataUnit [vType = UK], DataUnit [vType = V], DataUnit [vType = 0.00]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite2</h1>
+<h2 id="m3">com.adv.qa.selenium.tests.currency.phase2.A045_BACS_CalendarTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = APA], DataUnit [calendarBACS = IMBACS], DataUnit [calendarBACS = BACS Calendar IM], DataUnit [calendarBACS = Friday], DataUnit [calendarBACS = 1996], DataUnit [calendarBACS = IMMON], DataUnit [calendarBACS = BACS], DataUnit [calendarBACS = 2016], DataUnit [calendarBACS = 2018], DataUnit [calendarOther = WORKING], DataUnit [calendarOther = Working Days Calendar], DataUnit [calendarOther = Friday], DataUnit [calendarOther = 1996], DataUnit [calendarOther = WORKING], DataUnit [calendarOther = Other], DataUnit [calendarOther = 2016], DataUnit [calendarOther = 2018]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.adv.qa.selenium.tests.currency.phase2.A047_Accounts_Payable_Batch_TypesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = AKL], DataUnit [currencyCode = AKK], DataUnit [company = 09], DataUnit [company = %P%], DataUnit [batchTypePDE1 = PDE1], DataUnit [batchTypePDE1 = AP Default Batch Type], DataUnit [batchTypePDE1 = IM], DataUnit [batchTypePDE1 = Immediate], DataUnit [batchTypePDE1 = 0], DataUnit [batchTypePDE1 = 1], DataUnit [batchTypePDE1 = 1], DataUnit [batchTypePDE1 = 1], DataUnit [batchTypePDE1 = NILL], DataUnit [batchTypePDE1 = Warning], DataUnit [batchTypePDE2 = PDE2], DataUnit [batchTypePDE2 = Logged Transactions], DataUnit [batchTypePDE2 = IM], DataUnit [batchTypePDE2 = Immediate], DataUnit [batchTypePDE2 = 0], DataUnit [batchTypePDE2 = 1], DataUnit [batchTypePDE2 = 1], DataUnit [batchTypePDE2 = 1], DataUnit [batchTypePDE2 = NILL], DataUnit [batchTypePDE2 = Warning], DataUnit [batchTypePDE3 = PDE3], DataUnit [batchTypePDE3 = Entered Transactions], DataUnit [batchTypePDE3 = IM], DataUnit [batchTypePDE3 = Immediate], DataUnit [batchTypePDE3 = 0], DataUnit [batchTypePDE3 = 1], DataUnit [batchTypePDE3 = 1], DataUnit [batchTypePDE3 = 1], DataUnit [batchTypePDE3 = NILL], DataUnit [batchTypePDE3 = Warning], DataUnit [batchTypePDE4 = PDE4], DataUnit [batchTypePDE4 = Accepted Transactions], DataUnit [batchTypePDE4 = IM], DataUnit [batchTypePDE4 = Immediate], DataUnit [batchTypePDE4 = 0], DataUnit [batchTypePDE4 = 1], DataUnit [batchTypePDE4 = 1], DataUnit [batchTypePDE4 = 1], DataUnit [batchTypePDE4 = NILL], DataUnit [batchTypePDE4 = Warning], DataUnit [batchTypePDE5 = PDE5], DataUnit [batchTypePDE5 = Cancelled Transactions], DataUnit [batchTypePDE5 = IM], DataUnit [batchTypePDE5 = Immediate], DataUnit [batchTypePDE5 = 0], DataUnit [batchTypePDE5 = 1], DataUnit [batchTypePDE5 = 1], DataUnit [batchTypePDE5 = 1], DataUnit [batchTypePDE5 = NILL], DataUnit [batchTypePDE5 = Warning], DataUnit [batchTypePDE6 = PDE6], DataUnit [batchTypePDE6 = Payments], DataUnit [batchTypePDE6 = IM], DataUnit [batchTypePDE6 = Immediate], DataUnit [batchTypePDE6 = 0], DataUnit [batchTypePDE6 = 1], DataUnit [batchTypePDE6 = 1], DataUnit [batchTypePDE6 = 1], DataUnit [batchTypePDE6 = NILL], DataUnit [batchTypePDE6 = Warning], DataUnit [batchTypePDE7 = PDE7], DataUnit [batchTypePDE7 = VAT Analysis], DataUnit [batchTypePDE7 = IM], DataUnit [batchTypePDE7 = Immediate], DataUnit [batchTypePDE7 = 0], DataUnit [batchTypePDE7 = 1], DataUnit [batchTypePDE7 = 1], DataUnit [batchTypePDE7 = 1], DataUnit [batchTypePDE7 = NILL], DataUnit [batchTypePDE7 = Warning]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.adv.qa.selenium.tests.currency.phase2.A046_Bank_Account_Names_for_PurchasingTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = AKY], DataUnit [bankName = UK], DataUnit [bankName1 = UK], DataUnit [bankName1 = 05-02-86], DataUnit [bankName1 = Yorkshire Bank], DataUnit [bankName1 = 118-120 York Road], DataUnit [bankName1 = Hartlepool], DataUnit [bankName1 = Cleveland], DataUnit [bankName1 = TS24 9PL], DataUnit [bankName2 = UK], DataUnit [bankName2 = 20-34-41], DataUnit [bankName2 = Barclays Bank Hartlepool], DataUnit [bankName2 = 110 York Road], DataUnit [bankName2 = Hartlepool], DataUnit [bankName2 = NILL], DataUnit [bankName2 = NILL], DataUnit [bankName3 = UK], DataUnit [bankName3 = 40-52-98], DataUnit [bankName3 = HSBC Hartlepool], DataUnit [bankName3 = 123 York Road], DataUnit [bankName3 = Hartlepool], DataUnit [bankName3 = NILL], DataUnit [bankName3 = NILL]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.adv.qa.selenium.tests.currency.phase2.A048_UOMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = AKO], DataUnit [currencyCode = AKM], DataUnit [uomCodeBox = BOX], DataUnit [uomCodeBox = Box of 10 items], DataUnit [uomCodeBox = 1], DataUnit [uomCodeEach = EACH], DataUnit [uomCodeEach = 1 Item], DataUnit [uomCodeEach = 1], DataUnit [uomCodeDays = DAYS], DataUnit [uomCodeDays = Days], DataUnit [uomCodeDays = 1], DataUnit [uomCodeYear = YEAR], DataUnit [uomCodeYear = Year], DataUnit [uomCodeYear = 1], DataUnit [uomBaseForEach = EACH], DataUnit [uomBaseForEach = BOX], DataUnit [uomBaseForEach = 10.00000], DataUnit [uomBaseForEach = 0.10000], DataUnit [uomBaseForDays = DAYS], DataUnit [uomBaseForDays = YEAR], DataUnit [uomBaseForDays = 0.00274], DataUnit [uomBaseForDays = 365.00000]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite3</h1>
+<h2 id="m7">com.adv.qa.selenium.tests.currency.phase2.A049_Common_Purchasing_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = PAB], DataUnit [currencyCode = PAA], DataUnit [purchasingCompany = IM], DataUnit [purchasingCompany = 1], DataUnit [purchasingCompany = DAYS], DataUnit [purchasingCompany = WORKING]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9908_23631}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: ebc9b376433950ad5147b238ecb43abd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:315)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:385)
+	at com.adv.qa.selenium.helpers.WaitHelper$2.apply(WaitHelper.java:75)
+	at com.adv.qa.selenium.helpers.WaitHelper$2.apply(WaitHelper.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at com.adv.qa.selenium.helpers.WaitHelper.waitUntilWebElementDisplayed(WaitHelper.java:73)
+	at com.adv.qa.selenium.helpers.WaitHelper.waitUntilWebElementDisplayed(WaitHelper.java:91)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.getErrorContentText(CurrencyPage.java:96)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterPurchasingCompanyControlDetails(CurrencyPage.java:7282)
+	at com.adv.qa.selenium.tests.currency.phase2.A049_Common_Purchasing_Company_ControlsTest.verify(A049_Common_Purchasing_Company_ControlsTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.adv.qa.selenium.tests.currency.phase2.A050_Accounts_Payable_Control_AccountsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [currencyCode = GAC], DataUnit [control = IM], DataUnit [control = IM PL Control Accounts Code], DataUnit [control = 2000], DataUnit [control = W1], DataUnit [control = 5000], DataUnit [control = W1], DataUnit [control = 5050], DataUnit [control = W1], DataUnit [control = 1660], DataUnit [control = W1], DataUnit [control = 5100], DataUnit [control = W1], DataUnit [control = 6200], DataUnit [control = W1], DataUnit [control = 5900], DataUnit [control = W1], DataUnit [control = 7000], DataUnit [control = W1], DataUnit [control = 7001], DataUnit [control = W1], DataUnit [control = 2150], DataUnit [control = W1], DataUnit [control = 2160], DataUnit [control = W1], DataUnit [control = 2051], DataUnit [control = W1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;LEDGR_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9004_7554}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 3ac6a0e3a737c273eb230b98b21f09d6
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;LEDGR_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterAccountPayableControlDetails(CurrencyPage.java:7426)
+	at com.adv.qa.selenium.tests.currency.phase2.A050_Accounts_Payable_Control_AccountsTest.verify(A050_Accounts_Payable_Control_AccountsTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.adv.qa.selenium.tests.currency.phase2.A051_Purchase_Ledger_Bank_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = GAG], DataUnit [bankCodeBP = BP], DataUnit [bankCodeBP = 01020304], DataUnit [bankCodeBP = Yorkshire Bank - Hartlepool], DataUnit [bankCodeBP = GBP], DataUnit [bankCodeBP = 05-02-86], DataUnit [bankCodeBP = 1550], DataUnit [bankCodeBP = W1], DataUnit [bankCodeB1 = B1], DataUnit [bankCodeB1 = 45236987], DataUnit [bankCodeB1 = Barclays Bank - Hartlepool], DataUnit [bankCodeB1 = GBP], DataUnit [bankCodeB1 = 05-02-86], DataUnit [bankCodeB1 = 1550], DataUnit [bankCodeB1 = W1], DataUnit [bankCodeH1 = H1], DataUnit [bankCodeH1 = 78568945], DataUnit [bankCodeH1 = HSBC - Hartlepool], DataUnit [bankCodeH1 = GBP], DataUnit [bankCodeH1 = 05-02-86], DataUnit [bankCodeH1 = 1550], DataUnit [bankCodeH1 = W1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;BANK_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir11248_26397}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: fb9c233c45818e442a98d28cabe6e246
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;BANK_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.createBankAccount(CurrencyPage.java:8037)
+	at com.adv.qa.selenium.tests.currency.phase2.A051_Purchase_Ledger_Bank_CodesTest.createBankCode(A051_Purchase_Ledger_Bank_CodesTest.java:79)
+	at com.adv.qa.selenium.tests.currency.phase2.A051_Purchase_Ledger_Bank_CodesTest.verify(A051_Purchase_Ledger_Bank_CodesTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.adv.qa.selenium.tests.currency.phase2.A051A_Purchase_Ledger_Bank_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [currencyCode = E00], DataUnit [currencyCode = EBA], DataUnit [bankControl = RS], DataUnit [bankControl = BS], DataUnit [bankControl = BR1], DataUnit [bankControl = BR2], DataUnit [bankControl = BR3], DataUnit [bankControl = 182], DataUnit [nominalBANKR = BANKR], DataUnit [nominalBANKR1 = BANKR1], DataUnit [nominalBANKR2 = BANKR2]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite4</h1>
+<h2 id="m11">com.adv.qa.selenium.tests.currency.phase2.A053_Category_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = PAD], DataUnit [currencyCode = PAC], DataUnit [category = C1], DataUnit [category = Hardware Supplier], DataUnit [category = 0], DataUnit [category = 1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.adv.qa.selenium.tests.currency.phase2.A054_Discount_TermsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = PAF], DataUnit [currencyCode = PAE], DataUnit [discount = D1], DataUnit [discount = Discount 5.00% within 30 days], DataUnit [discount = 1], DataUnit [discount = 30], DataUnit [discount = 5.00], DataUnit [discount = 1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.adv.qa.selenium.tests.currency.phase2.A055_Settlement_TermsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [currencyCode = PAH], DataUnit [currencyCode = PAG], DataUnit [settlementS1 = S1], DataUnit [settlementS1 = 1 Month after period end date], DataUnit [settlementS1 = 0], DataUnit [settlementS1 = 1], DataUnit [settlementS1 = 1], DataUnit [settlementS1 = 31], DataUnit [settlementS1 = 1], DataUnit [settlementS1 = NILL], DataUnit [settlementS1 = 0], DataUnit [settlementS1 = 1], DataUnit [settlementS2 = S2], DataUnit [settlementS2 = Payment due date at end of month], DataUnit [settlementS2 = 0], DataUnit [settlementS2 = 1], DataUnit [settlementS2 = 1], DataUnit [settlementS2 = 31], DataUnit [settlementS2 = NILL], DataUnit [settlementS2 = 31], DataUnit [settlementS2 = NILL], DataUnit [settlementS2 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.adv.qa.selenium.tests.currency.phase2.A052_Tax_AccountsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = RAS], DataUnit [system = G], DataUnit [codeUKE = UKE], DataUnit [codeUKE = VATA], DataUnit [codeUKE = W1], DataUnit [codeUKS = UKS], DataUnit [codeUKS = VATA], DataUnit [codeUKS = W1], DataUnit [codeUKV = UKV], DataUnit [codeUKV = VATA], DataUnit [codeUKV = W1], DataUnit [codeUKZ = UKZ], DataUnit [codeUKZ = VATA], DataUnit [codeUKZ = W1]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.adv.qa.selenium.tests.currency.phase2.A056A_System_Assigned_Batch_Numbers_In_AP:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = AKK], DataUnit [apBatchTypePDE1 = PDE1], DataUnit [apBatchTypePDE1 = E10001], DataUnit [apBatchTypePDE2 = PDE2], DataUnit [apBatchTypePDE2 = E20001], DataUnit [apBatchTypePDE3 = PDE3], DataUnit [apBatchTypePDE3 = E30001], DataUnit [apBatchTypePDE4 = PDE4], DataUnit [apBatchTypePDE4 = E40001], DataUnit [apBatchTypePDE5 = PDE5], DataUnit [apBatchTypePDE5 = E50001], DataUnit [apBatchTypePDE6 = PDE6], DataUnit [apBatchTypePDE6 = E60001]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite5</h1>
+<h2 id="m16">com.adv.qa.selenium.tests.currency.phase2.A057_Legend_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = GAE], DataUnit [transaction0 = 3], DataUnit [transaction0 = 00], DataUnit [transaction0 = BACS], DataUnit [transaction0 = BACS], DataUnit [transaction1 = 3], DataUnit [transaction1 = 01], DataUnit [transaction1 = BACS], DataUnit [transaction1 = BACS]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;TRAN-TYPE-IND_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir8988_25460}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 01edb8fa3d38689936355ceb01cbd582
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;TRAN-TYPE-IND_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterTransactionLegendDetails(CurrencyPage.java:8594)
+	at com.adv.qa.selenium.tests.currency.phase2.A057_Legend_ControlsTest.createTranLegend(A057_Legend_ControlsTest.java:72)
+	at com.adv.qa.selenium.tests.currency.phase2.A057_Legend_ControlsTest.verify(A057_Legend_ControlsTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM1], DataUnit [passWord = E5], DataUnit [currencyCode = GAA], DataUnit [companyControl = Warning], DataUnit [companyControl = Optional], DataUnit [companyControl = Warning], DataUnit [companyControl = Transaction], DataUnit [companyControl = IM], DataUnit [companyControl = None], DataUnit [companyControl = UKV], DataUnit [companyControl = Not Allowed], DataUnit [companyControl = B], DataUnit [companyControl = Cost Centre], DataUnit [companyControl = 0], DataUnit [companyControl = None], DataUnit [companyControl = 0.00], DataUnit [companyControl = 0.00], DataUnit [companyControl = 0], DataUnit [companyControl = Await Payment], DataUnit [companyControl = GL Calendar], DataUnit [companyControl = 5], DataUnit [companyControl = BP], DataUnit [companyControl = 0.00], DataUnit [companyControl = 3.00], DataUnit [companyControl = AP and GL], DataUnit [companyControl = Warning], DataUnit [companyControl = Normal], DataUnit [companyControl = IM], DataUnit [companyControl = 12], DataUnit [companyControl = PDE1], DataUnit [companyControl = PDE2], DataUnit [companyControl = PDE3], DataUnit [companyControl = PDE4], DataUnit [companyControl = PDE5], DataUnit [companyControl = PDE7], DataUnit [companyControl = PDE6], DataUnit [companyControl = % and Amount], DataUnit [companyControl = 0.00], DataUnit [companyControl = 0.00], DataUnit [companyControl = 0.00], DataUnit [companyControl = Warning], DataUnit [companyControl = Prorata], DataUnit [companyControl = % And Amount], DataUnit [companyControl = 0.00], DataUnit [companyControl = 0.00], DataUnit [companyControl = 30]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 31 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir7280_3625}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 9a23b4ec8aa4e27896f1b103e9afa7fa
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.sendKeys(EventFiringWebDriver.java:354)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterAccountPayableCompanyControl(CurrencyPage.java:8387)
+	at com.adv.qa.selenium.tests.currency.phase2.A056_AP_Ledger_ControlsTest.verify(A056_AP_Ledger_ControlsTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.adv.qa.selenium.tests.currency.phase2.A059_Bank_Payment_MethodTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = GAO], DataUnit [payment01 = BP], DataUnit [payment01 = 01], DataUnit [payment01 = 00], DataUnit [payment02 = BP], DataUnit [payment02 = 02], DataUnit [payment02 = 01]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;BANK_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir10100_14024}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a76877b28758f7d994f0d0d20724321f
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;BANK_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterBankPayMethods(CurrencyPage.java:8696)
+	at com.adv.qa.selenium.tests.currency.phase2.A059_Bank_Payment_MethodTest.createBankPaymentMethod(A059_Bank_Payment_MethodTest.java:75)
+	at com.adv.qa.selenium.tests.currency.phase2.A059_Bank_Payment_MethodTest.verify(A059_Bank_Payment_MethodTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.adv.qa.selenium.tests.currency.phase2.A058_Payment_MethodsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = GREC], DataUnit [passWord = E5], DataUnit [currencyCode = GAI], DataUnit [payment01 = 01], DataUnit [payment01 = GBP Cheques], DataUnit [payment01 = GBP], DataUnit [payment01 = Cheque], DataUnit [payment01 = NILL], DataUnit [payment01 = Invoice], DataUnit [payment01 = 0], DataUnit [payment02 = 02], DataUnit [payment02 = Funds Transfer], DataUnit [payment02 = GBP], DataUnit [payment02 = Funds Transfer], DataUnit [payment02 = NILL], DataUnit [payment02 = Invoice], DataUnit [payment02 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite6</h1>
+<h2 id="m20">com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = GAK], DataUnit [payment01 = 01], DataUnit [payment01 = Cheque], DataUnit [payment01 = 1], DataUnit [payment01 = GBP], DataUnit [payment01 = 01], DataUnit [payment01 = BP], DataUnit [payment01 = 0], DataUnit [payment01 = STD], DataUnit [payment01 = STD], DataUnit [payment02 = 02], DataUnit [payment02 = Funds Transfer], DataUnit [payment02 = 1], DataUnit [payment02 = GBP], DataUnit [payment02 = 02], DataUnit [payment02 = BP], DataUnit [payment02 = 0], DataUnit [payment02 = STD], DataUnit [payment02 = STD], DataUnit [payment03 = 03], DataUnit [payment03 = Automatic Cheque], DataUnit [payment03 = 1], DataUnit [payment03 = GBP], DataUnit [payment03 = 01], DataUnit [payment03 = BP], DataUnit [payment03 = Y], DataUnit [payment03 = STD], DataUnit [payment03 = STD], DataUnit [payment04 = 04], DataUnit [payment04 = Manual Cheque], DataUnit [payment04 = 1], DataUnit [payment04 = GBP], DataUnit [payment04 = 01], DataUnit [payment04 = BP], DataUnit [payment04 = 0], DataUnit [payment04 = STD], DataUnit [payment04 = STD]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;PYMNT_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir1772_20041}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 463e1033bf4be0a9e4722cc1fe82d484
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;PYMNT_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterPaymentCode(CurrencyPage.java:8735)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.createUOM(A060_Payment_CodesTest.java:82)
+	at com.adv.qa.selenium.tests.currency.phase2.A060_Payment_CodesTest.verify(A060_Payment_CodesTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.adv.qa.selenium.tests.currency.phase2.A061_Purchasing_Management_LocationsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = AK2], DataUnit [locationHQ = POP HQ], DataUnit [locationHQ = POP Head Quarters], DataUnit [locationHQ = 236 Hartlepool Road], DataUnit [locationHQ = TS25 3HA], DataUnit [locationHQ = NILL], DataUnit [locationHQ = Not Used], DataUnit [locationEastHQ = EAST HQ], DataUnit [locationEastHQ = East Head Quarters], DataUnit [locationEastHQ = Road 1], DataUnit [locationEastHQ = NILL], DataUnit [locationEastHQ = NILL], DataUnit [locationEastHQ = Not Used], DataUnit [locationWestHQ = WEST HQ], DataUnit [locationWestHQ = West Head Quarters], DataUnit [locationWestHQ = Road 1], DataUnit [locationWestHQ = NILL], DataUnit [locationWestHQ = NILL], DataUnit [locationWestHQ = Not Used], DataUnit [locationSouthHQ = SOUTH HQ], DataUnit [locationSouthHQ = South Head Quarters], DataUnit [locationSouthHQ = Road 1], DataUnit [locationSouthHQ = NILL], DataUnit [locationSouthHQ = NILL], DataUnit [locationSouthHQ = Not Used], DataUnit [locationNorthHQ = NORTH HQ], DataUnit [locationNorthHQ = North Head Quarters], DataUnit [locationNorthHQ = Road 1], DataUnit [locationNorthHQ = NILL], DataUnit [locationNorthHQ = NILL], DataUnit [locationNorthHQ = Not Used], DataUnit [locationWarehse = WAREHSE], DataUnit [locationWarehse = Central Warehouse], DataUnit [locationWarehse = Road 1], DataUnit [locationWarehse = NILL], DataUnit [locationWarehse = NILL], DataUnit [locationWarehse = Not Used], DataUnit [locationNorthITS = NorthITS], DataUnit [locationNorthITS = North In-transit store], DataUnit [locationNorthITS = Road 1], DataUnit [locationNorthITS = NILL], DataUnit [locationNorthITS = NILL], DataUnit [locationNorthITS = Not Used], DataUnit [locationSouthITS = SouthITS], DataUnit [locationSouthITS = South In-transit store], DataUnit [locationSouthITS = Road 1], DataUnit [locationSouthITS = NILL], DataUnit [locationSouthITS = NILL], DataUnit [locationSouthITS = Not Used], DataUnit [locationWestITS = WestITS], DataUnit [locationWestITS = West In-transit store], DataUnit [locationWestITS = Road 1], DataUnit [locationWestITS = NILL], DataUnit [locationWestITS = NILL], DataUnit [locationWestITS = Not Used], DataUnit [locationEastITS = EastITS], DataUnit [locationEastITS = East In-transit store], DataUnit [locationEastITS = Road 1], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = Not Used], DataUnit [locationEastITS = EastITS], DataUnit [locationEastITS = East In-transit store], DataUnit [locationEastITS = Road 1], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = NILL], DataUnit [locationEastITS = Not Used], DataUnit [locationNorth = North], DataUnit [locationNorth = North store], DataUnit [locationNorth = Road 1], DataUnit [locationNorth = NILL], DataUnit [locationNorth = NILL], DataUnit [locationNorth = Not Used], DataUnit [locationSouth = South], DataUnit [locationSouth = South store], DataUnit [locationSouth = Road 1], DataUnit [locationSouth = NILL], DataUnit [locationSouth = NILL], DataUnit [locationSouth = Not Used], DataUnit [locationEast = East], DataUnit [locationEast = East store], DataUnit [locationEast = Road 1], DataUnit [locationEast = NILL], DataUnit [locationEast = NILL], DataUnit [locationEast = Not Used], DataUnit [locationWest = West], DataUnit [locationWest = West store], DataUnit [locationWest = Road 1], DataUnit [locationWest = NILL], DataUnit [locationWest = NILL], DataUnit [locationWest = Not Used]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">com.adv.qa.selenium.tests.currency.phase2.A062_Tax_Handling_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = RAF], DataUnit [taxR1 = R1], DataUnit [taxR1 = Recoverable Handling Code], DataUnit [taxR1 = 0], DataUnit [taxR1 = Fully], DataUnit [taxR1 = 0], DataUnit [tax02 = 02], DataUnit [tax02 = Non-Rec Exc.Handling Code ], DataUnit [tax02 = 1], DataUnit [tax02 = None], DataUnit [tax02 = 0], DataUnit [tax03 = 03], DataUnit [tax03 = Non-Rec Inc.Handling Code], DataUnit [tax03 = 0], DataUnit [tax03 = None], DataUnit [tax03 = 0], DataUnit [taxH1 = H1], DataUnit [taxH1 = H1 Default Handling Code], DataUnit [taxH1 = 1], DataUnit [taxH1 = Fully], DataUnit [taxH1 = 0]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite7</h1>
+<h2 id="m23">com.adv.qa.selenium.tests.currency.phase2.A065_CP_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = PAA], DataUnit [purchasingCompany = MM], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = 1], DataUnit [purchasingCompany = 10], DataUnit [purchasingCompany = Manual], DataUnit [purchasingCompany = 1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text()=&apos;Purchase Price&apos;]/../input[1]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9116_23449}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 4bdcaab6eb3b2421284093322dc1e254
+*** Element info: {Using=xpath, value=//label[text()=&apos;Purchase Price&apos;]/../input[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.editCommonPurchasingComany(CurrencyPage.java:9038)
+	at com.adv.qa.selenium.tests.currency.phase2.A065_CP_Company_ControlsTest.verify(A065_CP_Company_ControlsTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.adv.qa.selenium.tests.currency.phase2.A064_PPV_Control_AccountTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BM], DataUnit [passWord = E5], DataUnit [currencyCode = PXM], DataUnit [ppvAccount = IM], DataUnit [ppvAccount = PPV Control Code - ], DataUnit [ppvAccount = 5901], DataUnit [ppvAccount = W1], DataUnit [ppvAccount = 5902], DataUnit [ppvAccount = W1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;ACCT-GRP_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9176_27966}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: cf3aba4392323cfd792797a833a99759
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;ACCT-GRP_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterPPVControlAccount(CurrencyPage.java:8992)
+	at com.adv.qa.selenium.tests.currency.phase2.A064_PPV_Control_AccountTest.verify(A064_PPV_Control_AccountTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">com.adv.qa.selenium.tests.currency.phase2.A066_Accrual_Control_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = DAA], DataUnit [accrualCode = IM], DataUnit [accrualCode = PM Accrual Control Account Code], DataUnit [accrualCode = 5900], DataUnit [accrualCode = W1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;ACCRU-CNTRL_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9856_10456}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 250cad2c844602ca273171a63633aac7
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;ACCRU-CNTRL_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterAccrualControlAccount(CurrencyPage.java:9099)
+	at com.adv.qa.selenium.tests.currency.phase2.A066_Accrual_Control_CodeTest.verify(A066_Accrual_Control_CodeTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.adv.qa.selenium.tests.currency.phase2.A063_Standard_TextTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = PXU], DataUnit [standardAccept = QUOTE-ACCEPT], DataUnit [standardAccept = 0], DataUnit [standardAccept = Quotation Acceptance], DataUnit [standardReject = QUOTE-REJECT], DataUnit [standardReject = 0], DataUnit [standardReject = Quotation Rejection], DataUnit [standardRequest = QUOTE-REQUEST], DataUnit [standardRequest = 0], DataUnit [standardRequest = Quotation Request], DataUnit [acceptLines = Your quotation response relating to the following], DataUnit [acceptLines = lines has been successful. A Buyer from our], DataUnit [acceptLines = Purchasing Department will be in touch within the], DataUnit [acceptLines = next two weeks to confirm the details and provide], DataUnit [acceptLines = you with our Contract Reference.], DataUnit [rejectLines = I am sorry to have to inform you that your], DataUnit [rejectLines = response to our requirements for the following], DataUnit [rejectLines = items has not met the minimum requirements, and we], DataUnit [rejectLines = will therefore not be placing a contract with], DataUnit [rejectLines = yourselves for these goods.], DataUnit [rejectLines = If we have any further requests for quotations], DataUnit [rejectLines = then we shall contact you again.], DataUnit [requestLines = This is a request for you to provide a quotation], DataUnit [requestLines = for the items which are shown below. The quotation], DataUnit [requestLines = must be returned to the person named by the], DataUnit [requestLines = specified date in order to be considered.], DataUnit [requestLines = You will be notified via email within 14 days of], DataUnit [requestLines = response date whether your bid has been successful]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite8</h1>
+<h2 id="m27">com.adv.qa.selenium.tests.currency.phase2.A067_Purchasing_Management_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = ADMIN], DataUnit [passWord = E5], DataUnit [currencyCode = DAG], DataUnit [purchasingCompany = 10], DataUnit [purchasingCompany = 1], DataUnit [purchasingCompany = IM], DataUnit [purchasingCompany = ACC], DataUnit [purchasingCompany = 12], DataUnit [purchasingCompany = 2016], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = No Prompt], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = 0], DataUnit [purchasingCompany = POP HQ], DataUnit [purchasingCompany = POP HQ], DataUnit [purchasingCompany = Prefix], DataUnit [purchasingCompany = QUOTE-REQUEST], DataUnit [purchasingCompany = QUOTE-ACCEPT], DataUnit [purchasingCompany = QUOTE-REJECT], DataUnit [purchasingCompany = 30], DataUnit [purchasingCompany = IM]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: New purchasing company IM not created successfully expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at com.adv.qa.selenium.framework.Assert.assertTrue(Assert.java:43)
+	at com.adv.qa.selenium.tests.currency.phase2.A067_Purchasing_Management_Company_ControlsTest.verify(A067_Purchasing_Management_Company_ControlsTest.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">com.adv.qa.selenium.tests.currency.phase2.A070_Reason_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = PXQ], DataUnit [reasonCode = R1], DataUnit [reasonCode = Reason Code R1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;RJCT_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir10764_2731}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 85085985b04f7d2934e135f3c7429005
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;RJCT_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterReasonCode(CurrencyPage.java:9422)
+	at com.adv.qa.selenium.tests.currency.phase2.A070_Reason_CodesTest.verify(A070_Reason_CodesTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">com.adv.qa.selenium.tests.currency.phase2.A068_Inspection_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = PXG], DataUnit [inspectionCode = I1], DataUnit [inspectionCode = Inspection Code I1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;INSPCT_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir5084_12782}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5f8e29e010ed1fb622a491dbb58fd821
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;INSPCT_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterInspectionCode(CurrencyPage.java:9367)
+	at com.adv.qa.selenium.tests.currency.phase2.A068_Inspection_CodesTest.verify(A068_Inspection_CodesTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">com.adv.qa.selenium.tests.currency.phase2.A069_Disposal_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = PXE], DataUnit [disposalCode = D1], DataUnit [disposalCode = Disposal Code D1]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;DISPL_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir10020_17233}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5135e9b035ccc336440b3a8bb66de85b
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;DISPL_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterDisposalCode(CurrencyPage.java:9392)
+	at com.adv.qa.selenium.tests.currency.phase2.A069_Disposal_CodeTest.verify(A069_Disposal_CodeTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite9</h1>
+<h2 id="m31">com.adv.qa.selenium.tests.currency.phase2.A073_Receipt_ControlTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = PX3], DataUnit [receiptControl = REC1], DataUnit [receiptControl = Receipt Control REC1], DataUnit [receiptControl = Percent], DataUnit [receiptControl = 10.00], DataUnit [receiptControl = 10.00], DataUnit [receiptControl = 2]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: cannot determine loading status
+from timeout: Timed out receiving message from renderer: -0.014
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.02 seconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir7556_30677}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 8b96015d7a6b80a2dafaff5db1e4d02b
+*** Element info: {Using=xpath, value=//fieldset/legend[text()=&apos;Command&apos;]/..//input[contains(@name,&apos;COMMAND&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.isCommandDisplayed(CurrencyPage.java:218)
+	at com.adv.qa.selenium.tests.currency.phase2.A073_Receipt_ControlTest.verify(A073_Receipt_ControlTest.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">com.adv.qa.selenium.tests.currency.phase2.A071_Document_PrefixCodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = PXJ], DataUnit [currencyCode = PXI], DataUnit [documentO = Order], DataUnit [documentO = O], DataUnit [documentO = Order Prefix Code (Order)], DataUnit [documentO = Manual], DataUnit [documentO = 10], DataUnit [documentC = Contract], DataUnit [documentC = C], DataUnit [documentC = Contract Prefix Code C], DataUnit [documentC = Manual], DataUnit [documentC = 10], DataUnit [documentR = Requisition], DataUnit [documentR = R], DataUnit [documentR = Requisition Prefix Code R], DataUnit [documentR = Manual], DataUnit [documentR = 10], DataUnit [documentG = GRN], DataUnit [documentG = G], DataUnit [documentG = GRN Prefix Code G], DataUnit [documentG = Manual], DataUnit [documentG = 10]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: Currency search page expected [MPXJ - Document Prefix Codes Edit] but found [MZA2 - e5 Menu]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at com.adv.qa.selenium.framework.Assert.assertEquals(Assert.java:163)
+	at com.adv.qa.selenium.tests.currency.phase2.A071_Document_PrefixCodesTest.createDocumentPrefix(A071_Document_PrefixCodesTest.java:83)
+	at com.adv.qa.selenium.tests.currency.phase2.A071_Document_PrefixCodesTest.verify(A071_Document_PrefixCodesTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = PX2], DataUnit [currencyCode = PX1], DataUnit [cpUserAccept = ACCEPT], DataUnit [cpUserAccept = 0], DataUnit [cpUserAccept = 0], DataUnit [cpUserAccept = 1], DataUnit [cpUserAccept = 0], DataUnit [cpUserAccept = IM], DataUnit [cpUserBuyer = BUYER], DataUnit [cpUserBuyer = 1], DataUnit [cpUserBuyer = 0], DataUnit [cpUserBuyer = 0], DataUnit [cpUserBuyer = 0], DataUnit [cpUserBuyer = BUYER], DataUnit [cpUserIM = IM], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = 1], DataUnit [cpUserIM = IM], DataUnit [cpUserExped = EXPED], DataUnit [cpUserExped = 0], DataUnit [cpUserExped = 1], DataUnit [cpUserExped = 0], DataUnit [cpUserExped = 0], DataUnit [cpUserExped = IM], DataUnit [cpUserGrec = GREC], DataUnit [cpUserGrec = 0], DataUnit [cpUserGrec = 0], DataUnit [cpUserGrec = 0], DataUnit [cpUserGrec = 1], DataUnit [cpUserGrec = IM]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: Currency search page expected [MPX2 - CP User - Edit] but found [MZA2 - e5 Menu]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at com.adv.qa.selenium.framework.Assert.assertEquals(Assert.java:163)
+	at com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest.createCPUser(A072_Common_Purchasing_UsersTest.java:75)
+	at com.adv.qa.selenium.tests.currency.phase2.A072_Common_Purchasing_UsersTest.verify(A072_Common_Purchasing_UsersTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">com.adv.qa.selenium.tests.currency.phase2.A074_Automatic_Banking_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = GAM], DataUnit [bankingCode = BP], DataUnit [bankingCode = 123456], DataUnit [bankingCode = ABC BP], DataUnit [bankingCode = NILL], DataUnit [bankingCode = IMBACS], DataUnit [bankingCode = 1], DataUnit [protocolId = 00]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite10</h1>
+<h2 id="m35">com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = PX8], DataUnit [circulationO1 = O1], DataUnit [circulationO1 = O1 Normal Order], DataUnit [circulationO1 = POP_ORDER_1], DataUnit [circulationO1 = STD], DataUnit [circulationO1 = ORDER-1], DataUnit [circulationO1 = 01], DataUnit [circulationRQ = RQ], DataUnit [circulationRQ = RQ Requisition Circulation Code], DataUnit [circulationRQ = POP_REQUISITION_1], DataUnit [circulationRQ = STD], DataUnit [circulationRQ = REQUISITION-1], DataUnit [circulationRQ = 01], DataUnit [circulationA1 = A1], DataUnit [circulationA1 = Stock Adjustment], DataUnit [circulationA1 = IM_STOCK_ADJ], DataUnit [circulationA1 = STD], DataUnit [circulationA1 = STOCK_ADJ], DataUnit [circulationA1 = 01], DataUnit [circulationB1 = B1], DataUnit [circulationB1 = Bin Transfer], DataUnit [circulationB1 = IM_STOCK_ADJ], DataUnit [circulationB1 = STD], DataUnit [circulationB1 = STOCK_ADJ], DataUnit [circulationB1 = 01], DataUnit [circulationD1 = D1], DataUnit [circulationD1 = Stock Disposal], DataUnit [circulationD1 = IM_STOCK_DISP], DataUnit [circulationD1 = STD], DataUnit [circulationD1 = STOCK_DISP], DataUnit [circulationD1 = 01]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;CIRC-LST_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9284_8641}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 30a8a6165a4d7dc8b2267b301f8f8937
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;CIRC-LST_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterCirculationCode(CurrencyPage.java:9702)
+	at com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest.createCirculationCode(A075A_Circulation_CodeTest.java:87)
+	at com.adv.qa.selenium.tests.currency.phase2.A075A_Circulation_CodeTest.verify(A075A_Circulation_CodeTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = PX8], DataUnit [circulationK1 = K1], DataUnit [circulationK1 = Stock Take], DataUnit [circulationK1 = IM_STOCK_TAKE], DataUnit [circulationK1 = STD], DataUnit [circulationK1 = STOCK_TAKE], DataUnit [circulationK1 = 01], DataUnit [circulationM1 = M1], DataUnit [circulationM1 = Material Issue], DataUnit [circulationM1 = IM_MATERIAL_ISSUE], DataUnit [circulationM1 = STD], DataUnit [circulationM1 = MATERIAL_ISSUE], DataUnit [circulationM1 = 01], DataUnit [circulationP1 = P1], DataUnit [circulationP1 = Picking List], DataUnit [circulationP1 = IM_PICK_LIST], DataUnit [circulationP1 = STD], DataUnit [circulationP1 = PICK_LIST], DataUnit [circulationP1 = 01], DataUnit [circulationT1 = T1], DataUnit [circulationT1 = Store Transfer], DataUnit [circulationT1 = IM_STORE_TRANS], DataUnit [circulationT1 = STD], DataUnit [circulationT1 = STORE_TRANS], DataUnit [circulationT1 = 01], DataUnit [circulationRS = RS], DataUnit [circulationRS = Return to Store], DataUnit [circulationRS = IM_STORE_RET], DataUnit [circulationRS = STD], DataUnit [circulationRS = STORE_RET], DataUnit [circulationRS = 01], DataUnit [circulationLA = LA], DataUnit [circulationLA = IM Lot Allocation], DataUnit [circulationLA = IM_CNTNR_LOT_ALLOC], DataUnit [circulationLA = STD], DataUnit [circulationLA = CNTNR_LOT_ALLOC], DataUnit [circulationLA = 01]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;CIRC-LST_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir7788_23890}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0a062c62d0317d8eb0eaf6dae592986f
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;CIRC-LST_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterCirculationCode(CurrencyPage.java:9702)
+	at com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest.createCirculationCode(A075B_Circulation_CodeTest.java:90)
+	at com.adv.qa.selenium.tests.currency.phase2.A075B_Circulation_CodeTest.verify(A075B_Circulation_CodeTest.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite11</h1>
+<h2 id="m37">com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = GREC], DataUnit [passWord = E5], DataUnit [currencyCode = DAJ], DataUnit [currencyCode = DAI], DataUnit [documentCodeRR = RR], DataUnit [documentCodeRR = Stock Replen.Req. Auto Type 6], DataUnit [documentCodeRR = Requisition], DataUnit [documentCodeRR = REPL], DataUnit [documentCodeRR = REPL], DataUnit [documentCodeRR = REPL], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = RQ], DataUnit [documentCodeRR = Optional], DataUnit [documentCodeRR = Company], DataUnit [documentCodeRR = 9999999999999.99], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = Generated Repl Req], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = 0], DataUnit [documentCodeRR = NILL], DataUnit [documentCodeRR = NILL], DataUnit [documentCodeRR = Not Applicable], DataUnit [documentCodeRi = RI], DataUnit [documentCodeRi = Requisition RI Type &apos;0&apos;], DataUnit [documentCodeRi = Requisition], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = 2], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = RQ], DataUnit [documentCodeRi = Optional], DataUnit [documentCodeRi = Company], DataUnit [documentCodeRi = 9999999999999.99], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = Non Stock Req], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = 0], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = NILL], DataUnit [documentCodeRi = Not Applicable], DataUnit [documentCodeRT = RT], DataUnit [documentCodeRT = Requisition RI Type &apos;0&apos;], DataUnit [documentCodeRT = Requisition], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = RQ], DataUnit [documentCodeRT = Optional], DataUnit [documentCodeRT = Company], DataUnit [documentCodeRT = 9999999999999.99], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = Purchase Req], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = 0], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = NILL], DataUnit [documentCodeRT = Not Applicable], DataUnit [documentCodeSR = SR], DataUnit [documentCodeSR = Stock Purchase Req. Type 4 Auto], DataUnit [documentCodeSR = Requisition], DataUnit [documentCodeSR = STOCK], DataUnit [documentCodeSR = STOCK], DataUnit [documentCodeSR = STOCK], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = RQ], DataUnit [documentCodeSR = Optional], DataUnit [documentCodeSR = Company], DataUnit [documentCodeSR = 9999999999999.99], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = System Generated], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = 0], DataUnit [documentCodeSR = NILL], DataUnit [documentCodeSR = NILL], DataUnit [documentCodeSR = Not Applicable], DataUnit [documentCodeTR = TR], DataUnit [documentCodeTR = Stores Req. Type 2], DataUnit [documentCodeTR = Requisition], DataUnit [documentCodeTR = STOCK], DataUnit [documentCodeTR = STOCK], DataUnit [documentCodeTR = STOCK], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = RQ], DataUnit [documentCodeTR = Optional], DataUnit [documentCodeTR = Company], DataUnit [documentCodeTR = 9999999999999.99], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = Demand on Store], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = 0], DataUnit [documentCodeTR = NILL], DataUnit [documentCodeTR = NILL], DataUnit [documentCodeTR = Not Applicable]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: Currency search page expected [MDAJ - Document Codes Edit] but found [MZA2 - e5 Menu]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at com.adv.qa.selenium.framework.Assert.assertEquals(Assert.java:163)
+	at com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest.createBatchType(A076B_Document_CodesTest.java:72)
+	at com.adv.qa.selenium.tests.currency.phase2.A076B_Document_CodesTest.verify(A076B_Document_CodesTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = DAJ], DataUnit [currencyCode = DAI], DataUnit [documentCodeG1 = G1], DataUnit [documentCodeG1 = Generic Items Test Doc 4], DataUnit [documentCodeG1 = Order], DataUnit [documentCodeG1 = HEAD], DataUnit [documentCodeG1 = DETL], DataUnit [documentCodeG1 = HEAD], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = 2], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = RQ], DataUnit [documentCodeG1 = Generic Items], DataUnit [documentCodeG1 = Company], DataUnit [documentCodeG1 = 9999999999999.99], DataUnit [documentCodeG1 = 0], DataUnit [documentCodeG1 = NILL], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = 1], DataUnit [documentCodeG1 = NILL], DataUnit [documentCodeG1 = ACC], DataUnit [documentCodePM = PM], DataUnit [documentCodePM = SPMR Type 3], DataUnit [documentCodePM = Requisition], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = RQ], DataUnit [documentCodePM = Optional], DataUnit [documentCodePM = Company], DataUnit [documentCodePM = 9999999999999.99], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = SPMR], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = 0], DataUnit [documentCodePM = NILL], DataUnit [documentCodePM = NILL], DataUnit [documentCodePM = Not Applicable], DataUnit [documentCodePR = PR], DataUnit [documentCodePR = Inv Purchase Req Code], DataUnit [documentCodePR = Requisition], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = 1], DataUnit [documentCodePR = 1], DataUnit [documentCodePR = 1], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = O1], DataUnit [documentCodePR = Optional], DataUnit [documentCodePR = Company], DataUnit [documentCodePR = 9999999999999.99], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = System Generated], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = 0], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = NILL], DataUnit [documentCodePR = Not Applicable], DataUnit [documentCodeRE = RE], DataUnit [documentCodeRE = Stock Replen.Req. Manual Type 5], DataUnit [documentCodeRE = Requisition], DataUnit [documentCodeRE = REPL], DataUnit [documentCodeRE = REPL], DataUnit [documentCodeRE = REPL], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = RQ], DataUnit [documentCodeRE = Optional], DataUnit [documentCodeRE = Company], DataUnit [documentCodeRE = 9999999999999.99], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = Repl Req], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = 0], DataUnit [documentCodeRE = NILL], DataUnit [documentCodeRE = NILL], DataUnit [documentCodeRE = Not Applicable]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: Currency search page expected [MDAJ - Document Codes Edit] but found [MZA2 - e5 Menu]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at com.adv.qa.selenium.framework.Assert.assertEquals(Assert.java:163)
+	at com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest.createBatchType(A076A_Document_CodesTest.java:68)
+	at com.adv.qa.selenium.tests.currency.phase2.A076A_Document_CodesTest.verify(A076A_Document_CodesTest.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = DAJ], DataUnit [currencyCode = DAI], DataUnit [documentCodeO1 = O1], DataUnit [documentCodeO1 = O1 Normal Order], DataUnit [documentCodeO1 = Order], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = O1], DataUnit [documentCodeO1 = Optional], DataUnit [documentCodeO1 = Company], DataUnit [documentCodeO1 = 9999999999.99], DataUnit [documentCodeO1 = 0], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = 1], DataUnit [documentCodeO1 = NILL], DataUnit [documentCodeO1 = ACC], DataUnit [documentCodeRI = RI], DataUnit [documentCodeRI = Return Order], DataUnit [documentCodeRI = Order], DataUnit [documentCodeRI = RTRNHEAD], DataUnit [documentCodeRI = RTRNDETL], DataUnit [documentCodeRI = RTRNFAST], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = 0], DataUnit [documentCodeRI = 0], DataUnit [documentCodeRI = O1], DataUnit [documentCodeRI = Mandatory], DataUnit [documentCodeRI = Company], DataUnit [documentCodeRI = 9999999999999.99], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = NILL], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = 1], DataUnit [documentCodeRI = Select All], DataUnit [documentCodeRI = ACC], DataUnit [documentCodeO2 = 02], DataUnit [documentCodeO2 = O2 Returns Order for SPMR], DataUnit [documentCodeO2 = Order], DataUnit [documentCodeO2 = HEAD], DataUnit [documentCodeO2 = DETL], DataUnit [documentCodeO2 = HEAD], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = 0], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = O1], DataUnit [documentCodeO2 = Mandatory], DataUnit [documentCodeO2 = Company], DataUnit [documentCodeO2 = 9999999999999.99], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = NILL], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = 1], DataUnit [documentCodeO2 = NILL], DataUnit [documentCodeO2 = ACC], DataUnit [documentCodeO3 = O3], DataUnit [documentCodeO3 = O3 Normal Order with Auto Numbering], DataUnit [documentCodeO3 = Order], DataUnit [documentCodeO3 = HEAD], DataUnit [documentCodeO3 = DETL], DataUnit [documentCodeO3 = HEAD], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = 2], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = RQ], DataUnit [documentCodeO3 = Mandatory], DataUnit [documentCodeO3 = Company], DataUnit [documentCodeO3 = 9999999999999.99], DataUnit [documentCodeO3 = 0], DataUnit [documentCodeO3 = NILL], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = 1], DataUnit [documentCodeO3 = NILL], DataUnit [documentCodeO3 = ACC]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: Currency search page expected [MDAJ - Document Codes Edit] but found [MZA2 - e5 Menu]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at com.adv.qa.selenium.framework.Assert.assertEquals(Assert.java:163)
+	at com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest.createBatchType(A076_Document_CodesTest.java:69)
+	at com.adv.qa.selenium.tests.currency.phase2.A076_Document_CodesTest.verify(A076_Document_CodesTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite12</h1>
+<h2 id="m40">com.adv.qa.selenium.tests.currency.phase2.A077_CP_Company_ControlsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = IM], DataUnit [passWord = E5], DataUnit [currencyCode = PAA], DataUnit [cpCompanyControl = RI], DataUnit [cpCompanyControl = SR], DataUnit [cpCompanyControl = RR], DataUnit [cpCompanyControl = IM]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;STK-RETN-ORDR_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir8740_8312}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6be35f06ef7f31ef202339b8e4825e47
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;STK-RETN-ORDR_&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.editCPCompanyControls(CurrencyPage.java:10048)
+	at com.adv.qa.selenium.tests.currency.phase2.A077_CP_Company_ControlsTest.verify(A077_CP_Company_ControlsTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite13</h1>
+<h2 id="m41">com.adv.qa.selenium.tests.currency.phase2.A078A_Authorisation_Control_Codes_For_APTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = GOA], DataUnit [authorisationCodeL3 = L3], DataUnit [authorisationCodeL3 = Level 3 – Mandatory User ], DataUnit [authorisationCodeL3 = Deselect], DataUnit [authorisationCodeL3 = Val Within GL Resp], DataUnit [authorisationCodeL3 = 1], DataUnit [authorisationCodeL3 = 0.00], DataUnit [authorisationCodeL3 = QUERY], DataUnit [authorisationCodeL3 = 0], DataUnit [authorisationCodeL4 = L4], DataUnit [authorisationCodeL4 = Level 4 - Mandatory Automatic Off System], DataUnit [authorisationCodeL4 = Entered], DataUnit [authorisationCodeL4 = Value], DataUnit [authorisationCodeL4 = 1], DataUnit [authorisationCodeL4 = 1000.00], DataUnit [authorisationCodeL4 = QUERY], DataUnit [authorisationCodeL4 = 1], DataUnit [authorisationCodeL5 = L5], DataUnit [authorisationCodeL5 = Level 5 – Automatic For Logged On User], DataUnit [authorisationCodeL5 = Desel/Entered], DataUnit [authorisationCodeL5 = Value], DataUnit [authorisationCodeL5 = 1], DataUnit [authorisationCodeL5 = 0.00], DataUnit [authorisationCodeL5 = QUERY], DataUnit [authorisationCodeL5 = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir9740_7907}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: d621e651d9cd2a8927d203880e8d2356
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterAuthorisationControlDetails(CurrencyPage.java:10096)
+	at com.adv.qa.selenium.tests.currency.phase2.A078A_Authorisation_Control_Codes_For_APTest.createAuthorisationCode(A078A_Authorisation_Control_Codes_For_APTest.java:78)
+	at com.adv.qa.selenium.tests.currency.phase2.A078A_Authorisation_Control_Codes_For_APTest.verify(A078A_Authorisation_Control_Codes_For_APTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">com.adv.qa.selenium.tests.currency.phase2.A078_Authorisation_Control_Codes_For_APTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = GOA], DataUnit [authorisationCodeL0 = L0], DataUnit [authorisationCodeL0 = Level 0 - None], DataUnit [authorisationCodeL0 = None], DataUnit [authorisationCodeL0 = None], DataUnit [authorisationCodeL0 = 0], DataUnit [authorisationCodeL0 = 0.00], DataUnit [authorisationCodeL0 = QUERY], DataUnit [authorisationCodeL0 = 0], DataUnit [authorisationCodeL1 = L1], DataUnit [authorisationCodeL1 = Level 1 - Optional], DataUnit [authorisationCodeL1 = Optional], DataUnit [authorisationCodeL1 = Value], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 0.00], DataUnit [authorisationCodeL1 = QUERY], DataUnit [authorisationCodeL1 = 0], DataUnit [authorisationCodeL2 = L2], DataUnit [authorisationCodeL2 = Level 2 – Mandatory System], DataUnit [authorisationCodeL2 = Fixed], DataUnit [authorisationCodeL2 = GL Responsibility], DataUnit [authorisationCodeL2 = 2], DataUnit [authorisationCodeL2 = 0.00], DataUnit [authorisationCodeL2 = QUERY], DataUnit [authorisationCodeL2 = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir11368_17151}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f81511b567a49be7d85cd1cc1bcfd160
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterAuthorisationControlDetails(CurrencyPage.java:10096)
+	at com.adv.qa.selenium.tests.currency.phase2.A078_Authorisation_Control_Codes_For_APTest.createAuthorisationCode(A078_Authorisation_Control_Codes_For_APTest.java:79)
+	at com.adv.qa.selenium.tests.currency.phase2.A078_Authorisation_Control_Codes_For_APTest.verify(A078_Authorisation_Control_Codes_For_APTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite14</h1>
+<h2 id="m43">com.adv.qa.selenium.tests.currency.phase2.A080_Authorisation_Control_Codes_For_PMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = DBA], DataUnit [authorisationCodeL1 = L1], DataUnit [authorisationCodeL1 = Level 1 Authorisation code for PM], DataUnit [authorisationCodeL1 = User Assigned], DataUnit [authorisationCodeL1 = Value], DataUnit [authorisationCodeL1 = 2], DataUnit [authorisationCodeL1 = 0.00], DataUnit [authorisationCodeL1 = QUERY], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 1], DataUnit [authorisationCodeL1 = 0], DataUnit [authorisationCodeL2 = L2], DataUnit [authorisationCodeL2 = Level 2 Authorisation code for PM], DataUnit [authorisationCodeL2 = None], DataUnit [authorisationCodeL2 = None], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0.00], DataUnit [authorisationCodeL2 = NILL], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0], DataUnit [authorisationCodeL2 = 0]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir8344_27979}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 2c5afe4875cd93730bc41d7610908fbf
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterAuthorisationControlDetailsForPM(CurrencyPage.java:10233)
+	at com.adv.qa.selenium.tests.currency.phase2.A080_Authorisation_Control_Codes_For_PMTest.createCirculationCode(A080_Authorisation_Control_Codes_For_PMTest.java:77)
+	at com.adv.qa.selenium.tests.currency.phase2.A080_Authorisation_Control_Codes_For_PMTest.verify(A080_Authorisation_Control_Codes_For_PMTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">com.adv.qa.selenium.tests.currency.phase2.A079_Authorisation_GroupsTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = DBC], DataUnit [currencyCode = GOC], DataUnit [authorisationGroupForPM = PM], DataUnit [authorisationGroupForPM = Authorisation Group for PM], DataUnit [authorisationGroupForAP = PM], DataUnit [authorisationGroupForAP = Authorisation Group for AP]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite15</h1>
+<h2 id="m45">com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = DDC], DataUnit [authorisationGroupOne = POP HQ], DataUnit [authorisationGroupOne = O], DataUnit [authorisationGroupOne = O1], DataUnit [authorisationGroupOne = NILL], DataUnit [authorisationGroupOne = PM], DataUnit [authorisationGroupOne = L1], DataUnit [authorisationGroupOne = O1/POP HQ], DataUnit [authorisationGroupTwo = POP HQ], DataUnit [authorisationGroupTwo = R], DataUnit [authorisationGroupTwo = PM], DataUnit [authorisationGroupTwo = NILL], DataUnit [authorisationGroupTwo = PM], DataUnit [authorisationGroupTwo = L1], DataUnit [authorisationGroupTwo = O1/POP HQ], DataUnit [authorisationGroupThree = POP HQ], DataUnit [authorisationGroupThree = R], DataUnit [authorisationGroupThree = RE], DataUnit [authorisationGroupThree = NILL], DataUnit [authorisationGroupThree = PM], DataUnit [authorisationGroupThree = L1], DataUnit [authorisationGroupThree = RE/POP HQ], DataUnit [authorisationGroupFour = POP HQ], DataUnit [authorisationGroupFour = R], DataUnit [authorisationGroupFour = RI], DataUnit [authorisationGroupFour = NILL], DataUnit [authorisationGroupFour = PM], DataUnit [authorisationGroupFour = L1], DataUnit [authorisationGroupFour = RI/POP HQ], DataUnit [authorisationGroupFive = POP HQ], DataUnit [authorisationGroupFive = R], DataUnit [authorisationGroupFive = RR], DataUnit [authorisationGroupFive = NILL], DataUnit [authorisationGroupFive = PM], DataUnit [authorisationGroupFive = L1], DataUnit [authorisationGroupFive = RR/POP HQ]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: New authorisation group POP HQ not created successfully expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at com.adv.qa.selenium.framework.Assert.assertTrue(Assert.java:43)
+	at com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest.createAuthorisationGroup(A081_Authorisation_Groupings_For_PMTest.java:80)
+	at com.adv.qa.selenium.tests.currency.phase2.A081_Authorisation_Groupings_For_PMTest.verify(A081_Authorisation_Groupings_For_PMTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = DDC], DataUnit [authorisationGroupSix = POP HQ], DataUnit [authorisationGroupSix = R], DataUnit [authorisationGroupSix = RT], DataUnit [authorisationGroupSix = NILL], DataUnit [authorisationGroupSix = PM], DataUnit [authorisationGroupSix = L1], DataUnit [authorisationGroupSix = RT/POP HQ], DataUnit [authorisationGroupSeven = POP HQ], DataUnit [authorisationGroupSeven = R], DataUnit [authorisationGroupSeven = SR], DataUnit [authorisationGroupSeven = NILL], DataUnit [authorisationGroupSeven = PM], DataUnit [authorisationGroupSeven = L1], DataUnit [authorisationGroupSeven = SR/POP HQ], DataUnit [authorisationGroupEight = POP HQ], DataUnit [authorisationGroupEight = R], DataUnit [authorisationGroupEight = TR], DataUnit [authorisationGroupEight = NILL], DataUnit [authorisationGroupEight = PM], DataUnit [authorisationGroupEight = L1], DataUnit [authorisationGroupEight = TR/POP HQ], DataUnit [authorisationGroupSouth = SOUTH], DataUnit [authorisationGroupSouth = Order], DataUnit [authorisationGroupSouth = O1], DataUnit [authorisationGroupSouth = NILL], DataUnit [authorisationGroupSouth = PM], DataUnit [authorisationGroupSouth = L1], DataUnit [authorisationGroupSouth = O1SOUTH], DataUnit [authorisationGroupNorth = NORTH], DataUnit [authorisationGroupNorth = Order], DataUnit [authorisationGroupNorth = O1], DataUnit [authorisationGroupNorth = NILL], DataUnit [authorisationGroupNorth = PM], DataUnit [authorisationGroupNorth = L1], DataUnit [authorisationGroupNorth = O1NORTH]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: New authorisation group POP HQ not created successfully expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at com.adv.qa.selenium.framework.Assert.assertTrue(Assert.java:43)
+	at com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest.createAuthorisationGroup(A081A_Authorisation_Groupings_For_PMTest.java:81)
+	at com.adv.qa.selenium.tests.currency.phase2.A081A_Authorisation_Groupings_For_PMTest.verify(A081A_Authorisation_Groupings_For_PMTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">com.adv.qa.selenium.tests.currency.phase2.A082_Authorisation_StructuresTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = BUYER], DataUnit [passWord = E5], DataUnit [currencyCode = GOP], DataUnit [currencyCode = DBP], DataUnit [authorisationGroupForAP = S1], DataUnit [authorisationGroupForAP = Authorisation Structure 1 for AP], DataUnit [authorisationGroupForPM = S1], DataUnit [authorisationGroupForPM = Authorisation Structure 1 for PM]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite16</h1>
+<h2 id="m48">com.adv.qa.selenium.tests.currency.phase2.A084_Authorisation_Value_Levels_DefinitionTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = QUERY], DataUnit [passWord = E5], DataUnit [currencyCode = DBE], DataUnit [currencyCode = GOE], DataUnit [pmLev1 = LEV1], DataUnit [pmLev1 = 1000], DataUnit [pmLev1 = Value Level 1 Up To 1000 Pounds], DataUnit [pmLev2 = LEV2], DataUnit [pmLev2 = 5000], DataUnit [pmLev2 = Value Level 2 Up To 5000 Pounds], DataUnit [pmLev3 = LEV3], DataUnit [pmLev3 = 100000], DataUnit [pmLev3 = Value Level 3 Up To 100000 Pounds], DataUnit [pmLev4 = LEV4], DataUnit [pmLev4 = 1000000], DataUnit [pmLev4 = Value Level 4 Up To 1000000 Pounds], DataUnit [apLev1 = LEV1], DataUnit [apLev1 = 1000], DataUnit [apLev1 = Value Level 1 Up To 1000 Pounds], DataUnit [apLev2 = LEV2], DataUnit [apLev2 = 5000], DataUnit [apLev2 = Value Level 2 Up To 5000 Pounds], DataUnit [apLev3 = LEV3], DataUnit [apLev3 = 100000], DataUnit [apLev3 = Value Level 3 Up To 100000 Pounds], DataUnit [apLev4 = LEV4], DataUnit [apLev4 = 1000000], DataUnit [apLev4 = Value Level 4 Up To 1000000 Pounds]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m49">com.adv.qa.selenium.tests.currency.phase2.A083A_Structure_AuthorisersPMTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = GREC], DataUnit [passWord = E5], DataUnit [currencyCode = DBS], DataUnit [values = S1], DataUnit [pmStructureForUser = S1], DataUnit [pmStructureForUser = IM], DataUnit [pmStructureForUser = NILL], DataUnit [pmStructureForUser = 9999], DataUnit [pmStructureForManager = S1], DataUnit [pmStructureForManager = MANAGER], DataUnit [pmStructureForManager = IM], DataUnit [pmStructureForManager = NILL], DataUnit [pmStructureForAdmin = S1], DataUnit [pmStructureForAdmin = ADMIN], DataUnit [pmStructureForAdmin = MANAGER], DataUnit [pmStructureForAdmin = 7000], DataUnit [pmStructureForQuery = S1], DataUnit [pmStructureForQuery = QUERY], DataUnit [pmStructureForQuery = IM], DataUnit [pmStructureForQuery = 9000], DataUnit [pmStructureForEmployee = S1], DataUnit [pmStructureForEmployee = EMPLOYEE], DataUnit [pmStructureForEmployee = ADMIN], DataUnit [pmStructureForEmployee = 1000]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m50">com.adv.qa.selenium.tests.currency.phase2.A083_Structure_AuthorisersAPTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = GOS], DataUnit [values = S1], DataUnit [apStructureForQuery = S1], DataUnit [apStructureForQuery = QUERY], DataUnit [apStructureForQuery = NILL], DataUnit [apStructureForQuery = 9999], DataUnit [apStructureForManager = S1], DataUnit [apStructureForManager = MANAGER], DataUnit [apStructureForManager = QUERY], DataUnit [apStructureForManager = 9000], DataUnit [apStructureForAdmin = S1], DataUnit [apStructureForAdmin = ADMIN], DataUnit [apStructureForAdmin = MANAGER], DataUnit [apStructureForAdmin = 7000], DataUnit [apStructureForEmployee = S1], DataUnit [apStructureForEmployee = EMPLOYEE], DataUnit [apStructureForEmployee = ADMIN], DataUnit [apStructureForEmployee = 1000], DataUnit [apStructureForUser = S1], DataUnit [apStructureForUser = IM], DataUnit [apStructureForUser = MANAGER], DataUnit [apStructureForUser = 8000]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite17</h1>
+<h2 id="m51">com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EXPED], DataUnit [passWord = E5], DataUnit [currencyCode = GAA], DataUnit [apCompanyControl = L3], DataUnit [apCompanyControl = S1], DataUnit [apCompanyControl = 00], DataUnit [apCompanyControl = 2], DataUnit [apCompanyControl = B], DataUnit [apCompanyControl = Cost Centre], DataUnit [apCompanyControl = Prorata]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir8384_9448}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0dfe918108993db070b96dc90f594f5a
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-CNTRL_&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.editAPCompanyControl(CurrencyPage.java:11007)
+	at com.adv.qa.selenium.tests.currency.phase2.A089_Amend_AP_Company_Controls_For_AuthorisationTest.verify(A089_Amend_AP_Company_Controls_For_AuthorisationTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m52">com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = MANAGER], DataUnit [passWord = E5], DataUnit [currencyCode = GOG], DataUnit [currencyCode = DBG], DataUnit [apLev1 = PM], DataUnit [apLev1 = LEV1], DataUnit [apLev1 = 1], DataUnit [apLev1 = ADMIN], DataUnit [apLev2 = PM], DataUnit [apLev2 = LEV2], DataUnit [apLev2 = 1], DataUnit [apLev2 = ADMIN], DataUnit [apLev3 = PM], DataUnit [apLev3 = LEV3], DataUnit [apLev3 = 2], DataUnit [apLev3 = ADMIN], DataUnit [apLev3 = MANAGER], DataUnit [apLev4 = PM], DataUnit [apLev4 = LEV4], DataUnit [apLev4 = 2], DataUnit [apLev4 = MANAGER], DataUnit [apLev4 = IM], DataUnit [pmLev1 = PM], DataUnit [pmLev1 = LEV1], DataUnit [pmLev1 = 1], DataUnit [pmLev1 = EMPLOYEE], DataUnit [pmLev2 = PM], DataUnit [pmLev2 = LEV2], DataUnit [pmLev2 = 1], DataUnit [pmLev2 = ADMIN], DataUnit [pmLev3 = PM], DataUnit [pmLev3 = LEV3], DataUnit [pmLev3 = 2], DataUnit [pmLev3 = ADMIN], DataUnit [pmLev3 = MANAGER], DataUnit [pmLev4 = PM], DataUnit [pmLev4 = LEV4], DataUnit [pmLev4 = 2], DataUnit [pmLev4 = MANAGER], DataUnit [pmLev4 = QUERY]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: New authorisers LEV1 not created successfully expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at com.adv.qa.selenium.framework.Assert.assertTrue(Assert.java:43)
+	at com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest.createStructureAuthorisers(A085_Authorisation_By_Value_LevelTest.java:121)
+	at com.adv.qa.selenium.tests.currency.phase2.A085_Authorisation_By_Value_LevelTest.verify(A085_Authorisation_By_Value_LevelTest.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>suite18</h1>
+<h2 id="m53">com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = GOI], DataUnit [authorisationHQ = PM], DataUnit [authorisationHQ = HQ], DataUnit [authorisationHQ = 3], DataUnit [authorisationHQ = QUERY], DataUnit [authorisationHQ = MANAGER], DataUnit [authorisationHQ = ADMIN], DataUnit [authorisationWest = PM], DataUnit [authorisationWest = WEST], DataUnit [authorisationWest = 2], DataUnit [authorisationWest = MANAGER], DataUnit [authorisationWest = ADMIN], DataUnit [authorisationSouth = PM], DataUnit [authorisationSouth = SOUTH], DataUnit [authorisationSouth = 2], DataUnit [authorisationSouth = MANAGER], DataUnit [authorisationSouth = ADMIN], DataUnit [authorisationNorth = PM], DataUnit [authorisationNorth = NORTH], DataUnit [authorisationNorth = 2], DataUnit [authorisationNorth = MANAGER], DataUnit [authorisationNorth = ADMIN], DataUnit [authorisationEast = PM], DataUnit [authorisationEast = EAST], DataUnit [authorisationEast = 2], DataUnit [authorisationEast = MANAGER], DataUnit [authorisationEast = ADMIN]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@name,&apos;AUTH-GRP_&apos;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;GHD-16313-D&apos;, ip: &apos;10.2.32.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\CHETNA~1.MIS\AppData\Local\Temp\scoped_dir10804_18714}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 20b8263e013be1a32432e5f8e3757258
+*** Element info: {Using=xpath, value=//input[starts-with(@name,&apos;AUTH-GRP_&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:187)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage.enterGLResponsibilityAuthForAP(CurrencyPage.java:10745)
+	at com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.createAuthorisationByGLResponsibility(A086_Authorisation_By_GL_ResponsibilityTest.java:83)
+	at com.adv.qa.selenium.tests.currency.phase2.A086_Authorisation_By_GL_ResponsibilityTest.verify(A086_Authorisation_By_GL_ResponsibilityTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

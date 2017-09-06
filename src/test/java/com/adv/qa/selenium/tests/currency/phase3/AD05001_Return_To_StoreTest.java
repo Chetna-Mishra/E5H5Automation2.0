@@ -16,10 +16,25 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD05001 Return to Store
  * Purpose              :   Return stock to store using the Fetch facility 
+ * Modified Date		:   Modified by Chetna/Dt: 30-Aug-2017
  * ACCESS               :   HCK,HBA,EDA
  */
 
 public class AD05001_Return_To_StoreTest extends BaseTest{
+	
+	private static String glRefNumber;
+	
+	
+	public static String getGlRefNumber() {
+		return glRefNumber;
+	}
+
+
+	private static void setGlRefNumber(String glRefNumber) {
+		AD05001_Return_To_StoreTest.glRefNumber = glRefNumber;
+	}
+	
+	
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -54,21 +69,29 @@ public class AD05001_Return_To_StoreTest extends BaseTest{
 		verifyStockBalance(currencyPage,dataRow,stockBalance,currentStockBalance,1);
 		
 		createMaterialIssue(currencyPage,dataRow,materialIssue,0);			
-				
+			
+		setGlRefNumber(glRefNumber);
+		
+//		String glRefNumber="000009";//Remove after use
+		
 		verifyStockBalance(currencyPage,dataRow,stockBalanceMI,currencyStockMI,1);
 		
-		reviewBatches(currencyPage, dataRow,1,"IMMI");currencyPage.clickOnCancel();
+		reviewBatches(currencyPage, dataRow,1,"IMMI");
 		
-		createMaterialIssue(currencyPage,dataRow,returnStoreStock,1);			
+		currencyPage.clickOnCancel();
 		
+		RetrieveMaterialIssue(currencyPage,dataRow,returnStoreStock,1,glRefNumber);
+		
+	
 		verifyStockBalance(currencyPage,dataRow,stockBalanceRS,currentStockBalanceRS,1);
 		
-		reviewBatches(currencyPage, dataRow,2,"IMRS");			
+		reviewBatches(currencyPage, dataRow,1,"IMRS");			
 		
 		currencyPage.logOut(2);
+		
 	}
 	
-	private void createMaterialIssue(CurrencyPageNew currencyPage,DataRow dataRow,List<String> elements,int i) throws InterruptedException{
+	public String createMaterialIssue(CurrencyPageNew currencyPage,DataRow dataRow,List<String> elements,int i) throws InterruptedException{
 		String code = "EDTHMVMT ACT=INSERT,CMPY="+companyId+",STORE=EAST,MVMT-IND=M";
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");	
 		
@@ -86,23 +109,71 @@ public class AD05001_Return_To_StoreTest extends BaseTest{
 		
 		currencyPage.addLineDetails(elements,"M");
 		
+		currencyPage.clickOnAcceptWarnings();
+		
 		currencyPage.clickOnUpdate();
 		
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();//Movement Reference 000009 will be created
+	
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Movement reference for material issue created "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Movement reference for material issue not created ");
-		}
 		
-		referenceMessage = referenceMessage.substring(8).replaceAll("[^0-9]", "");
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
 		
-		testcases.add(getCurreentDate()+" | Pass : "+referenceMessage+"Movement reference for material issue not created ");
-
+		String glRefNumber = referenceMessage.substring(0, referenceMessage.indexOf(" will be created"));
+		
+		glRefNumber = glRefNumber.replace("Movement Reference ", "");
+	
 		currencyPage.isCommandDisplayed();
+		
+		return glRefNumber;
+		
 	}
+	
+/*
+ * Create Material Issue for Retrieve Doc Reference=000009, from above material issue
+ * 
+ */	
+	
+	public String RetrieveMaterialIssue(CurrencyPageNew currencyPage,DataRow dataRow,List<String> elements,int i, String glRefNumber) throws InterruptedException{
+		
+		String code = "EDTHMVMT ACT=INSERT,MVMT-IND=S";
+		
+		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");	
+		
+		String message = "Movement Reference";
+		
+		currencyPage.fillCurrenceyCode(code);
+		
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Return to Store Line Details Edit","Currency search page","displayed");
+		
+		if(i==1){
+			List<String> storeDetails = dataRow.findNamesReturnValues("storeDetails");
+			
+			currencyPage.addStoreDetails(storeDetails);
+		}
+		
+		currencyPage.clickOnFetch_retrieve();
+		
+		currencyPage.enterFetchDetails(elements,glRefNumber);
+		
+		currencyPage.clickOnAcceptWarnings();
+		
+		currencyPage.clickOnUpdate();
+		
+		String referenceMessage = currencyPage.getErrorContentText();//Movement Reference 000009 will be created
+	
+		/*Verify new batch type in the list*/
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+		
+		String glRefNumber1 = referenceMessage.substring(0, referenceMessage.indexOf(" will be created"));
+		
+		glRefNumber = glRefNumber1.replace("Movement Reference ", "");
+	
+		currencyPage.isCommandDisplayed();
+		
+		return glRefNumber;
+		
+	}	
 	
 	
 	private void verifyStockBalance(CurrencyPageNew currencyPage,DataRow dataRow,List<String> elements,List<String> stockBalance,int i) throws InterruptedException{
@@ -118,33 +189,19 @@ public class AD05001_Return_To_StoreTest extends BaseTest{
 		
 		boolean totalStockBalance = currencyPage.verifyTotalStockBalance(elements);
 		
-		if(totalStockBalance== true){
-			testcases.add(getCurreentDate()+" | Pass : Total stock balance is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Total stock balance is not as expected ");
-		}
-
-		
+		Assert.assertTrue(testcases,totalStockBalance,"Total stock balance "," as expected");
+			
 		boolean storeItemValues = currencyPage.verifyStoreItemValues(elements,0);
-		if(storeItemValues== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item values is not as expected ");
-		}
+		
+		Assert.assertTrue(testcases,storeItemValues,"Store item values "," as expected");
 		
 		if(i==1){
 			currencyPage.clickOnCurrentStock();
 			
 			boolean currentStock = currencyPage.verifyCurrenctStock(stockBalance,0);
-			if(currentStock== true){
-				testcases.add(getCurreentDate()+" | Pass : Currenct stock is as expected ");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : Currenct stock is not as expected ");
-			}
-					
+			
+			Assert.assertTrue(testcases,currentStock,"Currenct stock is "," as expected");				
+			
 			currencyPage.clickOnCancel();
 		}
 		
@@ -163,11 +220,11 @@ public class AD05001_Return_To_StoreTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Journal List","Journey search page","displayed");
 		
-		currencyPage.search(companyId, 4, 0);
+		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnSections(1);
+		currencyPage.clickOnEXTSections();
 		
-		currencyPage.search(batch, 16, 5);
+		currencyPage.searchValue(batch, 16, 5);
 		
 		currencyPage.sortValues();
 		
@@ -185,12 +242,12 @@ public class AD05001_Return_To_StoreTest extends BaseTest{
 	
 		if(i==2){
 			List<String> rstrBatchDetails = dataRow.findNamesReturnValues("rstrBatchDetails"+i);
-			currencyPage.verifyJournalDetails(3, rstrBatchDetails);
 			
 			boolean verifyRstrBatch = currencyPage.verifyJournalDetails(2, rstrBatchDetails);
-			Assert.assertTrue(testcases,verifyRstrBatch,"RSTR batch values are "," correct");
+			Assert.assertTrue(testcases,verifyRstrBatch,"RSTR batch values are "," correct");//Need Test
 		}
-		currencyPage.clickOnCancel();				
+		
+		currencyPage.clickOnCancel();		
 	}
 	
 	

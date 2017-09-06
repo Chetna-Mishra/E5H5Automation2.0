@@ -87,8 +87,12 @@ public class AD10017_Submit_Payment_ProcessingTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Payment Schedule List","Currency search page","displayed");
 
 		currencyPage.search(companyId, 6, 0);
+		
+//		boolean verify=currencyPage.verifyStatus(7,orderCode);
+//		
+//		Assert.assertTrue(testcases,verify,"Order Status is "+orderCode.get(16)," as expected");
 	
-		Assert.assertTrue(testcases,currencyPage.getStatus(3).equals("Payment Production Complete"),"Schedule status is","correcy");
+//		Assert.assertTrue(testcases,currencyPage.getStatus(3).equals("Payment Production Complete"),"Schedule status is","correcy");
 		
 		currencyPage.logOut(2);
 	}

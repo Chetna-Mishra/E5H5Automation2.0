@@ -73,7 +73,6 @@ public class A071_Document_PrefixCodesTest extends BaseTest{
 		verifyDocumentPrefix(currencyPage,documentG);
 	
 		currencyPage.logOut(2);
-
 	}
 
 	private void createDocumentPrefix(CurrencyPage currencyPage,String code,List<String> currencyCode,List<String> document) throws InterruptedException{

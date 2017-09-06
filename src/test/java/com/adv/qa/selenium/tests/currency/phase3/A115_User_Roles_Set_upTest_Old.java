@@ -66,14 +66,18 @@ public class A115_User_Roles_Set_upTest_Old extends BaseTest{
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Security Group Edit","Currency search page","displayed");
 		
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.createSecurityGroup(securityGroup);
 		
 		if(update==true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New user role "+securityGroup.get(0), "created successfully");
 		}
 		else{
 			currencyPage.clickOnCancel();
-			testcases.add(getCurreentDate()+" | Pass : New user role "+securityGroup.get(0)+ "  displayed in the list");
+			
+			testcases.add(getCurreentDate()+" | Pass : New user role "+securityGroup.get(0)+ " already created");
 		}
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));

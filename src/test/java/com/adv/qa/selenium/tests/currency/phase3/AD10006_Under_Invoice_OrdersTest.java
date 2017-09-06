@@ -108,7 +108,7 @@ public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Goods Receive/Return Edit","Currency search page","displayed");
 		
-		currencyPage.addGoodsReceive(receiveGoods);
+//		currencyPage.addGoodsReceive(receiveGoods);
 		
 		currencyPage.clickOnUpdate();
 		

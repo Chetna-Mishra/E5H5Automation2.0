@@ -56,17 +56,34 @@ public class A070_Reason_CodesTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
-		currencyPage.enterReasonCode(reasonCode);	
+		boolean update= currencyPage.enterReasonCode(reasonCode);
 		
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		
+		if(update==true)
+			
+		{
 		currencyPage.clickOnUpdate();
 		
-		/*Exit from the batch details page*/
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New reason code  "+reasonCode.get(0)," created successfully");
+		
+		clickOnCancel();
+		
+		}
+		else
+		{
 		currencyPage.clickOnCancel();
-
+		
 		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(reasonCode.get(0)), "New reason code  "+reasonCode.get(0),"displayed in the list");
-			
+		
+		Assert.assertTrue(testcases,currencyPage.verifyValues(reasonCode.get(0)), "New reason code  "+reasonCode.get(0),"already creatd");
+		}
+	
+		
 		currencyPage.logOut(2);
+	
+	
 	}
 		
 	@AfterClass (alwaysRun = true)

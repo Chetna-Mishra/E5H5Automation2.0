@@ -67,8 +67,13 @@ public class PageObjects {
 	public final String TPMN_FUNCTIONS = "//div/span[starts-with(@id,'dijit_PopupMenuBarItem')][text()='Functions']";
 	public final String TPMN_SESSION = "//div/span[starts-with(@id,'dijit_PopupMenuBarItem')][text()='Session']";
 
+	public final String TPMN_FETCH = "//div/span[starts-with(@id,'dijit_PopupMenuBarItem')][text()='Fetch'][i]";
+	public final String TPMN_RETRIV = "//div/table/tbody//td[text()='Retrieve']";
+	
+	
 	// Common Buttons on All pages
 
+	public final String AllPG_RETURN = "//div/input[@value='Return']";
 	public final String AllPG_BUTN = "//div/button[contains(@class,'button')]";
 	public final String AllPG_SELEC = "//div[@class='html_TitlePaneTitle panelCollapsed']/a[not(contains(text(),'Extended'))]";
 	public final String AllPG_EXT_SELEC = "//div[@class='html_TitlePaneTitle panelCollapsed']/a[contains(text(),'Extended Selection')]";
@@ -731,6 +736,13 @@ public class PageObjects {
 	public final String A056_POSTCD_ETRY = "//select[starts-with(@name,'POSTCODE-ENT-IND_')]";
 	public final String A056_CRDT_NT_DUE_DT = "//select[starts-with(@name,'CRED-DUE-DATE-IND_')]";
 	public final String A056_CHK_TRNS_TTL_CORR = "//label[text()='Transaction Totals Correction']/../input[1]";
+	
+	public final String A056_TAX_DRN_IND = "//select[starts-with(@name,'TAX-DRN-IND_')]";
+	
+	public final String A056_FOC_IND = "//select[starts-with(@name,'FOC-IND_')]";
+	
+	
+	
 	public final String A056_CHK_TX_DET_LVL = "//label[text()='Tax at Detail Level']/../input[1]";
 	public final String A056_CHK_TX_ON_EXP_AT_DL = "//label[text()='Tax On Expenses at Detail Level']/../input[1]";
 	public final String A056_CHK_TX_PST_LOG = "//label[text()='Tax Posting at Logging']/../input[1]";
@@ -1136,10 +1148,8 @@ public class PageObjects {
 
 	// Page Objects for "A104_Inventory_Company_ControlsTest"
 	public final String A104_GL_PER = "//input[starts-with(@name,'GL-PER_')]";
-
 	public final String A104_GL_YY = "//input[starts-with(@name,'GL-YY_')]";
 	public final String A104_ACC_CD = "//input[starts-with(@name,'CNTRL-CODE_')]";
-
 	public final String A104_DEF_BTCH_TYPE = "//input[starts-with(@name,'DFLT-GL-BTCH-TYPE_')]";
 	public final String A104_RETAIN_TRAN = "//input[starts-with(@name,'TRAN-RETAIN-PER_')]";
 	public final String A104_UOM = "//input[starts-with(@name,'TRAN-RETAIN-UOM_')]";
@@ -1238,7 +1248,7 @@ public class PageObjects {
 	public final String A113_ACCS_CD = "//input[starts-with(@name,'ACCS_')]";
 	public final String A113_ACCS_DATA = "//input[starts-with(@name,'ACCS-DATA_')]/../input[1]";
 
-	// Page Objects for "A114
+	// Page Objects for "A114_Security_Group_Access_CodesTest"
 	public final String A114_UPDT_ACCS = "//input[starts-with(@name,'ACCS-UPDT_')]";
 	public final String A114_ENQ_ACCS = "//input[starts-with(@name,'ACCS-ENQRY_')]";
 
@@ -1303,16 +1313,77 @@ public class PageObjects {
 	public final String AD02001_STRITMVAL_ORGVAl = "//th[@id='0_4Hdr4']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Original Value')]";
 	public final String AD02001_STRITMVAL_STRVAL = "//th[@id='0_4Hdr5']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Source')]";
 
-	// Page Objects for "AD02009
+// Page Objects for "AD02009_Goods_ReceivingTest"
 
 	public final String AD02009_ADDR_NUM = "//input[starts-with(@name,'ADDR-NUM_')]";
 	public final String AD02009_INVCE_SITE = "//input[starts-with(@name,'INVCE-SITE_')]";
 	public final String AD02009_DSTRM_1 = "//input[starts-with(@name,'DSCNT-TERMS-1')]";
 	public final String AD02009_SEAUT_STR = "//input[starts-with(@name,'PARAM-AUTH-STRUC_')]";
 	public final String AD02009_SEAUT_DOCREF = "//input[starts-with(@name,'PARAM-DOC-REF_')]";
-
 	public final String AD02009_ADV_NT = "//input[starts-with(@name,'ADVC-NOTE_')]";
-
 	public final String AD02009_DELV = "//input[starts-with(@name,'DLVRY_')]";
+	public final String AD02009_FETCH_ORDER = "//input[starts-with(@name,'FETCH-ORDR-REF_')]";
+	public final String AD02009_FETCH=	"//div[contains(@class,'roundedCorners')]/button[@id='4_0']";
+	
+// Page Objects for "AD02010	
+	
+	
+	public final String AD02010_TOTAL_GRAMT = "//input[starts-with(@name,'GROSS-HEAD_')]";
+	public final String AD02010_TOTAL_TXAMT = "//input[starts-with(@name,'TAX-HEAD_')]";
+	public final String AD02010_MODE = "//input[starts-with(@name,'ENTRY-MODE_')]";
+	public final String AD02010_PERI = "//input[starts-with(@name,'HDR-PER_')]";
+	public final String AD02010_YR = "//input[starts-with(@name,'HDR-YY_')]";
+	public final String AD02010_ORDER = "//input[starts-with(@name,'ORDR-REF_')]";
+	public final String AD02010_POSTCD="//input[starts-with(@name,'SUPP-POSTCODE_')]";
+	public final String AD02010_TRN_PERI = "//input[starts-with(@name,'PER_')]";
+	public final String AD02010_TRN_YR = "//input[starts-with(@name,'YY_')]";
+	public final String AD02010_TRN_REF = "//input[starts-with(@name,'TRAN-REF_')]";
+	public final String AD02010_TRN_STYP = "//input[starts-with(@name,'TRAN-STYPE_')]";
+	public final String AD02010_DT = "//input[starts-with(@name,'datefield_0_16')]";
+	public final String AD02010_DUE_DT = "//input[starts-with(@name,'datefield_0_17')]";
+	public final String AD02010_GRS_AMT = "//input[starts-with(@name,'INV-GROSS-AMT_')]";
+	public final String AD02010_TAX_AMT= "//input[starts-with(@name,'INV-TAX-AMT_')]";
+	public final String AD02010_CHK_TX_ONL = "//label[text()='Tax Only']/../input[1]";
+	public final String AD02010_TAX_CD= "//input[starts-with(@name,'TRAN-TAX-CODE_')]";
+	public final String AD02010_TAX_TYP= "//input[starts-with(@name,'TRAN-TAX-TYPE_')]";
+	public final String AD02010_RECUR_FEQ = "//select[starts-with(@name,'RECUR-INTRVL_')]";
+	public final String AD02010_RECUR_OCCUR= "//input[starts-with(@name,'RECUR-OCCUR_')]";
+	public final String AD02010_INV_PRC = "//th[@id='0_0Hdr3']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Invoice Price')]";
+	public final String AD02010_INV_QTY = "//th[@id='0_0Hdr4']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Invoice Qty')]";
+	public final String AD02010_ITEM= "//th[@id='0_0Hdr7']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Item')]";
 
+
+//Page object for AD02013	
+	public final String AD02013_STATUS="//th[@id='0_41Hdr6']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Status')]";
+	
+//Page object for AD03001	
+	public final String AD03001_RCPT_STORE = "//input[starts-with(@name,'RCPT-STORE_')]";
+	public final String AD03001_CHK_SELRPT= "//div[1]/table/tbody/tr/td[2]/input[1]";
+	
+//Page object for AD09004 & AD09005
+	public final String AD09004_CLSFCTN = "//input[starts-with(@name,'CLSFCTN_')]";
+	public final String AD09004_DESC = "//input[contains(@name,'DESCR_')][1]";
+	
+	public final String AD09005_CLSFCTN_STRU = "//input[contains(@name,'CLSFCTN-STRUC_')]";
+	
+	public final String AD09005_PRNT_CLSFCTN = "//input[contains(@name,'PRNT-CLSFCTN_')]";
+	
+//Page object for AD05001
+	public final String AD05001_FETCH= "//button[starts-with(@class,'button roundedbutton')][@value='Fetch']";
+	public final String AD05001_FETCH_DOC= "//input[starts-with(@name,'FETCH-DOC_')]";
+	public final String AD05001_FETCH_LINE= "//input[starts-with(@name,'FETCH-LINE_')]";
+
+//Page object for AD10001
+	public final String AD10001_SYSREF= "//th[@id='0_0Hdr0']/..//div[contains(@class,'dojoxGridColCaption') and (text()='System Ref.')]";
+	public final String AD10001_SUPP= "//th[@id='0_0Hdr1']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Supplier')]";
+	public final String AD10001_TRANREF= "//th[@id='0_0Hdr2']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Transaction Ref.')]";
+	public final String AD10001_TRANDT= "//th[@id='0_0Hdr3']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Tran Date')]";
+	public final String AD10001_GRSAMT= "//th[@id='0_0Hdr4']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Gross Amount')]";
+	public final String AD10001_TXAMT= "//th[@id='0_0Hdr5']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Tax Amount')]";
+	
+	
+	
+	
+	
+	
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02013_Create_Service_OrderTest>
+<Verification1>22/08/2017 02:54:58 | Pass : Login page displayed</Verification1>
+<Verification2>22/08/2017 02:55:06 | Pass : Command line displayed</Verification2>
+<Verification3>22/08/2017 02:55:48 | Pass : Currency search page displayed</Verification3>
+</AD02013_Create_Service_OrderTest>
+</TestCase>
+</SeleniumTestReport>

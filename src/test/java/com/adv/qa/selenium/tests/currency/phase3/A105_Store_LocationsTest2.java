@@ -62,6 +62,7 @@ public class A105_Store_LocationsTest2 extends BaseTest{
 		
 		currencyPage.searchValue(companyId,2,1);
 			
+		currencyPage.clickOnInsert();
 		createPurchasingManagement(currencyPage,locationWarehse);
 		createPurchasingManagement(currencyPage,locationNorthITS);
 		createPurchasingManagement(currencyPage,locationSouthITS);
@@ -71,7 +72,6 @@ public class A105_Store_LocationsTest2 extends BaseTest{
 		createPurchasingManagement(currencyPage,locationSouth);
 		createPurchasingManagement(currencyPage,locationEast);
 		createPurchasingManagement(currencyPage,locationWest);
-
 			
 		/*Exit from the batch details page*/
 		currencyPage.clickOnCancel();
@@ -89,29 +89,25 @@ public class A105_Store_LocationsTest2 extends BaseTest{
 
 		
 private void createPurchasingManagement(CurrencyPage currencyPage,List<String> location) throws InterruptedException{
-		/*Verify new standard text in the list*/
-		if(!currencyPage.verifyValues(location.get(0)))
-		
-		{	
-			currencyPage.clickOnInsert();
 			
+	
 			boolean update  = currencyPage.enterLocationCodeDetails(location);	
+			String SuccMessage = "The previously-requested action has been performed";
 			
 			if(update == true){
 				
 				currencyPage.clickOnUpdate();
 				
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Pass : New purchasing management location "+location.get(0)+ " displayed in the list");
-			}	
-		}
+				Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New purchasing management location "+location.get(0), "created successfully");
+				
+				}
+		
 			
 		else{
-				testcases.add(getCurreentDate()+" | Pass : New purchasing management location "+location.get(0)+ " displayed in the list");
+				testcases.add(getCurreentDate()+" | Pass : New purchasing management location "+location.get(0)+ " Already Created");
 		
 			}
-}
+		}
 	
 //	private void createPurchasingManagement(CurrencyPage currencyPage,List<String> location) throws InterruptedException{
 //		String message = "The previously-requested action has been performed";

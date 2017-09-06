@@ -69,6 +69,7 @@ public class A094_Business_Event_Manager_ObjectsTest extends BaseTest{
 	
 	/*Create elements for Supplier*/
 	private void addBusinessEvent(CurrencyPageNew currencyPage,List<String> businessEvent){
+	
 		String SuccMessage = "The previously-requested action has been performed";
 
 		currencyPage.searchValue(businessEvent.get(0), 1, 0);

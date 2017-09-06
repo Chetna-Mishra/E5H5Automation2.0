@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD10001_Log_Single_InvoiceTest>
+<Verification1>01/09/2017 05:09:27 | Pass : Login page displayed</Verification1>
+<Verification2>01/09/2017 05:09:40 | Pass : Command line displayed</Verification2>
+<Verification3>01/09/2017 05:10:03 | Fail : Currency search page not displayed</Verification3>
+</AD10001_Log_Single_InvoiceTest>
+</TestCase>
+</SeleniumTestReport>

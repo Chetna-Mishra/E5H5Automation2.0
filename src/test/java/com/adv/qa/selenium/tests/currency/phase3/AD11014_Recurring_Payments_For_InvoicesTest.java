@@ -80,7 +80,7 @@ public class AD11014_Recurring_Payments_For_InvoicesTest extends BaseTest{
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
 		String currDate = dateFormat1.format(currentMonth.getTime());
 			
-		currencyPage.enterTransactionDetails(invoiceDetails,currDate,currDate);
+		currencyPage.enterTransactionDetails(invoiceDetails,"null","null");
 		
 		currencyPage.clickOnAcceptWarn();
 		

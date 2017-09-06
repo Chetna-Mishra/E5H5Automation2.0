@@ -1,7 +1,5 @@
 package com.adv.qa.selenium.tests.currency.phase3;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,15 +11,18 @@ import com.adv.qa.selenium.framework.pageObjects.LoginPage;
 import com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPageNew;
 import com.adv.qa.selenium.helpers.DataResource;
 import com.adv.qa.selenium.helpers.DataRow;
+import com.adv.qa.selenium.tests.currency.phase3.AD02009_Goods_ReceivingTest;
 
 /**
- * @author              :   Draxayani
+ * @author              :   Draxayani/Chetna
  * Test Reference No	: 	AD02010 Invoice Creation for Order
  * Purpose              :   Create Stock Adjustment In 
  * ACCESS               :   GBB
+ * Modified Date		:   Modified by Chetna/Dt: 18-Aug-2017
  */
 
 public class AD02010_Invoice_Creation_For_OrderTest extends BaseTest{
+		
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -33,6 +34,7 @@ public class AD02010_Invoice_Creation_For_OrderTest extends BaseTest{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
 		
+		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
 		
@@ -42,6 +44,7 @@ public class AD02010_Invoice_Creation_For_OrderTest extends BaseTest{
 		
 		/*Navigate to currency page Home page e5 application*/
 		CurrencyPageNew currencyPage = new CurrencyPageNew(driver);
+		
 		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
@@ -53,54 +56,53 @@ public class AD02010_Invoice_Creation_For_OrderTest extends BaseTest{
 		reviewBatches(currencyPage, dataRow);
 								
 		currencyPage.logOut(2);
+		
 	}
+	
 
-	private void createInvoice(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+	private void createInvoice (CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+		
 		String code = "EDTGBTCH ACT=INSERT,CMPY="+companyId+",TRAN=1";
+		
+		String Ordernumber = AD02009_Goods_ReceivingTest.getGlOrderNumber();
+		
+//		String Ordernumber = "0000000001";
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> transactionDetails = dataRow.findNamesReturnValues("transactionDetails");
 		List<String> invoiceDetails = dataRow.findNamesReturnValues("invoiceDetails");
 		List<String> invoiceDetailLines = dataRow.findNamesReturnValues("invoiceDetailLines");
 		
-		String message = "Batch Number has been created with sysref";
-		
-		currencyPage.isCommandDisplayed();
+		String message = "Batch number 1 has been created";
+	
 		
 		currencyPage.fillCurrenceyCode(code);
 		
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Enter Transaction Batch Header","Currency search page","displayed");
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Enter Transaction Batch Header","Transaction Batch Header","Page displayed");
 		
 		currencyPage.enterInvoice(transactionDetails,"Transaction");
 		
 		currencyPage.clickOnNewTransaction();
 		
 		Assert.assertTrue(testcases,currencyPage.getTableHeader().contains("Transaction Header"),"Transaction page","displayed");
-		
-	    Calendar currentMonth = Calendar.getInstance();
-	    SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-	    String currDate = dateFormat1.format(currentMonth.getTime());
-		
-		currencyPage.enterTransactionDetails(invoiceDetails,currDate,"null");
+
+		currencyPage.enterTransactionWithOdr(invoiceDetails,Ordernumber, "null");
 		
 		currencyPage.clickOnLines();//currencyPage.clickOnButton(98);
 		
-		currencyPage.enterInvoiceDetails(invoiceDetailLines);
+		boolean enterInvoiceDetails = currencyPage.enterInvoiceDetails(invoiceDetailLines);
+		Assert.assertTrue(testcases,enterInvoiceDetails,"Transaction Details are "," as expected");
 		
-		currencyPage.clickOnAcceptWarn();
-		
+		currencyPage.ClickOnSelectAllFooter();
 		currencyPage.clickOnUpdate();
 				
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
 		
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Invoice created successfully "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Invoice not created");
-		}		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
 		
+	
 		currencyPage.clickOnReturnButton();
 		
 		currencyPage.isCommandDisplayed();
@@ -118,11 +120,11 @@ public class AD02010_Invoice_Creation_For_OrderTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Journal List","Journey search page","displayed");
 		
-		currencyPage.search(companyId, 4, 0);
+		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnSections(1);
+		currencyPage.clickOnEXTSections();
 		
-		currencyPage.search(searchValue.get(0), 16, 5);
+		currencyPage.searchValue(searchValue.get(0), 16, 5);
 		
 		currencyPage.sortValues();
 		
@@ -137,10 +139,13 @@ public class AD02010_Invoice_Creation_For_OrderTest extends BaseTest{
 		
 		boolean batchDetailsPde2 = currencyPage.verifyJournalDetails(2, pdeBatchDetails2);
 		Assert.assertTrue(testcases,batchDetailsPde2,"PDE Batch values are "," as expected");
+
 		
-		currencyPage.clickOnButton(16);
+		currencyPage.clickOnCancel();	
 		
-		currencyPage.search(searchValue.get(1), 16, 5);
+		currencyPage.clickOnEXTSections();
+		
+		currencyPage.searchValue(searchValue.get(1), 16, 5);
 		
 		currencyPage.sortValues();
 		

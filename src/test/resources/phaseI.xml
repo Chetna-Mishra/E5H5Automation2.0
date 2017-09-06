@@ -3,29 +3,39 @@
  <!-- 
 	 @author : Chetna
 	 Purpose : Batch execution of testcases from A001A - A042
-  --> 
+
+   <listeners>
+    <listener class-name="com.adv.qa.selenium.helpers.MyAnnotationTransformer" />
+  </listeners>
+  -->
+  
 
 
-    <test name="suite1" preserve-order="true" time-out="8000000" enabled="false" >
+    <test name="suite1" preserve-order="true" time-out="8000000" enabled="true">
     	<classes>
-
-    		 <class name="com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest"/>
-			 <class name="com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest"/>
-       		 <class name="com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest"/>
+    	
+    	 <class name="com.adv.qa.selenium.tests.currency.A001A_On_line_AuditingTest"/>
+  		 
     	</classes>
   	 </test> 
    	 
       <test name="suite2" preserve-order="true" time-out="8000000" enabled="false">
-    	<classes>      		
-    	
+    	<classes>
+    	  		 <class name="com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest"/>
+    		
+ 		<class name="com.adv.qa.selenium.tests.currency.A001_Switch_Intra_Company_Accounting_OnTest"/>	 
+ 			 <class name="com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest"/>
+       		 <class name="com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest"/>
+       		 <class name="com.adv.qa.selenium.tests.currency.A006_Company_DefinitionTest"/> 
+ 			 <class name="com.adv.qa.selenium.tests.currency.A002_Currency_DescriptionTest"/>
        		 <class name="com.adv.qa.selenium.tests.currency.A003_Currency_Base_NonBase_RelationshipsTest"/>
        		 <class name="com.adv.qa.selenium.tests.currency.A006_Company_DefinitionTest"/>
-     	</classes>
+      	</classes>
   	 </test>
   	    	   
     <test name="suite3" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      	
-    	     <class name="com.adv.qa.selenium.tests.currency.A004A_Rate_Type_Currency_ExchangeTest"/>
+    		 <class name="com.adv.qa.selenium.tests.currency.A004A_Rate_Type_Currency_ExchangeTest"/>
        		 <class name="com.adv.qa.selenium.tests.currency.A004_Currency_Exchange_Rate_TypesTest"/>
        		 <class name="com.adv.qa.selenium.tests.currency.A005_Currency_Exchange_RatesTest"/> 	
     	</classes>
@@ -42,20 +52,19 @@
     <test name="suite5" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      	
     	    <class name="com.adv.qa.selenium.tests.currency.A011_UsersTest"/>
-    
+     		 <class name="com.adv.qa.selenium.tests.currency.A012_CalendarsTest"/>   
 		  </classes>
   	 </test>  
   	 
   	   <test name="suite6" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>
-    		    <class name="com.adv.qa.selenium.tests.currency.A012_CalendarsTest"/>   
-    	 
+    		   <class name="com.adv.qa.selenium.tests.currency.A013_Fiscal_CalendarTest"/>
        	</classes>
   	 </test>  
  
      <test name="suite7" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      	
-    	  	 <class name="com.adv.qa.selenium.tests.currency.A013_Fiscal_CalendarTest"/>
+    	  	
        		 <class name="com.adv.qa.selenium.tests.currency.A014_Account_Code_DefinitionTest"/>
        		 <class name="com.adv.qa.selenium.tests.currency.A015_BalanceSheetTest"/>
 
@@ -79,7 +88,7 @@
 	  	  
     <test name="suite10" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      		
-    		 <class name="com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals"/>
+    		<class name="com.adv.qa.selenium.tests.currency.A018_Ledger_Control_Nominals"/>
        		<class name="com.adv.qa.selenium.tests.currency.A018A_Ledger_Control_Nominals"/>
        	 </classes>
   	</test>
@@ -95,7 +104,7 @@
   	<test name="suite12" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>  
  		     	<class name="com.adv.qa.selenium.tests.currency.A018D_Ledger_Control_Nominals"/>
-       		<class name="com.adv.qa.selenium.tests.currency.A018E_Ledger_Control_Nominals"/>
+       			<class name="com.adv.qa.selenium.tests.currency.A018E_Ledger_Control_Nominals"/>
        	 </classes>
   	</test>
   	
@@ -110,18 +119,15 @@
   	  <test name="suite14" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      	      
     	     <class name="com.adv.qa.selenium.tests.currency.A019_Ledger_Control_and_Management_CodeTest"/>
-    	      <class name="com.adv.qa.selenium.tests.currency.A019A_Ledger_Control_and_Management_CodeTest"/>
-    	     
        		 <class name="com.adv.qa.selenium.tests.currency.A020_Ledger_Control_AccountsTest"/>    		
        		 <class name="com.adv.qa.selenium.tests.currency.A021_Batch_TypesTest"/>
        		 <class name="com.adv.qa.selenium.tests.currency.A022_Balance_ClassesTest"/>     
        		 <class name="com.adv.qa.selenium.tests.currency.A023_Company_ControlsTest"/>
-       		 
-   	 	</classes>
+       	</classes>
   	</test>
-  	
-  	    <test name="suite15" preserve-order="true" time-out="8000000" enabled="false">
+  	<test name="suite15" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      	     
+    		 <class name="com.adv.qa.selenium.tests.currency.A018G_Ledger_Control_Nominals"/>
        	 	 <class name="com.adv.qa.selenium.tests.currency.A024_Batch_TypesTest"/> 	    	       		 
        		 <class name="com.adv.qa.selenium.tests.currency.A024A_Batch_TypesTest"/> 
        		  <class name="com.adv.qa.selenium.tests.currency.A024B_Batch_TypesTest"/> 
@@ -153,6 +159,7 @@
   	 </test>  	     	 
      <test name="suite19" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      		
+    		<class name="com.adv.qa.selenium.tests.currency.A032_Management_Code_and_PathKeyNewParetTest"/>
     	 	<class name="com.adv.qa.selenium.tests.currency.A033_Analysis_CodeTest"/>    
     	  	 <class name="com.adv.qa.selenium.tests.currency.A035_Structure_RebuildTest"/>
     		 <class name="com.adv.qa.selenium.tests.currency.A036_BTZ_Elements_For_ICA_StructureTest"/>
@@ -162,15 +169,18 @@
 
      <test name="suite20" preserve-order="true" time-out="8000000" enabled="false">
     	<classes>      		    	    
+    		<class name="com.adv.qa.selenium.tests.currency.A035_Structure_RebuildTest"/>
     		 <class name="com.adv.qa.selenium.tests.currency.A038_Process_EP2Test"/>
-       		 <class name="com.adv.qa.selenium.tests.currency.A039_EnquiryTest"/>
-       		 	<class name="com.adv.qa.selenium.tests.currency.A040_ICA_Data_EntryTest"/>
-       		 <class name="com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest"/>
+       		
+       		 
         </classes>
   	 </test>
 
      <test name="suite21" preserve-order="true" time-out="8000000" enabled="false">
-    	<classes>      		    	    
+    	<classes>      		    	
+    	 <class name="com.adv.qa.selenium.tests.currency.A039_EnquiryTest"/>    
+    		<class name="com.adv.qa.selenium.tests.currency.A040_ICA_Data_EntryTest"/>
+       		 <class name="com.adv.qa.selenium.tests.currency.A041_Group_Category_And_Structure_PostingsTest"/>
  		<class name="com.adv.qa.selenium.tests.currency.phase3.A118_StopandStartExecutorsTest"/>
         </classes>
   	 </test>
@@ -185,7 +195,8 @@
     	       		-No need to Execute A042_Period_End_Test as The period is already 12 and no need to close
     	       		-No need to execute A034 Nominals, Added in A018
     	       		-No need to execute A016A_Normal_Balance_Sheet_GroupsTest, added in A016
-    	       		-No Need to execute A032 and A032A, Added in A019_Ledger_Control_and_Management_CodeTest
+    	       		-No Need to execute A032_Management_CodesOldTest Added in A019_Ledger_Control_and_Management_CodeTest
+    	       		-No Need to execute A032A_PathKeyNewParentOldTest Added in A032_Management_Code_and_PathKeyNewParetTest
     	    suite21, is created to execute Failed test cases
     	</classes>
   	 </test>

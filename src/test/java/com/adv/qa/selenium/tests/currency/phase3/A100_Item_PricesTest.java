@@ -103,38 +103,43 @@ public class A100_Item_PricesTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 				
-		verifySupplierItem(currencyPage,item525);
-		verifySupplierItem(currencyPage,item626);
-		verifySupplierItem(currencyPage,item325);
-		verifySupplierItem(currencyPage,item335);
-		verifySupplierItem(currencyPage,item160);
+//		verifySupplierItem(currencyPage,item525);
+//		verifySupplierItem(currencyPage,item626);
+//		verifySupplierItem(currencyPage,item325);
+//		verifySupplierItem(currencyPage,item335);
+//		verifySupplierItem(currencyPage,item160);
 			
 		currencyPage.logOut(2);
 	}
 	
 	private void createSupplierForItem(CurrencyPageNew currencyPage,List<String> item){
 	
-		
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.insertItemPrice(companyId,item);
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
-		}
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New Item price "+item.get(1), "created successfully");
+			
+			}
+		
 		else{
 			testcases.add(getCurreentDate()+" | Pass : New Item price "+item.get(1)+ " displayed in the list");
+		
 		}
 	}
 	
-	private void verifySupplierItem(CurrencyPageNew currencyPage,List<String> item){
-		/*Verify new item supplier in the list*/
-		if(currencyPage.verifyValues(item.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New item price "+item.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New item price "+item.get(1)+ " not displayed in the list");
-		}
-
-	}
+//	private void verifySupplierItem(CurrencyPageNew currencyPage,List<String> item){
+//		/*Verify new item supplier in the list*/
+//		if(currencyPage.verifyValues(item.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New item price "+item.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New item price "+item.get(1)+ " not displayed in the list");
+//		}
+//
+//	}
 	
 	
 	@AfterClass (alwaysRun = true)

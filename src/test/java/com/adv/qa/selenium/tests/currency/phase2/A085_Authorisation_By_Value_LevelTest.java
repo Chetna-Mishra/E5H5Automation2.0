@@ -70,17 +70,13 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-//		verifyValues(currencyPage,apLev1,"AP");
-//		verifyValues(currencyPage,apLev2,"AP");
-//		verifyValues(currencyPage,apLev3,"AP");
-//		verifyValues(currencyPage,apLev4,"AP");
-		
 		currencyPage.clickOnCancel();
 		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Auth Definition Value Level -","Currency search page","displayed");
 		
@@ -91,14 +87,10 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		createStructureAuthorisers(currencyPage,pmLev1,2);
 		createStructureAuthorisers(currencyPage,pmLev2,2);
 		createStructureAuthorisers(currencyPage,pmLev3,2);
-		createStructureAuthorisers(currencyPage,pmLev4,2);//Need to check
+		createStructureAuthorisers(currencyPage,pmLev4,2);
 		
 		currencyPage.clickOnCancel();
 		
-//		verifyValues(currencyPage,pmLev1,"PM");
-//		verifyValues(currencyPage,pmLev2,"PM");
-//		verifyValues(currencyPage,pmLev3,"PM");
-//		verifyValues(currencyPage,pmLev4,"PM");
 
 		currencyPage.logOut(2);
 	}
@@ -108,6 +100,7 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		String SuccMessage = "The previously-requested action has been performed";
 		
 		boolean update = false;
+		
 		if(i == 1){		
 			update = currencyPage.enterValueLevelAuthForAP(authoriser);
 		}
@@ -124,19 +117,10 @@ public class A085_Authorisation_By_Value_LevelTest extends BaseTest{
 		}
 		
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New authorisers "+authoriser.get(1)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : Authorisers "+authoriser.get(1)+ " already created");
 		}
 	}
 	
-//	private void verifyValues(CurrencyPage currencyPage,List<String> authoriser,String level){		
-//		/*Verify New authorizers displayed in the list*/
-//		if(currencyPage.verifyValues(authoriser.get(1))){
-//			testcases.add(getCurreentDate()+" | Pass : New "+level+" authorisers "+authoriser.get(1)+ " displayed in the list");
-//		}
-//		else{
-//			testcases.add(getCurreentDate()+" | Fail : New "+level+" authorisers "+authoriser.get(1)+ " not displayed in the list");
-//		}
-//	}
 
 
 	

@@ -17,6 +17,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * Test Reference No	: 	AD03016 Period End 
  * Purpose              :   Close Current Period. 
  * ACCESS               :   EYB
+ * Modified Date		:   Modified by Chetna/Dt: 24-Aug-2017 
  */
 
 public class AD03016_Period_EndTest extends BaseTest{
@@ -58,11 +59,12 @@ public class AD03016_Period_EndTest extends BaseTest{
 	}
 	
 	private List<String> getPerodAndYear(CurrencyPageNew currencyPage,String currencyCode) throws InterruptedException{
+		
 		currencyPage.fillCurrenceyCode(currencyCode);
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Period and Year End List","Currency search page","displayed");
 		
-		currencyPage.search(companyId,5,3);
+		currencyPage.searchValue(companyId,5,3);
 		
 		return currencyPage.getPeriodAndYear();
 				
@@ -79,10 +81,10 @@ public class AD03016_Period_EndTest extends BaseTest{
 			
 			Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - POP Company Controls Edit","Currency search page","displayed");
 				
-			List<String> companyControls = currencyPage.getCompanyControl(15, 16,1);
+			List<String> companyControls = currencyPage.getCompanyControl();
 			
-			Assert.assertTrue(testcases,companyControls.get(0).equals(periodAndYear.get(0)),"Period and year of PM company control is "," as expected");
-			Assert.assertTrue(testcases,companyControls.get(1).equals(periodAndYear.get(1)),"Period and year of PM company control is "," as expected");
+			Assert.assertTrue(testcases,companyControls.get(0).equals(periodAndYear.get(0)),"Period of PM company control is "," as expected");
+			Assert.assertTrue(testcases,companyControls.get(1).equals(periodAndYear.get(1)),"Year of PM company control is "," as expected");
 
 			currencyPage.clickOnCancel();
 
@@ -94,10 +96,10 @@ public class AD03016_Period_EndTest extends BaseTest{
 			
 			Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - IM Company Controls Edit","Currency search page","displayed");
 		
-			List<String> companyIMControls = currencyPage.getCompanyControl(4, 5, 1);
+			List<String> companyIMControls = currencyPage.getCompanyControl();
 			
-			Assert.assertTrue(testcases,companyIMControls.get(0).equals(periodAndYear.get(0)),"Period and year of IM company control is "," as expected");
-			Assert.assertTrue(testcases,companyIMControls.get(1).equals(periodAndYear.get(1)),"Period and year of IM company control is "," as expected");
+			Assert.assertTrue(testcases,companyIMControls.get(0).equals(periodAndYear.get(0)),"Period of IM company control is "," as expected");
+			Assert.assertTrue(testcases,companyIMControls.get(1).equals(periodAndYear.get(1)),"Year of IM company control is "," as expected");
 
 			currencyPage.clickOnCancel();
 			
@@ -111,14 +113,15 @@ public class AD03016_Period_EndTest extends BaseTest{
 			
 			Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(3)+" - AP Company Controls List","Currency search page","displayed");
 			
-			currencyPage.search(companyId,1,0);
+			currencyPage.searchValue(companyId, 1, 0);
+			
 
 			currencyPage.clickOnAmend();
 			
-			List<String> companyAPControls = currencyPage.getCompanyControl(75, 76,8);
+			List<String> companyAPControls = currencyPage.getCompanyControl();
 			
-			Assert.assertTrue(testcases,companyAPControls.get(0).equals(periodAndYear.get(0)),"Period and year of AP company control is "," as expected");
-			Assert.assertTrue(testcases,companyAPControls.get(1).equals(periodAndYear.get(1)),"Period and year of AP company control is "," as expected");
+			Assert.assertTrue(testcases,companyAPControls.get(0).equals(periodAndYear.get(0)),"Period of AP company control is "," as expected");
+			Assert.assertTrue(testcases,companyAPControls.get(1).equals(periodAndYear.get(1)),"Year of AP company control is "," as expected");
 
 			currencyPage.clickOnCancel();
 			

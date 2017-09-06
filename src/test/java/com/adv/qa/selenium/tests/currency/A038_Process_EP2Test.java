@@ -46,7 +46,7 @@ public class A038_Process_EP2Test extends BaseTest{
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
-		currencyPage.fillCurrenceyCode(ep2ProcessList.get(0));
+		currencyPage.fillCurrenceyCode(ep2ProcessList.get(0));//Failed
 		
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+ep2ProcessList.get(1)+" - Postings Rebuild Parameters","Structure Rebuild page","displayed");
@@ -90,27 +90,6 @@ public class A038_Process_EP2Test extends BaseTest{
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){
 		super.tearDown();
@@ -122,7 +101,7 @@ public class A038_Process_EP2Test extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "E5H5.xml";
 		String[] nodeID = { "A038" };
-		String [] selectedNames = {"userName","passWord","code","process","processList"};
+		String [] selectedNames = {"userName","passWord","code","process","ep2ProcessList"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	

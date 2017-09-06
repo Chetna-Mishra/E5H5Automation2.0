@@ -91,33 +91,7 @@ public class A095_Business_Event_Manager_Program_V_EventTest extends BaseTest{
 		
 		}
 	
-		
-//		
-//		
-//		/*Verify new circulation code type in the list*/
-//		if(!currencyPage.verifyValues(program1.get(0))){
-//			currencyPage.clickOnInsert();
-//			
-//			currencyPage.createProgramEvent(program);
-//			
-//			currencyPage.clickOnUpdate();
-//			
-//			currencyPage.clickOnCancel();
-//						
-//			if(currencyPage.verifyValues(program.get(0))){
-//				testcases.add(getCurreentDate()+" | Pass : Program event "+program.get(0)+ " present in grid");
-//			}
-//			else{
-//				testcases.add(getCurreentDate()+" | Fail : Program event "+program.get(0)+ "not present in grid");
-//			}
-//			
-//		}
-//		else{
-//			testcases.add(getCurreentDate()+" | Pass : Program event "+program.get(0)+ " present in grid");
-//		}
-//		
-//		currencyPage.logOut(2);
-//	}
+
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

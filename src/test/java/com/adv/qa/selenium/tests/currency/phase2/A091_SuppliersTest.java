@@ -13,7 +13,7 @@ import com.adv.qa.selenium.helpers.DataResource;
 import com.adv.qa.selenium.helpers.DataRow;
 
 /**
- * @author              :   Draxayani
+ * @author              :   Draxayani/Chetna
  * Test Reference No	: 	A091 Suppliers
  * Purpose              :   Amend Purchasing Management Company Controls for Authorisation and Update Doc Codes.
  * Date					:   24-06-2014/Modified on 04-May-2017

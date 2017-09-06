@@ -66,27 +66,27 @@ public class A106_Inventory_Store_ControlTest extends BaseTest{
 		createTransitStore(currencyPage,eastITS,currencyCode);		
 		createTransitStore(currencyPage,westITS,currencyCode);
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
-		currencyPage.ClickOnAnyButton("OK", 1);
-		WaitHelper.waitAdditional(2);
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		currencyPage.ClickOnAnyButton("OK", 1);
+//		WaitHelper.waitAdditional(2);
 		
-		verifyValues(currencyPage,warehseStore);
-		verifyValues(currencyPage,northStore);
-		verifyValues(currencyPage,southStore);
-		verifyValues(currencyPage,eastStore);
-		verifyValues(currencyPage,westStore);
-		verifyValues(currencyPage,southITS);
-		verifyValues(currencyPage,northITS);
-		verifyValues(currencyPage,eastITS);
-		verifyValues(currencyPage,westITS);
+//		verifyValues(currencyPage,warehseStore);
+//		verifyValues(currencyPage,northStore);
+//		verifyValues(currencyPage,southStore);
+//		verifyValues(currencyPage,eastStore);
+//		verifyValues(currencyPage,westStore);
+//		verifyValues(currencyPage,southITS);
+//		verifyValues(currencyPage,northITS);
+//		verifyValues(currencyPage,eastITS);
+//		verifyValues(currencyPage,westITS);
 				
-		currencyPage.logOut(2);
+		currencyPage.logOut(1);
 	}
 	
 	
 	private void createInventoryStoreControl(CurrencyPageNew currencyPage,List<String> elements, List<String> currencyCode) throws InterruptedException{
 		String code = "EDTHSTORE ACT=INSERT,CMPY="+companyId;
-		
+		String SuccMessage = "The previously-requested action has been performed";
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
@@ -96,15 +96,35 @@ public class A106_Inventory_Store_ControlTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Store Controls Edit","Currency search page","displayed");
 		
 		/*Create inventory store*/
-		currencyPage.insertInventoryStore(elements);	
 		
+		boolean update= currencyPage.insertInventoryStore(elements);	
+		
+		if(update==true)
+		
+		{
 		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New inventory store Inventory "+elements.get(0), "created successfully");
+	
+		}
+		
+		else{
+			
+			testcases.add(getCurreentDate()+" | Pass : New inventory Store "+elements.get(0)+ " already created");
+			
+			currencyPage.clickOnCancel();
+			
+			currencyPage.isConfirmPopUpDisplayed();
+			
+		}
 		
 		currencyPage.isCommandDisplayed();
 		
 	}
 	
 	private void createTransitStore(CurrencyPageNew currencyPage,List<String> elements,List<String> currencyCode) throws InterruptedException{
+		String SuccMessage = "The previously-requested action has been performed";
+		
 		String code = "EDTHSTORE ACT=INSERT,CMPY="+companyId;
 
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
@@ -119,13 +139,18 @@ public class A106_Inventory_Store_ControlTest extends BaseTest{
 		if(update == true){
 			currencyPage.clickOnUpdate();
 			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New transit store "+elements.get(0), "created successfully");	
+			
 		}
 		else{
+			
+			testcases.add(getCurreentDate()+" | Pass : New Store "+elements.get(0)+ " displayed in the list");
+			
 			currencyPage.clickOnCancel();
 			
 			currencyPage.isConfirmPopUpDisplayed();
 			
-			testcases.add(getCurreentDate()+" | Pass : New Store "+elements.get(0)+ " displayed in the list");
+			
 		}	
 		
 		currencyPage.isCommandDisplayed();
@@ -133,18 +158,18 @@ public class A106_Inventory_Store_ControlTest extends BaseTest{
 	}
 	
 	
-private void verifyValues(CurrencyPageNew currencyPage,List<String> Store) throws InterruptedException{
-		
-		/*Verify new standard text in the list*/
-		if(currencyPage.verifyValues(Store.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New Store "+Store.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New Store "+Store.get(0)+ " not displayed in the list");
-		}
-		
-		
-	}
+//private void verifyValues(CurrencyPageNew currencyPage,List<String> Store) throws InterruptedException{
+//		
+//		/*Verify new standard text in the list*/
+//		if(currencyPage.verifyValues(Store.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New Store "+Store.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New Store "+Store.get(0)+ " not displayed in the list");
+//		}
+//		
+//		
+//	}
 	
 	
 	

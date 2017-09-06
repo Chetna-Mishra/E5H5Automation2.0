@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD09006_Item_ClassificationTest>
+<Verification1>29/08/2017 12:16:19 | Pass : Login page displayed</Verification1>
+<Verification2>29/08/2017 12:16:28 | Pass : Command line displayed</Verification2>
+<Verification3>29/08/2017 12:16:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>29/08/2017 12:18:04 | Pass : Classification DV-626D  amended successfully</Verification4>
+</AD09006_Item_ClassificationTest>
+</TestCase>
+</SeleniumTestReport>

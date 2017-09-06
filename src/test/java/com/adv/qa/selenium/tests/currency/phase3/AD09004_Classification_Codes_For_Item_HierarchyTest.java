@@ -17,6 +17,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD09004 Classification Codes for Item Hierarchy 
  * Purpose              :   Create Classification Codes for Item Hierarchy 
+ * Modified Date		:   Modified by Chetna/Dt: 28-Aug-2017
  * ACCESS               :   AT2
  */
 
@@ -61,11 +62,7 @@ public class AD09004_Classification_Codes_For_Item_HierarchyTest extends BaseTes
 		createSecurityGroups(currencyPage,classificationCodeMid);
 		
 		currencyPage.clickOnCancel();
-		
-		verifyValues(currencyPage,classificationCodeBud);
-		verifyValues(currencyPage,classificationCodeHigh);
-		verifyValues(currencyPage,classificationCodeMid);
-	
+
 		currencyPage.logOut(2);
 	}
 	
@@ -74,23 +71,21 @@ public class AD09004_Classification_Codes_For_Item_HierarchyTest extends BaseTes
 		
 		boolean update = currencyPage.createClassificationCode(elements);
 		
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		
 		if(update == true){
-			currencyPage.clickOnUpdate();		
+			
+		currencyPage.clickOnUpdate();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New classification code "+elements.get(0)," created successfully");
+		
 		}	
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New classification code "+elements.get(0)+ " displayed in the list");
+			
+			testcases.add(getCurreentDate()+" | Pass : New classification code "+elements.get(0)+ " already created");
 		}
 	}
-	
-	private void verifyValues(CurrencyPage currencyPage,List<String> classification){
-		
-		if(currencyPage.verifyValues(classification.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New classification code "+classification.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New classification code "+classification.get(0)+ " not displayed in the list");
-		}
-	}
+
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

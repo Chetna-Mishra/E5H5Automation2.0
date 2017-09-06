@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A018G_Ledger_Control_Nominals>
+<Verification1>04/08/2017 02:00:46 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:00:54 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:01:11 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:01:45 | Pass : New ledger control 5100 already created</Verification4>
+<Verification5>04/08/2017 02:01:59 | Pass : New ledger control 6200 already created</Verification5>
+<Verification6>04/08/2017 02:02:57 | Pass : New ledger control SONY created successfully</Verification6>
+<Verification7>04/08/2017 02:03:55 | Pass : New ledger control PION created successfully</Verification7>
+<Verification8>04/08/2017 02:04:53 | Pass : New ledger control TOSH created successfully</Verification8>
+<Verification9>04/08/2017 02:05:52 | Pass : New ledger control PANN created successfully</Verification9>
+<Verification10>04/08/2017 02:06:50 | Pass : New ledger control WHAF created successfully</Verification10>
+<Verification11>04/08/2017 02:07:48 | Pass : New ledger control SHIN created successfully</Verification11>
+<Verification12>04/08/2017 02:08:46 | Pass : New ledger control GRUN created successfully</Verification12>
+<Verification13>04/08/2017 02:09:44 | Pass : New ledger control SAMS created successfully</Verification13>
+<Verification14>04/08/2017 02:10:42 | Pass : New ledger control HITC created successfully</Verification14>
+<Verification15>04/08/2017 02:11:40 | Pass : New ledger control AIWA created successfully</Verification15>
+<Verification16>04/08/2017 02:12:39 | Pass : New ledger control AKAI created successfully</Verification16>
+</A018G_Ledger_Control_Nominals>
+<A024_Batch_TypesTest>
+<Verification1>04/08/2017 02:14:03 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:14:11 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:14:28 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:15:25 | Pass : New batch type TRN created successfully</Verification4>
+<Verification5>04/08/2017 02:16:02 | Pass : New batch type REVV created successfully</Verification5>
+<Verification6>04/08/2017 02:16:38 | Pass : New batch type BASE created successfully</Verification6>
+<Verification7>04/08/2017 02:17:14 | Pass : New batch type ACCR created successfully</Verification7>
+<Verification8>04/08/2017 02:17:50 | Pass : New batch type FORN created successfully</Verification8>
+<Verification9>04/08/2017 02:18:27 | Pass : New batch type FRNB created successfully</Verification9>
+<Verification10>04/08/2017 02:19:03 | Pass : New batch type PLAN created successfully</Verification10>
+<Verification11>04/08/2017 02:19:39 | Pass : New batch type RECC created successfully</Verification11>
+</A024_Batch_TypesTest>
+<A024A_Batch_TypesTest>
+<Verification1>04/08/2017 02:21:01 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:21:09 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:21:26 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:22:23 | Pass : New batch type BR1 created successfully</Verification4>
+<Verification5>04/08/2017 02:23:00 | Pass : New batch type BR2 created successfully</Verification5>
+<Verification6>04/08/2017 02:23:36 | Pass : New batch type BR3 created successfully</Verification6>
+<Verification7>04/08/2017 02:24:12 | Pass : New batch type ACC created successfully</Verification7>
+<Verification8>04/08/2017 02:24:49 | Pass : New batch type IMGL created successfully</Verification8>
+<Verification9>04/08/2017 02:25:25 | Pass : New batch type IMG1 created successfully</Verification9>
+<Verification10>04/08/2017 02:26:02 | Pass : New batch type IMG2 created successfully</Verification10>
+<Verification11>04/08/2017 02:26:38 | Pass : New batch type IMRT created successfully</Verification11>
+<Verification12>04/08/2017 02:27:15 | Pass : New batch type IMMI created successfully</Verification12>
+</A024A_Batch_TypesTest>
+<A024B_Batch_TypesTest>
+<Verification1>04/08/2017 02:28:40 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:28:48 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:29:05 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:30:02 | Pass : New batch type IMAD created successfully</Verification4>
+<Verification5>04/08/2017 02:30:38 | Pass : New batch type IMAO created successfully</Verification5>
+<Verification6>04/08/2017 02:31:15 | Pass : New batch type IMVA created successfully</Verification6>
+<Verification7>04/08/2017 02:31:51 | Pass : New batch type IMDI created successfully</Verification7>
+<Verification8>04/08/2017 02:32:27 | Pass : New batch type IMTR created successfully</Verification8>
+<Verification9>04/08/2017 02:33:04 | Pass : New batch type IMRS created successfully</Verification9>
+<Verification10>04/08/2017 02:33:40 | Pass : New batch type IMRU created successfully</Verification10>
+<Verification11>04/08/2017 02:34:17 | Pass : New batch type IMRC created successfully</Verification11>
+<Verification12>04/08/2017 02:34:53 | Pass : New batch type IMSC created successfully</Verification12>
+</A024B_Batch_TypesTest>
+<A025_FormulaTest>
+<Verification1>04/08/2017 02:36:17 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:36:25 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:36:42 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:37:37 | Pass : New formula CAL1 created successfully</Verification4>
+<Verification5>04/08/2017 02:38:10 | Pass : New formula CAL2 created successfully</Verification5>
+<Verification6>04/08/2017 02:38:44 | Pass : New formula BS1 created successfully</Verification6>
+<Verification7>04/08/2017 02:39:17 | Pass : New formula MS1 created successfully</Verification7>
+</A025_FormulaTest>
+<A026_Layout_CodesTest>
+<Verification1>04/08/2017 02:40:40 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:40:48 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:41:05 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:42:53 | Pass : Layout code LAY1 created successfully</Verification4>
+<Verification5>04/08/2017 02:43:16 | Pass : Layout code LAY1  displayed in the list</Verification5>
+</A026_Layout_CodesTest>
+<A027_Default_StructureTest>
+<Verification1>04/08/2017 02:44:17 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:44:25 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:44:42 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:45:34 | Pass : Structure 00 created successfully</Verification4>
+<Verification5>04/08/2017 02:46:57 | Pass : Structure 00 displayed in the list</Verification5>
+</A027_Default_StructureTest>
+<A028_Default_Structure_ControlsTest>
+<Verification1>04/08/2017 02:47:59 | Pass : Login page displayed</Verification1>
+</A028_Default_Structure_ControlsTest>
+<A029_Default_Structure_ElementsTest>
+<Verification1>04/08/2017 02:53:30 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 02:53:38 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 02:53:55 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 02:54:59 | Pass : New structure element HQ created successfully</Verification4>
+<Verification5>04/08/2017 02:55:39 | Pass : New structure element NORTH created successfully</Verification5>
+<Verification6>04/08/2017 02:56:19 | Pass : New structure element SOUTH created successfully</Verification6>
+<Verification7>04/08/2017 02:56:59 | Pass : New structure element EAST created successfully</Verification7>
+<Verification8>04/08/2017 02:57:40 | Pass : New structure element WEST created successfully</Verification8>
+<Verification9>04/08/2017 02:58:20 | Pass : New structure element SUSP created successfully</Verification9>
+</A029_Default_Structure_ElementsTest>
+<A030_Security_ElementsTest>
+<Verification1>04/08/2017 03:01:39 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:01:47 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:02:04 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 03:02:57 | Pass : Security element HQ created successfully</Verification4>
+<Verification5>04/08/2017 03:04:11 | Pass : User does have access to Element HQ</Verification5>
+<Verification6>04/08/2017 03:04:27 | Pass : Command line displayed</Verification6>
+</A030_Security_ElementsTest>
+<A031_Company_ControlsTest>
+<Verification1>04/08/2017 03:05:16 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:05:24 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:05:41 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 03:06:56 | Fail : Company controls are not updated</Verification4>
+</A031_Company_ControlsTest>
+<A032_Management_Code_and_PathKeyNewParetTest>
+<Verification1>04/08/2017 03:07:17 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:07:25 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:07:43 | Pass : Currency search page displayed</Verification3>
+</A032_Management_Code_and_PathKeyNewParetTest>
+<A033_Analysis_CodeTest>
+<Verification1>04/08/2017 03:14:06 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:14:14 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:14:31 | Pass : Currency search page displayed</Verification3>
+<Verification4>04/08/2017 03:15:34 | Pass : New management code AV  created successfully</Verification4>
+<Verification5>04/08/2017 03:16:13 | Pass : New management code HiFi  created successfully</Verification5>
+</A033_Analysis_CodeTest>
+<A035_Structure_RebuildTest>
+<Verification1>04/08/2017 03:17:38 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:17:46 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:18:03 | Pass : Structure Rebuild page displayed</Verification3>
+</A035_Structure_RebuildTest>
+<A036_BTZ_Elements_For_ICA_StructureTest>
+<Verification1>04/08/2017 03:20:05 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:20:13 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:20:30 | Pass : Search page displayed</Verification3>
+</A036_BTZ_Elements_For_ICA_StructureTest>
+<A037_ICA_Default_Trading_RelationshipsTest>
+<Verification1>04/08/2017 03:22:11 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:22:19 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:22:36 | Pass : Search page displayed</Verification3>
+</A037_ICA_Default_Trading_RelationshipsTest>
+<A038_Process_EP2Test>
+<Verification1>04/08/2017 03:24:26 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:24:34 | Pass : Command line displayed</Verification2>
+</A038_Process_EP2Test>
+<A039_EnquiryTest>
+<Verification1>04/08/2017 03:24:56 | Pass : Login page displayed</Verification1>
+<Verification2>04/08/2017 03:25:04 | Pass : Command line displayed</Verification2>
+<Verification3>04/08/2017 03:25:39 | Pass : Structure Rebuild page displayed</Verification3>
+<Verification4>04/08/2017 03:26:50 | Pass : New group displayedA  in the grid</Verification4>
+<Verification5>04/08/2017 03:28:50 | Pass : New group displayedB  in the grid</Verification5>
+</A039_EnquiryTest>
+</TestCase>
+</SeleniumTestReport>

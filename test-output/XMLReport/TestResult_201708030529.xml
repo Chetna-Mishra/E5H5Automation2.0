@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001A_On_line_AuditingTest>
+<Verification1>03/08/2017 05:29:33 | Pass : Login page displayed</Verification1>
+<Verification2>03/08/2017 05:29:41 | Pass : Command line displayed</Verification2>
+<Verification3>03/08/2017 05:29:48 | Fail : Search page not displayed</Verification3>
+</A001A_On_line_AuditingTest>
+</TestCase>
+</SeleniumTestReport>

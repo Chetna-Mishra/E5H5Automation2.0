@@ -11,12 +11,12 @@ import java.util.Locale;
 public class CalenderDateTime {
 	
 	
-	private static final String dateFormat1 = "dd-MMM-yyyy";
+	private static final String dateFormat1 = "dd MMM yyyy";
 	
 	
 	/**
 <<<<<<< HEAD
-	 *  Program to return Previous System Date (dd-mm-yyyy)(System DateTime- 1 year) in the Format 01-Jan-2018
+	 *  Program to return from Date (dd mm yyyy)(System DateTime- 1 year) in the Format 01 Jan 2018
 	 * @return 
 	 */	
 	
@@ -38,7 +38,7 @@ public class CalenderDateTime {
 	 }
 	
 	/**
-	 *  Program to return Previous System Date (dd-mm-yyyy)(System DateTime- 1 year) in the Format 01-Jan-2018
+	 *  Program to return To System Date (dd-mm-yyyy)(System DateTime + 1 year) in the Format 01 Jan 2018
 	 * @return 
 	 */	
 	
@@ -61,7 +61,7 @@ public class CalenderDateTime {
 	
 	
 	/**
-	 *  Program to extract Present System Date (dd-mm-yyyy) in the Format 01-Jan-2018
+	 *  Program to extract Present System Date (dd mm yyyy) in the Format 01 Jan 2018
 	 * @return 
 	 */
 	public String Presentdate() {
@@ -119,7 +119,7 @@ public class CalenderDateTime {
 	}
 	
 	/**
-	 *  Program to extract present System year 2018+1=2018 
+	 *  Program to extract present System year 2017+1=2018 
 	 * @return 
 	 */
 	
@@ -231,6 +231,30 @@ public String calEndNextDate(int nextyear) {
 		 }
 	
 
+	/**
+	 *  Program to return To System Date + 1 month (dd-mm-yyyy)(System DateTime + 1 Month) in the Format 01 Jan 2018
+	 * @return 
+	 */	
+	
+	public Calendar presentDatePlusOneMonth(Calendar cal) {
+	
+		//	DateFormat dateFormat = new SimpleDateFormat(dateFormat1);
+			
+		   
+		    cal.add(Calendar.MONTH, 1);
+		    
+			 // Now format the date
+			// String date1= dateFormat.format(cal.getTime());
+			 
+//			 // Print the Date
+//		    System.out.println(date1);
+			 
+			 return cal; 
+		  
+	 }	
+	
+	
+	
 	}
 
 	

@@ -44,7 +44,7 @@ public class A028_Default_Structure_ControlsTest extends BaseTest {
 		CurrencyPage currencyPage = new CurrencyPage(driver);
 		
 		/*Verify command line*/
-		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
+		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");//Failed
 		
 		currencyPage.fillCurrenceyCode(currencyCode);
 		

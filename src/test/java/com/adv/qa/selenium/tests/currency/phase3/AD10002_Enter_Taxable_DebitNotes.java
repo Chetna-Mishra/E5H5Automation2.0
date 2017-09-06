@@ -16,9 +16,10 @@ import com.adv.qa.selenium.helpers.DataRow;
 
 /**
  * @author              :   Draxayani
- * Test Reference No	: 	AD10001 Log Single Invoice
+ * Test Reference No	: 	AD10002_Enter_Taxable_DebitNotes
  * Purpose              :   Create Stock Adjustment In 
- * ACCESS               :   GCA
+ * Modified Date		:   Modified by Chetna/Dt: 04-Sep-2017
+ * ACCESS               :   GCA/GBB
  */
 
 public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
@@ -33,6 +34,8 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -50,13 +53,15 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - AP Company Controls List","Currency search page","displayed");
 
-		currencyPage.search(companyId, 1, 0);
+		currencyPage.searchValue(companyId,1,0);
 		
 		currencyPage.clickOnAmend();
 		
 		currencyPage.amendAPCompanyControl(4,"Manual and Generated");
 		
 		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New account payable control "+companyId, "updated successfully");
 		
 		currencyPage.clickOnCancel();
 		
@@ -74,11 +79,11 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 	
 	private void createInvoice(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
 		String code = "EDTGBTCH ACT=INSERT,CMPY="+companyId+",TRAN=6";
-		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+	    List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> invoiceDetails = dataRow.findNamesReturnValues("invoiceDetails");
 		List<String> transactionDetails = dataRow.findNamesReturnValues("transactionDetails");
 		List<String> lineDetails = dataRow.findNamesReturnValues("lineDetails");
-		String message = "created with sysref";
+		String message = "Batch number";//Batch number 3 has been created
 		
 		currencyPage.isCommandDisplayed();
 		
@@ -91,12 +96,8 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 		currencyPage.clickOnNewTransaction();
 		
 		Assert.assertTrue(testcases,currencyPage.getTableHeader().contains("Transaction Header"),"Transaction page","displayed");
-		
-		Calendar currentMonth = Calendar.getInstance();
-		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-		String currDate = dateFormat1.format(currentMonth.getTime());
-			
-		currencyPage.enterTransactionDetails(transactionDetails,currDate,"null");
+
+		currencyPage.enterTransactionDetails(transactionDetails,"null","null");
 		
 		currencyPage.clickOnAcceptWarn();
 		
@@ -108,36 +109,29 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 		
-		if(!currencyPage.getToolContentText().contains(message)){
-			currencyPage.clickOnUpdtWarn();
-		}
-					
-		String referenceMessage = currencyPage.getToolContentText();
-		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Invoice created successfully "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Invoice not created");
-		}		
+		String referenceMessage = currencyPage.getErrorContentText();
+		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), "Invoice "+referenceMessage," created successfully");	
 		
 		currencyPage.clickOnReturnButton();
+
 	}
 
 	private void reviewBatches(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> batchDetails1 = dataRow.findNamesReturnValues("batchDetails1");
 		List<String> batchDetails2 = dataRow.findNamesReturnValues("batchDetails2");
+		List<String> batchDetails3 = dataRow.findNamesReturnValues("batchDetails3");
 					
 		currencyPage.fillCurrenceyCode(currencyCode.get(2));
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Journal List","Journey search page","displayed");
 		
-		currencyPage.search(companyId, 4, 0);
+		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnSections(1);
+		currencyPage.clickOnEXTSections();
 		
-		currencyPage.search("PDE3", 16, 5);
+		currencyPage.searchValue("PDE3", 16, 5);
 		
 		currencyPage.sortValues();
 		
@@ -151,7 +145,10 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 		Assert.assertTrue(testcases,batchDetailsValues1,"2000 batch values are "," correct");
 		
 		boolean batchDetailsValues2 = currencyPage.verifyJournalDetails(2, batchDetails2);
-		Assert.assertTrue(testcases,batchDetailsValues2,"DEN batch values are "," correct");
+		Assert.assertTrue(testcases,batchDetailsValues2,"VATA batch values are "," correct");
+		
+		boolean batchDetailsValues3 = currencyPage.verifyJournalDetails(3, batchDetails3);
+		Assert.assertTrue(testcases,batchDetailsValues3,"DEN batch values are "," correct");
 		
 		currencyPage.clickOnCancel();				
 	}
@@ -168,7 +165,7 @@ public class AD10002_Enter_Taxable_DebitNotes extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "phase3.xml";
 		String[] nodeID = { "AD10002" };
-		String [] selectedNames = {"userName","passWord","currencyCode","invoiceDetails","transactionDetails","lineDetails","batchDetails1","batchDetails2"};
+		String [] selectedNames = {"userName","passWord","currencyCode","invoiceDetails","transactionDetails","lineDetails","batchDetails1","batchDetails2","batchDetails3"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	

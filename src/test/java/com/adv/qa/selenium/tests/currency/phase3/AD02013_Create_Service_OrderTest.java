@@ -1,5 +1,7 @@
 package com.adv.qa.selenium.tests.currency.phase3;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,10 +18,27 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD02013 Create Service Order 
  * Purpose              :   Create Service Order 
+ * Modified Date		:   Modified by Chetna/Dt: 21-Aug-2017
  * ACCESS               :   DOC
  */
 
 public class AD02013_Create_Service_OrderTest extends BaseTest{
+	
+	
+	private static String glOrderNumber;
+	
+	
+	public static String getGlOrderNumber() {
+		return glOrderNumber;
+	}
+
+
+	private static void setGlOrderNumber(String glOrderNumber) {
+		AD02013_Create_Service_OrderTest.glOrderNumber = glOrderNumber;
+	}
+	
+	
+	
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -32,6 +51,7 @@ public class AD02013_Create_Service_OrderTest extends BaseTest{
 		String passWord = dataRow.get("passWord");
 		List<String> authorisor1 = dataRow.findNamesReturnValues("authorisor1");
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+		List<String> orderCode = dataRow.findNamesReturnValues("orderCode");
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -47,6 +67,10 @@ public class AD02013_Create_Service_OrderTest extends BaseTest{
 				
 		String orderNumber = createOrder(currencyPage,dataRow);
 		
+		setGlOrderNumber(orderNumber);
+		
+		/*String orderNumber= "0000000002";//Remove after use*/
+		
 		currencyPage.isCommandDisplayed();
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));
@@ -55,15 +79,19 @@ public class AD02013_Create_Service_OrderTest extends BaseTest{
 		
 		authoriseOrder(currencyPage,authorisor1,orderNumber);
 		
+		currencyPage.clickOnCancel();
+		
 		currencyPage.isCommandDisplayed();
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(0));
 				
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Order - List","Currency search page","displayed");
-
+	
 		currencyPage.searchOrder(companyId, orderNumber, 19);
 		
-		Assert.assertEquals(testcases,currencyPage.getStatus(6), "Outstanding","Serviice order status is"," Outstanding");
+		boolean verify=currencyPage.verifyStatus(7,16,orderCode);
+		
+		Assert.assertTrue(testcases,verify,"Order Status is "+orderCode.get(16)," as expected");
 		
 		currencyPage.logOut(2);
 	}
@@ -81,36 +109,37 @@ public class AD02013_Create_Service_OrderTest extends BaseTest{
 
 		currencyPage.searchValue(companyId, orderCode, 19, 8);
 		
-		currencyPage.clickOnInsert();
+		currencyPage.clickOnInsert1();
 		
 		currencyPage.createServiceOrderCode(orderCode);
 		
-		currencyPage.clickOnOrderExplode();
 		
 		currencyPage.clickOnAcceptWarnings();
 		
 		currencyPage.clickOnUpdate();
 			
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-			testcases.add(getCurreentDate()+" | Pass : Service order "+orderCode.get(0)+ " created");
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Service order "+orderCode.get(0)+ " not created");
-		}
-
-		referenceMessage = referenceMessage.substring(8).replaceAll("[^0-9]", "");
+		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+			
+		// Converting reference msg to Ordernuber, Order Reference 0000000002 will be created.
+		String orderNumber = referenceMessage.substring(0, referenceMessage.indexOf(" will be created."));
+		
+		orderNumber = orderNumber.replace("DOC01 : Order Reference ", "");
 		
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		currencyPage.clickOnCancel();
+		boolean verify=currencyPage.verifyStatus(7,17,orderCode);
 		
-		return referenceMessage;
+		Assert.assertTrue(testcases,verify,"Order Status is "+orderCode.get(17)," as expected");
+		
+		currencyPage.clickOnCancel1();
+		
+		return orderNumber;	
 		
 	}
 	
@@ -118,9 +147,7 @@ public class AD02013_Create_Service_OrderTest extends BaseTest{
 		
 		currencyPage.searchAuthorisor(companyId, authorisorList,orderNumber, 2);
 		
-		currencyPage.selectOrder();
-		
-		currencyPage.clickOnCancel();
+		currencyPage.selectMultiOrder();
 
 	}
 	

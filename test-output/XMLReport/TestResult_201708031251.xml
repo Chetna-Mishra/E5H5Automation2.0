@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001A_On_line_AuditingTest>
+<Verification1>03/08/2017 12:51:40 | Pass : Login page displayed</Verification1>
+<Verification2>03/08/2017 12:51:49 | Pass : Command line displayed</Verification2>
+<Verification3>03/08/2017 12:52:06 | Pass : Search page displayed</Verification3>
+<Verification4>03/08/2017 12:52:25 | Pass : Currency TPBSUPP displayed in the list</Verification4>
+<Verification5>03/08/2017 12:52:41 | Pass : Column definition displayed</Verification5>
+<Verification6>03/08/2017 12:52:44 | Pass : Column Definition Tab Checkboxes checked</Verification6>
+<Verification7>03/08/2017 12:52:50 | Pass : Column definition def displayed</Verification7>
+<Verification8>03/08/2017 12:53:11 | Fail : Defination Def Tab Checkboxes not checked</Verification8>
+</A001A_On_line_AuditingTest>
+<A001_Switch_Intra_Company_Accounting_OnTest>
+<Verification1>03/08/2017 12:56:25 | Pass : Login page displayed</Verification1>
+<Verification2>03/08/2017 12:56:34 | Pass : Command line displayed</Verification2>
+<Verification3>03/08/2017 12:56:50 | Pass : Financial module fields are  checked and saved</Verification3>
+<Verification4>03/08/2017 12:57:15 | Fail : Purchasing module fields are  not checked and saved</Verification4>
+</A001_Switch_Intra_Company_Accounting_OnTest>
+</TestCase>
+</SeleniumTestReport>

@@ -72,39 +72,45 @@ public class A103_IM_AccountsTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,accountIE);
-		verifyValues(currencyPage,accountIW);
-		verifyValues(currencyPage,accountIN);
-		verifyValues(currencyPage,accountIS);
-		verifyValues(currencyPage,accountTE);
-		verifyValues(currencyPage,accountTW);
-		verifyValues(currencyPage,accountTN);
-		verifyValues(currencyPage,accountTS);
+//		verifyValues(currencyPage,accountIE);
+//		verifyValues(currencyPage,accountIW);
+//		verifyValues(currencyPage,accountIN);
+//		verifyValues(currencyPage,accountIS);
+//		verifyValues(currencyPage,accountTE);
+//		verifyValues(currencyPage,accountTW);
+//		verifyValues(currencyPage,accountTN);
+//		verifyValues(currencyPage,accountTS);
 		
 		currencyPage.logOut(2);
 	}
 	
 	
 	private void createIMAccounts(CurrencyPageNew currencyPage,List<String> elements){
-		currencyPage.insertImControl(elements);
+		String SuccMessage = "The previously-requested action has been performed";
 		
-		 if(currencyPage.isToolTipDisplayed()){
-			   currencyPage.clickOnUpdateWarnings();
-		 }
-		 else{
+		boolean update= currencyPage.insertImControl(elements);
+		
+		if(update==true)
+		{
+		   currencyPage.clickOnUpdateWarnings();
 		   currencyPage.clickOnUpdate();
-		 }
-	}
-	
-	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
+		 
+		   Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "ICA default trading relatioship "+elements.get(0), "updated successfully");
 		
-		if(!currencyPage.verifyValues(elements.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : ICA default trading relatioship "+elements.get(0)+ "  updated");
 		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : ICA default trading relatioship "+elements.get(0)+ "not updated");
-		}
+		   
 	}
+		 
+	
+//	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
+//		
+//		if(!currencyPage.verifyValues(elements.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : ICA default trading relatioship "+elements.get(0)+ "  updated");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : ICA default trading relatioship "+elements.get(0)+ "not updated");
+//		}
+//	}
 	
 	
 	@AfterClass (alwaysRun = true)

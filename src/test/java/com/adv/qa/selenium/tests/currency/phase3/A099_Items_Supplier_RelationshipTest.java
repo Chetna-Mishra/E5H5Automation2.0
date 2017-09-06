@@ -61,6 +61,7 @@ public class A099_Items_Supplier_RelationshipTest extends BaseTest{
 		currencyPage.searchValue(companyId,item525, 3, 1);
 		
 		currencyPage.clickOnInsert1();
+		
 		createSupplierForItem(currencyPage,item524);
 		createSupplierForItem(currencyPage,item525);
 		createSupplierForItem(currencyPage,item626);
@@ -72,38 +73,52 @@ public class A099_Items_Supplier_RelationshipTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		verifySupplierItem(currencyPage,item524);
-		verifySupplierItem(currencyPage,item525);
-		verifySupplierItem(currencyPage,item626);
-		verifySupplierItem(currencyPage,item325);
-		verifySupplierItem(currencyPage,item335);
-		verifySupplierItem(currencyPage,itemA160);
 		
-		currencyPage.clickOnCancel1();			
-		currencyPage.logOut(1);
+//		verifySupplierItem(currencyPage,item524);
+//		verifySupplierItem(currencyPage,item525);
+//		verifySupplierItem(currencyPage,item626);
+//		verifySupplierItem(currencyPage,item325);
+//		verifySupplierItem(currencyPage,item335);
+//		verifySupplierItem(currencyPage,itemA160);
+		
+		
+		currencyPage.logOut(2);
 	}
 	
 	private void createSupplierForItem(CurrencyPageNew currencyPage,List<String> item){
 
+		String SuccMessage = "The previously-requested action has been performed";
+		boolean update = currencyPage.createItemSupplier(item);
 		
-		currencyPage.createItemSupplier(item);
+		if (update == true)
+			
+		{
+			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New supplier item "+item.get(1), " created successfully");
+			
+		}
 		
-		currencyPage.clickOnUpdate();	
+		else{
+			testcases.add(getCurreentDate()+" | Pass : New supplier item "+item.get(1)+ " Already Created");
+			
+		}
+		
+		
 	}
 	
-	private void verifySupplierItem(CurrencyPageNew currencyPage,List<String> item){
-		
-		currencyPage.searchValue(companyId,item, 3, 1);
-		
-		
-		/*Verify new item supplier in the list*/
-		if(currencyPage.verifyValues(item.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : New supplier item "+item.get(1)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New supplier item "+item.get(1)+ " not displayed in the list");
-		}
-	}
+//	private void verifySupplierItem(CurrencyPageNew currencyPage,List<String> item){
+//		
+//		currencyPage.searchValue(companyId,item, 3, 1);
+//		
+//		
+//		/*Verify new item supplier in the list*/
+//		if(currencyPage.verifyValues(item.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : New supplier item "+item.get(1)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New supplier item "+item.get(1)+ " not displayed in the list");
+//		}
+//	}
 	
 	
 	@AfterClass (alwaysRun = true)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD02010_Invoice_Creation_For_OrderTest>
+<Verification1>18/08/2017 06:48:15 | Pass : Login page displayed</Verification1>
+<Verification2>18/08/2017 06:48:23 | Pass : Command line displayed</Verification2>
+<Verification3>18/08/2017 06:48:51 | Pass : Journey search page displayed</Verification3>
+<Verification4>18/08/2017 06:50:05 | Pass : Journal header page displayed</Verification4>
+<Verification5>18/08/2017 06:53:25 | Pass : PDE Batch values are   as expected</Verification5>
+<Verification6>18/08/2017 06:54:36 | Pass : PDE Batch values are   as expected</Verification6>
+<Verification7>18/08/2017 06:56:00 | Pass : ACC Batch values are   as expected</Verification7>
+<Verification8>18/08/2017 06:56:25 | Pass : ACC Batch values are   as expected</Verification8>
+</AD02010_Invoice_Creation_For_OrderTest>
+</TestCase>
+</SeleniumTestReport>

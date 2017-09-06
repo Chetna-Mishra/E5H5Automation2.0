@@ -79,13 +79,13 @@ public class A108_Item_Store_Controls_Manual_Store_HierarchyTest extends BaseTes
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		verifyValues(currencyPage,storeControl1);
-		verifyValues(currencyPage,storeControl2);
-		verifyValues(currencyPage,storeControl3);
-		verifyValues(currencyPage,storeControl4);
-		verifyValues(currencyPage,storeControl5);
-		verifyValues(currencyPage,storeControl6);
-		verifyValues(currencyPage,storeControl7);
+//		verifyValues(currencyPage,storeControl1);
+//		verifyValues(currencyPage,storeControl2);
+//		verifyValues(currencyPage,storeControl3);
+//		verifyValues(currencyPage,storeControl4);
+//		verifyValues(currencyPage,storeControl5);
+//		verifyValues(currencyPage,storeControl6);
+//		verifyValues(currencyPage,storeControl7);
 
 		currencyPage.logOut(2);
 	}
@@ -93,26 +93,29 @@ public class A108_Item_Store_Controls_Manual_Store_HierarchyTest extends BaseTes
 	
 	private void createInventoryStoreControl(CurrencyPageNew currencyPage,List<String> elements) throws InterruptedException{
 		
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.insertItemStoreControl(elements);
 
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), " New item story control "+elements.get(0), "created successfully");
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New item story control "+elements.get(0)+ "  displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New item story control "+elements.get(0)+ " already created");
 		}
 
 	}
-	
-	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
-		
-		if(currencyPage.verifyValues(elements.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New item story control "+elements.get(0)+ "  displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New item story control "+elements.get(0)+ "  Not displayed in the list");
-		}
-	}
+//	
+//	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
+//		
+//		if(currencyPage.verifyValues(elements.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New item story control "+elements.get(0)+ "  displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New item story control "+elements.get(0)+ "  Not displayed in the list");
+//		}
+//	}
 
 	
 	@AfterClass (alwaysRun = true)

@@ -61,7 +61,7 @@ public class A101_Item_BuyersTest extends BaseTest{
 	
 	public void createItem(CurrencyPageNew currencyPage,String currencyCode,List<String> items) throws InterruptedException{
 		String command = "EDTPIBYR ACT=INSERT,COMPANY="+companyId;
-//		String message = "The previously-requested action has been performed";
+		String SuccMessage = "The previously-requested action has been performed";
 			
 		currencyPage.isCommandDisplayed();
 		
@@ -70,9 +70,21 @@ public class A101_Item_BuyersTest extends BaseTest{
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Item Buyer Edit","Currency search page","displayed");
 
-		currencyPage.insertItemBuyer(items);
+		boolean update= currencyPage.insertItemBuyer(items);
 		
+		if(update==true)
+			
+		{
 		currencyPage.clickOnUpdate();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New Item buyer "+items.get(0), "created successfully");
+		
+		}
+		
+		else
+		{
+			testcases.add(getCurreentDate()+" | Pass : New Item buyer "+items.get(0)+ " already created");
+			
+		}
 		
 //		if(currencyPage.getToolContentText().contains(message)){
 //			testcases.add(getCurreentDate()+" | Pass : New Item buyer "+items.get(0)+ " displayed in the list");

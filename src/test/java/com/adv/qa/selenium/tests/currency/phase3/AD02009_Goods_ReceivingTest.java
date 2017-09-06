@@ -1,17 +1,18 @@
 package com.adv.qa.selenium.tests.currency.phase3;
 
 import java.util.List;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import com.adv.qa.selenium.framework.Assert;
 import com.adv.qa.selenium.framework.BaseTest;
 import com.adv.qa.selenium.framework.pageObjects.LoginPage;
 import com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPageNew;
 import com.adv.qa.selenium.helpers.DataResource;
 import com.adv.qa.selenium.helpers.DataRow;
-import com.adv.qa.selenium.helpers.DatabaseQuery_SQL;
 
 /**
  * @author              :   Draxayani
@@ -22,27 +23,43 @@ import com.adv.qa.selenium.helpers.DatabaseQuery_SQL;
  */
 
 public class AD02009_Goods_ReceivingTest extends BaseTest{
+	
+	private static String glOrderNumber;
+	
+	
+	public static String getGlOrderNumber() {
+		return glOrderNumber;
+	}
+
+
+	private static void setGlOrderNumber(String glOrderNumber) {
+		AD02009_Goods_ReceivingTest.glOrderNumber = glOrderNumber;
+	}
+
+
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
 		super.setUp();
 	}
 	
+	
 	@Test( dataProvider ="dp")
 	public void verify(DataRow dataRow) throws InterruptedException{
 		List<String> userName = dataRow.findNamesReturnValues("userName");
 		String passWord = dataRow.get("passWord");
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> authorisor1 = dataRow.findNamesReturnValues("authorisor1");
 		List<String> authorisor2 = dataRow.findNamesReturnValues("authorisor2");
-		
-
-		
+			
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
 		
+		//Login to the App as User=Admin
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
-		loginPage.logIn(userName.get(0), passWord);
+	
+		loginPage.logIn(userName.get(0), passWord);//Login as Employee
 		
 		/*Navigate to currency page Home page e5 application*/
 		CurrencyPageNew currencyPage = new CurrencyPageNew(driver);
@@ -52,7 +69,9 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 				
 		String orderNumber = createOrder(currencyPage,dataRow);
 		
-//		String orderNumber = "0000000001";//Remove after use
+		setGlOrderNumber(orderNumber);
+		
+	/*	String orderNumber = "0000000001"; //Remove after use*/
 		
 		currencyPage.isCommandDisplayed();
 		
@@ -68,26 +87,14 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		currencyPage.isCommandDisplayed();
 		
 		currencyPage.logOut(1);
-	
-		//Login to the App as User=GREC
 		
-		super.tearDown();
-		try {
-			super.setUp();
-		} catch (Exception e) {
-			
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		currencyPage.clickOnReturnForLogin();
 		
+
+		//Login to the App as User=GREC		
+		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
 		
-		
-		/*Log in to application*/
-		LoginPage loginPage1 = new LoginPage(driver);
-		
-		Assert.assertTrue(testcases, loginPage1.isLoginPageDisplayed(), "Login page", "displayed");
-		
-		loginPage1.logIn(userName.get(1), passWord);
+		loginPage.logIn(userName.get(1), passWord);//Login as GREC
 		
 		createReceiveGoods(currencyPage,dataRow,orderNumber);
 		
@@ -99,12 +106,22 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		
 		currencyPage.isCommandDisplayed();
 		
+		currencyPage.logOut(1);
+		
+		currencyPage.clickOnReturnForLogin();
+		
+		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
+		loginPage.logIn(userName.get(2), passWord);//Login as Admin
+		
+		currencyPage.isCommandDisplayed();
+		
 		verifyTotalStockBalance(currencyPage,dataRow);
 				
 		currencyPage.logOut(2);
 	}
 	
-	private String createOrder(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+	public String createOrder(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
 		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> orderCode = dataRow.findNamesReturnValues("orderCode");
@@ -115,7 +132,7 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(0));
 				
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Order - List","Currency search page","displayed");
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Order - List","Order search page","displayed");
 
 		currencyPage.searchValue(companyId, orderCode, 19, 8);
 		
@@ -128,28 +145,23 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-			testcases.add(getCurreentDate()+" | Pass : Order  "+orderCode.get(0)+ " created");
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Order "+orderCode.get(0)+ " not created");
-		}
-
 		
-		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+			
 		// Converting reference msg to Ordernuber, Order Reference 0000000001 will be created.
 		String orderNumber = referenceMessage.substring(0, referenceMessage.indexOf(" will be created."));
-		orderNumber = orderNumber.replace("DOC01 : Order Reference ", "");
-		System.out.println(orderNumber);
 		
-//		referenceMessage = referenceMessage.substring(8).replaceAll("[^0-9]", "");
+		orderNumber = orderNumber.replace("DOC01 : Order Reference ", "");
+		
+		/*System.out.println(orderNumber);*/
+		
+		/*	referenceMessage = referenceMessage.substring(8).replaceAll("[^0-9]", "");//Not in user*/
 		
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		currencyPage.clickOnCancel();
+		currencyPage.clickOnCancel1();
 		
 		return orderNumber;
 		
@@ -171,34 +183,29 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> receiveGoods = dataRow.findNamesReturnValues("receiveGoods");
 		String message = "GRNs will be created in Background";
-		
+		String ADVICE = "ADVICE "+orderNumber+"";
+		String GRN = "G"+orderNumber+"";
 		
 		currencyPage.fillCurrenceyCode(code);
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Goods Receive/Return Edit","Currency search page","displayed");
 		
-	
-		
-		currencyPage.addGoodsReceive(receiveGoods);
+		currencyPage.addGoodsReceive(receiveGoods, ADVICE, GRN);
 		
 		currencyPage.clickOnUpdate();
 		
 		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Receive goods created "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Receive goods created ");
-		}
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+		
 		
 		currencyPage.enterGoodsDetailsInPopUp(orderNumber);
 		
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
-		currencyPage.isCommandDisplayed();
+		
 	}
 
 	private void reviewBatches(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
@@ -210,12 +217,13 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(3)+" - Journal List","Journey search page","displayed");
 		
-		currencyPage.search(companyId, 4, 0);
+	
+		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnSections(1);
+		currencyPage.clickOnEXTSections();
 		
-		currencyPage.search("ACC", 16, 5);
-		
+		currencyPage.searchValue("ACC", 16, 5);
+	
 		currencyPage.sortValues();
 		
 		currencyPage.clickOnView();
@@ -225,9 +233,9 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		currencyPage.clickOnLines();
 		
 		boolean firstJournalDetails = currencyPage.verifyJournalDetails(1, batchDetails1);
-		boolean secondournalDetails = currencyPage.verifyJournalDetails(2, batchDetails2);
-		
 		Assert.assertTrue(testcases,firstJournalDetails,"Batch values are "," as expected");
+		
+		boolean secondournalDetails = currencyPage.verifyJournalDetails(2, batchDetails2);
 		Assert.assertTrue(testcases,secondournalDetails,"Batch values are "," as expected");
 
 		currencyPage.clickOnCancel();				
@@ -248,40 +256,28 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		
 		boolean totalStockBalance = currencyPage.verifyTotalStockBalance(stockBalance);
 		
-		if(totalStockBalance== true){
-			testcases.add(getCurreentDate()+" | Pass : Total stock balance is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Total stock balance is not as expected ");
-		}
+		Assert.assertTrue(testcases,totalStockBalance,"Total stock balance "," as expected");
 		
-		boolean storeItemValues = currencyPage.verifyStoreItemValues(stockBalance,1);				
-		if(storeItemValues== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item values is not as expected ");
-		}		
+		
+		boolean storeItemValues = currencyPage.verifyStoreItemValues(stockBalance,1);	
+		
+		Assert.assertTrue(testcases,storeItemValues,"Store item values "," as expected");
+		
 		currencyPage.clickOnValuation();
 		
 		boolean valuation = currencyPage.verifyStoreItemValuation(stockBalanceValuation,0);
-		if(valuation== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item valuation is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item valuation is not as expected ");
-		}		
+		
+		Assert.assertTrue(testcases,valuation,"Store item valuation is "," as expected");
+		
+		
 		currencyPage.clickOnReturnButton();
 		
 		currencyPage.clickOnCurrentStock();
 		
 		boolean currentStock = currencyPage.verifyCurrenctStock(stockBalanceCurrencyStock,0);
-		if(currentStock== true){
-			testcases.add(getCurreentDate()+" | Pass : Currenct stock is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Currenct stock is not as expected ");
-		}
+		
+		Assert.assertTrue(testcases,currentStock,"Currenct stock is "," as expected");
+
 		
 		currencyPage.clickOnCancel();
 		

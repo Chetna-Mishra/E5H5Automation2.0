@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD03013_IM_Audit_ReportsTest>
+<Verification1>24/08/2017 10:07:25 | Pass : Login page displayed</Verification1>
+<Verification2>24/08/2017 10:07:37 | Pass : Command line displayed</Verification2>
+<Verification3>24/08/2017 10:09:06 | Pass : Process has entered task list</Verification3>
+<Verification4>24/08/2017 10:09:36 | Pass : Precess ED3  performed on E5H5ED3</Verification4>
+<Verification5>24/08/2017 10:11:05 | Pass : Process has entered task list</Verification5>
+<Verification6>24/08/2017 10:11:36 | Pass : Precess ED4  performed on E5H5ED4</Verification6>
+<Verification7>24/08/2017 10:13:16 | Pass : Process has entered task list</Verification7>
+<Verification8>24/08/2017 10:13:46 | Pass : Precess ED8  performed on E5H5ED8</Verification8>
+<Verification9>24/08/2017 10:15:24 | Pass : Process has entered task list</Verification9>
+<Verification10>24/08/2017 10:15:54 | Pass : Precess GM4  performed on E5H5GM4</Verification10>
+<Verification11>24/08/2017 10:17:32 | Pass : Process has entered task list</Verification11>
+<Verification12>24/08/2017 10:18:02 | Pass : Precess DX1  performed on E5H5DX1</Verification12>
+<Verification13>24/08/2017 10:19:42 | Pass : Process has entered task list</Verification13>
+<Verification14>24/08/2017 10:20:14 | Pass : Precess HX1  performed on E5H5HX1</Verification14>
+</AD03013_IM_Audit_ReportsTest>
+</TestCase>
+</SeleniumTestReport>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A091_SuppliersTest>
+<Verification1>21/08/2017 12:26:59 | Pass : Login page displayed</Verification1>
+<Verification2>21/08/2017 12:27:08 | Pass : Command line displayed</Verification2>
+<Verification3>21/08/2017 12:27:25 | Pass : Currency search page displayed</Verification3>
+<Verification4>21/08/2017 12:32:54 | Pass : New supplier  PANASONIC created successfully</Verification4>
+<Verification5>21/08/2017 12:38:39 | Pass : New supplier  YAMAHA created successfully</Verification5>
+<Verification6>21/08/2017 12:44:46 | Pass : New supplier  DENON created successfully</Verification6>
+<Verification7>21/08/2017 12:50:31 | Pass : New supplier  AKAI created successfully</Verification7>
+<Verification8>21/08/2017 12:56:16 | Pass : New supplier  Samsung created successfully</Verification8>
+</A091_SuppliersTest>
+</TestCase>
+</SeleniumTestReport>

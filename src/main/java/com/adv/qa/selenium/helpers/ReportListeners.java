@@ -25,7 +25,6 @@ public class ReportListeners extends EmailableReporter{
 	@Override
 	protected PrintWriter createWriter(String outdir) throws IOException {
 		   new File(outdir).mkdirs();
-		    return new PrintWriter(new BufferedWriter(new FileWriter(new File(outdir+"\\HTMLReports",
-		        "emailable-report"+prefix+".html"))));
+		    return new PrintWriter(new BufferedWriter(new FileWriter(new File(outdir+"\\HTMLReports","emailable-report"+prefix+".html"))));
 	}
 }

@@ -68,7 +68,10 @@ public class A087_Authorisation_By_Level_Or_GL_ResponsibilityTest extends BaseTe
 		/*Verify currency search page displayed*/
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode+" - Val Lvl/GL Resp Auth Defn list","Currency search page","displayed");
 		
+
 		
+	
+			
 		for (int k = 0; k <= 4; k++) 
 			
 		{
@@ -76,46 +79,25 @@ public class A087_Authorisation_By_Level_Or_GL_ResponsibilityTest extends BaseTe
 		currencyPage.searchAUCode(companyId,authorisationCode, Elements, k);
 			
 		/*Verify New authorization by level or GL responsibility code displayed in the list*/
-			if(currencyPage.verifyValues(Elements.get(k)))
+			if(!currencyPage.verifyValues(Elements.get(k)))
 			
 			{
-				testcases.add(getCurreentDate()+" | Pass : New authorisation by level or GL responsibility code "+Elements.get(k)+ " displayed in the list");
-			
+				currencyPage.clickOnInsert();
+				currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(authorisationCode, Elements, k, authorisationLev,4);			
+				currencyPage.clickOnCancel();
 			}
 			
 			else
 				
 			{
 				
-			currencyPage.clickOnInsert();
-			
-
-			
-			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(authorisationCode, Elements, k, authorisationLev,4);			
-			
-			/*Create batch type code*/
-//			currencyPage.enterAuthorisationByLevelOrGLResponsibilityForAP(authorisationCode, Elements, k, authorisationLev1, authorisationLev2, authorisationLev3, authorisationLev4);
-			
-			currencyPage.clickOnCancel();
-	
-			/*Verify New authorization by level or GL responsibility code displayed in the list*/
-			if(currencyPage.verifyValues(Elements.get(k)))
-			
-			{
 				testcases.add(getCurreentDate()+" | Pass : New authorisation by level or GL responsibility code "+Elements.get(k)+ " displayed in the list");
+			
 			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : New authorisation by level or GL responsibility code "+Elements.get(k)+ " not displayed in the list");
-				}
-				
-				}
-				
-			}
-		
 	
+		}
 		
 		currencyPage.logOut(2);
-		
 	}
 		
 

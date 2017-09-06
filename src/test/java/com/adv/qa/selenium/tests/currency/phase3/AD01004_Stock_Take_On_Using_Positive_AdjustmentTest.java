@@ -82,13 +82,16 @@ public class AD01004_Stock_Take_On_Using_Positive_AdjustmentTest extends BaseTes
 			String referenceMessage = currencyPage.getErrorContentText();
 			
 			/*Verify material issue*/
-			if(referenceMessage.contains(message)){
-				testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-				testcases.add(getCurreentDate()+" | Pass : Material issue created");
-			}
-			else{			
-				testcases.add(getCurreentDate()+" | Fail : Material issue not created");
-			}
+			
+			Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+			
+//			if(referenceMessage.contains(message)){
+//				testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
+//				testcases.add(getCurreentDate()+" | Pass : Material issue created");
+//			}
+//			else{			
+//				testcases.add(getCurreentDate()+" | Fail : Material issue not created");
+//			}
 
 			currencyPage.isCommandDisplayed();		
 	}

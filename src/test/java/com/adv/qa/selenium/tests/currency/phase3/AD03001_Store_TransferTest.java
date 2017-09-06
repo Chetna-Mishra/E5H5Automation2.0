@@ -16,10 +16,13 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD03001 Store Transfer
  * Purpose              :   Check IM Stock Totals before Transfer 
+ * Modified Date		:   Modified by Chetna/Dt: 23-Aug-2017
  * ACCESS               :   HBA
  */
 
 public class AD03001_Store_TransferTest extends BaseTest{
+	
+	
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -61,6 +64,8 @@ public class AD03001_Store_TransferTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
+		amendInventoryStoreControl(currencyPage,dataRow);
+		
 		createStoreTransfer(currencyPage,currencyCode.get(1),storeElements,storeDetails);
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(0));
@@ -81,8 +86,65 @@ public class AD03001_Store_TransferTest extends BaseTest{
 		currencyPage.logOut(2);
 	}
 	
+	
+private void verifyStockBalance(CurrencyPageNew currencyPage,DataRow dataRow,List<String> elements,int i) throws InterruptedException{
+		
+		currencyPage.searchItemStore(companyId,elements);
+		
+		
+		boolean totalStockBalance = currencyPage.verifyTotalStockBalance(elements);
+		
+		Assert.assertTrue(testcases,totalStockBalance,"Total stock balance "," as expected");
+		
+		boolean storeItemValues = currencyPage.verifyStoreItemValues(elements,i);
+		
+		Assert.assertTrue(testcases,storeItemValues,"Store item values "," as expected");
+				
+		
+		if(i==1){
+			List<String> westStoreCurrentStock = dataRow.findNamesReturnValues("westStoreCurrentStock");
+			
+			currencyPage.clickOnCurrentStock();
+			
+			boolean currentStock = currencyPage.verifyCurrenctStock(westStoreCurrentStock,0);
+			
+			Assert.assertTrue(testcases,currentStock,"Currenct stock is "," as expected");				
+			
+			currencyPage.clickOnCancel();
+		}
+	
+	}
+	
+private void amendInventoryStoreControl(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+	
+	List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+	List<String> storeElements = dataRow.findNamesReturnValues("storeElements");
+	
+	currencyPage.isCommandDisplayed();
+	
+	currencyPage.fillCurrenceyCode(currencyCode.get(4));
+	
+	/*Verify currency search page displayed*/
+	Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(4)+" - IM Store Controls List","List Page","displayed");
+	
+	/*Create inventory store*/
+	currencyPage.searchValue(companyId,storeElements,3,1);
+	
+	currencyPage.clickOnAmend();
+	
+	currencyPage.updateInventoryStore();
+	
+	currencyPage.clickOnUpdate();
+	currencyPage.clickOnCancel();
+	
+}
+
+	
+	
 	private void createStoreTransfer(CurrencyPageNew currencyPage,String currencyCode,List<String> storeElements,List<String> elements) throws InterruptedException{
-		String code = "EDTHMVMT ACT=INSERT,CMPY="+companyId+",STORE=EAST,MVMT-IND=T";
+//		String code = "EDTHMVMT ACT=INSERT,CMPY="+companyId+",STORE=EAST,MVMT-IND=T";
+		
+		String code = "EDTHMVMT ACT=INSERT,CMPY="+companyId+",STORE=WEST,MVMT-IND=T";
 		String message = "Movement Reference ";
 		
 		currencyPage.isCommandDisplayed();
@@ -95,48 +157,15 @@ public class AD03001_Store_TransferTest extends BaseTest{
 		
 		currencyPage.addLineDetails(elements,"T");
 		
+		currencyPage.clickOnAcceptWarnings();
+		
 		currencyPage.clickOnUpdate();
 			
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
 		
-		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-			testcases.add(getCurreentDate()+" | Pass : Store transfer created");
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Store transfer not created");
-		}
-
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+		
 		currencyPage.isCommandDisplayed();
-	}
-	
-	private void verifyStockBalance(CurrencyPageNew currencyPage,DataRow dataRow,List<String> elements,int i) throws InterruptedException{
-		
-		currencyPage.searchItemStore(companyId,elements);
-		
-		boolean storeItemValues = currencyPage.verifyStoreItemValues(elements,i);
-		if(storeItemValues== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item values is not as expected ");
-		}		
-		if(i==1){
-			List<String> westStoreCurrentStock = dataRow.findNamesReturnValues("westStoreCurrentStock");
-			
-			currencyPage.clickOnCurrentStock();
-			
-			boolean currentStock = currencyPage.verifyCurrenctStock(westStoreCurrentStock,0);
-			if(currentStock== true){
-				testcases.add(getCurreentDate()+" | Pass : Currenct stock is as expected ");
-			}
-			else{
-				testcases.add(getCurreentDate()+" | Fail : Currenct stock is not as expected ");
-			}					
-			currencyPage.clickOnCancel();
-		}
-	
 	}
 	
 
@@ -151,12 +180,13 @@ public class AD03001_Store_TransferTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Journal List","Journey search page","displayed");
 		
-		currencyPage.search(companyId, 4, 0);
+		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnSections(1);
+		currencyPage.clickOnEXTSections();
+
 		
-		currencyPage.search("IMTR", 16, 5);
-		
+		currencyPage.searchValue("IMTR", 16, 5);
+
 		currencyPage.sortValues();
 		
 		currencyPage.clickOnView();
@@ -166,17 +196,18 @@ public class AD03001_Store_TransferTest extends BaseTest{
 		currencyPage.clickOnLines();
 		
 		boolean stkwDetails = currencyPage.verifyJournalDetails(1, stkwBatchDetails);
-		boolean stkeDetails = currencyPage.verifyJournalDetails(2, stkeBatchDetails);
-		boolean imdfDetails = currencyPage.verifyJournalDetails(3, imdfBatchDetails);
-		boolean imdfEDetails = currencyPage.verifyJournalDetails(4, imdfEBatchDetails);
-		
 		Assert.assertTrue(testcases,stkwDetails,"IMTR batch details for STKW report is "," correct");
-		Assert.assertTrue(testcases,stkeDetails,"IMTR batch details for STKW report is "," correct");
-		Assert.assertTrue(testcases,imdfDetails,"IMTR batch details for STKW report is "," correct");
-		Assert.assertTrue(testcases,imdfEDetails,"IMTR batch details for STKW report is "," correct");
+		boolean stkeDetails = currencyPage.verifyJournalDetails(2, stkeBatchDetails);
+		Assert.assertTrue(testcases,stkeDetails,"IMTR batch details for STKE report is "," correct");
+		boolean imdfDetails = currencyPage.verifyJournalDetails(3, imdfBatchDetails);
+		Assert.assertTrue(testcases,imdfDetails,"IMTR batch details for IMDF report is "," correct");
+		boolean imdfEDetails = currencyPage.verifyJournalDetails(4, imdfEBatchDetails);
+		Assert.assertTrue(testcases,imdfEDetails,"IMTR batch details for IMDF report is "," correct");
 		
 		currencyPage.clickOnCancel();				
 	}
+	
+	
 	
 	private void verifyRHEDReport(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
@@ -188,12 +219,14 @@ public class AD03001_Store_TransferTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(3)+" - Spool List","Currency search page","displayed");
 		
-		currencyPage.searchValue("17",reportSearchValue,10,1);
+		currencyPage.searchValue(companyId,reportSearchValue,10,1);
+		
+		currencyPage.clickOnSelectCheck();
 		
 		currencyPage.clickOnViewDocument();		
 		
 		boolean verifyReport = currencyPage.verifyRHEDReport(reportSearchValue);
-		Assert.assertTrue(testcases,verifyReport,"RHED05 report is "," correct");
+		Assert.assertTrue(testcases,verifyReport,"RHED05 report is "," as expected");
 		
 		currencyPage.clickOnCancel();
 	}

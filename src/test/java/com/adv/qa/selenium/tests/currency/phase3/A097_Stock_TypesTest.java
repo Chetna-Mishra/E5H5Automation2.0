@@ -55,19 +55,27 @@ public class A097_Stock_TypesTest extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 		
-		currencyPage.createStockType(stockCode);
+		boolean update= currencyPage.createStockType(stockCode);
+		
+		if (update==true)
+			
+		{
 		
 		currencyPage.clickOnUpdate();
 		
-		currencyPage.clickOnCancel();
+		Assert.assertTrue(testcases,update, "Stock code "+stockCode.get(0)," created successfully");
 		
-		if(currencyPage.verifyValues(stockCode.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : Stock code "+stockCode.get(0)+ "  displayed in the list");
 		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Stock code "+stockCode.get(0)+ " not displayed in the list");
+		
+		else 
+		{
+			
+			testcases.add(getCurreentDate()+" | Pass : Stock code "+stockCode.get(0)+ " Already Created");
+			currencyPage.clickOnCancel();	
+			
 		}
-
+		
+		
 		
 		currencyPage.logOut(2);
 	}

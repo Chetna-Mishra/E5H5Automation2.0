@@ -90,6 +90,8 @@ public class A115_User_Roles_Set_upTest extends BaseTest{
 			
 			currencyPage.clickOnUpdtWarnings();
 			currencyPage.clickOnUpdate();
+			
+			
 			}
 		
 		currencyPage.clickOnCancel();

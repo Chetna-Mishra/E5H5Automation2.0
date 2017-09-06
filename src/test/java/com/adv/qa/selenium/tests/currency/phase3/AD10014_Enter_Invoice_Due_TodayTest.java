@@ -88,7 +88,7 @@ public class AD10014_Enter_Invoice_Due_TodayTest extends BaseTest{
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
 		String currDate = dateFormat1.format(currentMonth.getTime());
 			
-		currencyPage.enterTransactionDetails(transactionDetails,currDate,currDate);
+		currencyPage.enterTransactionDetails(transactionDetails,"null","null");
 		
 		currencyPage.clickOnAcceptWarn();
 		

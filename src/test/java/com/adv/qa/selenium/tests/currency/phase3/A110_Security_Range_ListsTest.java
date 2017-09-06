@@ -58,19 +58,20 @@ public class A110_Security_Range_ListsTest extends BaseTest{
 		createIMAccounts(currencyPage,securitRangeForItem1P,currencyCode);
 		createIMAccounts(currencyPage,securitRangeForItem1IM,currencyCode);
 	
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		
+//		verifyValues(currencyPage,securitRangeForItemIM);
+//		verifyValues(currencyPage,securitRangeForStore);
+//		verifyValues(currencyPage,securitRangeForItem1PM);
+//		verifyValues(currencyPage,securitRangeForItem1P);
+//		verifyValues(currencyPage,securitRangeForItem1IM);
 		
-		verifyValues(currencyPage,securitRangeForItemIM);
-		verifyValues(currencyPage,securitRangeForStore);
-		verifyValues(currencyPage,securitRangeForItem1PM);
-		verifyValues(currencyPage,securitRangeForItem1P);
-		verifyValues(currencyPage,securitRangeForItem1IM);
-		
-		currencyPage.logOut(2);
+		currencyPage.logOut(1);
 	} 
 	
 	private void createIMAccounts(CurrencyPageNew currencyPage,List<String> elements,List<String> currencyCode) throws InterruptedException{
 
+		String SuccMessage = "The previously-requested action has been performed";
 		String code = "EDTADRCDE ACT=INSERT,COMPANY="+companyId; 
 		
 		currencyPage.isCommandDisplayed();
@@ -86,24 +87,26 @@ public class A110_Security_Range_ListsTest extends BaseTest{
 		/*Create security range*/
 		currencyPage.insertSecurityRange(elements);	
 		
-		currencyPage.clickOnUpdate();	
+		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New Store "+elements.get(0), "created successfully");
 		
 		currencyPage.isCommandDisplayed();
 	}	
 	
-private void verifyValues(CurrencyPageNew currencyPage,List<String> elements) throws InterruptedException{
-		
-		currencyPage.searchsecurityrange(companyId,elements);
-	
-		/*Verify new standard text in the list*/
-		if(currencyPage.verifyValues(elements.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New Store "+elements.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New Store "+elements.get(0)+ " not displayed in the list");
-		}
-		
-	}	
+//private void verifyValues(CurrencyPageNew currencyPage,List<String> elements) throws InterruptedException{
+//		
+//		currencyPage.searchsecurityrange(companyId,elements);
+//	
+//		/*Verify new standard text in the list*/
+//		if(currencyPage.verifyValues(elements.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New Store "+elements.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New Store "+elements.get(0)+ " not displayed in the list");
+//		}
+//		
+//	}	
 	
 	
 	@AfterClass (alwaysRun = true)

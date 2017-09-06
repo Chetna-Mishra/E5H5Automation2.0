@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A001A_On_line_AuditingTest>
+<Verification1>03/08/2017 12:02:34 | Pass : Login page displayed</Verification1>
+<Verification2>03/08/2017 12:02:42 | Pass : Command line displayed</Verification2>
+<Verification3>03/08/2017 12:02:59 | Pass : Search page displayed</Verification3>
+<Verification4>03/08/2017 12:03:18 | Pass : Currency TPBSUPP displayed in the list</Verification4>
+<Verification5>03/08/2017 12:03:35 | Pass : Column definition displayed</Verification5>
+<Verification6>03/08/2017 12:03:38 | Pass : Column Definition Tab Checkboxes checked</Verification6>
+<Verification7>03/08/2017 12:03:43 | Pass : Column definition def displayed</Verification7>
+<Verification8>03/08/2017 12:04:04 | Fail : Defination Def Tab Checkboxes not checked</Verification8>
+</A001A_On_line_AuditingTest>
+</TestCase>
+</SeleniumTestReport>

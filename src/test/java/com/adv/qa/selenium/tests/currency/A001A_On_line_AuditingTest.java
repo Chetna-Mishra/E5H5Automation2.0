@@ -1,9 +1,14 @@
 package com.adv.qa.selenium.tests.currency;
 
 import java.util.List;
+
+import org.testng.ITestContext;
+import org.testng.ITestNGMethod;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.adv.qa.selenium.framework.Assert;
 import com.adv.qa.selenium.framework.BaseTest;
@@ -11,6 +16,8 @@ import com.adv.qa.selenium.framework.pageObjects.LoginPage;
 import com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPage;
 import com.adv.qa.selenium.helpers.DataResource;
 import com.adv.qa.selenium.helpers.DataRow;
+import com.adv.qa.selenium.helpers.Retry;
+import com.adv.qa.selenium.helpers.MyAnnotationTransformer;
 
 
 /**
@@ -22,14 +29,37 @@ import com.adv.qa.selenium.helpers.DataRow;
  * ACCESS               :   XDJ
  */
 
+
+/*@Listeners(value=MyAnnotationTransformer.class), to implement on class level, also enable listeners from xml Test Suite
+* @Test(dataProvider ="dp", retryAnalyzer=Retry.class), to implement on test method level
+* 
+*/
+
+
+
 public class A001A_On_line_AuditingTest extends BaseTest{
+
+	/*This is to implement Retry on class level
+	 * 
+	 */	
+		@BeforeSuite(alwaysRun = true)
+		  public void beforeSuite(ITestContext context) {
+		      for (ITestNGMethod method : context.getAllTestMethods()) {
+		          method.setRetryAnalyzer(new Retry());
+		      }
+	}
+	
+	
+	
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
 		super.setUp();
 	}
-	
+
+
 	@Test( dataProvider ="dp")
+
 	public void verify(DataRow dataRow) throws InterruptedException{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
@@ -43,6 +73,8 @@ public class A001A_On_line_AuditingTest extends BaseTest{
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
+		
+		
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
 		
@@ -151,6 +183,8 @@ public class A001A_On_line_AuditingTest extends BaseTest{
 
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){
+		
+
 		super.tearDown();
 	}
 	

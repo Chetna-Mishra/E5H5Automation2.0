@@ -98,6 +98,7 @@ public class BaseTest {
 		try {
 			filePath =MainXMLStructure.getMainXML(runTime);
 			
+			
 		} catch (ParserConfigurationException e) {			
 			e.printStackTrace();
 		} catch (TransformerException e) {
@@ -191,9 +192,7 @@ public class BaseTest {
 	 * Initialize driver and open e5h5 home page using e5h5URL from data file
 	 * @throws Exception
 	 */
-	
-
-	protected void initialiseWebDriver() throws Exception{
+	public void initialiseWebDriver() throws Exception{
 		initialiseWebDriverWithoutLoadingPage();
 		log.info(  "adve5URL  "+adve5URL);
 		driver.get(adve5URL+appendURL);
@@ -201,6 +200,16 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		Thread.sleep(2500);
 	}
+	
+
+//	protected void initialiseWebDriver() throws Exception{
+//		initialiseWebDriverWithoutLoadingPage();
+//		log.info(  "adve5URL  "+adve5URL);
+//		driver.get(adve5URL+appendURL);
+//		
+//		driver.manage().window().maximize();
+//		Thread.sleep(2500);
+//	}
 	
 	protected void initialiseWebDriverWithoutLoadingPage() throws Exception {		
 			synchronized (startupSync) {
@@ -334,7 +343,7 @@ public class BaseTest {
 	 * @return File
 	 * @throws IOException
 	 */
-	public   File takeScreenshot(String prefix,String key) throws IOException {
+	public File takeScreenshot(String prefix,String key) throws IOException {
 		
 		File screenshot = File.createTempFile(prefix, ".png", new File("."));
 				

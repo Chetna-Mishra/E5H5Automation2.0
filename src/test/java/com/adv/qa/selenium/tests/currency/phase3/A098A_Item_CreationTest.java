@@ -63,10 +63,9 @@ public class A098A_Item_CreationTest extends BaseTest{
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		verifyManufacturer(currencyPage,manufacturer01);
-		verifyManufacturer(currencyPage,manufacturer02);
-		
 		currencyPage.clickOnCancel();
+		
+		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(1));	
 		
@@ -77,43 +76,46 @@ public class A098A_Item_CreationTest extends BaseTest{
 		
 		currencyPage.clickOnInsert();
 		
-		currencyPage.createManufacturerItem(manufacturerItem);
+		boolean update= currencyPage.createManufacturerItem(manufacturerItem);
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		
+		if(update== true)
+		{
 
 		currencyPage.clickOnUpdate();
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New manufacturer "+manufacturerItem.get(0)," created successfully");
 		
-		currencyPage.clickOnCancel();
+		}
 		
-		currencyPage.isConfirmPopUpDisplayed();
-		
-		currencyPage.searchValue(companyId,manufacturerItem, 4, 1);
-		
-		verifyManufacturer(currencyPage,manufacturerItem);
-		
+		else
+		{	
+			testcases.add(getCurreentDate()+" | Pass : New manufacturer "+manufacturerItem.get(0)+" Already Created");
+			currencyPage.clickOnCancel();
+			currencyPage.isConfirmPopUpDisplayed();
+		}
+
 		currencyPage.logOut(2);
 	}
 	
 	private void createManufacturer(CurrencyPageNew currencyPage,List<String> manufacturer){
 		
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		boolean update = currencyPage.createManufacturer(manufacturer);	
 		
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New manufacturer"+manufacturer.get(0), " created successfully");
 		}
-	}
-	
-	private void verifyManufacturer(CurrencyPageNew currencyPage,List<String> manufacturer){
-	
-		/*Verify new manufacturer in the list*/
-		if(currencyPage.verifyValues(manufacturer.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New manufacturer "+manufacturer.get(0)+ " displayed in the list");
-		}
+		
 		else{
-			testcases.add(getCurreentDate()+" | Fail : New manufacturer "+manufacturer.get(0)+ " not displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New manufacturer "+manufacturer.get(0)+ "Already Created");
 		}
-
+		
 	}
-	
+
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

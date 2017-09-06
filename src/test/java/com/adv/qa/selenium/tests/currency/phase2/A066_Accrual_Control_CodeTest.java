@@ -57,6 +57,7 @@ public class A066_Accrual_Control_CodeTest extends BaseTest{
 		/*Create batch type code*/
 		currencyPage.enterAccrualControlAccount(companyId,accrualCode);	
 		
+		currencyPage.clickOnAcceptWarnings();
 		currencyPage.clickOnUpdate();
 		
 		/*Exit from the batch details page*/

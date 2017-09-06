@@ -91,7 +91,7 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 		
 		currencyPage.clickOnAmed1();
 		
-		createPathKey(currencyPage,pathKeyList,structureForWest,structureForSusp);
+		createPathKey(currencyPage,pathKeyList,structureForWest,structureForSusp);//Failed
 		
 		currencyPage.clickOnCancel1();
 		currencyPage.logOut(1);
@@ -101,6 +101,7 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 	private void createDefautStructure(CurrencyPage currencyPage,List<String> structureElement) throws InterruptedException{		
 		
 		String SuccMessage = "The previously-requested action has been performed";
+		
 		/*Create new structure element*/
 		boolean update = currencyPage.enterElementDetails(structureElement);
 
@@ -147,9 +148,12 @@ public class A029_Default_Structure_ElementsTest extends BaseTest{
 
 			currencyPage.clickOnInsert1();
 			
-			currencyPage.createPathKey(pathKeyList);
+			currencyPage.createPathKey(pathKeyList);//Failed
 			
 			currencyPage.clickOnUpdate();
+			
+			
+			
 			
 			/*Exit from the batch type details page*/
 			currencyPage.clickOnCancel();

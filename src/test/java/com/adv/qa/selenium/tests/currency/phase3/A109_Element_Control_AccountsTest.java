@@ -55,20 +55,21 @@ public class A109_Element_Control_AccountsTest extends BaseTest{
 		createIMAccounts(currencyPage,northControl,currencyCode);
 		createIMAccounts(currencyPage,southControl,currencyCode);
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
-		currencyPage.ClickOnAnyButton("OK", 1);
-	
-		verifyValues(currencyPage,eastControl);
-		verifyValues(currencyPage,westControl);
-		verifyValues(currencyPage,northControl);
-		verifyValues(currencyPage,southControl);
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		currencyPage.ClickOnAnyButton("OK", 1);
+//	
+//		verifyValues(currencyPage,eastControl);
+//		verifyValues(currencyPage,westControl);
+//		verifyValues(currencyPage,northControl);
+//		verifyValues(currencyPage,southControl);
 		
-		currencyPage.logOut(2);
+		currencyPage.logOut(1);
 	}
 	
 	
 	private void createIMAccounts(CurrencyPageNew currencyPage,List<String> elements,List<String> currencyCode) throws InterruptedException{
 		
+		String SuccMessage = "The previously-requested action has been performed";
 		String code = "EDTESTRICA ACT=AMEND,CMPY="+companyId+",ELEM="+elements.get(0); 
 		
 		currencyPage.isCommandDisplayed();
@@ -87,23 +88,23 @@ public class A109_Element_Control_AccountsTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();	
 		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New Store "+elements.get(0), "updated successfully");
+		
 		currencyPage.isCommandDisplayed();
 			
 			
 		}
 			
-private void verifyValues(CurrencyPageNew currencyPage,List<String> elements) throws InterruptedException{
-		
-		/*Verify new standard text in the list*/
-		if(currencyPage.verifyValues(elements.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New Store "+elements.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New Store "+elements.get(0)+ " not displayed in the list");
-		}
-		
-		
-	}
+//private void verifyValues(CurrencyPageNew currencyPage,List<String> elements) throws InterruptedException{
+//		
+//		/*Verify new standard text in the list*/
+//		if(currencyPage.verifyValues(elements.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New Store "+elements.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New Store "+elements.get(0)+ " not displayed in the list");
+//		}	
+//	}
 			
 	
 

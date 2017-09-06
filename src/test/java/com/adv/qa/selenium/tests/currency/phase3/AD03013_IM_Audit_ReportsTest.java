@@ -17,6 +17,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * Test Reference No	: 	AD03013 IM Audit Reports 
  * Purpose              :   IM Audit Reports 
  * ACCESS               :   ED3,ED4,ED8,GM4,DX1,HX1
+ * Modified Date		:   Modified by Chetna/Dt: 24-Aug-2017
  */
 
 public class AD03013_IM_Audit_ReportsTest extends BaseTest{
@@ -74,7 +75,9 @@ public class AD03013_IM_Audit_ReportsTest extends BaseTest{
 		}
 		
 		String statBefore = currencyPage.getProcessDetails(processList.get(2),processList.get(1));
-		Assert.assertEquals(testcases,statBefore, "2","Precess has","entered task list");
+		
+		Assert.assertEquals(testcases,statBefore, "2","Process has","entered task list");
+		
 		if(statBefore.equals("2")){
 			currencyPage.updateProcess(processList.get(2),processList.get(1));
 		}

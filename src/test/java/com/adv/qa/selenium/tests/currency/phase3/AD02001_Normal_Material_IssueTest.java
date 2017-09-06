@@ -119,14 +119,8 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new material issue*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-			testcases.add(getCurreentDate()+" | Pass : Material issue created");
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Material issue not created");
-		}
-
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");	
+		
 		currencyPage.isCommandDisplayed();
 	}
 	
@@ -180,12 +174,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Movement reference for material issue not created ");
-		}
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
 		
 		currencyPage.isCommandDisplayed();
 	}
@@ -205,6 +194,7 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		
 		currencyPage.searchValue("IMMI", 16, 5);
 		
+		currencyPage.sortValues();
 		
 		currencyPage.clickOnView();
 		
@@ -234,28 +224,14 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		currencyPage.searchItemStore(companyId,eastStoreBalance);
 		
 		boolean totalBalance = currencyPage.verifyTotalStockBalance(eastStoreBalance);
+		Assert.assertTrue(testcases,totalBalance,"Total stock balance "," as expected");
 
-		if(totalBalance== true){
-			testcases.add(getCurreentDate()+" | Pass : Total stock balance is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Total stock balance is not as expected ");
-		}
-
+		boolean storeItemValues = currencyPage.verifyStoreItemValues(eastStoreBalance,1);
+		Assert.assertTrue(testcases,storeItemValues,"Store item values "," as expected");
 		
-		boolean storeItemValues = currencyPage.verifyStoreItemValues(eastStoreBalance,1);//Need Test
-		
-		if(storeItemValues== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item values is not as expected ");
-		}
-				
-		currencyPage.clickOnValuation();//Modify here
+		currencyPage.clickOnValuation();
 		
 		boolean verify = currencyPage.verifyStoreItemValuation(eastStoreValuation,1);
-		
 		Assert.assertTrue(testcases,verify,"Store item valuation is "," correct");
 
 		currencyPage.clickOnReturnButton();
@@ -263,13 +239,8 @@ public class AD02001_Normal_Material_IssueTest extends BaseTest{
 		currencyPage.clickOnCurrentStock();
 		
 		boolean currentStock = currencyPage.verifyCurrenctStock(eastStoreCurrentStock,0);
+		Assert.assertTrue(testcases,currentStock,"Currenct stock is "," as expected");	
 		
-		if(currentStock== true){
-			testcases.add(getCurreentDate()+" | Pass : Currenct stock is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Currenct stock is not as expected ");
-		}		
 		currencyPage.clickOnCancel();
 		
 	}

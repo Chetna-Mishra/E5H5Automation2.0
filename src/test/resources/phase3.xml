@@ -4,6 +4,7 @@
     <Row id="A091A">
         <userName>EXPED</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>PBA</currencyCode>
         <currencyCode>AZJ</currencyCode>
         
@@ -1472,8 +1473,9 @@
     
     
     <Row id="AD02009">
-        <userName>ADMIN</userName>
+        <userName>EMPLOYEE</userName>
         <userName>GREC</userName>
+        <userName>MANAGER</userName>
         <passWord>E5</passWord>
         
         <currencyCode>DOA</currencyCode>
@@ -1487,18 +1489,18 @@
         <orderCode>SONY</orderCode>
         <orderCode>0</orderCode>
         <orderCode>SOUTH</orderCode>
-        <orderCode>SOUTH HQ</orderCode>
+        <orderCode>SOUTH</orderCode>
         <orderCode>BUYER</orderCode>
         <orderCode>GBP</orderCode>
-        <orderCode>POP HQ</orderCode>
+        <orderCode>SOUTH</orderCode>
         <orderCode>O1</orderCode>
         <orderCode>S1</orderCode>
-        <orderCode>D2</orderCode>
+        <orderCode>D1</orderCode>
         <orderCode>DVP-S325</orderCode>
         <orderCode>Sony DVP-325</orderCode>
         <orderCode>40.0000</orderCode>
         <orderCode>250.00</orderCode>
-        <orderCode>POP HQ</orderCode>
+        <orderCode>SOUTH</orderCode>
         <orderCode>EACH</orderCode>
         <orderCode>EACH</orderCode>
         <orderCode>STKS</orderCode>
@@ -1514,15 +1516,15 @@
         <receiveGoods>G</receiveGoods>
         <receiveGoods>40.0000</receiveGoods>
         <receiveGoods>EACH</receiveGoods>
-        <receiveGoods>SOUTH HQ</receiveGoods>
+        <receiveGoods>SOUTH</receiveGoods>
         <receiveGoods>40.0000</receiveGoods>
         <receiveGoods>EACH</receiveGoods>
         <receiveGoods>GRN00001</receiveGoods>
         
-        <authorisor1>MANAGER</authorisor1>
+        <authorisor1>ADMIN</authorisor1>
         <authorisor1>S1</authorisor1>
         
-        <authorisor2>ADMIN</authorisor2>
+        <authorisor2>MANAGER</authorisor2>
         <authorisor2>S1</authorisor2>
         
         <batchDetails1>STKS</batchDetails1>
@@ -1549,9 +1551,8 @@
         <stockBalanceValuation>10000.00</stockBalanceValuation>
         <stockBalanceValuation>ORD</stockBalanceValuation>
 
-        <stockBalanceCurrencyStock>0</stockBalanceCurrencyStock>
-        <stockBalanceCurrencyStock>0</stockBalanceCurrencyStock>
-        <stockBalanceCurrencyStock>0</stockBalanceCurrencyStock>
+ 		<stockBalanceCurrencyStock>DVP-S325</stockBalanceCurrencyStock>
+        <stockBalanceCurrencyStock>SOUTH</stockBalanceCurrencyStock>
         <stockBalanceCurrencyStock>40.0000</stockBalanceCurrencyStock>
         <stockBalanceCurrencyStock>40.0000</stockBalanceCurrencyStock>
         <stockBalanceCurrencyStock>40.0000</stockBalanceCurrencyStock>
@@ -1559,21 +1560,25 @@
     </Row>
     
     <Row id="AD02010">
-        <userName>IM</userName>
+    
+        <userName>GREC</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>GBB</currencyCode>
         <currencyCode>EDA</currencyCode>
         
-        <transactionDetails>Invoice for order 1308</transactionDetails>
+        <transactionDetails>Invoice for order 0000000001</transactionDetails>
         <transactionDetails>1</transactionDetails>
         <transactionDetails>10000.00</transactionDetails>
         <transactionDetails>0.00</transactionDetails>
+        <transactionDetails>12</transactionDetails>
         <transactionDetails>0</transactionDetails>
                 
         <invoiceDetails>null</invoiceDetails>
         <invoiceDetails>SONY</invoiceDetails>
         <invoiceDetails>SR8 4IP</invoiceDetails>
-        <invoiceDetails>NORTH</invoiceDetails>
+        <invoiceDetails>SOUTH</invoiceDetails>
         <invoiceDetails>12</invoiceDetails>
         <invoiceDetails>1998</invoiceDetails>
         <invoiceDetails>1308</invoiceDetails>
@@ -1585,31 +1590,34 @@
         <invoiceDetails>null</invoiceDetails>
         <invoiceDetails>null</invoiceDetails>
         
-        <invoiceDetailLines>SONY</invoiceDetailLines>
+        <invoiceDetailLines>Sony DVP-S325</invoiceDetailLines>
         <invoiceDetailLines>250.00000</invoiceDetailLines>
         <invoiceDetailLines>40.0000</invoiceDetailLines>
         <invoiceDetailLines>STKS</invoiceDetailLines>
-        <invoiceDetailLines>E1</invoiceDetailLines>
+        <invoiceDetailLines>S1</invoiceDetailLines>
+        <invoiceDetailLines>DVP-S325</invoiceDetailLines>
  
         <searchValue>PDE3</searchValue>
         <searchValue>ACC</searchValue>
         
-        <pdeBatchDetails1>STKS</pdeBatchDetails1>
+        <pdeBatchDetails1>2000</pdeBatchDetails1>
         <pdeBatchDetails1>SBTZ</pdeBatchDetails1>
-        <pdeBatchDetails1>10000.00</pdeBatchDetails1>
-        <pdeBatchDetails1>40.0000</pdeBatchDetails1>
+        <pdeBatchDetails1>-10000.00</pdeBatchDetails1>
+        <pdeBatchDetails1>0.0000</pdeBatchDetails1>
         
-        <pdeBatchDetails2>2000</pdeBatchDetails2>
+        
+        <pdeBatchDetails2>STKS</pdeBatchDetails2>
         <pdeBatchDetails2>SBTZ</pdeBatchDetails2>
-        <pdeBatchDetails2>-10000.00</pdeBatchDetails2>
-        <pdeBatchDetails2>0.0000</pdeBatchDetails2>
+        <pdeBatchDetails2>10000.00</pdeBatchDetails2>
+        <pdeBatchDetails2>40.0000</pdeBatchDetails2>
         
+    
         <accBatchDetails1>STKS</accBatchDetails1>
         <accBatchDetails1>SBTZ</accBatchDetails1>
         <accBatchDetails1>-10000.00</accBatchDetails1>
         <accBatchDetails1>-40.0000</accBatchDetails1>
         
-        <accBatchDetails2>2000</accBatchDetails2>
+        <accBatchDetails2>5900</accBatchDetails2>
         <accBatchDetails2>SBTZ</accBatchDetails2>
         <accBatchDetails2>10000.00</accBatchDetails2>
         <accBatchDetails2>0.0000</accBatchDetails2>
@@ -1617,41 +1625,46 @@
     </Row>
     
      <Row id="AD02013">
-        <userName>QUERY</userName>
+     
+     	<userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>DOA</currencyCode>
         <currencyCode>DB3</currencyCode>
         
-        <orderCode>O1</orderCode>
+		<orderCode>O1</orderCode>
         <orderCode>DENON</orderCode>
         <orderCode>0</orderCode>
         <orderCode>SOUTH</orderCode>
-        <orderCode>SOUTH HQ</orderCode>
+        <orderCode>SOUTH</orderCode>
         <orderCode>POP HQ</orderCode>
         <orderCode>BUYER</orderCode>
         <orderCode>GBP</orderCode>
-        <orderCode>S2</orderCode>
-        <orderCode>D2</orderCode>
+        <orderCode>S1</orderCode>
+        <orderCode>D1</orderCode>
         <orderCode>DVD-SRVC</orderCode>
-        <orderCode>SOUTH</orderCode>
+		<orderCode>100</orderCode>
+        <orderCode>POP HQ</orderCode>
         <orderCode>DEN</orderCode>
         <orderCode>S1</orderCode>
-        <orderCode>1</orderCode>
-        <orderCode>3</orderCode>
-        <orderCode>1</orderCode>
-        <orderCode>6</orderCode>
+        <orderCode>"5</orderCode>
+        <orderCode>Outstanding</orderCode>
+        <orderCode>Held for Auth</orderCode>
         
         <authorisor1>EMPLOYEE</authorisor1>
-        <authorisor1>S1</authorisor1>       
+        <authorisor1>S1</authorisor1>      
+        
       </Row>
     
     <Row id="AD03001">
-        <userName>IM</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>HCJ</currencyCode>
         <currencyCode>HBA</currencyCode>
         <currencyCode>EDA</currencyCode>
         <currencyCode>ARA</currencyCode>
+        <currencyCode>HAC</currencyCode>
            
         <westStoreElements>DVD-909</westStoreElements>
         <westStoreElements>WEST</westStoreElements>      
@@ -1682,13 +1695,13 @@
         <westStoreDetails>0.0000</westStoreDetails>
         <westStoreDetails>24750.00</westStoreDetails>
         <westStoreDetails>99.0000</westStoreDetails>
-        <westStoreDetails>0.0000</westStoreDetails>
+        <westStoreDetails>201.0000</westStoreDetails>
         
         <westStoreCurrentStock>0</westStoreCurrentStock>
         <westStoreCurrentStock>0</westStoreCurrentStock>
         <westStoreCurrentStock>99.0000</westStoreCurrentStock>
         <westStoreCurrentStock>99.0000</westStoreCurrentStock>
-        <westStoreCurrentStock>99.0000</westStoreCurrentStock>
+        <westStoreCurrentStock>300.0000</westStoreCurrentStock>
         
         <eastStoreDetails>DVD-909</eastStoreDetails>
         <eastStoreDetails>EAST</eastStoreDetails>        
@@ -1717,16 +1730,16 @@
         <imdfEBatchDetails>-250.00</imdfEBatchDetails>
         <imdfEBatchDetails>0.0000</imdfEBatchDetails>
         
-        <reportSearchValue>RHED%</reportSearchValue>
-        <reportSearchValue>From Store: East store</reportSearchValue>
+        <reportSearchValue>RHED05</reportSearchValue>
+        <reportSearchValue>From Store: West store</reportSearchValue>
         <reportSearchValue>Road 1</reportSearchValue>
-        <reportSearchValue>Tel</reportSearchValue>
-        <reportSearchValue>Fax</reportSearchValue>
-        <reportSearchValue>Contact</reportSearchValue>
-        <reportSearchValue>To Store:   West store</reportSearchValue>
+        <reportSearchValue>Tel:</reportSearchValue>
+        <reportSearchValue>Fax:</reportSearchValue>
+        <reportSearchValue>Contact:</reportSearchValue>
+        <reportSearchValue>To Store:   East store</reportSearchValue>
         <reportSearchValue>Road 1</reportSearchValue>
-        <reportSearchValue>Document Reference</reportSearchValue>
-        <reportSearchValue>Line  Item                           Quantity  QUOM            Line Value</reportSearchValue>
+        <reportSearchValue>Document Reference:</reportSearchValue>
+        <reportSearchValue>Line  Item</reportSearchValue>
         <reportSearchValue>Description</reportSearchValue>
         <reportSearchValue>1  DVD-909                          1.0000  EACH                250.00</reportSearchValue>
         <reportSearchValue>DVD-909</reportSearchValue>
@@ -1735,7 +1748,7 @@
     
     <Row id="AD03013">
         <userName>IM</userName>
-        <passWord>IM</passWord>
+        <passWord>E5</passWord>
         
         <processED3>SUBMIT ED3</processED3>
         <processED3>E5H5ED3</processED3>
@@ -1763,20 +1776,19 @@
     </Row>
     
     <Row id="AD03016">
-        <userName>IM</userName>
+        <userName>ADMIN</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>EYB</currencyCode>
         <currencyCode>DAH</currencyCode>
         <currencyCode>HAB</currencyCode>
         <currencyCode>GAA</currencyCode>
-
-        
     </Row>
     
-    
     <Row id="AD05001">
-        <userName>IM</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>HCJ</currencyCode>
         <currencyCode>HBA</currencyCode>
         <currencyCode>EDA</currencyCode>
@@ -1810,25 +1822,26 @@
         <currencyStockMI>0</currencyStockMI>
         <currencyStockMI>5.0000</currencyStockMI>
         <currencyStockMI>5.0000</currencyStockMI>
-        <currencyStockMI>5.0000</currencyStockMI>
+        <currencyStockMI>20.0000</currencyStockMI>
         
         <stkeBatchDetails1>STKE</stkeBatchDetails1>
         <stkeBatchDetails1>EBTZ</stkeBatchDetails1>
-        <stkeBatchDetails1>-2400.00</stkeBatchDetails1>
+        <stkeBatchDetails1>-2,400.00</stkeBatchDetails1>
         <stkeBatchDetails1>12.0000</stkeBatchDetails1>
         
         <issuBatchDetails1>ISSU</issuBatchDetails1>
         <issuBatchDetails1>E1</issuBatchDetails1>
-        <issuBatchDetails1>2400.00</issuBatchDetails1>
+        <issuBatchDetails1>2,400.00</issuBatchDetails1>
         <issuBatchDetails1>12.0000</issuBatchDetails1>
         
         <storeDetails>RS</storeDetails>
         <storeDetails>EAST</storeDetails>
-        
+         
         <returnStoreStock>EAST</returnStoreStock>
         <returnStoreStock>A160</returnStoreStock>
-        <returnStoreStock>1.0000</returnStoreStock>
+        <returnStoreStock>12.0000</returnStoreStock>
         <returnStoreStock>EACH</returnStoreStock>
+        <returnStoreStock>1</returnStoreStock>
                         
         <stockBalanceRS>A160</stockBalanceRS>
         <stockBalanceRS>EAST</stockBalanceRS>
@@ -1841,30 +1854,33 @@
         <currentStockBalanceRS>0</currentStockBalanceRS>
         <currentStockBalanceRS>17.0000</currentStockBalanceRS>
         <currentStockBalanceRS>17.0000</currentStockBalanceRS>
-        <currentStockBalanceRS>17.0000</currentStockBalanceRS>
+        <currentStockBalanceRS>32.0000</currentStockBalanceRS>
         
         <stkeBatchDetails2>STKE</stkeBatchDetails2>
         <stkeBatchDetails2>EBTZ</stkeBatchDetails2>
-        <stkeBatchDetails2>2400.00</stkeBatchDetails2>
+        <stkeBatchDetails2>2,400.00</stkeBatchDetails2>
         <stkeBatchDetails2>12.0000</stkeBatchDetails2>
         
         <rstrBatchDetails2>RSTR</rstrBatchDetails2>
         <rstrBatchDetails2>E1</rstrBatchDetails2>
-        <rstrBatchDetails2>-2400.00</rstrBatchDetails2>
+        <rstrBatchDetails2>-2,400.00</rstrBatchDetails2>
         <rstrBatchDetails2>12.0000</rstrBatchDetails2>
         
         <issuBatchDetails2>ISSU</issuBatchDetails2>
         <issuBatchDetails2>E1</issuBatchDetails2>
-        <issuBatchDetails2>-2400.00</issuBatchDetails2>
+        <issuBatchDetails2>-2,400.00</issuBatchDetails2>
         <issuBatchDetails2>12.0000</issuBatchDetails2>
         
     </Row>
     
     <Row id="AD10001">
-        <userName>IM</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>GCA</currencyCode>
         <currencyCode>EDA</currencyCode>
+        <currencyCode>PBA</currencyCode>
+        
 	
         <invoiceDetails>2 SONY!</invoiceDetails>
         <invoiceDetails>1</invoiceDetails>
@@ -1872,8 +1888,13 @@
         <invoiceDetails>87.50</invoiceDetails>
         <invoiceDetails>12</invoiceDetails>
         <invoiceDetails>1998</invoiceDetails>
-
-        <transactionDetails>SONY</transactionDetails>        
+        
+        <aMendSonySupplier>SONY</aMendSonySupplier>
+        <aMendSonySupplier>S</aMendSonySupplier>
+        <aMendSonySupplier>UKS</aMendSonySupplier>
+        <aMendSonySupplier>R1</aMendSonySupplier>
+      
+        <transactionDetails>SONY</transactionDetails>  
         <transactionDetails>SR8 4IP</transactionDetails>
         <transactionDetails>00</transactionDetails>
         <transactionDetails>587.50</transactionDetails>                
@@ -1895,7 +1916,7 @@
         <header>Tax Amount</header>
         <header>87.50</header>
         
-        <batchDetails1>2160</batchDetails1>
+        <batchDetails1>2150</batchDetails1>
         <batchDetails1>NBTZ</batchDetails1>
         <batchDetails1>-87.50</batchDetails1>
         <batchDetails1>0.0000</batchDetails1>
@@ -1907,7 +1928,7 @@
     </Row>
     
     <Row id="AD10002">
-        <userName>IM</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
         <currencyCode>GAA</currencyCode>
         <currencyCode>GBB</currencyCode>
@@ -1917,6 +1938,7 @@
         <invoiceDetails>1</invoiceDetails>
         <invoiceDetails>587.50</invoiceDetails>
         <invoiceDetails>87.50</invoiceDetails>
+        <invoiceDetails>0</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
 
         <transactionDetails>null</transactionDetails>
@@ -1931,8 +1953,8 @@
         <transactionDetails>87.50</transactionDetails>        
         <transactionDetails>GBP</transactionDetails>
         <transactionDetails>0</transactionDetails>
-        <transactionDetails>UKE</transactionDetails>
-        <transactionDetails>PE</transactionDetails>
+        <transactionDetails>UKS</transactionDetails>
+        <transactionDetails>S</transactionDetails>
                         
         <lineDetails>SONY</lineDetails>
         <lineDetails>500</lineDetails>
@@ -1942,17 +1964,22 @@
         
         <batchDetails1>2000</batchDetails1>
         <batchDetails1>NBTZ</batchDetails1>
-        <batchDetails1>500.00</batchDetails1>
+        <batchDetails1>587.50</batchDetails1>
         <batchDetails1>0.0000</batchDetails1>
         
-        <batchDetails2>DEN</batchDetails2>
-        <batchDetails2>N1</batchDetails2>
-        <batchDetails2>-500.00</batchDetails2>
-        <batchDetails2>-1.0000</batchDetails2>
+        <batchDetails2>VATA</batchDetails2>
+        <batchDetails2>NBTZ</batchDetails2>
+        <batchDetails2>-87.50</batchDetails2>
+        <batchDetails2>0.0000</batchDetails2>
+        
+        <batchDetails3>DEN</batchDetails3>
+        <batchDetails3>N1</batchDetails3>
+        <batchDetails3>-500.00</batchDetails3>
+        <batchDetails3>-1.0000</batchDetails3>
     </Row>
     
     <Row id="AD10004">
-        <userName>IM</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
         <currencyCode>GBB</currencyCode>
         <currencyCode>EDA</currencyCode>
@@ -1961,6 +1988,7 @@
         <invoiceDetails>1</invoiceDetails>
         <invoiceDetails>10</invoiceDetails>
         <invoiceDetails>10</invoiceDetails>
+        <invoiceDetails>0</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
 
         <transactionDetails>null</transactionDetails>
@@ -1972,11 +2000,25 @@
         <transactionDetails>INVT01</transactionDetails>        
         <transactionDetails>10.00</transactionDetails>                
         <transactionDetails>00</transactionDetails>
-        <transactionDetails>0.00</transactionDetails>        
+        <transactionDetails>10.00</transactionDetails>        
         <transactionDetails>GBP</transactionDetails>
         <transactionDetails>1</transactionDetails>
         <transactionDetails>null</transactionDetails>
-                        
+        
+        <transactionDetailsCRN>null</transactionDetailsCRN>
+        <transactionDetailsCRN>SONY</transactionDetailsCRN>        
+        <transactionDetailsCRN>SR8 4IP</transactionDetailsCRN>
+        <transactionDetailsCRN>NORTH</transactionDetailsCRN>
+        <transactionDetailsCRN>12</transactionDetailsCRN>
+        <transactionDetailsCRN>1998</transactionDetailsCRN>
+        <transactionDetailsCRN>CNZ00</transactionDetailsCRN>        
+        <transactionDetailsCRN>10.00</transactionDetailsCRN>                
+        <transactionDetailsCRN>00</transactionDetailsCRN>
+        <transactionDetailsCRN>10.00</transactionDetailsCRN>        
+        <transactionDetailsCRN>GBP</transactionDetailsCRN>
+        <transactionDetailsCRN>1</transactionDetailsCRN>
+        <transactionDetailsCRN>null</transactionDetailsCRN>
+        
         <lineDetails>SONY</lineDetails>
         <lineDetails>10</lineDetails>
         <lineDetails>1</lineDetails>
@@ -1988,15 +2030,27 @@
         <batchDetails1>-10.00</batchDetails1>
         <batchDetails1>0.0000</batchDetails1>
         
-        <batchDetails2>DEN</batchDetails2>
-        <batchDetails2>N1</batchDetails2>
+        <batchDetails2>VATA</batchDetails2>
+        <batchDetails2>NBTZ</batchDetails2>
         <batchDetails2>10.00</batchDetails2>
-        <batchDetails2>1.0000</batchDetails2>
+        <batchDetails2>0.0000</batchDetails2>
+        
+        <batchDetails3>2000</batchDetails3>
+        <batchDetails3>NBTZ</batchDetails3>
+        <batchDetails3>10.00</batchDetails3>
+        <batchDetails3>0.0000</batchDetails3>
+        
+        <batchDetails4>VATA</batchDetails4>
+        <batchDetails4>NBTZ</batchDetails4>
+        <batchDetails4>-10.00</batchDetails4>
+        <batchDetails4>0.0000</batchDetails4>
+        
     </Row>
 
      <Row id="AD10005">
-        <userName>IM</userName>
+        <userName>EMPLOYEE</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>GAA</currencyCode>
         <currencyCode>GBB</currencyCode>
 
@@ -2004,6 +2058,7 @@
         <invoiceDetails>1</invoiceDetails>
         <invoiceDetails>0.00</invoiceDetails>
         <invoiceDetails>0.00</invoiceDetails>
+        <invoiceDetails>0</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
 
         <transactionDetails>null</transactionDetails>
@@ -2078,6 +2133,7 @@
         <invoiceDetails>470.00</invoiceDetails>
         <invoiceDetails>70.00</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
+        <invoiceDetails>0</invoiceDetails>
 
         <transactionDetails>Under-INV01</transactionDetails>
         <transactionDetails>470.00</transactionDetails>
@@ -2104,6 +2160,7 @@
         <invoiceDetails>1</invoiceDetails>
         <invoiceDetails>176337.99</invoiceDetails>
         <invoiceDetails>26263.10</invoiceDetails>
+        <invoiceDetails>0</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
 
         <transactionDetails>null</transactionDetails>
@@ -2184,6 +2241,7 @@
     <Row id="AD09005">
         <userName>IM</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>PYG</currencyCode>
         <currencyCode>PAA</currencyCode>
         <currencyCode>PYB</currencyCode>
@@ -2211,6 +2269,7 @@
     <Row id="AD09006">
         <userName>IM</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>PIA</currencyCode>
         
         <itemDv525>DV-525</itemDv525>
@@ -2466,6 +2525,7 @@
         <transactionDetails>21150.00</transactionDetails>
         <transactionDetails>3150.00</transactionDetails>
         <transactionDetails>0</transactionDetails>
+        <transactionDetails>0</transactionDetails>
                 
         <invoiceDetails>null</invoiceDetails>
         <invoiceDetails>SONY</invoiceDetails>
@@ -2516,6 +2576,7 @@
         <transactionDetails>1</transactionDetails>
         <transactionDetails>937.62</transactionDetails>
         <transactionDetails>139.64</transactionDetails>
+        <transactionDetails>0</transactionDetails>
         <transactionDetails>0</transactionDetails>
                 
         <invoiceDetails>null</invoiceDetails>

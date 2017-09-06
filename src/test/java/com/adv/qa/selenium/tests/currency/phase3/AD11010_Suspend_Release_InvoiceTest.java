@@ -99,7 +99,7 @@ public class AD11010_Suspend_Release_InvoiceTest extends BaseTest{
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
 		String currDate = dateFormat1.format(currentMonth.getTime());
 			
-		currencyPage.enterTransactionDetails(invoiceDetails,currDate,currDate);
+		currencyPage.enterTransactionDetails(invoiceDetails,"null","null");
 		
 		currencyPage.clickOnAcceptWarn();
 		

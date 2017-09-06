@@ -89,6 +89,7 @@ public class A072_Common_Purchasing_UsersTest extends BaseTest{
 			testcases.add(getCurreentDate()+" | Pass : CP User "+document.get(0)+ " already created");
 			
 			currencyPage.clickOnCancel();
+			currencyPage.isConfirmPopUpDisplayed();
 			
 		}
 			

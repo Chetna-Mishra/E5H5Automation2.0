@@ -56,19 +56,37 @@ public class A068_Inspection_CodesTest extends BaseTest{
 		currencyPage.clickOnInsert();
 		
 		/*Create batch type code*/
-		currencyPage.enterInspectionCode(inspectionCode);	
+		boolean update= currencyPage.enterInspectionCode(inspectionCode);	
 		
-		currencyPage.clickOnUpdate();
+		String SuccMessage = "The previously-requested action has been performed";
 		
 		/*Exit from the batch details page*/
-		currencyPage.clickOnCancel();
-
-		/*Verify new batch type in the list*/
-		Assert.assertTrue(testcases,currencyPage.verifyValues(inspectionCode.get(0)), "New inspection code  "+inspectionCode.get(0),"displayed in the list");
+		
+		if(update==true)
+		{
 			
+			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New inspection code  "+inspectionCode.get(0)," created successfully");
+			
+			clickOnCancel();
+			
+			}
+			else
+			{
+			currencyPage.clickOnCancel();
+			currencyPage.isConfirmPopUpDisplayed();
+			
+			/*Verify new batch type in the list*/
+			
+			Assert.assertTrue(testcases,currencyPage.verifyValues(inspectionCode.get(0)), "New inspection code  "+inspectionCode.get(0),"displayed in the list");
+			}
+		
+		
 		currencyPage.logOut(2);
+		}
 
-	}
+
 		
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

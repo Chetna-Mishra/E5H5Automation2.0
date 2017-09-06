@@ -67,10 +67,10 @@ public class A112_User_Company_SecurityTest extends BaseTest{
 		
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,userAccept);
-		verifyValues(currencyPage,userBuyer);
-		verifyValues(currencyPage,userExped);
-		verifyValues(currencyPage,userGrec);
+//		verifyValues(currencyPage,userAccept);
+//		verifyValues(currencyPage,userBuyer);
+//		verifyValues(currencyPage,userExped);
+//		verifyValues(currencyPage,userGrec);
 
 		currencyPage.logOut(2);
 	}
@@ -78,24 +78,32 @@ public class A112_User_Company_SecurityTest extends BaseTest{
 	
 	private void createSecurityGroups(CurrencyPageNew currencyPage,List<String> elements) throws InterruptedException{
 		
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.insertUserCompany(elements,companyId);
 		
 		if(update == true){
-			currencyPage.clickOnUpdate();	
-		}	
+			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "security group for "+elements.get(0), "created successfully");	
+		}
+		
+		else
+		{
+			testcases.add(getCurreentDate()+" | Pass : security group for "+elements.get(0)+ " already created");	
+		}
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> securityUser){
-		
-		currencyPage.search(securityUser.get(0),3,1);
-		
-		if(currencyPage.verifyValues(securityUser.get(1))){
-			testcases.add(getCurreentDate()+" | Pass : security group for "+securityUser.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : security group for "+securityUser.get(0)+ " not displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPage currencyPage,List<String> securityUser){
+//		
+//		currencyPage.search(securityUser.get(0),3,1);
+//		
+//		if(currencyPage.verifyValues(securityUser.get(1))){
+//			testcases.add(getCurreentDate()+" | Pass : security group for "+securityUser.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : security group for "+securityUser.get(0)+ " not displayed in the list");
+//		}
+//	}
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

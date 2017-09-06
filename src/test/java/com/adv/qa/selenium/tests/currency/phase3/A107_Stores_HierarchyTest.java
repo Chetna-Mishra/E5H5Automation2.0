@@ -65,36 +65,42 @@ public class A107_Stores_HierarchyTest extends BaseTest{
 
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,northStore);
-		verifyValues(currencyPage,southStore);
-		verifyValues(currencyPage,eastStore);
-		verifyValues(currencyPage,westStore);
+//		verifyValues(currencyPage,northStore);
+//		verifyValues(currencyPage,southStore);
+//		verifyValues(currencyPage,eastStore);
+//		verifyValues(currencyPage,westStore);
 		
 		currencyPage.logOut(2);
 	}
 	
 	
 	private void createIMAccounts(CurrencyPageNew currencyPage,List<String> elements){
+		
+		String SuccMessage = "The previously-requested action has been performed";
 		boolean update = currencyPage.createStoresHierarchy(elements);
+		
 
 		if(update == true){
 			currencyPage.clickOnUpdate();
+			
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New store hierarchy "+elements.get(0), "created successfully");	
+			
 		}
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New store hierarchy "+elements.get(0)+ "  displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : New store hierarchy "+elements.get(0)+ " already created");
 		}
 
 	}
 	
-	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
-		
-		if(!currencyPage.verifyValues(elements.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New store hierarchy "+elements.get(0)+ "  displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New store hierarchy "+elements.get(0)+ "  displayed in the list");
-		}
-	}
+//	private void verifyValues(CurrencyPageNew currencyPage,List<String> elements){
+//		
+//		if(!currencyPage.verifyValues(elements.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New store hierarchy "+elements.get(0)+ "  displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New store hierarchy "+elements.get(0)+ "  displayed in the list");
+//		}
+//	}
 	
 	
 	@AfterClass (alwaysRun = true)

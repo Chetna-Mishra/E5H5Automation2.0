@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Default test</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">54.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.adv.qa.selenium.tests.currency.phase3.AD05001_Return_To_StoreTest</td><td><a href="#m1"><b>verify</b>  </a></td><td class="numi">1</td><td>1504074341100</td><td class="numi">39765</td></tr>
+</table>
+<h1>Default test</h1>
+<h2 id="m1">com.adv.qa.selenium.tests.currency.phase3.AD05001_Return_To_StoreTest:verify</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[DataUnit [userName = EMPLOYEE], DataUnit [passWord = E5], DataUnit [currencyCode = HCJ], DataUnit [currencyCode = HBA], DataUnit [currencyCode = EDA], DataUnit [stockBalance = A160], DataUnit [stockBalance = EAST], DataUnit [stockBalance = 3400.00], DataUnit [stockBalance = 17.0000], DataUnit [stockBalance = 0.0000], DataUnit [stockBalance = 3400.00], DataUnit [currentStockBalance = 0], DataUnit [currentStockBalance = 0], DataUnit [currentStockBalance = 17.0000], DataUnit [currentStockBalance = 17.0000], DataUnit [currentStockBalance = 17.0000], DataUnit [materialIssue = EAST], DataUnit [materialIssue = A160], DataUnit [materialIssue = 12.0000], DataUnit [materialIssue = EACH], DataUnit [stockBalanceMI = A160], DataUnit [stockBalanceMI = EAST], DataUnit [stockBalanceMI = 1000.00], DataUnit [stockBalanceMI = 5.0000], DataUnit [stockBalanceMI = 0.0000], DataUnit [stockBalanceMI = 1000.00], DataUnit [currencyStockMI = 0], DataUnit [currencyStockMI = 0], DataUnit [currencyStockMI = 5.0000], DataUnit [currencyStockMI = 5.0000], DataUnit [currencyStockMI = 20.0000], DataUnit [storeDetails = RS], DataUnit [storeDetails = EAST], DataUnit [returnStoreStock = EAST], DataUnit [returnStoreStock = A160], DataUnit [returnStoreStock = 12.0000], DataUnit [returnStoreStock = EACH], DataUnit [stockBalanceRS = A160], DataUnit [stockBalanceRS = EAST], DataUnit [stockBalanceRS = 3400.00], DataUnit [stockBalanceRS = 17.0000], DataUnit [stockBalanceRS = 0.0000], DataUnit [stockBalanceRS = 3400.00], DataUnit [currentStockBalanceRS = 0], DataUnit [currentStockBalanceRS = 0], DataUnit [currentStockBalanceRS = 17.0000], DataUnit [currentStockBalanceRS = 17.0000], DataUnit [currentStockBalanceRS = 32.0000], DataUnit [stkeBatchDetails1 = STKE], DataUnit [stkeBatchDetails1 = EBTZ], DataUnit [stkeBatchDetails1 = -2,400.00], DataUnit [stkeBatchDetails1 = 12.0000], DataUnit [rstrBatchDetails2 = RSTR], DataUnit [rstrBatchDetails2 = E1], DataUnit [rstrBatchDetails2 = -2,400.00], DataUnit [rstrBatchDetails2 = 12.0000], DataUnit [issuBatchDetails1 = ISSU], DataUnit [issuBatchDetails1 = E1], DataUnit [issuBatchDetails1 = 2,400.00], DataUnit [issuBatchDetails1 = 12.0000], DataUnit [stkeBatchDetails2 = STKE], DataUnit [stkeBatchDetails2 = EBTZ], DataUnit [stkeBatchDetails2 = 2,400.00], DataUnit [stkeBatchDetails2 = 12.0000], DataUnit [issuBatchDetails2 = ISSU], DataUnit [issuBatchDetails2 = E1], DataUnit [issuBatchDetails2 = -2,400.00], DataUnit [issuBatchDetails2 = 12.0000]]</td>
+</tr>
+<tr><td>
+<div class="stacktrace">org.openqa.selenium.UnsupportedCommandException: POST /session/9af3cc2a-a287-4b55-8113-e6277ad4759e/moveto did not match a known command
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;ChetnaM-PC&apos;, ip: &apos;10.31.25.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20160421124000, version=, platform=XP, proxy={}, specificationLevel=1, acceptSslCerts=false, browserVersion=46.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=Firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=Windows_NT, device=desktop}]
+Session ID: 9af3cc2a-a287-4b55-8113-e6277ad4759e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
+	at org.openqa.selenium.support.events.internal.EventFiringMouse.mouseMove(EventFiringMouse.java:58)
+	at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+	at com.adv.qa.selenium.framework.pageObjects.currency.CurrencyPageNew.clickOnFetch_retrieve(CurrencyPageNew.java:2510)
+	at com.adv.qa.selenium.tests.currency.phase3.AD05001_Return_To_StoreTest.RetrieveMaterialIssue(AD05001_Return_To_StoreTest.java:154)
+	at com.adv.qa.selenium.tests.currency.phase3.AD05001_Return_To_StoreTest.verify(AD05001_Return_To_StoreTest.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

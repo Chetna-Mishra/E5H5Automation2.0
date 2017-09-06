@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD05001_Return_To_StoreTest>
+<Verification1>30/08/2017 01:11:24 | Pass : Login page displayed</Verification1>
+<Verification2>30/08/2017 01:11:33 | Pass : Command line displayed</Verification2>
+<Verification3>30/08/2017 01:11:51 | Pass : Currency search page displayed</Verification3>
+<Verification4>30/08/2017 01:12:58 | Pass :  HBA06 : Movement Reference 000010 will be created  successfully</Verification4>
+<Verification5>30/08/2017 01:13:22 | Pass : Currency search page displayed</Verification5>
+<Verification6>30/08/2017 01:13:49 | Fail : Total stock balance  not  as expected</Verification6>
+</AD05001_Return_To_StoreTest>
+</TestCase>
+</SeleniumTestReport>

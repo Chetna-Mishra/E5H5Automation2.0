@@ -15,6 +15,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD09008 Enquiries - Document List   
  * Purpose              :   Perform Enquiries - Document List 
+ * Modified Date		:   Modified by Chetna/Dt: 29-Aug-2017
  * ACCESS               :   HCA
  */
 
@@ -54,6 +55,7 @@ public class AD09008_Enquiries_Document_ListTest extends BaseTest{
 		Assert.assertTrue(testcases,currencyPage.getDocumentList()>0,"Security elements data "," displayed");
 		
 		currencyPage.logOut(2);
+		
 	}
 	
 

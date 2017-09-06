@@ -16,6 +16,7 @@ import com.adv.qa.selenium.helpers.DataRow;
 /**
  * @author              :   Draxayani
  * Test Reference No	: 	D09005 Classification Parentage for Item Hierarchy 
+* Modified Date		:   Modified by Chetna/Dt: 28-Aug-2017
  * Purpose              :   Create Parentage Codes for Item Hierarchy 
  * ACCESS               :   PYC
  */
@@ -31,12 +32,14 @@ public class AD09005_Classification_Parentage_For_Item_HierarchyTest extends Bas
 	public void verify(DataRow dataRow) throws InterruptedException{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> classificationStructure = dataRow.findNamesReturnValues("classificationStructure");
 		List<String> amendCompany = dataRow.findNamesReturnValues("amendCompany");
 		List<String> classificationCodeBud = dataRow.findNamesReturnValues("classificationCodeBud");
 		List<String> classificationCodeHigh = dataRow.findNamesReturnValues("classificationCodeHigh");
 		List<String> classificationCodeMid = dataRow.findNamesReturnValues("classificationCodeMid");
+		String SuccMessage = "The previously-requested action has been performed";
 
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -63,6 +66,8 @@ public class AD09005_Classification_Parentage_For_Item_HierarchyTest extends Bas
 		
 		currencyPage.clickOnUpdate();
 		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Classification Structure", " created successfully");//Update
+		
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
@@ -82,12 +87,15 @@ public class AD09005_Classification_Parentage_For_Item_HierarchyTest extends Bas
 		
 		currencyPage.clickOnUpdate();
 		
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Purchasing Company Control ", "Updated successfully");
+		
 		currencyPage.clickOnCancel();
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(2));
 		
 		/*Verify currency search page displayed*/
-		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Classification Parentage List","Currency search page","displayed");
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Classification Parentage List","PYB search page","displayed");
 		
 		currencyPage.searchValue(companyId,classificationStructure,2,6);
 		
@@ -99,9 +107,6 @@ public class AD09005_Classification_Parentage_For_Item_HierarchyTest extends Bas
 		
 		currencyPage.clickOnCancel();
 		
-		verifyValues(currencyPage,classificationCodeHigh);
-		verifyValues(currencyPage,classificationCodeMid);
-		verifyValues(currencyPage,classificationCodeBud);
 
 		currencyPage.logOut(2);
 	}
@@ -109,22 +114,18 @@ public class AD09005_Classification_Parentage_For_Item_HierarchyTest extends Bas
 	
 	private void createSecurityGroups(CurrencyPageNew currencyPage,List<String> elements,int i) throws InterruptedException{
 		
-		currencyPage.classificationParentage(elements,i);		
+		String SuccMessage = "The previously-requested action has been performed";
+		currencyPage.classificationParentage(elements,i);
 		
 		currencyPage.clickOnAcceptWarnings();
 		
-		currencyPage.clickOnUpdate();	
+		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New classification code "+elements.get(0), "created successfully");
+		
+		
 	}
 	
-	private void verifyValues(CurrencyPage currencyPage,List<String> classification){
-		
-		if(currencyPage.verifyValues(classification.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New classification code "+classification.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New classification code "+classification.get(0)+ " not displayed in the list");
-		}
-	}
 	
 	@AfterClass (alwaysRun = true)
 	public void tearDown(){

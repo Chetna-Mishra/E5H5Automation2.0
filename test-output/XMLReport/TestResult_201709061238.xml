@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD10005_Enter_FOC_InvoiceTest>
+<Verification1>06/09/2017 12:38:21 | Pass : Login page displayed</Verification1>
+<Verification2>06/09/2017 12:38:33 | Pass : Command line displayed</Verification2>
+<Verification3>06/09/2017 12:38:56 | Pass : Currency search page displayed</Verification3>
+<Verification4>06/09/2017 12:40:29 | Pass : Supplier IM updated successfully</Verification4>
+<Verification5>06/09/2017 12:41:30 | Pass : Currency search page displayed</Verification5>
+</AD10005_Enter_FOC_InvoiceTest>
+</TestCase>
+</SeleniumTestReport>

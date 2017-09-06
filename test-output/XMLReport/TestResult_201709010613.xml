@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD10001_Log_Single_InvoiceTest>
+<Verification1>01/09/2017 06:13:30 | Pass : Login page displayed</Verification1>
+<Verification2>01/09/2017 06:13:42 | Pass : Command line displayed</Verification2>
+<Verification3>01/09/2017 06:14:24 | Pass : Journey search page displayed</Verification3>
+<Verification4>01/09/2017 06:16:15 | Pass : Journal header page displayed</Verification4>
+<Verification5>01/09/2017 06:17:09 | Pass : 2150 batch values are   correct</Verification5>
+<Verification6>01/09/2017 06:17:39 | Pass : VATA batch values are   correct</Verification6>
+</AD10001_Log_Single_InvoiceTest>
+</TestCase>
+</SeleniumTestReport>

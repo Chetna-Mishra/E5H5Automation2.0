@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD10004_Enter_Tax_Only_InvoiceTest>
+<Verification1>05/09/2017 02:37:20 | Pass : Login page displayed</Verification1>
+<Verification2>05/09/2017 02:37:32 | Pass : Command line displayed</Verification2>
+<Verification3>05/09/2017 02:38:26 | Pass : Currency search page displayed</Verification3>
+<Verification4>05/09/2017 02:38:56 | Pass : Transaction page displayed</Verification4>
+</AD10004_Enter_Tax_Only_InvoiceTest>
+</TestCase>
+</SeleniumTestReport>

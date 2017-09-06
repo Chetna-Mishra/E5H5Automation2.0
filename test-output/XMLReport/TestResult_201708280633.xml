@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD09004_Classification_Codes_For_Item_HierarchyTest>
+<Verification1>28/08/2017 06:34:19 | Pass : Login page displayed</Verification1>
+<Verification2>28/08/2017 06:34:28 | Pass : Command line displayed</Verification2>
+<Verification3>28/08/2017 06:34:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>28/08/2017 06:36:02 | Pass : New classification code BUD  created successfully</Verification4>
+<Verification5>28/08/2017 06:36:39 | Pass : New classification code HIGH  created successfully</Verification5>
+<Verification6>28/08/2017 06:37:13 | Pass : New classification code MID  created successfully</Verification6>
+</AD09004_Classification_Codes_For_Item_HierarchyTest>
+</TestCase>
+</SeleniumTestReport>

@@ -71,21 +71,21 @@ public class A098_Item_CreationTest extends BaseTest{
 		createItem(currencyPage,itemITEM1,0);
 		createItem(currencyPage,itemITEM2,0);
 		
-		currencyPage.fillCurrenceyCode(currencyCode.get(1));
-		currencyPage.ClickOnAnyButton("OK", 1);
-		WaitHelper.waitAdditional(2);
+//		currencyPage.fillCurrenceyCode(currencyCode.get(1));
+//		currencyPage.ClickOnAnyButton("OK", 1);
+//		WaitHelper.waitAdditional(2);
 		
-		verifyValues(currencyPage,item525);
-		verifyValues(currencyPage,item626);
-		verifyValues(currencyPage,item325);
-		verifyValues(currencyPage,item335);
-		verifyValues(currencyPage,item524);
-		verifyValues(currencyPage,item160);
-		verifyValues(currencyPage,itemDvdSrvc);
-		verifyValues(currencyPage,item909);
-		verifyValues(currencyPage,itemGen1);
-		verifyValues(currencyPage,itemITEM1);
-		verifyValues(currencyPage,itemITEM2);
+//		verifyValues(currencyPage,item525);
+//		verifyValues(currencyPage,item626);
+//		verifyValues(currencyPage,item325);
+//		verifyValues(currencyPage,item335);
+//		verifyValues(currencyPage,item524);
+//		verifyValues(currencyPage,item160);
+//		verifyValues(currencyPage,itemDvdSrvc);
+//		verifyValues(currencyPage,item909);
+//		verifyValues(currencyPage,itemGen1);
+//		verifyValues(currencyPage,itemITEM1);
+//		verifyValues(currencyPage,itemITEM2);
 		
 		currencyPage.clickOnCancel1();
 		currencyPage.logOut(1);
@@ -93,7 +93,7 @@ public class A098_Item_CreationTest extends BaseTest{
 	
 	public void createItem(CurrencyPageNew currencyPage,List<String> items,int i) throws InterruptedException{
 		String command = "EDTPITEM ACT=INSERT,COMPANY="+companyId;
-			
+		String SuccMessage = "The previously-requested action has been performed";	
 		currencyPage.isCommandDisplayed();
 		
 		currencyPage.fillCurrenceyCode(command);
@@ -108,10 +108,12 @@ public class A098_Item_CreationTest extends BaseTest{
 		currencyPage.clickOnUpdate();		
 		
 		currencyPage.isCommandDisplayed();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation controls code "+items.get(0), "created successfully");
 		}
 		
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New authorisation controls code "+items.get(0)+ " displayed in the list");
+			testcases.add(getCurreentDate()+" | Pass : Authorisation controls code "+items.get(0)+ " Already Created");
 			currencyPage.clickOnCancel();
 			currencyPage.isConfirmPopUpDisplayed();
 			
@@ -119,18 +121,18 @@ public class A098_Item_CreationTest extends BaseTest{
 				
 	}
 	
-	private void verifyValues(CurrencyPageNew currencyPage,List<String> Items) throws InterruptedException{
-		
-		/*Verify new standard text in the list*/
-		if(currencyPage.verifyValues(Items.get(0))){
-			testcases.add(getCurreentDate()+" | Pass : New Standard text "+Items.get(0)+ " displayed in the list");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : New Standard text "+Items.get(0)+ " not displayed in the list");
-		}
-		
-		
-	}
+//	private void verifyValues(CurrencyPageNew currencyPage,List<String> Items) throws InterruptedException{
+//		
+//		/*Verify new standard text in the list*/
+//		if(currencyPage.verifyValues(Items.get(0))){
+//			testcases.add(getCurreentDate()+" | Pass : New Standard text "+Items.get(0)+ " displayed in the list");
+//		}
+//		else{
+//			testcases.add(getCurreentDate()+" | Fail : New Standard text "+Items.get(0)+ " not displayed in the list");
+//		}
+//		
+//		
+//	}
 		
 	
 	@AfterClass (alwaysRun = true)

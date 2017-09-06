@@ -77,13 +77,16 @@ public class A081_Authorisation_Groupings_For_PMTest extends BaseTest{
 		if(update == true){
 			currencyPage.clickOnUpdate();
 			
-			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation group "+authorisationControlCode.get(0), "created successfully");
+			Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "New authorisation group "+authorisationControlCode.get(6), "created successfully");
 			
 			
 		}
 		
 		else{
-			testcases.add(getCurreentDate()+" | Pass : New authorisation group "+authorisationControlCode.get(0)+ " present in the list");
+			testcases.add(getCurreentDate()+" | Pass : New authorisation group "+authorisationControlCode.get(6)+ " present in the list");
+			currencyPage.clickOnCancel();
+			currencyPage.clickOnCancel();
+			
 		}		
 	}
 

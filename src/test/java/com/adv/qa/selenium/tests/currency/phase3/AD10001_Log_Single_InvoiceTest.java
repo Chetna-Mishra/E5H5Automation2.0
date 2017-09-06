@@ -16,11 +16,13 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD10001 Log Single Invoice
  * Purpose              :   Create Stock Adjustment In 
+ * Modified Date		:   Modified by Chetna/Dt: 01-Sep-2017
  * ACCESS               :   GCA
  */
 
 public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 	/*Launch the browser*/
+	
 	@BeforeClass
 	public void beforeClass() throws Exception {
 		super.setUp();
@@ -30,6 +32,8 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 	public void verify(DataRow dataRow) throws InterruptedException{
 		String userName = dataRow.get("userName");
 		String passWord = dataRow.get("passWord");
+		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
+		
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
@@ -43,7 +47,15 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
-				
+		
+		currencyPage.fillCurrenceyCode(currencyCode.get(2));
+		
+		/*Verify supplier search page displayed*/
+		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(2)+" - Supplier List","Currency search page","displayed");
+
+		/*Amending Supplier for Tax Code and */
+		amendSupplier(currencyPage,dataRow);
+
 		createInvoice(currencyPage,dataRow);
 		
 		currencyPage.isCommandDisplayed();
@@ -54,14 +66,40 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 	}
 	
 	
+	
+	private void amendSupplier(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+		
+		String SuccMessage = "The previously-requested action has been performed";
+		List<String> aMendSonySupplier = dataRow.findNamesReturnValues("aMendSonySupplier");
+		
+		currencyPage.searchValue(companyId,aMendSonySupplier,8,1);
+		
+		currencyPage.clickOnAmend();
+		currencyPage.clickOnPurControl();
+		
+		currencyPage.clickOnTax();
+		
+		currencyPage.aMendSupplierTaxInfo(aMendSonySupplier);
+		
+		currencyPage.clickOnUpdate();
+		
+		Assert.assertTrue(testcases,currencyPage.getErrorContentText().contains(SuccMessage), "Supplier "+aMendSonySupplier.get(0), "updated successfully");
+		
+		currencyPage.clickOnCancel();
+		
+	}
+	
+	
 	private void createInvoice(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+		
 		String code = "LOGGBTCH ACT=INSERT,CMPY="+companyId+",TRAN-TYPE=1";
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> invoiceDetails = dataRow.findNamesReturnValues("invoiceDetails");
 		List<String> transactionDetails = dataRow.findNamesReturnValues("transactionDetails");
-		
 		List<String> header = dataRow.findNamesReturnValues("header");
-		String message = "Batch Number";
+		
+		String message = "Batch number";// Batch number 2 has been created
+		
 		
 		currencyPage.isCommandDisplayed();
 		
@@ -71,7 +109,7 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 		
 		currencyPage.enterInvoice(invoiceDetails,"Invoice");
 		
-		currencyPage.clickOnButton(13);
+		currencyPage.clickOnTransaction();
 		
 		Assert.assertTrue(testcases,currencyPage.getTableHeader().contains("Log Transaction Header"),"Transaction page","displayed");
 		
@@ -81,29 +119,22 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 						
 		currencyPage.clickOnUpdate();
 						
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
+		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Invoice created successfully "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Invoice not created");
-		}		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), "Invoice "+referenceMessage," created successfully");
 		
 		boolean storeItemValues = currencyPage.verifyStoreItem(header, 1);
-		if(storeItemValues== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item values is not as expected ");
-		}
 		
-		currencyPage.clickOnReturnButton();
+		Assert.assertTrue(testcases,storeItemValues, "Store item values are ", " as expected");
+		
+		currencyPage.clickOnCancel();
 		
 		currencyPage.isCommandDisplayed();
 	}
 
 	private void reviewBatches(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+	
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> batchDetails1 = dataRow.findNamesReturnValues("batchDetails1");
 		List<String> batchDetails2 = dataRow.findNamesReturnValues("batchDetails2");
@@ -112,11 +143,11 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Journal List","Journey search page","displayed");
 		
-		currencyPage.search(companyId, 4, 0);
+		currencyPage.searchValue(companyId, 4, 0);
 		
-		currencyPage.clickOnSections(1);
+		currencyPage.clickOnEXTSections();
 		
-		currencyPage.search("PDE2", 16, 5);
+		currencyPage.searchValue("PDE2", 16, 5);
 		
 		currencyPage.sortValues();
 		
@@ -147,7 +178,7 @@ public class AD10001_Log_Single_InvoiceTest extends BaseTest{
 		String folder = "src/test/resources/";
 		String xmlFilePath = folder  + "phase3.xml";
 		String[] nodeID = { "AD10001" };
-		String [] selectedNames = {"userName","passWord","currencyCode","invoiceDetails","transactionDetails","header","batchDetails1","batchDetails2"};
+		String [] selectedNames = {"userName","passWord","currencyCode","invoiceDetails","aMendSonySupplier","transactionDetails","header","batchDetails1","batchDetails2"};
 		DataResource dataResourceSelected = new DataResource (xmlFilePath, selectedNames, true,nodeID);
 		DataRow [] [] rows = dataResourceSelected.getDataRows4DataProvider();
 		return rows;	

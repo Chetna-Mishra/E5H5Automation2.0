@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<A118_StopandStartExecutorsTest>
+<Verification1>23/08/2017 12:13:09 | Pass : Login page displayed</Verification1>
+<Verification2>23/08/2017 12:13:17 | Pass : Command line displayed</Verification2>
+<Verification3>23/08/2017 12:13:35 | Pass : Currency searchpage displayed</Verification3>
+<Verification4>23/08/2017 12:19:06 | Pass : Command line displayed</Verification4>
+</A118_StopandStartExecutorsTest>
+<A001A_On_line_AuditingTest>
+<Verification1>23/08/2017 12:20:07 | Pass : Login page displayed</Verification1>
+<Verification2>23/08/2017 12:20:15 | Pass : Command line displayed</Verification2>
+<Verification3>23/08/2017 12:20:33 | Pass : Search page displayed</Verification3>
+<Verification4>23/08/2017 12:20:52 | Pass : Currency TPBSUPP displayed in the list</Verification4>
+<Verification5>23/08/2017 12:21:09 | Pass : Column definition displayed</Verification5>
+<Verification6>23/08/2017 12:21:30 | Pass : Column Definition Tab Checkboxes checked</Verification6>
+<Verification7>23/08/2017 12:21:35 | Pass : Column definition def displayed</Verification7>
+<Verification8>23/08/2017 12:21:58 | Pass : Defination Def Tab Checkboxes checked</Verification8>
+<Verification9>23/08/2017 12:22:21 | Pass : Currency TPBADDR displayed in the list</Verification9>
+<Verification10>23/08/2017 12:22:38 | Pass : Column definition displayed</Verification10>
+<Verification11>23/08/2017 12:22:50 | Pass : Column Definition Tab Checkboxes checked</Verification11>
+<Verification12>23/08/2017 12:22:56 | Pass : Column definition def displayed</Verification12>
+<Verification13>23/08/2017 12:23:17 | Pass : Defination Def Tab Checkboxes checked</Verification13>
+</A001A_On_line_AuditingTest>
+<A001_Switch_Intra_Company_Accounting_OnTest>
+<Verification1>23/08/2017 12:24:12 | Pass : Login page displayed</Verification1>
+<Verification2>23/08/2017 12:24:21 | Pass : Command line displayed</Verification2>
+<Verification3>23/08/2017 12:24:38 | Pass : Financial module fields are  checked and saved</Verification3>
+<Verification4>23/08/2017 12:25:03 | Pass : Purchasing module fields are  checked and saved</Verification4>
+</A001_Switch_Intra_Company_Accounting_OnTest>
+<A002_Currency_DescriptionTest>
+<Verification1>23/08/2017 12:25:44 | Pass : Login page displayed</Verification1>
+<Verification2>23/08/2017 12:25:52 | Pass : Command line displayed</Verification2>
+<Verification3>23/08/2017 12:26:10 | Pass : Search page displayed</Verification3>
+<Verification4>23/08/2017 12:27:04 | Pass : Currency EUR created successfully</Verification4>
+<Verification5>23/08/2017 12:27:56 | Pass : Currency DEM created successfully</Verification5>
+<Verification6>23/08/2017 12:28:51 | Pass : Currency USD created successfully</Verification6>
+<Verification7>23/08/2017 12:29:42 | Pass : Currency FRF created successfully</Verification7>
+</A002_Currency_DescriptionTest>
+<A003_Currency_Base_NonBase_RelationshipsTest>
+<Verification1>23/08/2017 12:30:50 | Pass : Login page displayed</Verification1>
+<Verification2>23/08/2017 12:30:58 | Pass : Command line displayed</Verification2>
+<Verification3>23/08/2017 12:31:16 | Pass : Currency search page displayed</Verification3>
+<Verification4>23/08/2017 12:31:52 | Pass : Currency RelationshipGBP created successfully</Verification4>
+<Verification5>23/08/2017 12:32:26 | Pass : Currency RelationshipGBP created successfully</Verification5>
+<Verification6>23/08/2017 12:33:03 | Pass : Currency RelationshipGBP created successfully</Verification6>
+<Verification7>23/08/2017 12:33:36 | Pass : Currency RelationshipGBP created successfully</Verification7>
+<Verification8>23/08/2017 12:34:09 | Pass : Currency RelationshipEUR created successfully</Verification8>
+<Verification9>23/08/2017 12:34:43 | Pass : Currency RelationshipFRF created successfully</Verification9>
+<Verification10>23/08/2017 12:35:16 | Pass : Currency RelationshipUSD created successfully</Verification10>
+<Verification11>23/08/2017 12:35:49 | Pass : Currency RelationshipDEM created successfully</Verification11>
+</A003_Currency_Base_NonBase_RelationshipsTest>
+<A006_Company_DefinitionTest>
+<Verification1>23/08/2017 12:36:58 | Pass : Login page displayed</Verification1>
+<Verification2>23/08/2017 12:37:06 | Pass : Command line displayed</Verification2>
+<Verification3>23/08/2017 12:37:23 | Pass : Search page displayed</Verification3>
+<Verification4>23/08/2017 12:37:52 | Pass : Primary Details Tab displayed</Verification4>
+<Verification5>23/08/2017 12:38:17 | Pass : Currency Intrastat Tab displayed</Verification5>
+<Verification6>23/08/2017 12:38:51 | Pass : New company id IM displayed in the list</Verification6>
+</A006_Company_DefinitionTest>
+</TestCase>
+</SeleniumTestReport>

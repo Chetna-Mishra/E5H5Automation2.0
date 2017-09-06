@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><SeleniumTestReport>
+<TestCase>
+<AD10005_Enter_FOC_InvoiceTest>
+<Verification1>06/09/2017 12:45:13 | Pass : Login page displayed</Verification1>
+<Verification2>06/09/2017 12:45:25 | Pass : Command line displayed</Verification2>
+<Verification3>06/09/2017 12:46:46 | Pass : Currency search page displayed</Verification3>
+<Verification4>06/09/2017 12:47:25 | Pass : Transaction page displayed</Verification4>
+<Verification5>06/09/2017 12:53:22 | Pass : Invoice GBB02 : Batch number 6 has been created  created successfully</Verification5>
+</AD10005_Enter_FOC_InvoiceTest>
+</TestCase>
+</SeleniumTestReport>

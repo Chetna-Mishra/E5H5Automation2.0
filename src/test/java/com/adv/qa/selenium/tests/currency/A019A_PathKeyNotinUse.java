@@ -23,7 +23,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * ACCESS               :   ECG
  */
 
-public class A019A_Ledger_Control_and_Management_CodeTest extends BaseTest{
+public class A019A_PathKeyNotinUse extends BaseTest{
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
