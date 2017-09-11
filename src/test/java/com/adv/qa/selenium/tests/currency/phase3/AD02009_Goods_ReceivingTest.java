@@ -46,6 +46,7 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 	
 	@Test( dataProvider ="dp")
 	public void verify(DataRow dataRow) throws InterruptedException{
+		
 		List<String> userName = dataRow.findNamesReturnValues("userName");
 		String passWord = dataRow.get("passWord");
 		
@@ -205,6 +206,8 @@ public class AD02009_Goods_ReceivingTest extends BaseTest{
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
+		
+		currencyPage.isCommandDisplayed();
 		
 	}
 

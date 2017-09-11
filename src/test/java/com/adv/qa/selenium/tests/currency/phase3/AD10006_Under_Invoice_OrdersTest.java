@@ -16,10 +16,24 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD10006 Under Invoice Orders
  * Purpose              :   Enter Invoices for quantity less than receipts matched to Orders. 
+ * Modified Date		:   Modified by Chetna/Dt: 08-Sep-2017  
  * ACCESS               :   DOC,DOA,PLE,GBB
  */
 
 public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
+	
+	private static String glOrderNumber;
+	
+	
+	public static String getGlOrderNumber() {
+		return glOrderNumber;
+	}
+
+
+	private static void setGlOrderNumber(String glOrderNumber) {
+		AD10006_Under_Invoice_OrdersTest.glOrderNumber = glOrderNumber;
+	}
+	
 	/*Launch the browser*/
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -28,26 +42,41 @@ public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
 	
 	@Test( dataProvider ="dp")
 	public void verify(DataRow dataRow) throws InterruptedException{
-		String userName = dataRow.get("userName");
+		List<String> userName = dataRow.findNamesReturnValues("userName");
 		String passWord = dataRow.get("passWord");
 		
 		/*Log in to application*/
 		LoginPage loginPage = new LoginPage(driver);
 		
 		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
-		loginPage.logIn(userName, passWord);
+		
+		/*Login as Employee*/
+		
+		loginPage.logIn(userName.get(0), passWord);
 		
 		/*Navigate to currency page Home page e5 application*/
 		CurrencyPageNew currencyPage = new CurrencyPageNew(driver);
 		
 		/*Verify command line*/
 		Assert.assertTrue(testcases,currencyPage.isCommandDisplayed(),"Command line","displayed");
-				
+		
 		String orderNumber = createOrder(currencyPage,dataRow);
 		
-		currencyPage.clickOnCancel();
+		setGlOrderNumber(orderNumber);
 		
+	/*	String orderNumber = "0000000005"; //Remove after use*/
+	
 		currencyPage.isCommandDisplayed();
+		
+		//Login to the App as User=GREC	
+		
+		currencyPage.logOut(1);
+		
+		currencyPage.clickOnReturnForLogin();
+
+		Assert.assertTrue(testcases, loginPage.isLoginPageDisplayed(), "Login page", "displayed");
+		
+		loginPage.logIn(userName.get(1), passWord);//Login as GREC
 		
 		createReceiveGoods(currencyPage,dataRow,orderNumber);
 		
@@ -56,72 +85,74 @@ public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
 		createInvoice(currencyPage,dataRow,orderNumber);
 		
 		currencyPage.logOut(1);
+		
 	}
 	
 	private String createOrder(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
 		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> orderCode = dataRow.findNamesReturnValues("orderCode");
-		String message = "Order Reference will be created.";
+		String message = "Order Reference";
 		
 		currencyPage.isCommandDisplayed();
 		
 		currencyPage.fillCurrenceyCode(currencyCode.get(0));
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(0)+" - Order - List","Currency search page","displayed");
-		currencyPage.search(companyId, 19, 0);
 		
+		currencyPage.searchValue(companyId, orderCode, 19, 8);
+	
 		currencyPage.clickOnInsert();
 		
 		currencyPage.createOrderCode(orderCode);
 		
 		currencyPage.clickOnUpdate();
 			
-		String referenceMessage = currencyPage.getToolContentText();
+		String referenceMessage = currencyPage.getErrorContentText();
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass :  "+referenceMessage);
-			testcases.add(getCurreentDate()+" | Pass : Material issue "+orderCode.get(0)+ " added");
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Material issue "+orderCode.get(0)+ " added");
-		}
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");	
 
-		referenceMessage = referenceMessage.substring(8).replaceAll("[^0-9]", "");
+ 	/*	Converting reference msg to Ordernuber, Order Reference 0000000005 will be created.*/
+		String orderNumber = referenceMessage.substring(0, referenceMessage.indexOf(" will be created."));
+		
+		orderNumber = orderNumber.replace("DOC01 : Order Reference ", "");
 		
 		currencyPage.clickOnCancel();
 		
 		currencyPage.isConfirmPopUpDisplayed();
 		
-		return referenceMessage;
+		currencyPage.clickOnCancel1();
+		
+		return orderNumber;
+		
 	}
 	
 	
-	private void createReceiveGoods(CurrencyPageNew currencyPage,DataRow dataRow,String orderCode) throws InterruptedException{
-		String code = "EDTPGRNN ACT=INSERT,CMPY="+companyId+",ORDER="+orderCode;
+	private void createReceiveGoods(CurrencyPageNew currencyPage,DataRow dataRow,String orderNumber) throws InterruptedException{
+		
+		String code = "EDTPGRNN ACT=INSERT,CMPY="+companyId+",ORDER="+orderNumber+"";
+
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> receiveGoods = dataRow.findNamesReturnValues("receiveGoods");
 		String message = "GRNs will be created in Background";
+		String ADVICE = "ADVICE "+orderNumber+"";
+		String GRN = "G"+orderNumber+"";
 		
 		currencyPage.fillCurrenceyCode(code);
 		
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Goods Receive/Return Edit","Currency search page","displayed");
 		
-//		currencyPage.addGoodsReceive(receiveGoods);
+		currencyPage.addGoodsReceive(receiveGoods, ADVICE, GRN);
 		
 		currencyPage.clickOnUpdate();
 		
-		String referenceMessage = currencyPage.getToolContentText();
-		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Receive goods created "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Receive goods created ");
-		}
+		String referenceMessage = currencyPage.getErrorContentText();
 		
-		currencyPage.enterGoodsDetailsInPopUp(orderCode);
+		/*Verify new batch type in the list*/
+		Assert.assertTrue(testcases,referenceMessage.contains(message), " "+referenceMessage," successfully");
+		
+		currencyPage.enterGoodsDetailsInPopUp(orderNumber);
 		
 		currencyPage.clickOnCancel();
 		
@@ -136,7 +167,7 @@ public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
 		List<String> invoiceDetails = dataRow.findNamesReturnValues("invoiceDetails");
 		List<String> transactionDetails = dataRow.findNamesReturnValues("transactionDetails");
 		List<String> lineDetails = dataRow.findNamesReturnValues("lineDetails");
-		String message = "created with sysref";
+		String message = "Batch number";// Batch number 7 has been created
 		
 		currencyPage.isCommandDisplayed();
 		
@@ -150,13 +181,13 @@ public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
 		
 		Assert.assertTrue(testcases,currencyPage.getTableHeader().contains("Transaction Header"),"Transaction page","displayed");
 		
-		currencyPage.getInvoice(transactionDetails,orderNumber);
+		currencyPage.enterTransactionDetails(transactionDetails,orderNumber,"null");
 		
 		currencyPage.clickOnAcceptWarn();
 		
 		currencyPage.clickOnLines();
 		
-		String price = currencyPage.enterTaxableDetails(lineDetails, 0);
+		String price = currencyPage.enterTaxableDetails(lineDetails, 3);
 		
 		Assert.assertTrue(testcases,price.equals(lineDetails.get(3)),"Invoice price is "+ price," expected " + lineDetails.get(3));
 						
@@ -164,15 +195,10 @@ public class AD10006_Under_Invoice_OrdersTest extends BaseTest{
 		
 		currencyPage.clickOnUpdate();
 					
-		String referenceMessage = currencyPage.getToolContentText();
-		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Invoice created successfully "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Invoice not created");
-		}		
-			
+		String referenceMessage = currencyPage.getErrorContentText();
+		
+		Assert.assertTrue(testcases,referenceMessage.contains(message), "Invoice "+referenceMessage," created successfully");	
+		
 		currencyPage.clickOnReturnButton();
 		
 		currencyPage.isCommandDisplayed();

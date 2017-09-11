@@ -1372,6 +1372,8 @@ public class PageObjects {
 	public final String AD05001_FETCH= "//button[starts-with(@class,'button roundedbutton')][@value='Fetch']";
 	public final String AD05001_FETCH_DOC= "//input[starts-with(@name,'FETCH-DOC_')]";
 	public final String AD05001_FETCH_LINE= "//input[starts-with(@name,'FETCH-LINE_')]";
+	
+	
 
 //Page object for AD10001
 	public final String AD10001_SYSREF= "//th[@id='0_0Hdr0']/..//div[contains(@class,'dojoxGridColCaption') and (text()='System Ref.')]";
@@ -1381,9 +1383,9 @@ public class PageObjects {
 	public final String AD10001_GRSAMT= "//th[@id='0_0Hdr4']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Gross Amount')]";
 	public final String AD10001_TXAMT= "//th[@id='0_0Hdr5']/..//div[contains(@class,'dojoxGridColCaption') and (text()='Tax Amount')]";
 	
+//Page object for AD10006	
 	
-	
-	
+	public final String AD10006_FETCH_LINE= "//input[starts-with(@name,'FETCH-LINE-NUM_')]";
 	
 	
 }

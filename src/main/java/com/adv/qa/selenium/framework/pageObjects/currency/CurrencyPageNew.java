@@ -2052,10 +2052,6 @@ public class CurrencyPageNew extends CurrencyPage{
 			getDriver().findElement(By.xpath(pObject.A035_CMPY)).sendKeys(companyName);//Company A035_CMPY
 			WaitHelper.waitAdditional(1);
 			
-//		    Calendar currentMonth = Calendar.getInstance();
-//		    SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy"); //Fromdate
-//		    String currDate = dateFormat1.format(currentMonth.getTime());
-			
 		    getDriver().findElement(By.xpath(pObject.A100_EFF_DT_FRM)).clear();
 			getDriver().findElement(By.xpath(pObject.A100_EFF_DT_FRM)).sendKeys(String.valueOf(calender.Fromdate()));//From date Fromdate A100_EFF_DT_FRM
 			WaitHelper.waitAdditional(1);
@@ -2102,83 +2098,7 @@ public class CurrencyPageNew extends CurrencyPage{
 	}	
 	
 	
-	
-//	public void generateAuditReports(String companyName,List<String> elements){
-//		log.info("In Audit reports method");
-//
-//		if(elements.get(2).equals("ED4")){
-//			log.info("Enter ED4 process details");
-//			WaitHelper.waitAdditional(2);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).clear();
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).sendKeys(elements.get(1));//Request A035_REQ
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.EIGHT)).clear();
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.EIGHT)).sendKeys(companyName);//Company
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.EIGHT)).sendKeys(Keys.ENTER);//Company
-//			
-//			clickOnSubmit();
-//
-//		}
-//		if(elements.get(2).equals("PQ1")){
-//			log.info("Enter process details");
-//			WaitHelper.waitAdditional(2);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).clear();
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).sendKeys(elements.get(1));//Request
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.EIGHT)).clear();
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.EIGHT)).sendKeys(companyName);//Company
-//			WaitHelper.waitAdditional(1);
-//			
-//		    Calendar currentMonth = Calendar.getInstance();
-//		    SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-//		    String currDate = dateFormat1.format(currentMonth.getTime());
-//			
-//		    getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ZERO)).clear();
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ZERO)).sendKeys(currDate);//From date
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ONE)).clear();
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ONE)).sendKeys(currDate);//To date
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ONE)).sendKeys(Keys.ENTER);
-//			WaitHelper.waitAdditional(1);
-//			
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.TWO)).sendKeys(elements.get(3));//Report ind
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.TWO)).sendKeys(elements.get(3));//Report ind
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.FOUR)).clear();//Calendar
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.FOUR)).sendKeys(elements.get(4));//Calendar
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.FOUR)).sendKeys(Keys.ENTER);//Calendar
-//			WaitHelper.waitAdditional(2);
-//			clickOnSubmit();
-//			WaitHelper.waitAdditional(2);
-//		}		
-//		if(!(elements.get(2).equals("PQ1")) && (!elements.get(2).equals("ED4"))) {
-//			
-//			log.info("Enter process details for other then PQ1 and ED4");
-//			WaitHelper.waitAdditional(2);
-//			
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).clear();
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.id(pObject.ZERO_+pObject.SIX)).sendKeys(elements.get(1));//Request
-//			WaitHelper.waitAdditional(5);
-//			
-//			Actions builder = new Actions(driver);
-//			
-//			/*Balance class field*/
-//			builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[2]"))).click().sendKeys(companyName).build().perform();
-//			WaitHelper.waitAdditional(3);//Company
-//			builder.moveToElement(driver.findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[2]"))).click().sendKeys(Keys.ENTER).build().perform();
-//			WaitHelper.waitAdditional(5);//submit enter
-//
-//			clickOnSubmit();
-//
-//		}
-//	}
-	
+
 	
 	/************************************************************************
 	 * Stock Balance : HBA (AD02001, AD02009, AD03001,AD05001)- HCJ
@@ -2524,21 +2444,6 @@ public class CurrencyPageNew extends CurrencyPage{
 		getDriver().findElement(By.xpath(pObject.TPMN_RETRIV)).click();
 		WaitHelper.waitAdditional(4);
 		
-//		WebElement mySelectElement=getDriver().findElement(By.xpath(pObject.TPMN_FETCH));
-//		Select dropdown= new Select(mySelectElement);
-//		dropdown.selectByVisibleText("Retrieve");
-		
-		
-		
-//		getDriver().findElement(By.xpath(pObject.TPMN_RETRIV));
-//		Actions builder = new Actions(driver);
-//		
-//		/*Balance class field*/
-//		
-//		builder.moveToElement(element).click();
-//		builder.perform();
-		
-		
 		
 	}
 
@@ -2768,10 +2673,6 @@ public class CurrencyPageNew extends CurrencyPage{
 		update = getDriver().findElement(By.xpath(pObject.AD10001_TRANREF)).getText().trim().equals(elements.get(3));//Trans Refer header
 		update = getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]")).getText().trim().equals(elements.get(4));//Trans Refer values
 
-//        Calendar currentMonth = Calendar.getInstance();
-//        SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-//        String currDate = dateFormat1.format(currentMonth.getTime());
-		
         update = getDriver().findElement(By.xpath(pObject.AD10001_TRANDT)).getText().equals(elements.get(5));//Trans Date header
         update = getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[4]")).getText().trim().equals(calender.Presentdate());//Trans Date Value
 
@@ -3039,7 +2940,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	
 	
 	/************************************************
-	 * Create Goods Receiving : PYB AD02009-DOA
+	 * Create Goods Receiving : PYB AD02009-DOA, AD10006
 	 * **********************************************/
 
 	/**
@@ -3187,7 +3088,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	
 		ClickOnAnyTab("Tax/Discounts", 1);
 		log.info("On the Tax/Discounts Tab");
-		WaitHelper.waitAdditional(4);	
+		WaitHelper.waitAdditional(4);
 
 		getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[1]/input")).click();
 		WaitHelper.waitAdditional(1);
@@ -3219,12 +3120,12 @@ public void searchDocument(String companyId, String storeElement, int i) {
 
 	
 	/**
-	 * Receive Goods :AD02009
+	 * Receive Goods :AD02009, AD10006
 	 */
 	
 	public void addGoodsReceive(List<String> elements, String ADVICE,String GRN){
 		log.info("Adding goods receive");
-		WaitHelper.waitAdditional(2);
+		WaitHelper.waitAdditional(4);
 		getDriver().findElement(By.xpath(pObject.AD02009_ADV_NT)).clear();
 		getDriver().findElement(By.xpath(pObject.AD02009_ADV_NT)).sendKeys(ADVICE);//Advice note
 		
@@ -3275,15 +3176,16 @@ public void searchDocument(String companyId, String storeElement, int i) {
 			WaitHelper.waitAdditional(1);
 			
 		}
-//		if(!elements.get(6).equals("NULL")){
-//			
-//			getDriver().findElement(By.xpath("//div[text()='UOM']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]")).click();
-//			WaitHelper.waitAdditional(1);
-//			getDriver().findElement(By.xpath("//div[text()='UOM']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]/input")).clear();
-//			getDriver().findElement(By.xpath("//div[text()='UOM']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]/input")).sendKeys(elements.get(6));//UOM
-//			WaitHelper.waitAdditional(1);
-//			
-//		}
+		
+		if(!elements.get(6).equals("NULL")){
+			
+			getDriver().findElement(By.xpath("//div[text()='UOM']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]")).click();
+			WaitHelper.waitAdditional(1);
+			getDriver().findElement(By.xpath("//div[text()='UOM']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]/input")).clear();
+			getDriver().findElement(By.xpath("//div[text()='UOM']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]/input")).sendKeys(elements.get(6));//UOM
+			WaitHelper.waitAdditional(1);
+			
+		}
 		
 		if(!elements.get(7).equals("NULL")){
 			
@@ -3776,6 +3678,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	/**
 	 * Enter goods details on pop up 
 	 * @param elements
+	 * AD02009, AD10006
 	 */
 	
 	public void enterGoodsDetailsInPopUp(String elements){
@@ -3881,54 +3784,118 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	/**
 	 * Get invoice details and amend invoice
 	 * @param elements
-	 * @param order
+	 * @param orderNumber
 	 * @return
+	 * AD10006-GBB
 	 */
-	public boolean getInvoice(List<String> elements,String order){
+	
+public boolean getInvoice(List<String> elements,String orderNumber){
 		log.info("In get invoice details method");
+		
 		boolean update = false;
 		WaitHelper.waitAdditional(2);
 		
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).clear();
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).sendKeys(order);//Order
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.TWO)).clear();
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.TWO)).sendKeys(orderNumber);//Order AD02010_ORDER
 		
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.THREE)).clear();
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.THREE)).sendKeys(elements.get(0));//Order
 		
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.EIGHT)).clear();
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.EIGHT)).sendKeys(elements.get(1));//Gross amount
+//		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.THREE)).clear();
+//		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.THREE)).sendKeys(elements.get(0));//Order
 		
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO+pObject.ZERO)).clear();
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO+pObject.ZERO)).sendKeys(elements.get(2));//Tax amount
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.EIGHT)).clear();
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.EIGHT)).sendKeys(elements.get(1));//Gross amount
+		
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.TWO+pObject.ZERO)).clear();
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.TWO+pObject.ZERO)).sendKeys(elements.get(2));//Tax amount
 		
         Calendar currentMonth = Calendar.getInstance();
         SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
         String currDate = dateFormat1.format(currentMonth.getTime());
 		
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SIX)).clear();
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SIX)).sendKeys(currDate);//Date
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.SIX)).clear();
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.SIX)).sendKeys(currDate);//Date
 
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SEVEN)).clear();
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SEVEN)).sendKeys(currDate);//Due Date
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.SEVEN)).clear();
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.SEVEN)).sendKeys(currDate);//Due Date
 		
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).sendKeys(Keys.ENTER);//Order
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SIX)).sendKeys(currDate);//Date
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.TWO)).sendKeys(Keys.ENTER);//Order
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.SIX)).sendKeys(currDate);//Date
 		
-		getDriver().findElement(By.id(pObject.TAB_STRIP+pObject.THIRD_TAB)).click();//Tax/Discount tab
-		getDriver().findElement(By.id(pObject.ZERO_+pObject.FOUR+pObject.ONE)).sendKeys(Keys.ENTER);//Tax type
-		getDriver().findElement(By.id(pObject.TAB_STRIP+pObject.FIRST_TAB)).click();//Main tab
+		getDriver().findElement(By.xpath(pObject.TAB_STRIP+pObject.THIRD_TAB)).click();//Tax/Discount tab
+		getDriver().findElement(By.xpath(pObject.ZERO_+pObject.FOUR+pObject.ONE)).sendKeys(Keys.ENTER);//Tax type
+		getDriver().findElement(By.xpath(pObject.TAB_STRIP+pObject.FIRST_TAB)).click();//Main tab
 		
-		int postCode = getDriver().findElement(By.id(pObject.ZERO_+pObject.SEVEN)).getAttribute("value").length();
-		int element = getDriver().findElement(By.id(pObject.ZERO_+pObject.NINE)).getAttribute("value").length();
-		int period = getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ONE)).getAttribute("value").length();
-		int year = getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.TWO)).getAttribute("value").length();
-		int subType = getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.FOUR)).getAttribute("value").length();
+		int postCode = getDriver().findElement(By.xpath(pObject.ZERO_+pObject.SEVEN)).getAttribute("value").length();
+		int element = getDriver().findElement(By.xpath(pObject.ZERO_+pObject.NINE)).getAttribute("value").length();
+		int period = getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.ONE)).getAttribute("value").length();
+		int year = getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.TWO)).getAttribute("value").length();
+		int subType = getDriver().findElement(By.xpath(pObject.ZERO_+pObject.ONE+pObject.FOUR)).getAttribute("value").length();
 		
 		if(postCode>0 && element>0 && period>0&& year>0 && subType>0){
 			update = true;
 		}
 		return update;
-	}
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	public boolean getInvoice(List<String> elements,String orderNumber){
+//		log.info("In get invoice details method");
+//		
+//		boolean update = false;
+//		WaitHelper.waitAdditional(2);
+//		
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).clear();
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).sendKeys(orderNumber);//Order AD02010_ORDER
+//		
+//		
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.THREE)).clear();
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.THREE)).sendKeys(elements.get(0));//Order
+//		
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.EIGHT)).clear();
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.EIGHT)).sendKeys(elements.get(1));//Gross amount
+//		
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO+pObject.ZERO)).clear();
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO+pObject.ZERO)).sendKeys(elements.get(2));//Tax amount
+//		
+//        Calendar currentMonth = Calendar.getInstance();
+//        SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
+//        String currDate = dateFormat1.format(currentMonth.getTime());
+//		
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SIX)).clear();
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SIX)).sendKeys(currDate);//Date
+//
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SEVEN)).clear();
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SEVEN)).sendKeys(currDate);//Due Date
+//		
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.TWO)).sendKeys(Keys.ENTER);//Order
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.SIX)).sendKeys(currDate);//Date
+//		
+//		getDriver().findElement(By.id(pObject.TAB_STRIP+pObject.THIRD_TAB)).click();//Tax/Discount tab
+//		getDriver().findElement(By.id(pObject.ZERO_+pObject.FOUR+pObject.ONE)).sendKeys(Keys.ENTER);//Tax type
+//		getDriver().findElement(By.id(pObject.TAB_STRIP+pObject.FIRST_TAB)).click();//Main tab
+//		
+//		int postCode = getDriver().findElement(By.id(pObject.ZERO_+pObject.SEVEN)).getAttribute("value").length();
+//		int element = getDriver().findElement(By.id(pObject.ZERO_+pObject.NINE)).getAttribute("value").length();
+//		int period = getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.ONE)).getAttribute("value").length();
+//		int year = getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.TWO)).getAttribute("value").length();
+//		int subType = getDriver().findElement(By.id(pObject.ZERO_+pObject.ONE+pObject.FOUR)).getAttribute("value").length();
+//		
+//		if(postCode>0 && element>0 && period>0&& year>0 && subType>0){
+//			update = true;
+//		}
+//		return update;
+//	}
 	
 
 	
@@ -3956,6 +3923,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	 * Verify transaction details
 	 * @param elements
 	 * @return
+	 * AD11008
 	 */
 	public boolean verifyTransactionDetails(String elements){
 		log.info("Verify transaction details");
@@ -3964,6 +3932,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 		
 		getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[3]/div/div")).getText().contains("Transaction Ref");//Transaction Ref
 		String tranRef = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[3]")).getText();// value
+		
 		if(tranRef.contains(elements)){
 			amendInvoice = true;
 			log.info("Transaction reference is : " + tranRef);
@@ -4111,7 +4080,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	
 	
 	/**
-	 * Enter transaction details AD10002, AD10004,AD10005,AD10014,AD11010, AD11014 
+	 * Enter transaction details AD10002, AD10004,AD10005,AD10014,AD11010, AD11014, AD10006
 	 * 
 	 */	
 	
@@ -4122,11 +4091,33 @@ public void searchDocument(String companyId, String storeElement, int i) {
 		if(!Ordernumber.equals("null")){
 		
 		getDriver().findElement(By.xpath(pObject.AD02010_ORDER)).clear();
+		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.AD02010_ORDER)).sendKeys(Ordernumber);//Order AD02010_ORDER
+		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.AD02010_ORDER)).sendKeys(Keys.ENTER);//Order AD02010_ORDER
+		
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.AD02010_TRN_REF)).clear();
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.AD02010_TRN_REF)).sendKeys(elements.get(6));//Reference AD02010_TRN_REF
+		
+		getDriver().findElement(By.xpath(pObject.AD02010_DT)).clear();
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.AD02010_DT)).sendKeys(String.valueOf(calender.Presentdate()));//Date AD02010_DT
+		WaitHelper.waitAdditional(2);
+		
+		getDriver().findElement(By.xpath(pObject.AD02010_GRS_AMT)).clear();
+		getDriver().findElement(By.xpath(pObject.AD02010_GRS_AMT)).sendKeys(elements.get(7));//Gross amount AD02010_GRS_AMT
+
+	
+		getDriver().findElement(By.xpath(pObject.AD02010_TAX_AMT)).clear();
+		getDriver().findElement(By.xpath(pObject.AD02010_TAX_AMT)).sendKeys(elements.get(9));//Tax amount AD02010_TAX_AMT
+		WaitHelper.waitAdditional(1);
+		getDriver().findElement(By.xpath(pObject.AD02010_TAX_AMT)).sendKeys(Keys.ENTER);//Tax amount AD02010_TAX_AMT
 		
 		}
 	
+		else {
 		getDriver().findElement(By.xpath(pObject.A091_SUPP)).clear();
 		getDriver().findElement(By.xpath(pObject.A091_SUPP)).sendKeys(elements.get(1));//Supplier A091_SUPP
 		
@@ -4152,11 +4143,13 @@ public void searchDocument(String companyId, String storeElement, int i) {
 		WaitHelper.waitAdditional(1);
 		getDriver().findElement(By.xpath(pObject.AD02010_DT)).sendKeys(String.valueOf(calender.Presentdate()));//Date AD02010_DT
 		WaitHelper.waitAdditional(2);
+		
+	
 
 		if(!dueDate.equals("null")){
 			getDriver().findElement(By.xpath(pObject.AD02010_DUE_DT)).clear();//Due Date
 			WaitHelper.waitAdditional(1);
-			getDriver().findElement(By.xpath(pObject.AD02010_DUE_DT)).sendKeys(String.valueOf(calender.TOdate()));//Due Date  AD02010_DUE_DT
+			getDriver().findElement(By.xpath(pObject.AD02010_DUE_DT)).sendKeys(String.valueOf(calender.Presentdate()));//Due Date  AD02010_DUE_DT
 			WaitHelper.waitAdditional(1);
 			}
 		
@@ -4206,6 +4199,8 @@ public void searchDocument(String companyId, String storeElement, int i) {
 			getDriver().findElement(By.xpath(pObject.AD02010_RECUR_OCCUR)).clear();
 			getDriver().findElement(By.xpath(pObject.AD02010_RECUR_OCCUR)).sendKeys(elements.get(13));//Occurrences AD02010_RECUR_OCCUR
 
+		}
+		
 		}
 	
 	}	
@@ -4449,7 +4444,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	
 	
 	/************************************************
-	 * Enter Invoices : GCA AD10002
+	 * Enter Invoices : GCA AD10002, AD10006
 	 * **********************************************/
 	
 	public String enterTaxableDetails(List<String> elements,int glValue){
@@ -4488,14 +4483,23 @@ public void searchDocument(String companyId, String storeElement, int i) {
 			
 			price = getDriver().findElement(By.xpath("//div[text()='Invoice Price']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]")).getText();
 			getDriver().findElement(By.xpath("//div[text()='Select']/../../../../../../../../../..//div[1]/table/tbody/tr/td[2]/input")).click();//Select
+			getDriver().findElement(By.xpath("//div[text()='Invoice Price']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]")).click();////invoice Price
+			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[text()='Invoice Price']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]/input")).sendKeys(Keys.TAB);//invoice Price
+			WaitHelper.waitAdditional(1.5);
+					
 		}
 		
 		if(!elements.get(2).equals("null")){
 			
 			getDriver().findElement(By.xpath("//div[text()='Invoice Qty']/../../../../../../../../../..//div[1]/table/tbody/tr/td[5]")).click();////invoice QTY
 			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[text()='Invoice Qty']/../../../../../../../../../..//div[1]/table/tbody/tr/td[5]/input")).clear();//invoice QTY
+			WaitHelper.waitAdditional(1.5);
 			getDriver().findElement(By.xpath("//div[text()='Invoice Qty']/../../../../../../../../../..//div[1]/table/tbody/tr/td[5]/input")).sendKeys(elements.get(2));//invoice QTY
 			WaitHelper.waitAdditional(1.5);
+			
+			
 			getDriver().findElement(By.xpath("//div[text()='Invoice Qty']/../../../../../../../../../..//div[1]/table/tbody/tr/td[5]/input")).sendKeys(Keys.ENTER);//invoice QTY
 			WaitHelper.waitAdditional(5);
 		}		
@@ -4532,6 +4536,22 @@ public void searchDocument(String companyId, String storeElement, int i) {
 			WaitHelper.waitAdditional(3);
 
 		}
+		
+		if(glValue==3){
+			
+			ClickOnAnyTab("Tax Controls", 1);
+			WaitHelper.waitAdditional(4);
+			
+			getDriver().findElement(By.xpath("//div[text()='Handling']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]")).click();//Handling
+			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[text()='Handling']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]/input")).clear();
+			getDriver().findElement(By.xpath("//div[text()='Handling']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]/input")).sendKeys(elements.get(6));//Handling
+			WaitHelper.waitAdditional(1.5);
+			getDriver().findElement(By.xpath("//div[text()='Handling']/../../../../../../../../../..//div[1]/table/tbody/tr/td[4]/input")).sendKeys(Keys.ENTER);//Handling
+			
+		}
+		
+		
 		return price;
 	}
 		
@@ -4623,7 +4643,7 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	}
 	
 	/************************************************
-	 * Enter Invoice Due Today : GZA AD10014
+	 * Enter Invoice Due Today : GZA AD10014, AD10017
 	 * **********************************************/
 	
 	public boolean verifySupplierTransaction(List<String> elements){
@@ -4631,23 +4651,24 @@ public void searchDocument(String companyId, String storeElement, int i) {
 		boolean update = false;
 		WaitHelper.waitAdditional(2);
 		
-		update = getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[1]/div/div")).getText().contains("Transaction Ref");//Transaction Ref
-		String tranRef = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[2]")).getText();// value
+		update = getDriver().findElement(By.xpath("//th[@id='0_40Hdr2']")).getText().contains("Transaction Ref");//Transaction Ref header
+		String tranRef = getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[3]")).getText();// Transaction Ref value
+		
 		if(tranRef.length()>0){
 			log.info("Transaction reference is : " + tranRef);
 		}
 		
-		update = getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[4]/div/div")).getText().contains("Legend");//Legend
-		update = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[4]")).getText().equals(elements.get(1));// value
+		update = getDriver().findElement(By.xpath("//th[@id='0_40Hdr4']")).getText().contains("Legend");//Legend
+		update = getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[5]")).getText().equals(elements.get(1));// value
 
-		update= getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[5]/div/div")).getText().contains("Trans Status Desc");//Trans Status Desc
-		update= getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[5]")).getText().equals(elements.get(2));// value
+		update= getDriver().findElement(By.xpath("//th[@id='0_40Hdr5']")).getText().contains("Trans Status Desc");//Trans Status Desc
+		update= getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[6]")).getText().equals(elements.get(2));// value
 
-		update= getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[6]/div/div")).getText().contains("Auth Status Desc");//Auth Status Desc
-		update= getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[6]")).getText().equals(elements.get(3));// value
+		update= getDriver().findElement(By.xpath("//th[@id='0_40Hdr6']")).getText().contains("Auth Status Desc");//Auth Status Desc
+		update= getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[7]")).getText().equals(elements.get(3));// value
 	
-		update= getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[7]/div/div")).getText().contains("Outstanding Amount");//Outstanding Amount
-		update= getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[7]")).getText().equals(elements.get(4));// value	
+		update= getDriver().findElement(By.xpath("//th[@id='0_40Hdr7']")).getText().contains("Outstanding Amount");//Outstanding Amount
+		update= getDriver().findElement(By.xpath("//div[1]/table/tbody/tr/td[8]")).getText().equals(elements.get(4));//Value	
 		
 		return update;
 	}	
@@ -5095,9 +5116,12 @@ public void searchDocument(String companyId, String storeElement, int i) {
 	/**
 	 * Unauthorised Transaction : Verify column header and column value
 	 * @param elements
+	 * AD10014, AD11010
+	 * 
 	 */
 	public boolean verifyUnauthorisedTransaction(List<String> elements){
 		log.info("Verify store item header and value");
+	
 		boolean update = false;
 		WaitHelper.waitAdditional(2);
 		
@@ -5106,13 +5130,8 @@ public void searchDocument(String companyId, String storeElement, int i) {
 		update = getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[4]/div/div")).getText().trim().equals("Transaction Ref");//Tran Ref
 		update = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[4]")).getText().length()>0;
 		
-        Calendar currentMonth = Calendar.getInstance();
-        SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-        String currDate = dateFormat1.format(currentMonth.getTime());
-
-		
 		update = getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[5]/div/div")).getText().trim().equals("Entry date");//Entry date
-		update = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[5]")).getText().equals(currDate);
+		update = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[5]")).getText().equals(calender.Presentdate());;//Entry date
 
 		update = getDriver().findElement(By.xpath("//div[2]/div/div/table/tbody/tr/th[6]/div/div")).getText().trim().equals("Gross Value");//Gross value
 		update = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[6]")).getText().equals(elements.get(2));

@@ -1473,6 +1473,7 @@
     
     
     <Row id="AD02009">
+     
         <userName>EMPLOYEE</userName>
         <userName>GREC</userName>
         <userName>MANAGER</userName>
@@ -2086,23 +2087,27 @@
     </Row>
     
     <Row id="AD10006">
-        <userName>IM</userName>
+       	
+       	<userName>EMPLOYEE</userName>
+        <userName>GREC</userName>
+        
         <passWord>E5</passWord>
+        
         <currencyCode>DOA</currencyCode>
         <currencyCode>PLE</currencyCode>
         <currencyCode>GBB</currencyCode>
         
-        <orderCode>O3</orderCode>
+		<orderCode>O3</orderCode>
         <orderCode>SONY</orderCode>
         <orderCode>0</orderCode>
         <orderCode>WEST</orderCode>
         <orderCode>WAREHSE</orderCode>
         <orderCode>BUYER</orderCode>
         <orderCode>GBP</orderCode>
-        <orderCode>POP HQ</orderCode>
+        <orderCode>WAREHSE</orderCode>
         <orderCode>O1</orderCode>
-        <orderCode>S2</orderCode>
-        <orderCode>D2</orderCode>
+        <orderCode>S1</orderCode>
+        <orderCode>D1</orderCode>
         <orderCode>DVP-S325</orderCode>
         <orderCode>Sony DVP-S325</orderCode>
         <orderCode>6.0000</orderCode>
@@ -2110,48 +2115,67 @@
         <orderCode>WAREHSE</orderCode>
         <orderCode>EACH</orderCode>
         <orderCode>EACH</orderCode>
-        <orderCode>DEN</orderCode>
+        <orderCode>STKW</orderCode>
         <orderCode>W1</orderCode>
         <orderCode>DV</orderCode>
         <orderCode>WEST</orderCode>
-        <orderCode>UKV</orderCode>
-        <orderCode>V</orderCode>
+        <orderCode>UKS</orderCode>
+        <orderCode>S</orderCode>
         <orderCode>UK</orderCode>
         <orderCode>H1</orderCode>
         
-        <receiveGoods>ADN00023</receiveGoods>
-        <receiveGoods>GG</receiveGoods>
+ 		<receiveGoods>ADVICE 0000000005</receiveGoods>
+        <receiveGoods>G</receiveGoods>
         <receiveGoods>2</receiveGoods>
         <receiveGoods>NULL</receiveGoods>
+        <receiveGoods>WAREHSE</receiveGoods>
         <receiveGoods>NULL</receiveGoods>
         <receiveGoods>NULL</receiveGoods>
-        <receiveGoods>NULL</receiveGoods>
-        <receiveGoods>GRN</receiveGoods>
+        <receiveGoods>GRN00005</receiveGoods>
         
         <invoiceDetails>2 SONY!</invoiceDetails>
         <invoiceDetails>1</invoiceDetails>
-        <invoiceDetails>470.00</invoiceDetails>
-        <invoiceDetails>70.00</invoiceDetails>
+        <invoiceDetails>235.00</invoiceDetails>
+        <invoiceDetails>35.00</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
         <invoiceDetails>0</invoiceDetails>
 
+        <transactionDetails>null</transactionDetails>
+        <transactionDetails>SONY</transactionDetails>        
+        <transactionDetails>SR8 4IP</transactionDetails>
+        <transactionDetails>NORTH</transactionDetails>
+        <transactionDetails>12</transactionDetails>
+        <transactionDetails>1998</transactionDetails>
         <transactionDetails>Under-INV01</transactionDetails>
-        <transactionDetails>470.00</transactionDetails>
-        <transactionDetails>70.00</transactionDetails>
-        <transactionDetails>UKV</transactionDetails>
-        <transactionDetails>PV</transactionDetails>        
+        <transactionDetails>235.00</transactionDetails> 
+        <transactionDetails>00</transactionDetails>                       
+        <transactionDetails>35.00</transactionDetails>        
+        <transactionDetails>GBP</transactionDetails>
+        <transactionDetails>0</transactionDetails>
+        <transactionDetails>null</transactionDetails>
+         <transactionDetails>S</transactionDetails>
+
         
         <lineDetails>null</lineDetails>
         <lineDetails>null</lineDetails>
         <lineDetails>1</lineDetails>
         <lineDetails>200.00000</lineDetails>
+        <lineDetails>S</lineDetails>
+        <lineDetails>UK</lineDetails>
+        <lineDetails>R1</lineDetails>
+        
         
      </Row>
     
     
     <Row id="AD10014">
-        <userName>QUERY</userName>
+    
+    	<userName>GREC</userName>
+       	<userName>MANAGER</userName>
+       	<userName>ADMIN</userName>
+       	<userName>QUERY</userName>
         <passWord>E5</passWord>
+        
         <currencyCode>GBB</currencyCode>
         <currencyCode>GZA</currencyCode>
         <currencyCode>GO3</currencyCode>

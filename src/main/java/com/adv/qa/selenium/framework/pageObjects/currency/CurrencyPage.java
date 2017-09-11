@@ -2456,10 +2456,12 @@ public class CurrencyPage extends Page {
 	 * @param companyName
 	 * @param ledgerControl
 	 * @param i
+	 * A020, AD10014
 	 */
 	public void searchElement(String companyName, List<String> ledgerControl, int i) {
 		log.info("Inside search element");
 		WaitHelper.waitAdditional(2);
+	
 		if (!isOkButtonDisplayed(i)) {
 			clickOnSections(0);
 		}

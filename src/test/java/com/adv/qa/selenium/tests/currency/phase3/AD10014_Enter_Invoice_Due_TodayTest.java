@@ -18,6 +18,7 @@ import com.adv.qa.selenium.helpers.DataRow;
  * @author              :   Draxayani
  * Test Reference No	: 	AD10014 Enter Invoice Due Today
  * Purpose              :   Enter invoice with settlement date ‘Today’ 
+ * Modified Date		:   Modified by Chetna/Dt: 08-Sep-2017  
  * ACCESS               :   GBB
  */
 
@@ -70,7 +71,7 @@ public class AD10014_Enter_Invoice_Due_TodayTest extends BaseTest{
 		List<String> lineDetails = dataRow.findNamesReturnValues("lineDetails");
 		List<String> verifyLineDetails = dataRow.findNamesReturnValues("verifyLineDetails");
 
-		String message = "created with sysref";
+		String message = "Batch number";// Batch number 8 has been created
 		
 		currencyPage.isCommandDisplayed();
 		
@@ -84,11 +85,7 @@ public class AD10014_Enter_Invoice_Due_TodayTest extends BaseTest{
 		
 		Assert.assertTrue(testcases,currencyPage.getTableHeader().contains("Transaction Header"),"Transaction page","displayed");
 		
-		Calendar currentMonth = Calendar.getInstance();
-		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd MMM yyyy");
-		String currDate = dateFormat1.format(currentMonth.getTime());
-			
-		currencyPage.enterTransactionDetails(transactionDetails,"null","null");
+		currencyPage.enterTransactionDetails(transactionDetails,"null","Today");
 		
 		currencyPage.clickOnAcceptWarn();
 		
@@ -99,35 +96,25 @@ public class AD10014_Enter_Invoice_Due_TodayTest extends BaseTest{
 		currencyPage.clickOnAcceptWarn();
 		
 		currencyPage.clickOnUpdate();
-					
-		String referenceMessage = currencyPage.getToolContentText();
-		
-		if(!currencyPage.getToolContentText().contains(message)){
-			currencyPage.clickOnUpdtWarn();
-		}
 		
 		/*Verify new batch type in the list*/
-		if(referenceMessage.contains(message)){
-			testcases.add(getCurreentDate()+" | Pass : Invoice created successfully "+referenceMessage);
-		}
-		else{			
-			testcases.add(getCurreentDate()+" | Fail : Invoice not created");
-		}						
-		boolean storeItemValues = currencyPage.verifyStoreItem(verifyLineDetails, 0);
-		if(storeItemValues== true){
-			testcases.add(getCurreentDate()+" | Pass : Store item values is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Store item values is not as expected ");
-		}
+		String referenceMessage = currencyPage.getErrorContentText();
 		
-		currencyPage.clickOnReturnButton();
+		Assert.assertTrue(testcases,referenceMessage.contains(message), "Invoice "+referenceMessage," created successfully");
+		
+								
+		boolean storeItemValues = currencyPage.verifyStoreItem(verifyLineDetails, 0);
+		
+		Assert.assertTrue(testcases,storeItemValues, "Store item values are ", " as expected");
+		
+		currencyPage.clickOnCancel();
 		
 		currencyPage.isCommandDisplayed();
 
 	}
 	
 	private void verifyTransactionMenu(CurrencyPageNew currencyPage,DataRow dataRow) throws InterruptedException{
+		
 		List<String> currencyCode = dataRow.findNamesReturnValues("currencyCode");
 		List<String> supplierTransaction = dataRow.findNamesReturnValues("supplierTransaction");
 
@@ -138,14 +125,9 @@ public class AD10014_Enter_Invoice_Due_TodayTest extends BaseTest{
 		Assert.assertEquals(testcases,currencyPage.getTableHeader(), "M"+currencyCode.get(1)+" - Supplier Selection","Currency search page","displayed");
 		
 		currencyPage.searchElement(companyId,supplierTransaction, 10);
-
+		
 		boolean verifySupplier = currencyPage.verifySupplierTransaction(supplierTransaction);
-		if(verifySupplier== true){
-			testcases.add(getCurreentDate()+" | Pass : Supplier transaction is as expected ");
-		}
-		else{
-			testcases.add(getCurreentDate()+" | Fail : Supplier transaction is not as expected ");
-		}
+		Assert.assertTrue(testcases,verifySupplier, "Supplier transaction ", " as expected");
 		
 		currencyPage.clickOnCancel();
 	}
@@ -164,6 +146,7 @@ public class AD10014_Enter_Invoice_Due_TodayTest extends BaseTest{
 		currencyPage.searchValue(companyId,unauthorisedTransaction, 11,10);
 
 		boolean verifyTransaction = currencyPage.verifyUnauthorisedTransaction(unauthorisedTransaction);
+		
 		if(verifyTransaction== true){
 			testcases.add(getCurreentDate()+" | Pass : Supplier Unauthorised Transaction is as expected ");
 		}
